@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전북 현대 스쿼드 빌더</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        #pitch {
+            width: 480px;
+            height: 680px;
+            background-color: #2e7d32;
+            border: 3px solid #ffffff;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pitch-line {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+        .center-line { top: 50%; left: 0; width: 100%; height: 0; }
+        .center-circle { top: 50%; left: 50%; width: 100px; height: 100px; border-radius: 50%; transform: translate(-50%, -50%); }
+        .penalty-box.top { top: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-top: none; }
+        .penalty-box.bottom { bottom: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-bottom: none; }
+
+        #bench {
+            width: 280px;
+            background-color: #2c2c2c;
+            padding: 15px;
+            border-radius: 8px;
+            height: 680px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        #bench h3 {
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            font-size: 16px;
+        }
+        #sub-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .player-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 65px;
+            cursor: grab;
+            z-index: 10;
+        }
+        .player-card:active {
+            cursor: grabbing;
+        }
+
+        .player-img, .player-info, .player-placeholder {
+            pointer-events: none; 
+        }
+
+        .player-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            background-color: #fff;
+        }
+
+        .player-placeholder {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            background-color: #004d40;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .player-info {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            font-size: 10px;
+            padding: 2px 4px;
+            border-radius: 4px;
+            margin-top: 3px;
+            white-space: nowrap;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .starter {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="pitch">
+            <div class="pitch-line center-line"></div>
+            <div class="pitch-line center-circle"></div>
+            <div class="pitch-line penalty-box top"></div>
+            <div class="pitch-line penalty-box bottom"></div>
+        </div>
+
+        <div id="bench">
+            <h3>대기 / 교체 선수단</h3>
+            <div id="sub-list"></div>
+        </div>
+    </div>
+
+    <script>
+        const squad = [
+            { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", isStarter: true, x: 50, y: 90 },
+            { id: 23, backNo: "23", name: "김태환", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20100052.png", isStarter: true, x: 85, y: 75 },
+            { id: 5,  backNo: "5",  name: "박지수", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png", isStarter: true, x: 62, y: 78 },
+            { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png", isStarter: true, x: 38, y: 78 },
+            { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png", isStarter: true, x: 15, y: 75 },
+            { id: 28, backNo: "28", name: "이영재", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png", isStarter: true, x: 38, y: 52 },
+            { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png", isStarter: true, x: 62, y: 52 },
+            { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png", isStarter: true, x: 15, y: 32 },
+            { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png", isStarter: true, x: 85, y: 32 },
+            { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png", isStarter: true, x: 38, y: 22 },
+            { id: 96, backNo: "96", name: "콤파뇨", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png", isStarter: true, x: 62, y: 22 },
+
+            { id: 100, backNo: "-", name: "도도", pos: "FW", img: "", isStarter: false },
+            { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png", isStarter: false },
+            { id: 2,  backNo: "2",  name: "김영빈", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png", isStarter: false },
+            { id: 4,  backNo: "4",  name: "조위제", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220174.png", isStarter: false },
+            { id: 15, backNo: "15", name: "김하준", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230250.png", isStarter: false },
+            { id: 24, backNo: "24", name: "이상명", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250159.png", isStarter: false },
+            { id: 77, backNo: "77", name: "김태현", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180185.png", isStarter: false },
+            { id: 6,  backNo: "6",  name: "맹성웅", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190084.png", isStarter: false },
+            { id: 13, backNo: "13", name: "강상윤", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png", isStarter: false },
+            { id: 16, backNo: "16", name: "감보아", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250353.png", isStarter: false },
+            { id: 21, backNo: "21", name: "츄마시", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250335.png", isStarter: false },
+            { id: 73, backNo: "73", name: "김예건", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260293.png", isStarter: false },
+            { id: 81, backNo: "81", name: "기티스", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260224.png", isStarter: false },
+            { id: 95, backNo: "95", name: "이탈로", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260365.png", isStarter: false },
+            { id: 11, backNo: "11", name: "김승섭", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180212.png", isStarter: false },
+            { id: 99, backNo: "99", name: "모따",  pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png", isStarter: false }
+        ];
+
+        function render() {
+            const pitch = document.getElementById('pitch');
+            const subList = document.getElementById('sub-list');
+            
+            document.querySelectorAll('.player-card').forEach(el => el.remove());
+
+            squad.forEach(player => {
+                const card = document.createElement('div');
+                card.className = 'player-card';
+                card.draggable = true;
+
+                card.ondragstart = (e) => {
+                    e.dataTransfer.setData('playerId', player.id);
+                };
+
+                if (player.img) {
+                    const img = document.createElement('img');
+                    img.src = player.img;
+                    img.className = 'player-img';
+                    card.appendChild(img);
+                } else {
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'player-placeholder';
+                    placeholder.innerText = player.name;
+                    card.appendChild(placeholder);
+                }
+
+                const info = document.createElement('div');
+                info.className = 'player-info';
+                info.innerText = `${player.backNo}. ${player.name}`;
+
+                card.appendChild(info);
+
+                if (player.isStarter) {
+                    card.classList.add('starter');
+                    card.style.left = player.x + '%';
+                    card.style.top = player.y + '%';
+                    pitch.appendChild(card);
+                } else {
+                    subList.appendChild(card);
+                }
+            });
+        }
+
+        const pitch = document.getElementById('pitch');
+        pitch.ondragover = (e) => e.preventDefault();
+        pitch.ondrop = (e) => {
+            e.preventDefault();
+            const playerId = parseInt(e.dataTransfer.getData('playerId'));
+            const player = squad.find(p => p.id === playerId);
+            if (!player) return;
+
+            const rect = pitch.getBoundingClientRect();
+            let x = ((e.clientX - rect.left) / rect.width) * 100;
+            let y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            player.isStarter = true;
+            player.x = Math.max(0, Math.min(100, x));
+            player.y = Math.max(0, Math.min(100, y));
+            
+            render();
+        };
+
+        const bench = document.getElementById('bench');
+        bench.ondragover = (e) => e.preventDefault();
+        bench.ondrop = (e) => {
+            e.preventDefault();
+            const playerId = parseInt(e.dataTransfer.getData('playerId'));
+            const player = squad.find(p => p.id === playerId);
+            if (!player) return;
+
+            player.isStarter = false;
+            render();
+        };
+
+        render();
+    </script>
+</body>
+</html>
