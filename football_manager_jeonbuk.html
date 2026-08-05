@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>FM Tactics Board</title>
+    <style>
+        /* Pitch styling */
+        .pitch {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            background-color: #2e7d32;
+            border: 2px solid white;
+            margin: 20px auto;
+        }
+
+        /* Player icon styling */
+        .player {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #1976d2;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-family: sans-serif;
+            font-size: 12px;
+            /* Center the player based on coordinates */
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* SVG container for movement arrows */
+        .movements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Let clicks pass through to players */
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <label for="roleSelect">역할 선택: </label>
+        <select id="roleSelect">
+            <option value="none">선택 안함</option>
+            <option value="overlap">오버래핑 (윙백)</option>
+            <option value="cutInside">중앙 침투 (인사이드 포워드)</option>
+        </select>
+    </div>
+
+    <div class="pitch">
+        <!-- SVG area to draw movement lines -->
+        <svg class="movements" id="movementLayer">
+            <!-- Arrow marker definition -->
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="yellow" />
+                </marker>
+            </defs>
+            <!-- Dynamic lines will be drawn here -->
+        </svg>
+
+        <!-- Example Player (Left Back) -->
+        <div class="player" id="player1" style="left: 20%; top: 70%;">LB</div>
+    </div>
+
+    <script>
+        // Get DOM elements
+        const roleSelect = document.getElementById('roleSelect');
+        const movementLayer = document.getElementById('movementLayer');
+        const player1 = document.getElementById('player1');
+
+        // Player's starting coordinates (in pixels for simplicity)
+        const startX = 80;  // 20% of 400px
+        const startY = 350; // 70% of 500px
+
+        // Event listener for role changes
+        roleSelect.addEventListener('change', function(e) {
+            const role = e.target.value;
+            
+            // Clear existing lines
+            movementLayer.innerHTML = `
+                <defs>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="yellow" />
+                    </marker>
+                </defs>
+            `;
+
+            let endX, endY;
+
+            // Define end points based on selected role
+            if (role === 'overlap') {
+                // Move straight up the flank
+                endX = startX;
+                endY = startY - 150;
+            } else if (role === 'cutInside') {
+                // Diagonal movement towards the center
+                endX = startX + 100;
+                endY = startY - 150;
+            } else {
+                return; // Do nothing if 'none' is selected
+            }
+
+            // Create and append the SVG line element
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            line.setAttribute('x1', startX);
+            line.setAttribute('y1', startY);
+            line.setAttribute('x2', endX);
+            line.setAttribute('y2', endY);
+            line.setAttribute('stroke', 'yellow');
+            line.setAttribute('stroke-width', '3');
+            line.setAttribute('stroke-dasharray', '5,5'); // Dashed line
+            line.setAttribute('marker-end', 'url(#arrow)'); // Add arrow head
+            
+            movementLayer.appendChild(line);
+        });
+    </script>
+</body>
+</html>
