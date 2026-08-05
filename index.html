@@ -163,34 +163,40 @@
 
     <script>
         const squad = [
-            { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", isStarter: false, x: 50, y: 90 },
-            { id: 23, backNo: "23", name: "김태환", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20100052.png", isStarter: false, x: 85, y: 75 },
-            { id: 5,  backNo: "5",  name: "박지수", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png", isStarter: false, x: 62, y: 78 },
-            { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png", isStarter: false, x: 38, y: 78 },
-            { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png", isStarter: false, x: 15, y: 75 },
-            { id: 28, backNo: "28", name: "이영재", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png", isStarter: false, x: 38, y: 52 },
-            { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png", isStarter: false, x: 62, y: 52 },
-            { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png", isStarter: false, x: 15, y: 32 },
-            { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png", isStarter: false, x: 85, y: 32 },
-            { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png", isStarter: false, x: 38, y: 22 },
-            { id: 96, backNo: "96", name: "콤파뇨", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png", isStarter: false, x: 62, y: 22 },
+            // 공격수 (FW)
+            { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png", isStarter: false, x: 50, y: 50 },
+            { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png", isStarter: false, x: 50, y: 50 },
+            { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png", isStarter: false, x: 50, y: 50 },
+            { id: 11, backNo: "11", name: "김승섭", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180212.png", isStarter: false, x: 50, y: 50 },
+            { id: 21, backNo: "21", name: "츄마시", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250335.png", isStarter: false, x: 50, y: 50 },
+            { id: 81, backNo: "81", name: "기티스", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260224.png", isStarter: false, x: 50, y: 50 },
+            { id: 95, backNo: "95", name: "이탈로", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260365.png", isStarter: false, x: 50, y: 50 },
+            { id: 96, backNo: "96", name: "콤파뇨", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png", isStarter: false, x: 50, y: 50 },
+            { id: 99, backNo: "99", name: "모따",  pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png", isStarter: false, x: 50, y: 50 },
+            { id: 100, backNo: "-", name: "도도", pos: "FW", img: "", isStarter: false, x: 50, y: 50 },
 
-            { id: 100, backNo: "-", name: "도도", pos: "FW", img: "", isStarter: false },
-            { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png", isStarter: false },
-            { id: 2,  backNo: "2",  name: "김영빈", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png", isStarter: false },
-            { id: 4,  backNo: "4",  name: "조위제", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220174.png", isStarter: false },
-            { id: 15, backNo: "15", name: "김하준", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230250.png", isStarter: false },
-            { id: 24, backNo: "24", name: "이상명", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250159.png", isStarter: false },
-            { id: 77, backNo: "77", name: "김태현", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180185.png", isStarter: false },
-            { id: 6,  backNo: "6",  name: "맹성웅", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190084.png", isStarter: false },
-            { id: 13, backNo: "13", name: "강상윤", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png", isStarter: false },
-            { id: 16, backNo: "16", name: "감보아", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250353.png", isStarter: false },
-            { id: 21, backNo: "21", name: "츄마시", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250335.png", isStarter: false },
-            { id: 73, backNo: "73", name: "김예건", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260293.png", isStarter: false },
-            { id: 81, backNo: "81", name: "기티스", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260224.png", isStarter: false },
-            { id: 95, backNo: "95", name: "이탈로", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260365.png", isStarter: false },
-            { id: 11, backNo: "11", name: "김승섭", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180212.png", isStarter: false },
-            { id: 99, backNo: "99", name: "모따",  pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png", isStarter: false }
+            // 미드필더 (MF)
+            { id: 6,  backNo: "6",  name: "맹성웅", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190084.png", isStarter: false, x: 50, y: 50 },
+            { id: 13, backNo: "13", name: "강상윤", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png", isStarter: false, x: 50, y: 50 },
+            { id: 16, backNo: "16", name: "감보아", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250353.png", isStarter: false, x: 50, y: 50 },
+            { id: 28, backNo: "28", name: "이영재", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png", isStarter: false, x: 50, y: 50 },
+            { id: 73, backNo: "73", name: "김예건", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260293.png", isStarter: false, x: 50, y: 50 },
+            { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png", isStarter: false, x: 50, y: 50 },
+
+            // 수비수 (DF)
+            { id: 2,  backNo: "2",  name: "김영빈", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png", isStarter: false, x: 50, y: 50 },
+            { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png", isStarter: false, x: 50, y: 50 },
+            { id: 4,  backNo: "4",  name: "조위제", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220174.png", isStarter: false, x: 50, y: 50 },
+            { id: 5,  backNo: "5",  name: "박지수", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png", isStarter: false, x: 50, y: 50 },
+            { id: 15, backNo: "15", name: "김하준", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230250.png", isStarter: false, x: 50, y: 50 },
+            { id: 23, backNo: "23", name: "김태환", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20100052.png", isStarter: false, x: 50, y: 50 },
+            { id: 24, backNo: "24", name: "이상명", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250159.png", isStarter: false, x: 50, y: 50 },
+            { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png", isStarter: false, x: 50, y: 50 },
+            { id: 77, backNo: "77", name: "김태현", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180185.png", isStarter: false, x: 50, y: 50 },
+
+            // 골키퍼 (GK)
+            { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png", isStarter: false, x: 50, y: 50 },
+            { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", isStarter: false, x: 50, y: 50 }
         ];
 
         function render() {
