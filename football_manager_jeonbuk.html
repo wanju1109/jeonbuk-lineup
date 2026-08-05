@@ -1,6 +1,441 @@
-// Comprehensive Role Database referencing Football Manager Wiki
-        // dx, dy: basic movement vector (percentage based on starting point)
-        // path: 'straight' (default line), 'cut-inside' (curved to center/wide), 'hold' (no arrow)
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전북 현대 FM 전술판</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            color: #00e676;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+
+        .top-bar {
+            background-color: #1e1e1e;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            border: 1px solid #333;
+        }
+
+        .top-bar label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #aaa;
+        }
+
+        .top-bar select {
+            background-color: #2a2a2a;
+            color: #fff;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            border: 1px solid #444;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Layout Container */
+        .main-container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 440px;
+        }
+
+        /* Pitch Styles */
+        #pitch-wrapper {
+            background: linear-gradient(180deg, #1b5e20, #2e7d32, #1b5e20);
+            border: 4px solid #ffffff;
+            border-radius: 12px;
+            position: relative;
+            width: 440px;
+            height: 620px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        #pitch {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        /* SVG layer for tactics arrows */
+        #movement-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 440px;
+            height: 620px;
+            pointer-events: none; /* Allows clicking players through the SVG */
+            z-index: 2;
+        }
+
+        .pitch-line {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .center-line { top: 50%; left: 0; width: 100%; height: 0; }
+        .center-circle { top: 50%; left: 50%; width: 100px; height: 100px; border-radius: 50%; transform: translate(-50%, -50%); }
+        .penalty-box.top { top: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-top: none; }
+        .penalty-box.bottom { bottom: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-bottom: none; }
+
+        .position-slot {
+            position: absolute;
+            width: 52px;
+            height: 62px;
+            border: 2px dashed rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(0, 0, 0, 0.3);
+            pointer-events: auto;
+            cursor: pointer;
+            z-index: 3;
+        }
+        .position-slot.selected {
+            border: 3px solid #ffeb3b;
+            background-color: rgba(255, 235, 59, 0.3);
+        }
+
+        /* Tactics Panel Styles */
+        #tactics-panel {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        
+        .tactics-header {
+            color: #00e676;
+            font-size: 16px;
+            margin: 0 0 10px 0;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        #formation-desc {
+            font-size: 12px;
+            color: #bbb;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            background: #222;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .role-selector-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-height: 350px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .role-item {
+            background: #2a2a2a;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #444;
+        }
+
+        .role-item label {
+            display: block;
+            font-size: 11px;
+            color: #00e676;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        .role-item select {
+            width: 100%;
+            background: #111;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 4px;
+            padding: 4px;
+            font-size: 11px;
+        }
+
+        .role-desc {
+            font-size: 10px;
+            color: #888;
+            margin-top: 5px;
+            line-height: 1.3;
+        }
+
+        /* Bench Styles */
+        #bench {
+            width: 340px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 12px;
+            border-radius: 12px;
+            height: 900px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            cursor: pointer;
+        }
+
+        #bench h3 {
+            margin: 0 0 15px 0;
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            font-size: 16px;
+            color: #00e676;
+        }
+
+        .position-group { margin-bottom: 15px; }
+        .position-title {
+            font-size: 12px;
+            color: #aaa;
+            margin-bottom: 8px;
+            border-left: 3px solid #00e676;
+            padding-left: 8px;
+            font-weight: bold;
+        }
+        
+        .sub-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            justify-items: center;
+        }
+
+        .player-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 65px;
+            cursor: grab;
+            z-index: 10;
+        }
+        .player-card.selected-card {
+            outline: 3px solid #ffeb3b;
+            border-radius: 8px;
+            background-color: rgba(255, 235, 59, 0.2);
+        }
+        .player-card:active { cursor: grabbing; }
+        .player-img, .player-info, .player-placeholder { pointer-events: none; }
+
+        .player-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #00e676;
+            background-color: #fff;
+        }
+
+        .player-placeholder {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid #00e676;
+            background-color: #004d40;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .player-info {
+            background-color: rgba(20, 20, 20, 0.9);
+            color: #ffffff;
+            font-size: 10px;
+            padding: 3px 5px;
+            border-radius: 4px;
+            margin-top: 3px;
+            white-space: nowrap;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #444;
+            max-width: 62px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .starter {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #111; }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00e676; }
+    </style>
+</head>
+<body>
+
+    <h1>🟢 JEONBUK FOOTBALL MANAGER</h1>
+
+    <div class="top-bar">
+        <label for="formation-select">포메이션 선택:</label>
+        <select id="formation-select" onchange="changeFormation()">
+            <option value="4-3-3">4-3-3 (기본)</option>
+            <option value="4-2-3-1">4-2-3-1</option>
+            <option value="4-4-2">4-4-2 (플랫)</option>
+            <option value="4-3-1-2" selected>4-3-1-2 (다이아몬드)</option>
+            <option value="3-5-2">3-5-2</option>
+        </select>
+    </div>
+
+    <div class="main-container">
+        <!-- Left Column: Pitch & Tactics -->
+        <div class="left-col">
+            <div id="pitch-wrapper">
+                <div id="pitch">
+                    <div class="pitch-line center-line"></div>
+                    <div class="pitch-line center-circle"></div>
+                    <div class="pitch-line penalty-box top"></div>
+                    <div class="pitch-line penalty-box bottom"></div>
+                    
+                    <!-- SVG Layer for drawing movement paths -->
+                    <svg id="movement-layer">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                                <polygon points="0 0, 6 3, 0 6" fill="#ffeb3b" />
+                            </marker>
+                        </defs>
+                        <g id="arrows-group"></g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id="tactics-panel">
+                <h3 class="tactics-header">전술 및 역할 설정</h3>
+                <div id="formation-desc">포메이션 설명이 여기에 표시됩니다.</div>
+                <div class="role-selector-group" id="role-selectors">
+                    <!-- Dropdowns injected via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Bench -->
+        <div id="bench" onclick="handleBenchClick(event)">
+            <h3>선수단 (드래그 앤 드롭)</h3>
+            <div class="position-group">
+                <div class="position-title">GK (골키퍼)</div>
+                <div id="sub-list-GK" class="sub-list"></div>
+            </div>
+            <div class="position-group">
+                <div class="position-title">DF (수비수)</div>
+                <div id="sub-list-DF" class="sub-list"></div>
+            </div>
+            <div class="position-group">
+                <div class="position-title">MF (미드필더)</div>
+                <div id="sub-list-MF" class="sub-list"></div>
+            </div>
+            <div class="position-group">
+                <div class="position-title">FW (공격수)</div>
+                <div id="sub-list-FW" class="sub-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Player Database (Jeonbuk Squad)
+        const squad = [
+            { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png", slotId: null },
+            { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png", slotId: null },
+            { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png", slotId: null },
+            { id: 28, backNo: "28", name: "이영재", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png", slotId: null },
+            { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png", slotId: null },
+            { id: 2,  backNo: "2",  name: "김영빈", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png", slotId: null },
+            { id: 5,  backNo: "5",  name: "박지수", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png", slotId: null },
+            { id: 23, backNo: "23", name: "김태환", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20100052.png", slotId: null },
+            { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png", slotId: null },
+            { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", slotId: null }
+        ];
+
+        // Formation Descriptions
+        const formationInfo = {
+            "4-3-3": "가장 현대적인 밸런스 포메이션입니다.<br><b>장점:</b> 측면 공격이 강력하고 전방 압박에 유리합니다.<br><b>단점:</b> 윙어의 수비 가담이 부족하면 풀백이 고립될 수 있습니다.",
+            "4-2-3-1": "안정적인 더블 볼란치(2수비형 미드필더)를 두는 형태입니다.<br><b>장점:</b> 수비 밸런스가 뛰어나고 중앙 공격 전개가 수월합니다.<br><b>단점:</b> 원톱 스트라이커의 개인 역량에 의존도가 높습니다.",
+            "4-4-2": "전통적이고 조직적인 두 줄 수비 형태입니다.<br><b>장점:</b> 수비 시 공간을 내주지 않고, 투톱의 연계가 좋습니다.<br><b>단점:</b> 중앙 미드필더가 2명이므로 중원 숫자 싸움에서 밀릴 수 있습니다.",
+            "4-3-1-2": "중앙 집중형 다이아몬드 형태입니다.<br><b>장점:</b> 중원 장악력이 매우 뛰어나고 짧은 패스 플레이에 적합합니다.<br><b>단점:</b> 측면 공간이 텅 비어 상대 윙어에게 약점을 노출합니다.",
+            "3-5-2": "백스리를 기반으로 한 전술입니다.<br><b>장점:</b> 투톱과 풍부한 미드필더진으로 유기적인 플레이가 가능합니다.<br><b>단점:</b> 윙백의 엄청난 체력이 요구됩니다."
+        };
+
+        // Formations Data (Position types: ST, W, CAM, CM, DM, WB, FB, CB, GK)
+        const formations = {
+            "4-3-3": [
+                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
+                { id: "LCM", label: "LCM", type: "CM", x: 30, y: 52 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 58 }, { id: "RCM", label: "RCM", type: "CM", x: 70, y: 52 },
+                { id: "LW", label: "LW", type: "W", x: 18, y: 25 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", type: "W", x: 82, y: 25 }
+            ],
+            "4-2-3-1": [
+                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
+                { id: "LDM", label: "LDM", type: "DM", x: 38, y: 62 }, { id: "RDM", label: "RDM", type: "DM", x: 62, y: 62 },
+                { id: "LAM", label: "LAM", type: "W", x: 20, y: 38 }, { id: "CAM", label: "CAM", type: "CAM", x: 50, y: 40 }, { id: "RAM", label: "RAM", type: "W", x: 80, y: 38 },
+                { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }
+            ],
+            "4-4-2": [
+                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
+                { id: "LM", label: "LM", type: "W", x: 15, y: 50 }, { id: "CM1", label: "CM", type: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", type: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", type: "W", x: 85, y: 50 },
+                { id: "ST1", label: "ST", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 22 }
+            ],
+            "4-3-1-2": [
+                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
+                { id: "LCM", label: "LCM", type: "CM", x: 30, y: 58 }, { id: "CDM", label: "CDM", type: "DM", x: 50, y: 65 }, { id: "RCM", label: "RCM", type: "CM", x: 70, y: 58 },
+                { id: "CAM", label: "CAM", type: "CAM", x: 50, y: 40 },
+                { id: "ST1", label: "ST", type: "ST", x: 38, y: 20 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 20 }
+            ],
+            "3-5-2": [
+                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", type: "CB", x: 25, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 75, y: 78 },
+                { id: "LWB", label: "LWB", type: "WB", x: 15, y: 52 }, { id: "LCM", label: "LCM", type: "CM", x: 38, y: 55 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 45 }, { id: "RCM", label: "RCM", type: "CM", x: 62, y: 55 }, { id: "RWB", label: "RWB", type: "WB", x: 85, y: 52 },
+                { id: "ST1", label: "LS", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "RS", type: "ST", x: 62, y: 22 }
+            ]
+        };
+
+        // Comprehensive Role Database referencing Football Manager Wiki
         const roleData = {
             "ST": [
                 { id: "AF", name: "전진형 포워드 (AF)", desc: "공격의 선봉장입니다. 수비 뒷공간을 파고들며 득점을 노리고, 측면으로 빠져나가며 기회를 창출합니다.", path: "straight", dx: 0, dy: -15 },
@@ -18,7 +453,7 @@
             "CAM": [
                 { id: "AM", name: "공격형 미드필더 (AM)", desc: "공격진 바로 아래에서 기회를 창출하고 때로는 직접 득점을 노립니다.", path: "straight", dx: 0, dy: -10 },
                 { id: "SS", name: "섀도우 스트라이커 (SS)", desc: "최전방 공격수가 빈 공간을 만들면 그곳으로 적극적으로 침투하여 득점을 올립니다.", path: "straight", dx: 0, dy: -18 },
-                { id: "AP", name: "전진 플레이메이커 (AP)", desc: "상대 수비와 미드필드 사이 공간에서 활동하며 공격진에게 창의적인 패스를 공급합니다.", path: "hold", dx: 0, dy: -5 }
+                { id: "AP", name: "전진 플레이메이커 (AP)", desc: "상대 수비와 미드필드 사이 공간에서 활동하며 공격진에게 창의적인 패스를 공급합니다.", path: "hold", dx: 0, dy: 0 }
             ],
             "CM": [
                 { id: "CM", name: "중앙 미드필더 (CM)", desc: "중앙에서 공수 밸런스를 맞추며 상황에 맞게 유동적으로 지원과 공격을 오갑니다.", path: "straight", dx: 0, dy: -8 },
@@ -51,3 +486,279 @@
                 { id: "SK", name: "스위퍼 키퍼 (SK)", desc: "페널티 박스 바깥으로 나와 수비 뒷공간을 커버하고 역습의 시작점이 됩니다.", path: "straight", dx: 0, dy: -6 }
             ]
         };
+
+        // State variables
+        let currentFormation = "4-3-1-2";
+        let selectedPlayerId = null;
+        let slotRoles = {}; 
+
+        function initRolesForFormation() {
+            slotRoles = {};
+            const slots = formations[currentFormation];
+            slots.forEach(slot => {
+                if (roleData[slot.type]) {
+                    slotRoles[slot.id] = roleData[slot.type][0].id;
+                }
+            });
+        }
+
+        function assignPlayerToSlot(playerId, slotId) {
+            squad.forEach(p => { if (p.slotId === slotId) p.slotId = null; });
+            squad.forEach(p => { if (p.id === playerId) p.slotId = slotId; });
+            selectedPlayerId = null;
+            render();
+        }
+
+        // Draw movement paths in SVG
+        function drawArrows() {
+            const group = document.getElementById('arrows-group');
+            group.innerHTML = ''; 
+            const slots = formations[currentFormation];
+            
+            const pitchW = 440;
+            const pitchH = 620;
+
+            slots.forEach(slot => {
+                const roleId = slotRoles[slot.id];
+                if (!roleData[slot.type]) return; 
+                
+                const roleOpts = roleData[slot.type].find(r => r.id === roleId);
+                if (!roleOpts || roleOpts.path === "hold") return; 
+
+                // Coordinates in percentage
+                const startX = slot.x;
+                const startY = slot.y;
+                let endX = startX;
+                let endY = startY + roleOpts.dy;
+
+                // Adjust X for curved paths
+                if (roleOpts.dx === "center") {
+                    endX = startX < 50 ? startX + 15 : (startX > 50 ? startX - 15 : startX);
+                } else if (roleOpts.dx === "wide") {
+                    endX = startX < 50 ? startX - 15 : (startX > 50 ? startX + 15 : startX);
+                } else {
+                    endX = startX + roleOpts.dx;
+                }
+
+                // Convert to exact pixels for SVG Path drawing
+                const sX = (startX / 100) * pitchW;
+                const sY = (startY / 100) * pitchH;
+                const eX = (endX / 100) * pitchW;
+                const eY = (endY / 100) * pitchH;
+
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                let dString = "";
+
+                if (roleOpts.path === "cut-inside") {
+                    // Create a curve (Quadratic Bezier)
+                    const midY = sY + ((eY - sY) * 0.5);
+                    dString = `M ${sX} ${sY} Q ${sX} ${midY}, ${eX} ${eY}`;
+                } else {
+                    // Create a straight line
+                    dString = `M ${sX} ${sY} L ${eX} ${eY}`;
+                }
+
+                path.setAttribute('d', dString);
+                path.setAttribute('stroke', '#ffeb3b');
+                path.setAttribute('stroke-width', '3');
+                path.setAttribute('stroke-dasharray', '6,5');
+                path.setAttribute('fill', 'transparent');
+                path.setAttribute('marker-end', 'url(#arrowhead)');
+                
+                group.appendChild(path);
+            });
+        }
+
+        function renderTacticsPanel() {
+            document.getElementById('formation-desc').innerHTML = formationInfo[currentFormation];
+            const selectorGroup = document.getElementById('role-selectors');
+            selectorGroup.innerHTML = '';
+            
+            const slots = formations[currentFormation];
+            slots.forEach(slot => {
+                if (!roleData[slot.type]) return;
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'role-item';
+                
+                const label = document.createElement('label');
+                label.innerText = slot.label;
+                wrapper.appendChild(label);
+
+                const select = document.createElement('select');
+                roleData[slot.type].forEach(role => {
+                    const option = document.createElement('option');
+                    option.value = role.id;
+                    option.innerText = role.name;
+                    if (slotRoles[slot.id] === role.id) option.selected = true;
+                    select.appendChild(option);
+                });
+
+                const descDiv = document.createElement('div');
+                descDiv.className = 'role-desc';
+                const currentRole = roleData[slot.type].find(r => r.id === slotRoles[slot.id]);
+                descDiv.innerText = currentRole ? currentRole.desc : '';
+
+                select.onchange = (e) => {
+                    slotRoles[slot.id] = e.target.value;
+                    const newRole = roleData[slot.type].find(r => r.id === e.target.value);
+                    descDiv.innerText = newRole.desc;
+                    drawArrows(); 
+                };
+
+                wrapper.appendChild(select);
+                wrapper.appendChild(descDiv);
+                selectorGroup.appendChild(wrapper);
+            });
+        }
+
+        function render() {
+            const pitch = document.getElementById('pitch');
+            document.querySelectorAll('.position-slot, #pitch .player-card').forEach(el => el.remove());
+            ['GK', 'DF', 'MF', 'FW'].forEach(pos => {
+                document.getElementById(`sub-list-${pos}`).innerHTML = '';
+            });
+
+            // Render Slots
+            const slots = formations[currentFormation];
+            slots.forEach(slot => {
+                const slotEl = document.createElement('div');
+                slotEl.className = 'position-slot';
+                if (selectedPlayerId !== null) slotEl.classList.add('selected');
+                slotEl.dataset.slotId = slot.id;
+                slotEl.style.left = slot.x + '%';
+                slotEl.style.top = slot.y + '%';
+                slotEl.innerText = slot.label;
+
+                slotEl.onclick = (e) => {
+                    e.stopPropagation();
+                    if (selectedPlayerId !== null) assignPlayerToSlot(selectedPlayerId, slot.id);
+                };
+
+                slotEl.ondragover = (e) => e.preventDefault();
+                slotEl.ondrop = (e) => {
+                    e.preventDefault();
+                    const playerId = parseInt(e.dataTransfer.getData('playerId'));
+                    if (!isNaN(playerId)) assignPlayerToSlot(playerId, slot.id);
+                };
+
+                pitch.appendChild(slotEl);
+            });
+
+            // Render Players
+            const sortedSquad = [...squad].sort((a, b) => parseInt(a.backNo) - parseInt(b.backNo));
+
+            sortedSquad.forEach(player => {
+                const card = document.createElement('div');
+                card.className = 'player-card';
+                if (player.id === selectedPlayerId) card.classList.add('selected-card');
+                card.draggable = true;
+
+                card.onclick = (e) => {
+                    e.stopPropagation();
+                    if (player.slotId) {
+                        if (selectedPlayerId !== null && selectedPlayerId !== player.id) {
+                            assignPlayerToSlot(selectedPlayerId, player.slotId);
+                        } else {
+                            player.slotId = null;
+                            selectedPlayerId = null;
+                            render();
+                        }
+                    } else {
+                        selectedPlayerId = (selectedPlayerId === player.id) ? null : player.id;
+                        render();
+                    }
+                };
+
+                card.ondragstart = (e) => {
+                    e.dataTransfer.setData('playerId', player.id);
+                    selectedPlayerId = player.id;
+                };
+
+                card.ondragover = (e) => { if (player.slotId) e.preventDefault(); };
+                card.ondrop = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (player.slotId) {
+                        const incomingId = parseInt(e.dataTransfer.getData('playerId'));
+                        if (!isNaN(incomingId) && incomingId !== player.id) {
+                            assignPlayerToSlot(incomingId, player.slotId);
+                        }
+                    }
+                };
+
+                if (player.img) {
+                    const img = document.createElement('img');
+                    img.src = player.img;
+                    img.className = 'player-img';
+                    card.appendChild(img);
+                } else {
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'player-placeholder';
+                    placeholder.innerText = player.name;
+                    card.appendChild(placeholder);
+                }
+
+                const info = document.createElement('div');
+                info.className = 'player-info';
+                info.innerText = `${player.backNo}. ${player.name}`;
+                card.appendChild(info);
+
+                if (player.slotId) {
+                    const targetSlot = document.querySelector(`.position-slot[data-slot-id="${player.slotId}"]`);
+                    if (targetSlot) {
+                        card.classList.add('starter');
+                        card.style.left = targetSlot.style.left;
+                        card.style.top = targetSlot.style.top;
+                        pitch.appendChild(card);
+                        targetSlot.style.color = 'transparent'; 
+                    } else {
+                        player.slotId = null;
+                    }
+                } else {
+                    const targetList = document.getElementById(`sub-list-${player.pos}`);
+                    if (targetList) targetList.appendChild(card);
+                }
+            });
+
+            drawArrows();
+        }
+
+        function changeFormation() {
+            const select = document.getElementById('formation-select');
+            currentFormation = select.value;
+            squad.forEach(p => p.slotId = null); 
+            selectedPlayerId = null;
+            initRolesForFormation();
+            renderTacticsPanel();
+            render();
+        }
+
+        function handleBenchClick(e) {
+            if (selectedPlayerId !== null) {
+                const player = squad.find(p => p.id === selectedPlayerId);
+                if (player) player.slotId = null;
+                selectedPlayerId = null;
+                render();
+            }
+        }
+        
+        const bench = document.getElementById('bench');
+        bench.ondragover = (e) => e.preventDefault();
+        bench.ondrop = (e) => {
+            e.preventDefault();
+            const playerId = parseInt(e.dataTransfer.getData('playerId'));
+            const player = squad.find(p => p.id === playerId);
+            if (player) {
+                player.slotId = null;
+                render();
+            }
+        };
+
+        // Init
+        initRolesForFormation();
+        renderTacticsPanel();
+        render();
+    </script>
+</body>
+</html>
