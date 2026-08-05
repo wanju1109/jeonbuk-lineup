@@ -495,7 +495,24 @@
         };
 
         let currentFormation = "4-3-3";
-        let selectedPlayerId = null; // 터치/클릭 선택된 선수 ID
+        let selectedPlayerId = null;
+
+        function assignPlayerToSlot(playerId, slotId) {
+            // 이 슬롯에 있던 기존 선수는 벤치로
+            squad.forEach(p => {
+                if (p.slotId === slotId) {
+                    p.slotId = null;
+                }
+            });
+            // 새 선수를 해당 슬롯에 배치 (이전에 다른 슬롯에 있었다면 그 슬롯도 비워줌)
+            squad.forEach(p => {
+                if (p.id === playerId) {
+                    p.slotId = slotId;
+                }
+            });
+            selectedPlayerId = null;
+            render();
+        }
 
         function render() {
             const pitch = document.getElementById('pitch');
@@ -509,45 +526,30 @@
             slots.forEach(slot => {
                 const slotEl = document.createElement('div');
                 slotEl.className = 'position-slot';
-                if (selectedPlayerId && squad.find(p => p.id === selectedPlayerId)) {
-                    slotEl.classList.add('selected'); // 선택된 선수가 있을 때 슬롯 강조
+                if (selectedPlayerId !== null) {
+                    slotEl.classList.add('selected');
                 }
                 slotEl.dataset.slotId = slot.id;
                 slotEl.style.left = slot.x + '%';
                 slotEl.style.top = slot.y + '%';
                 slotEl.innerText = slot.label;
 
-                // 클릭(터치)으로 선수 배치
+                // 클릭(터치)으로 배치
                 slotEl.onclick = (e) => {
                     e.stopPropagation();
                     if (selectedPlayerId !== null) {
-                        // 이미 다른 슬롯에 있던 기존 선수는 벤치로
-                        squad.forEach(p => {
-                            if (p.slotId === slot.id) p.slotId = null;
-                        });
-                        // 선택된 선수를 이 슬롯에 배치
-                        const player = squad.find(p => p.id === selectedPlayerId);
-                        if (player) {
-                            player.slotId = slot.id;
-                        }
-                        selectedPlayerId = null;
-                        render();
+                        assignPlayerToSlot(selectedPlayerId, slot.id);
                     }
                 };
 
-                // 드래그 앤 드롭 지원
+                // 드래그 앤 드롭 배치
                 slotEl.ondragover = (e) => e.preventDefault();
                 slotEl.ondrop = (e) => {
                     e.preventDefault();
                     const playerId = parseInt(e.dataTransfer.getData('playerId'));
-                    squad.forEach(p => {
-                        if (p.slotId === slot.id) p.slotId = null;
-                    });
-                    const player = squad.find(p => p.id === playerId);
-                    if (player) {
-                        player.slotId = slot.id;
+                    if (!isNaN(playerId)) {
+                        assignPlayerToSlot(playerId, slot.id);
                     }
-                    render();
                 };
 
                 pitch.appendChild(slotEl);
@@ -562,26 +564,23 @@
                 }
                 card.draggable = true;
 
-                // 클릭(터치) 선택 이벤트
+                // 클릭(터치) 선택/해제 이벤트
                 card.onclick = (e) => {
                     e.stopPropagation();
                     if (player.slotId) {
-                        // 그라운드에 있는 선수를 누르면 벤치로 보냄
+                        // 그라운드에 있는 선수를 누르면 벤치로 복귀
                         player.slotId = null;
                         selectedPlayerId = null;
                     } else {
-                        // 벤치에 있는 선수를 누르면 선택 상태로 지정
-                        if (selectedPlayerId === player.id) {
-                            selectedPlayerId = null; // 다시 누르면 해제
-                        } else {
-                            selectedPlayerId = player.id;
-                        }
+                        // 벤치 선수를 누르면 선택/해제 토글
+                        selectedPlayerId = (selectedPlayerId === player.id) ? null : player.id;
                     }
                     render();
                 };
 
                 card.ondragstart = (e) => {
                     e.dataTransfer.setData('playerId', player.id);
+                    selectedPlayerId = player.id;
                 };
 
                 if (player.img) {
@@ -629,7 +628,6 @@
             render();
         }
 
-        // 벤치 빈 곳을 누르거나 드롭했을 때 처리
         function handleBenchClick(e) {
             if (selectedPlayerId !== null) {
                 const player = squad.find(p => p.id === selectedPlayerId);
@@ -647,25 +645,50 @@
             e.preventDefault();
             const playerId = parseInt(e.dataTransfer.getData('playerId'));
             const player = squad.find(p => p.id === playerId);
-            if (!player) return;
-
-            player.slotId = null;
-            render();
+            if (player) {
+                player.slotId = null;
+                render();
+            }
         };
 
+        // 이미지 복사 기능 (모바일/PC 호환 강화)
         function copyImageToClipboard() {
             const target = document.getElementById('pitch-wrapper');
             html2canvas(target, { backgroundColor: null, scale: 2 }).then(canvas => {
                 canvas.toBlob(blob => {
-                    try {
-                        const item = new ClipboardItem({ "image/png": blob });
-                        navigator.clipboard.write([item]).then(() => {
-                            alert("✨ 베스트 11 이미지가 클립보드에 복사되었습니다! 카카오톡 대화창 등에 바로 붙여넣기(Ctrl+V) 하세요.");
-                        }).catch(err => {
-                            alert("이미지 복사에 실패했습니다. 브라우저 권한을 확인해주세요.");
-                        });
-                    } catch (e) {
-                        alert("이 브라우저는 클립보드 직접 복사를 지원하지 않을 수 있습니다.");
+                    // PC 등 클립보드 API를 지원하는 경우
+                    if (navigator.clipboard && window.ClipboardItem) {
+                        try {
+                            const item = new ClipboardItem({ "image/png": blob });
+                            navigator.clipboard.write([item]).then(() => {
+                                alert("✨ 베스트 11 이미지가 클립보드에 복사되었습니다! 카카오톡 대화창 등에 바로 붙여넣기(Ctrl+V) 하세요.");
+                                return;
+                            });
+                        } catch (err) {
+                            // 실패 시 아래 다운로드/새창 열기로 Fallback
+                        }
+                    }
+
+                    // 모바일이거나 클립보드 권한이 막힌 경우 새 창에 이미지를 띄워주거나 다운로드 유도
+                    const url = URL.createObjectURL(blob);
+                    const newWindow = window.open();
+                    if (newWindow) {
+                        newWindow.document.write(`
+                            <html>
+                            <head><title>베스트 11 이미지</title></head>
+                            <body style="background:#111; color:#fff; text-align:center; padding:20px; font-family:sans-serif;">
+                                <h3>이미지가 생성되었습니다!</h3>
+                                <p>스마트폰에서는 이미지를 <b>꾹 눌러서 [복사]</b> 또는 <b>[사진에 저장]</b> 하세요.</p>
+                                <img src="${url}" style="max-width:100%; border-radius:8px; border:2px solid #00e676;" />
+                            </body>
+                            </html>
+                        `);
+                    } else {
+                        // 팝업이 차단된 경우 파일 다운로드로 처리
+                        const link = document.createElement('a');
+                        link.download = 'jeonbuk-squad.png';
+                        link.href = url;
+                        link.click();
                     }
                 });
             });
