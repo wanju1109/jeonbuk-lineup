@@ -16,32 +16,35 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             margin: 0;
         }
 
         h1 {
-            font-size: 22px;
-            margin: 0 0 15px 0;
+            font-size: 20px;
+            margin: 0 0 12px 0;
             color: #00e676;
             font-weight: 900;
             letter-spacing: -1px;
+            text-align: center;
         }
 
         .top-bar {
             background-color: #1e1e1e;
-            padding: 12px 20px;
+            padding: 10px 15px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
-            gap: 15px;
+            gap: 10px;
             align-items: center;
             border: 1px solid #333;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .top-bar label {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             color: #aaa;
         }
@@ -49,38 +52,32 @@
         .top-bar select {
             background-color: #2a2a2a;
             color: #fff;
-            padding: 8px 14px;
-            font-size: 14px;
+            padding: 6px 10px;
+            font-size: 13px;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 6px;
             border: 1px solid #444;
             outline: none;
             cursor: pointer;
-        }
-        .top-bar select:hover {
-            border-color: #00e676;
         }
 
         .top-bar button {
             background: linear-gradient(135deg, #00c853, #64dd17);
             color: #111;
-            padding: 9px 16px;
-            font-size: 14px;
+            padding: 7px 12px;
+            font-size: 13px;
             font-weight: 900;
-            border-radius: 8px;
+            border-radius: 6px;
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0,200,83,0.3);
-            transition: all 0.2s ease;
-        }
-        .top-bar button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,200,83,0.5);
         }
 
         .container {
             display: flex;
-            gap: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         #pitch-wrapper {
@@ -88,8 +85,8 @@
             border: 4px solid #ffffff;
             border-radius: 12px;
             position: relative;
-            width: 480px;
-            height: 680px;
+            width: 440px;
+            height: 620px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         }
@@ -106,78 +103,83 @@
             pointer-events: none;
         }
         .center-line { top: 50%; left: 0; width: 100%; height: 0; }
-        .center-circle { top: 50%; left: 50%; width: 110px; height: 110px; border-radius: 50%; transform: translate(-50%, -50%); }
-        .penalty-box.top { top: 0; left: 50%; width: 220px; height: 110px; transform: translateX(-50%); border-top: none; }
-        .penalty-box.bottom { bottom: 0; left: 50%; width: 220px; height: 110px; transform: translateX(-50%); border-bottom: none; }
+        .center-circle { top: 50%; left: 50%; width: 100px; height: 100px; border-radius: 50%; transform: translate(-50%, -50%); }
+        .penalty-box.top { top: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-top: none; }
+        .penalty-box.bottom { bottom: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-bottom: none; }
 
         .position-slot {
             position: absolute;
-            width: 55px;
-            height: 65px;
-            border: 2px dashed rgba(255, 255, 255, 0.4);
+            width: 52px;
+            height: 62px;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
             border-radius: 8px;
             transform: translate(-50%, -50%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.25);
             pointer-events: auto;
-            transition: background-color 0.2s;
+            cursor: pointer;
         }
-        .position-slot:hover {
-            background-color: rgba(0, 230, 118, 0.2);
-            border-color: #00e676;
+        .position-slot.selected {
+            border: 3px solid #ffeb3b;
+            background-color: rgba(255, 235, 59, 0.3);
         }
 
         #bench {
-            width: 320px;
+            width: 300px;
             background-color: #1a1a1a;
             border: 1px solid #333;
-            padding: 15px;
+            padding: 12px;
             border-radius: 12px;
-            height: 680px;
+            height: 620px;
             box-sizing: border-box;
             overflow-y: auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            cursor: pointer;
         }
         #bench h3 {
-            margin: 0 0 12px 0;
+            margin: 0 0 10px 0;
             text-align: center;
             border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            font-size: 15px;
+            padding-bottom: 8px;
+            font-size: 14px;
             color: #00e676;
-            letter-spacing: -0.5px;
         }
 
         .position-group {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         .position-title {
             font-size: 11px;
             color: #888;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             border-left: 3px solid #00e676;
-            padding-left: 6px;
+            padding-left: 5px;
             font-weight: bold;
             text-transform: uppercase;
         }
         .sub-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .player-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 65px;
+            width: 60px;
             cursor: grab;
             z-index: 10;
+        }
+        .player-card.selected-card {
+            outline: 3px solid #ffeb3b;
+            border-radius: 8px;
+            background-color: rgba(255, 235, 59, 0.2);
         }
         .player-card:active {
             cursor: grabbing;
@@ -188,18 +190,18 @@
         }
 
         .player-img {
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #00e676;
             background-color: #fff;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
         }
 
         .player-placeholder {
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             border: 2px solid #00e676;
             background-color: #004d40;
@@ -207,18 +209,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
         }
 
         .player-info {
             background-color: rgba(20, 20, 20, 0.9);
             color: #ffffff;
-            font-size: 10px;
-            padding: 2px 6px;
+            font-size: 9px;
+            padding: 2px 4px;
             border-radius: 4px;
-            margin-top: 3px;
+            margin-top: 2px;
             white-space: nowrap;
             text-align: center;
             font-weight: bold;
@@ -266,7 +267,7 @@
             </div>
         </div>
 
-        <div id="bench">
+        <div id="bench" onclick="handleBenchClick(event)">
             <h3>대기 / 교체 선수단</h3>
             <div class="position-group">
                 <div class="position-title">GK (골키퍼)</div>
@@ -289,7 +290,6 @@
 
     <script>
         const squad = [
-            // 공격수 (FW)
             { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png", slotId: null },
             { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png", slotId: null },
             { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png", slotId: null },
@@ -301,7 +301,6 @@
             { id: 99, backNo: "99", name: "모따",  pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png", slotId: null },
             { id: 100, backNo: "-", name: "도도", pos: "FW", img: "", slotId: null },
 
-            // 미드필더 (MF)
             { id: 6,  backNo: "6",  name: "맹성웅", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190084.png", slotId: null },
             { id: 13, backNo: "13", name: "강상윤", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png", slotId: null },
             { id: 16, backNo: "16", name: "감보아", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250353.png", slotId: null },
@@ -309,7 +308,6 @@
             { id: 73, backNo: "73", name: "김예건", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260293.png", slotId: null },
             { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png", slotId: null },
 
-            // 수비수 (DF)
             { id: 2,  backNo: "2",  name: "김영빈", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png", slotId: null },
             { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png", slotId: null },
             { id: 4,  backNo: "4",  name: "조위제", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220174.png", slotId: null },
@@ -320,7 +318,6 @@
             { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png", slotId: null },
             { id: 77, backNo: "77", name: "김태현", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180185.png", slotId: null },
 
-            // 골키퍼 (GK)
             { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png", slotId: null },
             { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", slotId: null }
         ];
@@ -498,49 +495,90 @@
         };
 
         let currentFormation = "4-3-3";
+        let selectedPlayerId = null; // 터치/클릭 선택된 선수 ID
 
         function render() {
             const pitch = document.getElementById('pitch');
-            
             document.querySelectorAll('.position-slot, #pitch .player-card').forEach(el => el.remove());
             ['GK', 'DF', 'MF', 'FW'].forEach(pos => {
                 document.getElementById(`sub-list-${pos}`).innerHTML = '';
             });
 
+            // 포메이션 슬롯 생성
             const slots = formations[currentFormation];
             slots.forEach(slot => {
                 const slotEl = document.createElement('div');
                 slotEl.className = 'position-slot';
+                if (selectedPlayerId && squad.find(p => p.id === selectedPlayerId)) {
+                    slotEl.classList.add('selected'); // 선택된 선수가 있을 때 슬롯 강조
+                }
                 slotEl.dataset.slotId = slot.id;
                 slotEl.style.left = slot.x + '%';
                 slotEl.style.top = slot.y + '%';
                 slotEl.innerText = slot.label;
 
+                // 클릭(터치)으로 선수 배치
+                slotEl.onclick = (e) => {
+                    e.stopPropagation();
+                    if (selectedPlayerId !== null) {
+                        // 이미 다른 슬롯에 있던 기존 선수는 벤치로
+                        squad.forEach(p => {
+                            if (p.slotId === slot.id) p.slotId = null;
+                        });
+                        // 선택된 선수를 이 슬롯에 배치
+                        const player = squad.find(p => p.id === selectedPlayerId);
+                        if (player) {
+                            player.slotId = slot.id;
+                        }
+                        selectedPlayerId = null;
+                        render();
+                    }
+                };
+
+                // 드래그 앤 드롭 지원
                 slotEl.ondragover = (e) => e.preventDefault();
                 slotEl.ondrop = (e) => {
                     e.preventDefault();
                     const playerId = parseInt(e.dataTransfer.getData('playerId'));
-                    
-                    // 이미 다른 곳(다른 슬롯)에 있던 선수가 이 슬롯으로 오는 경우 기존 슬롯 비우기
                     squad.forEach(p => {
-                        if (p.id === playerId) {
-                            p.slotId = slot.id;
-                        } else if (p.slotId === slot.id) {
-                            // 이 슬롯에 이미 있던 기존 선수는 벤치로 보냄 (null)
-                            p.slotId = null;
-                        }
+                        if (p.slotId === slot.id) p.slotId = null;
                     });
-
+                    const player = squad.find(p => p.id === playerId);
+                    if (player) {
+                        player.slotId = slot.id;
+                    }
                     render();
                 };
 
                 pitch.appendChild(slotEl);
             });
 
+            // 선수 카드 생성 및 배치
             squad.forEach(player => {
                 const card = document.createElement('div');
                 card.className = 'player-card';
+                if (player.id === selectedPlayerId) {
+                    card.classList.add('selected-card');
+                }
                 card.draggable = true;
+
+                // 클릭(터치) 선택 이벤트
+                card.onclick = (e) => {
+                    e.stopPropagation();
+                    if (player.slotId) {
+                        // 그라운드에 있는 선수를 누르면 벤치로 보냄
+                        player.slotId = null;
+                        selectedPlayerId = null;
+                    } else {
+                        // 벤치에 있는 선수를 누르면 선택 상태로 지정
+                        if (selectedPlayerId === player.id) {
+                            selectedPlayerId = null; // 다시 누르면 해제
+                        } else {
+                            selectedPlayerId = player.id;
+                        }
+                    }
+                    render();
+                };
 
                 card.ondragstart = (e) => {
                     e.dataTransfer.setData('playerId', player.id);
@@ -587,7 +625,20 @@
             const select = document.getElementById('formation-select');
             currentFormation = select.value;
             squad.forEach(p => p.slotId = null);
+            selectedPlayerId = null;
             render();
+        }
+
+        // 벤치 빈 곳을 누르거나 드롭했을 때 처리
+        function handleBenchClick(e) {
+            if (selectedPlayerId !== null) {
+                const player = squad.find(p => p.id === selectedPlayerId);
+                if (player) {
+                    player.slotId = null;
+                }
+                selectedPlayerId = null;
+                render();
+            }
         }
 
         const bench = document.getElementById('bench');
