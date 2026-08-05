@@ -230,6 +230,51 @@
             position: absolute;
             transform: translate(-50%, -50%);
         }
+
+        /* Modal Styles */
+        #image-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .modal-content {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 90%;
+            border: 1px solid #444;
+            box-shadow: 0 10px 30px rgba(0,230,118,0.2);
+        }
+        .modal-content img {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 8px;
+            border: 2px solid #00e676;
+            margin: 15px 0;
+        }
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .modal-btn {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            color: #111;
+        }
+        .btn-download { background-color: #00e676; }
+        .btn-close { background-color: #555; color: #fff; }
     </style>
 </head>
 <body>
@@ -253,7 +298,7 @@
             <option value="4-1-3-2">4-1-3-2</option>
             <option value="3-2-4-1">3-2-4-1 (펩 스타일)</option>
         </select>
-        <button onclick="copyImageToClipboard()">📋 베스트 11 이미지 복사</button>
+        <button id="capture-btn" onclick="openImageModal()">📸 베스트 11 완성 (저장/복사)</button>
     </div>
 
     <div class="container">
@@ -285,6 +330,22 @@
             <div class="position-group">
                 <div class="position-title">FW (공격수)</div>
                 <div id="sub-list-FW" class="sub-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Area -->
+    <div id="image-modal">
+        <div class="modal-content">
+            <h3 style="color:#00e676; margin:0 0 10px 0;">✨ 이미지 생성 완료!</h3>
+            <p style="font-size:12px; color:#ccc; margin:0; line-height:1.4;">
+                <b>PC:</b> 클립보드에 복사되었습니다. 바로 붙여넣기(Ctrl+V) 하세요.<br>
+                <b>모바일:</b> 아래 이미지를 <b>꾹~ 눌러서</b> 저장/복사하거나 버튼을 누르세요.
+            </p>
+            <img id="result-img" src="" alt="스쿼드 이미지">
+            <div class="modal-buttons">
+                <a id="download-link" href="#" download="jeonbuk-squad.png" class="modal-btn btn-download">💾 파일로 저장</a>
+                <button class="modal-btn btn-close" onclick="closeImageModal()">닫기</button>
             </div>
         </div>
     </div>
@@ -324,102 +385,30 @@
         ];
 
         const formations = {
-            "4-3-3": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 },
-                { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LCM", label: "LCM", x: 30, y: 52 },
-                { id: "CM", label: "CM", x: 50, y: 58 }, { id: "RCM", label: "RCM", x: 70, y: 52 }, { id: "LW", label: "LW", x: 18, y: 25 },
-                { id: "ST", label: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", x: 82, y: 25 }
-            ],
-            "4-2-3-1": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 },
-                { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LDM", label: "LDM", x: 38, y: 62 },
-                { id: "RDM", label: "RDM", x: 62, y: 62 }, { id: "LAM", label: "LAM", x: 20, y: 38 }, { id: "CAM", label: "CAM", x: 50, y: 40 },
-                { id: "RAM", label: "RAM", x: 80, y: 38 }, { id: "ST", label: "ST", x: 50, y: 20 }
-            ],
-            "4-4-2": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 },
-                { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LM", label: "LM", x: 15, y: 50 },
-                { id: "CM1", label: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", x: 85, y: 50 },
-                { id: "ST1", label: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", x: 62, y: 22 }
-            ],
-            "4-1-4-1": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 },
-                { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "CDM", label: "CDM", x: 50, y: 65 },
-                { id: "LM", label: "LM", x: 15, y: 42 }, { id: "LCM", label: "LCM", x: 38, y: 45 }, { id: "RCM", label: "RCM", x: 62, y: 45 },
-                { id: "RM", label: "RM", x: 85, y: 42 }, { id: "ST", label: "ST", x: 50, y: 20 }
-            ],
-            "4-3-1-2": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 },
-                { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LCM", label: "LCM", x: 30, y: 58 },
-                { id: "CDM", label: "CDM", x: 50, y: 65 }, { id: "RCM", label: "RCM", x: 70, y: 58 }, { id: "CAM", label: "CAM", x: 50, y: 40 },
-                { id: "ST1", label: "ST", x: 38, y: 20 }, { id: "ST2", label: "ST", x: 62, y: 20 }
-            ],
-            "3-5-2": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 25, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 },
-                { id: "RCB", label: "RCB", x: 75, y: 78 }, { id: "LWB", label: "LWB", x: 15, y: 52 }, { id: "LCM", label: "LCM", x: 38, y: 55 },
-                { id: "CM", label: "CM", x: 50, y: 45 }, { id: "RCM", label: "RCM", x: 62, y: 55 }, { id: "RWB", label: "RWB", x: 85, y: 52 },
-                { id: "ST1", label: "LS", x: 38, y: 22 }, { id: "ST2", label: "RS", x: 62, y: 22 }
-            ],
-            "3-4-3": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 25, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 },
-                { id: "RCB", label: "RCB", x: 75, y: 78 }, { id: "LM", label: "LM", x: 15, y: 50 }, { id: "CM1", label: "CM", x: 38, y: 52 },
-                { id: "CM2", label: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", x: 85, y: 50 }, { id: "LW", label: "LW", x: 20, y: 25 },
-                { id: "ST", label: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", x: 80, y: 25 }
-            ],
-            "3-4-1-2": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 25, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 },
-                { id: "RCB", label: "RCB", x: 75, y: 78 }, { id: "LM", label: "LM", x: 15, y: 52 }, { id: "CM1", label: "CM", x: 38, y: 55 },
-                { id: "CM2", label: "CM", x: 62, y: 55 }, { id: "RM", label: "RM", x: 85, y: 52 }, { id: "CAM", label: "CAM", x: 50, y: 38 },
-                { id: "ST1", label: "LS", x: 38, y: 20 }, { id: "ST2", label: "RS", x: 62, y: 20 }
-            ],
-            "5-3-2": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", x: 12, y: 70 }, { id: "LCB", label: "LCB", x: 30, y: 78 },
-                { id: "CB", label: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", x: 70, y: 78 }, { id: "RWB", label: "RWB", x: 88, y: 70 },
-                { id: "LCM", label: "LCM", x: 35, y: 50 }, { id: "CM", label: "CM", x: 50, y: 55 }, { id: "RCM", label: "RCM", x: 65, y: 50 },
-                { id: "ST1", label: "LS", x: 38, y: 22 }, { id: "ST2", label: "RS", x: 62, y: 22 }
-            ],
-            "5-4-1": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", x: 12, y: 68 }, { id: "LCB", label: "LCB", x: 30, y: 78 },
-                { id: "CB", label: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", x: 70, y: 78 }, { id: "RWB", label: "RWB", x: 88, y: 68 },
-                { id: "LM", label: "LM", x: 20, y: 45 }, { id: "CM1", label: "CM", x: 40, y: 48 }, { id: "CM2", label: "CM", x: 60, y: 48 },
-                { id: "RM", label: "RM", x: 80, y: 45 }, { id: "ST", label: "ST", x: 50, y: 20 }
-            ],
-            "4-2-2-2": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 },
-                { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LDM", label: "LDM", x: 38, y: 62 },
-                { id: "RDM", label: "RDM", x: 62, y: 62 }, { id: "LAM", label: "LAM", x: 32, y: 40 }, { id: "RAM", label: "RAM", x: 68, y: 40 },
-                { id: "ST1", label: "LS", x: 38, y: 20 }, { id: "ST2", label: "RS", x: 62, y: 20 }
-            ],
-            "4-1-3-2": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 },
-                { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "CDM", label: "CDM", x: 50, y: 65 },
-                { id: "LM", label: "LM", x: 20, y: 45 }, { id: "CM", label: "CM", x: 50, y: 48 }, { id: "RM", label: "RM", x: 80, y: 45 },
-                { id: "ST1", label: "LS", x: 38, y: 20 }, { id: "ST2", label: "RS", x: 62, y: 20 }
-            ],
-            "3-2-4-1": [
-                { id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 30, y: 80 }, { id: "CB", label: "CB", x: 50, y: 82 },
-                { id: "RCB", label: "RCB", x: 70, y: 80 }, { id: "DM1", label: "LDM", x: 38, y: 65 }, { id: "DM2", label: "RDM", x: 62, y: 65 },
-                { id: "LW", label: "LW", x: 18, y: 42 }, { id: "AM1", label: "LAM", x: 38, y: 40 }, { id: "AM2", label: "RAM", x: 62, y: 40 },
-                { id: "RW", label: "RW", x: 82, y: 42 }, { id: "ST", label: "ST", x: 50, y: 20 }
-            ]
+            "4-3-3": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LCM", label: "LCM", x: 30, y: 52 }, { id: "CM", label: "CM", x: 50, y: 58 }, { id: "RCM", label: "RCM", x: 70, y: 52 }, { id: "LW", label: "LW", x: 18, y: 25 }, { id: "ST", label: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", x: 82, y: 25 }],
+            "4-2-3-1": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LDM", label: "LDM", x: 38, y: 62 }, { id: "RDM", label: "RDM", x: 62, y: 62 }, { id: "LAM", label: "LAM", x: 20, y: 38 }, { id: "CAM", label: "CAM", x: 50, y: 40 }, { id: "RAM", label: "RAM", x: 80, y: 38 }, { id: "ST", label: "ST", x: 50, y: 20 }],
+            "4-4-2": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LM", label: "LM", x: 15, y: 50 }, { id: "CM1", label: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", x: 85, y: 50 }, { id: "ST1", label: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", x: 62, y: 22 }],
+            "4-1-4-1": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "CDM", label: "CDM", x: 50, y: 65 }, { id: "LM", label: "LM", x: 15, y: 42 }, { id: "LCM", label: "LCM", x: 38, y: 45 }, { id: "RCM", label: "RCM", x: 62, y: 45 }, { id: "RM", label: "RM", x: 85, y: 42 }, { id: "ST", label: "ST", x: 50, y: 20 }],
+            "4-3-1-2": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LCM", label: "LCM", x: 30, y: 58 }, { id: "CDM", label: "CDM", x: 50, y: 65 }, { id: "RCM", label: "RCM", x: 70, y: 58 }, { id: "CAM", label: "CAM", x: 50, y: 40 }, { id: "ST1", label: "ST", x: 38, y: 20 }, { id: "ST2", label: "ST", x: 62, y: 20 }],
+            "3-5-2": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 25, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", x: 75, y: 78 }, { id: "LWB", label: "LWB", x: 15, y: 52 }, { id: "LCM", label: "LCM", x: 38, y: 55 }, { id: "CM", label: "CM", x: 50, y: 45 }, { id: "RCM", label: "RCM", x: 62, y: 55 }, { id: "RWB", label: "RWB", x: 85, y: 52 }, { id: "ST1", label: "LS", x: 38, y: 22 }, { id: "ST2", label: "RS", x: 62, y: 22 }],
+            "3-4-3": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 25, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", x: 75, y: 78 }, { id: "LM", label: "LM", x: 15, y: 50 }, { id: "CM1", label: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", x: 85, y: 50 }, { id: "LW", label: "LW", x: 20, y: 25 }, { id: "ST", label: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", x: 80, y: 25 }],
+            "3-4-1-2": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 25, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", x: 75, y: 78 }, { id: "LM", label: "LM", x: 15, y: 52 }, { id: "CM1", label: "CM", x: 38, y: 55 }, { id: "CM2", label: "CM", x: 62, y: 55 }, { id: "RM", label: "RM", x: 85, y: 52 }, { id: "CAM", label: "CAM", x: 50, y: 38 }, { id: "ST1", label: "LS", x: 38, y: 20 }, { id: "ST2", label: "RS", x: 62, y: 20 }],
+            "5-3-2": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", x: 12, y: 70 }, { id: "LCB", label: "LCB", x: 30, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", x: 70, y: 78 }, { id: "RWB", label: "RWB", x: 88, y: 70 }, { id: "LCM", label: "LCM", x: 35, y: 50 }, { id: "CM", label: "CM", x: 50, y: 55 }, { id: "RCM", label: "RCM", x: 65, y: 50 }, { id: "ST1", label: "LS", x: 38, y: 22 }, { id: "ST2", label: "RS", x: 62, y: 22 }],
+            "5-4-1": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", x: 12, y: 68 }, { id: "LCB", label: "LCB", x: 30, y: 78 }, { id: "CB", label: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", x: 70, y: 78 }, { id: "RWB", label: "RWB", x: 88, y: 68 }, { id: "LM", label: "LM", x: 20, y: 45 }, { id: "CM1", label: "CM", x: 40, y: 48 }, { id: "CM2", label: "CM", x: 60, y: 48 }, { id: "RM", label: "RM", x: 80, y: 45 }, { id: "ST", label: "ST", x: 50, y: 20 }],
+            "4-2-2-2": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "LDM", label: "LDM", x: 38, y: 62 }, { id: "RDM", label: "RDM", x: 62, y: 62 }, { id: "LAM", label: "LAM", x: 32, y: 40 }, { id: "RAM", label: "RAM", x: 68, y: 40 }, { id: "ST1", label: "LS", x: 38, y: 20 }, { id: "ST2", label: "RS", x: 62, y: 20 }],
+            "4-1-3-2": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", x: 15, y: 75 }, { id: "CB1", label: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", x: 85, y: 75 }, { id: "CDM", label: "CDM", x: 50, y: 65 }, { id: "LM", label: "LM", x: 20, y: 45 }, { id: "CM", label: "CM", x: 50, y: 48 }, { id: "RM", label: "RM", x: 80, y: 45 }, { id: "ST1", label: "LS", x: 38, y: 20 }, { id: "ST2", label: "RS", x: 62, y: 20 }],
+            "3-2-4-1": [{ id: "GK", label: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", x: 30, y: 80 }, { id: "CB", label: "CB", x: 50, y: 82 }, { id: "RCB", label: "RCB", x: 70, y: 80 }, { id: "DM1", label: "LDM", x: 38, y: 65 }, { id: "DM2", label: "RDM", x: 62, y: 65 }, { id: "LW", label: "LW", x: 18, y: 42 }, { id: "AM1", label: "LAM", x: 38, y: 40 }, { id: "AM2", label: "RAM", x: 62, y: 40 }, { id: "RW", label: "RW", x: 82, y: 42 }, { id: "ST", label: "ST", x: 50, y: 20 }]
         };
 
         let currentFormation = "4-3-1-2";
         let selectedPlayerId = null;
 
-        // Player to Slot Assign Logic
         function assignPlayerToSlot(playerId, slotId) {
-            // 1. 해당 슬롯에 누군가 있다면 무조건 벤치로 쫓아냅니다.
             squad.forEach(p => {
-                if (p.slotId === slotId) {
-                    p.slotId = null;
-                }
+                if (p.slotId === slotId) p.slotId = null;
             });
-            // 2. 새로운 선수를 해당 슬롯에 넣습니다.
             squad.forEach(p => {
-                if (p.id === playerId) {
-                    p.slotId = slotId;
-                }
+                if (p.id === playerId) p.slotId = slotId;
             });
             selectedPlayerId = null;
             render();
@@ -432,7 +421,6 @@
                 document.getElementById(`sub-list-${pos}`).innerHTML = '';
             });
 
-            // 1. Render Slots
             const slots = formations[currentFormation];
             slots.forEach(slot => {
                 const slotEl = document.createElement('div');
@@ -443,13 +431,11 @@
                 slotEl.style.top = slot.y + '%';
                 slotEl.innerText = slot.label;
 
-                // 클릭(터치) 슬롯 할당
                 slotEl.onclick = (e) => {
                     e.stopPropagation();
                     if (selectedPlayerId !== null) assignPlayerToSlot(selectedPlayerId, slot.id);
                 };
 
-                // 빈 슬롯에 드래그 드롭 할당
                 slotEl.ondragover = (e) => e.preventDefault();
                 slotEl.ondrop = (e) => {
                     e.preventDefault();
@@ -460,50 +446,39 @@
                 pitch.appendChild(slotEl);
             });
 
-            // 2. Render Player Cards
             squad.forEach(player => {
                 const card = document.createElement('div');
                 card.className = 'player-card';
                 if (player.id === selectedPlayerId) card.classList.add('selected-card');
                 card.draggable = true;
 
-                // 클릭(터치) 동작
                 card.onclick = (e) => {
                     e.stopPropagation();
                     if (player.slotId) {
-                        // 그라운드에 있는 선수를 클릭했을 때: 
-                        // 만약 다른 선수가 선택된 상태라면 교체(스왑) 실행!
                         if (selectedPlayerId !== null && selectedPlayerId !== player.id) {
                             assignPlayerToSlot(selectedPlayerId, player.slotId);
                         } else {
-                            // 아무도 선택 안했으면 그냥 벤치로 돌려보냄
                             player.slotId = null;
                             selectedPlayerId = null;
                             render();
                         }
                     } else {
-                        // 벤치에 있는 선수 클릭 시 선택/해제
                         selectedPlayerId = (selectedPlayerId === player.id) ? null : player.id;
                         render();
                     }
                 };
 
-                // 드래그 시작
                 card.ondragstart = (e) => {
                     e.dataTransfer.setData('playerId', player.id);
                     selectedPlayerId = player.id;
                 };
 
-                // ★ 해결 핵심: 그라운드 위 선수 카드에도 드래그 권한 부여!
-                // 이렇게 하면 선수 위에 선수를 겹쳐 놓아도 교체(스왑)가 정상적으로 일어납니다.
                 card.ondragover = (e) => {
-                    if (player.slotId) { 
-                        e.preventDefault(); // 선수 위에서도 '금지 마크' 안 뜨게 허용!
-                    }
+                    if (player.slotId) e.preventDefault();
                 };
                 card.ondrop = (e) => {
                     e.preventDefault();
-                    e.stopPropagation(); // 이벤트가 밑(빈 슬롯)으로 새어나가지 않게 방지
+                    e.stopPropagation();
                     if (player.slotId) {
                         const incomingPlayerId = parseInt(e.dataTransfer.getData('playerId'));
                         if (!isNaN(incomingPlayerId) && incomingPlayerId !== player.id) {
@@ -512,9 +487,9 @@
                     }
                 };
 
-                // 이미지 세팅
                 if (player.img) {
                     const img = document.createElement('img');
+                    img.crossOrigin = "anonymous";
                     img.src = player.img;
                     img.className = 'player-img';
                     card.appendChild(img);
@@ -530,7 +505,6 @@
                 info.innerText = `${player.backNo}. ${player.name}`;
                 card.appendChild(info);
 
-                // 화면 배치
                 if (player.slotId) {
                     const targetSlot = document.querySelector(`.position-slot[data-slot-id="${player.slotId}"]`);
                     if (targetSlot) {
@@ -538,7 +512,7 @@
                         card.style.left = targetSlot.style.left;
                         card.style.top = targetSlot.style.top;
                         pitch.appendChild(card);
-                        targetSlot.style.color = 'transparent'; // 자리 글씨 가리기
+                        targetSlot.style.color = 'transparent';
                     } else {
                         player.slotId = null;
                     }
@@ -578,41 +552,35 @@
             }
         };
 
-        function copyImageToClipboard() {
+        function openImageModal() {
+            const btn = document.getElementById('capture-btn');
+            const originalText = btn.innerText;
+            btn.innerText = "⏳ 캡처 중...";
+
             const target = document.getElementById('pitch-wrapper');
-            html2canvas(target, { backgroundColor: null, scale: 2 }).then(canvas => {
+            // ★ scale을 2에서 1로 변경하여 이미지 크기를 반으로 줄였습니다.
+            html2canvas(target, { backgroundColor: null, scale: 1, useCORS: true }).then(canvas => {
                 canvas.toBlob(blob => {
+                    const url = URL.createObjectURL(blob);
+                    
                     if (navigator.clipboard && window.ClipboardItem) {
                         try {
                             const item = new ClipboardItem({ "image/png": blob });
-                            navigator.clipboard.write([item]).then(() => {
-                                alert("✨ 베스트 11 이미지가 클립보드에 복사되었습니다! 카카오톡 대화창 등에 바로 붙여넣기(Ctrl+V) 하세요.");
-                                return;
-                            });
+                            navigator.clipboard.write([item]).catch(e => console.log(e));
                         } catch (err) {}
                     }
 
-                    const url = URL.createObjectURL(blob);
-                    const newWindow = window.open();
-                    if (newWindow) {
-                        newWindow.document.write(`
-                            <html>
-                            <head><title>베스트 11 이미지</title></head>
-                            <body style="background:#111; color:#fff; text-align:center; padding:20px; font-family:sans-serif;">
-                                <h3>이미지가 생성되었습니다!</h3>
-                                <p>스마트폰에서는 이미지를 <b>꾹 눌러서 [복사]</b> 또는 <b>[사진에 저장]</b> 하세요.</p>
-                                <img src="${url}" style="max-width:100%; border-radius:8px; border:2px solid #00e676;" />
-                            </body>
-                            </html>
-                        `);
-                    } else {
-                        const link = document.createElement('a');
-                        link.download = 'jeonbuk-squad.png';
-                        link.href = url;
-                        link.click();
-                    }
-                });
+                    document.getElementById('result-img').src = url;
+                    document.getElementById('download-link').href = url;
+                    document.getElementById('image-modal').style.display = 'flex';
+                    
+                    btn.innerText = originalText;
+                }, 'image/png');
             });
+        }
+
+        function closeImageModal() {
+            document.getElementById('image-modal').style.display = 'none';
         }
 
         render();
