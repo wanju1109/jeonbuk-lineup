@@ -40,7 +40,7 @@
         .penalty-box.bottom { bottom: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-bottom: none; }
 
         #bench {
-            width: 280px;
+            width: 300px;
             background-color: #2c2c2c;
             padding: 15px;
             border-radius: 8px;
@@ -55,11 +55,22 @@
             padding-bottom: 10px;
             font-size: 16px;
         }
-        #sub-list {
+
+        .position-group {
+            margin-bottom: 15px;
+        }
+        .position-title {
+            font-size: 12px;
+            color: #aaa;
+            margin-bottom: 5px;
+            border-bottom: 1px dashed #444;
+            padding-bottom: 3px;
+            font-weight: bold;
+        }
+        .sub-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
+            gap: 8px;
         }
 
         .player-card {
@@ -131,23 +142,38 @@
 
         <div id="bench">
             <h3>대기 / 교체 선수단</h3>
-            <div id="sub-list"></div>
+            <div class="position-group">
+                <div class="position-title">GK</div>
+                <div id="sub-list-GK" class="sub-list"></div>
+            </div>
+            <div class="position-group">
+                <div class="position-title">DF</div>
+                <div id="sub-list-DF" class="sub-list"></div>
+            </div>
+            <div class="position-group">
+                <div class="position-title">MF</div>
+                <div id="sub-list-MF" class="sub-list"></div>
+            </div>
+            <div class="position-group">
+                <div class="position-title">FW</div>
+                <div id="sub-list-FW" class="sub-list"></div>
+            </div>
         </div>
     </div>
 
     <script>
         const squad = [
-            { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", isStarter: true, x: 50, y: 90 },
-            { id: 23, backNo: "23", name: "김태환", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20100052.png", isStarter: true, x: 85, y: 75 },
-            { id: 5,  backNo: "5",  name: "박지수", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png", isStarter: true, x: 62, y: 78 },
-            { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png", isStarter: true, x: 38, y: 78 },
-            { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png", isStarter: true, x: 15, y: 75 },
-            { id: 28, backNo: "28", name: "이영재", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png", isStarter: true, x: 38, y: 52 },
-            { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png", isStarter: true, x: 62, y: 52 },
-            { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png", isStarter: true, x: 15, y: 32 },
-            { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png", isStarter: true, x: 85, y: 32 },
-            { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png", isStarter: true, x: 38, y: 22 },
-            { id: 96, backNo: "96", name: "콤파뇨", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png", isStarter: true, x: 62, y: 22 },
+            { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", isStarter: false, x: 50, y: 90 },
+            { id: 23, backNo: "23", name: "김태환", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20100052.png", isStarter: false, x: 85, y: 75 },
+            { id: 5,  backNo: "5",  name: "박지수", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png", isStarter: false, x: 62, y: 78 },
+            { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png", isStarter: false, x: 38, y: 78 },
+            { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png", isStarter: false, x: 15, y: 75 },
+            { id: 28, backNo: "28", name: "이영재", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png", isStarter: false, x: 38, y: 52 },
+            { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png", isStarter: false, x: 62, y: 52 },
+            { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png", isStarter: false, x: 15, y: 32 },
+            { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png", isStarter: false, x: 85, y: 32 },
+            { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png", isStarter: false, x: 38, y: 22 },
+            { id: 96, backNo: "96", name: "콤파뇨", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png", isStarter: false, x: 62, y: 22 },
 
             { id: 100, backNo: "-", name: "도도", pos: "FW", img: "", isStarter: false },
             { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png", isStarter: false },
@@ -169,9 +195,13 @@
 
         function render() {
             const pitch = document.getElementById('pitch');
-            const subList = document.getElementById('sub-list');
             
-            document.querySelectorAll('.player-card').forEach(el => el.remove());
+            // 그라운드에 있는 카드만 제거
+            document.querySelectorAll('#pitch .player-card').forEach(el => el.remove());
+            // 벤치 포지션별 리스트 비우기
+            ['GK', 'DF', 'MF', 'FW'].forEach(pos => {
+                document.getElementById(`sub-list-${pos}`).innerHTML = '';
+            });
 
             squad.forEach(player => {
                 const card = document.createElement('div');
@@ -197,7 +227,6 @@
                 const info = document.createElement('div');
                 info.className = 'player-info';
                 info.innerText = `${player.backNo}. ${player.name}`;
-
                 card.appendChild(info);
 
                 if (player.isStarter) {
@@ -206,7 +235,10 @@
                     card.style.top = player.y + '%';
                     pitch.appendChild(card);
                 } else {
-                    subList.appendChild(card);
+                    const targetList = document.getElementById(`sub-list-${player.pos}`);
+                    if (targetList) {
+                        targetList.appendChild(card);
+                    }
                 }
             });
         }
