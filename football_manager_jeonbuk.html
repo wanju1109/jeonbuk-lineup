@@ -1,126 +1,53 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>FM Tactics Board</title>
-    <style>
-        /* Pitch styling */
-        .pitch {
-            position: relative;
-            width: 400px;
-            height: 500px;
-            background-color: #2e7d32;
-            border: 2px solid white;
-            margin: 20px auto;
-        }
-
-        /* Player icon styling */
-        .player {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-color: #1976d2;
-            border-radius: 50%;
-            color: white;
-            text-align: center;
-            line-height: 30px;
-            font-family: sans-serif;
-            font-size: 12px;
-            /* Center the player based on coordinates */
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        /* SVG container for movement arrows */
-        .movements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* Let clicks pass through to players */
-        }
-    </style>
-</head>
-<body>
-
-    <div style="text-align: center;">
-        <label for="roleSelect">역할 선택: </label>
-        <select id="roleSelect">
-            <option value="none">선택 안함</option>
-            <option value="overlap">오버래핑 (윙백)</option>
-            <option value="cutInside">중앙 침투 (인사이드 포워드)</option>
-        </select>
-    </div>
-
-    <div class="pitch">
-        <!-- SVG area to draw movement lines -->
-        <svg class="movements" id="movementLayer">
-            <!-- Arrow marker definition -->
-            <defs>
-                <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="yellow" />
-                </marker>
-            </defs>
-            <!-- Dynamic lines will be drawn here -->
-        </svg>
-
-        <!-- Example Player (Left Back) -->
-        <div class="player" id="player1" style="left: 20%; top: 70%;">LB</div>
-    </div>
-
-    <script>
-        // Get DOM elements
-        const roleSelect = document.getElementById('roleSelect');
-        const movementLayer = document.getElementById('movementLayer');
-        const player1 = document.getElementById('player1');
-
-        // Player's starting coordinates (in pixels for simplicity)
-        const startX = 80;  // 20% of 400px
-        const startY = 350; // 70% of 500px
-
-        // Event listener for role changes
-        roleSelect.addEventListener('change', function(e) {
-            const role = e.target.value;
-            
-            // Clear existing lines
-            movementLayer.innerHTML = `
-                <defs>
-                    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                        <path d="M 0 0 L 10 5 L 0 10 z" fill="yellow" />
-                    </marker>
-                </defs>
-            `;
-
-            let endX, endY;
-
-            // Define end points based on selected role
-            if (role === 'overlap') {
-                // Move straight up the flank
-                endX = startX;
-                endY = startY - 150;
-            } else if (role === 'cutInside') {
-                // Diagonal movement towards the center
-                endX = startX + 100;
-                endY = startY - 150;
-            } else {
-                return; // Do nothing if 'none' is selected
-            }
-
-            // Create and append the SVG line element
-            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', startX);
-            line.setAttribute('y1', startY);
-            line.setAttribute('x2', endX);
-            line.setAttribute('y2', endY);
-            line.setAttribute('stroke', 'yellow');
-            line.setAttribute('stroke-width', '3');
-            line.setAttribute('stroke-dasharray', '5,5'); // Dashed line
-            line.setAttribute('marker-end', 'url(#arrow)'); // Add arrow head
-            
-            movementLayer.appendChild(line);
-        });
-    </script>
-</body>
-</html>
+// Comprehensive Role Database referencing Football Manager Wiki
+        // dx, dy: basic movement vector (percentage based on starting point)
+        // path: 'straight' (default line), 'cut-inside' (curved to center/wide), 'hold' (no arrow)
+        const roleData = {
+            "ST": [
+                { id: "AF", name: "전진형 포워드 (AF)", desc: "공격의 선봉장입니다. 수비 뒷공간을 파고들며 득점을 노리고, 측면으로 빠져나가며 기회를 창출합니다.", path: "straight", dx: 0, dy: -15 },
+                { id: "DLF", name: "딥라잉 포워드 (DLF)", desc: "2선으로 깊숙이 내려와 동료와 연계 플레이를 펼치고 상대 수비를 끌어냅니다.", path: "straight", dx: 0, dy: 8 },
+                { id: "TF", name: "타깃 포워드 (TF)", desc: "압도적인 피지컬로 공중볼을 따내고 수비수와 경합하며 동료에게 공간을 만들어 줍니다.", path: "hold", dx: 0, dy: 0 },
+                { id: "P", name: "포체 (P)", desc: "오프사이드 라인 선상에서 대기하다가 기회가 오면 빠르게 골 냄새를 맡고 득점합니다.", path: "straight", dx: 0, dy: -10 },
+                { id: "PF", name: "압박형 포워드 (PF)", desc: "최전방에서부터 상대 수비진을 끈질기게 압박하여 실수를 유발합니다.", path: "straight", dx: 0, dy: -12 }
+            ],
+            "W": [
+                { id: "W", name: "윙어 (W)", desc: "터치라인을 타고 직선으로 돌파하여 페널티 박스 안으로 크로스를 올리는 정통 측면 요원입니다.", path: "straight", dx: 0, dy: -18 },
+                { id: "IF", name: "인사이드 포워드 (IF)", desc: "측면에서 중앙으로 적극적으로 파고들어 직접 슈팅을 노리거나 스루패스를 찌릅니다.", path: "cut-inside", dx: "center", dy: -12 },
+                { id: "IW", name: "인버티드 윙어 (IW)", desc: "반대 발을 사용하며 중앙으로 접고 들어와 중원에 숫자를 더하고 찬스를 만듭니다.", path: "cut-inside", dx: "center", dy: -8 },
+                { id: "RMD", name: "라움도이터 (RMD)", desc: "수비 가담을 줄이고 빈 공간을 찾아 자유롭게 유랑하며 치명적인 득점 기회를 노립니다.", path: "cut-inside", dx: "center", dy: -15 }
+            ],
+            "CAM": [
+                { id: "AM", name: "공격형 미드필더 (AM)", desc: "공격진 바로 아래에서 기회를 창출하고 때로는 직접 득점을 노립니다.", path: "straight", dx: 0, dy: -10 },
+                { id: "SS", name: "섀도우 스트라이커 (SS)", desc: "최전방 공격수가 빈 공간을 만들면 그곳으로 적극적으로 침투하여 득점을 올립니다.", path: "straight", dx: 0, dy: -18 },
+                { id: "AP", name: "전진 플레이메이커 (AP)", desc: "상대 수비와 미드필드 사이 공간에서 활동하며 공격진에게 창의적인 패스를 공급합니다.", path: "hold", dx: 0, dy: -5 }
+            ],
+            "CM": [
+                { id: "CM", name: "중앙 미드필더 (CM)", desc: "중앙에서 공수 밸런스를 맞추며 상황에 맞게 유동적으로 지원과 공격을 오갑니다.", path: "straight", dx: 0, dy: -8 },
+                { id: "BBM", name: "박스 투 박스 (BBM)", desc: "엄청난 체력을 바탕으로 우리 진영부터 상대 페널티 박스까지 쉴 새 없이 오갑니다.", path: "straight", dx: 0, dy: -15 },
+                { id: "MEZ", name: "메짤라 (MEZ)", desc: "중앙과 측면 사이의 하프 스페이스를 적극적으로 공략하는 공격적인 미드필더입니다.", path: "cut-inside", dx: "wide", dy: -12 },
+                { id: "CAR", name: "카릴레로 (CAR)", desc: "중원의 좌우 측면 공간을 커버하며 공수 밸런스를 잡아주는 헌신적인 역할입니다.", path: "hold", dx: 0, dy: 0 }
+            ],
+            "DM": [
+                { id: "DM", name: "수비형 미드필더 (DM)", desc: "포백을 든든하게 보호하고 중원에서 공을 탈취하는 기본에 충실한 역할입니다.", path: "hold", dx: 0, dy: 0 },
+                { id: "DLP", name: "딥라잉 플레이메이커 (DLP)", desc: "후방 깊숙한 곳에서 정교한 패스를 배급하며 팀 공격의 템포를 조절합니다.", path: "hold", dx: 0, dy: 0 },
+                { id: "BWM", name: "볼 위닝 미드필더 (BWM)", desc: "상대를 끈질기게 압박하여 공을 빼앗는 데 집중하는 수비형 미드필더입니다.", path: "straight", dx: 0, dy: -5 },
+                { id: "HB", name: "하프백 (HB)", desc: "빌드업 시 센터백 사이로 깊숙이 내려와 후방 3백을 형성하며 안정감을 더합니다.", path: "straight", dx: 0, dy: 8 }
+            ],
+            "WB": [
+                { id: "WB", name: "윙백 (WB)", desc: "터치라인을 따라 활발히 오르내리며 측면 공격과 수비를 모두 책임집니다.", path: "straight", dx: 0, dy: -20 },
+                { id: "CWB", name: "완성형 윙백 (CWB)", desc: "측면 공격의 핵심으로, 수비보다는 적극적인 오버래핑과 크로스에 집중합니다.", path: "straight", dx: 0, dy: -25 }
+            ],
+            "FB": [
+                { id: "FB", name: "풀백 (FB)", desc: "측면 수비를 최우선으로 하면서도 기회가 생기면 전방으로 올라가 측면을 지원합니다.", path: "straight", dx: 0, dy: -12 },
+                { id: "IWB", name: "인버티드 윙백 (IWB)", desc: "공격 시 터치라인이 아닌 중앙 미드필드 지역으로 좁혀 들어와 중원 싸움에 힘을 보탭니다.", path: "cut-inside", dx: "center", dy: -12 },
+                { id: "IFB", name: "인버티드 풀백 (IFB)", desc: "공격 시 중앙 수비수 자리로 이동하여 후방 빌드업을 돕고 안정적인 3백을 만듭니다.", path: "cut-inside", dx: "center", dy: 5 }
+            ],
+            "CB": [
+                { id: "CD", name: "중앙 수비수 (CD)", desc: "기본적인 수비 임무에 충실하며 위험 지역에서 공을 걷어내 라인을 보호합니다.", path: "hold", dx: 0, dy: 0 },
+                { id: "BPD", name: "공격형 수비수 (BPD)", desc: "수비 임무는 물론, 발밑 기술을 활용해 전방으로 정확한 패스를 찔러 빌드업을 주도합니다.", path: "straight", dx: 0, dy: -5 },
+                { id: "WCB", name: "측면 중앙 수비수 (WCB)", desc: "3백에서 측면으로 넓게 벌려 풀백처럼 오버래핑하거나 측면 빈 공간을 방어합니다.", path: "cut-inside", dx: "wide", dy: -8 }
+            ],
+            "GK": [
+                { id: "GK", name: "골키퍼 (GK)", desc: "안전하게 골문을 지키고 위험을 최소화하며 가까운 수비수에게 패스합니다.", path: "hold", dx: 0, dy: 0 },
+                { id: "SK", name: "스위퍼 키퍼 (SK)", desc: "페널티 박스 바깥으로 나와 수비 뒷공간을 커버하고 역습의 시작점이 됩니다.", path: "straight", dx: 0, dy: -6 }
+            ]
+        };
