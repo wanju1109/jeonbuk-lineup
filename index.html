@@ -344,12 +344,12 @@
         <div class="modal-content">
             <h3 style="color:#00e676; margin:0 0 10px 0;">✨ 이미지 생성 완료!</h3>
             <p style="font-size:12px; color:#ccc; margin:0; line-height:1.4;">
-                <b>PC:</b> 클립보드에 복사되었습니다. 바로 붙여넣기(Ctrl+V) 하세요.<br>
-                <b>모바일:</b> 아래 이미지를 <b>꾹~ 눌러서</b> 저장/복사하거나 버튼을 누르세요.
+                <b>PC:</b> 클립보드에 복사되었습니다. (Ctrl+V)<br>
+                <b>모바일:</b> 아래 버튼을 눌러 <b>[이미지 저장]</b>을 하거나 <b>꾹~ 눌러서</b> 저장하세요.
             </p>
             <img id="result-img" src="" alt="스쿼드 이미지">
             <div class="modal-buttons">
-                <a id="download-link" href="#" download="jeonbuk-squad.png" class="modal-btn btn-download">💾 파일로 저장</a>
+                <button id="save-share-btn" class="modal-btn btn-download" onclick="saveOrShareImage()">💾 파일로 저장 / 공유</button>
                 <button class="modal-btn btn-close" onclick="closeImageModal()">닫기</button>
             </div>
         </div>
@@ -407,6 +407,7 @@
 
         let currentFormation = "4-3-1-2";
         let selectedPlayerId = null;
+        let capturedBlob = null; // 저장/공유용 Blob 객체 보관 변수
 
         function assignPlayerToSlot(playerId, slotId) {
             squad.forEach(p => {
@@ -496,7 +497,8 @@
 
                 if (player.img) {
                     const img = document.createElement('img');
-                    img.src = player.img;
+                    img.crossOrigin = "anonymous";
+                    img.src = `https://images.weserv.nl/?url=${player.img.replace('https://', '')}`;
                     img.className = 'player-img';
                     card.appendChild(img);
                 } else {
@@ -563,16 +565,15 @@
             const originalText = btn.innerText;
             btn.innerText = "⏳ 캡처 중...";
 
-            // 캡처 시 빈 자리의 점선 박스(----) 숨기기
             const slots = document.querySelectorAll('.position-slot');
             slots.forEach(slot => slot.style.display = 'none');
 
             const target = document.getElementById('pitch-wrapper');
             html2canvas(target, { backgroundColor: null, scale: 1, useCORS: true, allowTaint: true }).then(canvas => {
-                // 캡처 후 점선 박스 다시 복원
                 slots.forEach(slot => slot.style.display = 'flex');
 
                 canvas.toBlob(blob => {
+                    capturedBlob = blob; // 전역 변수에 저장
                     const url = URL.createObjectURL(blob);
                     
                     if (navigator.clipboard && window.ClipboardItem) {
@@ -583,7 +584,6 @@
                     }
 
                     document.getElementById('result-img').src = url;
-                    document.getElementById('download-link').href = url;
                     document.getElementById('image-modal').style.display = 'flex';
                     
                     btn.innerText = originalText;
@@ -592,6 +592,32 @@
                 slots.forEach(slot => slot.style.display = 'flex');
                 btn.innerText = originalText;
             });
+        }
+
+        // 모바일 네이티브 공유 및 다운로드 처리 함수
+        function saveOrShareImage() {
+            if (!capturedBlob) return;
+            const file = new File([capturedBlob], 'jeonbuk-squad.png', { type: 'image/png' });
+
+            // 모바일 Web Share API 지원 확인 (스마트폰 갤러리 저장 / 공유 팝업 창 호출)
+            if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+                navigator.share({
+                    files: [file],
+                    title: '전북 현대 베스트 11',
+                    text: '내셔널 전북 현대 스쿼드 빌더 결과물입니다.'
+                }).catch(err => {
+                    console.log('Share canceled or failed', err);
+                });
+            } else {
+                // PC 또는 미지원 브라우저용 강제 다운로드 백업
+                const url = URL.createObjectURL(capturedBlob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'jeonbuk-squad.png';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
         }
 
         function closeImageModal() {
