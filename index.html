@@ -243,7 +243,7 @@
             <option value="4-2-3-1">4-2-3-1</option>
             <option value="4-4-2">4-4-2 (플랫)</option>
             <option value="4-1-4-1">4-1-4-1</option>
-            <option value="4-3-1-2">4-3-1-2 (다이아몬드)</option>
+            <option value="4-3-1-2" selected>4-3-1-2 (다이아몬드)</option>
             <option value="3-5-2">3-5-2</option>
             <option value="3-4-3">3-4-3</option>
             <option value="3-4-1-2">3-4-1-2</option>
@@ -494,11 +494,11 @@
             ]
         };
 
-        let currentFormation = "4-3-3";
+        let currentFormation = "4-3-1-2";
         let selectedPlayerId = null;
 
         function assignPlayerToSlot(playerId, slotId) {
-            // 이 슬롯에 있던 기존 선수는 벤치로
+            // 해당 슬롯에 있던 기존 선수는 강제로 벤치로 보냄 (중복 방지)
             squad.forEach(p => {
                 if (p.slotId === slotId) {
                     p.slotId = null;
@@ -564,7 +564,7 @@
                 }
                 card.draggable = true;
 
-                // 클릭(터치) 선택/해제 이벤트
+                // 클릭(터치) 선택/해제 또는 그라운드에서 벤치로 보내기
                 card.onclick = (e) => {
                     e.stopPropagation();
                     if (player.slotId) {
@@ -651,12 +651,10 @@
             }
         };
 
-        // 이미지 복사 기능 (모바일/PC 호환 강화)
         function copyImageToClipboard() {
             const target = document.getElementById('pitch-wrapper');
             html2canvas(target, { backgroundColor: null, scale: 2 }).then(canvas => {
                 canvas.toBlob(blob => {
-                    // PC 등 클립보드 API를 지원하는 경우
                     if (navigator.clipboard && window.ClipboardItem) {
                         try {
                             const item = new ClipboardItem({ "image/png": blob });
@@ -664,12 +662,9 @@
                                 alert("✨ 베스트 11 이미지가 클립보드에 복사되었습니다! 카카오톡 대화창 등에 바로 붙여넣기(Ctrl+V) 하세요.");
                                 return;
                             });
-                        } catch (err) {
-                            // 실패 시 아래 다운로드/새창 열기로 Fallback
-                        }
+                        } catch (err) {}
                     }
 
-                    // 모바일이거나 클립보드 권한이 막힌 경우 새 창에 이미지를 띄워주거나 다운로드 유도
                     const url = URL.createObjectURL(blob);
                     const newWindow = window.open();
                     if (newWindow) {
@@ -684,7 +679,6 @@
                             </html>
                         `);
                     } else {
-                        // 팝업이 차단된 경우 파일 다운로드로 처리
                         const link = document.createElement('a');
                         link.download = 'jeonbuk-squad.png';
                         link.href = url;
