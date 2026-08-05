@@ -325,7 +325,6 @@
             { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png", slotId: null }
         ];
 
-        // 현존하는 주요 포메이션 13가지 좌표 설정
         const formations = {
             "4-3-3": [
                 { id: "GK", label: "GK", x: 50, y: 90 },
@@ -522,15 +521,17 @@
                     e.preventDefault();
                     const playerId = parseInt(e.dataTransfer.getData('playerId'));
                     
+                    // 이미 다른 곳(다른 슬롯)에 있던 선수가 이 슬롯으로 오는 경우 기존 슬롯 비우기
                     squad.forEach(p => {
-                        if (p.slotId === slot.id) p.slotId = null;
+                        if (p.id === playerId) {
+                            p.slotId = slot.id;
+                        } else if (p.slotId === slot.id) {
+                            // 이 슬롯에 이미 있던 기존 선수는 벤치로 보냄 (null)
+                            p.slotId = null;
+                        }
                     });
 
-                    const player = squad.find(p => p.id === playerId);
-                    if (player) {
-                        player.slotId = slot.id;
-                        render();
-                    }
+                    render();
                 };
 
                 pitch.appendChild(slotEl);
@@ -601,7 +602,6 @@
             render();
         };
 
-        // 클립보드 이미지 복사 함수
         function copyImageToClipboard() {
             const target = document.getElementById('pitch-wrapper');
             html2canvas(target, { backgroundColor: null, scale: 2 }).then(canvas => {
