@@ -130,7 +130,7 @@
         }
 
         #bench {
-            width: 300px;
+            width: 340px;
             background-color: #1a1a1a;
             border: 1px solid #333;
             padding: 12px;
@@ -151,28 +151,30 @@
         }
 
         .position-group {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .position-title {
             font-size: 11px;
             color: #888;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             border-left: 3px solid #00e676;
             padding-left: 5px;
             font-weight: bold;
             text-transform: uppercase;
         }
+        
         .sub-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            justify-items: center;
         }
 
         .player-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 60px;
+            width: 65px;
             cursor: grab;
             z-index: 10;
         }
@@ -190,8 +192,8 @@
         }
 
         .player-img {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #00e676;
@@ -200,8 +202,8 @@
         }
 
         .player-placeholder {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             border: 2px solid #00e676;
             background-color: #004d40;
@@ -224,6 +226,9 @@
             text-align: center;
             font-weight: bold;
             border: 1px solid #444;
+            max-width: 62px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .starter {
@@ -361,7 +366,7 @@
             { id: 95, backNo: "95", name: "이탈로", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260365.png", slotId: null },
             { id: 96, backNo: "96", name: "콤파뇨", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png", slotId: null },
             { id: 99, backNo: "99", name: "모따",  pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png", slotId: null },
-            { id: 100, backNo: "-", name: "도도", pos: "FW", img: "", slotId: null },
+            { id: 100, backNo: "100", name: "도도", pos: "FW", img: "", slotId: null },
 
             { id: 6,  backNo: "6",  name: "맹성웅", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190084.png", slotId: null },
             { id: 13, backNo: "13", name: "강상윤", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png", slotId: null },
@@ -446,7 +451,9 @@
                 pitch.appendChild(slotEl);
             });
 
-            squad.forEach(player => {
+            const sortedSquad = [...squad].sort((a, b) => parseInt(a.backNo) - parseInt(b.backNo));
+
+            sortedSquad.forEach(player => {
                 const card = document.createElement('div');
                 card.className = 'player-card';
                 if (player.id === selectedPlayerId) card.classList.add('selected-card');
@@ -489,7 +496,6 @@
 
                 if (player.img) {
                     const img = document.createElement('img');
-                    img.crossOrigin = "anonymous";
                     img.src = player.img;
                     img.className = 'player-img';
                     card.appendChild(img);
@@ -557,9 +563,15 @@
             const originalText = btn.innerText;
             btn.innerText = "⏳ 캡처 중...";
 
+            // 캡처 시 빈 자리의 점선 박스(----) 숨기기
+            const slots = document.querySelectorAll('.position-slot');
+            slots.forEach(slot => slot.style.display = 'none');
+
             const target = document.getElementById('pitch-wrapper');
-            // ★ scale을 2에서 1로 변경하여 이미지 크기를 반으로 줄였습니다.
-            html2canvas(target, { backgroundColor: null, scale: 1, useCORS: true }).then(canvas => {
+            html2canvas(target, { backgroundColor: null, scale: 1, useCORS: true, allowTaint: true }).then(canvas => {
+                // 캡처 후 점선 박스 다시 복원
+                slots.forEach(slot => slot.style.display = 'flex');
+
                 canvas.toBlob(blob => {
                     const url = URL.createObjectURL(blob);
                     
@@ -576,6 +588,9 @@
                     
                     btn.innerText = originalText;
                 }, 'image/png');
+            }).catch(err => {
+                slots.forEach(slot => slot.style.display = 'flex');
+                btn.innerText = originalText;
             });
         }
 
