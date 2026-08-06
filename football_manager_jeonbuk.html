@@ -98,7 +98,7 @@
         .player-img, .player-info, .player-placeholder { pointer-events: none; }
         .player-img {
             width: 45px; height: 45px; border-radius: 50%; object-fit: cover;
-            border: 2px solid #00e676; background-color: #004d40;
+            border: 2px solid #00e676; background-color: #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.3);
         }
         .player-placeholder {
             width: 45px; height: 45px; border-radius: 50%; border: 2px solid #00e676;
@@ -419,37 +419,6 @@
         let state = { style: "", formation: "", roles: {}, players: {} };
         let selectedPlayerId = null;
 
-        // Force convert external images into circular Base64 data URLs to bypass CORS blocks completely
-        async function preloadPlayerImages() {
-            for (let player of squad) {
-                if (player.img && !player.imgDataUrl) {
-                    try {
-                        const dataUrl = await new Promise((resolve) => {
-                            const img = new Image();
-                            img.crossOrigin = "anonymous";
-                            img.onload = () => {
-                                const canvas = document.createElement("canvas");
-                                canvas.width = 90;
-                                canvas.height = 90;
-                                const ctx = canvas.getContext("2d");
-                                ctx.beginPath();
-                                ctx.arc(45, 45, 45, 0, Math.PI * 2, true);
-                                ctx.closePath();
-                                ctx.clip();
-                                ctx.drawImage(img, 0, 0, 90, 90);
-                                resolve(canvas.toDataURL("image/png"));
-                            };
-                            img.onerror = () => resolve(player.img);
-                            img.src = player.img;
-                        });
-                        player.imgDataUrl = dataUrl;
-                    } catch (e) {
-                        player.imgDataUrl = player.img;
-                    }
-                }
-            }
-        }
-
         function resetAll() {
             window.location.href = window.location.pathname;
         }
@@ -610,30 +579,22 @@
                 }
             };
 
-            const imgSrc = player.imgDataUrl || player.img;
-            if (imgSrc) {
-                const img = document.createElement('img'); 
-                img.src = imgSrc; 
-                img.className = 'player-img';
+            if (player.img) {
+                const img = document.createElement('img');
                 img.crossOrigin = "anonymous";
-                img.onerror = function() {
-                    card.innerHTML = '';
-                    const ph = document.createElement('div'); 
-                    ph.className = 'player-placeholder'; 
-                    ph.innerText = player.name;
-                    card.appendChild(ph);
-                    const info = document.createElement('div'); 
-                    info.className = 'player-info'; 
-                    info.innerText = `${player.backNo}. ${player.name}`;
-                    card.appendChild(info);
-                };
+                img.src = `https://images.weserv.nl/?url=${player.img.replace('https://', '')}`;
+                img.className = 'player-img';
                 card.appendChild(img);
             } else {
-                const ph = document.createElement('div'); ph.className = 'player-placeholder'; ph.innerText = player.name;
+                const ph = document.createElement('div');
+                ph.className = 'player-placeholder';
+                ph.innerText = player.name;
                 card.appendChild(ph);
             }
 
-            const info = document.createElement('div'); info.className = 'player-info'; info.innerText = `${player.backNo}. ${player.name}`;
+            const info = document.createElement('div');
+            info.className = 'player-info';
+            info.innerText = `${player.backNo}. ${player.name}`;
             card.appendChild(info);
             return card;
         }
@@ -807,10 +768,10 @@
             });
         }
 
-        // Generate smooth GIF with guaranteed face rendering & solid background
+        // Optimized fast GIF generation (10 frames, ~2 seconds)
         async function generateAnimatedGif() {
             const wrapper = document.getElementById('pitch-wrapper');
-            alert("부드러운 움직이는 GIF 생성 중입니다! 잠시만 기다려주세요 (약 4~5초 소요)...");
+            alert("부드러운 움직이는 GIF 생성 중입니다! (약 2~3초 소요)...");
 
             try {
                 const gif = new GIF({
@@ -827,7 +788,7 @@
                     gif.options.workerScript = URL.createObjectURL(blob);
                 } catch(e) {}
 
-                const totalFrames = 20;
+                const totalFrames = 10; // Optimized frame count for speed
                 for(let i = 0; i < totalFrames; i++) {
                     const progress = Math.sin((i / totalFrames) * Math.PI * 2) * 0.4;
                     renderPitch(progress);
@@ -838,7 +799,7 @@
                         allowTaint: true,
                         backgroundColor: "#1b5e20" 
                     });
-                    gif.addFrame(canvas, { copy: true, delay: 80 });
+                    gif.addFrame(canvas, { copy: true, delay: 100 });
                 }
 
                 renderPitch(0);
@@ -859,7 +820,6 @@
             }
         }
 
-        // Copy description with optimal spacing and line breaks for readability
         function copyDescriptionAndLink() {
             let text = "🟢 [전북 현대 FM 전술 & 라인업]\n\n";
             
@@ -969,8 +929,7 @@
             }
         }
 
-        window.onload = async () => {
-            await preloadPlayerImages();
+        window.onload = () => {
             loadFromURL();
         };
     </script>
