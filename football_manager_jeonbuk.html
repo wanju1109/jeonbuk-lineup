@@ -768,15 +768,16 @@
             });
         }
 
-        // Optimized GIF generation with ~0.6x movement range and smooth speed
+        // Optimized GIF generation with infinite loop (repeat: 0)
         async function generateAnimatedGif() {
             const wrapper = document.getElementById('pitch-wrapper');
-            alert("부드러운 움직이는 GIF 생성 중입니다! (약 2~3초 소요)...");
+            alert("무한 반복되는 부드러운 GIF 생성 중입니다! (약 2~3초 소요)...");
 
             try {
                 const gif = new GIF({
                     workers: 2,
                     quality: 10,
+                    repeat: 0, // 0 = 무한 반복 설정 (게시판에서 멈추지 않고 계속 재생됨)
                     width: wrapper.offsetWidth,
                     height: wrapper.offsetHeight,
                     workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
@@ -810,7 +811,7 @@
                     link.href = url;
                     link.download = 'jeonbuk_tactic.gif';
                     link.click();
-                    alert("부드러운 움직이는 GIF 다운로드가 완료되었습니다!");
+                    alert("무한 반복 GIF 다운로드가 완료되었습니다!");
                 });
 
                 gif.render();
@@ -846,14 +847,12 @@
                     }
                 }
                 if(player) {
-                    // Added extra blank lines between each player for better readability
                     text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  └ 설명: ${roleDesc}\n\n\n`;
                 } else {
                     text += `• [${slot.label}] 미배치 (${roleName})\n\n\n`;
                 }
             });
 
-            // Base URL pointing to clean page without query parameters
             const baseShareUrl = window.location.href.split('?')[0];
 
             text += `🔗 나만의 전술 새로 만들기\n👉 ${baseShareUrl}`;
