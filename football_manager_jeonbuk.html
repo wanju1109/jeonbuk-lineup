@@ -65,6 +65,12 @@
 
         #pitch { width: 100%; height: 100%; position: relative; }
         
+        /* Tactic Preview Video */
+        #tactic-video {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: 15; display: none; background-color: #1b5e20;
+        }
+
         /* SVG layer for arrows */
         #movement-layer {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -110,6 +116,15 @@
         }
         .starter { position: absolute; transform: translate(-50%, -50%); }
 
+        /* Player Animation on Final Confirm */
+        .pitch-animating .player-card.starter {
+            animation: tacticalMove 3s infinite ease-in-out;
+        }
+        @keyframes tacticalMove {
+            0%, 100% { transform: translate(-50%, -50%); }
+            50% { transform: translate(calc(-50% + var(--move-x, 0px)), calc(-50% + var(--move-y, 0px))); }
+        }
+
         /* Steps UI Styling */
         .step-container {
             background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px;
@@ -135,6 +150,7 @@
         }
         .btn-reset { background: #444; color: #fff; }
         .btn-confirm { background: #00e676; color: #111; }
+        .btn-full-reset { background: #d32f2f; color: #fff; width: 100%; margin-top: 20px; font-size: 16px; padding: 12px; }
         
         /* Grid for Roles (Step 2) */
         .role-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
@@ -170,6 +186,9 @@
             <p style="font-size: 12px; color:#aaa; margin-top:0;">드래그 앤 드롭으로 선수를 배치하세요</p>
             
             <div id="pitch-wrapper">
+                <!-- Tactic Preview Video (Overlay) -->
+                <video id="tactic-video" autoplay loop muted playsinline></video>
+
                 <div id="pitch">
                     <div class="pitch-line center-line"></div>
                     <div class="pitch-line center-circle"></div>
@@ -186,6 +205,9 @@
                     </svg>
                 </div>
             </div>
+
+            <!-- Total Reset Button -->
+            <button class="btn-full-reset" onclick="resetAll()">🔄 전체 초기화 (새로 만들기)</button>
         </div>
 
         <!-- RIGHT PANEL: CONTROLS & STEPS -->
@@ -193,7 +215,7 @@
             
             <div id="shared-alert">
                 이 페이지는 공유받은 전술을 보여주고 있습니다!<br>
-                <a href="?" style="color:#111; text-decoration:underline; font-size:14px; margin-top:10px; display:inline-block;">나만의 전술 새로 만들기</a>
+                <a href="javascript:resetAll()" style="color:#111; text-decoration:underline; font-size:14px; margin-top:10px; display:inline-block;">나만의 전술 새로 만들기</a>
             </div>
 
             <!-- STEP 1: 전술 유형 -->
@@ -265,7 +287,7 @@
             <!-- STEP 4: 공유 -->
             <div class="step-container" id="step4">
                 <div class="step-header">STEP 4. 전술 공유 링크</div>
-                <p style="font-size: 13px; color: #ccc;">아래 링크를 복사하여 팬 커뮤니티나 친구에게 공유하세요. 접속 시 현재 설정된 화면이 그대로 열립니다!</p>
+                <p style="font-size: 13px; color: #ccc;">아래 링크를 복사하여 팬 커뮤니티나 친구에게 공유하세요. 접속 시 선수들이 지침에 따라 움직이며 전술이 재생됩니다!</p>
                 <div id="share-link" class="url-box"></div>
             </div>
 
@@ -274,69 +296,34 @@
 
     <script>
         /* ============================
-           DATA: TACTICAL STYLES 
+           DATA: TACTICAL STYLES & VIDEOS
            ============================ */
         const stylesData = {
-            "control": { name: "점유율 중시", desc: "짧은 패스로 점유율을 지배하며 참을성 있게 공간을 찾습니다. 높은 라인에서 상대를 압박합니다.", forms: ["4-2-3-1", "4-3-3", "4-1-4-1"] },
-            "gegenpress": { name: "게겐프레스", desc: "공을 잃은 즉시 미친 듯이 전방 압박을 가하여 빠르게 소유권을 되찾고 득점을 노립니다.", forms: ["4-2-3-1", "4-3-3", "4-4-2"] },
-            "tikitaka": { name: "티키타카", desc: "극단적으로 짧고 빠른 패스워크를 통해 중원을 완벽히 지배하고 상대를 혼란스럽게 만듭니다.", forms: ["4-3-3", "4-2-3-1", "4-1-4-1"] },
-            "verticaltiki": { name: "전진 티키타카", desc: "티키타카보다 조금 더 다이렉트하며 좁은 공간에서 빠른 원터치 패스로 중앙을 돌파합니다.", forms: ["4-3-1-2", "4-3-3", "5-3-2"] },
-            "wingplay": { name: "측면 플레이", desc: "빠른 윙어와 오버래핑하는 풀백을 활용하여 경기장을 넓게 쓰고 지속적인 크로스를 공급합니다.", forms: ["4-4-2", "4-2-3-1", "3-4-3"] },
-            "routeone": { name: "길게 차기", desc: "공을 탈취하면 후방에서 전방의 타겟맨에게 다이렉트로 길게 때려놓고 세컨볼을 노립니다.", forms: ["4-4-2", "5-3-2"] },
-            "fluidcounter": { name: "유연한 역습", desc: "수비 라인을 지키다 공을 끊어내면 다수의 선수가 위치를 스위칭하며 유기적으로 역습합니다.", forms: ["4-3-3", "4-1-4-1", "3-5-2"] },
-            "directcounter": { name: "빠른 역습", desc: "구조를 단단히 유지한 채, 공을 끊자마자 공격수에게 직선적이고 빠른 패스를 투입합니다.", forms: ["4-4-2", "4-1-4-1", "5-4-1"] },
-            "catenaccio": { name: "카테나치오", desc: "이탈리아식 빗장 수비입니다. 극강의 수비 조직력으로 실점을 막고 제한적인 역습만 시도합니다.", forms: ["5-3-2", "3-5-2", "5-4-1"] },
-            "parkthebus": { name: "버스 세우기", desc: "전원이 페널티 박스 근처에 밀집하여 틈을 주지 않는 극단적이고 필사적인 수비 전술입니다.", forms: ["5-4-1", "5-3-2"] }
+            "control": { name: "점유율 중시", desc: "짧은 패스로 점유율을 지배하며 참을성 있게 공간을 찾습니다. 높은 라인에서 상대를 압박합니다.", forms: ["4-2-3-1", "4-3-3", "4-1-4-1"], video: "https://i.namu.wiki/i/TRX-FpXhxRnKyfGAHuS_ZuZgJeej1M-JhNgX3sVW4jYXoT1mPjQXVxkNwf5vG3CtmRYUFl_p3dA_SnmcBTLC-w.mp4" },
+            "gegenpress": { name: "게겐프레스", desc: "공을 잃은 즉시 미친 듯이 전방 압박을 가하여 빠르게 소유권을 되찾고 득점을 노립니다.", forms: ["4-2-3-1", "4-3-3", "4-4-2"], video: "https://i.namu.wiki/i/bMBlHL3uo3SQxhBaasyyqX1tP2I2I-FszRS0U9UAhJIXAfJEaURljPpqR54krVc4FBs3RQ3JiBLJLAKRKMYJug.mp4" },
+            "tikitaka": { name: "티키타카", desc: "극단적으로 짧고 빠른 패스워크를 통해 중원을 완벽히 지배하고 상대를 혼란스럽게 만듭니다.", forms: ["4-3-3", "4-2-3-1", "4-1-4-1"], video: "https://i.namu.wiki/i/wPdKDWYTB-gzjwhq4bWRRrTUVjxrZCMy0ZlZGAoa0kpZpVU0eN5BOnLsyR_prPRNU2sPk1YU06zCyaMhHgGIfw.mp4" },
+            "verticaltiki": { name: "전진 티키타카", desc: "티키타카보다 조금 더 다이렉트하며 좁은 공간에서 빠른 원터치 패스로 중앙을 돌파합니다.", forms: ["4-3-1-2", "4-3-3", "5-3-2"], video: "https://i.namu.wiki/i/waeGqnggiZjdMJuzNGlng6Tnu1_P6WvLR1NJJlIo9zlfmLAmdHYAXSGD-3X5JCAzhApbFWIBYlydnUfbWI8gaA.mp4" },
+            "wingplay": { name: "측면 플레이", desc: "빠른 윙어와 오버래핑하는 풀백을 활용하여 경기장을 넓게 쓰고 지속적인 크로스를 공급합니다.", forms: ["4-4-2", "4-2-3-1", "3-4-3"], video: "https://i.namu.wiki/i/v9r7dalRqU6GGPoHsM011ueotPg7ywac-B8lcIbBbrI8fmFL5p__KefUzXb685I6OuBU50MbgsbuQ5GcrUCPzA.mp4" },
+            "routeone": { name: "길게 차기", desc: "공을 탈취하면 후방에서 전방의 타겟맨에게 다이렉트로 길게 때려놓고 세컨볼을 노립니다.", forms: ["4-4-2", "5-3-2"], video: "https://i.namu.wiki/i/ta9ocwLmtsopEfm3GzO-zmMF4pQ1UUINZb87Z9bQ_Q6qmTxjzkM56P-DUXu8-KfUH8EU6cCh6HJ15mY1obUDnw.mp4" },
+            "fluidcounter": { name: "유연한 역습", desc: "수비 라인을 지키다 공을 끊어내면 다수의 선수가 위치를 스위칭하며 유기적으로 역습합니다.", forms: ["4-3-3", "4-1-4-1", "3-5-2"], video: "https://i.namu.wiki/i/c18jaUuq09BuiVdaqggYZS1P_kt3j-EK-PI3Ob2ljDuI4lfvMSkhxe9wOj-YPqKlvvZXqsAA7ccuk1cnTx9qvA.mp4" },
+            "directcounter": { name: "빠른 역습", desc: "구조를 단단히 유지한 채, 공을 끊자마자 공격수에게 직선적이고 빠른 패스를 투입합니다.", forms: ["4-4-2", "4-1-4-1", "5-4-1"], video: "https://i.namu.wiki/i/GZ-U9zWkVa6XmyYCuwJjwA9GXX2AFhddIT-fYb6bMQxEHSaXiTxRYkMNIWwZyEd4j3YObvDA4tV1YDVP05RE9w.mp4" },
+            "catenaccio": { name: "카테나치오", desc: "이탈리아식 빗장 수비입니다. 극강의 수비 조직력으로 실점을 막고 제한적인 역습만 시도합니다.", forms: ["5-3-2", "3-5-2", "5-4-1"], video: "https://i.namu.wiki/i/x86-xESDfHukKaKlG_JlSMfgRAG8qJ-tJ6UJAzsq3kNxXfK-KSPi98UEVN52r1lpH8RRoJ8lKwgTbbkdohWtVw.mp4" },
+            "parkthebus": { name: "버스 세우기", desc: "전원이 페널티 박스 근처에 밀집하여 틈을 주지 않는 극단적이고 필사적인 수비 전술입니다.", forms: ["5-4-1", "5-3-2"], video: "https://i.namu.wiki/i/_Ygej3EFBL-AwGOYCoTIhyfMFSiZ3ZoHIm78Mo8gcnd6YZKPGqI2gvieC7KoxVRveHEw1hYQHjYRKM6yC6z0sg.mp4" }
         };
 
         /* ============================
            DATA: FORMATIONS 
            ============================ */
         const formationsData = {
-            "4-3-3": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
-                { id: "LCM", label: "LCM", type: "CM", x: 30, y: 52 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 58 }, { id: "RCM", label: "RCM", type: "CM", x: 70, y: 52 },
-                { id: "LW", label: "LW", type: "W", x: 18, y: 25 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", type: "W", x: 82, y: 25 }
-            ],
-            "4-2-3-1": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
-                { id: "LDM", label: "LDM", type: "DM", x: 38, y: 62 }, { id: "RDM", label: "RDM", type: "DM", x: 62, y: 62 },
-                { id: "LAM", label: "LAM", type: "W", x: 20, y: 38 }, { id: "CAM", label: "CAM", type: "CAM", x: 50, y: 40 }, { id: "RAM", label: "RAM", type: "W", x: 80, y: 38 },
-                { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }
-            ],
-            "4-4-2": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
-                { id: "LM", label: "LM", type: "W", x: 15, y: 50 }, { id: "CM1", label: "CM", type: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", type: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", type: "W", x: 85, y: 50 },
-                { id: "ST1", label: "ST", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 22 }
-            ],
-            "4-1-4-1": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
-                { id: "CDM", label: "CDM", type: "DM", x: 50, y: 65 }, { id: "LM", label: "LM", type: "W", x: 15, y: 42 }, { id: "LCM", label: "LCM", type: "CM", x: 38, y: 45 }, { id: "RCM", label: "RCM", type: "CM", x: 62, y: 45 }, { id: "RM", label: "RM", type: "W", x: 85, y: 42 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }
-            ],
-            "4-3-1-2": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 },
-                { id: "LCM", label: "LCM", type: "CM", x: 30, y: 58 }, { id: "CDM", label: "CDM", type: "DM", x: 50, y: 65 }, { id: "RCM", label: "RCM", type: "CM", x: 70, y: 58 },
-                { id: "CAM", label: "CAM", type: "CAM", x: 50, y: 40 }, { id: "ST1", label: "ST", type: "ST", x: 38, y: 20 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 20 }
-            ],
-            "3-5-2": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", type: "CB", x: 25, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 75, y: 78 },
-                { id: "LWB", label: "LWB", type: "WB", x: 15, y: 52 }, { id: "LCM", label: "LCM", type: "CM", x: 38, y: 55 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 45 }, { id: "RCM", label: "RCM", type: "CM", x: 62, y: 55 }, { id: "RWB", label: "RWB", type: "WB", x: 85, y: 52 },
-                { id: "ST1", label: "ST", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 22 }
-            ],
-            "3-4-3": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", type: "CB", x: 25, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 75, y: 78 },
-                { id: "LM", label: "LM", type: "W", x: 15, y: 50 }, { id: "CM1", label: "CM", type: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", type: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", type: "W", x: 85, y: 50 },
-                { id: "LW", label: "LW", type: "W", x: 20, y: 25 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", type: "W", x: 80, y: 25 }
-            ],
-            "5-3-2": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", type: "WB", x: 12, y: 70 }, { id: "LCB", label: "LCB", type: "CB", x: 30, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 70, y: 78 }, { id: "RWB", label: "RWB", type: "WB", x: 88, y: 70 },
-                { id: "LCM", label: "LCM", type: "CM", x: 35, y: 50 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 55 }, { id: "RCM", label: "RCM", type: "CM", x: 65, y: 50 },
-                { id: "ST1", label: "ST", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 22 }
-            ],
-            "5-4-1": [
-                { id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", type: "WB", x: 12, y: 68 }, { id: "LCB", label: "LCB", type: "CB", x: 30, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 70, y: 78 }, { id: "RWB", label: "RWB", type: "WB", x: 88, y: 68 },
-                { id: "LM", label: "LM", type: "W", x: 20, y: 45 }, { id: "CM1", label: "CM", type: "CM", x: 40, y: 48 }, { id: "CM2", label: "CM", type: "CM", x: 60, y: 48 }, { id: "RM", label: "RM", type: "W", x: 80, y: 45 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }
-            ]
+            "4-3-3": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 }, { id: "LCM", label: "LCM", type: "CM", x: 30, y: 52 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 58 }, { id: "RCM", label: "RCM", type: "CM", x: 70, y: 52 }, { id: "LW", label: "LW", type: "W", x: 18, y: 25 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", type: "W", x: 82, y: 25 }],
+            "4-2-3-1": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 }, { id: "LDM", label: "LDM", type: "DM", x: 38, y: 62 }, { id: "RDM", label: "RDM", type: "DM", x: 62, y: 62 }, { id: "LAM", label: "LAM", type: "W", x: 20, y: 38 }, { id: "CAM", label: "CAM", type: "CAM", x: 50, y: 40 }, { id: "RAM", label: "RAM", type: "W", x: 80, y: 38 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }],
+            "4-4-2": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 }, { id: "LM", label: "LM", type: "W", x: 15, y: 50 }, { id: "CM1", label: "CM", type: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", type: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", type: "W", x: 85, y: 50 }, { id: "ST1", label: "ST", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 22 }],
+            "4-1-4-1": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 }, { id: "CDM", label: "CDM", type: "DM", x: 50, y: 65 }, { id: "LM", label: "LM", type: "W", x: 15, y: 42 }, { id: "LCM", label: "LCM", type: "CM", x: 38, y: 45 }, { id: "RCM", label: "RCM", type: "CM", x: 62, y: 45 }, { id: "RM", label: "RM", type: "W", x: 85, y: 42 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }],
+            "4-3-1-2": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 }, { id: "LCM", label: "LCM", type: "CM", x: 30, y: 58 }, { id: "CDM", label: "CDM", type: "DM", x: 50, y: 65 }, { id: "RCM", label: "RCM", type: "CM", x: 70, y: 58 }, { id: "CAM", label: "CAM", type: "CAM", x: 50, y: 40 }, { id: "ST1", label: "ST", type: "ST", x: 38, y: 20 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 20 }],
+            "3-5-2": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", type: "CB", x: 25, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 75, y: 78 }, { id: "LWB", label: "LWB", type: "WB", x: 15, y: 52 }, { id: "LCM", label: "LCM", type: "CM", x: 38, y: 55 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 45 }, { id: "RCM", label: "RCM", type: "CM", x: 62, y: 55 }, { id: "RWB", label: "RWB", type: "WB", x: 85, y: 52 }, { id: "ST1", label: "ST", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 22 }],
+            "3-4-3": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LCB", label: "LCB", type: "CB", x: 25, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 75, y: 78 }, { id: "LM", label: "LM", type: "W", x: 15, y: 50 }, { id: "CM1", label: "CM", type: "CM", x: 38, y: 52 }, { id: "CM2", label: "CM", type: "CM", x: 62, y: 52 }, { id: "RM", label: "RM", type: "W", x: 85, y: 50 }, { id: "LW", label: "LW", type: "W", x: 20, y: 25 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", type: "W", x: 80, y: 25 }],
+            "5-3-2": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", type: "WB", x: 12, y: 70 }, { id: "LCB", label: "LCB", type: "CB", x: 30, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 70, y: 78 }, { id: "RWB", label: "RWB", type: "WB", x: 88, y: 70 }, { id: "LCM", label: "LCM", type: "CM", x: 35, y: 50 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 55 }, { id: "RCM", label: "RCM", type: "CM", x: 65, y: 50 }, { id: "ST1", label: "ST", type: "ST", x: 38, y: 22 }, { id: "ST2", label: "ST", type: "ST", x: 62, y: 22 }],
+            "5-4-1": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", type: "WB", x: 12, y: 68 }, { id: "LCB", label: "LCB", type: "CB", x: 30, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 70, y: 78 }, { id: "RWB", label: "RWB", type: "WB", x: 88, y: 68 }, { id: "LM", label: "LM", type: "W", x: 20, y: 45 }, { id: "CM1", label: "CM", type: "CM", x: 40, y: 48 }, { id: "CM2", label: "CM", type: "CM", x: 60, y: 48 }, { id: "RM", label: "RM", type: "W", x: 80, y: 45 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }]
         };
 
         /* ============================
@@ -391,24 +378,41 @@
         };
 
         /* ============================
-           DATA: SQUAD
+           DATA: FULL SQUAD (전북 27인 풀스쿼드)
            ============================ */
         const squad = [
+            // FW
             { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png" },
             { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png" },
             { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png" },
             { id: 11, backNo: "11", name: "김승섭", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180212.png" },
             { id: 21, backNo: "21", name: "츄마시", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250335.png" },
-            
+            { id: 81, backNo: "81", name: "기티스", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260224.png" },
+            { id: 95, backNo: "95", name: "이탈로", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260365.png" },
+            { id: 96, backNo: "96", name: "콤파뇨", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png" },
+            { id: 99, backNo: "99", name: "모따",  pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png" },
+            { id: 100, backNo: "100", name: "도도", pos: "FW", img: "" },
+
+            // MF
+            { id: 6,  backNo: "6",  name: "맹성웅", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190084.png" },
             { id: 13, backNo: "13", name: "강상윤", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png" },
+            { id: 16, backNo: "16", name: "감보아", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250353.png" },
             { id: 28, backNo: "28", name: "이영재", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png" },
+            { id: 73, backNo: "73", name: "김예건", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260293.png" },
             { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png" },
-            
+
+            // DF
             { id: 2,  backNo: "2",  name: "김영빈", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png" },
+            { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png" },
+            { id: 4,  backNo: "4",  name: "조위제", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220174.png" },
             { id: 5,  backNo: "5",  name: "박지수", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png" },
+            { id: 15, backNo: "15", name: "김하준", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230250.png" },
             { id: 23, backNo: "23", name: "김태환", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20100052.png" },
+            { id: 24, backNo: "24", name: "이상명", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250159.png" },
+            { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png" },
             { id: 77, backNo: "77", name: "김태현", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180185.png" },
-            
+
+            // GK
             { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png" },
             { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png" }
         ];
@@ -428,15 +432,26 @@
            CORE FUNCTIONS 
            ============================ */
         
-        // Step 1: Change Style
+        // Full Reset Button
+        function resetAll() {
+            // URL 파라미터를 모두 지우고 페이지를 새로고침하여 초기화합니다.
+            window.location.href = window.location.pathname;
+        }
+
+        // Step 1: Change Tactical Style
         function handleStyleChange() {
             const styleId = document.getElementById('tactical-style').value;
             const descEl = document.getElementById('style-desc');
             const formSelect = document.getElementById('formation-select');
+            const videoEl = document.getElementById('tactic-video');
             
+            // Remove animation class if returning to Step 1
+            document.getElementById('pitch-wrapper').classList.remove('pitch-animating');
+
             if (!styleId) {
                 descEl.innerText = "전술 유형을 선택하면 설명이 나타납니다.";
                 formSelect.innerHTML = "";
+                videoEl.style.display = 'none';
                 state.style = "";
                 return;
             }
@@ -444,6 +459,14 @@
             state.style = styleId;
             const data = stylesData[styleId];
             descEl.innerText = data.desc;
+
+            // Show MP4 Preview for selected tactic
+            if (data.video) {
+                videoEl.src = data.video;
+                videoEl.style.display = 'block';
+            } else {
+                videoEl.style.display = 'none';
+            }
 
             // Populate Formations
             formSelect.innerHTML = "";
@@ -457,9 +480,8 @@
 
         function handleFormationChange() {
             state.formation = document.getElementById('formation-select').value;
-            // Set default roles
             state.roles = {};
-            state.players = {}; // clear players on formation change
+            state.players = {}; 
             if (formationsData[state.formation]) {
                 formationsData[state.formation].forEach(slot => {
                     if (roleData[slot.type]) state.roles[slot.id] = roleData[slot.type][0].id;
@@ -475,6 +497,7 @@
             
             if (!state.formation) return;
             const slots = formationsData[state.formation];
+            const pitchW = 440; const pitchH = 620;
 
             slots.forEach(slot => {
                 const slotEl = document.createElement('div');
@@ -501,7 +524,7 @@
 
                 pitch.appendChild(slotEl);
 
-                // If player assigned, render on top
+                // If player assigned, render on top and set animation CSS variables
                 const assignedPlayerId = state.players[slot.id];
                 if (assignedPlayerId) {
                     const player = squad.find(p => p.id === assignedPlayerId);
@@ -509,8 +532,26 @@
                         const card = createPlayerCard(player, true);
                         card.style.left = slot.x + '%';
                         card.style.top = slot.y + '%';
+                        
+                        // Calculate exact move pixels for the final animation based on Role
+                        const roleId = state.roles[slot.id];
+                        const roleOpts = roleData[slot.type] ? roleData[slot.type].find(r => r.id === roleId) : null;
+                        
+                        if (roleOpts && roleOpts.path !== 'hold') {
+                            const startX = slot.x;
+                            let endX = startX;
+                            if (roleOpts.dx === "center") { endX = startX < 50 ? startX + 15 : (startX > 50 ? startX - 15 : startX); } 
+                            else if (roleOpts.dx === "wide") { endX = startX < 50 ? startX - 15 : (startX > 50 ? startX + 15 : startX); } 
+                            else { endX = startX + roleOpts.dx; }
+
+                            const moveX = ((endX - startX) / 100) * pitchW;
+                            const moveY = (roleOpts.dy / 100) * pitchH;
+                            card.style.setProperty('--move-x', moveX + 'px');
+                            card.style.setProperty('--move-y', moveY + 'px');
+                        }
+
                         pitch.appendChild(card);
-                        slotEl.style.color = 'transparent'; // hide text
+                        slotEl.style.color = 'transparent'; // hide slot text
                     }
                 }
             });
@@ -528,11 +569,9 @@
                 e.stopPropagation();
                 if (isStarter) {
                     if (selectedPlayerId !== null && selectedPlayerId !== player.id) {
-                        // find which slot this card is in
                         const slotId = Object.keys(state.players).find(k => state.players[k] === player.id);
                         assignPlayerToSlot(selectedPlayerId, slotId);
                     } else {
-                        // Remove from pitch
                         const slotId = Object.keys(state.players).find(k => state.players[k] === player.id);
                         delete state.players[slotId];
                         selectedPlayerId = null;
@@ -636,7 +675,7 @@
 
                 select.onchange = (e) => {
                     state.roles[slot.id] = e.target.value;
-                    drawArrows();
+                    renderPitch(); // Re-calculate custom props for animation
                 };
                 wrap.appendChild(select);
                 container.appendChild(wrap);
@@ -659,7 +698,6 @@
         }
 
         function assignPlayerToSlot(playerId, slotId) {
-            // Remove from any other slot
             for (let key in state.players) { if (state.players[key] === playerId) delete state.players[key]; }
             state.players[slotId] = playerId;
             selectedPlayerId = null;
@@ -669,7 +707,6 @@
 
         function handleBenchClick(e) {
             if (selectedPlayerId !== null) {
-                // Return to bench
                 for (let key in state.players) { if (state.players[key] === selectedPlayerId) delete state.players[key]; }
                 selectedPlayerId = null;
                 renderPitch();
@@ -712,23 +749,26 @@
         function confirmStep(stepNum) {
             if (stepNum === 1) {
                 if (!state.formation) return alert("전술 유형을 선택해주세요!");
+                
+                // Hide video and show interactive pitch
+                document.getElementById('tactic-video').style.display = 'none';
+                
                 renderRoleSelectors();
                 activateStep(2);
             } else if (stepNum === 2) {
                 renderBench();
                 activateStep(3);
             } else if (stepNum === 3) {
+                // Add animating class to trigger CSS keyframes on players
+                document.getElementById('pitch-wrapper').classList.add('pitch-animating');
                 generateShareLink();
                 activateStep(4);
             }
         }
 
         function generateShareLink() {
-            // Encode state to Base64
             const jsonString = JSON.stringify(state);
-            // encodeURIComponent to handle Korean/special chars in btoa
             const base64 = btoa(encodeURIComponent(jsonString));
-            
             const currentUrl = window.location.href.split('?')[0];
             const shareUrl = `${currentUrl}?data=${base64}`;
             
@@ -744,24 +784,25 @@
                     const decoded = JSON.parse(decodeURIComponent(atob(dataParam)));
                     state = decoded;
                     
-                    // Rehydrate UI
                     document.getElementById('shared-alert').style.display = 'block';
                     document.getElementById('tactical-style').value = state.style;
                     
-                    // Make form select have the correct option
                     const formSelect = document.getElementById('formation-select');
                     formSelect.innerHTML = `<option value="${state.formation}">${state.formation}</option>`;
                     
                     document.getElementById('style-desc').innerText = stylesData[state.style].desc;
 
+                    // Ensure video is hidden when loading shared state
+                    document.getElementById('tactic-video').style.display = 'none';
+
                     renderPitch();
                     renderRoleSelectors();
                     renderBench();
                     
-                    // Open all steps for viewing
+                    // Activate animation for shared view
+                    document.getElementById('pitch-wrapper').classList.add('pitch-animating');
+
                     document.querySelectorAll('.step-container').forEach(el => el.classList.add('active-step'));
-                    
-                    // Hide confirm buttons to make it look like a final dashboard
                     document.querySelectorAll('.btn-group').forEach(el => el.style.display = 'none');
                     
                 } catch (e) {
