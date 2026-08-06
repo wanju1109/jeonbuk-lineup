@@ -19,7 +19,7 @@
             color: #e0e0e0;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         h1, h2, h3 { color: #00e676; margin: 0 0 10px 0; }
@@ -170,6 +170,34 @@
         .btn-gif-download { background: linear-gradient(135deg, #00c853, #64dd17); color: #111; width: 100%; margin-top: 15px; font-size: 15px; padding: 12px; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,200,83,0.3); cursor: pointer; }
         .btn-desc-copy { background: linear-gradient(135deg, #ff9800, #f57c00); color: #fff; width: 100%; margin-top: 10px; font-size: 15px; padding: 12px; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(255,152,0,0.3); cursor: pointer; }
 
+        /* RESPONSIVE MEDIA QUERY FOR MOBILE / TABLET */
+        @media (max-width: 900px) {
+            body { overflow: auto; }
+            .app-container {
+                flex-direction: column;
+                height: auto;
+            }
+            .left-panel {
+                width: 100%;
+                box-sizing: border-box;
+                border-right: none;
+                border-bottom: 2px solid #333;
+            }
+            .right-panel {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 15px;
+            }
+            #pitch-wrapper {
+                width: 100%;
+                max-width: 400px;
+                height: 560px;
+            }
+            .role-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
         ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
@@ -182,7 +210,7 @@
         <!-- LEFT PANEL: PITCH ONLY -->
         <div class="left-panel">
             <h1>🟢 JEONBUK FM TACTICS</h1>
-            <p style="font-size: 12px; color:#aaa; margin-top:0;" id="left-subtitle">드래그 앤 드롭으로 선수를 배치하세요</p>
+            <p style="font-size: 12px; color:#aaa; margin-top:0;" id="left-subtitle">드래그 앤 드롭 또는 터치로 선수를 배치하세요</p>
             
             <div id="pitch-wrapper">
                 <video id="tactic-video" autoplay loop muted playsinline></video>
@@ -270,7 +298,7 @@
 
             <!-- STEP 3: 선수 배치 -->
             <div class="step-container" id="step3">
-                <div class="step-header">STEP 3. 스쿼드 선발 (드래그 앤 드롭)</div>
+                <div class="step-header">STEP 3. 스쿼드 선발 (드래그 & 드롭 / 클릭 선택)</div>
                 <div class="bench-area" id="bench" onclick="handleBenchClick(event)">
                     <div class="bench-group-title">공격수 (FW)</div>
                     <div id="bench-FW" class="bench-list"></div>
@@ -777,7 +805,7 @@
                 const gif = new GIF({
                     workers: 2,
                     quality: 10,
-                    repeat: 0, // 0 = 무한 반복 설정 (게시판에서 멈추지 않고 계속 재생됨)
+                    repeat: 0,
                     width: wrapper.offsetWidth,
                     height: wrapper.offsetHeight,
                     workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
