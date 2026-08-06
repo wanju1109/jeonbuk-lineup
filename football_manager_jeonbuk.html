@@ -170,7 +170,7 @@
             padding: 15px; border-radius: 10px; font-weight: 900; text-align: center; margin-top: 20px; box-sizing: border-box;
         }
 
-        .url-box { background: #000; padding: 15px; border: 1px solid #00e676; border-radius: 8px; color: #00e676; font-size: 12px; word-break: break-all; margin-top: 10px;}
+        .url-box { background: #000; padding: 12px; border: 1px solid #00e676; border-radius: 8px; color: #00e676; font-size: 12px; word-break: break-all; margin-top: 8px; font-family: monospace;}
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
@@ -211,7 +211,8 @@
                 <a href="javascript:resetAll()" style="color:#111; text-decoration:underline; font-size:13px; margin-top:8px; display:inline-block;">나만의 전술 새로 만들기</a>
             </div>
 
-            <button class="btn-full-reset" onclick="resetAll()">🔄 전체 초기화 (새로 만들기)</button>
+            <!-- Full Reset Button (Hidden in Shared View) -->
+            <button class="btn-full-reset" id="btn-full-reset" onclick="resetAll()">🔄 전체 초기화 (새로 만들기)</button>
         </div>
 
         <!-- RIGHT PANEL: CONTROLS, STEPS & ROSTER SUMMARY -->
@@ -288,8 +289,13 @@
 
             <!-- STEP 4: 공유 -->
             <div class="step-container" id="step4">
-                <div class="step-header">STEP 4. 전술 공유 링크</div>
-                <p style="font-size: 13px; color: #ccc;">아래 단축된 링크를 복사하여 공유하세요!</p>
+                <div class="step-header">STEP 4. 전술 공유 (링크 & 게시판 퍼가기)</div>
+                
+                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) 커뮤니티 게시글 퍼가기용 HTML 코드 (추천)</p>
+                <p style="font-size: 12px; color: #aaa; margin: 0 0 8px 0;">에펨코리아 등 커뮤니티 글쓰기 창 상단의 <b>&lt;/&gt; HTML 버튼</b>을 누르고 아래 코드를 붙여넣으면 게시글 본문에 움직이는 전술 화면이 뜹니다!</p>
+                <div id="embed-code" class="url-box" style="user-select: all;"></div>
+
+                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-top: 20px; margin-bottom: 5px;">2) 일반 단축 URL 링크</p>
                 <div id="share-link" class="url-box"></div>
             </div>
 
@@ -735,6 +741,10 @@
             const shareUrl = `${currentUrl}?c=${compressed}`;
             
             document.getElementById('share-link').innerHTML = `<a href="${shareUrl}" target="_blank" style="color:#00e676;">${shareUrl}</a>`;
+            
+            // Iframe Embed Code Generation for Forum Posts
+            const iframeCode = `<iframe src="${shareUrl}" width="100%" height="680" frameborder="0" style="border:none; border-radius:12px; overflow:hidden;" allowfullscreen></iframe>`;
+            document.getElementById('embed-code').innerText = iframeCode;
         }
 
         function loadFromURL() {
@@ -753,16 +763,17 @@
                 try {
                     state = JSON.parse(rawData);
                     
-                    // Hide builder steps, show shared alert at left bottom and roster summary at right panel
+                    // Hide builder steps, hide full reset button, show shared view
                     document.getElementById('tactic-video').style.display = 'none';
                     document.querySelectorAll('.step-container').forEach(el => el.style.display = 'none');
+                    document.getElementById('btn-full-reset').style.display = 'none'; // Hide Total Reset Button in Shared Mode
                     document.getElementById('shared-alert').style.display = 'block';
                     document.getElementById('left-subtitle').innerText = "공유된 전북 현대 전술 및 라인업";
 
                     renderPitch();
                     document.getElementById('pitch-wrapper').classList.add('pitch-animating');
 
-                    // Render Roster Summary Box on Right Panel with Descriptions
+                    // Render Roster Summary Box on Right Panel
                     const rosterBox = document.getElementById('roster-summary');
                     const rosterList = document.getElementById('roster-list');
                     rosterList.innerHTML = '';
