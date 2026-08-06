@@ -52,7 +52,7 @@
         }
 
         #pitch-wrapper {
-            background: linear-gradient(180deg, #1b5e20, #2e7d32, #1b5e20);
+            background-color: #206c30;
             border: 4px solid #ffffff;
             border-radius: 12px;
             position: relative;
@@ -111,14 +111,6 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
         .starter { position: absolute; transform: translate(-50%, -50%); }
-
-        .pitch-animating .player-card.starter {
-            animation: tacticalMove 3s infinite ease-in-out;
-        }
-        @keyframes tacticalMove {
-            0%, 100% { transform: translate(-50%, -50%); }
-            50% { transform: translate(calc(-50% + var(--move-x, 0px)), calc(-50% + var(--move-y, 0px))); }
-        }
 
         .step-container {
             background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px;
@@ -427,6 +419,37 @@
         let state = { style: "", formation: "", roles: {}, players: {} };
         let selectedPlayerId = null;
 
+        // Preload all player images to Base64 to completely avoid CORS tainting
+        async function preloadPlayerImages() {
+            for (let player of squad) {
+                if (player.img && !player.imgDataUrl) {
+                    try {
+                        const dataUrl = await new Promise((resolve) => {
+                            const img = new Image();
+                            img.crossOrigin = "anonymous";
+                            img.onload = () => {
+                                const canvas = document.createElement("canvas");
+                                canvas.width = img.width;
+                                canvas.height = img.height;
+                                const ctx = canvas.getContext("2d");
+                                ctx.drawImage(img, 0, 0);
+                                try {
+                                    resolve(canvas.toDataURL("image/png"));
+                                } catch (e) {
+                                    resolve(player.img);
+                                }
+                            };
+                            img.onerror = () => resolve(player.img);
+                            img.src = player.img;
+                        });
+                        player.imgDataUrl = dataUrl;
+                    } catch (e) {
+                        player.imgDataUrl = player.img;
+                    }
+                }
+            }
+        }
+
         function resetAll() {
             window.location.href = window.location.pathname;
         }
@@ -436,8 +459,6 @@
             const descEl = document.getElementById('style-desc');
             const formSelect = document.getElementById('formation-select');
             const videoEl = document.getElementById('tactic-video');
-            
-            document.getElementById('pitch-wrapper').classList.remove('pitch-animating');
 
             if (!styleId) {
                 descEl.innerText = "전술 유형을 선택하면 설명이 나타납니다.";
@@ -479,7 +500,7 @@
             renderPitch();
         }
 
-        function renderPitch() {
+        function renderPitch(offsetProgress = 0) {
             const pitch = document.getElementById('pitch');
             document.querySelectorAll('.position-slot, .player-card.starter').forEach(el => el.remove());
             
@@ -517,9 +538,10 @@
                     const player = squad.find(p => p.id === assignedPlayerId);
                     if (player) {
                         const card = createPlayerCard(player, true);
-                        card.style.left = slot.x + '%';
-                        card.style.top = slot.y + '%';
                         
+                        let posX = slot.x;
+                        let posY = slot.y;
+
                         const roleId = state.roles[slot.id];
                         const roleOpts = roleData[slot.type] ? roleData[slot.type].find(r => r.id === roleId) : null;
                         
@@ -530,11 +552,15 @@
                             else if (roleOpts.dx === "wide") { endX = startX < 50 ? startX - 15 : (startX > 50 ? startX + 15 : startX); } 
                             else { endX = startX + roleOpts.dx; }
 
-                            const moveX = ((endX - startX) / 100) * pitchW;
-                            const moveY = (roleOpts.dy / 100) * pitchH;
-                            card.style.setProperty('--move-x', moveX + 'px');
-                            card.style.setProperty('--move-y', moveY + 'px');
+                            const moveX = endX - startX;
+                            const moveY = roleOpts.dy;
+
+                            posX += moveX * offsetProgress;
+                            posY += moveY * offsetProgress;
                         }
+
+                        card.style.left = posX + '%';
+                        card.style.top = posY + '%';
 
                         pitch.appendChild(card);
                         slotEl.style.color = 'transparent';
@@ -584,10 +610,12 @@
                 }
             };
 
-            if (player.img) {
+            const imgSrc = player.imgDataUrl || player.img;
+            if (imgSrc) {
                 const img = document.createElement('img'); 
-                img.src = player.img; 
+                img.src = imgSrc; 
                 img.className = 'player-img';
+                img.crossOrigin = "anonymous";
                 img.onerror = function() {
                     card.innerHTML = '';
                     const ph = document.createElement('div'); 
@@ -756,7 +784,6 @@
                 renderBench();
                 activateStep(3);
             } else if (stepNum === 3) {
-                document.getElementById('pitch-wrapper').classList.add('pitch-animating');
                 generateShortShareLink();
                 activateStep(4);
             }
@@ -780,12 +807,10 @@
             });
         }
 
-        // Generate and download actual animated GIF
+        // Generate smooth animated GIF using programmatic frame rendering
         async function generateAnimatedGif() {
             const wrapper = document.getElementById('pitch-wrapper');
-            wrapper.classList.add('pitch-animating');
-            
-            alert("움직이는 GIF 생성 중입니다! 약 2~3초 소요됩니다.");
+            alert("움직이는 GIF 생성 중입니다! 잠시만 기다려주세요 (약 3~4초 소요)...");
 
             try {
                 const gif = new GIF({
@@ -796,23 +821,24 @@
                     workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
                 });
 
-                // Bypass worker CORS issue via Blob URL
                 try {
                     const workerCode = await fetch('https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js').then(r => r.text());
                     const blob = new Blob([workerCode], {type: 'application/javascript'});
                     gif.options.workerScript = URL.createObjectURL(blob);
-                } catch(e) {
-                    console.error("Worker blob load warning:", e);
-                }
+                } catch(e) {}
 
-                const frameCount = 10;
-                const interval = 200; // ms
-
-                for(let i=0; i<frameCount; i++) {
+                // Generate 8 smooth frames using sine wave progression
+                const totalFrames = 8;
+                for(let i = 0; i < totalFrames; i++) {
+                    const progress = Math.sin((i / totalFrames) * Math.PI * 2) * 0.4;
+                    renderPitch(progress);
+                    
                     const canvas = await html2canvas(wrapper, { scale: 1, useCORS: true, allowTaint: true });
-                    gif.addFrame(canvas, {copy: true, delay: 200});
-                    await new Promise(r => setTimeout(r, interval));
+                    gif.addFrame(canvas, { copy: true, delay: 150 });
                 }
+
+                // Reset pitch to normal position after capturing
+                renderPitch(0);
 
                 gif.on('finished', function(blob) {
                     const url = URL.createObjectURL(blob);
@@ -830,7 +856,6 @@
             }
         }
 
-        // Copy player role descriptions and edit link at the bottom
         function copyDescriptionAndLink() {
             let text = "🟢 [전북 현대 FM 전술 & 라인업]\n\n";
             
@@ -900,7 +925,6 @@
                     document.getElementById('left-subtitle').innerText = "공유된 전북 현대 전술 및 라인업";
 
                     renderPitch();
-                    document.getElementById('pitch-wrapper').classList.add('pitch-animating');
 
                     const rosterBox = document.getElementById('roster-summary');
                     const rosterList = document.getElementById('roster-list');
@@ -941,7 +965,8 @@
             }
         }
 
-        window.onload = () => {
+        window.onload = async () => {
+            await preloadPlayerImages();
             loadFromURL();
         };
     </script>
