@@ -6,6 +6,8 @@
     <title>전북 현대 FM 전술 빌더</title>
     <!-- HTML to Image Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- GIF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
     <!-- LZ-String for Short URL Compression -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
     <style>
@@ -173,7 +175,8 @@
         .share-text { color: #00e676; font-size: 11px; word-break: break-all; font-family: monospace; overflow-x: auto; max-height: 60px; flex-grow: 1; }
         .btn-copy { background: #00e676; color: #111; font-size: 12px; padding: 6px 12px; white-space: nowrap; border-radius: 4px; font-weight: bold; cursor: pointer; }
 
-        .btn-combined-copy { background: linear-gradient(135deg, #00c853, #64dd17); color: #111; width: 100%; margin-top: 15px; font-size: 15px; padding: 12px; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,200,83,0.3); cursor: pointer; }
+        .btn-gif-download { background: linear-gradient(135deg, #00c853, #64dd17); color: #111; width: 100%; margin-top: 15px; font-size: 15px; padding: 12px; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,200,83,0.3); cursor: pointer; }
+        .btn-desc-copy { background: linear-gradient(135deg, #ff9800, #f57c00); color: #fff; width: 100%; margin-top: 10px; font-size: 15px; padding: 12px; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(255,152,0,0.3); cursor: pointer; }
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
@@ -208,8 +211,9 @@
                 </div>
             </div>
 
-            <!-- Combined Clipboard Copy Button -->
-            <button class="btn-combined-copy" onclick="copyImageAndLink()">📋 전술 이미지 + 수정 링크 한 번에 복사</button>
+            <!-- Action Buttons -->
+            <button class="btn-gif-download" onclick="generateAnimatedGif()">🎬 움직이는 GIF 다운받기</button>
+            <button class="btn-desc-copy" onclick="copyDescriptionAndLink()">📋 설명 및 편집 링크 복사</button>
 
             <!-- Shared Alert Box (Bottom of Left Panel) -->
             <div id="shared-alert">
@@ -297,11 +301,13 @@
             <div class="step-container" id="step4">
                 <div class="step-header">STEP 4. 커뮤니티 전술 공유 방법</div>
                 
-                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) 이미지 + 수정 링크 한 번에 복사</p>
-                <p style="font-size: 12px; color: #aaa; margin: 0 0 8px 0;">아래 초록색 버튼을 누르고 커뮤니티 글 작성창에 <b>Ctrl + V</b>를 누르면 전술 사진과 링크가 함께 붙여넣어집니다!</p>
-                <button class="btn-combined-copy" onclick="copyImageAndLink()" style="margin-top: 5px;">📋 전술 이미지 + 수정 링크 한 번에 복사</button>
+                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) 움직이는 GIF 다운로드</p>
+                <button class="btn-gif-download" onclick="generateAnimatedGif()" style="margin-top: 5px;">🎬 움직이는 GIF 다운받기</button>
 
-                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">2) 단축 URL만 따로 복사</p>
+                <p style="font-size: 13px; color: #ff9800; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">2) 선수 역할 설명 + 편집 링크 복사</p>
+                <button class="btn-desc-copy" onclick="copyDescriptionAndLink()" style="margin-top: 5px;">📋 설명 및 편집 링크 복사</button>
+
+                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">3) 단축 URL만 따로 복사</p>
                 <div class="share-box-container">
                     <div id="share-link" class="share-text"></div>
                     <button class="btn-copy" onclick="copyText('share-link')">복사하기</button>
@@ -582,9 +588,7 @@
                 const img = document.createElement('img'); 
                 img.src = player.img; 
                 img.className = 'player-img';
-                img.crossOrigin = "anonymous";
                 img.onerror = function() {
-                    // Fallback to text placeholder if image fails to load
                     card.innerHTML = '';
                     const ph = document.createElement('div'); 
                     ph.className = 'player-placeholder'; 
@@ -776,46 +780,101 @@
             });
         }
 
-        // Copy both image and edit link simultaneously to the clipboard
-        async function copyImageAndLink() {
-            const pitchWrapper = document.getElementById('pitch-wrapper');
-            try {
-                const canvas = await html2canvas(pitchWrapper, { scale: 2, useCORS: true, allowTaint: true });
-                canvas.toBlob(async (blob) => {
-                    if (!blob) {
-                        alert("이미지 생성에 실패했습니다.");
-                        return;
-                    }
-                    const jsonString = JSON.stringify(state);
-                    const compressed = LZString.compressToEncodedURIComponent(jsonString);
-                    const shareUrl = `${window.location.href.split('?')[0]}?c=${compressed}`;
-                    
-                    const plainText = `⚽ 전북 현대 내가 만든 전술 보러가기 / 직접 수정해보기\n👉 ${shareUrl}`;
-                    const htmlText = `<p>⚽ 전북 현대 내가 만든 전술 보러가기 / 직접 수정해보기<br><a href="${shareUrl}">${shareUrl}</a></p>`;
+        // Generate and download actual animated GIF
+        async function generateAnimatedGif() {
+            const wrapper = document.getElementById('pitch-wrapper');
+            wrapper.classList.add('pitch-animating');
+            
+            alert("움직이는 GIF 생성 중입니다! 약 2~3초 소요됩니다.");
 
-                    try {
-                        const clipboardItemData = {
-                            'image/png': blob,
-                            'text/plain': new Blob([plainText], { type: 'text/plain' }),
-                            'text/html': new Blob([htmlText], { type: 'text/html' })
-                        };
-                        const item = new ClipboardItem(clipboardItemData);
-                        await navigator.clipboard.write([item]);
-                        alert("전술 이미지와 수정 링크가 클립보드에 복사되었습니다!\n게시판 글 작성창에 Ctrl + V를 눌러보세요.");
-                    } catch (err) {
-                        console.error("Multi-clipboard write failed, trying image only:", err);
-                        try {
-                            await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
-                            alert("이미지가 복사되었습니다. 링크도 함께 붙여넣어 주세요!");
-                        } catch (e) {
-                            alert("클립보드가 지원되지 않는 브라우저 환경입니다.");
-                        }
-                    }
-                }, 'image/png');
+            try {
+                const gif = new GIF({
+                    workers: 2,
+                    quality: 10,
+                    width: wrapper.offsetWidth,
+                    height: wrapper.offsetHeight,
+                    workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
+                });
+
+                // Bypass worker CORS issue via Blob URL
+                try {
+                    const workerCode = await fetch('https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js').then(r => r.text());
+                    const blob = new Blob([workerCode], {type: 'application/javascript'});
+                    gif.options.workerScript = URL.createObjectURL(blob);
+                } catch(e) {
+                    console.error("Worker blob load warning:", e);
+                }
+
+                const frameCount = 10;
+                const interval = 200; // ms
+
+                for(let i=0; i<frameCount; i++) {
+                    const canvas = await html2canvas(wrapper, { scale: 1, useCORS: true, allowTaint: true });
+                    gif.addFrame(canvas, {copy: true, delay: 200});
+                    await new Promise(r => setTimeout(r, interval));
+                }
+
+                gif.on('finished', function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'jeonbuk_tactic.gif';
+                    link.click();
+                    alert("움직이는 GIF 다운로드가 완료되었습니다!");
+                });
+
+                gif.render();
             } catch (err) {
-                console.error("html2canvas error:", err);
-                alert("이미지 캡처 중 오류가 발생했습니다.");
+                console.error("GIF generation error:", err);
+                alert("GIF 생성 중 오류가 발생했습니다.");
             }
+        }
+
+        // Copy player role descriptions and edit link at the bottom
+        function copyDescriptionAndLink() {
+            let text = "🟢 [전북 현대 FM 전술 & 라인업]\n\n";
+            
+            if(state.style) {
+                text += `📌 전술 유형: ${state.style}\n`;
+            }
+            if(state.formation) {
+                text += `📌 포메이션: ${state.formation}\n\n`;
+            }
+            
+            text += "📋 [선발 선수 및 역할 설명]\n";
+            const slots = formationsData[state.formation] || [];
+            slots.forEach(slot => {
+                const pId = state.players[slot.id];
+                const player = squad.find(p => p.id === pId);
+                const roleId = state.roles[slot.id];
+                let roleName = roleId;
+                let roleDesc = "";
+                if (roleData[slot.type]) {
+                    const foundRole = roleData[slot.type].find(r => r.id === roleId);
+                    if (foundRole) {
+                        roleName = foundRole.name;
+                        roleDesc = foundRole.desc;
+                    }
+                }
+                if(player) {
+                    text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  - 설명: ${roleDesc}\n`;
+                } else {
+                    text += `• [${slot.label}] 미배치 (${roleName})\n`;
+                }
+            });
+
+            const jsonString = JSON.stringify(state);
+            const compressed = LZString.compressToEncodedURIComponent(jsonString);
+            const shareUrl = `${window.location.href.split('?')[0]}?c=${compressed}`;
+
+            text += `\n🔗 직접 전술 수정해보기 / 보러가기\n👉 ${shareUrl}`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                alert("선수 역할 설명과 편집 링크가 클립보드에 복사되었습니다!");
+            }).catch(err => {
+                console.error("복사 실패:", err);
+                alert("복사 중 오류가 발생했습니다.");
+            });
         }
 
         function loadFromURL() {
