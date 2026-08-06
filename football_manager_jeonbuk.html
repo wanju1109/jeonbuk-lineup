@@ -768,7 +768,7 @@
             });
         }
 
-        // Optimized fast GIF generation (10 frames, ~2 seconds)
+        // Optimized GIF generation with ~0.6x movement range and smooth speed
         async function generateAnimatedGif() {
             const wrapper = document.getElementById('pitch-wrapper');
             alert("부드러운 움직이는 GIF 생성 중입니다! (약 2~3초 소요)...");
@@ -788,9 +788,9 @@
                     gif.options.workerScript = URL.createObjectURL(blob);
                 } catch(e) {}
 
-                const totalFrames = 10; // Optimized frame count for speed
+                const totalFrames = 15;
                 for(let i = 0; i < totalFrames; i++) {
-                    const progress = Math.sin((i / totalFrames) * Math.PI * 2) * 0.4;
+                    const progress = Math.sin((i / totalFrames) * Math.PI * 2) * 0.24;
                     renderPitch(progress);
                     
                     const canvas = await html2canvas(wrapper, { 
@@ -799,7 +799,7 @@
                         allowTaint: true,
                         backgroundColor: "#1b5e20" 
                     });
-                    gif.addFrame(canvas, { copy: true, delay: 100 });
+                    gif.addFrame(canvas, { copy: true, delay: 120 });
                 }
 
                 renderPitch(0);
@@ -846,17 +846,17 @@
                     }
                 }
                 if(player) {
-                    text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  └ 설명: ${roleDesc}\n\n`;
+                    // Added extra blank lines between each player for better readability
+                    text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  └ 설명: ${roleDesc}\n\n\n`;
                 } else {
-                    text += `• [${slot.label}] 미배치 (${roleName})\n\n`;
+                    text += `• [${slot.label}] 미배치 (${roleName})\n\n\n`;
                 }
             });
 
-            const jsonString = JSON.stringify(state);
-            const compressed = LZString.compressToEncodedURIComponent(jsonString);
-            const shareUrl = `${window.location.href.split('?')[0]}?c=${compressed}`;
+            // Base URL pointing to clean page without query parameters
+            const baseShareUrl = window.location.href.split('?')[0];
 
-            text += `🔗 직접 전술 수정해보기 / 보러가기\n👉 ${shareUrl}`;
+            text += `🔗 나만의 전술 새로 만들기\n👉 ${baseShareUrl}`;
 
             navigator.clipboard.writeText(text).then(() => {
                 alert("설명복사가 완료되었습니다!");
