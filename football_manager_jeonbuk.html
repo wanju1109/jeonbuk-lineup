@@ -52,7 +52,7 @@
         }
 
         #pitch-wrapper {
-            background-color: #206c30;
+            background-color: #1b5e20;
             border: 4px solid #ffffff;
             border-radius: 12px;
             position: relative;
@@ -64,7 +64,7 @@
             flex-shrink: 0;
         }
 
-        #pitch { width: 100%; height: 100%; position: relative; }
+        #pitch { width: 100%; height: 100%; position: relative; background-color: #1b5e20; }
         
         #tactic-video {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -204,8 +204,8 @@
             </div>
 
             <!-- Action Buttons -->
-            <button class="btn-gif-download" onclick="generateAnimatedGif()">🎬 부드러운 움직이는 GIF 다운받기</button>
-            <button class="btn-desc-copy" onclick="copyDescriptionAndLink()">📋 이쁜 설명 및 편집 링크 복사</button>
+            <button class="btn-gif-download" onclick="generateAnimatedGif()">🎬 GIF 다운받기</button>
+            <button class="btn-desc-copy" onclick="copyDescriptionAndLink()">📋 설명복사</button>
 
             <!-- Shared Alert Box (Bottom of Left Panel) -->
             <div id="shared-alert">
@@ -293,11 +293,11 @@
             <div class="step-container" id="step4">
                 <div class="step-header">STEP 4. 커뮤니티 전술 공유 방법</div>
                 
-                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) 부드러운 움직이는 GIF 다운로드</p>
-                <button class="btn-gif-download" onclick="generateAnimatedGif()" style="margin-top: 5px;">🎬 부드러운 움직이는 GIF 다운받기</button>
+                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) GIF 다운로드</p>
+                <button class="btn-gif-download" onclick="generateAnimatedGif()" style="margin-top: 5px;">🎬 GIF 다운받기</button>
 
-                <p style="font-size: 13px; color: #ff9800; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">2) 이쁜 선수 역할 설명 + 편집 링크 복사</p>
-                <button class="btn-desc-copy" onclick="copyDescriptionAndLink()" style="margin-top: 5px;">📋 이쁜 설명 및 편집 링크 복사</button>
+                <p style="font-size: 13px; color: #ff9800; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">2) 설명복사</p>
+                <button class="btn-desc-copy" onclick="copyDescriptionAndLink()" style="margin-top: 5px;">📋 설명복사</button>
 
                 <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">3) 단축 URL만 따로 복사</p>
                 <div class="share-box-container">
@@ -419,7 +419,7 @@
         let state = { style: "", formation: "", roles: {}, players: {} };
         let selectedPlayerId = null;
 
-        // Preload player images into base64 to avoid CORS issues in canvas rendering
+        // Preload player images to Base64 to ensure 100% rendering without CORS issues
         async function preloadPlayerImages() {
             for (let player of squad) {
                 if (player.img && !player.imgDataUrl) {
@@ -807,7 +807,7 @@
             });
         }
 
-        // Generate smooth high-frame-rate animated GIF (20 frames for high fluidity)
+        // Generate smooth high-frame-rate animated GIF with solid background color fix
         async function generateAnimatedGif() {
             const wrapper = document.getElementById('pitch-wrapper');
             alert("부드러운 움직이는 GIF 생성 중입니다! 잠시만 기다려주세요 (약 4~5초 소요)...");
@@ -827,13 +827,17 @@
                     gif.options.workerScript = URL.createObjectURL(blob);
                 } catch(e) {}
 
-                // Increased to 20 frames for ultra-smooth movement
                 const totalFrames = 20;
                 for(let i = 0; i < totalFrames; i++) {
                     const progress = Math.sin((i / totalFrames) * Math.PI * 2) * 0.4;
                     renderPitch(progress);
                     
-                    const canvas = await html2canvas(wrapper, { scale: 1, useCORS: true, allowTaint: true });
+                    const canvas = await html2canvas(wrapper, { 
+                        scale: 1, 
+                        useCORS: true, 
+                        allowTaint: true,
+                        backgroundColor: "#1b5e20" 
+                    });
                     gif.addFrame(canvas, { copy: true, delay: 80 });
                 }
 
@@ -855,7 +859,7 @@
             }
         }
 
-        // Copy beautifully styled description and edit link
+        // Copy beautifully spaced description and edit link
         function copyDescriptionAndLink() {
             let text = "🟢 [전북 현대 FM 전술 & 라인업]\n\n";
             
@@ -866,9 +870,9 @@
                 text += `⚽ 포메이션: ${state.formation}\n\n`;
             }
             
-            text += "📋 [선발 선수 및 역할 설명]\n";
+            text += "📋 [선발 선수 및 역할 설명]\n\n";
             const slots = formationsData[state.formation] || [];
-            slots.forEach(slot => {
+            slots.forEach((slot, index) => {
                 const pId = state.players[slot.id];
                 const player = squad.find(p => p.id === pId);
                 const roleId = state.roles[slot.id];
@@ -882,9 +886,9 @@
                     }
                 }
                 if(player) {
-                    text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  └ 설명: ${roleDesc}\n`;
+                    text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  └ 설명: ${roleDesc}\n\n`;
                 } else {
-                    text += `• [${slot.label}] 미배치 (${roleName})\n`;
+                    text += `• [${slot.label}] 미배치 (${roleName})\n\n`;
                 }
             });
 
@@ -892,10 +896,10 @@
             const compressed = LZString.compressToEncodedURIComponent(jsonString);
             const shareUrl = `${window.location.href.split('?')[0]}?c=${compressed}`;
 
-            text += `\n🔗 직접 전술 수정해보기 / 보러가기\n👉 ${shareUrl}`;
+            text += `🔗 직접 전술 수정해보기 / 보러가기\n👉 ${shareUrl}`;
 
             navigator.clipboard.writeText(text).then(() => {
-                alert("이쁜 설명과 편집 링크가 클립보드에 복사되었습니다!");
+                alert("설명복사가 완료되었습니다!");
             }).catch(err => {
                 console.error("복사 실패:", err);
                 alert("복사 중 오류가 발생했습니다.");
