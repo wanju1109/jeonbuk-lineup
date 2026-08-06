@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전북 현대 FM 전술 빌더</title>
-    <!-- HTML to Image & GIF Libraries -->
+    <!-- HTML to Image Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- LZ-String for Short URL Compression -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 
@@ -173,7 +173,7 @@
         .share-text { color: #00e676; font-size: 11px; word-break: break-all; font-family: monospace; overflow-x: auto; max-height: 60px; flex-grow: 1; }
         .btn-copy { background: #00e676; color: #111; font-size: 12px; padding: 6px 12px; white-space: nowrap; border-radius: 4px; font-weight: bold; cursor: pointer; }
 
-        .btn-gif-download { background: linear-gradient(135deg, #ff9800, #f57c00); color: #fff; width: 100%; margin-top: 15px; font-size: 15px; padding: 12px; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(255,152,0,0.3); }
+        .btn-img-download { background: linear-gradient(135deg, #ff9800, #f57c00); color: #fff; width: 100%; margin-top: 15px; font-size: 15px; padding: 12px; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 10px rgba(255,152,0,0.3); cursor: pointer; }
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
@@ -208,8 +208,8 @@
                 </div>
             </div>
 
-            <!-- Animated GIF Download Button -->
-            <button class="btn-gif-download" id="btn-gif" onclick="downloadPitchGIF()">🎞️ 움직이는 GIF 짤방으로 저장하기</button>
+            <!-- Fast Image Download Button -->
+            <button class="btn-img-download" onclick="downloadPitchImage()">📸 전술 화면 이미지 저장하기</button>
 
             <!-- Shared Alert Box (Bottom of Left Panel) -->
             <div id="shared-alert">
@@ -298,7 +298,7 @@
                 <div class="step-header">STEP 4. 커뮤니티 전술 공유 방법</div>
                 
                 <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) 게시판 올리기용 텍스트 + 링크 복사</p>
-                <p style="font-size: 12px; color: #aaa; margin: 0 0 8px 0;">아래 복사 버튼을 눌러 글 작성창에 붙여넣고, 왼쪽의 <b>[GIF 짤방]</b>을 사진으로 함께 올리세요!</p>
+                <p style="font-size: 12px; color: #aaa; margin: 0 0 8px 0;">아래 복사 버튼을 눌러 글 작성창에 붙여넣고, 왼쪽의 <b>[전술 화면 이미지 저장하기]</b> 사진을 함께 업로드하세요!</p>
                 <div class="share-box-container">
                     <div id="forum-template" class="share-text"></div>
                     <button class="btn-copy" onclick="copyText('forum-template')">복사하기</button>
@@ -765,44 +765,17 @@
             });
         }
 
-        // Animated GIF Generator & Downloader
-        function downloadPitchGIF() {
-            const btn = document.getElementById('btn-gif');
-            const originalText = btn.innerText;
-            btn.innerText = "⏳ GIF 생성 중... (약 3~5초 소요)";
-            btn.disabled = true;
-
+        // Fast & Reliable Image Downloader (No Freezing)
+        function downloadPitchImage() {
             const pitchWrapper = document.getElementById('pitch-wrapper');
-            const gif = new GIF({
-                workers: 2,
-                quality: 10,
-                width: 440,
-                height: 620,
-                workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
-            });
-
-            let framesCaptured = 0;
-            const totalFrames = 15; // Capture 15 frames over 3 seconds
-            const interval = setInterval(() => {
-                html2canvas(pitchWrapper, { scale: 1, useCORS: true }).then(canvas => {
-                    gif.addFrame(canvas, { delay: 200 });
-                    framesCaptured++;
-
-                    if (framesCaptured >= totalFrames) {
-                        clearInterval(interval);
-                        gif.render();
-                    }
-                });
-            }, 200);
-
-            gif.on('finished', function(blob) {
+            html2canvas(pitchWrapper, { scale: 2, useCORS: true }).then(canvas => {
                 const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'jeonbuk_tactic_animation.gif';
+                link.download = 'jeonbuk_tactic.png';
+                link.href = canvas.toDataURL('image/png');
                 link.click();
-
-                btn.innerText = originalText;
-                btn.disabled = false;
+            }).catch(err => {
+                console.error("이미지 저장 실패:", err);
+                alert("이미지 저장 중 오류가 발생했습니다.");
             });
         }
 
