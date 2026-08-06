@@ -204,8 +204,8 @@
             </div>
 
             <!-- Action Buttons -->
-            <button class="btn-gif-download" onclick="generateAnimatedGif()">🎬 움직이는 GIF 다운받기</button>
-            <button class="btn-desc-copy" onclick="copyDescriptionAndLink()">📋 설명 및 편집 링크 복사</button>
+            <button class="btn-gif-download" onclick="generateAnimatedGif()">🎬 부드러운 움직이는 GIF 다운받기</button>
+            <button class="btn-desc-copy" onclick="copyDescriptionAndLink()">📋 이쁜 설명 및 편집 링크 복사</button>
 
             <!-- Shared Alert Box (Bottom of Left Panel) -->
             <div id="shared-alert">
@@ -293,11 +293,11 @@
             <div class="step-container" id="step4">
                 <div class="step-header">STEP 4. 커뮤니티 전술 공유 방법</div>
                 
-                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) 움직이는 GIF 다운로드</p>
-                <button class="btn-gif-download" onclick="generateAnimatedGif()" style="margin-top: 5px;">🎬 움직이는 GIF 다운받기</button>
+                <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-bottom: 5px;">1) 부드러운 움직이는 GIF 다운로드</p>
+                <button class="btn-gif-download" onclick="generateAnimatedGif()" style="margin-top: 5px;">🎬 부드러운 움직이는 GIF 다운받기</button>
 
-                <p style="font-size: 13px; color: #ff9800; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">2) 선수 역할 설명 + 편집 링크 복사</p>
-                <button class="btn-desc-copy" onclick="copyDescriptionAndLink()" style="margin-top: 5px;">📋 설명 및 편집 링크 복사</button>
+                <p style="font-size: 13px; color: #ff9800; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">2) 이쁜 선수 역할 설명 + 편집 링크 복사</p>
+                <button class="btn-desc-copy" onclick="copyDescriptionAndLink()" style="margin-top: 5px;">📋 이쁜 설명 및 편집 링크 복사</button>
 
                 <p style="font-size: 13px; color: #00e676; font-weight: bold; margin-top: 25px; margin-bottom: 5px;">3) 단축 URL만 따로 복사</p>
                 <div class="share-box-container">
@@ -419,7 +419,7 @@
         let state = { style: "", formation: "", roles: {}, players: {} };
         let selectedPlayerId = null;
 
-        // Preload all player images to Base64 to completely avoid CORS tainting
+        // Preload player images into base64 to avoid CORS issues in canvas rendering
         async function preloadPlayerImages() {
             for (let player of squad) {
                 if (player.img && !player.imgDataUrl) {
@@ -807,10 +807,10 @@
             });
         }
 
-        // Generate smooth animated GIF using programmatic frame rendering
+        // Generate smooth high-frame-rate animated GIF (20 frames for high fluidity)
         async function generateAnimatedGif() {
             const wrapper = document.getElementById('pitch-wrapper');
-            alert("움직이는 GIF 생성 중입니다! 잠시만 기다려주세요 (약 3~4초 소요)...");
+            alert("부드러운 움직이는 GIF 생성 중입니다! 잠시만 기다려주세요 (약 4~5초 소요)...");
 
             try {
                 const gif = new GIF({
@@ -827,17 +827,16 @@
                     gif.options.workerScript = URL.createObjectURL(blob);
                 } catch(e) {}
 
-                // Generate 8 smooth frames using sine wave progression
-                const totalFrames = 8;
+                // Increased to 20 frames for ultra-smooth movement
+                const totalFrames = 20;
                 for(let i = 0; i < totalFrames; i++) {
                     const progress = Math.sin((i / totalFrames) * Math.PI * 2) * 0.4;
                     renderPitch(progress);
                     
                     const canvas = await html2canvas(wrapper, { scale: 1, useCORS: true, allowTaint: true });
-                    gif.addFrame(canvas, { copy: true, delay: 150 });
+                    gif.addFrame(canvas, { copy: true, delay: 80 });
                 }
 
-                // Reset pitch to normal position after capturing
                 renderPitch(0);
 
                 gif.on('finished', function(blob) {
@@ -846,7 +845,7 @@
                     link.href = url;
                     link.download = 'jeonbuk_tactic.gif';
                     link.click();
-                    alert("움직이는 GIF 다운로드가 완료되었습니다!");
+                    alert("부드러운 움직이는 GIF 다운로드가 완료되었습니다!");
                 });
 
                 gif.render();
@@ -856,14 +855,15 @@
             }
         }
 
+        // Copy beautifully styled description and edit link
         function copyDescriptionAndLink() {
             let text = "🟢 [전북 현대 FM 전술 & 라인업]\n\n";
             
             if(state.style) {
-                text += `📌 전술 유형: ${state.style}\n`;
+                text += `🎯 전술 유형: ${state.style}\n`;
             }
             if(state.formation) {
-                text += `📌 포메이션: ${state.formation}\n\n`;
+                text += `⚽ 포메이션: ${state.formation}\n\n`;
             }
             
             text += "📋 [선발 선수 및 역할 설명]\n";
@@ -882,7 +882,7 @@
                     }
                 }
                 if(player) {
-                    text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  - 설명: ${roleDesc}\n`;
+                    text += `• [${slot.label}] ${player.backNo}. ${player.name} (${roleName})\n  └ 설명: ${roleDesc}\n`;
                 } else {
                     text += `• [${slot.label}] 미배치 (${roleName})\n`;
                 }
@@ -895,7 +895,7 @@
             text += `\n🔗 직접 전술 수정해보기 / 보러가기\n👉 ${shareUrl}`;
 
             navigator.clipboard.writeText(text).then(() => {
-                alert("선수 역할 설명과 편집 링크가 클립보드에 복사되었습니다!");
+                alert("이쁜 설명과 편집 링크가 클립보드에 복사되었습니다!");
             }).catch(err => {
                 console.error("복사 실패:", err);
                 alert("복사 중 오류가 발생했습니다.");
