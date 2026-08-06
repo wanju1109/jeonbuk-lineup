@@ -6,22 +6,22 @@
     <title>전북 현대 FM 전술 빌더</title>
     <!-- HTML to Image Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- LZ-String for Short URL Compression -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 
-        /* Base Styles */
         body {
             font-family: 'Noto Sans KR', sans-serif;
             background-color: #121212;
             color: #e0e0e0;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Main window lock, scrolling inside panels */
+            overflow: hidden;
         }
 
         h1, h2, h3 { color: #00e676; margin: 0 0 10px 0; }
         
-        /* App Layout: Left Fixed, Right Scrollable */
         .app-container {
             display: flex;
             height: 100vh;
@@ -29,7 +29,7 @@
             margin: 0 auto;
         }
 
-        /* Left Panel (Fixed Pitch) */
+        /* Left Panel (Fixed Pitch & Roster Info) */
         .left-panel {
             width: 480px;
             flex-shrink: 0;
@@ -39,6 +39,7 @@
             align-items: center;
             background-color: #1a1a1a;
             border-right: 2px solid #333;
+            overflow-y: auto;
             z-index: 10;
         }
 
@@ -50,7 +51,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Pitch Styles */
         #pitch-wrapper {
             background: linear-gradient(180deg, #1b5e20, #2e7d32, #1b5e20);
             border: 4px solid #ffffff;
@@ -61,30 +61,27 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
             margin-top: 10px;
+            flex-shrink: 0;
         }
 
         #pitch { width: 100%; height: 100%; position: relative; }
         
-        /* Tactic Preview Video */
         #tactic-video {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             object-fit: cover; z-index: 15; display: none; background-color: #1b5e20;
         }
 
-        /* SVG layer for arrows */
         #movement-layer {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             pointer-events: none; z-index: 2;
         }
 
-        /* Pitch Lines */
         .pitch-line { position: absolute; border: 2px solid rgba(255, 255, 255, 0.5); pointer-events: none; z-index: 1; }
         .center-line { top: 50%; left: 0; width: 100%; height: 0; }
         .center-circle { top: 50%; left: 50%; width: 100px; height: 100px; border-radius: 50%; transform: translate(-50%, -50%); }
         .penalty-box.top { top: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-top: none; }
         .penalty-box.bottom { bottom: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-bottom: none; }
 
-        /* Position Slots */
         .position-slot {
             position: absolute; width: 52px; height: 62px;
             border: 2px dashed rgba(255, 255, 255, 0.4); border-radius: 8px;
@@ -94,7 +91,6 @@
         }
         .position-slot.selected { border: 3px solid #ffeb3b; background-color: rgba(255,235,59,0.3); }
 
-        /* Player Cards */
         .player-card {
             display: flex; flex-direction: column; align-items: center; width: 65px; cursor: grab; z-index: 10;
         }
@@ -116,7 +112,7 @@
         }
         .starter { position: absolute; transform: translate(-50%, -50%); }
 
-        /* Player Animation on Final Confirm */
+        /* Animation on Final Confirm */
         .pitch-animating .player-card.starter {
             animation: tacticalMove 3s infinite ease-in-out;
         }
@@ -125,7 +121,7 @@
             50% { transform: translate(calc(-50% + var(--move-x, 0px)), calc(-50% + var(--move-y, 0px))); }
         }
 
-        /* Steps UI Styling */
+        /* Steps UI */
         .step-container {
             background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px;
             padding: 25px; margin-bottom: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.5);
@@ -150,27 +146,33 @@
         }
         .btn-reset { background: #444; color: #fff; }
         .btn-confirm { background: #00e676; color: #111; }
-        .btn-full-reset { background: #d32f2f; color: #fff; width: 100%; margin-top: 20px; font-size: 16px; padding: 12px; }
+        .btn-full-reset { background: #d32f2f; color: #fff; width: 100%; margin-top: 20px; font-size: 16px; padding: 12px; flex-shrink: 0; }
         
-        /* Grid for Roles (Step 2) */
+        /* Role Selection Grid */
         .role-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .role-item { background: #252525; padding: 10px; border-radius: 8px; border: 1px solid #444; }
         .role-item label { color:#00e676; font-size: 12px; font-weight:bold; display:block; margin-bottom:5px; }
+        .role-desc-text { font-size: 11px; color: #aaa; margin-top: 6px; line-height: 1.4; background: #111; padding: 6px; border-radius: 4px; }
 
-        /* Bench Grid (Step 3) */
+        /* Bench Grid */
         .bench-area { background: #111; padding: 15px; border-radius: 8px; border: 1px solid #333; }
         .bench-group-title { font-size: 13px; color: #aaa; margin-bottom: 10px; border-left: 3px solid #00e676; padding-left: 8px; font-weight: bold; }
         .bench-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 10px; justify-items: center; margin-bottom: 20px; }
 
-        /* Final Shared Mode Alert */
+        /* Shared Mode Roster Summary Box (Bottom of Left Panel) */
+        #roster-summary {
+            display: none; width: 100%; margin-top: 20px; background: #222; border: 1px solid #444; border-radius: 10px; padding: 15px; box-sizing: border-box;
+        }
+        .roster-title { font-size: 14px; font-weight: bold; color: #00e676; margin-bottom: 10px; text-align: center; border-bottom: 1px solid #444; padding-bottom: 5px; }
+        .roster-item { font-size: 12px; color: #ccc; margin-bottom: 6px; display: flex; justify-content: space-between; background: #1a1a1a; padding: 5px 8px; border-radius: 4px; }
+
         #shared-alert {
             display: none; background: linear-gradient(135deg, #00c853, #64dd17); color: #111;
             padding: 20px; border-radius: 12px; font-weight: 900; text-align: center; margin-bottom: 20px;
         }
         
-        /* URL Box */
         .url-box { background: #000; padding: 15px; border: 1px solid #00e676; border-radius: 8px; color: #00e676; font-size: 12px; word-break: break-all; margin-top: 10px;}
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #111; }
         ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
@@ -180,15 +182,13 @@
 <body>
 
     <div class="app-container">
-        <!-- LEFT PANEL: PITCH -->
+        <!-- LEFT PANEL: PITCH & ROSTER SUMMARY -->
         <div class="left-panel">
             <h1>🟢 JEONBUK FM TACTICS</h1>
-            <p style="font-size: 12px; color:#aaa; margin-top:0;">드래그 앤 드롭으로 선수를 배치하세요</p>
+            <p style="font-size: 12px; color:#aaa; margin-top:0;" id="left-subtitle">드래그 앤 드롭으로 선수를 배치하세요</p>
             
             <div id="pitch-wrapper">
-                <!-- Tactic Preview Video (Overlay) -->
                 <video id="tactic-video" autoplay loop muted playsinline></video>
-
                 <div id="pitch">
                     <div class="pitch-line center-line"></div>
                     <div class="pitch-line center-circle"></div>
@@ -206,7 +206,12 @@
                 </div>
             </div>
 
-            <!-- Total Reset Button -->
+            <!-- Shared View Roster Summary (Bottom) -->
+            <div id="roster-summary">
+                <div class="roster-title">📋 선발 라인업 및 역할 요약</div>
+                <div id="roster-list"></div>
+            </div>
+
             <button class="btn-full-reset" onclick="resetAll()">🔄 전체 초기화 (새로 만들기)</button>
         </div>
 
@@ -241,7 +246,6 @@
                 <div class="form-group">
                     <label style="color:#00e676; font-size:13px; font-weight:bold;">제안 포메이션</label>
                     <select id="formation-select" onchange="handleFormationChange()">
-                        <!-- Options populated via JS -->
                     </select>
                 </div>
 
@@ -254,9 +258,7 @@
             <!-- STEP 2: 역할 설정 -->
             <div class="step-container" id="step2">
                 <div class="step-header">STEP 2. 포지션별 역할 및 임무</div>
-                <div id="role-selectors" class="role-grid">
-                    <!-- Dropdowns injected via JS -->
-                </div>
+                <div id="role-selectors" class="role-grid"></div>
                 <div class="btn-group">
                     <button class="btn-reset" onclick="resetStep(2)">초기화</button>
                     <button class="btn-confirm" onclick="confirmStep(2)">확정 및 선수 배치</button>
@@ -287,7 +289,7 @@
             <!-- STEP 4: 공유 -->
             <div class="step-container" id="step4">
                 <div class="step-header">STEP 4. 전술 공유 링크</div>
-                <p style="font-size: 13px; color: #ccc;">아래 링크를 복사하여 팬 커뮤니티나 친구에게 공유하세요. 접속 시 선수들이 지침에 따라 움직이며 전술이 재생됩니다!</p>
+                <p style="font-size: 13px; color: #ccc;">아래 단축된 링크를 복사하여 공유하세요!</p>
                 <div id="share-link" class="url-box"></div>
             </div>
 
@@ -295,25 +297,19 @@
     </div>
 
     <script>
-        /* ============================
-           DATA: TACTICAL STYLES & VIDEOS
-           ============================ */
         const stylesData = {
-            "control": { name: "점유율 중시", desc: "짧은 패스로 점유율을 지배하며 참을성 있게 공간을 찾습니다. 높은 라인에서 상대를 압박합니다.", forms: ["4-2-3-1", "4-3-3", "4-1-4-1"], video: "https://i.namu.wiki/i/TRX-FpXhxRnKyfGAHuS_ZuZgJeej1M-JhNgX3sVW4jYXoT1mPjQXVxkNwf5vG3CtmRYUFl_p3dA_SnmcBTLC-w.mp4" },
-            "gegenpress": { name: "게겐프레스", desc: "공을 잃은 즉시 미친 듯이 전방 압박을 가하여 빠르게 소유권을 되찾고 득점을 노립니다.", forms: ["4-2-3-1", "4-3-3", "4-4-2"], video: "https://i.namu.wiki/i/bMBlHL3uo3SQxhBaasyyqX1tP2I2I-FszRS0U9UAhJIXAfJEaURljPpqR54krVc4FBs3RQ3JiBLJLAKRKMYJug.mp4" },
-            "tikitaka": { name: "티키타카", desc: "극단적으로 짧고 빠른 패스워크를 통해 중원을 완벽히 지배하고 상대를 혼란스럽게 만듭니다.", forms: ["4-3-3", "4-2-3-1", "4-1-4-1"], video: "https://i.namu.wiki/i/wPdKDWYTB-gzjwhq4bWRRrTUVjxrZCMy0ZlZGAoa0kpZpVU0eN5BOnLsyR_prPRNU2sPk1YU06zCyaMhHgGIfw.mp4" },
-            "verticaltiki": { name: "전진 티키타카", desc: "티키타카보다 조금 더 다이렉트하며 좁은 공간에서 빠른 원터치 패스로 중앙을 돌파합니다.", forms: ["4-3-1-2", "4-3-3", "5-3-2"], video: "https://i.namu.wiki/i/waeGqnggiZjdMJuzNGlng6Tnu1_P6WvLR1NJJlIo9zlfmLAmdHYAXSGD-3X5JCAzhApbFWIBYlydnUfbWI8gaA.mp4" },
-            "wingplay": { name: "측면 플레이", desc: "빠른 윙어와 오버래핑하는 풀백을 활용하여 경기장을 넓게 쓰고 지속적인 크로스를 공급합니다.", forms: ["4-4-2", "4-2-3-1", "3-4-3"], video: "https://i.namu.wiki/i/v9r7dalRqU6GGPoHsM011ueotPg7ywac-B8lcIbBbrI8fmFL5p__KefUzXb685I6OuBU50MbgsbuQ5GcrUCPzA.mp4" },
-            "routeone": { name: "길게 차기", desc: "공을 탈취하면 후방에서 전방의 타겟맨에게 다이렉트로 길게 때려놓고 세컨볼을 노립니다.", forms: ["4-4-2", "5-3-2"], video: "https://i.namu.wiki/i/ta9ocwLmtsopEfm3GzO-zmMF4pQ1UUINZb87Z9bQ_Q6qmTxjzkM56P-DUXu8-KfUH8EU6cCh6HJ15mY1obUDnw.mp4" },
-            "fluidcounter": { name: "유연한 역습", desc: "수비 라인을 지키다 공을 끊어내면 다수의 선수가 위치를 스위칭하며 유기적으로 역습합니다.", forms: ["4-3-3", "4-1-4-1", "3-5-2"], video: "https://i.namu.wiki/i/c18jaUuq09BuiVdaqggYZS1P_kt3j-EK-PI3Ob2ljDuI4lfvMSkhxe9wOj-YPqKlvvZXqsAA7ccuk1cnTx9qvA.mp4" },
-            "directcounter": { name: "빠른 역습", desc: "구조를 단단히 유지한 채, 공을 끊자마자 공격수에게 직선적이고 빠른 패스를 투입합니다.", forms: ["4-4-2", "4-1-4-1", "5-4-1"], video: "https://i.namu.wiki/i/GZ-U9zWkVa6XmyYCuwJjwA9GXX2AFhddIT-fYb6bMQxEHSaXiTxRYkMNIWwZyEd4j3YObvDA4tV1YDVP05RE9w.mp4" },
-            "catenaccio": { name: "카테나치오", desc: "이탈리아식 빗장 수비입니다. 극강의 수비 조직력으로 실점을 막고 제한적인 역습만 시도합니다.", forms: ["5-3-2", "3-5-2", "5-4-1"], video: "https://i.namu.wiki/i/x86-xESDfHukKaKlG_JlSMfgRAG8qJ-tJ6UJAzsq3kNxXfK-KSPi98UEVN52r1lpH8RRoJ8lKwgTbbkdohWtVw.mp4" },
-            "parkthebus": { name: "버스 세우기", desc: "전원이 페널티 박스 근처에 밀집하여 틈을 주지 않는 극단적이고 필사적인 수비 전술입니다.", forms: ["5-4-1", "5-3-2"], video: "https://i.namu.wiki/i/_Ygej3EFBL-AwGOYCoTIhyfMFSiZ3ZoHIm78Mo8gcnd6YZKPGqI2gvieC7KoxVRveHEw1hYQHjYRKM6yC6z0sg.mp4" }
+            "control": { desc: "짧은 패스로 점유율을 지배하며 참을성 있게 공간을 찾습니다. 높은 라인에서 상대를 압박합니다.", forms: ["4-2-3-1", "4-3-3", "4-1-4-1"], video: "https://i.namu.wiki/i/TRX-FpXhxRnKyfGAHuS_ZuZgJeej1M-JhNgX3sVW4jYXoT1mPjQXVxkNwf5vG3CtmRYUFl_p3dA_SnmcBTLC-w.mp4" },
+            "gegenpress": { desc: "공을 잃은 즉시 미친 듯이 전방 압박을 가하여 빠르게 소유권을 되찾고 득점을 노립니다.", forms: ["4-2-3-1", "4-3-3", "4-4-2"], video: "https://i.namu.wiki/i/bMBlHL3uo3SQxhBaasyyqX1tP2I2I-FszRS0U9UAhJIXAfJEaURljPpqR54krVc4FBs3RQ3JiBLJLAKRKMYJug.mp4" },
+            "tikitaka": { desc: "극단적으로 짧고 빠른 패스워크를 통해 중원을 완벽히 지배하고 상대를 혼란스럽게 만듭니다.", forms: ["4-3-3", "4-2-3-1", "4-1-4-1"], video: "https://i.namu.wiki/i/wPdKDWYTB-gzjwhq4bWRRrTUVjxrZCMy0ZlZGAoa0kpZpVU0eN5BOnLsyR_prPRNU2sPk1YU06zCyaMhHgGIfw.mp4" },
+            "verticaltiki": { desc: "티키타카보다 조금 더 다이렉트하며 좁은 공간에서 빠른 원터치 패스로 중앙을 돌파합니다.", forms: ["4-3-1-2", "4-3-3", "5-3-2"], video: "https://i.namu.wiki/i/waeGqnggiZjdMJuzNGlng6Tnu1_P6WvLR1NJJlIo9zlfmLAmdHYAXSGD-3X5JCAzhApbFWIBYlydnUfbWI8gaA.mp4" },
+            "wingplay": { desc: "빠른 윙어와 오버래핑하는 풀백을 활용하여 경기장을 넓게 쓰고 지속적인 크로스를 공급합니다.", forms: ["4-4-2", "4-2-3-1", "3-4-3"], video: "https://i.namu.wiki/i/v9r7dalRqU6GGPoHsM011ueotPg7ywac-B8lcIbBbrI8fmFL5p__KefUzXb685I6OuBU50MbgsbuQ5GcrUCPzA.mp4" },
+            "routeone": { desc: "공을 탈취하면 후방에서 전방의 타겟맨에게 다이렉트로 길게 때려놓고 세컨볼을 노립니다.", forms: ["4-4-2", "5-3-2"], video: "https://i.namu.wiki/i/ta9ocwLmtsopEfm3GzO-zmMF4pQ1UUINZb87Z9bQ_Q6qmTxjzkM56P-DUXu8-KfUH8EU6cCh6HJ15mY1obUDnw.mp4" },
+            "fluidcounter": { desc: "수비 라인을 지키다 공을 끊어내면 다수의 선수가 위치를 스위칭하며 유기적으로 역습합니다.", forms: ["4-3-3", "4-1-4-1", "3-5-2"], video: "https://i.namu.wiki/i/c18jaUuq09BuiVdaqggYZS1P_kt3j-EK-PI3Ob2ljDuI4lfvMSkhxe9wOj-YPqKlvvZXqsAA7ccuk1cnTx9qvA.mp4" },
+            "directcounter": { desc: "구조를 단단히 유지한 채, 공을 끊자마자 공격수에게 직선적이고 빠른 패스를 투입합니다.", forms: ["4-4-2", "4-1-4-1", "5-4-1"], video: "https://i.namu.wiki/i/GZ-U9zWkVa6XmyYCuwJjwA9GXX2AFhddIT-fYb6bMQxEHSaXiTxRYkMNIWwZyEd4j3YObvDA4tV1YDVP05RE9w.mp4" },
+            "catenaccio": { desc: "이탈리아식 빗장 수비입니다. 극강의 수비 조직력으로 실점을 막고 제한적인 역습만 시도합니다.", forms: ["5-3-2", "3-5-2", "5-4-1"], video: "https://i.namu.wiki/i/x86-xESDfHukKaKlG_JlSMfgRAG8qJ-tJ6UJAzsq3kNxXfK-KSPi98UEVN52r1lpH8RRoJ8lKwgTbbkdohWtVw.mp4" },
+            "parkthebus": { desc: "전원이 페널티 박스 근처에 밀집하여 틈을 주지 않는 극단적이고 필사적인 수비 전술입니다.", forms: ["5-4-1", "5-3-2"], video: "https://i.namu.wiki/i/_Ygej3EFBL-AwGOYCoTIhyfMFSiZ3ZoHIm78Mo8gcnd6YZKPGqI2gvieC7KoxVRveHEw1hYQHjYRKM6yC6z0sg.mp4" }
         };
 
-        /* ============================
-           DATA: FORMATIONS 
-           ============================ */
         const formationsData = {
             "4-3-3": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 }, { id: "LCM", label: "LCM", type: "CM", x: 30, y: 52 }, { id: "CM", label: "CM", type: "CM", x: 50, y: 58 }, { id: "RCM", label: "RCM", type: "CM", x: 70, y: 52 }, { id: "LW", label: "LW", type: "W", x: 18, y: 25 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }, { id: "RW", label: "RW", type: "W", x: 82, y: 25 }],
             "4-2-3-1": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LB", label: "LB", type: "FB", x: 15, y: 75 }, { id: "CB1", label: "CB", type: "CB", x: 38, y: 78 }, { id: "CB2", label: "CB", type: "CB", x: 62, y: 78 }, { id: "RB", label: "RB", type: "FB", x: 85, y: 75 }, { id: "LDM", label: "LDM", type: "DM", x: 38, y: 62 }, { id: "RDM", label: "RDM", type: "DM", x: 62, y: 62 }, { id: "LAM", label: "LAM", type: "W", x: 20, y: 38 }, { id: "CAM", label: "CAM", type: "CAM", x: 50, y: 40 }, { id: "RAM", label: "RAM", type: "W", x: 80, y: 38 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }],
@@ -326,12 +322,9 @@
             "5-4-1": [{ id: "GK", label: "GK", type: "GK", x: 50, y: 90 }, { id: "LWB", label: "LWB", type: "WB", x: 12, y: 68 }, { id: "LCB", label: "LCB", type: "CB", x: 30, y: 78 }, { id: "CB", label: "CB", type: "CB", x: 50, y: 80 }, { id: "RCB", label: "RCB", type: "CB", x: 70, y: 78 }, { id: "RWB", label: "RWB", type: "WB", x: 88, y: 68 }, { id: "LM", label: "LM", type: "W", x: 20, y: 45 }, { id: "CM1", label: "CM", type: "CM", x: 40, y: 48 }, { id: "CM2", label: "CM", type: "CM", x: 60, y: 48 }, { id: "RM", label: "RM", type: "W", x: 80, y: 45 }, { id: "ST", label: "ST", type: "ST", x: 50, y: 20 }]
         };
 
-        /* ============================
-           DATA: ROLES (NAMU WIKI)
-           ============================ */
         const roleData = {
             "ST": [
-                { id: "AF", name: "전진형 포워드 (AF)", desc: "수비 뒷공간을 파고들며 득점을 노리고, 기회를 창출합니다.", path: "straight", dx: 0, dy: -15 },
+                { id: "AF", name: "전진형 포워드 (AF)", desc: "수비 뒷공간을 파고들며 득점을 노리고 기회를 창출합니다.", path: "straight", dx: 0, dy: -15 },
                 { id: "DLF", name: "딥라잉 포워드 (DLF)", desc: "2선으로 내려와 연계 플레이를 펼치고 상대를 끌어냅니다.", path: "straight", dx: 0, dy: 8 },
                 { id: "TF", name: "타깃 포워드 (TF)", desc: "피지컬로 공중볼을 따내고 공간을 만들어 줍니다.", path: "hold", dx: 0, dy: 0 },
                 { id: "PF", name: "압박형 포워드 (PF)", desc: "상대 수비진을 끈질기게 압박하여 실수를 유발합니다.", path: "straight", dx: 0, dy: -12 }
@@ -377,11 +370,7 @@
             ]
         };
 
-        /* ============================
-           DATA: FULL SQUAD (전북 27인 풀스쿼드)
-           ============================ */
         const squad = [
-            // FW
             { id: 7,  backNo: "7",  name: "이동준", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png" },
             { id: 9,  backNo: "9",  name: "티아고", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png" },
             { id: 10, backNo: "10", name: "이승우", pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png" },
@@ -393,7 +382,6 @@
             { id: 99, backNo: "99", name: "모따",  pos: "FW", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png" },
             { id: 100, backNo: "100", name: "도도", pos: "FW", img: "" },
 
-            // MF
             { id: 6,  backNo: "6",  name: "맹성웅", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190084.png" },
             { id: 13, backNo: "13", name: "강상윤", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png" },
             { id: 16, backNo: "16", name: "감보아", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250353.png" },
@@ -401,7 +389,6 @@
             { id: 73, backNo: "73", name: "김예건", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260293.png" },
             { id: 97, backNo: "97", name: "김진규", pos: "MF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png" },
 
-            // DF
             { id: 2,  backNo: "2",  name: "김영빈", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png" },
             { id: 3,  backNo: "3",  name: "연제운", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png" },
             { id: 4,  backNo: "4",  name: "조위제", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220174.png" },
@@ -412,40 +399,23 @@
             { id: 66, backNo: "66", name: "최우진", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230029.png" },
             { id: 77, backNo: "77", name: "김태현", pos: "DF", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180185.png" },
 
-            // GK
             { id: 1,  backNo: "1",  name: "이주현", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20190057.png" },
             { id: 31, backNo: "31", name: "송범근", pos: "GK", img: "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png" }
         ];
 
-        /* ============================
-           STATE MANAGEMENT 
-           ============================ */
-        let state = {
-            style: "",
-            formation: "",
-            roles: {}, // slotId: roleId
-            players: {} // slotId: playerId
-        };
+        let state = { style: "", formation: "", roles: {}, players: {} };
         let selectedPlayerId = null;
 
-        /* ============================
-           CORE FUNCTIONS 
-           ============================ */
-        
-        // Full Reset Button
         function resetAll() {
-            // URL 파라미터를 모두 지우고 페이지를 새로고침하여 초기화합니다.
             window.location.href = window.location.pathname;
         }
 
-        // Step 1: Change Tactical Style
         function handleStyleChange() {
             const styleId = document.getElementById('tactical-style').value;
             const descEl = document.getElementById('style-desc');
             const formSelect = document.getElementById('formation-select');
             const videoEl = document.getElementById('tactic-video');
             
-            // Remove animation class if returning to Step 1
             document.getElementById('pitch-wrapper').classList.remove('pitch-animating');
 
             if (!styleId) {
@@ -460,7 +430,6 @@
             const data = stylesData[styleId];
             descEl.innerText = data.desc;
 
-            // Show MP4 Preview for selected tactic
             if (data.video) {
                 videoEl.src = data.video;
                 videoEl.style.display = 'block';
@@ -468,7 +437,6 @@
                 videoEl.style.display = 'none';
             }
 
-            // Populate Formations
             formSelect.innerHTML = "";
             data.forms.forEach(f => {
                 const opt = document.createElement('option');
@@ -490,7 +458,6 @@
             renderPitch();
         }
 
-        // Draw Pitch and Players
         function renderPitch() {
             const pitch = document.getElementById('pitch');
             document.querySelectorAll('.position-slot, .player-card.starter').forEach(el => el.remove());
@@ -524,7 +491,6 @@
 
                 pitch.appendChild(slotEl);
 
-                // If player assigned, render on top and set animation CSS variables
                 const assignedPlayerId = state.players[slot.id];
                 if (assignedPlayerId) {
                     const player = squad.find(p => p.id === assignedPlayerId);
@@ -533,7 +499,6 @@
                         card.style.left = slot.x + '%';
                         card.style.top = slot.y + '%';
                         
-                        // Calculate exact move pixels for the final animation based on Role
                         const roleId = state.roles[slot.id];
                         const roleOpts = roleData[slot.type] ? roleData[slot.type].find(r => r.id === roleId) : null;
                         
@@ -551,7 +516,7 @@
                         }
 
                         pitch.appendChild(card);
-                        slotEl.style.color = 'transparent'; // hide slot text
+                        slotEl.style.color = 'transparent';
                     }
                 }
             });
@@ -611,7 +576,6 @@
             return card;
         }
 
-        // SVG Drawing
         function drawArrows() {
             const group = document.getElementById('arrows-group');
             group.innerHTML = ''; 
@@ -651,7 +615,7 @@
             });
         }
 
-        // Render Step 2: Roles
+        // Render Step 2: Roles with live descriptions
         function renderRoleSelectors() {
             const container = document.getElementById('role-selectors');
             container.innerHTML = '';
@@ -673,24 +637,31 @@
                     select.appendChild(opt);
                 });
 
+                // Description Box per Role
+                const descDiv = document.createElement('div');
+                descDiv.className = 'role-desc-text';
+                const currentRole = roleData[slot.type].find(r => r.id === state.roles[slot.id]);
+                descDiv.innerText = currentRole ? currentRole.desc : '';
+
                 select.onchange = (e) => {
                     state.roles[slot.id] = e.target.value;
-                    renderPitch(); // Re-calculate custom props for animation
+                    const newRole = roleData[slot.type].find(r => r.id === e.target.value);
+                    descDiv.innerText = newRole ? newRole.desc : '';
+                    renderPitch();
                 };
+
                 wrap.appendChild(select);
+                wrap.appendChild(descDiv);
                 container.appendChild(wrap);
             });
         }
 
-        // Render Step 3: Bench
         function renderBench() {
             ['GK', 'DF', 'MF', 'FW'].forEach(pos => document.getElementById(`bench-${pos}`).innerHTML = '');
-            
             const assignedPlayerIds = Object.values(state.players);
             
             squad.forEach(player => {
-                if (assignedPlayerIds.includes(player.id)) return; // On pitch
-                
+                if (assignedPlayerIds.includes(player.id)) return;
                 const card = createPlayerCard(player, false);
                 const target = document.getElementById(`bench-${player.pos}`);
                 if (target) target.appendChild(card);
@@ -726,9 +697,6 @@
             }
         };
 
-        /* ============================
-           STEP FLOW & URL SHARING
-           ============================ */
         function activateStep(stepNum) {
             document.querySelectorAll('.step-container').forEach(el => el.classList.remove('active-step'));
             const target = document.getElementById(`step${stepNum}`);
@@ -741,7 +709,7 @@
                 document.getElementById('tactical-style').value = "";
                 handleStyleChange();
             } else if (stepNum === 2) {
-                handleFormationChange(); // Resets roles to default
+                handleFormationChange();
                 renderRoleSelectors();
             }
         }
@@ -749,61 +717,77 @@
         function confirmStep(stepNum) {
             if (stepNum === 1) {
                 if (!state.formation) return alert("전술 유형을 선택해주세요!");
-                
-                // Hide video and show interactive pitch
                 document.getElementById('tactic-video').style.display = 'none';
-                
                 renderRoleSelectors();
                 activateStep(2);
             } else if (stepNum === 2) {
                 renderBench();
                 activateStep(3);
             } else if (stepNum === 3) {
-                // Add animating class to trigger CSS keyframes on players
                 document.getElementById('pitch-wrapper').classList.add('pitch-animating');
-                generateShareLink();
+                generateShortShareLink();
                 activateStep(4);
             }
         }
 
-        function generateShareLink() {
+        // Short URL Generation using LZ-String
+        function generateShortShareLink() {
             const jsonString = JSON.stringify(state);
-            const base64 = btoa(encodeURIComponent(jsonString));
+            const compressed = LZString.compressToEncodedURIComponent(jsonString);
             const currentUrl = window.location.href.split('?')[0];
-            const shareUrl = `${currentUrl}?data=${base64}`;
+            const shareUrl = `${currentUrl}?c=${compressed}`;
             
             document.getElementById('share-link').innerHTML = `<a href="${shareUrl}" target="_blank" style="color:#00e676;">${shareUrl}</a>`;
         }
 
         function loadFromURL() {
             const params = new URLSearchParams(window.location.search);
-            const dataParam = params.get('data');
+            const compressedParam = params.get('c');
+            const legacyParam = params.get('data'); // Fallback for old long links
             
-            if (dataParam) {
+            let rawData = null;
+            if (compressedParam) {
+                rawData = LZString.decompressFromEncodedURIComponent(compressedParam);
+            } else if (legacyParam) {
+                try { rawData = decodeURIComponent(atob(legacyParam)); } catch(e){}
+            }
+            
+            if (rawData) {
                 try {
-                    const decoded = JSON.parse(decodeURIComponent(atob(dataParam)));
-                    state = decoded;
+                    state = JSON.parse(rawData);
                     
+                    // Hide builder steps and controls, show simple shared view
                     document.getElementById('shared-alert').style.display = 'block';
-                    document.getElementById('tactical-style').value = state.style;
-                    
-                    const formSelect = document.getElementById('formation-select');
-                    formSelect.innerHTML = `<option value="${state.formation}">${state.formation}</option>`;
-                    
-                    document.getElementById('style-desc').innerText = stylesData[state.style].desc;
-
-                    // Ensure video is hidden when loading shared state
                     document.getElementById('tactic-video').style.display = 'none';
+                    document.querySelectorAll('.step-container').forEach(el => el.style.display = 'none');
+                    document.getElementById('shared-alert').style.display = 'block';
+                    document.getElementById('left-subtitle').innerText = "공유된 전북 현대 전술 및 라인업";
 
                     renderPitch();
-                    renderRoleSelectors();
-                    renderBench();
-                    
-                    // Activate animation for shared view
                     document.getElementById('pitch-wrapper').classList.add('pitch-animating');
 
-                    document.querySelectorAll('.step-container').forEach(el => el.classList.add('active-step'));
-                    document.querySelectorAll('.btn-group').forEach(el => el.style.display = 'none');
+                    // Render Roster Summary Box on Left Panel
+                    const rosterBox = document.getElementById('roster-summary');
+                    const rosterList = document.getElementById('roster-list');
+                    rosterList.innerHTML = '';
+                    rosterBox.style.display = 'block';
+
+                    const slots = formationsData[state.formation] || [];
+                    slots.forEach(slot => {
+                        const pId = state.players[slot.id];
+                        const player = squad.find(p => p.id === pId);
+                        const roleId = state.roles[slot.id];
+                        let roleName = roleId;
+                        if (roleData[slot.type]) {
+                            const foundRole = roleData[slot.type].find(r => r.id === roleId);
+                            if (foundRole) roleName = foundRole.name;
+                        }
+
+                        const item = document.createElement('div');
+                        item.className = 'roster-item';
+                        item.innerHTML = `<span><b>[${slot.label}]</b> ${player ? player.backNo + '. ' + player.name : '미배치'}</span> <span style="color:#00e676; font-size:10px;">${roleName}</span>`;
+                        rosterList.appendChild(item);
+                    });
                     
                 } catch (e) {
                     console.error("Invalid URL data", e);
@@ -811,11 +795,9 @@
             }
         }
 
-        // Initialize on Load
         window.onload = () => {
             loadFromURL();
         };
-
     </script>
 </body>
 </html>
