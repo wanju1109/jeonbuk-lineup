@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인차량사용 운행일지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- User selection screen -->
+    <div id="login-section" class="container">
+        <h2>사용자 선택</h2>
+        <p>운행일지를 작성할 이름을 선택하세요.</p>
+        <select id="user-select">
+            <option value="">-- 이름 선택 --</option>
+            <option value="사용자1">사용자1</option>
+            <option value="사용자2">사용자2</option>
+            <option value="사용자3">사용자3</option>
+            <option value="사용자4">사용자4</option>
+            <option value="사용자5">사용자5</option>
+            <option value="사용자6">사용자6</option>
+            <option value="사용자7">사용자7</option>
+            <option value="사용자8">사용자8</option>
+            <option value="사용자9">사용자9</option>
+            <option value="사용자10">사용자10</option>
+        </select>
+        <button id="enter-btn">입장</button>
+    </div>
+
+    <!-- Log entry dashboard -->
+    <div id="dashboard-section" class="container" style="display: none;">
+        <div class="header">
+            <h2 id="welcome-msg">운행일지</h2>
+            <button id="logout-btn">다른 사용자 선택</button>
+        </div>
+
+        <!-- Input form -->
+        <div class="input-form">
+            <input type="date" id="date-input" required>
+            <input type="text" id="dest-input" placeholder="행선지 입력" required>
+            <select id="purpose-input">
+                <option value="설정지원">설정지원</option>
+                <option value="정기점검">정기점검</option>
+            </select>
+            <input type="number" id="odo-before" placeholder="주행 전 계기판(km)" required>
+            <input type="number" id="odo-after" placeholder="주행 후 계기판(km)" required>
+            <input type="number" id="hipass-input" placeholder="하이패스금액(원)" required>
+            <button id="add-btn">일지 추가</button>
+        </div>
+
+        <!-- Log table matching image_f2648b.png style -->
+        <table id="log-table">
+            <thead>
+                <tr>
+                    <th>사용일자</th>
+                    <th>행선지</th>
+                    <th>목적</th>
+                    <th>수행 전 거리(km)</th>
+                    <th>수행 후 거리(km)</th>
+                    <th>주행거리(km)</th>
+                    <th>유류비(원)</th>
+                    <th>하이패스금액(원)</th>
+                </tr>
+            </thead>
+            <tbody id="log-body">
+                <!-- Log entries will be appended here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
