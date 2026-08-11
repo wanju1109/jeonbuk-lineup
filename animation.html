@@ -67,6 +67,34 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
+        /* 골키퍼 카드 특별 스타일 (눈물 이모지 추가) */
+        .gk-card {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 65px;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+
+        .gk-img-wrapper {
+            position: relative;
+        }
+
+        .gk-img {
+            width: 45px; height: 45px; border-radius: 50%; object-fit: cover;
+            border: 2px solid #ff5252; background-color: #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .crying-tears {
+            position: absolute;
+            bottom: -2px;
+            right: -2px;
+            font-size: 14px;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+        }
+
         /* 선명한 클래식 축구공 */
         #ball {
             position: absolute;
@@ -125,6 +153,15 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
+            <!-- 골키퍼 자리(상단 골문 앞)에 울고 있는 송범근 배치 -->
+            <div id="gk" class="gk-card" style="left: 50%; top: 6%;">
+                <div class="gk-img-wrapper">
+                    <img class="player-img gk-img" crossorigin="anonymous" src="https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180154.png" alt="송범근">
+                    <div class="crying-tears">💧😭</div>
+                </div>
+                <div class="player-info">1. 송범근</div>
+            </div>
+
             <img id="ball" crossorigin="anonymous" src="https://images.weserv.nl/?url=cdn-icons-png.flaticon.com/512/53/53283.png" alt="축구공">
         </div>
     </div>
@@ -196,8 +233,15 @@
 
         function updateAnimation(progress) {
             const ball = document.getElementById('ball');
+            const gk = document.getElementById('gk');
             const phaseIndex = Math.min(3, Math.floor(progress * 4));
             const phaseProgress = (progress * 4) % 1.0; 
+
+            // 골키퍼 송범근이 골대 앞에서 좌우로 슬퍼하며 흔들리는 모션
+            if (gk) {
+                const gkOffset = Math.sin(progress * Math.PI * 8) * 3;
+                gk.style.left = `${50 + gkOffset}%`;
+            }
 
             strikers.forEach((s, idx) => {
                 const el = document.getElementById(s.id);
@@ -282,7 +326,7 @@
 
         function animatePreview() {
             if (!isGenerating) {
-                previewProgress += 0.0005; // 속도를 절반으로 늦춤 (기존 0.001 -> 0.0005)
+                previewProgress += 0.0005; // 절반으로 느긋해진 속도 유지
                 if (previewProgress >= 1) previewProgress = 0;
                 updateAnimation(previewProgress);
             }
@@ -333,7 +377,6 @@
                         backgroundColor: "#388e3c" 
                     });
                     
-                    // 프레임당 표시 시간을 늘려(100ms) 전체 동작을 여유 있고 부드럽게 감상할 수 있도록 조정
                     gif.addFrame(canvas, { copy: true, delay: 100 });
                     status.innerText = `프레임 캡처 중... (${i + 1}/${totalFrames})`;
                     
