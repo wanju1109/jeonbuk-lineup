@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeonbuk Cross Animation GIF Builder</title>
+    <title>Jeonbuk Dynamic Cross Animation Builder</title>
     <!-- HTML to Image Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- GIF.js Library -->
@@ -25,7 +25,7 @@
 
         h1 { color: #00e676; margin-bottom: 20px; }
 
-        /* Pitch styling matching the original code */
+        /* Pitch styling */
         #pitch-wrapper {
             background-color: #1b5e20;
             border: 4px solid #ffffff;
@@ -74,7 +74,7 @@
             font-size: 24px;
             transform: translate(-50%, -50%);
             z-index: 15;
-            display: none; /* Hidden by default until animation starts */
+            display: none;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
@@ -99,7 +99,7 @@
 </head>
 <body>
 
-    <h1>🟢 전북 현대 크로스 애니메이션</h1>
+    <h1>🟢 전북 현대 다이내믹 크로스 (4톱)</h1>
     
     <div id="pitch-wrapper">
         <div id="pitch">
@@ -114,37 +114,51 @@
         </div>
     </div>
 
-    <button id="btn-download" class="btn-gif-download" onclick="generateCrossGif()">🎬 반복 크로스 GIF 다운받기</button>
+    <button id="btn-download" class="btn-gif-download" onclick="generateCrossGif()">🎬 고품질 GIF 다운받기</button>
     <div id="status-msg"></div>
 
     <script>
-        // Data for selected players
-        const targetPlayers = [
-            // 4 Strikers (Top)
-            { id: 81, backNo: "81", name: "기티스", img: "20260224.png", x: 28, y: 15 },
-            { id: 96, backNo: "96", name: "콤파뇨", img: "20250061.png", x: 42, y: 15 },
-            { id: 99, backNo: "99", name: "모따", img: "20230224.png", x: 58, y: 15 },
-            { id: 9,  backNo: "9",  name: "티아고", img: "20220244.png", x: 72, y: 15 },
-            
-            // Crossers (Left and Right)
-            { id: 77, backNo: "77", name: "김태현", img: "20180185.png", x: 10, y: 45 },
-            { id: 23, backNo: "23", name: "김태환", img: "20100052.png", x: 90, y: 45 }
-        ];
-
         // Base URL for images via weserv proxy for CORS handling
         const IMG_BASE_URL = "https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/";
 
-        // Initialize players on the pitch
+        // 4 Strikers with their base positions and unique phase offsets for wobbly movement
+        const strikers = [
+            { id: "s1", backNo: "81", name: "기티스", img: "20260224.png", baseX: 28, baseY: 18, phase: 0.0 },
+            { id: "s2", backNo: "96", name: "콤파뇨", img: "20250061.png", baseX: 42, baseY: 15, phase: 1.5 },
+            { id: "s3", backNo: "99", name: "모따", img: "20230224.png", baseX: 58, baseY: 15, phase: 3.0 },
+            { id: "s4", backNo: "9",  name: "티아고", img: "20220244.png", baseX: 72, baseY: 18, phase: 4.5 }
+        ];
+
+        // 4 Crossers with dribble start/end points and control points for the Bezier curve (ball curve)
+        const crossers = [
+            // Phase 1: Kim Tae-hyeon (Left, lower)
+            { id: "c1", backNo: "77", name: "김태현", img: "20180185.png", startX: 8, startY: 75, crossX: 12, crossY: 35, ctrlX: 30, ctrlY: 0 },
+            // Phase 2: Kim Tae-hwan (Right, lower)
+            { id: "c2", backNo: "23", name: "김태환", img: "20100052.png", startX: 92, startY: 75, crossX: 88, crossY: 35, ctrlX: 70, ctrlY: 0 },
+            // Phase 3: Lee Seung-woo (Left, higher)
+            { id: "c3", backNo: "10", name: "이승우", img: "20220042.png", startX: 20, startY: 65, crossX: 25, crossY: 28, ctrlX: 35, ctrlY: -5 },
+            // Phase 4: Lee Dong-jun (Right, higher)
+            { id: "c4", backNo: "7",  name: "이동준", img: "20170121.png", startX: 80, startY: 65, crossX: 75, crossY: 28, ctrlX: 65, ctrlY: -5 }
+        ];
+
+        // Target for the cross (Center Top)
+        const targetX = 50, targetY = 16;
+
+        // Initialize players on the DOM
         function initPitch() {
             const pitch = document.getElementById('pitch');
-            targetPlayers.forEach(p => {
+            const allPlayers = [...strikers, ...crossers];
+
+            allPlayers.forEach(p => {
                 const card = document.createElement('div');
+                card.id = p.id;
                 card.className = 'player-card';
-                card.style.left = `${p.x}%`;
-                card.style.top = `${p.y}%`;
+                // Set initial position
+                card.style.left = `${p.baseX || p.startX}%`;
+                card.style.top = `${p.baseY || p.startY}%`;
 
                 const img = document.createElement('img');
-                img.crossOrigin = "anonymous"; // Crucial for html2canvas
+                img.crossOrigin = "anonymous";
                 img.src = IMG_BASE_URL + p.img;
                 img.className = 'player-img';
 
@@ -158,90 +172,136 @@
             });
         }
 
-        // Calculate and position the ball based on animation progress
-        function updateBallPosition(progress) {
-            const ball = document.getElementById('ball');
-            
-            // progress ranges from 0.0 to 1.0
-            // 0.0 ~ 0.5: Left cross from Kim Tae-hyeon (x: 10, y: 45) to Center Top (x: 50, y: 15)
-            // 0.5 ~ 1.0: Right cross from Kim Tae-hwan (x: 90, y: 45) to Center Top (x: 50, y: 15)
-            
-            let startX, startY, endX, endY, localProgress;
-
-            if (progress < 0.5) {
-                // Left side phase
-                startX = 10; startY = 45;
-                endX = 50; endY = 15;
-                localProgress = progress * 2; // Normalize to 0-1 for this phase
-            } else {
-                // Right side phase
-                startX = 90; startY = 45;
-                endX = 50; endY = 15;
-                localProgress = (progress - 0.5) * 2; // Normalize to 0-1 for this phase
-            }
-
-            // Visible only during the first 60% of each phase to simulate a 'reset' delay
-            if (localProgress < 0.6) {
-                ball.style.display = 'block';
-                // Ease-out calculation for more natural ball movement
-                const t = localProgress / 0.6;
-                const easeOut = 1 - Math.pow(1 - t, 3); 
-                
-                const currentX = startX + (endX - startX) * easeOut;
-                const currentY = startY + (endY - startY) * easeOut;
-
-                ball.style.left = `${currentX}%`;
-                ball.style.top = `${currentY}%`;
-                
-                // Add a slight arc effect to the cross by manipulating scale
-                const scale = 1 + Math.sin(easeOut * Math.PI) * 0.8;
-                ball.style.transform = `translate(-50%, -50%) scale(${scale})`;
-            } else {
-                // Ball disappears before next cross
-                ball.style.display = 'none';
-            }
+        // Quadratic Bezier Curve formula
+        function getBezier(t, p0, p1, p2) {
+            return Math.pow(1 - t, 2) * p0 + 2 * (1 - t) * t * p1 + Math.pow(t, 2) * p2;
         }
 
-        // Live preview animation loop
+        // Master function to calculate positions for a specific progress (0.0 to 1.0)
+        function updateAnimation(progress) {
+            const ball = document.getElementById('ball');
+            
+            // 1. Move Strikers actively around their base positions
+            strikers.forEach(s => {
+                const el = document.getElementById(s.id);
+                // Active movement using sine waves based on total progress
+                const offsetX = Math.sin(progress * Math.PI * 8 + s.phase) * 1.5;
+                const offsetY = Math.cos(progress * Math.PI * 10 + s.phase) * 1.5;
+                el.style.left = `${s.baseX + offsetX}%`;
+                el.style.top = `${s.baseY + offsetY}%`;
+            });
+
+            // 2. Determine which crosser is active
+            // Total 4 phases, 0.25 progress per phase
+            const phaseIndex = Math.min(3, Math.floor(progress * 4));
+            const phaseProgress = (progress * 4) % 1.0; 
+
+            crossers.forEach((c, idx) => {
+                const el = document.getElementById(c.id);
+                
+                if (idx === phaseIndex) {
+                    // This crosser is currently active
+                    // Time splits within this phase:
+                    // 0.0 - 0.4: Dribbling up
+                    // 0.4 - 0.7: Ball crossing (player stands still)
+                    // 0.7 - 1.0: Player runs back to start
+                    
+                    if (phaseProgress < 0.4) {
+                        // DRIBBLING
+                        const t = phaseProgress / 0.4; // 0 to 1
+                        const easeOut = 1 - Math.pow(1 - t, 2);
+                        const curX = c.startX + (c.crossX - c.startX) * easeOut;
+                        const curY = c.startY + (c.crossY - c.startY) * easeOut;
+                        
+                        el.style.left = `${curX}%`;
+                        el.style.top = `${curY}%`;
+
+                        // Ball attached to foot with dribble wobble
+                        ball.style.display = 'block';
+                        ball.style.left = `${curX + Math.sin(t * 15) * 1}%`;
+                        ball.style.top = `${curY - 3}%`;
+                        ball.style.transform = `translate(-50%, -50%) scale(1.0)`;
+
+                    } else if (phaseProgress < 0.7) {
+                        // CROSSING (Ball flies)
+                        const t = (phaseProgress - 0.4) / 0.3; // 0 to 1
+                        
+                        // Player stays at cross position
+                        el.style.left = `${c.crossX}%`;
+                        el.style.top = `${c.crossY}%`;
+
+                        // Ball curves using Bezier
+                        const ballX = getBezier(t, c.crossX, c.ctrlX, targetX);
+                        const ballY = getBezier(t, c.crossY, c.ctrlY, targetY);
+                        
+                        ball.style.display = 'block';
+                        ball.style.left = `${ballX}%`;
+                        ball.style.top = `${ballY}%`;
+                        
+                        // Ball scales up to look like it's high in the air
+                        const scale = 1 + Math.sin(t * Math.PI) * 0.8;
+                        ball.style.transform = `translate(-50%, -50%) scale(${scale})`;
+
+                    } else {
+                        // RETURNING
+                        const t = (phaseProgress - 0.7) / 0.3; // 0 to 1
+                        const curX = c.crossX + (c.startX - c.crossX) * t;
+                        const curY = c.crossY + (c.startY - c.crossY) * t;
+                        
+                        el.style.left = `${curX}%`;
+                        el.style.top = `${curY}%`;
+                        
+                        // Hide ball
+                        ball.style.display = 'none';
+                    }
+
+                } else {
+                    // Inactive crossers stay at their start positions
+                    el.style.left = `${c.startX}%`;
+                    el.style.top = `${c.startY}%`;
+                }
+            });
+        }
+
+        // Live preview loop (slower for better viewing)
         let isGenerating = false;
         let previewProgress = 0;
 
         function animatePreview() {
             if (!isGenerating) {
-                previewProgress += 0.01;
+                previewProgress += 0.002; // Reduced speed drastically
                 if (previewProgress >= 1) previewProgress = 0;
-                updateBallPosition(previewProgress);
+                updateAnimation(previewProgress);
             }
             requestAnimationFrame(animatePreview);
         }
 
-        // GIF Generation Core Logic
+        // GIF Generation
         async function generateCrossGif() {
             const btn = document.getElementById('btn-download');
             const status = document.getElementById('status-msg');
             const wrapper = document.getElementById('pitch-wrapper');
             
-            isGenerating = true; // Pause live preview
+            isGenerating = true;
             btn.disabled = true;
-            btn.innerText = "⏳ 렌더링 중... (잠시만 기다려주세요)";
-            status.innerText = "";
-
+            btn.innerText = "⏳ 렌더링 중... (최대 1~2분 소요)";
+            
             try {
                 const gif = new GIF({
                     workers: 2,
                     quality: 10,
-                    repeat: 0, // Infinite loop
+                    repeat: 0,
                     width: wrapper.offsetWidth,
                     height: wrapper.offsetHeight,
                     workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
                 });
 
-                // Total 40 frames gives a smooth, appropriately paced animation
-                const totalFrames = 40;
+                // Total 160 frames makes the gif very smooth and properly paced (40 frames per sequence)
+                const totalFrames = 160; 
                 
                 for(let i = 0; i < totalFrames; i++) {
                     const progress = i / totalFrames;
-                    updateBallPosition(progress);
+                    updateAnimation(progress);
                     
                     const canvas = await html2canvas(wrapper, { 
                         scale: 1, 
@@ -250,24 +310,24 @@
                         backgroundColor: "#1b5e20" 
                     });
                     
-                    gif.addFrame(canvas, { copy: true, delay: 100 });
+                    // Increased delay to 50ms (20 FPS) -> 8 second total animation
+                    gif.addFrame(canvas, { copy: true, delay: 50 });
                     status.innerText = `프레임 캡처 중... (${i + 1}/${totalFrames})`;
                 }
 
-                // Reset position after capture
-                updateBallPosition(0);
+                updateAnimation(0);
 
                 gif.on('finished', function(blob) {
                     const url = URL.createObjectURL(blob);
                     const link = document.createElement('a');
                     link.href = url;
-                    link.download = 'jeonbuk_4top_cross.gif';
+                    link.download = 'jeonbuk_4top_4crosses.gif';
                     link.click();
                     
                     btn.disabled = false;
-                    btn.innerText = "🎬 반복 크로스 GIF 다운받기";
-                    status.innerText = "✅ GIF 다운로드가 완료되었습니다!";
-                    isGenerating = false; // Resume preview
+                    btn.innerText = "🎬 고품질 GIF 다운받기";
+                    status.innerText = "✅ 8초 분량의 GIF 다운로드가 완료되었습니다!";
+                    isGenerating = false;
                 });
 
                 status.innerText = "프레임 병합 중... (브라우저가 멈춘 것처럼 보일 수 있습니다)";
@@ -277,15 +337,15 @@
                 console.error("GIF Render Error:", err);
                 status.innerText = "❌ GIF 생성 중 오류가 발생했습니다.";
                 btn.disabled = false;
-                btn.innerText = "🎬 반복 크로스 GIF 다운받기";
+                btn.innerText = "🎬 고품질 GIF 다운받기";
                 isGenerating = false;
             }
         }
 
-        // Run initialization on load
+        // Init
         window.onload = () => {
             initPitch();
-            animatePreview(); // Start the live loop preview
+            animatePreview();
         };
     </script>
 </body>
