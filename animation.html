@@ -153,10 +153,10 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- 아래쪽 골대 앞(92%)에 정확히 배치된 31번 송범근 골키퍼 (사진 + 눈물) -->
+            <!-- 아래쪽 골대 앞(92%)에 정확히 배치된 31번 송범근 골키퍼 (정확한 이미지 URL + 눈물) -->
             <div id="gk" class="gk-card" style="left: 50%; top: 92%;">
                 <div class="gk-img-wrapper">
-                    <img class="player-img gk-img" crossorigin="anonymous" src="https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260225.png" alt="송범근">
+                    <img class="player-img gk-img" crossorigin="anonymous" src="https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png" alt="송범근">
                     <div class="crying-tears">💧😭</div>
                 </div>
                 <div class="player-info">31. 송범근</div>
@@ -237,7 +237,6 @@
             const phaseIndex = Math.min(3, Math.floor(progress * 4));
             const phaseProgress = (progress * 4) % 1.0; 
 
-            // 아래쪽 골대 앞에서 송범근이 실점하고 슬퍼하며 흔들리는 모션
             if (gk) {
                 const gkOffset = Math.sin(progress * Math.PI * 8) * 3;
                 gk.style.left = `${50 + gkOffset}%`;
