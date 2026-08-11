@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: #121212;
+            background-color: #1e1e1e;
             color: #e0e0e0;
             display: flex;
             flex-direction: column;
@@ -24,9 +24,9 @@
 
         h1 { color: #00e676; margin-bottom: 20px; }
 
-        /* 밝고 화사한 초록빛 경기장 배경 */
+        /* 밝고 화사한 초록빛 경기장 배경으로 상향 조정 */
         #pitch-wrapper {
-            background-color: #2e7d32;
+            background-color: #388e3c;
             border: 4px solid #ffffff;
             border-radius: 12px;
             position: relative;
@@ -39,7 +39,7 @@
 
         #pitch { width: 100%; height: 100%; position: relative; }
 
-        .pitch-line { position: absolute; border: 2px solid rgba(255, 255, 255, 0.6); pointer-events: none; z-index: 1; }
+        .pitch-line { position: absolute; border: 2px solid rgba(255, 255, 255, 0.7); pointer-events: none; z-index: 1; }
         .center-line { top: 50%; left: 0; width: 100%; height: 0; }
         .center-circle { top: 50%; left: 50%; width: 100px; height: 100px; border-radius: 50%; transform: translate(-50%, -50%); }
         .penalty-box.top { top: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-top: none; }
@@ -67,7 +67,7 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* 보내주신 사진과 동일한 클래식 클래식 오각형 패턴 축구공 이미지 */
+        /* 선명하게 출력되는 고화질 축구공 이미지 */
         #ball {
             position: absolute;
             width: 32px;
@@ -125,7 +125,7 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- 보내주신 이미지와 똑같은 클래식 축구공 (프록시 경유) -->
+            <!-- 선명한 클래식 축구공 (프록시 경유) -->
             <img id="ball" crossorigin="anonymous" src="https://images.weserv.nl/?url=cdn-icons-png.flaticon.com/512/53/53283.png" alt="축구공">
         </div>
     </div>
@@ -283,7 +283,7 @@
 
         function animatePreview() {
             if (!isGenerating) {
-                previewProgress += 0.002; 
+                previewProgress += 0.001; // 두 배 늘어난 프레임에 맞춰 속도 조정
                 if (previewProgress >= 1) previewProgress = 0;
                 updateAnimation(previewProgress);
             }
@@ -300,7 +300,8 @@
             logDebug("GIF 생성 프로세스 시작...");
             
             try {
-                const totalFrames = 40;
+                // 프레임 수를 40장에서 두 배인 80장으로 설정하여 부드러움 극대화
+                const totalFrames = 80;
                 logDebug(`총 ${totalFrames}개 프레임 캡처 설정 완료`);
 
                 const gif = new GIF({
@@ -331,13 +332,13 @@
                     const canvas = await html2canvas(wrapper, { 
                         scale: 1, 
                         useCORS: true, 
-                        backgroundColor: "#2e7d32" 
+                        backgroundColor: "#388e3c" 
                     });
                     
-                    gif.addFrame(canvas, { copy: true, delay: 100 });
+                    gif.addFrame(canvas, { copy: true, delay: 50 }); // 딜레이를 줄여 부드러운 재생 유지
                     status.innerText = `프레임 캡처 중... (${i + 1}/${totalFrames})`;
                     
-                    if (i % 10 === 0) logDebug(`프레임 캡처 진행 중: ${i}/${totalFrames}`);
+                    if (i % 20 === 0) logDebug(`프레임 캡처 진행 중: ${i}/${totalFrames}`);
                     await new Promise(r => setTimeout(r, 5));
                 }
 
