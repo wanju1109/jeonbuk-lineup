@@ -67,7 +67,7 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* 골키퍼 카드 특별 스타일 (눈물 이모지 추가) */
+        /* 송범근 골키퍼 전용 스타일 (아래쪽 골대, 울고 있는 눈물 효과) */
         .gk-card {
             position: absolute;
             display: flex;
@@ -153,8 +153,8 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- 골키퍼 자리(상단 골문 앞)에 울고 있는 송범근 배치 -->
-            <div id="gk" class="gk-card" style="left: 50%; top: 6%;">
+            <!-- 아래쪽 골대 앞에 정확히 배치된 울고 있는 송범근 골키퍼 -->
+            <div id="gk" class="gk-card" style="left: 50%; top: 92%;">
                 <div class="gk-img-wrapper">
                     <img class="player-img gk-img" crossorigin="anonymous" src="https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180154.png" alt="송범근">
                     <div class="crying-tears">💧😭</div>
@@ -237,7 +237,7 @@
             const phaseIndex = Math.min(3, Math.floor(progress * 4));
             const phaseProgress = (progress * 4) % 1.0; 
 
-            // 골키퍼 송범근이 골대 앞에서 좌우로 슬퍼하며 흔들리는 모션
+            // 아래쪽 골대 앞에서 송범근이 실점하고 슬퍼하며 흔들리는 모션
             if (gk) {
                 const gkOffset = Math.sin(progress * Math.PI * 8) * 3;
                 gk.style.left = `${50 + gkOffset}%`;
@@ -326,7 +326,7 @@
 
         function animatePreview() {
             if (!isGenerating) {
-                previewProgress += 0.0005; // 절반으로 느긋해진 속도 유지
+                previewProgress += 0.0005; 
                 if (previewProgress >= 1) previewProgress = 0;
                 updateAnimation(previewProgress);
             }
