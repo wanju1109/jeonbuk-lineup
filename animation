@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeonbuk Cross Animation GIF Builder</title>
+    <!-- HTML to Image Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- GIF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+        /* Basic Reset and Styling */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        h1 { color: #00e676; margin-bottom: 20px; }
+
+        /* Pitch styling matching the original code */
+        #pitch-wrapper {
+            background-color: #1b5e20;
+            border: 4px solid #ffffff;
+            border-radius: 12px;
+            position: relative;
+            width: 440px;
+            height: 620px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            margin-bottom: 20px;
+        }
+
+        #pitch { width: 100%; height: 100%; position: relative; }
+
+        .pitch-line { position: absolute; border: 2px solid rgba(255, 255, 255, 0.5); pointer-events: none; z-index: 1; }
+        .center-line { top: 50%; left: 0; width: 100%; height: 0; }
+        .center-circle { top: 50%; left: 50%; width: 100px; height: 100px; border-radius: 50%; transform: translate(-50%, -50%); }
+        .penalty-box.top { top: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-top: none; }
+        .penalty-box.bottom { bottom: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-bottom: none; }
+
+        /* Player Card Styling */
+        .player-card {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 65px;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        
+        .player-img {
+            width: 45px; height: 45px; border-radius: 50%; object-fit: cover;
+            border: 2px solid #00e676; background-color: #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .player-info {
+            background-color: rgba(20,20,20,0.9); color: #fff; font-size: 10px;
+            padding: 3px 5px; border-radius: 4px; margin-top: 3px; font-weight: bold;
+            border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
+        }
+
+        /* Ball Element */
+        #ball {
+            position: absolute;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+            z-index: 15;
+            display: none; /* Hidden by default until animation starts */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Button Styling */
+        .btn-gif-download { 
+            background: linear-gradient(135deg, #00c853, #64dd17); 
+            color: #111; width: 440px; font-size: 16px; padding: 15px; 
+            font-weight: bold; border-radius: 8px; border: none;
+            box-shadow: 0 4px 10px rgba(0,200,83,0.3); cursor: pointer; 
+        }
+        .btn-gif-download:hover { opacity: 0.9; }
+        .btn-gif-download:disabled { background: #555; color: #888; cursor: not-allowed; box-shadow: none; }
+
+        /* Loader */
+        #status-msg {
+            margin-top: 15px;
+            color: #00e676;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🟢 전북 현대 크로스 애니메이션</h1>
+    
+    <div id="pitch-wrapper">
+        <div id="pitch">
+            <!-- Pitch markings -->
+            <div class="pitch-line center-line"></div>
+            <div class="pitch-line center-circle"></div>
+            <div class="pitch-line penalty-box top"></div>
+            <div class="pitch-line penalty-box bottom"></div>
+            
+            <!-- The Ball -->
+            <div id="ball">⚽</div>
+        </div>
+    </div>
+
+    <button id="btn-download" class="btn-gif-download" onclick="generateCrossGif()">🎬 반복 크로스 GIF 다운받기</button>
+    <div id="status-msg"></div>
+
+    <script>
+        // Data for selected players
+        const targetPlayers = [
+            // 4 Strikers (Top)
+            { id: 81, backNo: "81", name: "기티스", img: "20260224.png", x: 28, y: 15 },
+            { id: 96, backNo: "96", name: "콤파뇨", img: "20250061.png", x: 42, y: 15 },
+            { id: 99, backNo: "99", name: "모따", img: "20230224.png", x: 58, y: 15 },
+            { id: 9,  backNo: "9",  name: "티아고", img: "20220244.png", x: 72, y: 15 },
+            
+            // Crossers (Left and Right)
+            { id: 77, backNo: "77", name: "김태현", img: "20180185.png", x: 10, y: 45 },
+            { id: 23, backNo: "23", name: "김태환", img: "20100052.png", x: 90, y: 45 }
+        ];
+
+        // Base URL for images via weserv proxy for CORS handling
+        const IMG_BASE_URL = "https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/";
+
+        // Initialize players on the pitch
+        function initPitch() {
+            const pitch = document.getElementById('pitch');
+            targetPlayers.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'player-card';
+                card.style.left = `${p.x}%`;
+                card.style.top = `${p.y}%`;
+
+                const img = document.createElement('img');
+                img.crossOrigin = "anonymous"; // Crucial for html2canvas
+                img.src = IMG_BASE_URL + p.img;
+                img.className = 'player-img';
+
+                const info = document.createElement('div');
+                info.className = 'player-info';
+                info.innerText = `${p.backNo}. ${p.name}`;
+
+                card.appendChild(img);
+                card.appendChild(info);
+                pitch.appendChild(card);
+            });
+        }
+
+        // Calculate and position the ball based on animation progress
+        function updateBallPosition(progress) {
+            const ball = document.getElementById('ball');
+            
+            // progress ranges from 0.0 to 1.0
+            // 0.0 ~ 0.5: Left cross from Kim Tae-hyeon (x: 10, y: 45) to Center Top (x: 50, y: 15)
+            // 0.5 ~ 1.0: Right cross from Kim Tae-hwan (x: 90, y: 45) to Center Top (x: 50, y: 15)
+            
+            let startX, startY, endX, endY, localProgress;
+
+            if (progress < 0.5) {
+                // Left side phase
+                startX = 10; startY = 45;
+                endX = 50; endY = 15;
+                localProgress = progress * 2; // Normalize to 0-1 for this phase
+            } else {
+                // Right side phase
+                startX = 90; startY = 45;
+                endX = 50; endY = 15;
+                localProgress = (progress - 0.5) * 2; // Normalize to 0-1 for this phase
+            }
+
+            // Visible only during the first 60% of each phase to simulate a 'reset' delay
+            if (localProgress < 0.6) {
+                ball.style.display = 'block';
+                // Ease-out calculation for more natural ball movement
+                const t = localProgress / 0.6;
+                const easeOut = 1 - Math.pow(1 - t, 3); 
+                
+                const currentX = startX + (endX - startX) * easeOut;
+                const currentY = startY + (endY - startY) * easeOut;
+
+                ball.style.left = `${currentX}%`;
+                ball.style.top = `${currentY}%`;
+                
+                // Add a slight arc effect to the cross by manipulating scale
+                const scale = 1 + Math.sin(easeOut * Math.PI) * 0.8;
+                ball.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            } else {
+                // Ball disappears before next cross
+                ball.style.display = 'none';
+            }
+        }
+
+        // Live preview animation loop
+        let isGenerating = false;
+        let previewProgress = 0;
+
+        function animatePreview() {
+            if (!isGenerating) {
+                previewProgress += 0.01;
+                if (previewProgress >= 1) previewProgress = 0;
+                updateBallPosition(previewProgress);
+            }
+            requestAnimationFrame(animatePreview);
+        }
+
+        // GIF Generation Core Logic
+        async function generateCrossGif() {
+            const btn = document.getElementById('btn-download');
+            const status = document.getElementById('status-msg');
+            const wrapper = document.getElementById('pitch-wrapper');
+            
+            isGenerating = true; // Pause live preview
+            btn.disabled = true;
+            btn.innerText = "⏳ 렌더링 중... (잠시만 기다려주세요)";
+            status.innerText = "";
+
+            try {
+                const gif = new GIF({
+                    workers: 2,
+                    quality: 10,
+                    repeat: 0, // Infinite loop
+                    width: wrapper.offsetWidth,
+                    height: wrapper.offsetHeight,
+                    workerScript: 'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'
+                });
+
+                // Total 40 frames gives a smooth, appropriately paced animation
+                const totalFrames = 40;
+                
+                for(let i = 0; i < totalFrames; i++) {
+                    const progress = i / totalFrames;
+                    updateBallPosition(progress);
+                    
+                    const canvas = await html2canvas(wrapper, { 
+                        scale: 1, 
+                        useCORS: true, 
+                        allowTaint: true,
+                        backgroundColor: "#1b5e20" 
+                    });
+                    
+                    gif.addFrame(canvas, { copy: true, delay: 100 });
+                    status.innerText = `프레임 캡처 중... (${i + 1}/${totalFrames})`;
+                }
+
+                // Reset position after capture
+                updateBallPosition(0);
+
+                gif.on('finished', function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'jeonbuk_4top_cross.gif';
+                    link.click();
+                    
+                    btn.disabled = false;
+                    btn.innerText = "🎬 반복 크로스 GIF 다운받기";
+                    status.innerText = "✅ GIF 다운로드가 완료되었습니다!";
+                    isGenerating = false; // Resume preview
+                });
+
+                status.innerText = "프레임 병합 중... (브라우저가 멈춘 것처럼 보일 수 있습니다)";
+                gif.render();
+
+            } catch (err) {
+                console.error("GIF Render Error:", err);
+                status.innerText = "❌ GIF 생성 중 오류가 발생했습니다.";
+                btn.disabled = false;
+                btn.innerText = "🎬 반복 크로스 GIF 다운받기";
+                isGenerating = false;
+            }
+        }
+
+        // Run initialization on load
+        window.onload = () => {
+            initPitch();
+            animatePreview(); // Start the live loop preview
+        };
+    </script>
+</body>
+</html>
