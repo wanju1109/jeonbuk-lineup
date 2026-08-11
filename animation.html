@@ -67,7 +67,7 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* 송범근 골키퍼 전용 스타일 (아래쪽 골대, 31번, 울고 있는 눈물 효과) */
+        /* 송범근 골키퍼 전용 스타일 (얼굴 눈 위치에 눈물 배치) */
         .gk-card {
             position: absolute;
             display: flex;
@@ -87,12 +87,15 @@
             border: 2px solid #ff5252; background-color: #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.3);
         }
 
+        /* 눈물 위치를 프로필 사진 안쪽 눈 부근으로 정확히 고정 */
         .crying-tears {
             position: absolute;
-            bottom: -2px;
-            right: -2px;
-            font-size: 14px;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 15px;
+            pointer-events: none;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.6));
         }
 
         /* 선명한 클래식 축구공 */
@@ -153,7 +156,7 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- 아래쪽 골대 앞(92%)에 정확히 배치된 31번 송범근 골키퍼 (정확한 이미지 URL + 눈물) -->
+            <!-- 아래쪽 골대 앞(92%)에 위치한 31번 송범근 골키퍼 (얼굴 위에 눈물) -->
             <div id="gk" class="gk-card" style="left: 50%; top: 92%;">
                 <div class="gk-img-wrapper">
                     <img class="player-img gk-img" crossorigin="anonymous" src="https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png" alt="송범근">
