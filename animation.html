@@ -66,15 +66,16 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* 캔버스 캡처가 완벽히 지원되는 이미지 형태의 축구공 스타일 */
+        /* 선명하게 렌더링되는 정석적인 축구공 이미지 스타일 */
         #ball {
             position: absolute;
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             transform: translate(-50%, -50%);
             z-index: 15;
             display: none;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+            object-fit: contain;
         }
 
         .btn-gif-download { 
@@ -121,8 +122,8 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- 캔버스 인식률 100% 보장하는 SVG 이미지 태그 방식의 축구공 -->
-            <img id="ball" crossorigin="anonymous" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23fff' stroke='%23111' stroke-width='4'/><path d='M50 2 L65 20 L50 35 L35 20 Z' fill='%23111'/><path d='M98 35 L80 50 L65 35 L80 15 Z' fill='%23111'/><path d='M98 65 L80 50 L85 75 L95 85 Z' fill='%23111'/><path d='M50 98 L35 80 L50 65 L65 80 Z' fill='%23111'/><path d='M2 65 L20 50 L35 65 L15 85 Z' fill='%23111'/><path d='M2 35 L20 50 L15 20 L5 30 Z' fill='%23111'/><circle cx='50' cy='50' r='48' fill='none' stroke='%23111' stroke-width='4'/></svg>" alt="축구공">
+            <!-- 프록시를 거쳐 완벽하게 로드되는 선명한 축구공 이미지 -->
+            <img id="ball" crossorigin="anonymous" src="https://images.weserv.nl/?url=cdn-icons-png.flaticon.com/512/33/33736.png" alt="축구공">
         </div>
     </div>
 
