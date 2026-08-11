@@ -69,7 +69,7 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* High quality SVG Soccer ball */
+        /* High quality Soccer ball */
         #ball {
             position: absolute;
             width: 25px;
@@ -111,8 +111,8 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- The Ball (Replaced with a highly reliable Wikimedia SVG) -->
-            <img id="ball" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg" alt="축구공">
+            <!-- Safe CORS Ball Image through Proxy -->
+            <img id="ball" crossorigin="anonymous" src="https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/100px-Soccerball.svg.png" alt="축구공">
         </div>
     </div>
 
@@ -355,7 +355,7 @@
                     const canvas = await html2canvas(wrapper, { 
                         scale: 1, 
                         useCORS: true, 
-                        allowTaint: true,
+                        // allowTaint: true <- 이 옵션을 제거하여 캔버스 오염 문제를 해결했습니다.
                         backgroundColor: "#1b5e20" 
                     });
                     
