@@ -24,7 +24,7 @@
 
         h1 { color: #00e676; margin-bottom: 20px; }
 
-        /* 밝고 화사한 초록빛 경기장 배경으로 상향 조정 */
+        /* 밝고 화사한 초록빛 경기장 배경 */
         #pitch-wrapper {
             background-color: #388e3c;
             border: 4px solid #ffffff;
@@ -67,7 +67,7 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* 선명하게 출력되는 고화질 축구공 이미지 */
+        /* 선명한 클래식 축구공 */
         #ball {
             position: absolute;
             width: 32px;
@@ -125,7 +125,6 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- 선명한 클래식 축구공 (프록시 경유) -->
             <img id="ball" crossorigin="anonymous" src="https://images.weserv.nl/?url=cdn-icons-png.flaticon.com/512/53/53283.png" alt="축구공">
         </div>
     </div>
@@ -283,7 +282,7 @@
 
         function animatePreview() {
             if (!isGenerating) {
-                previewProgress += 0.001; // 두 배 늘어난 프레임에 맞춰 속도 조정
+                previewProgress += 0.0005; // 속도를 절반으로 늦춤 (기존 0.001 -> 0.0005)
                 if (previewProgress >= 1) previewProgress = 0;
                 updateAnimation(previewProgress);
             }
@@ -300,7 +299,6 @@
             logDebug("GIF 생성 프로세스 시작...");
             
             try {
-                // 프레임 수를 40장에서 두 배인 80장으로 설정하여 부드러움 극대화
                 const totalFrames = 80;
                 logDebug(`총 ${totalFrames}개 프레임 캡처 설정 완료`);
 
@@ -335,7 +333,8 @@
                         backgroundColor: "#388e3c" 
                     });
                     
-                    gif.addFrame(canvas, { copy: true, delay: 50 }); // 딜레이를 줄여 부드러운 재생 유지
+                    // 프레임당 표시 시간을 늘려(100ms) 전체 동작을 여유 있고 부드럽게 감상할 수 있도록 조정
+                    gif.addFrame(canvas, { copy: true, delay: 100 });
                     status.innerText = `프레임 캡처 중... (${i + 1}/${totalFrames})`;
                     
                     if (i % 20 === 0) logDebug(`프레임 캡처 진행 중: ${i}/${totalFrames}`);
