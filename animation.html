@@ -66,22 +66,17 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* Pure CSS Clean Soccer Ball */
+        /* Embedded Clean Soccer Ball using SVG Data URI */
         #ball {
             position: absolute;
             width: 26px;
             height: 26px;
-            background: #ffffff;
-            border: 2px solid #111;
-            border-radius: 50%;
             transform: translate(-50%, -50%);
             z-index: 15;
             display: none;
-            box-shadow: inset -3px -3px 0px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.5);
-            background-image: 
-                radial-gradient(circle, #111 25%, transparent 26%),
-                linear-gradient(45deg, transparent 40%, #111 40%, #111 60%, transparent 60%);
-            background-size: 8px 8px;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="%23fff" stroke="%23111" stroke-width="4"/><path d="M50 2 L65 20 L50 35 L35 20 Z" fill="%23111"/><path d="M98 35 L80 50 L65 35 L80 15 Z" fill="%23111"/><path d="M98 65 L80 50 L85 75 L95 85 Z" fill="%23111"/><path d="M50 98 L35 80 L50 65 L65 80 Z" fill="%23111"/><path d="M2 65 L20 50 L35 65 L15 85 Z" fill="%23111"/><path d="M2 35 L20 50 L15 20 L5 30 Z" fill="%23111"/><circle cx="50" cy="50" r="48" fill="none" stroke="%23111" stroke-width="4"/></svg>');
+            background-size: cover;
         }
 
         .btn-gif-download { 
@@ -112,7 +107,7 @@
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- CSS Clean Soccer Ball -->
+            <!-- Safe Embedded Ball -->
             <div id="ball"></div>
         </div>
     </div>
