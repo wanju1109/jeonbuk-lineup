@@ -11,7 +11,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 
-        /* Basic Reset and Styling */
         body {
             font-family: 'Noto Sans KR', sans-serif;
             background-color: #121212;
@@ -25,7 +24,6 @@
 
         h1 { color: #00e676; margin-bottom: 20px; }
 
-        /* Pitch styling */
         #pitch-wrapper {
             background-color: #1b5e20;
             border: 4px solid #ffffff;
@@ -46,7 +44,6 @@
         .penalty-box.top { top: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-top: none; }
         .penalty-box.bottom { bottom: 0; left: 50%; width: 200px; height: 100px; transform: translateX(-50%); border-bottom: none; }
 
-        /* Player Card Styling */
         .player-card {
             position: absolute;
             display: flex;
@@ -55,7 +52,7 @@
             width: 65px;
             transform: translate(-50%, -50%);
             z-index: 10;
-            transition: transform 0.1s ease; /* For smooth jumping effect */
+            transition: transform 0.1s ease;
         }
         
         .player-img {
@@ -69,18 +66,24 @@
             border: 1px solid #444; text-align: center; white-space: nowrap; max-width: 62px; overflow: hidden; text-overflow: ellipsis;
         }
 
-        /* High quality Soccer ball */
+        /* Pure CSS Clean Soccer Ball */
         #ball {
             position: absolute;
-            width: 25px;
-            height: 25px;
+            width: 26px;
+            height: 26px;
+            background: #ffffff;
+            border: 2px solid #111;
+            border-radius: 50%;
             transform: translate(-50%, -50%);
             z-index: 15;
             display: none;
-            filter: drop-shadow(0 5px 8px rgba(0,0,0,0.7));
+            box-shadow: inset -3px -3px 0px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.5);
+            background-image: 
+                radial-gradient(circle, #111 25%, transparent 26%),
+                linear-gradient(45deg, transparent 40%, #111 40%, #111 60%, transparent 60%);
+            background-size: 8px 8px;
         }
 
-        /* Button Styling */
         .btn-gif-download { 
             background: linear-gradient(135deg, #00c853, #64dd17); 
             color: #111; width: 440px; font-size: 16px; padding: 15px; 
@@ -90,7 +93,6 @@
         .btn-gif-download:hover { opacity: 0.9; }
         .btn-gif-download:disabled { background: #555; color: #888; cursor: not-allowed; box-shadow: none; }
 
-        /* Loader */
         #status-msg {
             margin-top: 15px;
             color: #00e676;
@@ -105,14 +107,13 @@
     
     <div id="pitch-wrapper">
         <div id="pitch">
-            <!-- Pitch markings -->
             <div class="pitch-line center-line"></div>
             <div class="pitch-line center-circle"></div>
             <div class="pitch-line penalty-box top"></div>
             <div class="pitch-line penalty-box bottom"></div>
             
-            <!-- Safe CORS Ball Image through Proxy -->
-            <img id="ball" crossorigin="anonymous" src="https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/100px-Soccerball.svg.png" alt="축구공">
+            <!-- CSS Clean Soccer Ball -->
+            <div id="ball"></div>
         </div>
     </div>
 
@@ -120,10 +121,8 @@
     <div id="status-msg"></div>
 
     <script>
-        // Base URL for images via weserv proxy for CORS handling
         const IMG_BASE_URL = "https://images.weserv.nl/?url=jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/";
 
-        // 4 Strikers with their base positions
         const strikers = [
             { id: "s1", backNo: "81", name: "기티스", img: "20260224.png", baseX: 28, baseY: 22, phase: 0.0 },
             { id: "s2", backNo: "96", name: "콤파뇨", img: "20250061.png", baseX: 42, baseY: 20, phase: 1.5 },
@@ -131,7 +130,6 @@
             { id: "s4", backNo: "9",  name: "티아고", img: "20220244.png", baseX: 72, baseY: 22, phase: 4.5 }
         ];
 
-        // 4 Crossers with dribble start/end points and control points for the Bezier curve
         const crossers = [
             { id: "c1", backNo: "77", name: "김태현", img: "20180185.png", startX: 8, startY: 75, crossX: 12, crossY: 35, ctrlX: 30, ctrlY: 0 },
             { id: "c2", backNo: "23", name: "김태환", img: "20100052.png", startX: 92, startY: 75, crossX: 88, crossY: 35, ctrlX: 70, ctrlY: 0 },
@@ -139,12 +137,9 @@
             { id: "c4", backNo: "7",  name: "이동준", img: "20170121.png", startX: 80, startY: 65, crossX: 75, crossY: 28, ctrlX: 65, ctrlY: -5 }
         ];
 
-        // Target coordinates for the cross (Where the striker meets the ball)
         const targetX = 50, targetY = 16;
-        // Goal coordinates (Where the ball flies after header)
         const goalX = 50, goalY = 2;
 
-        // Initialize players on the DOM
         function initPitch() {
             const pitch = document.getElementById('pitch');
             const allPlayers = [...strikers, ...crossers];
@@ -171,32 +166,21 @@
             });
         }
 
-        // Quadratic Bezier Curve formula
         function getBezier(t, p0, p1, p2) {
             return Math.pow(1 - t, 2) * p0 + 2 * (1 - t) * t * p1 + Math.pow(t, 2) * p2;
         }
 
-        // Update animation positions based on progress (0.0 to 1.0)
         function updateAnimation(progress) {
             const ball = document.getElementById('ball');
             
             const phaseIndex = Math.min(3, Math.floor(progress * 4));
             const phaseProgress = (progress * 4) % 1.0; 
 
-            // Time splits:
-            // 0.00 - 0.20: Dribbling
-            // 0.20 - 0.55: Crossing (Ball in air)
-            // 0.55 - 0.70: Header Goal (Ball shoots to net)
-            // 0.70 - 1.00: Return to positions
-
-            // Update Strikers
             strikers.forEach((s, idx) => {
                 const el = document.getElementById(s.id);
                 
                 if (idx === phaseIndex) {
-                    // Active Striker Logic (Jumping to head the ball)
                     if (phaseProgress < 0.45) {
-                        // Idle wobble before cross arrives
                         const offsetX = Math.sin(progress * Math.PI * 12 + s.phase) * 1.5;
                         const offsetY = Math.cos(progress * Math.PI * 15 + s.phase) * 1.5;
                         el.style.left = `${s.baseX + offsetX}%`;
@@ -205,24 +189,20 @@
                         el.style.zIndex = 10;
                     } 
                     else if (phaseProgress < 0.55) {
-                        // Rushing to the center to head the ball
                         const t = (phaseProgress - 0.45) / 0.10;
                         const curX = s.baseX + (targetX - s.baseX) * t;
                         const curY = s.baseY + (targetY - s.baseY) * t;
                         el.style.left = `${curX}%`;
                         el.style.top = `${curY}%`;
-                        // Jump effect (scaling up)
                         el.style.transform = `translate(-50%, -50%) scale(${1 + t * 0.3})`;
-                        el.style.zIndex = 20; // Bring striker to front
+                        el.style.zIndex = 20;
                     }
                     else if (phaseProgress < 0.70) {
-                        // Holding pose at the header spot
                         el.style.left = `${targetX}%`;
                         el.style.top = `${targetY}%`;
                         el.style.transform = `translate(-50%, -50%) scale(1.3)`;
                     } 
                     else {
-                        // Returning to base position
                         const t = (phaseProgress - 0.70) / 0.30;
                         const curX = targetX + (s.baseX - targetX) * t;
                         const curY = targetY + (s.baseY - targetY) * t;
@@ -232,7 +212,6 @@
                         el.style.zIndex = 10;
                     }
                 } else {
-                    // Inactive Strikers: just standard wobble
                     const offsetX = Math.sin(progress * Math.PI * 12 + s.phase) * 1.5;
                     const offsetY = Math.cos(progress * Math.PI * 15 + s.phase) * 1.5;
                     el.style.left = `${s.baseX + offsetX}%`;
@@ -242,13 +221,11 @@
                 }
             });
 
-            // Update Crossers and Ball
             crossers.forEach((c, idx) => {
                 const el = document.getElementById(c.id);
                 
                 if (idx === phaseIndex) {
                     if (phaseProgress < 0.20) {
-                        // 1. DRIBBLING
                         const t = phaseProgress / 0.20; 
                         const easeOut = 1 - Math.pow(1 - t, 2);
                         const curX = c.startX + (c.crossX - c.startX) * easeOut;
@@ -263,7 +240,6 @@
                         ball.style.transform = `translate(-50%, -50%) scale(1.0) rotate(${t * 360}deg)`;
 
                     } else if (phaseProgress < 0.55) {
-                        // 2. CROSSING (Ball flies to the center)
                         const t = (phaseProgress - 0.20) / 0.35; 
                         
                         el.style.left = `${c.crossX}%`;
@@ -280,24 +256,20 @@
                         ball.style.transform = `translate(-50%, -50%) scale(${scale}) rotate(${t * 720}deg)`;
 
                     } else if (phaseProgress < 0.70) {
-                        // 3. HEADER GOAL (Ball shoots rapidly to the goal)
-                        const t = (phaseProgress - 0.55) / 0.15; // Fast bullet header
+                        const t = (phaseProgress - 0.55) / 0.15; 
                         
                         el.style.left = `${c.crossX}%`;
                         el.style.top = `${c.crossY}%`;
 
-                        // Straight line to the net
                         const ballX = targetX + (goalX - targetX) * t;
                         const ballY = targetY + (goalY - targetY) * t;
 
                         ball.style.display = 'block';
                         ball.style.left = `${ballX}%`;
                         ball.style.top = `${ballY}%`;
-                        // Shrinks slightly as it hits the net
                         ball.style.transform = `translate(-50%, -50%) scale(${1 - t * 0.2}) rotate(${t * 1080}deg)`;
 
                     } else {
-                        // 4. RETURNING
                         const t = (phaseProgress - 0.70) / 0.30;
                         const curX = c.crossX + (c.startX - c.crossX) * t;
                         const curY = c.crossY + (c.startY - c.crossY) * t;
@@ -305,7 +277,7 @@
                         el.style.left = `${curX}%`;
                         el.style.top = `${curY}%`;
                         
-                        ball.style.display = 'none'; // Ball disappears after goal
+                        ball.style.display = 'none';
                     }
 
                 } else {
@@ -320,7 +292,7 @@
 
         function animatePreview() {
             if (!isGenerating) {
-                previewProgress += 0.0015; // Balanced preview speed
+                previewProgress += 0.0015; 
                 if (previewProgress >= 1) previewProgress = 0;
                 updateAnimation(previewProgress);
             }
@@ -355,7 +327,6 @@
                     const canvas = await html2canvas(wrapper, { 
                         scale: 1, 
                         useCORS: true, 
-                        // allowTaint: true <- 이 옵션을 제거하여 캔버스 오염 문제를 해결했습니다.
                         backgroundColor: "#1b5e20" 
                     });
                     
