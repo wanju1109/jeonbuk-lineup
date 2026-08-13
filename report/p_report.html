@@ -144,45 +144,25 @@ button:disabled{opacity:.45;cursor:not-allowed}
  * 중요한 원칙:
  * 1. 경기/통계 숫자를 임의로 만들지 않습니다.
  * 2. 공식 K LEAGUE 응답을 읽지 못하면 report를 표시하지 않습니다.
- * 3. 브라우저의 CORS 정책 때문에 직접 접근이 차단되는 경우
- *    같은 사이트의 /api/kleague 프록시를 사용할 수 있습니다.
- *
- * 권장 배포 구조:
- *   /jeonbuk-lineup/report/p_report.html
- *   /jeonbuk-lineup/api/kleague
- *
- * proxy는 아래 URL을 받아 K LEAGUE 원본을 그대로 반환하도록 구성하면 됩니다.
- *
- *   /api/kleague?url=<URL encoded official URL>
+ * 3. 브라우저는 K LEAGUE 서버에 직접 접근하지 않습니다.
+ *    GitHub Actions가 수집한 로컬 데이터만 읽습니다.
  *
  * 이 HTML에는 가짜 경기/통계 데이터가 들어 있지 않습니다.
  */
 
-const OFFICIAL = {
-  schedule: "https://portal.kleague.com/view/schedule/list.do",
-  matchChart: "https://portal.kleague.com/data/matc/matchChart.do",
-  matchChartPre: "https://portal.kleague.com/data/matc/matchChartPre.do"
-};
+const DATA_BASE = "./data";
 
-/*
- * GitHub Pages에서는 portal.kleague.com이 CORS를 허용하지 않기 때문에
- * 브라우저가 K LEAGUE 원본을 직접 읽을 수 없습니다.
- *
- * 따라서 corsproxy.io를 통해 서버 측에서 K LEAGUE HTML을 받아옵니다.
- * 이 릴레이는 경기/통계를 생성하지 않고 원본 응답을 전달하는 용도입니다.
- *
- * GitHub.io는 corsproxy.io의 무료 개발용 허용 origin에 포함되어 있습니다.
- */
-const CONFIG = {
-  // Recommended: deploy kleague-proxy.js as a Cloudflare Worker and put
-  // the Worker URL here. Leave empty only for the public relay fallback.
-  // Example: "https://kleague-proxy.example.workers.dev"
-  PROXY_BASE: "",
-  PUBLIC_RELAYS: [
-    "https://r.jina.ai/",
-    "https://api.allorigins.win/raw?url="
-  ]
-};
+async function getJson(url) {
+  const r = await fetch(url, { cache: "no-store" });
+  if (!r.ok) throw new Error(`로컬 데이터 HTTP ${r.status}: ${url}`);
+  return await r.json();
+}
+
+async function getText(url) {
+  const r = await fetch(url, { cache: "no-store" });
+  if (!r.ok) throw new Error(`로컬 경기 데이터 HTTP ${r.status}: ${url}`);
+  return await r.text();
+}
 
 const $ = id => document.getElementById(id);
 const league = $("league"), year = $("year"), round = $("round"), match = $("match");
@@ -201,52 +181,6 @@ function escapeHtml(v) {
   return String(v ?? "").replace(/[&<>"']/g, s => ({
     "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
   }[s]));
-}
-
-async function getText(url) {
-  const attempts = [];
-
-  if (CONFIG.PROXY_BASE) {
-    attempts.push({
-      name: "Cloudflare Worker",
-      target: CONFIG.PROXY_BASE.replace(/\/$/, "") + "?url=" + encodeURIComponent(url),
-      headers: {"Accept":"text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8"}
-    });
-  }
-
-  attempts.push({
-    name: "Jina Reader",
-    target: "https://r.jina.ai/" + url,
-    headers: {
-      "Accept":"text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8",
-      "X-Respond-With":"html",
-      "X-Engine":"browser",
-      "X-Timeout":"20"
-    }
-  });
-
-  attempts.push({
-    name: "allOrigins",
-    target: "https://api.allorigins.win/raw?url=" + encodeURIComponent(url),
-    headers: {"Accept":"text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8"}
-  });
-
-  let last = null;
-  for (const a of attempts) {
-    try {
-      const r = await fetch(a.target, {method:"GET",cache:"no-store",headers:a.headers});
-      const text = await r.text();
-      if (!r.ok) {
-        last = new Error(a.name + " HTTP " + r.status + ": " + text.slice(0,300));
-        continue;
-      }
-      if (text && text.length > 50) return text;
-      last = new Error(a.name + " 빈 응답");
-    } catch(e) {
-      last = new Error(a.name + ": " + (e?.message || e));
-    }
-  }
-  throw last || new Error("K LEAGUE 데이터 릴레이 요청 실패");
 }
 
 /*
@@ -386,122 +320,76 @@ async function loadMatches() {
   const r = round.value;
   if (!r) return;
 
-  setStatus("K LEAGUE 공식 일정 데이터를 조회하는 중입니다…");
+  setStatus("자동 수집된 K LEAGUE 경기 데이터를 불러오는 중입니다…");
   match.innerHTML='<option value="">조회 중…</option>';
   analyze.disabled=true;
 
-  /*
-   * 일정 페이지는 월 단위이므로 해당 연도의 모든 월을 조회합니다.
-   * 실제 경기 목록은 응답에서 수집하고 round_id/game_id가 있으면 그대로 사용합니다.
-   */
-  const all = [];
-  const months = Array.from({length:12}, (_,i)=>i+1);
-  let completed = 0;
-
-  // Limit concurrency. The old version sent 12 requests at once and public relays
-  // frequently answered with 500/520/522 or rate-limited the browser.
-  for (let i=0; i<months.length; i+=3) {
-    const batch = months.slice(i,i+3);
-    const pages = await Promise.all(batch.map(async month => {
-      const url = OFFICIAL.schedule +
-        "?year=" + encodeURIComponent(y) +
-        "&month=" + String(month).padStart(2,"0") +
-        "&leagueId=" + encodeURIComponent(lid);
-      try {
-        const html = await getText(url);
-        return parseScheduleHtml(html, y, lid);
-      } catch (e) {
-        return [];
-      } finally {
-        completed++;
-        setStatus(`K LEAGUE 일정 조회 중… ${completed}/12개월`);
-      }
-    }));
-    pages.flat().forEach(x => all.push(x));
-  }
-
-  scheduleMatches = all.filter(x => {
-    return !x.round || String(x.round) === String(r) ||
-           String(x.roundId) === String(r);
-  });
-
-  // round_id를 페이지에서 못 얻은 경우, 날짜/경기명만 보여주는 것을 방지합니다.
-  // 실제 matchChart 요청에 필요한 식별자가 있는 경기만 분석 대상으로 허용합니다.
-  const usable = scheduleMatches.filter(x => x.gameId || x.url);
-
-  match.innerHTML='<option value="">경기 선택</option>';
-  usable.forEach((x,i)=>{
-    const o=document.createElement("option");
-    o.value=String(i);
-    o.textContent =
-      (x.date ? x.date+" " : "") +
-      (x.time ? x.time+" " : "") +
-      x.home+" : "+x.away;
-    match.appendChild(o);
-  });
-
-  if (!usable.length) {
-    setStatus(
-      "공식 K LEAGUE 일정 페이지에서 이 라운드의 경기 식별자(game_id)를 확보하지 못했습니다.\n\n"+
-      "이 페이지는 식별자를 확인하지 못한 경기를 임의로 만들어 분석하지 않습니다.\n"+
-      "Cloudflare Worker 프록시를 배포하거나 CONFIG.PROXY_BASE에 연결하면 됩니다.",
-      "notice"
+  try {
+    const data = await getJson(`${DATA_BASE}/${y}.json`);
+    scheduleMatches = (data.matches || []).filter(x =>
+      String(x.league_id || x.league || lid) === String(lid) &&
+      String(x.round || x.round_id || "") === String(r) &&
+      x.game_id &&
+      x.data_file
     );
-    return;
-  }
 
-  setStatus("실제 경기 "+usable.length+"건을 확인했습니다. 경기를 선택하세요.");
+    match.innerHTML='<option value="">경기 선택</option>';
+    scheduleMatches.forEach((x,i)=>{
+      const o=document.createElement("option");
+      o.value=String(i);
+      o.textContent =
+        (x.date ? x.date+" " : "") +
+        (x.time ? x.time+" " : "") +
+        `${x.home || "홈"} : ${x.away || "원정"}`;
+      match.appendChild(o);
+    });
+
+    if (!scheduleMatches.length) {
+      setStatus(
+        `${y}년 ${r}라운드의 자동 수집 데이터가 아직 없습니다.\n\n`+
+        "GitHub Actions가 K LEAGUE 공식 데이터를 수집한 뒤 이 페이지에서 자동으로 표시됩니다.",
+        "notice"
+      );
+      return;
+    }
+
+    setStatus(`자동 수집된 실제 경기 ${scheduleMatches.length}건을 확인했습니다. 경기를 선택하세요.`);
+  } catch(e) {
+    match.innerHTML='<option value="">데이터 없음</option>';
+    setStatus(
+      "자동 수집 데이터 파일을 읽지 못했습니다.\n\n"+
+      e.message+
+      "\n\nGitHub Actions가 아직 한 번도 실행되지 않았거나 data 파일이 없는 경우입니다.",
+      "error"
+    );
+  }
 }
 
 async function loadChart() {
   const idx = Number(match.value);
-  const usable = scheduleMatches.filter(x => x.gameId || x.url);
-  selectedMatch = usable[idx];
-  if (!selectedMatch) return;
+  selectedMatch = scheduleMatches[idx];
+  if (!selectedMatch || !selectedMatch.data_file) return;
 
-  setStatus("선택한 경기의 실제 경기 분석 데이터를 조회하는 중입니다…");
-
-  const urls = [];
-
-  if (selectedMatch.url) urls.push(selectedMatch.url);
-
-  const q = new URLSearchParams();
-  if (selectedMatch.year) q.set("meet_year", selectedMatch.year);
-  if (selectedMatch.meetSeq) q.set("meet_seq", selectedMatch.meetSeq);
-  if (selectedMatch.gameId) q.set("game_id", selectedMatch.gameId);
-  if (selectedMatch.roundId) q.set("round_id", selectedMatch.roundId);
-
-  urls.push(OFFICIAL.matchChartPre + "?" + q.toString());
-  urls.push(OFFICIAL.matchChart + "?" + q.toString());
-
-  let html = "";
-  let lastErr = "";
-  for (const u of urls) {
-    try {
-      html = await getText(u);
-      if (html && (html.includes("chartCompDataSet") || html.includes("chartMatchDataSet"))) break;
-    } catch(e) {
-      lastErr = e.message;
-    }
-  }
-
-  if (!html || !html.includes("chartCompDataSet")) {
-    setStatus(
-      "실제 K LEAGUE 경기 분석 데이터를 가져오지 못했습니다.\n\n"+
-      (lastErr || "matchChart 응답에서 chartCompDataSet을 찾지 못했습니다.")+
-      "\n\n가짜 데이터는 표시하지 않습니다.",
-      "error"
-    );
-    return;
-  }
+  setStatus("자동 수집된 실제 K LEAGUE 경기 분석 데이터를 불러오는 중입니다…");
 
   try {
+    const html = await getText(selectedMatch.data_file);
+
+    if (!html.includes("chartCompDataSet") || !html.includes("chartMatchDataSet")) {
+      throw new Error("저장된 경기 데이터에 필요한 chart 데이터가 없습니다.");
+    }
+
     chartData = parseChartData(html);
     renderReport(chartData);
     report.classList.remove("hidden");
-    setStatus("실제 K LEAGUE 데이터로 분석을 표시했습니다.");
+    setStatus("자동 수집된 실제 K LEAGUE 데이터로 분석을 표시했습니다.");
   } catch(e) {
-    setStatus("K LEAGUE 응답을 분석하는 중 오류가 발생했습니다.\n"+e.message+"\n\n가짜 데이터는 표시하지 않습니다.","error");
+    setStatus(
+      "저장된 K LEAGUE 경기 분석 데이터를 읽지 못했습니다.\n\n"+
+      e.message+
+      "\n\n가짜 데이터는 표시하지 않습니다.",
+      "error"
+    );
   }
 }
 
@@ -638,8 +526,8 @@ document.querySelectorAll(".tab").forEach(btn=>{
 fillYears();
 fillRounds();
 setStatus(
-  "K LEAGUE 공식 데이터 연결 방식으로 준비했습니다.\n"+
-  (CONFIG.PROXY_BASE ? "Cloudflare Worker 프록시 사용 준비 완료." : "CONFIG.PROXY_BASE에 Cloudflare Worker URL을 넣는 것을 권장합니다.")
+  "자동 수집된 K LEAGUE 데이터로 준비했습니다.\n"+
+  "GitHub Actions가 수집한 data/*.json 및 경기 원본 데이터만 사용합니다."
 );
 </script>
 </body>
