@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeonbuk Hyundai Motors - Pro Match Report</title>
+    <!-- Include html2canvas for image export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for Jeonbuk Theme */
+        :root {
+            --jb-green: #004a27;
+            --jb-green-dark: #002e18;
+            --jb-gold: #d8b53a;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --text-light: #fff;
+            --panel-bg: #ffffff;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Top Filter Bar */
+        .filter-bar {
+            background: var(--panel-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            font-size: 12px;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .filter-group select {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+            outline: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Data Input Area (Collapsible) */
+        .data-input-section {
+            background: var(--panel-bg);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .data-input-section textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary { background: var(--jb-green); color: white; }
+        .btn-primary:hover { background: var(--jb-green-dark); }
+        .btn-export { background: var(--jb-gold); color: #333; margin-left: 10px; }
+        .btn-export:hover { filter: brightness(0.9); }
+
+        /* Dashboard Container */
+        #dashboard-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            background: linear-gradient(145deg, var(--jb-green) 0%, var(--jb-green-dark) 100%);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            color: var(--text-light);
+        }
+
+        /* Header within Dashboard */
+        .dashboard-header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid rgba(216, 181, 58, 0.3);
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        .match-title h1 { margin: 0; font-size: 28px; color: var(--jb-gold); font-weight: 900; }
+        .match-title p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.8; }
+
+        /* Left Column: Pitch & Viz */
+        .viz-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .pitch-wrapper {
+            background: #28a745;
+            border: 2px solid rgba(255,255,255,0.8);
+            border-radius: 8px;
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        svg { width: 100%; height: 100%; }
+
+        /* Right Column: Timeline & Stats */
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 450px;
+            overflow-y: auto;
+        }
+
+        .info-section::-webkit-scrollbar { width: 6px; }
+        .info-section::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+
+        .timeline-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--jb-gold);
+            backdrop-filter: blur(5px);
+        }
+
+        .timeline-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #ddd;
+            margin-bottom: 8px;
+        }
+
+        .timeline-time { font-weight: bold; color: var(--jb-gold); font-size: 15px; }
+        .timeline-xg { background: rgba(0,0,0,0.4); padding: 2px 8px; border-radius: 12px; font-size: 11px; color: #00ff88; }
+        .timeline-title { font-size: 18px; font-weight: bold; margin: 0; }
+        
+        /* Highlight specific player */
+        .highlight { border-left-color: #ff4d4d !important; background: rgba(255, 77, 77, 0.1) !important; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Filter Bar (UI Layer) -->
+    <div class="filter-bar">
+        <div class="filter-group">
+            <label>대회 (Tournament)</label>
+            <select id="sel-tournament">
+                <option value="K1">K리그1</option>
+                <option value="FA">코리아컵</option>
+                <option value="ACL">ACL</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>연도 (Year)</label>
+            <select id="sel-year">
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>라운드 (Round)</label>
+            <select id="sel-round">
+                <option value="22R">22 라운드</option>
+                <option value="23R">23 라운드</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>선수 포커스 (Player Focus)</label>
+            <select id="sel-player">
+                <option value="ALL">전체 선수 보기</option>
+                <option value="6">No.6 맹성웅</option>
+                <option value="10">No.10 이승우</option>
+                <option value="13">No.13 강상윤</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Data Input Section -->
+    <div class="data-input-section">
+        <p style="margin-top:0; font-weight:bold; color:#666;">
+            <i class="fa-solid fa-database"></i> 분석할 K리그 데이터(JSON)를 붙여넣어 주세요
+        </p>
+        <textarea id="rawData" placeholder="F12 콘솔에서 추출한 이벤트 배열을 여기에 붙여넣습니다..."></textarea>
+        <div style="margin-top: 15px;">
+            <button class="btn btn-primary" onclick="generateDashboard()">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> 1. 리포트 생성
+            </button>
+            <button class="btn btn-export" onclick="exportToImage()">
+                <i class="fa-solid fa-camera"></i> 2. 커뮤니티용 이미지 저장
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Dashboard to be exported -->
+    <div id="dashboard-container">
+        
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <div class="match-title">
+                <h1>JEONBUK HYUNDAI MOTORS</h1>
+                <p id="dashboard-subtitle">2026 K리그1 22R 매치 분석 리포트</p>
+            </div>
+            <div style="text-align: right;">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Jeonbuk_Hyundai_Motors_FC.svg/1200px-Jeonbuk_Hyundai_Motors_FC.svg.png" alt="JBFC Logo" style="height: 60px;">
+            </div>
+        </div>
+
+        <!-- Left Column: Pitch Visualization -->
+        <div class="viz-section">
+            <div class="pitch-wrapper">
+                <svg id="pitch-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <!-- SVG Defs for markers -->
+                    <defs>
+                        <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff4d4d" />
+                        </marker>
+                        <marker id="arrow-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#d8b53a" />
+                        </marker>
+                    </defs>
+                    
+                    <!-- Pitch Markings -->
+                    <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+                    <circle cx="50" cy="50" r="15" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" fill="none"/>
+                    <rect x="0" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" fill="none"/>
+                    <rect x="83.5" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" fill="none"/>
+                    
+                    <!-- Tactics Layer -->
+                    <g id="tactics-layer"></g>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Right Column: Timeline Log -->
+        <div class="info-section" id="timeline-log">
+            <div class="timeline-item" style="text-align: center; border-left-color: transparent;">
+                데이터를 분석하면 이곳에 선수들의 세부 기록이 시각화됩니다.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Mapping codes for readability
+        const EVENT_TYPES = {
+            'GL': '⚽ 득점 (Goal!)',
+            'AST': '👟 어시스트 (Assist)',
+            'MST': '❌ 빗나간 슈팅 (Missed)',
+            'ST': '🔥 유효 슈팅 (On Target)',
+            'BT': '🛡️ 슈팅 차단 (Blocked)',
+            'KEYP': '🔑 키 패스 (Key Pass)'
+        };
+
+        function updateDashboardTitle() {
+            // Get values from filters
+            const year = document.getElementById('sel-year').value;
+            const tournament = document.getElementById('sel-tournament').options[document.getElementById('sel-tournament').selectedIndex].text;
+            const round = document.getElementById('sel-round').options[document.getElementById('sel-round').selectedIndex].text;
+            
+            // Update UI
+            document.getElementById('dashboard-subtitle').innerText = `${year} ${tournament} ${round} 데이터 기반 전술 분석`;
+        }
+
+        function generateDashboard() {
+            updateDashboardTitle();
+            
+            const rawData = document.getElementById('rawData').value;
+            const selectedPlayer = document.getElementById('sel-player').value; // 'ALL' or specific back_no
+            let events = [];
+
+            try {
+                events = JSON.parse(rawData);
+                if (!Array.isArray(events)) events = [events]; 
+            } catch (e) {
+                alert('데이터 형식이 올바르지 않습니다. 복사한 JSON 배열을 다시 확인해주세요.');
+                return;
+            }
+
+            const tacticsLayer = document.getElementById('tactics-layer');
+            const timelineLog = document.getElementById('timeline-log');
+            
+            tacticsLayer.innerHTML = ''; 
+            timelineLog.innerHTML = ''; 
+
+            events.forEach(event => {
+                // Filter by specific player if not 'ALL'
+                if (selectedPlayer !== 'ALL' && String(event.back_no) !== selectedPlayer) {
+                    return; 
+                }
+
+                if(!event.CLICK_DATA && !event.TYPE_DETAIL_CD) return;
+
+                const eventCode = event.TYPE_DETAIL_CD || event.CLICK_DATA;
+                const eventName = EVENT_TYPES[eventCode] || `이벤트 (${eventCode})`;
+                const isHighlight = selectedPlayer !== 'ALL' && String(event.back_no) === selectedPlayer;
+                
+                // --- 1. Draw SVG Tactics ---
+                if (event.START_POINT_X !== undefined && event.START_POINT_Y !== undefined) {
+                    const sx = event.START_POINT_X;
+                    const sy = event.START_POINT_Y;
+                    const ex = event.END_POINT_X !== undefined ? event.END_POINT_X : sx;
+                    const ey = event.END_POINT_Y !== undefined ? event.END_POINT_Y : sy;
+
+                    const isShot = eventCode.includes('ST') || eventCode === 'GL' || eventCode === 'MST';
+                    const color = isShot ? '#ff4d4d' : '#d8b53a'; 
+                    const marker = isShot ? 'url(#arrow-red)' : 'url(#arrow-gold)';
+
+                    // Draw Trajectory
+                    if (sx !== ex || sy !== ey) {
+                        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                        line.setAttribute("x1", sx); line.setAttribute("y1", sy);
+                        line.setAttribute("x2", ex); line.setAttribute("y2", ey);
+                        line.setAttribute("stroke", color);
+                        line.setAttribute("stroke-width", isHighlight ? "1.2" : "0.8");
+                        line.setAttribute("marker-end", marker);
+                        tacticsLayer.appendChild(line);
+                    }
+
+                    // Draw Player Dot
+                    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                    circle.setAttribute("cx", sx); circle.setAttribute("cy", sy);
+                    circle.setAttribute("r", "2.5");
+                    circle.setAttribute("fill", "var(--jb-green-dark)");
+                    circle.setAttribute("stroke", color);
+                    circle.setAttribute("stroke-width", "0.8");
+                    tacticsLayer.appendChild(circle);
+
+                    // Draw Back Number
+                    if (event.back_no) {
+                        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                        text.setAttribute("x", sx); text.setAttribute("y", sy - 3.5);
+                        text.setAttribute("fill", "white");
+                        text.setAttribute("font-size", "3.5");
+                        text.setAttribute("font-weight", "bold");
+                        text.setAttribute("text-anchor", "middle");
+                        text.textContent = event.back_no;
+                        tacticsLayer.appendChild(text);
+                    }
+                }
+
+                // --- 2. Build Timeline Log ---
+                const period = event.PERIOD_ID === 1 ? '전반' : '후반';
+                const time = `${period} ${event.MIN_TIME}분 ${event.SEC_TIME}초`;
+                const xg = event.EXPECTED_GOAL ? `<span class="timeline-xg">xG: ${event.EXPECTED_GOAL.toFixed(3)}</span>` : '';
+                
+                const item = document.createElement('div');
+                item.className = `timeline-item ${isHighlight ? 'highlight' : ''}`;
+                item.innerHTML = `
+                    <div class="timeline-meta">
+                        <span><span class="timeline-time">${time}</span> | No.${event.back_no || '?'}</span>
+                        ${xg}
+                    </div>
+                    <p class="timeline-title">${eventName}</p>
+                `;
+                timelineLog.appendChild(item);
+            });
+        }
+
+        // Export the dashboard to an image for community upload
+        async function exportToImage() {
+            const dashboard = document.getElementById('dashboard-container');
+            try {
+                // html2canvas config for better rendering
+                const canvas = await html2canvas(dashboard, { 
+                    backgroundColor: '#004a27',
+                    scale: 2 // High resolution for beautiful export
+                });
+                canvas.toBlob(async function(blob) {
+                    const item = new ClipboardItem({ "image/png": blob });
+                    await navigator.clipboard.write([item]);
+                    alert('✨ 캡처 완료! 팬 커뮤니티(에펨코리아, 락싸 등)에 Ctrl+V로 붙여넣으시면 됩니다.');
+                });
+            } catch (err) {
+                alert('이미지 생성에 실패했습니다.');
+                console.error(err);
+            }
+        }
+    </script>
+</body>
+</html>
