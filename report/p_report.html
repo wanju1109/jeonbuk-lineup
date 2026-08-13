@@ -3,437 +3,592 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>JEONBUK MATCH REPORT</title>
+<title>K LEAGUE 경기 분석 리포트</title>
 <style>
 :root{
-  --bg:#08090c; --panel:#11141a; --panel2:#171b22; --line:#2a3039;
-  --text:#f4f6f8; --muted:#8e98a7; --green:#16b979; --green2:#0e8f60;
-  --blue:#4ea1ff; --yellow:#ffc857; --red:#ff5d68; --orange:#ff7a18;
-  --shadow:0 18px 50px rgba(0,0,0,.35); --radius:18px;
+  --bg:#f4f6f8;--card:#fff;--line:#dfe4e8;--text:#17212b;--muted:#6b7680;
+  --home:#00523D;--away:#EE7501;--accent:#0b6b55;
 }
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(900px 500px at 20% -10%,rgba(22,185,121,.12),transparent 60%),var(--bg);color:var(--text);font-family:Inter,"Noto Sans KR",system-ui,sans-serif}
-button,select{font:inherit}
-.app{max-width:1440px;margin:auto;padding:24px}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(145deg,#18bd7b,#08754f);display:grid;place-items:center;font-weight:900}
-.brand h1{font-size:20px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}
-.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
-.dot{width:8px;height:8px;border-radius:50%;background:#555}.dot.ok{background:var(--green);box-shadow:0 0 12px rgba(22,185,121,.8)}
-.control{background:linear-gradient(180deg,#171b22,#101318);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-.controls{display:grid;grid-template-columns:1fr 1fr 1fr 1.7fr auto;gap:10px;align-items:end}
-.field label{display:block;color:var(--muted);font-size:11px;font-weight:800;margin:0 0 7px}
-select{width:100%;height:44px;border:1px solid #343b46;background:#0b0e12;color:#fff;border-radius:10px;padding:0 12px;outline:none}
-select:focus{border-color:var(--green)}
-.primary{height:44px;border:0;border-radius:10px;padding:0 20px;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;font-weight:900;cursor:pointer}
-.primary:disabled{opacity:.45;cursor:not-allowed}
-.secondary{height:40px;border:1px solid var(--line);background:#0e1116;color:#fff;border-radius:9px;padding:0 13px;cursor:pointer}
-.modebar{display:flex;gap:8px;margin-top:12px}.mode{border:1px solid var(--line);background:#0e1116;color:#aab2bf;border-radius:999px;padding:8px 13px;cursor:pointer;font-size:12px;font-weight:800}.mode.active{background:rgba(22,185,121,.13);border-color:rgba(22,185,121,.5);color:#5ce0aa}
-.player-select{display:none;margin-top:12px}.player-select.show{display:block}
-.notice{margin-top:14px;color:var(--muted);font-size:12px;line-height:1.6}
-#loading{display:none;margin:18px 0;padding:14px 16px;border:1px solid rgba(78,161,255,.25);background:rgba(78,161,255,.07);border-radius:12px;color:#bcdcff}
-#error{display:none;margin:18px 0;padding:14px 16px;border:1px solid rgba(255,93,104,.25);background:rgba(255,93,104,.07);border-radius:12px;color:#ffc2c7;white-space:pre-wrap}
-.report{display:none;margin-top:18px}
-.hero{background:linear-gradient(135deg,#151a20,#0d1015);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-130px;top:-180px;background:rgba(22,185,121,.10);filter:blur(5px)}
-.kicker{color:#5ce0aa;font-size:11px;font-weight:900;letter-spacing:.12em}.match{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;margin-top:16px}.team{text-align:center}.team .name{font-size:22px;font-weight:900}.score{font-size:54px;font-weight:950;letter-spacing:-.05em}.meta{text-align:center;color:var(--muted);font-size:12px;margin-top:4px}.winner{color:#5ce0aa}.hero-actions{position:absolute;right:20px;bottom:18px;display:flex;gap:8px}
-.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:18px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}.card h2{font-size:15px;margin:0 0 14px}.sub{color:var(--muted);font-size:11px}
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{background:#0d1015;border:1px solid #242a33;border-radius:12px;padding:13px}.metric .v{font-size:24px;font-weight:900}.metric .l{font-size:10px;color:var(--muted);margin-top:4px}
-.barrow{margin:12px 0}.barhead{display:flex;justify-content:space-between;font-size:11px;color:#cbd2dc;margin-bottom:5px}.bar{height:7px;background:#222833;border-radius:999px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--green),#5ce0aa);border-radius:999px}
-.pitch{position:relative;aspect-ratio:1.62;background:#0b5d3e;border-radius:14px;overflow:hidden;border:1px solid #237f5c}.pitch:before{content:"";position:absolute;inset:6%;border:1px solid rgba(255,255,255,.35)}.pitch:after{content:"";position:absolute;left:50%;top:6%;bottom:6%;border-left:1px solid rgba(255,255,255,.25)}.circle{position:absolute;left:50%;top:50%;width:22%;aspect-ratio:1;border:1px solid rgba(255,255,255,.25);border-radius:50%;transform:translate(-50%,-50%)}.linebox{position:absolute;top:26%;bottom:26%;left:6%;width:16%;border:1px solid rgba(255,255,255,.35)}.linebox.r{left:auto;right:6%}.event-svg{position:absolute;inset:0;width:100%;height:100%}
-.goals{display:grid;gap:10px}.goal{padding:12px;border:1px solid #252c35;border-radius:12px;background:#0c1014}.goalhead{display:flex;justify-content:space-between;align-items:center}.goaltime{font-size:18px;font-weight:950;color:#5ce0aa}.goaltype{font-size:10px;color:var(--muted);font-weight:900}.sequence{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.seq{font-size:11px;background:#171d24;border:1px solid #2a323d;border-radius:999px;padding:6px 8px}.arrow{color:#5ce0aa}
-.players{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.player{display:flex;justify-content:space-between;align-items:center;padding:11px;border:1px solid #252c35;background:#0d1015;border-radius:11px}.pname{font-weight:800;font-size:12px}.pmeta{font-size:10px;color:var(--muted);margin-top:3px}.rating{font-size:18px;font-weight:950}
-.insight{border-left:3px solid var(--green);background:rgba(22,185,121,.07);padding:13px 14px;border-radius:0 11px 11px 0;line-height:1.65;font-size:13px}.insight + .insight{margin-top:8px}
-.timeline{position:relative;height:62px;margin-top:12px;background:#0c1015;border:1px solid #252c35;border-radius:11px;overflow:hidden}.tick{position:absolute;top:0;bottom:0;border-left:1px solid #202630}.eventdot{position:absolute;top:50%;width:10px;height:10px;border-radius:50%;transform:translate(-50%,-50%);background:#aaa}.eventdot.goal{width:16px;height:16px;background:var(--green);box-shadow:0 0 18px rgba(22,185,121,.8)}.eventdot.shot{background:var(--yellow)}
-.smalltable{width:100%;border-collapse:collapse;font-size:11px}.smalltable th,.smalltable td{padding:8px;border-bottom:1px solid #222831;text-align:left}.smalltable th{color:var(--muted);font-weight:700}
-.footer{padding:22px 0;color:#67717e;font-size:10px;text-align:center}
-@media(max-width:1000px){.controls{grid-template-columns:1fr 1fr}.controls .primary{width:100%}.grid,.grid2{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.app{padding:12px}.match{grid-template-columns:1fr}.score{font-size:42px}.players{grid-template-columns:1fr}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Noto Sans KR",sans-serif}
+.wrap{max-width:1280px;margin:0 auto;padding:28px 20px 60px}
+h1{margin:0 0 8px;font-size:28px}
+.sub{color:var(--muted);margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 2px 10px #00000008}
+.controls{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr auto;gap:10px;align-items:end}
+label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+select,button{width:100%;height:42px;border:1px solid #cfd6dc;border-radius:8px;background:#fff;padding:0 12px;font-size:14px}
+button{background:#111;color:#fff;border-color:#111;cursor:pointer;font-weight:700}
+button:disabled{opacity:.45;cursor:not-allowed}
+.status{padding:12px 14px;border-radius:9px;background:#f7f8f9;color:#4c5862;font-size:13px;white-space:pre-wrap}
+.error{background:#fff1f0;color:#b42318;border:1px solid #ffd2cf}
+.notice{background:#fff9e8;color:#805b00;border:1px solid #f0d78c}
+.hidden{display:none}
+.match-head{display:grid;grid-template-columns:1fr 220px 1fr;gap:20px;align-items:center;text-align:center}
+.team{font-size:28px;font-weight:800}
+.home{color:var(--home)} .away{color:var(--away)}
+.score{font-size:42px;font-weight:900}
+.meta{font-size:13px;color:var(--muted);line-height:1.8}
+.tabs{display:flex;gap:8px;margin:18px 0}
+.tab{width:auto;background:#fff;color:#222;border-color:#cfd6dc}
+.tab.active{background:#111;color:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.kpi-title{font-size:16px;font-weight:800;margin-bottom:12px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:13px;text-align:center}
+.kpi .n{font-size:24px;font-weight:800}.kpi .l{font-size:12px;color:var(--muted);margin-top:3px}
+.table{width:100%;border-collapse:collapse;font-size:13px}
+.table th,.table td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:right}
+.table th:first-child,.table td:first-child{text-align:left}
+.table th:nth-child(2),.table td:nth-child(2){color:var(--home);font-weight:700}
+.table th:nth-child(3),.table td:nth-child(3){color:var(--away);font-weight:700}
+.barrow{display:grid;grid-template-columns:1fr 110px 1fr;gap:8px;align-items:center;margin:10px 0}
+.barwrap{height:14px;background:#eef1f3;border-radius:8px;overflow:hidden;display:flex}
+.barL{height:100%;margin-left:auto;background:var(--home)}
+.barR{height:100%;background:var(--away)}
+.metric{text-align:center;font-size:12px;font-weight:700}
+.recent{display:grid;gap:7px}
+.recent-row{display:grid;grid-template-columns:1fr 70px 1fr;gap:8px;align-items:center;padding:9px;border-bottom:1px solid var(--line);font-size:13px}
+.recent-row span:first-child{text-align:right}.recent-row span:last-child{text-align:left}
+.footer{font-size:12px;color:var(--muted);line-height:1.7}
+@media(max-width:900px){.controls{grid-template-columns:1fr 1fr}.match-head{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="app">
-  <header class="topbar">
-    <div class="brand"><div class="logo">J</div><div><h1>JEONBUK MATCH REPORT</h1><p>실제 K LEAGUE 경기 데이터 기반 리포트</p></div></div>
-    <div class="status"><span id="statusDot" class="dot"></span><span id="statusText">데이터 연결 대기</span></div>
-  </header>
+<div class="wrap">
+  <h1>K LEAGUE 경기 분석 리포트</h1>
+  <div class="sub">K LEAGUE 공식 사이트/데이터 포털의 실제 데이터를 조회합니다. 조회 실패 시 임의 데이터를 표시하지 않습니다.</div>
 
-  <section class="control">
+  <div class="card">
     <div class="controls">
-      <div class="field"><label>대회</label><select id="competition"><option value="">불러오는 중...</option></select></div>
-      <div class="field"><label>연도</label><select id="year" disabled><option value="">대회를 먼저 선택</option></select></div>
-      <div class="field"><label>라운드</label><select id="round" disabled><option value="">연도를 먼저 선택</option></select></div>
-      <div class="field"><label>경기</label><select id="match" disabled><option value="">라운드를 먼저 선택</option></select></div>
-      <button id="analyzeBtn" class="primary" disabled>분석하기</button>
-    </div>
-    <div class="modebar">
-      <button class="mode active" data-mode="match">전체 경기 분석</button>
-      <button class="mode" data-mode="player">선수 특정 분석</button>
-    </div>
-    <div id="playerWrap" class="player-select">
-      <div class="field"><label>선수</label><select id="player" disabled><option value="">경기를 먼저 선택</option></select></div>
-    </div>
-    <div class="notice">
-      이 페이지는 임의의 경기/선수 데이터를 넣지 않습니다. 선택된 경기에서 API가 반환한 원본 데이터만으로 화면을 구성합니다.
-      현재 프론트엔드는 <b>/api/kleague</b> 브리지 API를 사용하도록 되어 있습니다.
-    </div>
-  </section>
-
-  <div id="loading">K LEAGUE 경기 데이터를 가져오고 있습니다. 패스·슈팅·득점 이벤트까지 확인합니다.</div>
-  <div id="error"></div>
-
-  <main id="report" class="report">
-    <section class="hero">
-      <div class="kicker" id="heroKicker">MATCH REPORT</div>
-      <div class="match">
-        <div class="team"><div id="homeName" class="name">-</div><div id="homeMeta" class="meta">-</div></div>
-        <div><div id="score" class="score">- : -</div><div id="matchMeta" class="meta">-</div></div>
-        <div class="team"><div id="awayName" class="name">-</div><div id="awayMeta" class="meta">-</div></div>
+      <div>
+        <label>대회</label>
+        <select id="league">
+          <option value="1">K리그1</option>
+          <option value="2">K리그2</option>
+        </select>
       </div>
-      <div class="hero-actions"><button class="secondary" id="copyText">게시글 복사</button><button class="secondary" id="copyImage">이미지 복사</button></div>
-    </section>
+      <div>
+        <label>연도</label>
+        <select id="year"></select>
+      </div>
+      <div>
+        <label>라운드</label>
+        <select id="round"></select>
+      </div>
+      <div>
+        <label>경기</label>
+        <select id="match"></select>
+      </div>
+      <div><button id="analyze" disabled>분석하기</button></div>
+    </div>
+    <div id="status" class="status" style="margin-top:12px">실제 K LEAGUE 데이터를 준비하는 중입니다.</div>
+  </div>
 
-    <section class="grid">
-      <div class="card">
-        <h2>경기 핵심 지표 <span class="sub">실제 기록</span></h2>
-        <div id="metrics" class="metrics"></div>
-        <div id="comparisons"></div>
-      </div>
-      <div class="card">
-        <h2>경기 흐름</h2>
-        <div id="timeline" class="timeline"></div>
-        <div id="flowText" class="sub" style="margin-top:10px">-</div>
-        <div id="insights" style="margin-top:12px"></div>
-      </div>
-    </section>
-
-    <section class="grid2">
-      <div class="card">
-        <h2>득점 장면 · 패스 시퀀스</h2>
-        <div id="goals" class="goals"></div>
-      </div>
-      <div class="card">
-        <h2>패스 네트워크</h2>
-        <div class="pitch">
-          <div class="circle"></div><div class="linebox"></div><div class="linebox r"></div>
-          <svg id="passSvg" class="event-svg" viewBox="0 0 100 62" preserveAspectRatio="none"></svg>
+  <div id="report" class="hidden">
+    <div class="card">
+      <div class="match-head">
+        <div>
+          <div id="homeName" class="team home">-</div>
+          <div id="homeId" class="meta">-</div>
         </div>
-        <div id="passNote" class="sub" style="margin-top:9px">패스 이벤트가 제공되지 않았습니다.</div>
+        <div>
+          <div id="score" class="score">-</div>
+          <div id="matchMeta" class="meta">-</div>
+        </div>
+        <div>
+          <div id="awayName" class="team away">-</div>
+          <div id="awayId" class="meta">-</div>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <section class="grid2">
-      <div class="card">
-        <h2 id="playerTitle">선수 퍼포먼스</h2>
-        <div id="players" class="players"></div>
+    <div class="card">
+      <div class="kpi-title">통산전적</div>
+      <div id="h2hKpi" class="kpis"></div>
+      <div class="grid2" style="margin-top:18px">
+        <div>
+          <div class="kpi-title">통산 득점</div>
+          <div id="h2hGoals"></div>
+        </div>
+        <div>
+          <div class="kpi-title">최근 10경기</div>
+          <div id="recent10"></div>
+        </div>
       </div>
-      <div class="card">
-        <h2>전술/경기 해석</h2>
-        <div id="tactical"></div>
+    </div>
+
+    <div class="card">
+      <div class="tabs">
+        <button class="tab active" data-cat="attack">공격</button>
+        <button class="tab" data-cat="pass">패스</button>
+        <button class="tab" data-cat="def">수비</button>
       </div>
-    </section>
-  </main>
-  <div class="footer">Data source: K LEAGUE Data Portal / Bepro11 부가기록 · 화면의 수치는 API가 실제 반환한 데이터만 표시합니다.</div>
+      <div id="metrics"></div>
+    </div>
+
+    <div class="card">
+      <div class="kpi-title">데이터 출처</div>
+      <div class="footer">
+        K LEAGUE 공식 일정/결과 및 K LEAGUE 데이터 포털을 기준으로 조회합니다.<br>
+        데이터 포털의 부가기록은 Bepro11 영상 기반 기록이며 공식기록과 차이가 날 수 있습니다.
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
 /*
-  IMPORTANT:
-  GitHub Pages는 다른 도메인(portal.kleague.com)의 세션/페이지를 직접 읽을 수 없습니다.
-  따라서 실제 K LEAGUE 데이터를 가져오는 서버 브리지가 필요합니다.
+ * p_report.html
+ *
+ * 중요한 원칙:
+ * 1. 경기/통계 숫자를 임의로 만들지 않습니다.
+ * 2. 공식 K LEAGUE 응답을 읽지 못하면 report를 표시하지 않습니다.
+ * 3. 브라우저의 CORS 정책 때문에 직접 접근이 차단되는 경우
+ *    같은 사이트의 /api/kleague 프록시를 사용할 수 있습니다.
+ *
+ * 권장 배포 구조:
+ *   /jeonbuk-lineup/report/p_report.html
+ *   /jeonbuk-lineup/api/kleague
+ *
+ * proxy는 아래 URL을 받아 K LEAGUE 원본을 그대로 반환하도록 구성하면 됩니다.
+ *
+ *   /api/kleague?url=<URL encoded official URL>
+ *
+ * 이 HTML에는 가짜 경기/통계 데이터가 들어 있지 않습니다.
+ */
 
-  브리지 API 계약:
-    GET /competitions
-      -> [{id:"K1", name:"K리그1"}, ...]
-    GET /seasons?competitionId=K1
-      -> [{id:"2026", name:"2026"}, ...]
-    GET /rounds?competitionId=K1&season=2026
-      -> [{id:"27", name:"27R"}, ...]
-    GET /matches?competitionId=K1&season=2026&round=27
-      -> [{id:"GAME_ID", home:"전북", away:"제주", date:"2026-08-08", ...}, ...]
-    GET /players?gameId=GAME_ID
-      -> [{id:"PLAYER_ID", name:"선수명", teamId:"K05", ...}, ...]
-    GET /report?gameId=GAME_ID
-      -> {
-           match:{...},
-           teamStats:[...],
-           players:[...],
-           events:[
-             {
-               type:"PASS|SHOT|GOAL|CARD|SUB|...",
-               playerId,
-               teamId,
-               period,
-               minute,
-               second,
-               startX,startY,endX,endY,
-               success,
-               receiverId
-             }
-           ]
-         }
-
-  K LEAGUE 원본에서 확인된 필드 예:
-    GAME_ID, MEET_YEAR, MEET_SEQ, PERIOD_ID, MIN_TIME, SEC_TIME,
-    PLAYER_ID, TEAM_ID, TYPE_CD, TYPE_DETAIL_CD, TYPE_DETAIL_CD2,
-    START_POINT_X, START_POINT_Y, END_POINT_X, END_POINT_Y,
-    EVENT_BEPRO, EVENT_ID, SEQ, EXPECTED_GOAL, SHOT_GOALPOST_SITE,
-    PA_AREA_YN_CD, HA_CODE, OWN_GOAL_CODE, back_no
-  프론트는 위 원본 필드가 브리지에서 정규화되어 오거나,
-  아래 normalizeEvent()에서 원본 필드를 그대로 받아도 동작하도록 만들었습니다.
-*/
-
-const CONFIG = {
-  // 같은 도메인에 API를 두면 그대로 /api/kleague 를 사용합니다.
-  // 예: Cloudflare Pages Functions /api/kleague/*
-  API_BASE: "/api/kleague"
+const OFFICIAL = {
+  schedule: "https://portal.kleague.com/view/schedule/list.do",
+  matchChart: "https://portal.kleague.com/data/matc/matchChart.do",
+  matchChartPre: "https://portal.kleague.com/data/matc/matchChartPre.do"
 };
 
-const $ = s => document.querySelector(s);
-const state = { mode:"match", report:null, matches:[], players:[] };
+/*
+ * 브라우저 CORS를 피하기 위해 공개 GET 릴레이를 먼저 사용하고,
+ * 실패하면 같은 사이트의 /api/kleague 프록시를 사용합니다.
+ *
+ * 릴레이는 데이터를 생성하지 않습니다. 지정한 URL의 K LEAGUE 응답을
+ * 그대로 전달하는 역할만 합니다.
+ */
+const RELAYS = [
+  "https://api.allorigins.win/raw?url=",
+  "/api/kleague?url="
+];
 
-function api(path, params={}) {
-  const u = new URL(CONFIG.API_BASE.replace(/\/$/,"") + path, location.href);
-  Object.entries(params).forEach(([k,v]) => { if(v!=="" && v!=null) u.searchParams.set(k,v); });
-  return fetch(u.toString(), {credentials:"include",headers:{"Accept":"application/json"}})
-    .then(async r => {
+const $ = id => document.getElementById(id);
+const league = $("league"), year = $("year"), round = $("round"), match = $("match");
+const analyze = $("analyze"), statusBox = $("status"), report = $("report");
+
+let scheduleMatches = [];
+let selectedMatch = null;
+let chartData = null;
+
+function setStatus(text, type="") {
+  statusBox.className = "status " + type;
+  statusBox.textContent = text;
+}
+
+function escapeHtml(v) {
+  return String(v ?? "").replace(/[&<>"']/g, s => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+  }[s]));
+}
+
+function officialUrl(url) {
+  if (!PROXY_BASE) return url;
+  return PROXY_BASE + "?url=" + encodeURIComponent(url);
+}
+
+async function getText(url) {
+  let last = null;
+  for (const relay of RELAYS) {
+    try {
+      const target = relay.startsWith("http")
+        ? relay + encodeURIComponent(url)
+        : relay + encodeURIComponent(url);
+
+      const r = await fetch(target, {
+        method:"GET",
+        cache:"no-store"
+      });
       const text = await r.text();
-      if(!r.ok) throw new Error(`API ${r.status}: ${text.slice(0,300)}`);
-      try { return JSON.parse(text); } catch { throw new Error("API가 JSON을 반환하지 않았습니다."); }
-    });
-}
-
-function setStatus(ok,text){ $("#statusDot").className="dot"+(ok?" ok":""); $("#statusText").textContent=text; }
-function setError(e){ $("#error").style.display="block"; $("#error").textContent = e?.message || String(e); }
-function clearError(){ $("#error").style.display="none"; $("#error").textContent=""; }
-function loading(v){ $("#loading").style.display=v?"block":"none"; }
-
-function fillSelect(sel, items, placeholder){
-  sel.innerHTML = `<option value="">${placeholder}</option>` +
-    items.map(x=>`<option value="${esc(x.id)}">${esc(x.name)}</option>`).join("");
-  sel.disabled = items.length===0;
-}
-function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));}
-function num(v){const n=Number(v);return Number.isFinite(n)?n:null;}
-function fmt(v,d=0){const n=num(v);return n==null?"-":n.toFixed(d);}
-function timeOf(e){return (num(e.minute)||0)*60+(num(e.second)||0);}
-function labelTime(sec){const m=Math.floor(sec/60),s=Math.floor(sec%60);return `${m}'${String(s).padStart(2,"0")}`;}
-
-function normalizeEvent(e, players){
-  const playerId = String(e.playerId ?? e.PLAYER_ID ?? "");
-  const receiverId = String(e.receiverId ?? e.RECEIVER_ID ?? "");
-  const player = players.find(p=>String(p.id??p.PLAYER_ID)===playerId);
-  const receiver = players.find(p=>String(p.id??p.PLAYER_ID)===receiverId);
-  const detail = String(e.typeDetail ?? e.TYPE_DETAIL_CD ?? e.TYPE_DETAIL_CD2 ?? "").toUpperCase();
-  const type = String(e.type ?? e.TYPE_CD ?? "").toUpperCase();
-
-  let kind = String(e.kind ?? "").toUpperCase();
-  if(!kind){
-    if(["GL","GOAL"].includes(detail) || ["GL","GOAL"].includes(type)) kind="GOAL";
-    else if(["AST","ASIST"].includes(detail)) kind="ASSIST";
-    else if(["MST","ST"].includes(detail) || ["ST"].includes(type)) kind="SHOT";
-    else if(["PSS","PSU"].includes(detail) || ["PASS"].includes(type)) kind="PASS";
-    else if(["BT"].includes(detail)) kind="BLOCK";
-    else kind=detail||type||"OTHER";
+      if (!r.ok) {
+        last = new Error("HTTP " + r.status + ": " + text.slice(0,500));
+        continue;
+      }
+      if (text && text.length > 50) return text;
+      last = new Error("빈 응답");
+    } catch(e) {
+      last = e;
+    }
   }
-  return {
-    raw:e, kind,
-    playerId, receiverId,
-    playerName: e.playerName ?? player?.name ?? e.PLAYER_NAME ?? `선수 ${playerId}`,
-    receiverName: e.receiverName ?? receiver?.name ?? e.RECEIVER_NAME ?? (receiverId?`선수 ${receiverId}`:""),
-    teamId:String(e.teamId ?? e.TEAM_ID ?? ""),
-    period:num(e.period ?? e.PERIOD_ID) ?? 1,
-    minute:num(e.minute ?? e.MIN_TIME) ?? 0,
-    second:num(e.second ?? e.SEC_TIME) ?? 0,
-    startX:num(e.startX ?? e.START_POINT_X),
-    startY:num(e.startY ?? e.START_POINT_Y),
-    endX:num(e.endX ?? e.END_POINT_X),
-    endY:num(e.endY ?? e.END_POINT_Y),
-    xg:num(e.xg ?? e.EXPECTED_GOAL),
-    success:e.success ?? e.SUCCESS ?? null,
-    seq:num(e.seq ?? e.SEQ) ?? 0
+  throw last || new Error("데이터 릴레이 요청 실패");
+}
+
+/*
+ * K LEAGUE 포털의 schedule 페이지는 연/월 단위 캘린더입니다.
+ * 여기서는 실제 페이지의 링크/onclick/hidden 값을 찾아 game_id/round_id 등을
+ * 확보합니다. 포털의 HTML이 변경되어도 가능한 여러 패턴을 시도합니다.
+ */
+function parseScheduleHtml(html, y, leagueId) {
+  const found = [];
+  const doc = new DOMParser().parseFromString(html, "text/html");
+
+  const add = obj => {
+    if (!obj.home || !obj.away) return;
+    obj.year = obj.year || String(y);
+    obj.league = obj.league || String(leagueId);
+    obj.round = obj.round != null ? String(obj.round) : "";
+    obj.home = cleanTeam(obj.home);
+    obj.away = cleanTeam(obj.away);
+    obj.date = obj.date || "";
+    obj.time = obj.time || "";
+    obj.gameId = obj.gameId || "";
+    obj.meetSeq = obj.meetSeq || "";
+    obj.roundId = obj.roundId || obj.round || "";
+    obj.url = obj.url || "";
+    const key = [obj.year,obj.round,obj.date,obj.home,obj.away,obj.gameId].join("|");
+    if (!found.some(x => x._key === key)) {
+      obj._key = key;
+      found.push(obj);
+    }
   };
-}
 
-function renderReport(data){
-  state.report=data;
-  const m=data.match||{};
-  const ts=Array.isArray(data.teamStats)?data.teamStats:[];
-  const ps=Array.isArray(data.players)?data.players:[];
-  const events=(Array.isArray(data.events)?data.events:[]).map(e=>normalizeEvent(e,ps));
-  const homeId=String(m.homeTeamId??m.HOME_TEAM_ID??ts[0]?.teamId??"");
-  const awayId=String(m.awayTeamId??m.AWAY_TEAM_ID??ts[1]?.teamId??"");
-  const homeName=m.home??m.homeTeamName??m.HOME_TEAM_NAME??"홈팀";
-  const awayName=m.away??m.awayTeamName??m.AWAY_TEAM_NAME??"원정팀";
-  $("#heroKicker").textContent=`${m.competitionName??m.COMPETITION_NAME??"K LEAGUE"} · ${m.roundName??m.ROUND_NAME??""}`;
-  $("#homeName").textContent=homeName; $("#awayName").textContent=awayName;
-  $("#score").textContent=`${m.homeScore??m.HOME_SCORE??"-"} : ${m.awayScore??m.AWAY_SCORE??"-"}`;
-  $("#homeMeta").textContent=m.stadium??m.STADIUM??"";
-  $("#awayMeta").textContent=m.weather??m.WEATHER??"";
-  $("#matchMeta").textContent=[m.date??m.GAME_DATE,m.kickoff??m.KICKOFF].filter(Boolean).join(" · ");
+  // 1) href/onclick 안에 들어있는 game_id, round_id 등의 실제 값을 우선 추출
+  doc.querySelectorAll("[href],[onclick]").forEach(el => {
+    const raw = (el.getAttribute("href") || "") + " " + (el.getAttribute("onclick") || "");
+    const p = parseParams(raw);
+    const text = (el.textContent || "").replace(/\s+/g," ").trim();
 
-  renderMetrics(ts,homeId,awayId);
-  renderTimeline(events);
-  renderGoals(events,ps);
-  renderPasses(events,ps,homeId);
-  renderPlayers(ps,events);
-  renderTactical(ts,events,homeId,awayId);
-  $("#report").style.display="block";
-}
-
-function teamStat(ts,id,key){const t=ts.find(x=>String(x.teamId??x.TEAM_ID)===String(id))||{}; return t[key]??t[key.toUpperCase()]??null;}
-function renderMetrics(ts,homeId,awayId){
-  const keys=[
-    ["점유율","possession","%"],["패스","passes","회"],["패스 성공률","passAccuracy","%"],["슈팅","shots","회"],
-    ["유효슈팅","shotsOnTarget","회"],["xG","xg",""],["코너킥","corners","회"],["파울","fouls","회"]
-  ];
-  $("#metrics").innerHTML=keys.slice(0,4).map(([l,k,u])=>`<div class="metric"><div class="v">${esc(fmt(teamStat(ts,homeId,k),k==="passAccuracy"||k==="possession"||k==="xg"?1:0))}${u}</div><div class="l">홈 · ${l}</div></div>`).join("");
-  $("#comparisons").innerHTML=keys.slice(4).map(([l,k,u])=>{
-    const a=num(teamStat(ts,homeId,k)),b=num(teamStat(ts,awayId,k)); const total=(a||0)+(b||0);
-    const p=total?Math.max(0,Math.min(100,a/total*100)):50;
-    return `<div class="barrow"><div class="barhead"><span>${esc(l)}</span><span>${fmt(a,k==="xg"?2:0)}${u} · ${fmt(b,k==="xg"?2:0)}${u}</span></div><div class="bar"><div class="fill" style="width:${p}%"></div></div></div>`;
-  }).join("");
-}
-function renderTimeline(events){
-  const max=Math.max(5400,...events.map(timeOf),1);
-  $("#timeline").innerHTML=events.filter(e=>["GOAL","SHOT","ASSIST"].includes(e.kind)).slice(0,80).map(e=>{
-    const p=Math.min(99,Math.max(1,timeOf(e)/max*100));
-    return `<span class="eventdot ${e.kind==="GOAL"?"goal":"shot"}" title="${esc(e.playerName)} ${labelTime(timeOf(e))}" style="left:${p}%"></span>`;
-  }).join("");
-  const goals=events.filter(e=>e.kind==="GOAL");
-  $("#flowText").textContent=goals.length?`득점 이벤트 ${goals.length}개 · 슈팅 이벤트 ${events.filter(e=>e.kind==="SHOT").length}개 · 패스 이벤트 ${events.filter(e=>e.kind==="PASS").length}개`:"득점 이벤트가 데이터에 없습니다.";
-  $("#insights").innerHTML=goals.length?`<div class="insight"><b>득점 흐름</b><br>아래 득점 카드에서 각 골의 실제 이벤트 시퀀스를 확인할 수 있습니다.</div>`:`<div class="insight"><b>데이터 상태</b><br>골 이벤트가 제공되지 않아 득점 시퀀스를 임의로 만들지 않았습니다.</div>`;
-}
-function renderGoals(events,players){
-  const goals=events.filter(e=>e.kind==="GOAL").sort((a,b)=>timeOf(a)-timeOf(b));
-  if(!goals.length){$("#goals").innerHTML=`<div class="sub">제공된 원본 데이터에서 득점 이벤트를 찾지 못했습니다.</div>`;return;}
-  $("#goals").innerHTML=goals.map(g=>{
-    const t=timeOf(g);
-    const window=events.filter(e=>e.teamId===g.teamId && e.kind==="PASS" && timeOf(e)<=t && timeOf(e)>=Math.max(0,t-25)).sort((a,b)=>timeOf(a)-timeOf(b)).slice(-8);
-    const seq=window.map((e,i)=>`<span class="seq">${esc(e.playerName)}${e.receiverName?` <span class="arrow">→</span> ${esc(e.receiverName)}`:""}</span>`).join("");
-    return `<article class="goal"><div class="goalhead"><span class="goaltime">${labelTime(t)}</span><span class="goaltype">GOAL · ${esc(g.playerName)}</span></div><div class="sequence">${seq||`<span class="seq">골 직전 패스 이벤트가 원본 데이터에서 제공되지 않음</span>`}</div></article>`;
-  }).join("");
-}
-function renderPasses(events,players,homeId){
-  const passes=events.filter(e=>e.kind==="PASS"&&e.startX!=null&&e.startY!=null&&e.endX!=null&&e.endY!=null&&e.teamId===homeId);
-  const svg=$("#passSvg"); svg.innerHTML="";
-  const top=passes.slice(-140);
-  top.forEach((e,i)=>{
-    const x1=e.startX, y1=e.startY, x2=e.endX, y2=e.endY;
-    // K League coordinates are treated as a 0..100-ish field space. We normalize safely.
-    const X=v=>Math.max(2,Math.min(98,v));
-    const Y=v=>Math.max(2,Math.min(60,v*60/100));
-    const line=document.createElementNS("http://www.w3.org/2000/svg","line");
-    line.setAttribute("x1",X(x1));line.setAttribute("y1",Y(y1));line.setAttribute("x2",X(x2));line.setAttribute("y2",Y(y2));
-    line.setAttribute("stroke","rgba(92,224,170,.62)");line.setAttribute("stroke-width", i<20?"0.65":"0.35");
-    svg.appendChild(line);
+    if (p.game_id || p.gameId) {
+      const teams = parseTeams(text);
+      if (teams) add({
+        home:teams.home, away:teams.away,
+        gameId:p.game_id || p.gameId,
+        roundId:p.round_id || p.roundId || "",
+        round:p.round || p.round_id || "",
+        meetSeq:p.meet_seq || p.meetSeq || "",
+        date:p.game_date || p.gameDate || "",
+        time:p.game_time || p.gameTime || "",
+        url: absoluteUrl(raw)
+      });
+    }
   });
-  $("#passNote").textContent=passes.length?`선택 경기에서 좌표가 제공된 전북 패스 ${passes.length}개를 표시했습니다.`:"좌표가 포함된 패스 이벤트가 제공되지 않았습니다.";
-}
-function renderPlayers(players,events){
-  const rows=players.filter(p=>p.teamId??p.TEAM_ID).map(p=>{
-    const id=String(p.id??p.PLAYER_ID), ev=events.filter(e=>e.playerId===id);
-    const passes=ev.filter(e=>e.kind==="PASS").length, shots=ev.filter(e=>e.kind==="SHOT").length, goals=ev.filter(e=>e.kind==="GOAL").length;
-    return {...p,passes,shots,goals};
-  }).filter(p=>p.passes+p.shots+p.goals>0).sort((a,b)=>(b.goals*100+b.shots*10+b.passes)-(a.goals*100+a.shots*10+a.passes)).slice(0,12);
-  $("#players").innerHTML=rows.length?rows.map(p=>`<div class="player"><div><div class="pname">${esc(p.name??p.PLAYER_NAME??"선수")}</div><div class="pmeta">패스 ${p.passes} · 슈팅 ${p.shots} · 득점 ${p.goals}</div></div><div class="rating">${p.goals?"⚽":""}${p.shots||p.passes}</div></div>`).join(""):`<div class="sub">선수 이벤트가 없습니다.</div>`;
-}
-function renderTactical(ts,events,homeId,awayId){
-  const hp=events.filter(e=>e.teamId===homeId&&e.kind==="PASS"), ap=events.filter(e=>e.teamId===awayId&&e.kind==="PASS");
-  const forward=hp.filter(e=>e.endX!=null&&e.startX!=null&&e.endX>e.startX).length;
-  const backward=hp.filter(e=>e.endX!=null&&e.startX!=null&&e.endX<e.startX).length;
-  const shots=events.filter(e=>e.teamId===homeId&&e.kind==="SHOT").length;
-  const goals=events.filter(e=>e.teamId===homeId&&e.kind==="GOAL").length;
-  const blocks=[];
-  if(hp.length) blocks.push(`<div class="insight"><b>패스 방향</b><br>좌표가 있는 전북 패스 중 전진 방향 ${forward}회, 후방 방향 ${backward}회가 확인됩니다.</div>`);
-  if(shots||goals) blocks.push(`<div class="insight"><b>공격 결과</b><br>원본 이벤트 기준 슈팅 ${shots}회 · 득점 ${goals}회입니다.</div>`);
-  blocks.push(`<div class="insight"><b>해석 원칙</b><br>수치로 확인되지 않는 전술적 사실은 단정하지 않습니다. 제공된 이벤트와 경기 지표에서 확인 가능한 내용만 표시합니다.</div>`);
-  $("#tactical").innerHTML=blocks.join("");
+
+  // 2) 실제 페이지 텍스트에 남는 "전북 : 제주 (1:3)" / "전북 : 제주 20:00" 패턴
+  const bodyText = doc.body ? doc.body.innerText.replace(/\u00a0/g," ") : "";
+  const re = /([가-힣A-Za-z0-9 .·_-]{1,20})\s*:\s*([가-힣A-Za-z0-9 .·_-]{1,20})\s*(?:\((\d+)\s*:\s*(\d+)\)|(\d{1,2}:\d{2}))/g;
+  let m;
+  while ((m = re.exec(bodyText))) {
+    const h = cleanTeam(m[1]), a = cleanTeam(m[2]);
+    if (!h || !a || h === "미정" || a === "미정") continue;
+    add({home:h,away:a,time:m[5] || "",date:""});
+  }
+
+  return found;
 }
 
-async function loadCompetitions(){
-  try{
-    const data=await api("/competitions");
-    const items=Array.isArray(data)?data:(data.items||data.competitions||[]);
-    fillSelect($("#competition"),items,"대회를 선택하세요");
-    setStatus(true,"데이터 API 연결됨");
-  }catch(e){
-    setStatus(false,"API 연결 필요");
-    setError(`실제 K LEAGUE 데이터를 불러오지 못했습니다.\n\n${e.message}\n\n이 HTML은 가짜 데이터를 넣지 않도록 설계되어 있습니다. /api/kleague 브리지 API를 연결하면 대회→연도→라운드→경기가 실제 데이터로 채워집니다.`);
+function parseParams(s) {
+  const out = {};
+  const re = /(?:[?&;\s])([A-Za-z_][A-Za-z0-9_]*)\s*=\s*["']?([^&;"'\s,)]+)/g;
+  let m;
+  while ((m = re.exec(s))) out[m[1]] = decodeURIComponent(m[2]);
+  return out;
+}
+
+function absoluteUrl(raw) {
+  const x = raw.match(/https?:\/\/[^"' )]+/);
+  return x ? x[0] : "";
+}
+
+function cleanTeam(s) {
+  return String(s || "")
+    .replace(/\([^)]*\)/g,"")
+    .replace(/\s+/g," ")
+    .trim();
+}
+
+function parseTeams(text) {
+  const m = text.match(/(.+?)\s*:\s*(.+?)(?:\s*\(|\s+\d{1,2}:\d{2}|$)/);
+  return m ? {home:cleanTeam(m[1]),away:cleanTeam(m[2])} : null;
+}
+
+function fillYears() {
+  year.innerHTML = "";
+  const now = new Date().getFullYear();
+  for (let y = now; y >= 2018; y--) {
+    const o = document.createElement("option");
+    o.value = y; o.textContent = y;
+    year.appendChild(o);
+  }
+  year.value = String(now);
+}
+
+function fillRounds() {
+  round.innerHTML = '<option value="">라운드 선택</option>';
+  // K리그 정규 라운드는 실제 선택 가능한 라운드 번호 자체를 표시합니다.
+  // 경기 데이터는 이후 공식 페이지에서 실제 존재 여부를 확인합니다.
+  const max = league.value === "1" ? 33 : 39;
+  for (let i=1;i<=max;i++) {
+    const o=document.createElement("option");
+    o.value=String(i); o.textContent=i+"라운드";
+    round.appendChild(o);
+  }
+  match.innerHTML='<option value="">경기 선택</option>';
+  analyze.disabled=true;
+}
+
+async function loadMatches() {
+  const y = year.value;
+  const lid = league.value;
+  const r = round.value;
+  if (!r) return;
+
+  setStatus("공식 K LEAGUE 일정 데이터를 조회하는 중입니다…");
+  match.innerHTML='<option value="">조회 중…</option>';
+  analyze.disabled=true;
+
+  /*
+   * 일정 페이지는 월 단위이므로 해당 연도의 모든 월을 조회합니다.
+   * 실제 경기 목록은 응답에서 수집하고 round_id/game_id가 있으면 그대로 사용합니다.
+   */
+  const all = [];
+  for (let month=1; month<=12; month++) {
+    try {
+      const url = OFFICIAL.schedule +
+        "?year=" + encodeURIComponent(y) +
+        "&month=" + String(month).padStart(2,"0") +
+        "&leagueId=" + encodeURIComponent(lid);
+      const html = await getText(url);
+      all.push(...parseScheduleHtml(html,y,lid));
+    } catch(e) {
+      // 한 달 실패 때문에 전체를 가짜 데이터로 채우지 않습니다.
+    }
+  }
+
+  scheduleMatches = all.filter(x => {
+    return !x.round || String(x.round) === String(r) ||
+           String(x.roundId) === String(r);
+  });
+
+  // round_id를 페이지에서 못 얻은 경우, 날짜/경기명만 보여주는 것을 방지합니다.
+  // 실제 matchChart 요청에 필요한 식별자가 있는 경기만 분석 대상으로 허용합니다.
+  const usable = scheduleMatches.filter(x => x.gameId || x.url);
+
+  match.innerHTML='<option value="">경기 선택</option>';
+  usable.forEach((x,i)=>{
+    const o=document.createElement("option");
+    o.value=String(i);
+    o.textContent =
+      (x.date ? x.date+" " : "") +
+      (x.time ? x.time+" " : "") +
+      x.home+" : "+x.away;
+    match.appendChild(o);
+  });
+
+  if (!usable.length) {
+    setStatus(
+      "공식 K LEAGUE 일정 페이지에서 이 라운드의 경기 식별자(game_id)를 확보하지 못했습니다.\n\n"+
+      "이 페이지는 식별자를 확인하지 못한 경기를 임의로 만들어 분석하지 않습니다.\n"+
+      "브라우저 개발자도구 Network에서 K LEAGUE 일정 페이지의 실제 경기 상세 요청을 확인한 뒤 "+
+      "/api/kleague가 그 URL을 전달하도록 연결하면 됩니다.",
+      "notice"
+    );
+    return;
+  }
+
+  setStatus("실제 경기 "+usable.length+"건을 확인했습니다. 경기를 선택하세요.");
+}
+
+async function loadChart() {
+  const idx = Number(match.value);
+  const usable = scheduleMatches.filter(x => x.gameId || x.url);
+  selectedMatch = usable[idx];
+  if (!selectedMatch) return;
+
+  setStatus("선택한 경기의 실제 경기 분석 데이터를 조회하는 중입니다…");
+
+  const urls = [];
+
+  if (selectedMatch.url) urls.push(selectedMatch.url);
+
+  const q = new URLSearchParams();
+  if (selectedMatch.year) q.set("meet_year", selectedMatch.year);
+  if (selectedMatch.meetSeq) q.set("meet_seq", selectedMatch.meetSeq);
+  if (selectedMatch.gameId) q.set("game_id", selectedMatch.gameId);
+  if (selectedMatch.roundId) q.set("round_id", selectedMatch.roundId);
+
+  urls.push(OFFICIAL.matchChartPre + "?" + q.toString());
+  urls.push(OFFICIAL.matchChart + "?" + q.toString());
+
+  let html = "";
+  let lastErr = "";
+  for (const u of urls) {
+    try {
+      html = await getText(u);
+      if (html && (html.includes("chartCompDataSet") || html.includes("chartMatchDataSet"))) break;
+    } catch(e) {
+      lastErr = e.message;
+    }
+  }
+
+  if (!html || !html.includes("chartCompDataSet")) {
+    setStatus(
+      "실제 K LEAGUE 경기 분석 데이터를 가져오지 못했습니다.\n\n"+
+      (lastErr || "matchChart 응답에서 chartCompDataSet을 찾지 못했습니다.")+
+      "\n\n가짜 데이터는 표시하지 않습니다.",
+      "error"
+    );
+    return;
+  }
+
+  try {
+    chartData = parseChartData(html);
+    renderReport(chartData);
+    report.classList.remove("hidden");
+    setStatus("실제 K LEAGUE 데이터로 분석을 표시했습니다.");
+  } catch(e) {
+    setStatus("K LEAGUE 응답을 분석하는 중 오류가 발생했습니다.\n"+e.message+"\n\n가짜 데이터는 표시하지 않습니다.","error");
   }
 }
-$("#competition").addEventListener("change",async e=>{
-  clearError(); $("#year").disabled=true; $("#round").disabled=true; $("#match").disabled=true; $("#analyzeBtn").disabled=true;
-  if(!e.target.value)return;
-  try{const d=await api("/seasons",{competitionId:e.target.value});fillSelect($("#year"),d.items||d,"연도를 선택하세요");}catch(err){setError(err);}
-});
-$("#year").addEventListener("change",async e=>{
-  $("#round").disabled=true;$("#match").disabled=true;$("#analyzeBtn").disabled=true;if(!e.target.value)return;
-  try{const d=await api("/rounds",{competitionId:$("#competition").value,season:e.target.value});fillSelect($("#round"),d.items||d,"라운드를 선택하세요");}catch(err){setError(err);}
-});
-$("#round").addEventListener("change",async e=>{
-  $("#match").disabled=true;$("#analyzeBtn").disabled=true;if(!e.target.value)return;
-  try{
-    const d=await api("/matches",{competitionId:$("#competition").value,season:$("#year").value,round:e.target.value});
-    state.matches=d.items||d;fillSelect($("#match"),state.matches.map(x=>({id:x.id??x.GAME_ID,name:x.name??`${x.home??x.HOME_TEAM_NAME} vs ${x.away??x.AWAY_TEAM_NAME} · ${x.date??x.GAME_DATE??""}`})),"경기를 선택하세요");
-  }catch(err){setError(err);}
-});
-$("#match").addEventListener("change",async e=>{
-  $("#analyzeBtn").disabled=!e.target.value;
-  if(!e.target.value)return;
-  try{
-    const d=await api("/players",{gameId:e.target.value});state.players=d.items||d;
-    fillSelect($("#player"),state.players.map(x=>({id:x.id??x.PLAYER_ID,name:x.name??x.PLAYER_NAME??`선수 ${x.PLAYER_ID}`})),"선수를 선택하세요");
-  }catch(err){setError(err);}
-});
-document.querySelectorAll(".mode").forEach(b=>b.addEventListener("click",()=>{
-  document.querySelectorAll(".mode").forEach(x=>x.classList.remove("active"));b.classList.add("active");state.mode=b.dataset.mode;
-  $("#playerWrap").classList.toggle("show",state.mode==="player");
-}));
-$("#analyzeBtn").addEventListener("click",async()=>{
-  clearError();loading(true);$("#analyzeBtn").disabled=true;
-  try{
-    const gameId=$("#match").value;
-    const params={gameId};
-    if(state.mode==="player"){ if(!$("#player").value)throw new Error("선수를 선택해주세요."); params.playerId=$("#player").value; }
-    const data=await api("/report",params);
-    renderReport(data);
-  }catch(e){setError(e);}
-  finally{loading(false);$("#analyzeBtn").disabled=false;}
-});
 
-function buildPostText(){
-  const d=state.report,m=d?.match||{};if(!d)return "";
-  const events=(d.events||[]).map(e=>normalizeEvent(e,d.players||[]));
-  const goals=events.filter(e=>e.kind==="GOAL");
-  const home=m.home??m.homeTeamName??"홈팀",away=m.away??m.awayTeamName??"원정팀";
-  const lines=[
-    `[${m.competitionName??"K LEAGUE"} ${m.roundName??""}]`,
-    `${home} ${m.homeScore??"-"} : ${m.awayScore??"-"} ${away}`,
-    `${m.date??""} ${m.stadium??""}`.trim(),"",
-    `⚽ 득점 ${goals.length}개`
-  ];
-  goals.forEach(g=>lines.push(`- ${labelTime(timeOf(g))} ${g.playerName}`));
-  lines.push("",`📊 실제 이벤트: 패스 ${events.filter(e=>e.kind==="PASS").length}회 · 슈팅 ${events.filter(e=>e.kind==="SHOT").length}회`);
-  lines.push("","※ K LEAGUE 데이터 포털에서 반환된 기록을 재가공한 리포트입니다.");
-  return lines.join("\n");
+function extractVar(html,name) {
+  const re = new RegExp("var\\s+"+name+"\\s*=\\s*(\\[\\[.*?\\]\\]);","s");
+  const m = html.match(re);
+  if (!m) throw new Error(name+"을 찾지 못했습니다.");
+  return Function('"use strict";return ('+m[1]+')')();
 }
-$("#copyText").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(buildPostText());$("#copyText").textContent="복사 완료";setTimeout(()=>$("#copyText").textContent="게시글 복사",1200);}catch(e){setError(new Error("클립보드 복사 권한이 없습니다."));}});
-$("#copyImage").addEventListener("click",async()=>{
-  const report=$("#report");
-  try{
-    const canvas=document.createElement("canvas"),rect=report.getBoundingClientRect(),scale=2;
-    canvas.width=rect.width*scale;canvas.height=report.scrollHeight*scale;
-    const ctx=canvas.getContext("2d");ctx.fillStyle="#08090c";ctx.fillRect(0,0,canvas.width,canvas.height);
-    // Clipboard image from arbitrary DOM requires a renderer such as html2canvas.
-    // No third-party library is silently loaded here. Add html2canvas if PNG clipboard is desired.
-    throw new Error("이미지 복사는 html2canvas 같은 렌더러를 추가한 뒤 활성화할 수 있습니다. 게시글 복사는 바로 동작합니다.");
-  }catch(e){setError(e);}
+
+function parseChartData(html) {
+  const matchSet = extractVar(html,"chartMatchDataSet");
+  const compSet = extractVar(html,"chartCompDataSet");
+
+  const meta = matchSet[0]?.[0];
+  const h2h = matchSet[1]?.[0];
+  const recent = matchSet[2]?.[0];
+  const recentList = matchSet[3] || [];
+  if (!meta || !compSet?.length) throw new Error("필수 경기 데이터가 없습니다.");
+
+  return {meta,h2h,recent,recentList,attack:compSet[0]||[],pass:compSet[1]||[],def:compSet[2]||[]};
+}
+
+function num(v){ const n=Number(v); return Number.isFinite(n)?n:0; }
+function pct(a,b){ return b ? (a/b*100).toFixed(1)+"%" : "-"; }
+
+function renderReport(d) {
+  $("homeName").textContent=d.meta.H_Name || d.meta.H_S_Name || d.meta.home_team || "-";
+  $("awayName").textContent=d.meta.A_Name || d.meta.A_S_Name || d.meta.away_team || "-";
+  $("homeId").textContent=d.meta.home_team || "";
+  $("awayId").textContent=d.meta.away_team || "";
+  $("score").textContent=(d.meta.home_score != null && d.meta.away_score != null)
+    ? d.meta.home_score+" : "+d.meta.away_score : "경기";
+  $("matchMeta").innerHTML=
+    escapeHtml(d.meta.game_date||"")+
+    (d.meta.game_time ? " "+escapeHtml(d.meta.game_time):"")+
+    "<br>"+escapeHtml(d.meta.field_Name||"");
+
+  if (d.h2h) {
+    $("h2hKpi").innerHTML =
+      kpi(d.h2h.win_qty,"전북/홈 승")+
+      kpi(d.h2h.loss_qty,"제주/원정 승")+
+      kpi(d.h2h.tie_qty,"무승부");
+    $("h2hGoals").innerHTML = simpleBars(
+      [["홈",num(d.h2h.gain_goal_qty)],["원정",num(d.h2h.loss_goal_qty)]]
+    );
+  }
+
+  if (d.recent) {
+    $("recent10").innerHTML =
+      kpi(d.recent.win,"홈 승")+
+      kpi(d.recent.loss,"원정 승")+
+      kpi(d.recent.draw,"무승부");
+  }
+
+  renderMetrics("attack",d.attack);
+}
+
+function kpi(n,l){
+  return '<div class="kpi"><div class="n">'+escapeHtml(n)+'</div><div class="l">'+escapeHtml(l)+'</div></div>';
+}
+
+function simpleBars(items){
+  const max=Math.max(...items.map(x=>x[1]),1);
+  return items.map((x,i)=>
+    '<div class="barrow"><div style="text-align:right;font-weight:700">'+escapeHtml(x[0])+' '+x[1]+'</div>'+
+    '<div class="barwrap"><div class="'+(i===0?"barL":"barR")+'" style="width:'+(x[1]/max*100)+'%"></div></div>'+
+    '<div></div></div>'
+  ).join("");
+}
+
+const defs = {
+  attack:[
+    ["GOAL_CNT","득점"],["ASSIST_CNT","도움"],["SHOT","슈팅"],["SHOT_ON_TARGET","유효슈팅"],
+    ["DEFENDER_BLOCKED_SHOT","블락된 슈팅"],["SHOOTING_OFF","벗어난 슈팅"],["SHOOTING_IN_PA","PA내 슈팅"],
+    ["SHOOTING_OUT_PA","PA외 슈팅"],["OFFSIDE","오프사이드"],["FREEKICK_SHOT_ON_TARGET","프리킥 유효슈팅"],
+    ["F_CROSS_ACC","프리킥 크로스 성공"],["CORNER","코너킥"],["THROW_INS","스로인"],["DRIBBLE_SUCCESS","드리블 돌파 성공"]
+  ],
+  pass:[
+    ["PASS_ACC","패스 성공"],["EXTRA_ATT_AND_KEYPASS","키패스"],["DEFS_AREA_PASS_SUCCESS","수비진영 패스"],
+    ["LONG_PASS_SUCCESS","롱패스"],["SHORT_PASS_SUCCESS","단거리 패스"],["PASS_F_ACC_CA_DEG","전진패스"],
+    ["MEDIUM_PASS_SUCCESS","중거리 패스"],["TRANSVERSE_PASS_SUCCESS","횡패스"],["PASS_B_ACC_CA_DEG","후방패스"],
+    ["CROSS_ACC","크로스"],["ATT_AREA_PASS_SUCCESS","공격진영 패스"],["MIDDLE_AREA_PASS_SUCCESS","중앙지역 패스"],
+    ["CONTROL_UNDER_PRESSURE","탈압박"]
+  ],
+  def:[
+    ["TACKLE_SUCCESS","태클"],["AIR_CHAG_WON","경합(공중)"],["CHAG_WON","경합(지상)"],
+    ["INTERCEPT","인터셉트"],["KICK_OUT","클리어링"],["CUT_OFF","차단"],["BALL_RECOVERIE","획득"],
+    ["BLOCKING_SHOOT","블락"],["BALL_MISS","볼미스"],["FOUL","파울"],["FOUL_OPP","피파울"],
+    ["warn_qty","경고"],["exit_qty","퇴장"],["GOAL_CONCEDED","실점"],["CATCH","캐칭"],
+    ["PUNCH","펀칭"],["GOAL_KICK_SUCCESS","골킥"],["AIR_CLEARANCES_SUCCESS","공중 클리어링"]
+  ]
+};
+
+function renderMetrics(cat, rows){
+  const homeId=chartData.meta.home_team;
+  const awayId=chartData.meta.away_team;
+  const home=rows.find(x=>x.team_id===homeId) || rows[0];
+  const away=rows.find(x=>x.team_id===awayId) || rows[1];
+  if(!home || !away) {
+    $("metrics").innerHTML='<div class="status error">선택한 경기의 '+cat+' 실제 데이터가 없습니다.</div>';
+    return;
+  }
+
+  $("metrics").innerHTML=defs[cat].map(([key,label])=>{
+    const a=num(home[key]), b=num(away[key]), max=Math.max(a,b,1);
+    return '<div class="barrow">'+
+      '<div style="text-align:right;font-weight:800;color:var(--home)">'+a+'</div>'+
+      '<div class="metric">'+escapeHtml(label)+'</div>'+
+      '<div style="font-weight:800;color:var(--away)">'+b+'</div>'+
+      '</div>'+
+      '<div class="barrow" style="margin-top:-7px">'+
+      '<div><div class="barwrap"><div class="barL" style="width:'+(a/max*100)+'%"></div></div></div>'+
+      '<div></div>'+
+      '<div><div class="barwrap"><div class="barR" style="width:'+(b/max*100)+'%"></div></div></div>'+
+      '</div>';
+  }).join("");
+}
+
+league.addEventListener("change",fillRounds);
+year.addEventListener("change",fillRounds);
+round.addEventListener("change",loadMatches);
+match.addEventListener("change",()=>{ analyze.disabled = match.value===""; });
+analyze.addEventListener("click",loadChart);
+
+document.querySelectorAll(".tab").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+    btn.classList.add("active");
+    renderMetrics(btn.dataset.cat,chartData[btn.dataset.cat]||[]);
+  });
 });
 
-loadCompetitions();
+fillYears();
+fillRounds();
+setStatus(
+  "K LEAGUE 공식 데이터 연결 방식으로 준비했습니다.\n"+
+  "브라우저에서 직접 실행할 경우 CORS가 발생할 수 있으므로 /api/kleague 프록시 연결을 권장합니다."
+);
 </script>
 </body>
 </html>
