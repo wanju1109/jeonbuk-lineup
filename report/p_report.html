@@ -165,14 +165,23 @@ const OFFICIAL = {
 };
 
 /*
- * 브라우저 CORS를 피하기 위해 공개 GET 릴레이를 먼저 사용하고,
- * 실패하면 같은 사이트의 /api/kleague 프록시를 사용합니다.
+ * GitHub Pages에서는 portal.kleague.com이 CORS를 허용하지 않기 때문에
+ * 브라우저가 K LEAGUE 원본을 직접 읽을 수 없습니다.
  *
- * 릴레이는 데이터를 생성하지 않습니다. 지정한 URL의 K LEAGUE 응답을
- * 그대로 전달하는 역할만 합니다.
+ * 따라서 corsproxy.io를 통해 서버 측에서 K LEAGUE HTML을 받아옵니다.
+ * 이 릴레이는 경기/통계를 생성하지 않고 원본 응답을 전달하는 용도입니다.
+ *
+ * GitHub.io는 corsproxy.io의 무료 개발용 허용 origin에 포함되어 있습니다.
  */
 const RELAYS = [
+  // GitHub Pages에서 사용할 수 있는 CORS relay.
+  // K LEAGUE 원본 HTML을 서버 측에서 받아 그대로 반환합니다.
+  "https://corsproxy.io/?url=",
+
+  // 보조 relay
   "https://api.allorigins.win/raw?url=",
+
+  // 사용자가 직접 구성한 같은 사이트 proxy가 있으면 마지막으로 시도
   "/api/kleague?url="
 ];
 
@@ -195,18 +204,11 @@ function escapeHtml(v) {
   }[s]));
 }
 
-function officialUrl(url) {
-  if (!PROXY_BASE) return url;
-  return PROXY_BASE + "?url=" + encodeURIComponent(url);
-}
-
 async function getText(url) {
   let last = null;
   for (const relay of RELAYS) {
     try {
-      const target = relay.startsWith("http")
-        ? relay + encodeURIComponent(url)
-        : relay + encodeURIComponent(url);
+      const target = relay + encodeURIComponent(url);
 
       const r = await fetch(target, {
         method:"GET",
@@ -345,7 +347,7 @@ async function loadMatches() {
   const r = round.value;
   if (!r) return;
 
-  setStatus("공식 K LEAGUE 일정 데이터를 조회하는 중입니다…");
+  setStatus("K LEAGUE 공식 일정 데이터를 조회하는 중입니다… (GitHub Pages → CORS relay → K LEAGUE)");
   match.innerHTML='<option value="">조회 중…</option>';
   analyze.disabled=true;
 
@@ -353,19 +355,21 @@ async function loadMatches() {
    * 일정 페이지는 월 단위이므로 해당 연도의 모든 월을 조회합니다.
    * 실제 경기 목록은 응답에서 수집하고 round_id/game_id가 있으면 그대로 사용합니다.
    */
-  const all = [];
+  const requests = [];
   for (let month=1; month<=12; month++) {
-    try {
-      const url = OFFICIAL.schedule +
-        "?year=" + encodeURIComponent(y) +
-        "&month=" + String(month).padStart(2,"0") +
-        "&leagueId=" + encodeURIComponent(lid);
-      const html = await getText(url);
-      all.push(...parseScheduleHtml(html,y,lid));
-    } catch(e) {
-      // 한 달 실패 때문에 전체를 가짜 데이터로 채우지 않습니다.
-    }
+    const url = OFFICIAL.schedule +
+      "?year=" + encodeURIComponent(y) +
+      "&month=" + String(month).padStart(2,"0") +
+      "&leagueId=" + encodeURIComponent(lid);
+    requests.push(
+      getText(url)
+        .then(html => parseScheduleHtml(html, y, lid))
+        .catch(() => [])
+    );
   }
+
+  const pages = await Promise.all(requests);
+  const all = pages.flat();
 
   scheduleMatches = all.filter(x => {
     return !x.round || String(x.round) === String(r) ||
