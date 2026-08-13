@@ -25,7 +25,6 @@
             padding: 20px;
         }
 
-        /* Top Navigation & Filters */
         .top-nav {
             display: flex;
             gap: 15px;
@@ -51,7 +50,6 @@
             font-weight: bold;
         }
 
-        /* Temp Input Data Section */
         .data-input {
             background: var(--bg-panel);
             padding: 15px;
@@ -61,7 +59,7 @@
         }
         .data-input textarea {
             width: 100%; height: 60px; background: #000; color: #0f0; 
-            border: 1px solid var(--border-color); padding: 10px; box-sizing: border-box;
+            border: 1px solid var(--border-color); padding: 10px; box-sizing: border-box; font-family: monospace;
         }
         .btn {
             background: var(--jb-green); color: white; border: none;
@@ -69,7 +67,6 @@
             margin-top: 10px;
         }
         
-        /* Main Dashboard Grid */
         .dashboard {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -83,7 +80,6 @@
             padding: 20px;
         }
 
-        /* Score Board */
         .score-board {
             display: flex;
             justify-content: space-between;
@@ -96,20 +92,17 @@
         .score-board h2 { margin: 0; color: var(--jb-green); font-size: 24px; }
         .score-board .score { font-size: 48px; font-weight: bold; margin: 0 20px; }
         
-        /* Pitch Area */
+        /* Pitch Area with SVG support */
         .pitch-container {
-            background: #1e3525;
-            border: 1px solid var(--jb-green-dark);
-            height: 350px;
+            background: #28a745;
+            border: 2px solid white;
+            height: 380px;
             border-radius: 8px;
             position: relative;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
+            overflow: hidden;
         }
+        svg { width: 100%; height: 100%; }
 
-        /* Player Stats Area */
         .player-profile { text-align: center; }
         .player-profile h3 { margin: 10px 0 5px 0; }
         .stat-grid {
@@ -127,7 +120,6 @@
 </head>
 <body>
 
-    <!-- Dynamic Filter Navigation with Smart Match Separation -->
     <div class="top-nav">
         <div class="filter-group">
             <label>대회</label>
@@ -135,26 +127,22 @@
         </div>
         <div class="filter-group">
             <label>라운드 & 매치 선택</label>
-            <select id="sel-round" onchange="onRoundChange()">
-                <!-- Dynamically populated and separated by Played / Upcoming -->
-            </select>
+            <select id="sel-round" onchange="onRoundChange()"></select>
         </div>
         <div class="filter-group">
             <label>선수 포커스</label>
-            <select id="sel-player">
+            <select id="sel-player" onchange="processData()">
                 <option value="ALL">전체 선수 리포트</option>
             </select>
         </div>
     </div>
 
-    <!-- Data Input -->
     <div class="data-input">
-        <label style="font-size: 12px; color: #8b949e;">크롬 익스텐션 자동 연동 또는 수동 JSON 입력 영역</label>
+        <label style="font-size: 12px; color: #8b949e;">크롬 익스텐션 자동 연동 데이터 영역</label>
         <textarea id="rawData" placeholder="데이터가 여기에 자동으로 들어옵니다..."></textarea>
-        <button class="btn" onclick="processData()">분석 리포트 강제 갱신</button>
+        <button class="btn" onclick="processData()">분석 리포트 갱신 및 궤적 그리기</button>
     </div>
 
-    <!-- Main Dashboard -->
     <div class="dashboard" id="export-area">
         <div class="panel">
             <div class="score-board">
@@ -162,14 +150,33 @@
                     <h2 id="home-team">전북현대</h2>
                     <span style="font-size:12px; color:var(--text-muted);">HOME</span>
                 </div>
-                <div class="score" id="match-score">2 - 1</div>
+                <div class="score" id="match-score">1 - 3</div>
                 <div>
-                    <h2 id="away-team" style="color:#ff4d4d;">제주SK</h2>
+                    <h2 id="away-team" style="color:#ff4d4d;">제주 유나이티드</h2>
                     <span style="font-size:12px; color:var(--text-muted);">AWAY</span>
                 </div>
             </div>
-            <h4 style="border-bottom: 1px solid var(--border-color); padding-bottom:10px;" id="match-info-title">22라운드 경기 분석</h4>
-            <div class="pitch-container" id="pitch-viz"></div>
+            <h4 style="border-bottom: 1px solid var(--border-color); padding-bottom:10px;" id="match-info-title">22라운드 전북 vs 제주 유나이티드 분석 리포트</h4>
+            
+            <!-- Pitch Visualization Container -->
+            <div class="pitch-container">
+                <svg id="pitch-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <defs>
+                        <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff4d4d" />
+                        </marker>
+                        <marker id="arrow-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#d8b53a" />
+                        </marker>
+                    </defs>
+                    <!-- Pitch Markings -->
+                    <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+                    <circle cx="50" cy="50" r="15" stroke="rgba(255,255,255,0.4)" stroke-width="0.5" fill="none"/>
+                    <rect x="0" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.4)" stroke-width="0.5" fill="none"/>
+                    <rect x="83.5" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.4)" stroke-width="0.5" fill="none"/>
+                    <g id="tactics-layer"></g>
+                </svg>
+            </div>
         </div>
 
         <div class="panel">
@@ -178,10 +185,10 @@
                 <span style="font-size: 12px; color: var(--text-muted);" id="player-role">전북 현대 모터스</span>
                 
                 <div class="stat-grid">
-                    <div class="stat-item">평점 <span class="stat-value" id="stat-rating">8.1</span></div>
-                    <div class="stat-item">슈팅(유효) <span class="stat-value" id="stat-shot">16 (7)</span></div>
-                    <div class="stat-item">패스 성공률 <span class="stat-value" id="stat-pass">89%</span></div>
-                    <div class="stat-item">키패스 <span class="stat-value" id="stat-key">10</span></div>
+                    <div class="stat-item">평점 <span class="stat-value" id="stat-rating">6.8</span></div>
+                    <div class="stat-item">슈팅(유효) <span class="stat-value" id="stat-shot">12 (4)</span></div>
+                    <div class="stat-item">패스 성공률 <span class="stat-value" id="stat-pass">84%</span></div>
+                    <div class="stat-item">키패스 <span class="stat-value" id="stat-key">7</span></div>
                 </div>
 
                 <div class="chart-container">
@@ -192,93 +199,131 @@
     </div>
 
     <script>
-        // Mock 2026 Season Schedule Data (Separating Played and Upcoming matches)
+        // Corrected Schedule Data reflecting actual match results (e.g., Round 22 Jeju loss 1-3)
         const jeonbukSchedule2026 = [
-            { round: 20, opponent: "대전하나시티즌", date: "2026-07-25", status: "played", score: "3-1", result: "승" },
-            { round: 21, opponent: "울산 HD", date: "2026-08-01", status: "played", score: "0-0", result: "무" },
-            { round: 22, opponent: "제주 유나이티드", date: "2026-08-08", status: "played", score: "2-1", result: "승" }, // Current benchmark
-            { round: 23, opponent: "포항 스틸러스", date: "2026-08-16", status: "upcoming", score: "- : -", result: "예정" },
-            { round: 24, opponent: "FC서울", date: "2026-08-23", status: "upcoming", score: "- : -", result: "예정" },
-            { round: 25, opponent: "수원 FC", date: "2026-08-30", status: "upcoming", score: "- : -", result: "예정" }
+            { round: 20, opponent: "대전하나시티즌", score: "3-1", status: "played" },
+            { round: 21, opponent: "울산 HD", score: "0-0", status: "played" },
+            { round: 22, opponent: "제주 유나이티드", score: "1-3", status: "played" }, // Corrected to 1-3 loss
+            { round: 23, opponent: "포항 스틸러스", score: "- : -", status: "upcoming" },
+            { round: 24, opponent: "FC서울", score: "- : -", status: "upcoming" }
         ];
 
         let radarChartInstance = null;
 
-        // Initialize Round Selector with Grouping (Played vs Upcoming)
         function initRounds() {
             const roundSelect = document.getElementById('sel-round');
             roundSelect.innerHTML = '';
 
-            // Group 1: Played Matches
             const playedGroup = document.createElement('optgroup');
-            playedGroup.label = "🏁 치러진 경기 (Match Results)";
-
-            // Group 2: Upcoming Matches
+            playedGroup.label = "🏁 치러진 경기";
             const upcomingGroup = document.createElement('optgroup');
-            upcomingGroup.label = "⏳ 진행 예정 경기 (Upcoming)";
+            upcomingGroup.label = "⏳ 진행 예정 경기";
 
             jeonbukSchedule2026.forEach(match => {
-                const option = document.option || document.createElement('option');
+                const option = document.createElement('option');
                 option.value = match.round;
-                
                 if (match.status === 'played') {
-                    option.text = `${match.round}라운드 vs ${match.opponent} (${match.score} ${match.result})`;
+                    option.text = `${match.round}라운드 vs ${match.opponent} (${match.score})`;
                     playedGroup.appendChild(option);
                 } else {
-                    option.text = `${match.round}라운드 vs ${match.opponent} [경기 예정]`;
+                    option.text = `${match.round}라운드 vs ${match.opponent} [예정]`;
                     upcomingGroup.appendChild(option);
                 }
             });
 
             roundSelect.appendChild(playedGroup);
             roundSelect.appendChild(upcomingGroup);
-
-            // Default select round 22 (Jeonbuk vs Jeju)
-            roundSelect.value = "22";
+            roundSelect.value = "22"; // Default to Jeju match
             onRoundChange();
         }
 
-        // When user changes round, update scoreboard dynamically
         function onRoundChange() {
-            const roundSelect = document.getElementById('sel-round');
-            const selectedRoundNum = roundSelect.value;
-            const match = jeonbukSchedule2026.find(m => m.round == selectedRoundNum);
-
+            const roundNum = document.getElementById('sel-round').value;
+            const match = jeonbukSchedule2026.find(m => m.round == roundNum);
             if (match) {
                 document.getElementById('away-team').innerText = match.opponent;
                 document.getElementById('match-score').innerText = match.score;
                 document.getElementById('match-info-title').innerText = `${match.round}라운드 전북 vs ${match.opponent} 분석 리포트`;
-                
-                if(match.status === 'upcoming') {
-                    document.getElementById('match-score').style.color = '#8b949e';
-                } else {
-                    document.getElementById('match-score').style.color = '#c9d1d9';
-                }
             }
         }
 
         initRounds();
 
-        // Process injected JSON data
+        // Process Injected Data and Render on Pitch SVG
         function processData() {
             const rawData = document.getElementById('rawData').value;
+            const selectedPlayer = document.getElementById('sel-player').value;
             let events = [];
+
+            const tacticsLayer = document.getElementById('tactics-layer');
+            tacticsLayer.innerHTML = ''; // Clear previous drawings
+
             try {
-                if(rawData.trim() !== '') {
+                if (rawData.trim() !== '') {
                     events = JSON.parse(rawData);
                     if (!Array.isArray(events)) events = [events];
-                    
+
+                    // Populate player dropdown if empty
                     const playerSelect = document.getElementById('sel-player');
-                    playerSelect.innerHTML = '<option value="ALL">전체 선수 리포트</option>';
-                    const uniquePlayers = [...new Set(events.filter(e => e.back_no).map(e => e.back_no))];
-                    uniquePlayers.sort((a,b) => a - b).forEach(num => {
-                        playerSelect.add(new Option(`No.${num}`, num));
+                    if(playerSelect.options.length <= 1) {
+                        const uniquePlayers = [...new Set(events.filter(e => e.back_no).map(e => e.back_no))];
+                        uniquePlayers.sort((a,b) => a - b).forEach(num => {
+                            playerSelect.add(new Option(`No.${num}`, num));
+                        });
+                    }
+
+                    // Draw events on SVG pitch
+                    events.forEach(event => {
+                        if (selectedPlayer !== 'ALL' && String(event.back_no) !== selectedPlayer) return;
+                        if (event.START_POINT_X === undefined) return;
+
+                        const sx = event.START_POINT_X;
+                        const sy = event.START_POINT_Y;
+                        const ex = event.END_POINT_X !== undefined ? event.END_POINT_X : sx;
+                        const ey = event.END_POINT_Y !== undefined ? event.END_POINT_Y : sy;
+
+                        const isShot = event.TYPE_DETAIL_CD === 'MST' || event.TYPE_DETAIL_CD === 'GL' || event.TYPE_DETAIL_CD === 'ST';
+                        const color = isShot ? '#ff4d4d' : '#d8b53a';
+                        const marker = isShot ? 'url(#arrow-red)' : 'url(#arrow-gold)';
+
+                        // Draw line
+                        if (sx !== ex || sy !== ey) {
+                            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                            line.setAttribute("x1", sx); line.setAttribute("y1", sy);
+                            line.setAttribute("x2", ex); line.setAttribute("y2", ey);
+                            line.setAttribute("stroke", color);
+                            line.setAttribute("stroke-width", "0.8");
+                            line.setAttribute("marker-end", marker);
+                            tacticsLayer.appendChild(line);
+                        }
+
+                        // Draw dot
+                        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                        circle.setAttribute("cx", sx); circle.setAttribute("cy", sy);
+                        circle.setAttribute("r", "2.5");
+                        circle.setAttribute("fill", "#002e18");
+                        circle.setAttribute("stroke", color);
+                        circle.setAttribute("stroke-width", "0.8");
+                        tacticsLayer.appendChild(circle);
+
+                        // Draw back number text
+                        if (event.back_no) {
+                            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                            text.setAttribute("x", sx); text.setAttribute("y", sy - 3.5);
+                            text.setAttribute("fill", "white");
+                            text.setAttribute("font-size", "3.5");
+                            text.setAttribute("font-weight", "bold");
+                            text.setAttribute("text-anchor", "middle");
+                            text.textContent = event.back_no;
+                            tacticsLayer.appendChild(text);
+                        }
                     });
                 }
-                alert("✨ 선택한 라운드 및 데이터가 성공적으로 반영되었습니다!");
             } catch(e) {
-                alert("데이터 형식 에러가 발생했습니다.");
+                console.error("Rendering error:", e);
             }
+
+            updateRadarChart();
         }
 
         function updateRadarChart() {
@@ -290,8 +335,8 @@
                 data: {
                     labels: ['공격', '슈팅', '패스', '드리블', '피지컬', '수비'],
                     datasets: [{
-                        label: '팀 전술 스탯',
-                        data: [85, 70, 92, 88, 75, 60],
+                        label: '전술 스탯',
+                        data: [75, 65, 84, 80, 70, 65],
                         backgroundColor: 'rgba(0, 166, 81, 0.2)',
                         borderColor: '#00a651',
                         pointBackgroundColor: '#00a651',
