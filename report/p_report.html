@@ -173,17 +173,16 @@ const OFFICIAL = {
  *
  * GitHub.io는 corsproxy.io의 무료 개발용 허용 origin에 포함되어 있습니다.
  */
-const RELAYS = [
-  // GitHub Pages에서 사용할 수 있는 CORS relay.
-  // K LEAGUE 원본 HTML을 서버 측에서 받아 그대로 반환합니다.
-  "https://corsproxy.io/?url=",
-
-  // 보조 relay
-  "https://api.allorigins.win/raw?url=",
-
-  // 사용자가 직접 구성한 같은 사이트 proxy가 있으면 마지막으로 시도
-  "/api/kleague?url="
-];
+const CONFIG = {
+  // Recommended: deploy kleague-proxy.js as a Cloudflare Worker and put
+  // the Worker URL here. Leave empty only for the public relay fallback.
+  // Example: "https://kleague-proxy.example.workers.dev"
+  PROXY_BASE: "",
+  PUBLIC_RELAYS: [
+    "https://r.jina.ai/",
+    "https://api.allorigins.win/raw?url="
+  ]
+};
 
 const $ = id => document.getElementById(id);
 const league = $("league"), year = $("year"), round = $("round"), match = $("match");
@@ -205,27 +204,49 @@ function escapeHtml(v) {
 }
 
 async function getText(url) {
-  let last = null;
-  for (const relay of RELAYS) {
-    try {
-      const target = relay + encodeURIComponent(url);
+  const attempts = [];
 
-      const r = await fetch(target, {
-        method:"GET",
-        cache:"no-store"
-      });
+  if (CONFIG.PROXY_BASE) {
+    attempts.push({
+      name: "Cloudflare Worker",
+      target: CONFIG.PROXY_BASE.replace(/\/$/, "") + "?url=" + encodeURIComponent(url),
+      headers: {"Accept":"text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8"}
+    });
+  }
+
+  attempts.push({
+    name: "Jina Reader",
+    target: "https://r.jina.ai/" + url,
+    headers: {
+      "Accept":"text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8",
+      "X-Respond-With":"html",
+      "X-Engine":"browser",
+      "X-Timeout":"20"
+    }
+  });
+
+  attempts.push({
+    name: "allOrigins",
+    target: "https://api.allorigins.win/raw?url=" + encodeURIComponent(url),
+    headers: {"Accept":"text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.8"}
+  });
+
+  let last = null;
+  for (const a of attempts) {
+    try {
+      const r = await fetch(a.target, {method:"GET",cache:"no-store",headers:a.headers});
       const text = await r.text();
       if (!r.ok) {
-        last = new Error("HTTP " + r.status + ": " + text.slice(0,500));
+        last = new Error(a.name + " HTTP " + r.status + ": " + text.slice(0,300));
         continue;
       }
       if (text && text.length > 50) return text;
-      last = new Error("빈 응답");
+      last = new Error(a.name + " 빈 응답");
     } catch(e) {
-      last = e;
+      last = new Error(a.name + ": " + (e?.message || e));
     }
   }
-  throw last || new Error("데이터 릴레이 요청 실패");
+  throw last || new Error("K LEAGUE 데이터 릴레이 요청 실패");
 }
 
 /*
@@ -277,6 +298,24 @@ function parseScheduleHtml(html, y, leagueId) {
       });
     }
   });
+
+  // 2) Inline JS/object data may contain GAME_ID. Use it only when a matching
+  // anchor can be tied to that exact id; never invent a game from a team name alone.
+  const rawGameIds = [...html.matchAll(/(?:GAME_ID|game_id|gameId)\s*[:=]\s*["']?([0-9]+)["']?/g)].map(x=>x[1]);
+  if (rawGameIds.length) {
+    const uniqueIds = [...new Set(rawGameIds)];
+    const links = [...doc.querySelectorAll("a[href]")];
+    uniqueIds.forEach(gameId => {
+      const hit = links.find(a => {
+        const href = a.getAttribute("href") || "";
+        return href.includes("game_id=" + gameId) || href.includes("gameId=" + gameId);
+      });
+      if (hit) {
+        const teams = parseTeams((hit.textContent||"").replace(/\s+/g," ").trim());
+        if (teams) add({home:teams.home,away:teams.away,gameId,url:hit.href});
+      }
+    });
+  }
 
   // 2) 실제 페이지 텍스트에 남는 "전북 : 제주 (1:3)" / "전북 : 제주 20:00" 패턴
   const bodyText = doc.body ? doc.body.innerText.replace(/\u00a0/g," ") : "";
@@ -347,7 +386,7 @@ async function loadMatches() {
   const r = round.value;
   if (!r) return;
 
-  setStatus("K LEAGUE 공식 일정 데이터를 조회하는 중입니다… (GitHub Pages → CORS relay → K LEAGUE)");
+  setStatus("K LEAGUE 공식 일정 데이터를 조회하는 중입니다…");
   match.innerHTML='<option value="">조회 중…</option>';
   analyze.disabled=true;
 
@@ -355,21 +394,31 @@ async function loadMatches() {
    * 일정 페이지는 월 단위이므로 해당 연도의 모든 월을 조회합니다.
    * 실제 경기 목록은 응답에서 수집하고 round_id/game_id가 있으면 그대로 사용합니다.
    */
-  const requests = [];
-  for (let month=1; month<=12; month++) {
-    const url = OFFICIAL.schedule +
-      "?year=" + encodeURIComponent(y) +
-      "&month=" + String(month).padStart(2,"0") +
-      "&leagueId=" + encodeURIComponent(lid);
-    requests.push(
-      getText(url)
-        .then(html => parseScheduleHtml(html, y, lid))
-        .catch(() => [])
-    );
-  }
+  const all = [];
+  const months = Array.from({length:12}, (_,i)=>i+1);
+  let completed = 0;
 
-  const pages = await Promise.all(requests);
-  const all = pages.flat();
+  // Limit concurrency. The old version sent 12 requests at once and public relays
+  // frequently answered with 500/520/522 or rate-limited the browser.
+  for (let i=0; i<months.length; i+=3) {
+    const batch = months.slice(i,i+3);
+    const pages = await Promise.all(batch.map(async month => {
+      const url = OFFICIAL.schedule +
+        "?year=" + encodeURIComponent(y) +
+        "&month=" + String(month).padStart(2,"0") +
+        "&leagueId=" + encodeURIComponent(lid);
+      try {
+        const html = await getText(url);
+        return parseScheduleHtml(html, y, lid);
+      } catch (e) {
+        return [];
+      } finally {
+        completed++;
+        setStatus(`K LEAGUE 일정 조회 중… ${completed}/12개월`);
+      }
+    }));
+    pages.flat().forEach(x => all.push(x));
+  }
 
   scheduleMatches = all.filter(x => {
     return !x.round || String(x.round) === String(r) ||
@@ -395,8 +444,7 @@ async function loadMatches() {
     setStatus(
       "공식 K LEAGUE 일정 페이지에서 이 라운드의 경기 식별자(game_id)를 확보하지 못했습니다.\n\n"+
       "이 페이지는 식별자를 확인하지 못한 경기를 임의로 만들어 분석하지 않습니다.\n"+
-      "브라우저 개발자도구 Network에서 K LEAGUE 일정 페이지의 실제 경기 상세 요청을 확인한 뒤 "+
-      "/api/kleague가 그 URL을 전달하도록 연결하면 됩니다.",
+      "Cloudflare Worker 프록시를 배포하거나 CONFIG.PROXY_BASE에 연결하면 됩니다.",
       "notice"
     );
     return;
@@ -591,7 +639,7 @@ fillYears();
 fillRounds();
 setStatus(
   "K LEAGUE 공식 데이터 연결 방식으로 준비했습니다.\n"+
-  "브라우저에서 직접 실행할 경우 CORS가 발생할 수 있으므로 /api/kleague 프록시 연결을 권장합니다."
+  (CONFIG.PROXY_BASE ? "Cloudflare Worker 프록시 사용 준비 완료." : "CONFIG.PROXY_BASE에 Cloudflare Worker URL을 넣는 것을 권장합니다.")
 );
 </script>
 </body>
