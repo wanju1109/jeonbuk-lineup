@@ -3,305 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeonbuk Hyundai Motors - Enterprise Intelligence Suite</title>
+    <title>Jeonbuk Hyundai Motors - Elite Tactical Suite</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-base: #080c14;
-            --bg-surface: #111827;
-            --bg-card: #1f2937;
-            --border-subtle: #374151;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
+            --bg-deep: #07090e;
+            --bg-surface: #0f1623;
+            --bg-card: #182234;
+            --border-color: #2a374a;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
             --jb-green: #00523D;
-            --jb-green-light: #10b981;
+            --jb-green-glow: #10b981;
             --jb-accent: #f59e0b;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Pretendard', sans-serif;
-            background-color: var(--bg-base);
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            background-color: var(--bg-deep);
             color: var(--text-main);
-            padding: 24px;
+            padding: 30px;
             min-height: 100vh;
         }
 
-        .wrapper { max-width: 1500px; margin: 0 auto; }
+        .container { max-width: 1500px; margin: 0 auto; }
 
-        /* Header */
-        .header {
+        /* Top Header */
+        .top-header {
             background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 16px 24px;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            margin-bottom: 24px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.6);
         }
 
-        .brand { font-size: 16px; font-weight: 800; display: flex; align-items: center; gap: 10px; letter-spacing: -0.3px; }
-        .brand i { color: var(--jb-green-light); font-size: 20px; }
+        .brand-logo { font-size: 17px; font-weight: 900; display: flex; align-items: center; gap: 12px; letter-spacing: -0.5px; }
+        .brand-logo i { color: var(--jb-green-glow); font-size: 22px; }
 
-        .btn-export {
-            background: var(--jb-accent); color: #111; border: none;
-            padding: 9px 18px; border-radius: 6px; font-weight: 800; font-size: 13px;
-            cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s;
+        .btn-capture {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #111; border: none; padding: 11px 22px; border-radius: 8px;
+            font-weight: 800; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3); transition: all 0.2s ease;
         }
-        .btn-export:hover { filter: brightness(1.15); }
+        .btn-capture:hover { filter: brightness(1.1); transform: translateY(-1px); }
 
-        /* Grid Layout */
-        .main-grid {
+        /* Dashboard Grid */
+        .grid-layout {
             display: grid;
-            grid-template-columns: 1.3fr 1fr;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 24px;
+        }
+
+        .panel-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 26px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
 
-        .card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 14px;
-            padding: 22px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
         /* Match Banner */
-        .match-banner {
+        .match-card {
             background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 10px;
-            padding: 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .team-info { text-align: center; flex: 1; }
-        .team-name { font-size: 18px; font-weight: 900; }
-        .team-desc { font-size: 11px; color: var(--text-muted); margin-top: 3px; font-weight: 600; }
-        .vs-sign { font-size: 20px; font-weight: 900; color: var(--jb-accent); padding: 0 15px; }
+        .team-box { text-align: center; flex: 1; }
+        .team-title { font-size: 19px; font-weight: 900; }
+        .team-info-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; font-weight: 700; text-transform: uppercase; }
+        .vs-badge { font-size: 22px; font-weight: 900; color: var(--jb-accent); padding: 0 20px; }
 
-        /* Pitch */
-        .pitch {
-            background: #113221;
-            border: 2px solid rgba(255,255,255,0.75);
-            height: 400px;
-            border-radius: 10px;
+        /* Pitch Container */
+        .pitch-field {
+            background: #113622;
+            border: 2px solid rgba(255,255,255,0.85);
+            height: 420px;
+            border-radius: 12px;
             position: relative;
             overflow: hidden;
+            box-shadow: inset 0 0 60px rgba(0,0,0,0.7);
         }
         svg { width: 100%; height: 100%; }
 
-        /* Metrics */
-        .metric-card { background: var(--bg-card); padding: 12px 15px; border-radius: 8px; border: 1px solid var(--border-subtle); }
-        .metric-header { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; margin-bottom: 6px; }
-        .bar-container { background: var(--bg-base); height: 7px; border-radius: 4px; overflow: hidden; display: flex; }
-        .bar-home { background: var(--jb-green-light); height: 100%; }
-        .bar-away { background: var(--jb-accent); height: 100%; }
+        /* Metrics Progress */
+        .metric-box { background: var(--bg-card); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border-color); }
+        .metric-top { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; margin-bottom: 8px; }
+        .progress-bar-bg { background: var(--bg-deep); height: 8px; border-radius: 4px; overflow: hidden; display: flex; }
+        .fill-home { background: var(--jb-green-glow); height: 100%; }
+        .fill-away { background: var(--jb-accent); height: 100%; }
 
-        /* Chatbot UI */
-        .chat-box {
-            background: var(--bg-base);
-            border: 1px solid var(--border-subtle);
-            border-radius: 10px;
+        /* Chatbot Container */
+        .chatbot-wrapper {
+            background: var(--bg-deep);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
-            height: 500px;
+            height: 520px;
             overflow: hidden;
         }
 
-        .chat-title-bar {
+        .chatbot-top {
             background: var(--bg-card);
-            padding: 12px 16px;
+            padding: 14px 18px;
             font-size: 13px;
-            font-weight: 800;
-            border-bottom: 1px solid var(--border-subtle);
+            font-weight: 900;
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
-            gap: 8px;
-            color: var(--jb-green-light);
+            gap: 10px;
+            color: var(--jb-green-glow);
         }
 
-        .chat-logs {
+        .chat-scroll-area {
             flex: 1;
-            padding: 15px;
+            padding: 18px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
-        .bubble {
+        .chat-msg {
             max-width: 85%;
-            padding: 10px 14px;
-            border-radius: 8px;
+            padding: 12px 16px;
+            border-radius: 10px;
             font-size: 13px;
-            line-height: 1.4;
+            line-height: 1.5;
             font-weight: 500;
         }
-        .bubble.ai {
+        .chat-msg.bot {
             background: var(--bg-card);
             align-self: flex-start;
-            border-left: 3px solid var(--jb-green-light);
-            border: 1px solid var(--border-subtle);
+            border-left: 4px solid var(--jb-green-glow);
+            border: 1px solid var(--border-color);
         }
-        .bubble.user {
+        .chat-msg.user {
             background: var(--jb-green);
             color: white;
             align-self: flex-end;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        .chip-dock {
+        .quick-chips-bar {
             display: flex;
-            gap: 6px;
-            padding: 8px 12px;
+            gap: 8px;
+            padding: 10px 16px;
             background: var(--bg-surface);
             overflow-x: auto;
-            border-top: 1px solid var(--border-subtle);
+            border-top: 1px solid var(--border-color);
         }
 
-        .chip {
+        .chip-btn {
             background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
+            border: 1px solid var(--border-color);
             color: var(--text-main);
-            padding: 5px 10px;
-            border-radius: 15px;
+            padding: 6px 12px;
+            border-radius: 20px;
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
             white-space: nowrap;
             transition: 0.2s;
         }
-        .chip:hover { background: var(--jb-green-light); color: #111; border-color: var(--jb-green-light); }
+        .chip-btn:hover { background: var(--jb-green-glow); color: #111; border-color: var(--jb-green-glow); }
 
-        .input-dock {
+        .chat-input-bar {
             display: flex;
-            padding: 10px 14px;
+            padding: 12px 18px;
             background: var(--bg-surface);
-            border-top: 1px solid var(--border-subtle);
-            gap: 8px;
+            border-top: 1px solid var(--border-color);
+            gap: 10px;
         }
 
-        .text-input {
-            flex: 1; background: var(--bg-base); border: 1px solid var(--border-subtle);
-            color: white; padding: 9px 12px; border-radius: 6px; outline: none; font-size: 13px;
+        .input-box {
+            flex: 1; background: var(--bg-deep); border: 1px solid var(--border-color);
+            color: white; padding: 10px 14px; border-radius: 8px; outline: none; font-size: 13px;
         }
-        .text-input:focus { border-color: var(--jb-green-light); }
+        .input-box:focus { border-color: var(--jb-green-glow); }
 
         .send-btn {
-            background: var(--jb-green-light); color: #111; border: none;
-            padding: 0 16px; border-radius: 6px; font-weight: 800; cursor: pointer;
+            background: var(--jb-green-glow); color: #111; border: none;
+            padding: 0 18px; border-radius: 8px; font-weight: 900; cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper" id="capture-zone">
-        <!-- Header -->
-        <header class="header">
-            <div class="brand">
-                <i class="fa-solid fa-chart-line"></i> JEONBUK HYUNDAI MOTORS — ENTERPRISE INTELLIGENCE SUITE
+    <div class="container" id="capture-frame">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="brand-logo">
+                <i class="fa-solid fa-shield-halved"></i> JEONBUK HYUNDAI MOTORS — ELITE TACTICAL INTELLIGENCE
             </div>
-            <button class="btn-export" onclick="captureReport()">
-                <i class="fa-solid fa-camera"></i> 커뮤니티 이미지 캡처
+            <button class="btn-capture" onclick="executeImageExport()">
+                <i class="fa-solid fa-camera-retro"></i> 커뮤니티 고해상도 캡처
             </button>
         </header>
 
         <!-- Main Layout -->
-        <div class="main-grid">
+        <div class="grid-layout">
             
-            <!-- Left: Match & Tactics -->
-            <section class="card">
-                <div class="match-banner">
-                    <div class="team-info">
-                        <div class="team-name" style="color: var(--jb-green-light);">전북 현대</div>
-                        <div class="team-desc">HOME | 전주 월드컵경기장[cite: 3]</div>
+            <!-- Left Panel -->
+            <section class="panel-card">
+                <div class="match-card">
+                    <div class="team-box">
+                        <div class="team-title" style="color: var(--jb-green-glow);">전북 현대</div>
+                        <div class="team-info-sub">HOME | 전주 월드컵경기장</div>
                     </div>
-                    <div class="vs-sign">VS</div>
-                    <div class="team-info">
-                        <div class="team-name" style="color: var(--jb-accent);">제주SK FC</div>
-                        <div class="team-desc">AWAY | 2026.08.08[cite: 3]</div>
+                    <div class="vs-badge">VS</div>
+                    <div class="team-box">
+                        <div class="team-title" style="color: var(--jb-accent);">제주SK FC</div>
+                        <div class="team-info-sub">AWAY | 2026.08.08</div>
                     </div>
                 </div>
 
-                <!-- Pitch -->
-                <div class="pitch">
+                <!-- Pitch Graphic -->
+                <div class="pitch-field">
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
-                        <circle cx="50" cy="50" r="15" stroke="rgba(255,255,255,0.4)" stroke-width="0.5" fill="none"/>
-                        <circle cx="50" cy="50" r="0.8" fill="#fff"/>
-                        <rect x="0" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.4)" stroke-width="0.5" fill="none"/>
-                        <rect x="83.5" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.4)" stroke-width="0.5" fill="none"/>
+                        <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="0.6"/>
+                        <circle cx="50" cy="50" r="15" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" fill="none"/>
+                        <circle cx="50" cy="50" r="1" fill="#fff"/>
+                        <rect x="0" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" fill="none"/>
+                        <rect x="83.5" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.4)" stroke-width="0.6" fill="none"/>
                         
-                        <!-- Passing Network Lines -->
-                        <line x1="50" y1="35" x2="35" y2="55" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2"/>
-                        <line x1="50" y1="35" x2="65" y2="55" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2"/>
-                        <line x1="35" y1="55" x2="20" y2="70" stroke="#10b981" stroke-width="1.2"/>
-                        <line x1="65" y1="55" x2="80" y2="70" stroke="#10b981" stroke-width="1.2"/>
+                        <line x1="50" y1="35" x2="35" y2="55" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="2"/>
+                        <line x1="50" y1="35" x2="65" y2="55" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="2"/>
+                        <line x1="35" y1="55" x2="20" y2="70" stroke="#10b981" stroke-width="1.5"/>
+                        <line x1="65" y1="55" x2="80" y2="70" stroke="#10b981" stroke-width="1.5"/>
                         
-                        <!-- Nodes -->
-                        <circle cx="50" cy="35" r="3" fill="#f59e0b" stroke="#fff" stroke-width="0.8"/>
-                        <text x="50" y="36.1" fill="#111" font-size="2.5" font-weight="900" text-anchor="middle">10</text>
-                        <circle cx="35" cy="55" r="3" fill="#00523D" stroke="#fff" stroke-width="0.8"/>
-                        <text x="35" y="56.1" fill="#fff" font-size="2.5" font-weight="900" text-anchor="middle">6</text>
-                        <circle cx="65" cy="55" r="3" fill="#00523D" stroke="#fff" stroke-width="0.8"/>
-                        <text x="65" y="56.1" fill="#fff" font-size="2.5" font-weight="900" text-anchor="middle">13</text>
+                        <circle cx="50" cy="35" r="3.2" fill="#f59e0b" stroke="#fff" stroke-width="0.8"/>
+                        <text x="50" y="36.2" fill="#111" font-size="2.5" font-weight="900" text-anchor="middle">10</text>
+                        <circle cx="35" cy="55" r="3.2" fill="#00523D" stroke="#fff" stroke-width="0.8"/>
+                        <text x="35" y="56.2" fill="#fff" font-size="2.5" font-weight="900" text-anchor="middle">6</text>
+                        <circle cx="65" cy="55" r="3.2" fill="#00523D" stroke="#fff" stroke-width="0.8"/>
+                        <text x="65" y="56.2" fill="#fff" font-size="2.5" font-weight="900" text-anchor="middle">13</text>
                     </svg>
                 </div>
 
                 <!-- Stats -->
-                <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <div class="metric-card">
-                        <div class="metric-header"><span>27 골</span><span>시즌 총 득점[cite: 3]</span><span>22 골[cite: 3]</span></div>
-                        <div class="bar-container"><div class="bar-home" style="width: 55%;"></div><div class="bar-away" style="width: 45%;"></div></div>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div class="metric-box">
+                        <div class="metric-top"><span>27 골</span><span>시즌 총 득점</span><span>22 골</span></div>
+                        <div class="progress-bar-bg"><div class="fill-home" style="width: 55%;"></div><div class="fill-away" style="width: 45%;"></div></div>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-header"><span>88.1% (9,354회)</span><span>패스 성공률 및 성공 횟수[cite: 3]</span><span>83.4% (7,091회)[cite: 3]</span></div>
-                        <div class="bar-container"><div class="bar-home" style="width: 57%;"></div><div class="bar-away" style="width: 43%;"></div></div>
+                    <div class="metric-box">
+                        <div class="metric-top"><span>88.1% (9,354회)</span><span>패스 성공률 및 성공 횟수</span><span>83.4% (7,091회)</span></div>
+                        <div class="progress-bar-bg"><div class="fill-home" style="width: 57%;"></div><div class="fill-away" style="width: 43%;"></div></div>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-header"><span>191 회</span><span>키패스 (Key Pass)[cite: 3]</span><span>173 회[cite: 3]</span></div>
-                        <div class="bar-container"><div class="bar-home" style="width: 52%;"></div><div class="bar-away" style="width: 48%;"></div></div>
+                    <div class="metric-box">
+                        <div class="metric-top"><span>191 회</span><span>키패스 (Key Pass)</span><span>173 회</span></div>
+                        <div class="progress-bar-bg"><div class="fill-home" style="width: 52%;"></div><div class="fill-away" style="width: 48%;"></div></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Right: AI Chatbot -->
-            <section class="card">
-                <div style="font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-robot" style="color: var(--jb-green-light);"></i> 전북현대 AI 데이터 해설위원
+            <!-- Right Panel: Position-Aware AI Chatbot -->
+            <section class="panel-card">
+                <div style="font-size: 16px; font-weight: 900; display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-brain" style="color: var(--jb-green-glow);"></i> 전북현대 AI 시큐어 인텔리전스 챗봇
                 </div>
 
-                <div class="chat-box">
-                    <div class="chat-title-bar">
-                        <i class="fa-solid fa-circle" style="font-size: 8px; color: var(--jb-green-light);"></i> Dynamic NLP Dataset Engine Active[cite: 3]
+                <div class="chatbot-wrapper">
+                    <div class="chatbot-top">
+                        <i class="fa-solid fa-circle" style="font-size: 8px; color: #10b981;"></i> Position-Aware Dataset Engine v4.0 Active
                     </div>
 
-                    <div class="chat-logs" id="chatLogs">
-                        <div class="bubble ai">
-                            안녕하세요! 전북 현대 경기 분석 AI입니다. "김진규 어땠어?", "이승우 플레이", "통산 전적", "패스 성공률" 등 선수 이름이나 전술 지표를 편하게 물어보세요!
+                    <div class="chat-scroll-area" id="chatLogs">
+                        <div class="chat-msg bot">
+                            안녕하세요! 전북 현대 전술 분석 AI입니다. 송범근(GK), 김진규(MF), 이승우(FW) 등 선수 이름을 말씀하시면 포지션별 역할에 맞게 완벽히 분석해 드립니다!
                         </div>
                     </div>
 
-                    <div class="chip-dock">
-                        <div class="chip" onclick="askPreset('김진규 어땠어?')">⚽ 김진규 분석</div>
-                        <div class="chip" onclick="askPreset('이승우 플레이 어땠어?')">🔥 이승우 분석</div>
-                        <div class="chip" onclick="askPreset('통산 전적 어때?')">📊 통산 전적</div>
-                        <div class="chip" onclick="askPreset('패스 성공률 비교해줘')">🎯 패스 비교</div>
+                    <div class="quick-chips-bar">
+                        <div class="chip-btn" onclick="sendPrompt('송범근 어땠어?')">🧤 송범근 분석</div>
+                        <div class="chip-btn" onclick="sendPrompt('김진규 어땠어?')">⚽ 김진규 분석</div>
+                        <div class="chip-btn" onclick="sendPrompt('이승우 플레이 어땠어?')">🔥 이승우 분석</div>
+                        <div class="chip-btn" onclick="sendPrompt('통산 전적 어때?')">📊 통산 전적</div>
                     </div>
 
-                    <div class="input-dock">
-                        <input type="text" id="userInput" class="text-input" placeholder="질문이나 선수 이름을 입력하세요 (예: 김진규 어땠어?)" onkeypress="if(event.key==='Enter') submitQuery()">
-                        <button class="send-btn" onclick="submitQuery()"><i class="fa-solid fa-paper-plane"></i></button>
+                    <div class="chat-input-bar">
+                        <input type="text" id="userInput" class="input-box" placeholder="선수 이름이나 전술 지표를 입력하세요..." onkeypress="if(event.key==='Enter') triggerUserSubmit()">
+                        <button class="send-btn" onclick="triggerUserSubmit()"><i class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </div>
             </section>
@@ -310,69 +310,80 @@
     </div>
 
     <script>
-        // Intelligent Dynamic NLP Match Engine
-        function askPreset(text) {
+        function sendPrompt(text) {
             document.getElementById('userInput').value = text;
-            submitQuery();
+            triggerUserSubmit();
         }
 
-        function submitQuery() {
+        function triggerUserSubmit() {
             const input = document.getElementById('userInput');
-            const q = input.value.trim();
-            if(!q) return;
+            const val = input.value.trim();
+            if(!val) return;
 
-            appendBubble(q, 'user');
+            appendChatBubble(val, 'user');
             input.value = '';
 
             setTimeout(() => {
-                const ans = getSmartResponse(q);
-                appendBubble(ans, 'ai');
+                const reply = generatePositionAwareResponse(val);
+                appendChatBubble(reply, 'bot');
             }, 300);
         }
 
-        function appendBubble(text, sender) {
-            const logs = document.getElementById('chatLogs');
+        function appendChatBubble(text, sender) {
+            const box = document.getElementById('chatLogs');
             const div = document.createElement('div');
-            div.className = `bubble ${sender}`;
+            div.className = `chat-msg ${sender}`;
             div.innerText = text;
-            logs.appendChild(div);
-            logs.scrollTop = logs.scrollHeight;
+            box.appendChild(div);
+            box.scrollTop = box.scrollHeight;
         }
 
-        // Flexible Natural Language Processing & Entity Extraction Engine
-        function getSmartResponse(query) {
+        // 포지션 인지형 지능형 답변 엔진 (GK, DF, MF, FW 완벽 구분)
+        function generatePositionAwareResponse(query) {
             const q = query.toLowerCase();
-            
-            // Dynamic Player Name Recognition (Handles Kim Jin-gyu, Lee Seung-woo, Hong Jeong-ho, Song Bum-keun, etc.)
-            const knownPlayers = ['김진규', '이승우', '홍정호', '송범근', '이동준', '맹성웅', '박진섭'];
-            let detectedPlayer = knownPlayers.find(player => q.includes(player));
 
-            if (detectedPlayer) {
-                return `[선수 정밀 분석 리포트: ${detectedPlayer} 선수]\n${detectedPlayer} 선수는 전북의 핵심 전술 축을 담당하며 중원과 수비 라인에서 높은 공헌도를 보여주었습니다. 실측 빌드업 데이터(전북 패스 성공률 88.1%)를 바탕으로 공수 조율과 압박 탈출에서 안정적인 경기 운영을 펼쳤습니다[cite: 3].`;
-            } 
+            // 1. 송범근 (GK - 골키퍼)
+            if (q.includes('송범근')) {
+                return `[골키퍼 정밀 분석: 송범근]\n송범근 선수는 전북의 골문을 든든하게 지키는 수문장(GK)입니다. 올시즌 전북의 최소 실점(16실점) 및 안정적인 수비 라인 구축에 핵심적인 역할을 수행하며, 안정적인 캐칭과 후방 빌드업 기점으로 맹활약하고 있습니다.`;
+            }
             
-            // Tactical & Statistical Queries
-            if(q.includes('전적') || q.includes('통산') || q.includes('상대')) {
-                return `[통산 전적 분석]\n제주와의 역대 통산 전적은 총 112경기 55승 26무 31패로 전북 현대가 확실하게 우세합니다[cite: 3].`;
-            } else if(q.includes('패스') || q.includes('빌드업')) {
-                return `[패스 및 빌드업 비교]\n올시즌 패스 성공률은 전북이 88.1% (9,354회 성공)로 제주(83.4%)보다 정교하며, 키패스 역시 전북(191회)이 우위에 있습니다[cite: 3].`;
-            } else if(q.includes('최근') || q.includes('맞대결') || q.includes('결과')) {
-                return `[최근 맞대결 결과]\n- 2026/05/02: 전북 2:0 승[cite: 3]\n- 2025/10/03: 1:1 무[cite: 3]\n- 2025/05/23: 0:0 무[cite: 3]\n- 2025/04/13: 1:1 무[cite: 3]\n(최근 10경기 기준 4승 4무 2패 우세)[cite: 3]`;
-            } else if(q.includes('수비') || q.includes('실점') || q.includes('골')) {
-                return `[수비 및 득실점]\n전북은 시즌 27득점 / 16실점으로 견고한 수비력(최소 실점 우위)을 자랑하며, 공중볼 경합 성공률도 54.8%로 높습니다[cite: 3].`;
+            // 2. 김진규 (MF - 미드필더)
+            if (q.includes('김진규')) {
+                return `[미드필더 정밀 분석: 김진규]\n김진규 선수는 중원의 핵심 미드필더(MF)로서 활발한 활동량과 정확한 패스로 공수 연결고리를 맡고 있습니다. 전북의 높은 패스 성공률(88.1%) 속에서 템포 조절과 키패스 창출에 크게 기여했습니다.`;
+            }
+
+            // 3. 이승우 (FW/AM - 공격수/공격형 미드필더)
+            if (q.includes('이승우')) {
+                return `[공격수 정밀 분석: 이승우]\n이승우 선수는 최전방과 2선을 오가는 공격 자원(FW/AM)입니다. 특유의 날카로운 드리블과 박스 안 타격(전북 박스 내 슈팅 176회 중 핵심 기여)으로 상대 수비를 흔들며 공격 포인트를 노리는 핵심 크랙입니다.`;
+            }
+
+            // 4. 홍정호 / 조위제 (DF - 수비수)
+            if (q.includes('홍정호') || q.includes('조위제')) {
+                return `[수비수 정밀 분석]\n해당 수비수(DF)는 후방 빌드업의 시발점이자 견고한 대인 방어를 책임집니다. 전북의 공중볼 경합 성공률(54.8%)과 태클 성공률을 끌어올리는 데 결정적인 기여를 했습니다.`;
+            }
+
+            // 5. 일반 통계 및 전적 질의
+            if (q.includes('전적') || q.includes('통산') || q.includes('상대')) {
+                return `[통산 전적 분석]\n제주와의 역대 통산 전적은 총 112경기 55승 26무 31패로 전북 현대가 확실하게 우세합니다. 통산 득점 162골, 실점 127골을 기록 중입니다.`;
+            } else if (q.includes('패스') || q.includes('빌드업')) {
+                return `[패스 및 빌드업 비교]\n올시즌 패스 성공률은 전북이 88.1% (9,354회 성공)로 제주(83.4%)보다 정교하며, 키패스 역시 전북(191회)이 우위에 있습니다.`;
+            } else if (q.includes('최근') || q.includes('맞대결') || q.includes('결과')) {
+                return `[최근 맞대결 결과]\n- 2026/05/02: 전북 2:0 승\n- 2025/10/03: 1:1 무\n- 2025/05/23: 0:0 무\n- 2025/04/13: 1:1 무\n(최근 10경기 기준 4승 4무 2패 우세)`;
+            } else if (q.includes('수비') || q.includes('실점') || q.includes('골')) {
+                return `[수비 및 득실점]\n전북은 시즌 27득점 / 16실점으로 견고한 수비력(최소 실점 우위)을 자랑하며, 공중볼 경합 성공률도 54.8%로 높습니다.`;
             } else {
-                return `[AI 해설위원 분석]\n질문하신 내용("${query}")과 관련하여, 김진규·이승우 등 선수 개인별 플레이나 "통산 전적", "패스 비교", "최근 경기" 등의 키워드로 질문하시면 실측 데이터 기반으로 즉시 상세히 답변해 드릴게요!`;
+                return `[AI 해설위원 분석]\n질문하신 내용("${query}")과 관련하여, 송범근(GK), 김진규(MF), 이승우(FW) 등 선수들의 포지션별 역할이나 "통산 전적", "패스 비교", "최근 경기" 등의 키워드로 질문해 주시면 정확하게 답변해 드릴게요!`;
             }
         }
 
-        async function captureReport() {
-            const zone = document.getElementById('capture-zone');
+        async function executeImageExport() {
+            const frame = document.getElementById('capture-frame');
             try {
-                const canvas = await html2canvas(zone, { backgroundColor: '#080c14', scale: 2, useCORS: true });
+                const canvas = await html2canvas(frame, { backgroundColor: '#07090e', scale: 2, useCORS: true });
                 canvas.toBlob(async function(blob) {
                     const item = new ClipboardItem({ "image/png": blob });
                     await navigator.clipboard.write([item]);
-                    alert('✨ 완벽하게 개선된 리포트 이미지가 클립보드에 복사되었습니다! 커뮤니티에 Ctrl+V 하세요.');
+                    alert('✨ 완벽하게 개선된 프리미엄 리포트 이미지가 클립보드에 복사되었습니다! 커뮤니티에 Ctrl+V 하세요.');
                 });
             } catch (err) {
                 alert('캡처 실패: ' + err);
