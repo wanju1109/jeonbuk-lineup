@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeonbuk Hyundai Motors - Elite Match Report</title>
+    <title>Jeonbuk Hyundai Motors - AI Analytics & Chatbot</title>
+    <!-- Chart.js for Visual Statistics -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- html2canvas for Community Image Export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-deep: #0b0f19;
+            --bg-deep: #090d16;
             --bg-panel: #131b2e;
             --bg-card: #1b263b;
             --text-main: #f0f6fc;
             --text-muted: #8b949e;
-            --jb-green: #00a651;
-            --jb-green-dark: #004a27;
-            --jb-gold: #d8b53a;
-            --accent-red: #ff5252;
+            --jb-green: #00523D;
+            --jb-green-glow: rgba(0, 82, 61, 0.4);
+            --jb-orange: #EE7501;
             --border-color: #30363d;
         }
 
@@ -30,7 +32,7 @@
             padding: 20px;
         }
 
-        .container { max-width: 1300px; margin: 0 auto; }
+        .container { max-width: 1400px; margin: 0 auto; }
 
         /* Top Bar */
         .top-bar {
@@ -42,25 +44,23 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }
-        .filter-group { display: flex; gap: 15px; align-items: center; }
-        select {
-            background: var(--bg-deep); color: var(--text-main);
-            border: 1px solid var(--border-color); padding: 8px 15px;
-            border-radius: 6px; font-weight: bold; cursor: pointer;
-        }
+        .match-title { font-size: 18px; font-weight: 900; color: #fff; display: flex; align-items: center; gap: 10px; }
         .export-btn {
-            background: var(--jb-gold); color: #111; border: none;
+            background: var(--jb-orange); color: white; border: none;
             padding: 10px 20px; border-radius: 6px; font-weight: 800; cursor: pointer;
-            display: flex; align-items: center; gap: 8px; box-shadow: 0 0 15px rgba(216,181,58,0.3);
+            display: flex; align-items: center; gap: 8px; transition: 0.2s;
         }
+        .export-btn:hover { filter: brightness(1.1); }
 
-        /* Main Dashboard Grid */
+        /* Dashboard Grid Layout */
         .dashboard-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1.2fr 1fr;
             gap: 20px;
         }
+
         .panel {
             background: var(--bg-panel);
             border: 1px solid var(--border-color);
@@ -69,82 +69,128 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* Score Banner */
+        /* Match Score Banner */
         .score-banner {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             margin-bottom: 20px;
         }
-        .team-info h2 { margin: 0; font-size: 22px; font-weight: 900; }
-        .score-box { text-align: center; }
-        .score-num { font-size: 42px; font-weight: 900; color: var(--jb-gold); letter-spacing: 2px; }
-        .match-meta { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        .team-box h2 { margin: 0; font-size: 20px; font-weight: 900; }
+        .vs-badge { font-size: 24px; font-weight: 900; color: var(--jb-orange); }
 
-        /* MOM Profile Card (Right Top) */
-        .mom-card {
-            background: linear-gradient(135deg, #1b263b 0%, #0d1b2a 100%);
-            border: 1px solid var(--jb-green);
+        /* Stats Bars */
+        .stat-section-title { font-size: 15px; font-weight: 800; margin-bottom: 12px; color: var(--text-muted); }
+        .stat-row { margin-bottom: 12px; }
+        .stat-label-wrap { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+        .stat-bar-bg { background: var(--bg-deep); height: 8px; border-radius: 4px; overflow: hidden; display: flex; }
+        .stat-bar-home { background: var(--jb-green); height: 100%; }
+        .stat-bar-away { background: var(--jb-orange); height: 100%; }
+
+        /* AI Chatbot Panel Styles */
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 550px;
+            background: var(--bg-deep);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 15px;
+            overflow: hidden;
+        }
+        .chat-header {
+            background: var(--bg-card);
+            padding: 12px 15px;
+            font-weight: 800;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            position: relative;
-            overflow: hidden;
+            gap: 8px;
+            color: #00ffaa;
         }
-        .mom-badge {
-            position: absolute; top: 0; right: 0; background: var(--jb-green); color: white;
-            font-size: 10px; font-weight: 900; padding: 3px 10px; border-bottom-left-radius: 8px;
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-        .mom-img { width: 65px; height: 65px; border-radius: 50%; border: 2px solid var(--jb-gold); object-fit: cover; }
-        .mom-details h3 { margin: 0 0 4px 0; font-size: 18px; }
-        .mom-stats { display: flex; gap: 10px; font-size: 12px; color: var(--text-muted); margin-top: 5px; }
-
-        /* Stats Comparison Bars */
-        .stat-row { margin-bottom: 14px; }
-        .stat-label-wrap { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
-        .stat-bar-bg { background: var(--bg-deep); height: 8px; border-radius: 4px; overflow: hidden; display: flex; }
-        .stat-bar-home { background: var(--jb-green); height: 100%; border-radius: 4px 0 0 4px; }
-        .stat-bar-away { background: var(--accent-red); height: 100%; border-radius: 0 4px 4px 0; }
-
-        /* Tactical Pitch & Pass Network */
-        .pitch-box {
-            background: #1b3b22;
-            border: 2px solid rgba(255,255,255,0.7);
-            height: 420px;
+        .message {
+            max-width: 85%;
+            padding: 10px 14px;
             border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.4;
         }
-        svg { width: 100%; height: 100%; }
-
-        /* Goal Sequence Cards */
-        .goal-seq-card {
+        .message.bot {
+            background: var(--bg-card);
+            align-self: flex-start;
+            border-left: 3px solid var(--jb-green);
+        }
+        .message.user {
+            background: var(--jb-green);
+            color: white;
+            align-self: flex-end;
+        }
+        .chat-input-area {
+            display: flex;
+            padding: 12px;
+            background: var(--bg-panel);
+            border-top: 1px solid var(--border-color);
+            gap: 8px;
+        }
+        .chat-input {
+            flex: 1;
+            background: var(--bg-deep);
+            border: 1px solid var(--border-color);
+            color: white;
+            padding: 10px 12px;
+            border-radius: 6px;
+            outline: none;
+            font-size: 13px;
+        }
+        .chat-send-btn {
+            background: var(--jb-green);
+            color: white;
+            border: none;
+            padding: 0 16px;
+            border-radius: 6px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .quick-chips {
+            display: flex;
+            gap: 6px;
+            padding: 8px 12px;
+            background: var(--bg-panel);
+            overflow-x: auto;
+            border-top: 1px solid var(--border-color);
+        }
+        .chip {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-left: 4px solid var(--jb-gold);
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 12px;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: 0.2s;
         }
-        .seq-nodes { display: flex; gap: 5px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
-        .seq-node { background: var(--bg-deep); padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; border: 1px solid var(--border-color); }
+        .chip:hover { background: var(--jb-green); color: white; }
     </style>
 </head>
 <body>
 
     <div class="container" id="export-area">
-        
-        <!-- Top Control Nav -->
+        <!-- Top Bar -->
         <div class="top-bar">
-            <div class="filter-group">
-                <select><option>K LEAGUE 1 (2026)</option></select>
-                <select><option>22라운드 vs 제주 유나이티드</option></select>
+            <div class="match-title">
+                <i class="fa-solid fa-shield-halved" style="color: var(--jb-green);"></i> 
+                K리그1 22라운드: 전북 현대 VS 제주SK FC 분석 리포트[cite: 3]
             </div>
             <button class="export-btn" onclick="exportImage()">
                 <i class="fa-solid fa-camera"></i> 커뮤니티 이미지 복사
@@ -154,157 +200,79 @@
         <!-- Main Dashboard Grid -->
         <div class="dashboard-grid">
             
-            <!-- Left Panel: Match Score & Pass Network Pitch -->
+            <!-- Left Panel: Real Statistics & History -->
             <div class="panel">
                 <div class="score-banner">
-                    <div class="team-info">
-                        <h2>전북 현대 모터스</h2>
-                        <span class="match-meta">HOME (전주월드컵경기장)</span>
+                    <div class="team-box">
+                        <h2 style="color: var(--jb-green);">전북 현대 (HOME)[cite: 3]</h2>
+                        <span style="font-size: 11px; color: var(--text-muted);">전주 월드컵 경기장[cite: 3]</span>
                     </div>
-                    <div class="score-box">
-                        <div class="score-num">1 : 3</div>
-                        <div class="match-meta">경기 종료 (2026.08.08)</div>
-                    </div>
-                    <div class="team-info" style="text-align: right;">
-                        <h2 style="color: var(--accent-red);">제주 유나이티드</h2>
-                        <span class="match-meta">AWAY</span>
+                    <div class="vs-badge">VS</div>
+                    <div class="team-box" style="text-align: right;">
+                        <h2 style="color: var(--jb-orange);">제주SK FC (AWAY)[cite: 3]</h2>
+                        <span style="font-size: 11px; color: var(--text-muted);">2026.08.08 20:00[cite: 3]</span>
                     </div>
                 </div>
 
-                <h3 style="font-size: 15px; margin-bottom: 10px;"><i class="fa-solid fa-network-wired"></i> 전북 현대 패스 네트워크 & 핵심 연계망</h3>
-                
-                <!-- Tactical Pitch with Network Nodes -->
-                <div class="pitch-box">
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <!-- Pitch lines -->
-                        <line x1="50" y1="0" x2="50" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-                        <circle cx="50" cy="50" r="15" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" fill="none"/>
-                        <rect x="0" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" fill="none"/>
-                        <rect x="83.5" y="20" width="16.5" height="60" stroke="rgba(255,255,255,0.3)" stroke-width="0.5" fill="none"/>
-
-                        <!-- Passing Network Lines (Connecting Nodes) -->
-                        <line x1="50" y1="25" x2="35" y2="45" stroke="#d8b53a" stroke-width="0.8" stroke-dasharray="2"/>
-                        <line x1="50" y1="25" x2="65" y2="45" stroke="#d8b53a" stroke-width="0.8" stroke-dasharray="2"/>
-                        <line x1="35" y1="45" x2="20" y2="60" stroke="#00a651" stroke-width="1.2"/>
-                        <line x1="65" y1="45" x2="80" y2="60" stroke="#00a651" stroke-width="1.2"/>
-                        <line x1="50" y1="25" x2="50" y2="70" stroke="#00a651" stroke-width="1.5"/>
-
-                        <!-- Player Nodes (Circles + Numbers) -->
-                        <!-- GK: Song Bum-keun (31) -->
-                        <circle cx="50" cy="85" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="50" y="86.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">31</text>
-
-                        <!-- DF: Kim Tae-hwan (23), Cho Wi-je (4), Hong Jeong-ho (26), Kim Jin-su (2) -->
-                        <circle cx="20" cy="60" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="20" y="61.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">23</text>
-
-                        <circle cx="40" cy="65" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="40" y="66.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">4</text>
-
-                        <circle cx="60" cy="65" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="60" y="66.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">26</text>
-
-                        <circle cx="80" cy="60" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="80" y="61.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">2</text>
-
-                        <!-- MF: Park Jin-seop (6), Kang Sang-yun (13), Lee Seung-woo (10) -->
-                        <circle cx="35" cy="45" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="35" y="46.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">6</text>
-
-                        <circle cx="65" cy="45" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="65" y="46.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">13</text>
-
-                        <circle cx="50" cy="35" r="3.5" fill="#004a27" stroke="#fff" stroke-width="0.8"/>
-                        <text x="50" y="36.2" fill="#fff" font-size="3" font-weight="900" text-anchor="middle">10</text>
-
-                        <!-- FW: Lee Dong-jun (7), Song Min-kyu (10) -->
-                        <circle cx="50" cy="22" r="3.5" fill="#d8b53a" stroke="#fff" stroke-width="0.8"/>
-                        <text x="50" y="23.2" fill="#111" font-size="3" font-weight="900" text-anchor="middle">10</text>
-                    </svg>
+                <div style="background: var(--bg-card); padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; text-align: center;">
+                    🏆 <b>역대 통산 전적</b>: 총 112경기 <strong>55승 26무 31패 (전북 우세)</strong>[cite: 3]
                 </div>
 
-                <!-- Goal Sequence Highlights -->
-                <h3 style="font-size: 15px; margin-bottom: 10px;"><i class="fa-solid fa-futbol"></i> 주요 득점 빌드업 시퀀스 분석</h3>
+                <div class="stat-section-title"><i class="fa-solid fa-chart-simple"></i> 올시즌 실측 지표 비교[cite: 3]</div>
                 
-                <div class="goal-seq-card">
-                    <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 14px;">
-                        <span>⚽ 후반 58분 전북현대 득점 (이승우)</span>
-                        <span style="color: var(--jb-gold);">xG: 0.451</span>
-                    </div>
-                    <div class="seq-nodes">
-                        <span class="seq-node">4. 조위제 (기점)</span>
-                        <i class="fa-solid fa-arrow-right" style="font-size:10px; color:var(--text-muted);"></i>
-                        <span class="seq-node">6. 맹성웅</span>
-                        <i class="fa-solid fa-arrow-right" style="font-size:10px; color:var(--text-muted);"></i>
-                        <span class="seq-node">7. 이동준 (크로스)</span>
-                        <i class="fa-solid fa-arrow-right" style="font-size:10px; color:var(--text-muted);"></i>
-                        <span class="seq-node" style="background:var(--jb-green); color:#fff;">10. 이승우 (골!)</span>
-                    </div>
+                <div class="stat-row">
+                    <div class="stat-label-wrap"><span>27골</span><span>시즌 득점 (GOAL)</span><span>22골</span></div>
+                    <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 55%;"></div><div class="stat-bar-away" style="width: 45%;"></div></div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label-wrap"><span>273회 (99유효)</span><span>총 슈팅 / 유효슈팅</span><span>254회 (87유효)</span></div>
+                    <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 52%;"></div><div class="stat-bar-away" style="width: 48%;"></div></div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label-wrap"><span>88.1% (9,354회)</span><span>패스 성공률 (성공/시도)</span><span>83.4% (7,091회)</span></div>
+                    <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 57%;"></div><div class="stat-bar-away" style="width: 43%;"></div></div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label-wrap"><span>191회</span><span>키패스 (Key Pass)</span><span>173회</span></div>
+                    <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 52%;"></div><div class="stat-bar-away" style="width: 48%;"></div></div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label-wrap"><span>150회 (32.2%)</span><span>태클 성공 (성공율)</span><span>131회 (28.5%)</span></div>
+                    <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 53%;"></div><div class="stat-bar-away" style="width: 47%;"></div></div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label-wrap"><span>16실점</span><span>시즌 최소 실점 비교</span><span>23실점</span></div>
+                    <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 41%;"></div><div class="stat-bar-away" style="width: 59%;"></div></div>
                 </div>
             </div>
 
-            <!-- Right Panel: MOM, Match Stats & Top 5 Players -->
-            <div class="panel" style="display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <!-- MOM Card -->
-                    <div class="mom-card">
-                        <div class="mom-badge">MOM</div>
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" class="mom-img" alt="Player">
-                        <div class="mom-details">
-                            <h3 style="color: var(--jb-gold);">이승우 10</h3>
-                            <span style="font-size: 12px; color: var(--text-muted);">MF | 공격형 미드필더</span>
-                            <div class="mom-stats">
-                                <span>평점 <strong>8.8</strong></span>
-                                <span>득점 <strong>1</strong></span>
-                                <span>키패스 <strong>2</strong></span>
-                            </div>
-                        </div>
+            <!-- Right Panel: Built-in AI Chatbot Engine -->
+            <div class="panel" style="display: flex; flex-direction: column;">
+                <div class="stat-section-title"><i class="fa-solid id-card fa-robot"></i> 전북현대 데이터 해설위원 AI</div>
+                
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <i class="fa-solid fa-circle-dot" style="color: #00ffaa; font-size: 10px;"></i>
+                        전북 vs 제주 실측 데이터 탑재 완료[cite: 3]
                     </div>
-
-                    <!-- Match Stats Comparison -->
-                    <h3 style="font-size: 15px; margin-bottom: 15px;"><i class="fa-solid fa-chart-bar"></i> 경기 주요 지표 비교</h3>
                     
-                    <div class="stat-row">
-                        <div class="stat-label-wrap"><span>58%</span><span>볼 점유율</span><span>42%</span></div>
-                        <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 58%;"></div><div class="stat-bar-away" style="width: 42%;"></div></div>
-                    </div>
-                    <div class="stat-row">
-                        <div class="stat-label-wrap"><span>12 (4)</span><span>슈팅 (유효슈팅)</span><span>9 (5)</span></div>
-                        <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 57%;"></div><div class="stat-bar-away" style="width: 43%;"></div></div>
-                    </div>
-                    <div class="stat-row">
-                        <div class="stat-label-wrap"><span>1.85</span><span>기대득점 (xG)</span><span>1.42</span></div>
-                        <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 56%;"></div><div class="stat-bar-away" style="width: 44%;"></div></div>
-                    </div>
-                    <div class="stat-row">
-                        <div class="stat-label-wrap"><span>84%</span><span>패스 성공률</span><span>79%</span></div>
-                        <div class="stat-bar-bg"><div class="stat-bar-home" style="width: 52%;"></div><div class="stat-bar-away" style="width: 48%;"></div></div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot">
+                            안녕하세요! 전북 현대 데이터 분석 AI 해설위원입니다. 제주전 통산 전적, 패스 성공률, 득점력 등 무엇이든 물어보세요![cite: 3]
+                        </div>
                     </div>
 
-                    <!-- Top Players Rating List -->
-                    <h3 style="font-size: 15px; margin: 25px 0 10px 0;"><i class="fa-solid fa-star"></i> 주요 선수 평점 TOP 5</h3>
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <div style="display: flex; justify-content: space-between; background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 13px;">
-                            <span>1. 🔟 이승우 (MF)</span><span style="color:var(--jb-green); font-weight:900;">8.8</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 13px;">
-                            <span>2. 6️⃣ 맹성웅 (MF)</span><span style="color:var(--jb-green); font-weight:900;">8.1</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 13px;">
-                            <span>3. 4️⃣ 조위제 (DF)</span><span style="color:var(--jb-green); font-weight:900;">7.8</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 13px;">
-                            <span>4. 7️⃣ 이동준 (MF)</span><span style="color:var(--jb-green); font-weight:900;">7.6</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 13px;">
-                            <span>5. 3️⃣1️⃣ 송범근 (GK)</span><span style="color:var(--jb-green); font-weight:900;">7.5</span>
-                        </div>
+                    <div class="quick-chips">
+                        <div class="chip" onclick="sendPreset('통산 전적 어때?')">📊 통산 전적 어때?</div>
+                        <div class="chip" onclick="sendPreset('패스 성공률 비교해줘')">🎯 패스 성공률 비교</div>
+                        <div class="chip" onclick="sendPreset('최근 맞대결 결과는?')">⚽ 최근 맞대결 결과</div>
+                        <div class="chip" onclick="sendPreset('올시즌 득점과 실점은?')">🛡️ 득점 및 실점 비교</div>
                     </div>
-                </div>
 
-                <!-- Mini Radar Chart -->
-                <div style="margin-top: 20px; height: 140px;">
-                    <canvas id="radarChart"></canvas>
+                    <div class="chat-input-area">
+                        <input type="text" id="userInput" class="chat-input" placeholder="궁금한 내용을 입력하세요..." onkeypress="if(event.key==='Enter') handleUserChat()">
+                        <button class="chat-send-btn" onclick="handleUserChat()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
                 </div>
             </div>
 
@@ -312,44 +280,74 @@
     </div>
 
     <script>
-        // Radar Chart Initialization
-        const ctx = document.getElementById('radarChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['공격', '슈팅', '패스', '드리블', '피지컬', '수비'],
-                datasets: [{
-                    data: [82, 75, 88, 85, 78, 70],
-                    backgroundColor: 'rgba(0, 166, 81, 0.25)',
-                    borderColor: '#00a651',
-                    borderWidth: 2,
-                    pointBackgroundColor: '#d8b53a'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        angleLines: { color: 'rgba(255,255,255,0.1)' },
-                        grid: { color: 'rgba(255,255,255,0.1)' },
-                        pointLabels: { color: '#8b949e', font: { size: 10, weight: '700' } },
-                        ticks: { display: false }
-                    }
-                },
-                plugins: { legend: { display: false } }
+        // Embedded Real Dataset from K-League Portal Source
+        const matchData = {
+            history: { total: 112, win: 55, loss: 31, draw: 26, goalsFor: 162, goalsAgainst: 127 },[cite: 3]
+            recentMatches: [
+                "2026/05/02: 전북 2 - 0 제주승[cite: 3]",
+                "2025/10/03: 전북 1 - 1 무승부[cite: 3]",
+                "2025/05/23: 전북 0 - 0 무승부[cite: 3]",
+                "2025/04/13: 전북 1 - 1 무승부[cite: 3]",
+                "2024/10/27: 전북 0 - 1 제주패[cite: 3]"
+            ],
+            stats: {
+                jeonbuk: { goals: 27, shots: 273, onTarget: 99, passAcc: "88.1%", passCount: "9,354회", keyPass: 191, conceded: 16 },[cite: 3]
+                jeju: { goals: 22, shots: 254, onTarget: 87, passAcc: "83.4%", passCount: "7,091회", keyPass: 173, conceded: 23 }[cite: 3]
             }
-        });
+        };
 
-        // Export Image function
+        function sendPreset(text) {
+            document.getElementById('userInput').value = text;
+            handleUserChat();
+        }
+
+        function handleUserChat() {
+            const inputField = document.getElementById('userInput');
+            const query = inputField.value.trim();
+            if(!query) return;
+
+            appendMessage(query, 'user');
+            inputField.value = '';
+
+            setTimeout(() => {
+                const answer = generateBotResponse(query);
+                appendMessage(answer, 'bot');
+            }, 300);
+        }
+
+        function appendMessage(text, sender) {
+            const chatBox = document.getElementById('chatMessages');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${sender}`;
+            msgDiv.innerText = text;
+            chatBox.appendChild(msgDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function generateBotResponse(q) {
+            const query = q.toLowerCase();
+            if(query.includes('전적') || query.includes('통산') || query.includes('상대')) {
+                return `📊 제주와의 역대 통산 전적은 총 112경기 **55승 26무 31패**로 전북이 우세합니다. 통산 득점은 162골, 실점은 127골입니다![cite: 3]`;
+            } else if(query.includes('패스') || query.includes('빌드업')) {
+                return `🎯 올시즌 패스 성공률은 전북이 **88.1% (9,354회 성공)**로 제주(83.4%, 7,091회)보다 정교하며, 키패스 또한 전북(191회)이 제주(173회)보다 앞섭니다[cite: 3].`;
+            } else if(query.includes('최근') || query.includes('맞대결') || query.includes('마지막')) {
+                return `⚽ 최근 5차례 맞대결 결과입니다:\n- 2026/05/02: 전북 2:0 승[cite: 3]\n- 2025/10/03: 1:1 무[cite: 3]\n- 2025/05/23: 0:0 무[cite: 3]\n- 2025/04/13: 1:1 무[cite: 3]\n- 2024/10/27: 0:1 패[cite: 3]\n(최근 10경기 기준 4승 4무 2패로 전북이 우위에 있습니다[cite: 3])`;
+            } else if(query.includes('득점') || query.includes('실점') || query.includes('골') || query.includes('수비')) {
+                return `🛡️ 올시즌 득실점 비교:\n- 전북: 27득점 / 16실점 (최소 실점 우위)[cite: 3]\n- 제주: 22득점 / 23실점[cite: 3]\n전북이 견고한 수비력(실점 16개)을 보여주고 있습니다[cite: 3].`;
+            } else {
+                return `🤔 질문을 정확히 이해하지 못했어요. "통산 전적", "패스 성공률", "최근 맞대결", "득점과 실점" 키워드로 물어보시면 실측 데이터 기반으로 명확하게 답변해 드릴게요!`;
+            }
+        }
+
+        // Image Export Function
         async function exportImage() {
             const target = document.getElementById('export-area');
             try {
-                const canvas = await html2canvas(target, { backgroundColor: '#0b0f19', scale: 2, useCORS: true });
+                const canvas = await html2canvas(target, { backgroundColor: '#090d16', scale: 2, useCORS: true });
                 canvas.toBlob(async function(blob) {
                     const item = new ClipboardItem({ "image/png": blob });
                     await navigator.clipboard.write([item]);
-                    alert('✨ 완벽한 완성형 리포트 이미지가 복사되었습니다! 커뮤니티 글쓰기 창에 Ctrl+V 하세요.');
+                    alert('✨ 대시보드 리포트가 클립보드에 복사되었습니다! 커뮤니티 글쓰기 창에 Ctrl+V 하세요.');
                 });
             } catch (err) {
                 alert('이미지 복사 실패: ' + err);
