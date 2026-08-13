@@ -220,29 +220,37 @@
         initSelects();
 
         // Process Data and Update UI dynamically
-        function processData() {
-            const rawData = document.getElementById('rawData').value;
-            let events = [];
-            try {
-                events = JSON.parse(rawData);
-                if (!Array.isArray(events)) events = [events];
-            } catch(e) {
-                alert("JSON 형식이 아닙니다."); return;
-            }
-
-            // Extract unique players from data to populate player dropdown dynamically
-            const playerSelect = document.getElementById('sel-player');
-            playerSelect.innerHTML = '<option value="ALL">전체 선수 리포트</option>'; // Reset
-            
-            const uniquePlayers = [...new Set(events.filter(e => e.back_no).map(e => e.back_no))];
-            uniquePlayers.sort((a,b) => a - b).forEach(num => {
-                playerSelect.add(new Option(`No.${num}`, num));
-            });
-
-            // Update Radar Chart with mock calculated data based on input
-            updateRadarChart();
-            alert("데이터가 성공적으로 연동되어 대시보드가 업데이트되었습니다.");
+function processData() {
+    const rawDataInput = document.getElementById('rawData').value.trim();
+    let events = [];
+    
+    try {
+        // 공백이거나 비어있을 경우 예외 처리
+        if (!rawDataInput) {
+            alert("입력된 데이터가 없습니다.");
+            return;
         }
+        
+        events = JSON.parse(rawDataInput);
+        if (!Array.isArray(events)) events = [events];
+    } catch(e) {
+        console.error("JSON Parse Error:", e);
+        alert("JSON 형식이 아닙니다. 데이터 구조를 확인해주세요."); 
+        return;
+    }
+
+    // 선수 드롭다운 동적 생성
+    const playerSelect = document.getElementById('sel-player');
+    playerSelect.innerHTML = '<option value="ALL">전체 선수 리포트</option>';
+    
+    const uniquePlayers = [...new Set(events.filter(e => e.back_no).map(e => e.back_no))];
+    uniquePlayers.sort((a,b) => a - b).forEach(num => {
+        playerSelect.add(new Option(`No.${num}`, num));
+    });
+
+    updateRadarChart();
+    alert("✨ 분석 리포트가 성공적으로 생성되었습니다!");
+}
 
         // Draw Chart.js Radar Chart
         function updateRadarChart() {
