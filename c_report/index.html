@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전북 매치 리포트 | 전북 vs 제주</title>
+  <meta name="description" content="K리그 CHALK BOARD 기반 전북현대 경기 분석. 초보도 쉽게, 전문가도 깊게." />
+  <meta property="og:title" content="전북 매치 리포트 | 전북 vs 제주" />
+  <meta property="og:description" content="CHALK BOARD 기반 골 스토리 · 히트맵 · xG 분석" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/c_report/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="./css/report.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="hero" id="top">
+      <h1 class="brand">JEONBUK MATCH REPORT</h1>
+      <p class="hero-copy" id="heroCopy">
+        CHALK BOARD 이벤트로 골 장면, 히트맵, xG를 한 번에 읽는 전북 팬 매치 리포트.
+      </p>
+      <div class="match-picker panel editor-only" id="matchPicker">
+        <div class="fetch-grid">
+          <label>
+            <span>연도</span>
+            <select id="yearSelect"></select>
+          </label>
+          <label class="fetch-round">
+            <span>라운드</span>
+            <select id="roundSelect"></select>
+          </label>
+          <button class="btn btn-primary" id="fetchBtn" type="button">데이터 가져오기</button>
+        </div>
+        <p class="match-picker-help" id="matchHelp">연도·라운드를 고른 뒤 데이터 가져오기를 누르세요.</p>
+      </div>
+      <div class="hero-actions editor-only">
+        <a class="btn btn-ghost" href="#story">경기 스토리 보기</a>
+        <a class="btn btn-ghost" href="#community">링크 만들기</a>
+      </div>
+    </header>
+
+    <div id="status" class="status hidden"></div>
+
+    <section class="section" id="story">
+      <div class="section-head">
+        <h2>경기 한눈에</h2>
+        <p>스코어만 보지 말고, “왜 이렇게 됐는지”를 초보 언어와 전문가 언어로 같이 읽습니다.</p>
+      </div>
+      <div class="panel">
+        <div class="scoreboard">
+          <div class="team-name home" id="homeName">전북</div>
+          <div class="score-num" id="scoreNum">- : -</div>
+          <div class="team-name away" id="awayName">제주</div>
+        </div>
+        <div class="meta-line" id="metaLine">데이터 로딩 중</div>
+        <div class="match-facts" id="matchFacts" aria-label="경기 정보"></div>
+        <div class="story" id="storyBox"></div>
+      </div>
+    </section>
+
+    <section class="section" id="stats">
+      <div class="section-head">
+        <h2>숫자로 보는 승부</h2>
+        <p>왼쪽이 전북, 오른쪽이 제주입니다. xG가 높으면 “더 좋은 기회”를 만들었다는 뜻입니다.</p>
+      </div>
+      <div class="kpi-grid" id="kpiGrid"></div>
+      <div class="panel" style="margin-top:14px">
+        <div class="bars" id="statBars"></div>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <div class="section-head">
+        <h2>전반 / 후반 · 선제골 이후</h2>
+        <p>언제 기회가 쏠렸는지, 첫 골 전후로 흐름이 어떻게 바뀌었는지 봅니다.</p>
+      </div>
+      <div class="panel">
+        <div class="flow-grid" id="periodBox"></div>
+        <div class="flow-after" id="flowBox"></div>
+      </div>
+    </section>
+
+    <section class="section" id="lineup">
+      <div class="section-head">
+        <h2>라인업 · 교체</h2>
+        <p>선발 11명과 교체 시점입니다. 포메이션 표기는 포털에 비어 있는 경기가 많아 생략합니다.</p>
+      </div>
+      <div class="layout-2 lineup-layout">
+        <div class="panel">
+          <h3 class="lineup-title" id="homeLineupTitle">홈 선발</h3>
+          <div class="lineup-list" id="homeLineup"></div>
+        </div>
+        <div class="panel">
+          <h3 class="lineup-title" id="awayLineupTitle">원정 선발</h3>
+          <div class="lineup-list" id="awayLineup"></div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:14px">
+        <h3 class="lineup-title">교체</h3>
+        <div class="sub-list" id="subList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="goals">
+      <div class="section-head">
+        <h2>골 스토리</h2>
+        <p>골 직전 패스·슈팅을 시간순으로 연결합니다. 번호는 피치 위 순서입니다.</p>
+      </div>
+      <div class="layout-2">
+        <div class="panel">
+          <div class="pitch-wrap"><canvas id="goalCanvas" width="900" height="600"></canvas></div>
+          <div class="seq" id="goalSeq"></div>
+        </div>
+        <div class="side-list" id="goalList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="players">
+      <div class="section-head">
+        <h2>선수 히트맵</h2>
+        <p>선수와 이벤트 종류를 고르면, 그 선수가 공을 만진 위치가 피치에 그려집니다.</p>
+      </div>
+      <div class="filter-block">
+        <div class="filter-row">
+          <span class="filter-label">팀</span>
+          <div class="team-toggle" role="group" aria-label="팀 선택">
+            <button class="team-btn active" data-team="home" type="button">전북</button>
+            <button class="team-btn" data-team="away" type="button">제주</button>
+          </div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">이벤트</span>
+          <div class="toolbar event-toolbar">
+            <button class="chip active" data-filter="PS" type="button">패스</button>
+            <button class="chip" data-filter="ST" type="button">슈팅</button>
+            <button class="chip" data-filter="DF" type="button">수비</button>
+            <button class="chip" data-filter="DR" type="button">드리블</button>
+            <button class="chip" data-filter="FO" type="button">파울</button>
+            <button class="chip" data-filter="GK" type="button">선방</button>
+            <button class="chip" data-filter="ALL" type="button">전체</button>
+          </div>
+        </div>
+      </div>
+      <div class="layout-2">
+        <div class="panel">
+          <div class="pitch-wrap"><canvas id="playerCanvas" width="900" height="600"></canvas></div>
+          <p class="meta-line" id="playerCaption" style="text-align:left;margin-top:10px"></p>
+        </div>
+        <div class="side-list" id="playerList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="shots">
+      <div class="section-head">
+        <h2>슈팅 맵 + xG</h2>
+        <p>원 크기는 xG입니다. 골은 골드 포인트로 표시됩니다. 전북 공격 방향은 오른쪽 고정.</p>
+      </div>
+      <div class="panel">
+        <div class="pitch-wrap"><canvas id="shotCanvas" width="900" height="600"></canvas></div>
+      </div>
+    </section>
+
+    <section class="section" id="guide">
+      <div class="section-head">
+        <h2>용어 가이드</h2>
+        <p>초보 팬도 바로 따라올 수 있게 핵심만 정리했습니다.</p>
+      </div>
+      <div class="panel glossary">
+        <div><strong>xG</strong>그 슈팅이 평균적으로 골이 될 확률. 0.1이면 10번 중 1번 들어갈 자리.</div>
+        <div><strong>히트맵</strong>선수가 많이 터치한 지역. “어디에 있었나”를 한눈에 보여줍니다.</div>
+        <div><strong>패스 성공</strong>동료에게 정상 연결된 패스. 성공률만 보지 말고 전진 여부를 함께 보세요.</div>
+        <div><strong>CHALK BOARD</strong>K리그 포털의 이벤트 좌표 보드. 슈팅·패스·태클 위치가 기록됩니다.</div>
+      </div>
+    </section>
+
+    <section class="section editor-only" id="community">
+      <div class="section-head">
+        <h2>링크 만들기 (작성자 전용)</h2>
+        <p>이 화면은 <code>?edit=1</code> 로 들어온 경우에만 보입니다. 공유 URL에는 edit를 넣지 마세요.</p>
+      </div>
+      <div class="panel community">
+        <h3>1) 추천: 링크 카드 HTML 복사</h3>
+        <p style="margin:0 0 10px;opacity:.9;line-height:1.6;font-size:14px">
+          evergreenjb 글쓰기 → <strong>HTML/소스</strong> 모드 → 아래를 붙여넣기. 클릭하면 리포트가 새 창으로 열립니다.
+        </p>
+        <pre id="shareCode" class="embed-code"></pre>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 22px">
+          <button class="btn btn-primary" id="copyShare" type="button">링크 카드 복사</button>
+          <button class="btn btn-ghost" id="copyUrl" type="button" style="outline-color:rgba(245,255,248,.45)">URL만 복사</button>
+        </div>
+
+        <h3>2) (선택) iframe — 운영진 허용 후에만</h3>
+        <p style="margin:0 0 10px;opacity:.9;line-height:1.6;font-size:14px">
+          운영진이 외부 멀티미디어 허용에
+          <code>wanju1109.github.io/</code> 를 추가해야 게시글 안에 화면이 보입니다.
+        </p>
+        <pre id="embedCode" class="embed-code"></pre>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 22px">
+          <button class="btn btn-ghost" id="copyEmbed" type="button" style="outline-color:rgba(245,255,248,.45)">iframe HTML 복사</button>
+        </div>
+
+        <h3>3) 미리보기</h3>
+        <div class="embed-preview-wrap">
+          <iframe
+            id="embedPreview"
+            title="전북 매치 리포트 미리보기"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <p style="margin:16px 0 0;opacity:.85;font-size:13px;line-height:1.7">
+          공유용 리포트 URL (edit 없음):
+          <a id="reportUrl" href="./" style="color:#d6f56a;word-break:break-all">로딩 중…</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section editor-only" id="howto">
+      <div class="section-head">
+        <h2>데이터는 어떻게 갱신되나</h2>
+        <p>상단 <strong>데이터 가져오기</strong>만 누르면 됩니다. 새 경기가 끝나면 GitHub Actions가 주기적으로 자동 수집합니다.</p>
+      </div>
+      <div class="panel howto">
+        <p style="margin:0;line-height:1.7;font-size:14px;color:var(--muted)">
+          로컬에서 바로 다시 받으려면: <code>python c_report/scripts/collect_chalkboard.py</code><br />
+          GitHub에서는 Actions 워크플로 <code>c_report chalk board collect</code> 가 6시간마다 전북 경기를 갱신합니다.<br />
+          작성자 편집 화면: 주소 끝에 <code>?edit=1</code> 을 붙이세요.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      데이터 출처: K LEAGUE PORTAL 매치센터 CHALK BOARD (Bepro11 부가기록). 공식기록과 다를 수 있습니다.
+      <span class="editor-only">본 페이지는 보도/커뮤니티 목적의 재가공물입니다. 원본 데이터의 무단 재판매·대량 재배포는 금지됩니다.<br />
+      작성자 편집: <code>?edit=1</code></span>
+    </footer>
+  </div>
+
+  <script src="./js/pitch.js"></script>
+  <script src="./js/analyze.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
