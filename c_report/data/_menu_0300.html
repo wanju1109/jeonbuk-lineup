@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179012740-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179012740-1');
+</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="/images/portal/favicon.ico">
+	<link href="/css/portal/reset.css" rel="stylesheet" type="text/css">
+	<link href="/css/portal/font.css" rel="stylesheet" type="text/css">
+	<link href="/css/portal/common.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Electrolize|Orbitron" rel="stylesheet">	
+	<link rel="stylesheet" href="/resources/jquery-ui-1.12.1/jquery-ui.min.css">
+	<script src="/js/jquery-1.12.4.js"></script>
+	<script src="/js/jquery-migrate-1.4.1.js"></script>
+	<script src="/resources/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<script src="/resources/jquery-ui-1.12.1/datepicker-ko.js"></script>
+	<script src="/js/jquery.cookie.js"></script>
+	<script src="/js/common.js"></script>
+	
+	<!-- 차트 js -->
+	<script type="text/javascript" src="/resources/ibchart/highcharts/highcharts.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/ibleaders.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/ibchart.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/ibchartinfo.js"></script>
+	<!-- Chart 투명도를 위한 Style -->
+	<style>
+		.highcharts-background {
+			fill:none;
+			stroke:none;
+		}
+		
+		.ui-tooltip {
+		    white-space: pre-line;
+		}
+	</style>
+	
+	
+<script type="text/javascript">
+	function fn_teamInfo(_meetSeq, _teamId) {
+		if($("#tmpFrm").length>=1){
+			$("#tmpFrm").remove();
+		}
+		
+		var html="<form name='tmpFrm' id='tmpFrm' method='post' commandName='MneuVO'>";
+			html+="<input type='hidden' name='selectedMenuCd' value='0309'>";
+			html+="<input type='hidden' name='selectMeet' value='" + _meetSeq + "'>";
+			html+="<input type='hidden' name='selectTeam' value='" + _teamId + "'>";
+			html+="</form>";
+			
+		$("body").append(html);
+	
+		var forms = document.getElementById("tmpFrm");
+	
+		forms.method = 'POST';
+		forms.action = "/mainFrame.do";
+	
+		forms.submit();
+	}
+
+	var arrTodayNews = [];
+	
+	$(function(){
+		
+		$(document).tooltip();
+		$("a.show").click(function(){
+			$("a.show").toggleClass("active");
+			$("div.sub-left").toggleClass("active");
+			$("div.sub-right").toggleClass("active");
+			$("div.sub-right-menu").toggleClass("active");
+			$("div.sub-right-team").toggleClass("active");
+			
+			//차트 크기 관련 스크립트			
+			if($("a.show").hasClass("active") === true) {
+				$("canvas").width(1000).height(400);
+			}else{
+				$("canvas").width(800).height(400);	
+			}
+		});
+		
+		moveMainFrameMc=function(menuCd){
+			$("#loading_goal").removeClass("hidden");
+			$("#frm #selectedMenuCd").val(menuCd);
+			$("#frm").attr("method","post").attr("action", '/mainFrame.do');
+			$("#frm").submit();
+		};
+		
+		$("#selMeetYear").change(function(){
+			
+			$("#selMeetSeq").html('<option value=""">대회</option>');
+			$("#selRoundId").html('<option value=""">라운드</option>');
+			$("#selGameId").html('<option value=""">선택</option>');
+			
+			gfn_transaction({
+				url : "/data/matc/getGameNameInfoByMeetYearForSelectTagJson.do",
+				dataType:"json",
+				type:"POST",
+				async:false,
+				data:{
+					meetYear:$(this).find("option:selected").val()
+				},
+				success:function(data){
+					$("#selMeetSeq").append(data.optionTag);
+				}
+			});
+		});
+		
+		$("#selMeetSeq").change(function(){
+			
+			$("#selRoundId").html('<option value=""">라운드</option>');
+			$("#selGameId").html('<option value=""">선택</option>');
+			
+			gfn_transaction({
+				url : "/data/matc/getRoundInfoByMeetYearSeqForSelectTagJson.do",
+				dataType:"json",
+				type:"POST",
+				async:false,
+				data:{
+					meetYear:$("#selMeetYear").find("option:selected").val(),
+					meetSeq:$(this).find("option:selected").val()
+				},
+				success:function(data){
+					$("#selRoundId").append(data.optionTag);
+				}
+			});
+		});
+		
+		$("#selRoundId").change(function(){
+			
+			$("#selGameId").html('<option value=""">선택</option>');
+			
+			gfn_transaction({
+				url : "/data/matc/getMatchInfoByRoundIdForSelectTagJson.do",
+				dataType:"json",
+				type:"POST",
+				async:false,
+				data:{
+					meetYear:$("#selMeetYear").find("option:selected").val(),
+					meetSeq:$("#selMeetSeq").find("option:selected").val(),
+					roundId:$(this).find("option:selected").val(),
+				},
+				success:function(data){
+					$("#selGameId").append(data.optionTag);
+				}
+			});
+			
+		});
+		
+		$("#selGameId").change(function(){
+			var menuCd = $("#selMenuCd").val();
+			var endYn = $(this).find("option:selected").attr("data-endYn");
+			
+			if(!endYn || endYn!='Y'){
+				menuCd = "0300";
+			}
+			
+			$("#selMenuCd").val(menuCd);
+			$("#selForm").attr("action",'/mainFrame.do').submit();
+
+		});
+		
+		/* // 오늘의 경기 Popup 호출
+ 		$(".icon-btnHid").click(function(){
+			gfn_openTodayGamesPopup();
+		});
+		
+		// 경기도움말 Popup 호출
+ 		$(".icon-btnHelp").click(function(){
+			gfn_openKleagueHelpPopup();
+		}); */
+		
+		// 클럽별 관중 Popup 호출
+		$("#btnTeamCrowd").click(function(){
+			
+			var seq=1
+			var year = new Date().getFullYear()
+			
+			gfn_openTeamCrowdPopup(year,seq);
+		});
+		
+		// 오늘의 경기 Popup 호출
+ 		$("#btnTodaysMatch").click(function(){
+			gfn_openTodayGamesPopup();
+		});
+		
+		// 경기도움말 Popup 호출
+		$("#btnBumRye").click(function(){
+			gfn_openKleagueHelpPopup();
+		});
+		
+		//사이트맵
+		$("#btnSitemap").click(function(){
+			var openPopupTmp = function(url, title, width, height, scroll){	
+				var xPos = (window.screen.availWidth - width)/2;
+				var yPos = (window.screen.availHeight - height)/2;
+
+				var win = window.open(url,title,'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars='+scroll+',toolbar=no,resizable=no,copyhistory=no,width='+width+',height='+height+',left='+ xPos +',top='+ yPos+'\'');
+				return win;
+			}
+			var win = openPopupTmp ("/sitemap/sitemap.do?selectedMenuCd=0300", "pop_sitemap", 1000, 720, "yes");
+			win.focus();
+		});
+	});
+	
+	function moveMainFrame(menuCd)
+	{console.log("### moveMainFrameFs :: "+ menuCd);
+	
+		$("#loading_goal").removeClass("hidden");
+	
+		if(menuCd=='0011' || menuCd=='0012'){
+			var gameEndYn = checkGameEndYn();
+			if(gameEndYn=='N'){
+				menuCd='0300';
+			}
+		}
+		
+		var forms = document.getElementById("moveMenuForm");
+		
+		forms.method = 'POST';
+		forms.action = '/mainFrame.do';
+		forms.selectedMenuCd.value = menuCd;
+		forms.submit();
+	}
+	
+
+	
+	function logoutTmp(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.replace("/user/service/logout.do");
+		}
+	}
+
+/* 	function openUserInfoTmp(){
+		var openPopupTmp = function(url, title, width, height, scroll){	
+			var xPos = (window.screen.availWidth - width)/2;
+			var yPos = (window.screen.availHeight - height)/2;
+
+			var win = window.open(url,title,'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars='+scroll+',toolbar=no,resizable=no,copyhistory=no,width='+width+',height='+height+',left='+ xPos +',top='+ yPos+'\'');
+			return win;
+		}
+		var win = openPopupTmp ("/user/service/userInfoDetail.do", "pop_find_id", 920, 800, "yes");
+		win.focus();
+	} */
+	
+	// 경기속보 Banner Index 및 초기설정
+	var todayNewsIndex = 0; 
+	
+	// 경기속보 Banner
+	function todayNewsChange() { 
+		if(todayNewsIndex < arrTodayNews.length - 1) 
+			todayNewsIndex++; 
+		else 
+			todayNewsIndex = 0; 
+		
+		if(document.all.todayNewsArea != null) {
+			document.all.todayNewsArea.innerHTML = "<p>" + arrTodayNews[todayNewsIndex].news + "</p>";
+		}
+		
+	}
+	
+	if(arrTodayNews.length > 0) {
+		// 경기속보 Banner 변경시간 설정
+		setInterval("todayNewsChange()", 3000);
+	}
+	
+</script>
+
+	<title>K LEAGUE PORTAL</title>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<form id="moveMenuForm" name="moveMenuForm" action="/mainFrame.do" method="post"><input type='hidden' name='selectedMenuCd' id="selectedMenuCd1" value="0300">
+</form><!-- 헤더 레이아웃 -->
+	<script type="text/javascript" src="/js/common.js"></script>
+<script>
+var gwUseYn="N";
+
+var boardMenuInfoJson = {};
+$(document).ready(function(){
+	$('.btn-user-closed').click(function(){
+		$('.mainHeigth01').removeClass('on');
+		$('.btn-user-open').addClass('on');
+		$.setCookie('gwInfoWindowOpen', 'N',{expire: '-1',path: '/'})
+		//쿠키값 추가(Y값걸정)
+	});
+
+	$('.btn-user-open').click(function(){
+		$('.mainHeigth01').addClass('on');
+		$('.btn-user-open').removeClass('on');
+		$.setCookie('gwInfoWindowOpen', 'Y',{expire: '-1',path: '/'})
+	});
+	
+	 // 사용자 정보 게시판
+	$('div.main-user-tabTree a').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('div.main-user-tabTree a').removeClass('active');
+		$('.tab-content02').removeClass('current');
+
+		$(this).addClass('active');
+		$("#"+tab_id).addClass('current');
+	});
+	 
+	 //쿠키에 따른 분기처리
+ 	var windowGubun = $.getCookie('gwInfoWindowOpen');
+
+	if (gwUseYn=='Y' && windowGubun!='Y'){
+		$('.mainHeigth01').removeClass('on');
+		$('.btn-user-open').addClass('on');
+	}else{
+		$('.mainHeigth01').addClass('on');
+		$('.btn-user-open').removeClass('on');
+	}
+	 
+	$(document).on("click", ".btn-more-style", function(){
+		console.log("더보기 클릭");
+		if($(this).attr("data-menuCd")){
+			var menuCd = $(this).attr("data-menuCd");
+			
+			if(checkAuthByMenuId(menuCd)=='N'){
+				alert("접근 권한이 없습니다.");
+				return false;
+			}
+			moveMainFrame(menuCd);
+			
+		}else{
+			getSSOVal=function(menuId){
+				var obj = {};
+				$.ajax({
+					url : "/getSSOValWithActionUrlForBoard.do",
+					data:{
+						menuId:menuId
+					},
+					dataType:"json",
+					type:"POST",
+					async:false,
+					success:function(data){
+						if(data.result){
+							obj = data.result;
+						}else{
+							obj = {};
+						}
+					},
+					error:function(){
+						obj = {};
+					}
+				});
+				
+				return obj;
+			};
+			var menuId = $(this).attr("data-menuId");
+			var ssoObj = getSSOVal(menuId);
+			//console.log(ssoObj);
+			if(ssoObj.gwUseYn != 'Y'){
+				alert("사용 권한이 없습니다.");
+				return;
+			}
+			if(ssoObj.url){
+				var win = window.open('' , '_gwPop');
+				if($("#gwForm").length>=1){
+					$("#gwForm").remove();
+				}
+				
+				var html="<form method='post' name='gwForm' id='gwForm'>\n";
+				if(ssoObj.key){
+					html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+				}
+				if(ssoObj.value){
+					html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+				}
+				if(ssoObj.actionUrl){
+					html+="<input type='hidden' name='actionUrl' value='"+ssoObj.actionUrl+"'>\n";
+				}
+				html+="</form'>\n";
+				
+				$("body").append(html);
+				
+				$("#gwForm").attr("action", ssoObj.url);
+				$("#gwForm").attr("target", "_gwPop");
+				$("#gwForm").submit();
+				
+				win.focus();
+			}
+			
+			/* var hostAddr = '';
+			var tokenKey = '';
+			var tokenValue = '';
+			var gwUrl = '';
+			
+			var gwBoardMoreActionUrl = '';
+			
+			var menuId = $(this).attr("data-menuId");
+			
+			var boardRetVal = replaceAllVals(gwBoardMoreActionUrl, ["@menuId@"], [menuId]);
+		
+			//location.href = ssoUrl;
+			var win = window.open('' , '_gwPop');
+			if($("#gwForm").length>=1){
+				$("#gwForm").remove();
+			}
+
+			var html="<form method='post' name='gwForm' id='gwForm'>\n";
+			html+="<input type='hidden' name='key' value='"+tokenKey+"'/>\n";
+			html+="<input type='hidden' name='value' value='"+tokenValue+"'>\n";
+			html+="<input type='hidden' name='actionUrl' value='"+boardRetVal+"'>\n";
+			html+="</form'>\n";
+			
+			
+			$("body").append(html);
+			
+			$("#gwForm").attr("action", hostAddr+gwUrl);
+			$("#gwForm").attr("target", "_gwPop");
+			$("#gwForm").submit();
+			
+			win.focus();
+			
+			$("#gwForm").remove(); */
+		}
+		
+		
+	});
+	
+	$(document).on("click", ".showGwBoardDetail", function(){
+		getSSOVal=function(menuId, articleId){
+			var obj = {};
+			$.ajax({
+				url : "/getSSOValWithActionUrlForBoard.do",
+				data:{
+					menuId:menuId,
+					articleId:articleId
+				},
+				dataType:"json",
+				type:"POST",
+				async:false,
+				success:function(data){
+					if(data.result){
+						obj = data.result;
+					}else{
+						obj = {};
+					}
+				},
+				error:function(){
+					obj = {};
+				}
+			});
+			
+			return obj;
+		};
+		var menuId = $(this).attr("data-menuId");
+		var articleId = $(this).attr("data-articleId");
+		var ssoObj = getSSOVal(menuId, articleId);
+		//console.log(ssoObj);
+
+		if(ssoObj.gwUseYn != 'Y'){
+			alert("사용 권한이 없습니다.");
+			return;
+		}
+		if(ssoObj.url){
+			var win = window.open('' , '_gwPop');
+			if($("#gwForm").length>=1){
+				$("#gwForm").remove();
+			}
+			//console.log(ssoObj);
+			var html="<form method='post' name='gwForm' id='gwForm'>\n";
+			if(ssoObj.key){
+				html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+			}
+			if(ssoObj.value){
+				html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+			}
+			if(ssoObj.actionUrl){
+				html+="<input type='hidden' name='returnUrl' value='"+ssoObj.actionUrl+"'>\n";
+			}
+			html+="</form'>\n";
+			
+			$("body").append(html);
+			
+			$("#gwForm").attr("action", ssoObj.url);
+			$("#gwForm").attr("target", "_gwPop");
+			$("#gwForm").submit();
+			
+			win.focus();
+		}
+		/* var hostAddr = '';
+		var tokenKey = '';
+		var tokenValue = '';
+		var gwUrl = '';
+		
+		var gwBoardReturnUrl = '';
+		
+		var menuId = $(this).attr("data-menuId");
+		var articleId = $(this).attr("data-articleId");
+		
+		var boardRetVal = replaceAllVals(gwBoardReturnUrl, ["@menuId@","@articleId@"], [menuId, articleId]);
+		
+		//location.href = ssoUrl;
+		var win = window.open('' , '_gwPop');
+		if($("#gwForm").length>=1){
+			$("#gwForm").remove();
+		}
+		
+		var html="<form method='post' name='gwForm' id='gwForm'>\n";
+		html+="<input type='hidden' name='key' value='"+tokenKey+"'/>\n";
+		html+="<input type='hidden' name='value' value='"+tokenValue+"'>\n";
+		html+="<input type='hidden' name='returnUrl' value='"+boardRetVal+"'>\n";
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#gwForm").attr("action", hostAddr+gwUrl);
+		$("#gwForm").attr("target", "_gwPop");
+		$("#gwForm").submit();
+		
+		win.focus();
+		
+		$("#gwForm").remove(); */
+		
+	});
+	
+	$(document).on("click", ".showYmgdBoardDetailTop", function(){
+		var menuCd = $(this).attr("data-menuCd");
+		
+		if(checkAuthByMenuId(menuCd)=='N'){
+			alert("접근 권한이 없습니다.");
+			return false;
+		}
+		
+		var cmsCd = $(this).attr("data-cmsCd");
+		var ntNo = $(this).attr("data-ntNo");
+		
+		if($("#ymgdBoardFrm").length<=1){
+			$("#ymgdBoardFrm").remove();
+		}
+		
+		var html="<form method='post' name='ymgdBoardFrm' id='ymgdBoardFrm'>\n";
+		html+="<input type='hidden' name='selectedMenuCd' value='"+menuCd+"'/>\n";
+		html+="<input type='hidden' name='cmsCd' value='"+cmsCd+"'>\n";
+		html+="<input type='hidden' name='ntNo' value='"+ntNo+"'>\n";
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#ymgdBoardFrm").attr("action", "/mainFrame.do");
+		
+		$("#ymgdBoardFrm").submit();
+		
+		
+	});
+	
+	$(document).on("click", ".showGwBoardMore", function(){
+		//var tp = $(this).attr("data-tp");
+		
+		var menuCd = "";//viewInfoMapJson[tp].menuCd;
+		var menuId = $(this).attr("data-menuId"); //viewInfoMapJson[tp].menuId;
+		
+		$.each(boardMenuInfoJson, function(i, d) {
+			if(d.menuId == menuId) {
+				menuCd = d.menuCd;
+			}
+		});
+		
+		var html="<form name='tmpFrm' id='tmpFrm' method='post'>";
+			html+="<input type='hidden' name='selectedMenuCd' value='"+menuCd+"'>";
+			html+="<input type='hidden' name='menuId' value='" + menuId + "'>";
+			html+="</form>";
+			
+		$("body").append(html);
+
+		var forms = document.getElementById("tmpFrm");
+	
+		$("#tmpFrm").attr("method", "post").attr("action", "/mainFrame.do").submit();
+		
+	});
+	
+	/* $(document).on("click", ".showGwBoardDetail", function(){
+		//var tp = $(this).attr("data-tp");
+		
+		var menuCd = "";//viewInfoMapJson[tp].menuCd;
+		var menuId = $(this).attr("data-menuId"); //viewInfoMapJson[tp].menuId;
+		
+		$.each(boardMenuInfoJson, function(i, d) {
+			if(d.menuId == menuId) {
+				menuCd = d.menuCd;
+			}
+		});
+		
+		var articleId = $(this).attr("data-articleId");
+		
+		if($("#tmpFrm").length>=1){
+			$("#tmpFrm").remove();
+		}
+		
+		var html="<form name='tmpFrm' id='tmpFrm' method='post'>";
+			html+="<input type='hidden' name='selectedMenuCd' value='"+menuCd+"'>";
+			html+="<input type='hidden' name='menuId' value='" + menuId + "'>";
+			html+="<input type='hidden' name='articleId' value='" + articleId + "'>";
+			html+="</form>";
+			
+		$("body").append(html);
+
+		var forms = document.getElementById("tmpFrm");
+	
+		$("#tmpFrm").attr("method", "post").attr("action", "/mainFrame.do").submit();
+		
+	}); */
+	
+	$(document).on("click", ".atagChgUserInfo", function(){
+		openUserInfoTmp();
+		return false;
+	});
+});
+
+function logoutTmp()
+{
+	if(confirm("로그아웃 하시겠습니까?"))
+	{
+		location.replace("/user/service/logout.do");
+	}
+}
+
+function openUserInfoTmp()
+{
+	var openPopupTmp = function(url, title, width, height, scroll)
+	{	
+		var xPos = (window.screen.availWidth - width)/2;
+		var yPos = (window.screen.availHeight - height)/2;
+
+		var optionStr = 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars='+scroll+',toolbar=no,resizable=no,copyhistory=no,width='+width+',height='+height+',left='+ xPos +',top='+ yPos+'\'';
+		
+		var win = window.open(url,title, optionStr);
+	
+		return win;
+	}
+	
+	var win = openPopupTmp ("/user/service/userInfoDetail.do", "pop_find_id", 920, 800, "yes");
+	
+	win.focus();
+}
+
+
+function moveGroupwareWithSSO()
+{
+	getSSOVal=function(){
+		var obj = {};
+		$.ajax({
+			url : "/getSSOVal.do",
+			dataType:"json",
+			type:"POST",
+			async:false,
+			success:function(data){
+				if(data.result){
+					obj = data.result;
+				}else{
+					obj = {};
+				}
+			},
+			error:function(){
+				obj = {};
+			}
+		});
+		
+		return obj;
+	};
+	
+	var ssoObj = getSSOVal();
+
+	if(ssoObj.gwUseYn != 'Y'){
+		alert("그룹웨어를 접근할 수 없습니다.");
+		return;
+	}
+	if(ssoObj.url){
+		var win = window.open('' , '_gwPop');
+		if($("#gwForm").length>=1){
+			$("#gwForm").remove();
+		}
+		
+		var html="<form method='post' name='gwForm' id='gwForm'>\n";
+		if(ssoObj.key){
+			html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+		}
+		if(ssoObj.value){
+			html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+		}
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#gwForm").attr("action", ssoObj.url);
+		$("#gwForm").attr("target", "_gwPop");
+		$("#gwForm").submit();
+		
+		win.focus();
+		
+		$("#gwForm").remove();
+	}
+}
+
+function moveGroupwareWithSSOAndActionTp(actionTp)
+{
+	getSSOVal=function(actionTp1){
+		var obj = {};
+		$.ajax({
+			url : "/getSSOValWithActionUrl.do",
+			data:{actionTp:actionTp1},
+			dataType:"json",
+			type:"POST",
+			async:false,
+			success:function(data){
+				if(data.result){
+					obj = data.result;
+				}else{
+					obj = {};
+				}
+			},
+			error:function(){
+				obj = {};
+			}
+		});
+		
+		return obj;
+	};
+	
+	var ssoObj = getSSOVal(actionTp);
+
+	if(ssoObj.gwUseYn != 'Y'){
+		alert("그룹웨어를 접근할 수 없습니다.");
+		return;
+	}
+	if(ssoObj.url){
+		var win = window.open('' , '_gwPop');
+		if($("#gwForm").length>=1){
+			$("#gwForm").remove();
+		}
+		
+		var html="<form method='post' name='gwForm' id='gwForm'>\n";
+		if(ssoObj.key){
+			html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+		}
+		if(ssoObj.value){
+			html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+		}
+		if(ssoObj.actionUrl){
+			html+="<input type='hidden' name='actionUrl' value='"+ssoObj.actionUrl+"'>\n";
+		}
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#gwForm").attr("action", ssoObj.url);
+		$("#gwForm").attr("target", "_gwPop");
+		$("#gwForm").submit();
+		
+		win.focus();
+		
+		$("#gwForm").remove();
+	}
+}
+</script>
+
+	<div class="header">
+		<div class="col-width">
+
+			<div class="headerLeft">
+
+				<div class="logo"><h1><a href="/mainFrame.do">K LEAGUE PORTAL</a></h1></div>
+				<div class="main-menu">
+
+					<ul>	
+<!-- 선택된 1depth 메뉴 -->
+				<li><a class='active'>데이터센터</a></li>
+			<li><a href="javascript:moveMainFrame('0213');">리그운영</a></li>
+			</ul>
+
+				</div>
+				
+			</div>
+			
+			<div class="headerRight">
+				<div class="topBg"></div>
+				<ul class="top-ul">
+					<li class="ml20">
+						</li>
+					<li>
+						</li>
+				</ul>
+				<div class="topBg-right"></div>
+				
+			</div>
+			
+		</div>
+	</div>
+	<div class="headerLine"></div>
+
+	<!-- TOP 텍스트&오늘의 경기 -->
+	
+	<div class="headtext">
+	
+		<div class="col-width">
+	
+			<div class="headtextLeft">
+				<div class="today-calendar"><!-- CalenderLayout --></div>
+			</div>
+			
+			<div id="todayNewsArea" class="headtextCenter"><p></p></div>
+
+			<div class="headtextRight">
+				<!-- <div class="today-game taC">
+					<span class="img-txtToday vaM">오늘의 경기</span>
+					<a class="icon-btnHid ml10"></a>
+					<a class="icon-btnHelp ml10"></a>
+				</div> -->
+				
+				<div class="headtextRight-box">
+					<a href="#" id="btnTeamCrowd">
+						<div class="headtextRight-txt">
+							클럽별 관중
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+				
+				<div class="headtextRight-device">						
+				</div>
+				
+				<div class="headtextRight-box">
+					<a href="#" id="btnTodaysMatch">
+						<div class="headtextRight-txt">
+							오늘의 경기
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+				<div class="headtextRight-device">						
+				</div>
+				<div class="headtextRight-box">
+					<a href="#" id="btnBumRye">
+						<div class="headtextRight-txt">
+							범례
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+				<div class="headtextRight-device">						
+				</div>
+				<div class="headtextRight-box">
+					<a href="#" id="btnSitemap">
+						<div class="headtextRight-txt">
+							사이트맵
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- // TOP 비쥬얼 이미지 // -->
+
+	<div class="headbgimage"><div class="img-sub-bg01"></div></div>
+
+	<!-- // 2depth 메뉴 // -->
+
+	<div class="sub-menu">
+
+		<div class="two-depthMenu col-width">
+
+			<ul>
+
+<li><a href="javascript:void(1)" onclick="location.tmpFrm.submit();" class="active">매치센터</a></li>
+		<li><a href="javascript:moveMainFrame('0015');" onclick="window.location.tmpFrm.submit();">종합검색</a></li>
+		<li><a href="javascript:moveMainFrame('0409');" onclick="window.location.tmpFrm.submit();">클럽</a></li>
+		<li><a href="javascript:moveMainFrame('0410');" onclick="window.location.tmpFrm.submit();">선수</a></li>
+		<li><a href="javascript:moveMainFrame('0016');" onclick="window.location.tmpFrm.submit();">공식기록</a></li>
+		<li><a href="javascript:moveMainFrame('0194');" onclick="window.location.tmpFrm.submit();">부가기록</a></li>
+		</ul>
+
+		</div>
+
+	</div>
+
+	<!-- CONTENTS 전체 레이아웃 -->
+
+	<div class="content-area-match">
+		<div class="match-top-area">
+		<!-- NAVIGATION -->
+			<div class="navigation col-width">
+				<p>
+					<span class="pr5"><img src="/images/portal/img-nav-home.png"></span>
+				<img src="/images/portal/img-nav-arrowR.gif">
+					<span class="pl5 pr5">포탈서비스</span>
+				<img src="/images/portal/img-nav-arrowR.gif">
+					<span class="pl5 pr5">데이터센터</span>
+				<img src="/images/portal/img-nav-arrowR.gif">
+					<span class="pl5 pr5">매치센터</span>
+				<img src="/images/portal/img-nav-arrowR.gif">
+					<span class="pl5 pr5">PRE MATCH</span>
+				</p>
+				<form method="post" name="selForm" id="selForm">
+					<input type="hidden" name="selectedMenuCd" id="selMenuCd" value="0300"/>
+				<div class="navigation-select mr10">
+					<select class="navigation-select-control" name="meetYear" id="selMeetYear">
+						<option value="">년도</option>
+						<option value="2026" selected="selected">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option></select>
+					<select class="navigation-select-control" name="meetSeq" id="selMeetSeq">
+						<option value="">대회</option>
+						<option value="1" selected="selected">하나은행 K리그1</option><option value="2">하나은행 K리그2</option><option value="3">K리그 승강 PO 2026</option><option value="4">K리그 슈퍼컵</option></select>
+					<select class="navigation-select-control" name="roundId" id="selRoundId">
+						<option value="">라운드</option>
+						<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22" selected="selected">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option></select>
+					<select class="navigation-select-control" name="gameId" id="selGameId">
+						<option value="">선택</option>
+						<option value="127" data-endYn="Y">안양 VS 대전 (127, 08/08)</option><option value="128" data-endYn="Y">부천 VS 광주 (128, 08/08)</option><option value="129" data-endYn="N">강원 VS 인천 (129, 09/27)</option><option value="130" data-endYn="Y">김천 VS 서울 (130, 08/08)</option><option value="131" selected="selected" data-endYn="Y">전북 VS 제주 (131, 08/08)</option><option value="132" data-endYn="Y">포항 VS 울산 (132, 08/08)</option></select>
+				</div>
+				</form>
+			</div>
+			<div class="sub-area-match col-width" id="contentsLayer">
+				<div class="match-tab">
+					<div class="tabMenu-box03">
+						<ul class="tabs03">
+							<li class="" data-tab="tab-1">
+								<a href="javascript:moveMainFrameMc('0013');">MATCH SUMMARY</a>
+							</li>
+							<li class="" data-tab="tab-2">
+								<a href="javascript:moveMainFrameMc('0297');">TEAM STATS</a>
+							</li>
+							<li class="" data-tab="tab-3">
+								<a href="javascript:moveMainFrameMc('0298');">PLAYER STATS</a>
+							</li>
+							<li class="" data-tab="tab-4">
+								<a href="javascript:moveMainFrameMc('0299');">LATEST SCORES</a>
+							</li>
+							<li class="current active" data-tab="tab-5">
+								<a href="javascript:moveMainFrameMc('0300');">PRE MATCH</a>
+							</li>
+							<li class="" data-tab="tab-6">
+								<a href="javascript:moveMainFrameMc('0301');">LIVE EVENT</a>
+							</li>
+							<li class="" data-tab="tab-7">
+								<a href="javascript:moveMainFrameMc('0302');">CHALK BOARD</a>
+							</li>
+							<li class="" data-tab="tab-8">
+								<a href="javascript:moveMainFrameMc('0336');">PASS MATRIX</a>
+							</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+		<div class="content-match-bg">
+			<!-- 탑 -->
+			<div class="match-middle-area col-width">
+				<div class="main-soccer-position-top mt30" id="divFsScoreArea"><!-- Chalk Board의 경우 공통 TOP부분 보이지 않음(T) -->
+				<!-- // Pre Match(MENU_CD : 0300)는 별도의 Top으로 구현함 (Event(MENU_CD : 0301) 추가) --> 
+				<script type="text/javascript">
+$(function(){
+	$("span[name=color-home-f02]").css("color", "#00523D");
+	$("span[name=color-away-f02]").css("color", "#EE7501");
+	
+
+	// 관전포인트 Button Click Event
+	$("#mcPreview").on("click", function(){
+		if($("#tmpFrm").length>=1){
+			$("#tmpFrm").remove();
+		}
+		
+		var html="<form name='tmpFrm' id='tmpFrm' method='post'>";
+		html+="<input type='hidden' name='mainMeetYear' value='2026'/>";
+		html+="<input type='hidden' name='mainMeetSeq' value='1'/>";
+		html+="<input type='hidden' name='mainGameId' value='131'/>";
+		html+="<input type='hidden' name='selectedMenuCd' value='0300'/>";
+		html+="</form>";
+		$("body").append(html);
+	
+		$("#tmpFrm").attr("action", "/mainFrame.do");
+		$("#tmpFrm").submit();
+	});
+});	
+</script>
+<form method="post" name="frm" id="frm">
+<input type="hidden" name="helpFileNm" id="helpFileNm" value=""/>
+<input type="hidden" name="menuGroupCd" id="menuGroupCd" value=""/>
+<input type="hidden" name="homeBgColor" id="homeBgColor" value=""/>
+<input type="hidden" name="updUserId" id="updUserId" value="platform"/>
+<input type="hidden" name="menuLevel" id="menuLevel" value=""/>
+<input type="hidden" name="menuTypeCd" id="menuTypeCd" value=""/>
+<input type="hidden" name="helpRealFileNm" id="helpRealFileNm" value=""/>
+<input type="hidden" name="searchChildrenYn" id="searchChildrenYn" value="Y"/>
+<input type="hidden" name="endYn" id="endYn" value="Y"/>
+<input type="hidden" name="searchFlag" id="searchFlag" value=""/>
+<input type="hidden" name="homeFgColor" id="homeFgColor" value=""/>
+<input type="hidden" name="regDttm" id="regDttm" value=""/>
+<input type="hidden" name="leagueId" id="leagueId" value="2"/>
+<input type="hidden" name="homeGainGoal" id="homeGainGoal" value="1"/>
+<input type="hidden" name="awayGainGoal" id="awayGainGoal" value="3"/>
+<input type="hidden" name="awayFgColor" id="awayFgColor" value=""/>
+<input type="hidden" name="menuId" id="menuId" value=""/>
+<input type="hidden" name="serviceCd" id="serviceCd" value=""/>
+<input type="hidden" name="manageTreeYn" id="manageTreeYn" value=""/>
+<input type="hidden" name="regUserNm" id="regUserNm" value=""/>
+<input type="hidden" name="uriPath" id="uriPath" value=""/>
+<input type="hidden" name="chartYn" id="chartYn" value=""/>
+<input type="hidden" name="prevHelpFileNm" id="prevHelpFileNm" value=""/>
+<input type="hidden" name="searchFormKey" id="searchFormKey" value=""/>
+<input type="hidden" name="menuPath" id="menuPath" value=""/>
+<input type="hidden" name="helpFileSize" id="helpFileSize" value="0"/>
+<input type="hidden" name="updDttm" id="updDttm" value=""/>
+<input type="hidden" name="menuTypeNm" id="menuTypeNm" value=""/>
+<input type="hidden" name="btnQry" id="btnQry" value=""/>
+<input type="hidden" name="menuOrderSeq" id="menuOrderSeq" value=""/>
+<input type="hidden" name="btnSave" id="btnSave" value=""/>
+<input type="hidden" name="menuUrl" id="menuUrl" value=""/>
+<input type="hidden" name="dispHelpFileKbSize" id="dispHelpFileKbSize" value=""/>
+<input type="hidden" name="mainMeetYear" id="mainMeetYear" value="2026"/>
+<input type="hidden" name="awayTeamName" id="awayTeamName" value="제주"/>
+<input type="hidden" name="updUserNm" id="updUserNm" value=""/>
+<input type="hidden" name="parentMenuCd" id="parentMenuCd" value=""/>
+<input type="hidden" name="fullMenuName" id="fullMenuName" value=""/>
+<input type="hidden" name="awayTeamColor" id="awayTeamColor" value="{afColor=#EE7501, subColor2=null, subColor1=#E1002A, abColor=#EE7501, hbColor=#EE7501, hfColor=#EE7501}"/>
+<input type="hidden" name="menuNm" id="menuNm" value=""/>
+<input type="hidden" name="meetSeq" id="meetSeq" value="1"/>
+<input type="hidden" name="reloadYn" id="reloadYn" value=""/>
+<input type="hidden" name="meetYear" id="meetYear" value="2026"/>
+<input type="hidden" name="gameType" id="gameType" value="0"/>
+<input type="hidden" name="fieldName" id="fieldName" value="전주 월드컵"/>
+<input type="hidden" name="gameDate" id="gameDate" value="2026/08/08"/>
+<input type="hidden" name="awayTeam" id="awayTeam" value="K04"/>
+<input type="hidden" name="searchKeyword" id="searchKeyword" value=""/>
+<input type="hidden" name="btnExl" id="btnExl" value=""/>
+<input type="hidden" name="selectedMenuCd" id="selectedMenuCd" value="0300"/>
+<input type="hidden" name="menuNodeYn" id="menuNodeYn" value=""/>
+<input type="hidden" name="gameTime" id="gameTime" value="20:00"/>
+<input type="hidden" name="showYn" id="showYn" value=""/>
+<input type="hidden" name="homeTeam" id="homeTeam" value="K05"/>
+<input type="hidden" name="useYn" id="useYn" value=""/>
+<input type="hidden" name="serviceKey" id="serviceKey" value=""/>
+<input type="hidden" name="serviceId" id="serviceId" value=""/>
+<input type="hidden" name="roundId" id="roundId" value="22"/>
+<input type="hidden" name="btnDel" id="btnDel" value=""/>
+<input type="hidden" name="playerId" id="playerId" value=""/>
+<input type="hidden" name="gameId" id="gameId" value="131"/>
+<input type="hidden" name="homeTeamColor" id="homeTeamColor" value="{afColor=#00523D, subColor2=null, subColor1=#B7F700, abColor=#00523D, hbColor=#00523D, hfColor=#00523D}"/>
+<input type="hidden" name="menuCd" id="menuCd" value=""/>
+<input type="hidden" name="searchCondition" id="searchCondition" value=""/>
+<input type="hidden" name="btnPrt" id="btnPrt" value=""/>
+<input type="hidden" name="showChartYn" id="showChartYn" value=""/>
+<input type="hidden" name="mainGameId" id="mainGameId" value="131"/>
+<input type="hidden" name="menuCn" id="menuCn" value=""/>
+<input type="hidden" name="searchDate" id="searchDate" value="2026/08/08"/>
+<input type="hidden" name="statsIndex" id="statsIndex" value=""/>
+<input type="hidden" name="statsIndexNm" id="statsIndexNm" value=""/>
+<input type="hidden" name="userId" id="userId" value=""/>
+<input type="hidden" name="childMenuList" id="childMenuList" value=""/>
+<input type="hidden" name="btnDwn" id="btnDwn" value=""/>
+<input type="hidden" name="searchDataKey" id="searchDataKey" value=""/>
+<input type="hidden" name="typeCd" id="typeCd" value=""/>
+<input type="hidden" name="btnAdd" id="btnAdd" value=""/>
+<input type="hidden" name="regUserId" id="regUserId" value="platform"/>
+<input type="hidden" name="mainMeetSeq" id="mainMeetSeq" value="1"/>
+<input type="hidden" name="awayBgColor" id="awayBgColor" value=""/>
+<input type="hidden" name="homeTeamName" id="homeTeamName" value="전북"/>
+<input type="hidden" name="btnClr" id="btnClr" value=""/>
+<input type="hidden" name="upperMenuCd" id="upperMenuCd" value=""/>
+<div class="main-soccer-btnArea mt10 mb20">
+					<div class="match-prame-box">
+						<ul>
+							<li class="match-prame-box-width01">
+								<span class="match-prame-boxTxt01">장소</span>
+								<span class="match-prame-boxTxt02">&nbsp;전주 월드컵</span>
+							</li>
+							<li class="match-prame-box-width04">
+								<span class="match-prame-boxTxt01">경기일자</span>
+								<span class="match-prame-boxTxt02">&nbsp;2026/08/08</span>
+							</li>
+							<li class="match-prame-box-width02">
+								<span class="match-prame-boxTxt01">방송중계</span>
+								<span class="match-prame-boxTxt02">&nbsp; COUPANGPLAY(생), ENA SPORTS(생)</span>
+							</li>
+						</ul>
+					</div>
+					<!-- <span class="main-soccer-btn"><a href="#" id="mcCenter">매치센터</a></span> -->
+					<!-- <span class="main-soccer-btn"><a href="#">라이브</a></span> -->
+				</div>
+				<div class="main-soccer-device flL">
+					<div class="main-soccer-absolute-left">
+						<div class="main-soccer-logo">
+							<img src="/images/portal/img-emble-k05-sm.png" class="img-emble-reSize-60 flL">
+							<ul class="main-width-fix flL">
+								<li class="main-soccer-txt01 mt5">
+									&nbsp;
+								</li>
+								<li class="main-soccer-txt02 mt5" title="">
+									&nbsp;
+								</li>
+								<li class="main-soccer-txt01 mt5">
+									
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-soccer-teamName flR pr20">
+						<span class="main-soccer-teamName-font pr10">9승</span><span class="main-soccer-teamName-font pr10">7무</span><span class="main-soccer-teamName-font pr10">6패</span><span class="main-soccer-teamName-font pr10">( 3위 )</span>
+						<span name="color-home-f02" class="main-soccer-teamName-txt pr10">전북</span>
+						<span class="main-soccer-teamName-txt-height"></span>
+					</div>
+					<div class="main-soccer-teamName-bottom taR pr20">
+						<div class="main-soccer-winPosition-left">
+							<!-- 첫번째 경기 -->
+								<img src="/images/portal/img-main-uc01.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 두번째 경기 -->
+								<img src="/images/portal/img-main-uc03.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 세번째 경기 -->
+								<img src="/images/portal/img-main-uc02.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 네번째 경기 -->
+								<img src="/images/portal/img-main-uc01.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 다섯번째 경기 -->
+								<img src="/images/portal/img-main-uc02.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 여섯번째 경기 -->
+								<img src="/images/portal/img-main-uc03.png">
+									</div>
+					</div>
+				</div>
+				<div class="main-soccer-device flR">
+					<div class="main-soccer-teamName flL pl20 border-right-none">
+						<span class="main-soccer-position-center">경기전</span>
+						<span class="main-soccer-teamName-txt-height"></span>
+						<span name="color-away-f02" class="main-soccer-teamName-txt01 pl10">제주</span>
+						<span class="main-soccer-teamName-font pl10">8승</span><span class="main-soccer-teamName-font pl10">7무</span><span class="main-soccer-teamName-font pl10">7패</span><span class="main-soccer-teamName-font pl10">( 5위 )</span>
+					</div>
+					<div class="main-soccer-absolute-right">
+						<div class="main-soccer-logo02">
+							<img src="/images/portal/img-emble-k04-sm.png" class="img-emble-reSize-60 flR">
+							<ul class="main-width-fix flR taR pr5">
+								<li class="main-soccer-txt01 mt5">
+									</li>
+								<li class="main-soccer-txt02 mt5" title="">
+									</li>
+								<li class="main-soccer-txt01 mt5">
+									
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-soccer-teamName-bottom taL pl20 border-right-none">
+						<div class="main-soccer-winPosition-right">
+							<!-- 첫번째 경기 -->
+								<img src="/images/portal/img-main-uc02.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 두번째 경기 -->
+								<img src="/images/portal/img-main-uc01.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 세번째 경기 -->
+								<img src="/images/portal/img-main-uc02.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 네번째 경기 -->
+								<img src="/images/portal/img-main-uc01.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 다섯번째 경기 -->
+								<img src="/images/portal/img-main-uc02.png">
+									<img src="/images/portal/icon-main-right-arrow.png">
+								<!-- 여섯번째 경기 -->
+								<img src="/images/portal/img-main-uc01.png">
+									</div>
+					</div>
+				</div>
+</form></div>
+			</div>
+			<!-- 탑 -->
+			<div class="match-middle-area col-width" id="contentsLayerBody">
+		
+		
+			<!-- Start -->
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	//Chart 설정
+	fn_viewPreMatch("0");
+});
+
+$(document).ready(function(){
+	// Away Team Stats Button Click Event
+	$(".pre-soccer-btn a").click(function(){
+		$.each($(".pre-soccer-btn a"), function(){
+			$(this).removeClass();
+		});
+		
+		$(this).addClass("active");
+		
+		fn_viewPreMatch($(this).attr("data-idx"));
+	});
+});
+
+//Pre Match 상세화면 호출
+function fn_viewPreMatch(_viewFlag) {
+	var _url = "";
+
+	var serialize = $("#frm").serializeObject();
+
+	switch(_viewFlag) {
+		case "0" :	// 요약
+			_url = "/data/matc/matchChartPre.do";
+			break;
+		case "1" :	// 최근 경기결과
+			_url = "/data/matc/lastestGame.do";
+			break;
+		case "2" :	// 상대전적
+			_url = "/data/matc/recordAgainst.do";
+			break;
+		case "3" :	// 선수 주요기록
+			_url = "/data/matc/playerMainRecord.do";
+			break;
+		case "4" :	// 선수정보
+			_url = "/data/matc/playerRecord.do";
+			break;
+		default :
+			break;
+	}
+	
+	if(!gfn_isNull(_url)) {
+		
+		gfn_transaction({
+			url : _url,
+			dataType:"html",
+			type:"POST",
+			async:false,
+			data:serialize,
+			success:function(data){
+				$("#layerPreMatch").html(data);
+			}
+		});
+	}
+}
+
+</script>
+
+	<!-- Pre Match -->
+	<div class="match-middle-area ">
+		<!-- // 탭 // -->
+		<div class="pre-soccer-btnArea mt10 mb40">
+			<span class="pre-soccer-btn"><a href="#" class="active" data-idx="0">요약</a></span>
+			<span class="pre-soccer-btn"><a href="#" data-idx="1">최근 경기결과</a></span>
+			<span class="pre-soccer-btn"><a href="#" data-idx="2">상대전적</a></span>
+			<span class="pre-soccer-btn"><a href="#" data-idx="3">선수 주요 기록</a></span>
+			<span class="pre-soccer-btn"><a href="#" data-idx="4">선수 정보</a></span>
+		</div>
+		<div id="layerPreMatch">
+		</div>
+	</div>
+<!-- End -->
+			</div>
+		</div>
+	</div>
+	<!-- // 5px - black line // -->
+	<div class="black-linebar">
+	</div>
+	
+	<!-- // footer 레이아웃 // -->
+
+	<!-- // 푸터 탭 //-->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('ul.main-tab-team li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.main-tab-team li').removeClass('active');
+			$('.tab-emblem').removeClass('current');
+
+			$(this).addClass('active');
+			$("#"+tab_id).addClass('current');
+		 });
+		  
+	  	//Check to see if the window is top if not then display button
+	  	$(window).scroll(function(){
+	  		if ($(this).scrollTop() > 0) {
+	  			$('.scrollToTop').fadeIn();
+	  		} else {
+	  			$('.scrollToTop').fadeOut();
+	  		}
+	  	});
+
+	  	//Click event to scroll to top
+	  	$('.scrollToTop').click(function(){
+	  		$('html, body').animate({scrollTop : 0},500);
+	  		return false;
+	  	});
+	});
+	
+	function openPopup(url) {
+        // 팝업창 옵션 설정
+        const popupOptions = "width=1200,height=770,scrollbars=yes,resizable=yes";
+        window.open(url, "PopupWindow", popupOptions);
+    }
+	</script>
+	<div class="bottom-area">
+		<div class="footer-area col-width pt50">
+		<div class="main-notice-txt">
+				<span class="main-notice-txt-title"><img src="/images/portal/img-main-cin.png" class="pr10">K리그 데이터 포털 사용에 대한 안내</span>
+				<p>
+					<!-- - 2018년도 일부 부가기록의 경우 K리그2는 21라운드부터 제공됩니다. 일부 연도별 누계 데이터가 데이터 항목의 상이함으로 표출되지 않을 수 있습니다.<br> -->
+					- 데이터 포탈 사이트에서 제공하고 있는 경기 <span style="color: red;">부가기록 데이터</span>는 경기데이터 공급업체에서 제공한 기록 입니다. <span style="color: red;">(공급업체 : Bepro11)</span><br>
+					- 공식기록은 경기장에서 실시간으로 수집한 기록이고 부가기록은 영상기반으로 데이터를 수집한 것 입니다.<br>
+					- 부가기록은 실시간 업데이트됩니다.<br>
+					- <span style="color: red;">공식기록과 부가기록의 경우 차이가 발생할 수 있습니다.</span><br>
+					- 연도별 부가기록의 경우 기록 제공 업체의 변경에 따라 일부 기록 항목이 표출되지 않을 수 있습니다.<br>
+					<!-- - 데이터 포털 개선 작업으로 인해 2019 시즌 부가데이터 표출은 개막 후 2주 정도 소요될 예정입니다.<br> -->
+				</p>
+			</div>
+			<div class="main-team-linkArea">
+				<ul class="main-tab-team">
+					<li class="current active" data-tab="tab02-1">
+						K리그 1
+					</li>
+					<li class=""  data-tab="tab02-2">
+						K리그 2
+					</li>
+				</ul>
+			</div>
+			<div id="tab02-1" class="tab-emblem current">
+				<ul>
+					<li class="pl0"><a href="#"><img src="/images/portal/img-emble-k05-sm.png" class="img-emble-reSize-60" alt="전북" onclick="javascript:fn_teamInfo('1', 'K05');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k10-sm.png" class="img-emble-reSize-60" alt="대전" onclick="javascript:fn_teamInfo('1', 'K10');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k35-sm.png" class="img-emble-reSize-60" alt="김천상무" onclick="javascript:fn_teamInfo('1', 'K35');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k03-sm.png" class="img-emble-reSize-60" alt="포항" onclick="javascript:fn_teamInfo('1', 'K03');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k21-sm.png" class="img-emble-reSize-60" alt="강원" onclick="javascript:fn_teamInfo('1', 'K21');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k09-sm.png" class="img-emble-reSize-60" alt="서울" onclick="javascript:fn_teamInfo('1', 'K09');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k22-sm.png" class="img-emble-reSize-60" alt="광주" onclick="javascript:fn_teamInfo('1', 'K22');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k27-sm.png" class="img-emble-reSize-60" alt="안양" onclick="javascript:fn_teamInfo('1', 'K27');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k01-sm.png" class="img-emble-reSize-60" alt="울산" onclick="javascript:fn_teamInfo('1', 'K01');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k04-sm.png" class="img-emble-reSize-60" alt="제주SK" onclick="javascript:fn_teamInfo('1', 'K04');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k18-sm.png" class="img-emble-reSize-60" alt="인천" onclick="javascript:fn_teamInfo('2', 'K18');"></a></li>
+					<li class="pr0"><a href="#"><img src="/images/portal/img-emble-k26-sm.png" class="img-emble-reSize-60" alt="부천" onclick="javascript:fn_teamInfo('2', 'K26');"></a></li>
+				</ul>
+			</div>
+			<div id="tab02-2" class="tab-emblem wid77px" style="width: 100% !important; max-width: none !important; overflow: visible !important;">
+				<ul style="display: flex; justify-content: center; flex-wrap: nowrap; width: 100%; max-width: 1140px; margin: 0 auto; list-style: none; padding: 0;">
+					<style>
+						/* K리그 2 전용: 엠블럼 크기는 키우고 간격은 줄임 */
+						#tab02-2 li { 
+							width: 65px !important;    /* 개별 항목 너비 확보 */
+							padding: 0 4px !important;  /* 기존 9px에서 4px로 간격 축소 */
+							float: none !important; 
+							display: inline-block; 
+						}
+						#tab02-2 .img-emble-reSize-60 { 
+							width: 60px !important;    /* 엠블럼 크기를 다시 60px로 복구 */
+							height: auto !important; 
+						}
+					</style>
+					<li><a href="#"><img src="/images/portal/img-emble-k29-sm.png" class="img-emble-reSize-60" alt="수원FC" onclick="javascript:fn_teamInfo('1', 'K29');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k17-sm.png" class="img-emble-reSize-60" alt="대구" onclick="javascript:fn_teamInfo('1', 'K17');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k02-sm.png" class="img-emble-reSize-60" alt="수원" onclick="javascript:fn_teamInfo('2', 'K02');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k31-sm.png" class="img-emble-reSize-60" alt="서울E" onclick="javascript:fn_teamInfo('2', 'K31');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k08-sm.png" class="img-emble-reSize-60" alt="성남" onclick="javascript:fn_teamInfo('2', 'K08');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k07-sm.png" class="img-emble-reSize-60" alt="전남" onclick="javascript:fn_teamInfo('2', 'K07');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k36-sm.png" class="img-emble-reSize-60" alt="김포FC" onclick="javascript:fn_teamInfo('2', 'K36');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k06-sm.png" class="img-emble-reSize-60" alt="부산" onclick="javascript:fn_teamInfo('2', 'K06');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k34-sm.png" class="img-emble-reSize-60" alt="충남아산" onclick="javascript:fn_teamInfo('2', 'K34');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k39-sm.png" class="img-emble-reSize-60" alt="화성" onclick="javascript:fn_teamInfo('2', 'K39');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k20-sm.png" class="img-emble-reSize-60" alt="경남" onclick="javascript:fn_teamInfo('2', 'K20');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k37-sm.png" class="img-emble-reSize-60" alt="충북청주" onclick="javascript:fn_teamInfo('2', 'K37');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k38-sm.png" class="img-emble-reSize-60" alt="천안" onclick="javascript:fn_teamInfo('2', 'K38');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k32-sm.png" class="img-emble-reSize-60" alt="안산" onclick="javascript:fn_teamInfo('2', 'K32');"></a></li>            
+					<li><a href="#"><img src="/images/portal/img-emble-k40-sm.png" class="img-emble-reSize-60" alt="파주" onclick="javascript:fn_teamInfo('2', 'K40');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k41-sm.png" class="img-emble-reSize-60" alt="김해" onclick="javascript:fn_teamInfo('2', 'K41');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k42-sm.png" class="img-emble-reSize-60" alt="용인" onclick="javascript:fn_teamInfo('2', 'K42');"></a></li>                        
+				</ul>
+			</div>
+			<!-- 
+			<div class="footer-spocer">
+				<a href="http://pr.kebhana.com/contents/kor/index.jsp" target="_blank"><img src="/images/portal/img-spon-hanabank.png" width="150"></a>
+				<a href="http://www.adidas.co.kr/" target="_blank"><img src="/images/portal/img-spon-adidas_blk.png" width="150"></a>
+				<a href="http://www.oilbank.co.kr/" target="_blank"><img src="/images/portal/img-spon-oilbank.png" width="150"></a>
+				<a href="http://www.easports.com/" target="_blank"><img src="/images/portal/img-spon-easports.png" width="50"></a>
+				<a href="http://mall.lottechilsung.co.kr/index.html" target="_blank"><img src="/images/portal/img-spon-getorade.png" width="150"></a>
+				<a href="http://www.interpark.com/malls/index.html" target="_blank"><img src="/images/portal/img-spon-interpark.png" width="150"></a>
+			</div>
+			 -->
+			<div class="footer">
+				<div class="footer-logo">
+					<img src="/images/portal/img-footer-logo.png" alt="로고">
+				</div>
+				<div class="footer-sns">
+					<a href="https://www.facebook.com/withKLEAGUE" target="_blank"><img src="/images/portal/img-footer-facebook.png" alt="페이스북"></a>
+					<a href="https://www.instagram.com/kleague/" target="_blank"><img src="/images/portal/img-footer-instagram.png" alt="인스타그램"></a>
+					<!-- <a href="#" onclick="window.open('https://www.facebook.com/withKLEAGUE','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');return false;" target="_blank"><img src="/images/portal/img-footer-twitt.png" alt="트위터"></a> -->
+					<a href="https://www.youtube.com/user/withkleague" target="_blank"><img src="/images/portal/img-footer-youtob.png" alt="유투브"></a>
+					<a href="https://post.naver.com/withkleague" target="_blank"><img src="/images/portal/img-footer-naver.png" alt="네이버 포스트"></a>
+				</div>
+				<div class="footer-familysite">
+					<p>FAMILY SITE</p>
+					<a href="http://www.fifa.com/worldcup/" target="_blank"><img src="/images/portal/img-footer-family01.png" alt="fifa"></a>
+					<a href="http://www.the-afc.com/" target="_blank"><img src="/images/portal/img-footer-family02.png" alt="afc"></a>
+					<a href="http://www.kfa.or.kr" target="_blank"><img src="/images/portal/img-footer-family03.png" alt="협회"></a>
+				</div>
+				<div class="cocyright">
+					<p>한국프로축구연맹(이하 ‘연맹’이라 한다)에서 운영하는 본 K리그 포털 서비스(이하 ‘서비스’라고 한다)에서 제공하는 모든 기록 및 자료, 데이터들은 보도 목적을 제외하고는 연맹의 사전 허가 없이 복사, 저장, 배포, 판매할 수 없습니다. 기사 작성 혹은 보도 목적으로 사용할 경우 모든 정보는 재가공하여 활용되어야 합니다. 이를 위반할 경우 손해배상의 대상 또는 민형사상의 법적인 책임을 물을 수 있습니다.</p>
+					<br/>
+					<br/>
+					<div class="left">
+					<p>46, Gyeonghuigung-gil, Jongno-gu, Seoul, 110-062 Rep. of KOREA<br>
+						Copyright K League. All rights reserved.
+					</p>
+					</div>
+					<div class="right">
+					<p><a href="javascript:void(0);" onclick="openPopup('/user/service/userTermsNicePopUp.do');" >이용약관</a> | <a href="javascript:void(0);" onclick="openPopup('/user/service/userPrivacyPolicy.do');" >개인정보보호정책</a>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- top 버튼 -->
+	<div class="top-btn-scroll">
+		<a href="#" class="scrollToTop">
+			<span class="top-btn-scroll-position">TOP</span>
+		</a>
+	</div>
+	
+	<!-- Loading Image -->
+	<div id="loading_goal" class="loading-goal hidden">
+		<div class="loading-goal-box">
+			<img src="/images/portal/loading-goal.gif">
+			<p>Loading...</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

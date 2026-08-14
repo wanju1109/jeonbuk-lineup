@@ -1,0 +1,2753 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179012740-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179012740-1');
+</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="/images/portal/favicon.ico">
+	<link href="/css/portal/reset.css" rel="stylesheet" type="text/css">
+	<link href="/css/portal/font.css" rel="stylesheet" type="text/css">
+	<link href="/css/portal/common.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Electrolize|Orbitron" rel="stylesheet">	
+	<link rel="stylesheet" href="/resources/jquery-ui-1.12.1/jquery-ui.min.css">
+	<script src="/js/jquery-1.12.4.js"></script>
+	<script src="/js/jquery-migrate-1.4.1.js"></script>
+	<script src="/resources/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<script src="/resources/jquery-ui-1.12.1/datepicker-ko.js"></script>
+	<script src="/js/jquery.cookie.js"></script>
+	<script src="/js/common.js" charset="utf-8"></script>
+	
+	<!-- 차트 js -->
+	<script type="text/javascript" src="/resources/ibchart/highcharts/highcharts.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/highcharts/highcharts-more.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/ibleaders.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/ibchart.js"></script>
+	<script type="text/javascript" src="/resources/ibchart/ibchartinfo.js"></script>
+
+
+
+<script src="/resources/floatThead/dist/jquery.floatThead.js"></script>
+
+
+<script type="text/javascript">
+var _bBtnQty = "Y";
+var _bBtnExl = "N";
+var _bBtnSave = "N";
+var _bBtnAdd = "N";
+var _bBtnDel = "N";
+var _bBtnPrt = "N";
+var _bBtnClr = "N";
+var _bBtnDwn = "N";
+
+
+	function fn_teamInfo(_meetSeq, _teamId) {
+		if($("#tmpFrm").length>=1){
+			$("#tmpFrm").remove();
+		}
+		
+		var html="<form name='tmpFrm' id='tmpFrm' method='post' commandName='MneuVO'>";
+			html+="<input type='hidden' name='selectedMenuCd' value='0309'>";
+			html+="<input type='hidden' name='selectMeet' value='" + _meetSeq + "'>";
+			html+="<input type='hidden' name='selectTeam' value='" + _teamId + "'>";
+			html+="</form>";
+			
+		$("body").append(html);
+	
+		var forms = document.getElementById("tmpFrm");
+	
+		forms.method = 'POST';
+		forms.action = "/mainFrame.do";
+	
+		forms.submit();
+	}
+
+
+	var arrTodayNews = [];
+	
+	$(function(){
+		$(document).tooltip();
+		$("a.show").click(function(){
+			$("a.show").toggleClass("active");
+			$("div.sub-left").toggleClass("active");
+			$("div.sub-right").toggleClass("active");
+			$("div.sub-right-menu").toggleClass("active");
+			$("div.sub-right-team").toggleClass("active");
+			
+			//차트 크기 관련 스크립트			
+			if($("a.show").hasClass("active") === true) {
+				$("canvas").width(1000).height(400);
+				}else{
+					$("canvas").width(800).height(400);	
+				}
+
+			if($("#btnSearch").hasClass("btn-searchForm")) {
+				$("#btnSearch").trigger("click");
+			}
+		});
+	
+		// 클럽별 관중 Popup 호출
+		$("#btnTeamCrowd").click(function(){
+			var seq=1
+			var year = new Date().getFullYear()
+			
+			gfn_openTeamCrowdPopup(year,seq);
+		});
+		
+		// 오늘의 경기 Popup 호출
+ 		$("#btnTodaysMatch").click(function(){
+			gfn_openTodayGamesPopup();
+		});
+		
+		// 경기도움말 Popup 호출
+		$("#btnBumRye").click(function(){
+			gfn_openKleagueHelpPopup();
+		});
+		
+		//사이트맵
+		$("#btnSitemap").click(function(){
+			var openPopupTmp = function(url, title, width, height, scroll){	
+				var xPos = (window.screen.availWidth - width)/2;
+				var yPos = (window.screen.availHeight - height)/2;
+
+				var win = window.open(url,title,'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars='+scroll+',toolbar=no,resizable=no,copyhistory=no,width='+width+',height='+height+',left='+ xPos +',top='+ yPos+'\'');
+				return win;
+			}
+			var win = openPopupTmp ("/sitemap/sitemap.do?selectedMenuCd=0307", "pop_sitemap", 1000, 720, "yes");
+			win.focus();
+		});
+	});
+
+	function moveMainFrame(menuCd)
+	{console.log("### moveMainFrame :: "+ menuCd);
+	
+		$("#loading_goal").removeClass("hidden");
+
+		if(menuCd=='0011' || menuCd=='0012'){
+			var gameEndYn = checkGameEndYn();
+			if(gameEndYn=='N'){
+				menuCd='0300';
+			}
+		}
+		
+		var forms = document.getElementById("moveMenuForm");
+		
+		forms.method = 'POST';
+		forms.action = '/mainFrame.do';
+		forms.selectedMenuCd.value = menuCd;
+		forms.submit();
+	}
+	
+	function logoutTmp(){
+		if(confirm("로그아웃 하시겠습니까?")){
+			location.replace("/user/service/logout.do");
+		}
+	}
+
+	 function openUserInfoTmp(){
+		var openPopupTmp = function(url, title, width, height, scroll){	
+			var xPos = (window.screen.availWidth - width)/2;
+			var yPos = (window.screen.availHeight - height)/2;
+
+			var win = window.open(url,title,'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars='+scroll+',toolbar=no,resizable=no,copyhistory=no,width='+width+',height='+height+',left='+ xPos +',top='+ yPos+'\'');
+			return win;
+		}
+		var win = openPopupTmp ("/user/service/userInfoDetail.do", "pop_find_id", 920, 800, "yes");
+		win.focus();
+	}
+	
+	// 경기속보 Banner Index 및 초기설정
+	var todayNewsIndex = 0; 
+	
+	// 경기속보 Banner
+	function todayNewsChange() { 
+		if(todayNewsIndex < arrTodayNews.length - 1) 
+			todayNewsIndex++; 
+		else 
+			todayNewsIndex = 0; 
+		
+
+		if(document.all.todayNewsArea != null) {
+			document.all.todayNewsArea.innerHTML = "<p>" + arrTodayNews[todayNewsIndex].news + "</p>";
+		}
+	}
+	
+	if(arrTodayNews.length > 0) {
+		// 경기속보 Banner 변경시간 설정
+		setInterval("todayNewsChange()", 3000);
+	}
+	
+</script>
+
+	<title>K LEAGUE PORTAL</title>
+<style>
+.ui-tooltip {
+    white-space: pre-line;
+}
+</style>	
+</head>
+
+<body>
+
+<div class="wrap">
+
+<form id="moveMenuForm" name="moveMenuForm" action="/mainFrame.do" method="post"><input type='hidden' name='selectedMenuCd'>
+</form><!-- 헤더 레이아웃 -->
+	<script type="text/javascript" src="/js/common.js"></script>
+<script>
+var gwUseYn="N";
+
+var boardMenuInfoJson = {};
+$(document).ready(function(){
+	$('.btn-user-closed').click(function(){
+		$('.mainHeigth01').removeClass('on');
+		$('.btn-user-open').addClass('on');
+		$.setCookie('gwInfoWindowOpen', 'N',{expire: '-1',path: '/'})
+		//쿠키값 추가(Y값걸정)
+	});
+
+	$('.btn-user-open').click(function(){
+		$('.mainHeigth01').addClass('on');
+		$('.btn-user-open').removeClass('on');
+		$.setCookie('gwInfoWindowOpen', 'Y',{expire: '-1',path: '/'})
+	});
+	
+	 // 사용자 정보 게시판
+	$('div.main-user-tabTree a').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('div.main-user-tabTree a').removeClass('active');
+		$('.tab-content02').removeClass('current');
+
+		$(this).addClass('active');
+		$("#"+tab_id).addClass('current');
+	});
+	 
+	 //쿠키에 따른 분기처리
+ 	var windowGubun = $.getCookie('gwInfoWindowOpen');
+
+	if (gwUseYn=='Y' && windowGubun!='Y'){
+		$('.mainHeigth01').removeClass('on');
+		$('.btn-user-open').addClass('on');
+	}else{
+		$('.mainHeigth01').addClass('on');
+		$('.btn-user-open').removeClass('on');
+	}
+	 
+	$(document).on("click", ".btn-more-style", function(){
+		console.log("더보기 클릭");
+		if($(this).attr("data-menuCd")){
+			var menuCd = $(this).attr("data-menuCd");
+			
+			if(checkAuthByMenuId(menuCd)=='N'){
+				alert("접근 권한이 없습니다.");
+				return false;
+			}
+			moveMainFrame(menuCd);
+			
+		}else{
+			getSSOVal=function(menuId){
+				var obj = {};
+				$.ajax({
+					url : "/getSSOValWithActionUrlForBoard.do",
+					data:{
+						menuId:menuId
+					},
+					dataType:"json",
+					type:"POST",
+					async:false,
+					success:function(data){
+						if(data.result){
+							obj = data.result;
+						}else{
+							obj = {};
+						}
+					},
+					error:function(){
+						obj = {};
+					}
+				});
+				
+				return obj;
+			};
+			var menuId = $(this).attr("data-menuId");
+			var ssoObj = getSSOVal(menuId);
+			//console.log(ssoObj);
+			if(ssoObj.gwUseYn != 'Y'){
+				alert("사용 권한이 없습니다.");
+				return;
+			}
+			if(ssoObj.url){
+				var win = window.open('' , '_gwPop');
+				if($("#gwForm").length>=1){
+					$("#gwForm").remove();
+				}
+				
+				var html="<form method='post' name='gwForm' id='gwForm'>\n";
+				if(ssoObj.key){
+					html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+				}
+				if(ssoObj.value){
+					html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+				}
+				if(ssoObj.actionUrl){
+					html+="<input type='hidden' name='actionUrl' value='"+ssoObj.actionUrl+"'>\n";
+				}
+				html+="</form'>\n";
+				
+				$("body").append(html);
+				
+				$("#gwForm").attr("action", ssoObj.url);
+				$("#gwForm").attr("target", "_gwPop");
+				$("#gwForm").submit();
+				
+				win.focus();
+			}
+			
+			/* var hostAddr = '';
+			var tokenKey = '';
+			var tokenValue = '';
+			var gwUrl = '';
+			
+			var gwBoardMoreActionUrl = '';
+			
+			var menuId = $(this).attr("data-menuId");
+			
+			var boardRetVal = replaceAllVals(gwBoardMoreActionUrl, ["@menuId@"], [menuId]);
+		
+			//location.href = ssoUrl;
+			var win = window.open('' , '_gwPop');
+			if($("#gwForm").length>=1){
+				$("#gwForm").remove();
+			}
+
+			var html="<form method='post' name='gwForm' id='gwForm'>\n";
+			html+="<input type='hidden' name='key' value='"+tokenKey+"'/>\n";
+			html+="<input type='hidden' name='value' value='"+tokenValue+"'>\n";
+			html+="<input type='hidden' name='actionUrl' value='"+boardRetVal+"'>\n";
+			html+="</form'>\n";
+			
+			
+			$("body").append(html);
+			
+			$("#gwForm").attr("action", hostAddr+gwUrl);
+			$("#gwForm").attr("target", "_gwPop");
+			$("#gwForm").submit();
+			
+			win.focus();
+			
+			$("#gwForm").remove(); */
+		}
+		
+		
+	});
+	
+	$(document).on("click", ".showGwBoardDetail", function(){
+		getSSOVal=function(menuId, articleId){
+			var obj = {};
+			$.ajax({
+				url : "/getSSOValWithActionUrlForBoard.do",
+				data:{
+					menuId:menuId,
+					articleId:articleId
+				},
+				dataType:"json",
+				type:"POST",
+				async:false,
+				success:function(data){
+					if(data.result){
+						obj = data.result;
+					}else{
+						obj = {};
+					}
+				},
+				error:function(){
+					obj = {};
+				}
+			});
+			
+			return obj;
+		};
+		var menuId = $(this).attr("data-menuId");
+		var articleId = $(this).attr("data-articleId");
+		var ssoObj = getSSOVal(menuId, articleId);
+		//console.log(ssoObj);
+
+		if(ssoObj.gwUseYn != 'Y'){
+			alert("사용 권한이 없습니다.");
+			return;
+		}
+		if(ssoObj.url){
+			var win = window.open('' , '_gwPop');
+			if($("#gwForm").length>=1){
+				$("#gwForm").remove();
+			}
+			//console.log(ssoObj);
+			var html="<form method='post' name='gwForm' id='gwForm'>\n";
+			if(ssoObj.key){
+				html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+			}
+			if(ssoObj.value){
+				html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+			}
+			if(ssoObj.actionUrl){
+				html+="<input type='hidden' name='returnUrl' value='"+ssoObj.actionUrl+"'>\n";
+			}
+			html+="</form'>\n";
+			
+			$("body").append(html);
+			
+			$("#gwForm").attr("action", ssoObj.url);
+			$("#gwForm").attr("target", "_gwPop");
+			$("#gwForm").submit();
+			
+			win.focus();
+		}
+		/* var hostAddr = '';
+		var tokenKey = '';
+		var tokenValue = '';
+		var gwUrl = '';
+		
+		var gwBoardReturnUrl = '';
+		
+		var menuId = $(this).attr("data-menuId");
+		var articleId = $(this).attr("data-articleId");
+		
+		var boardRetVal = replaceAllVals(gwBoardReturnUrl, ["@menuId@","@articleId@"], [menuId, articleId]);
+		
+		//location.href = ssoUrl;
+		var win = window.open('' , '_gwPop');
+		if($("#gwForm").length>=1){
+			$("#gwForm").remove();
+		}
+		
+		var html="<form method='post' name='gwForm' id='gwForm'>\n";
+		html+="<input type='hidden' name='key' value='"+tokenKey+"'/>\n";
+		html+="<input type='hidden' name='value' value='"+tokenValue+"'>\n";
+		html+="<input type='hidden' name='returnUrl' value='"+boardRetVal+"'>\n";
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#gwForm").attr("action", hostAddr+gwUrl);
+		$("#gwForm").attr("target", "_gwPop");
+		$("#gwForm").submit();
+		
+		win.focus();
+		
+		$("#gwForm").remove(); */
+		
+	});
+	
+	$(document).on("click", ".showYmgdBoardDetailTop", function(){
+		var menuCd = $(this).attr("data-menuCd");
+		
+		if(checkAuthByMenuId(menuCd)=='N'){
+			alert("접근 권한이 없습니다.");
+			return false;
+		}
+		
+		var cmsCd = $(this).attr("data-cmsCd");
+		var ntNo = $(this).attr("data-ntNo");
+		
+		if($("#ymgdBoardFrm").length<=1){
+			$("#ymgdBoardFrm").remove();
+		}
+		
+		var html="<form method='post' name='ymgdBoardFrm' id='ymgdBoardFrm'>\n";
+		html+="<input type='hidden' name='selectedMenuCd' value='"+menuCd+"'/>\n";
+		html+="<input type='hidden' name='cmsCd' value='"+cmsCd+"'>\n";
+		html+="<input type='hidden' name='ntNo' value='"+ntNo+"'>\n";
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#ymgdBoardFrm").attr("action", "/mainFrame.do");
+		
+		$("#ymgdBoardFrm").submit();
+		
+		
+	});
+	
+	$(document).on("click", ".showGwBoardMore", function(){
+		//var tp = $(this).attr("data-tp");
+		
+		var menuCd = "";//viewInfoMapJson[tp].menuCd;
+		var menuId = $(this).attr("data-menuId"); //viewInfoMapJson[tp].menuId;
+		
+		$.each(boardMenuInfoJson, function(i, d) {
+			if(d.menuId == menuId) {
+				menuCd = d.menuCd;
+			}
+		});
+		
+		var html="<form name='tmpFrm' id='tmpFrm' method='post'>";
+			html+="<input type='hidden' name='selectedMenuCd' value='"+menuCd+"'>";
+			html+="<input type='hidden' name='menuId' value='" + menuId + "'>";
+			html+="</form>";
+			
+		$("body").append(html);
+
+		var forms = document.getElementById("tmpFrm");
+	
+		$("#tmpFrm").attr("method", "post").attr("action", "/mainFrame.do").submit();
+		
+	});
+	
+	/* $(document).on("click", ".showGwBoardDetail", function(){
+		//var tp = $(this).attr("data-tp");
+		
+		var menuCd = "";//viewInfoMapJson[tp].menuCd;
+		var menuId = $(this).attr("data-menuId"); //viewInfoMapJson[tp].menuId;
+		
+		$.each(boardMenuInfoJson, function(i, d) {
+			if(d.menuId == menuId) {
+				menuCd = d.menuCd;
+			}
+		});
+		
+		var articleId = $(this).attr("data-articleId");
+		
+		if($("#tmpFrm").length>=1){
+			$("#tmpFrm").remove();
+		}
+		
+		var html="<form name='tmpFrm' id='tmpFrm' method='post'>";
+			html+="<input type='hidden' name='selectedMenuCd' value='"+menuCd+"'>";
+			html+="<input type='hidden' name='menuId' value='" + menuId + "'>";
+			html+="<input type='hidden' name='articleId' value='" + articleId + "'>";
+			html+="</form>";
+			
+		$("body").append(html);
+
+		var forms = document.getElementById("tmpFrm");
+	
+		$("#tmpFrm").attr("method", "post").attr("action", "/mainFrame.do").submit();
+		
+	}); */
+	
+	$(document).on("click", ".atagChgUserInfo", function(){
+		openUserInfoTmp();
+		return false;
+	});
+});
+
+function logoutTmp()
+{
+	if(confirm("로그아웃 하시겠습니까?"))
+	{
+		location.replace("/user/service/logout.do");
+	}
+}
+
+function openUserInfoTmp()
+{
+	var openPopupTmp = function(url, title, width, height, scroll)
+	{	
+		var xPos = (window.screen.availWidth - width)/2;
+		var yPos = (window.screen.availHeight - height)/2;
+
+		var optionStr = 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars='+scroll+',toolbar=no,resizable=no,copyhistory=no,width='+width+',height='+height+',left='+ xPos +',top='+ yPos+'\'';
+		
+		var win = window.open(url,title, optionStr);
+	
+		return win;
+	}
+	
+	var win = openPopupTmp ("/user/service/userInfoDetail.do", "pop_find_id", 920, 800, "yes");
+	
+	win.focus();
+}
+
+
+function moveGroupwareWithSSO()
+{
+	getSSOVal=function(){
+		var obj = {};
+		$.ajax({
+			url : "/getSSOVal.do",
+			dataType:"json",
+			type:"POST",
+			async:false,
+			success:function(data){
+				if(data.result){
+					obj = data.result;
+				}else{
+					obj = {};
+				}
+			},
+			error:function(){
+				obj = {};
+			}
+		});
+		
+		return obj;
+	};
+	
+	var ssoObj = getSSOVal();
+
+	if(ssoObj.gwUseYn != 'Y'){
+		alert("그룹웨어를 접근할 수 없습니다.");
+		return;
+	}
+	if(ssoObj.url){
+		var win = window.open('' , '_gwPop');
+		if($("#gwForm").length>=1){
+			$("#gwForm").remove();
+		}
+		
+		var html="<form method='post' name='gwForm' id='gwForm'>\n";
+		if(ssoObj.key){
+			html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+		}
+		if(ssoObj.value){
+			html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+		}
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#gwForm").attr("action", ssoObj.url);
+		$("#gwForm").attr("target", "_gwPop");
+		$("#gwForm").submit();
+		
+		win.focus();
+		
+		$("#gwForm").remove();
+	}
+}
+
+function moveGroupwareWithSSOAndActionTp(actionTp)
+{
+	getSSOVal=function(actionTp1){
+		var obj = {};
+		$.ajax({
+			url : "/getSSOValWithActionUrl.do",
+			data:{actionTp:actionTp1},
+			dataType:"json",
+			type:"POST",
+			async:false,
+			success:function(data){
+				if(data.result){
+					obj = data.result;
+				}else{
+					obj = {};
+				}
+			},
+			error:function(){
+				obj = {};
+			}
+		});
+		
+		return obj;
+	};
+	
+	var ssoObj = getSSOVal(actionTp);
+
+	if(ssoObj.gwUseYn != 'Y'){
+		alert("그룹웨어를 접근할 수 없습니다.");
+		return;
+	}
+	if(ssoObj.url){
+		var win = window.open('' , '_gwPop');
+		if($("#gwForm").length>=1){
+			$("#gwForm").remove();
+		}
+		
+		var html="<form method='post' name='gwForm' id='gwForm'>\n";
+		if(ssoObj.key){
+			html+="<input type='hidden' name='key' value='"+ssoObj.key+"'>\n";
+		}
+		if(ssoObj.value){
+			html+="<input type='hidden' name='value' value='"+ssoObj.value+"'>\n";
+		}
+		if(ssoObj.actionUrl){
+			html+="<input type='hidden' name='actionUrl' value='"+ssoObj.actionUrl+"'>\n";
+		}
+		html+="</form'>\n";
+		
+		$("body").append(html);
+		
+		$("#gwForm").attr("action", ssoObj.url);
+		$("#gwForm").attr("target", "_gwPop");
+		$("#gwForm").submit();
+		
+		win.focus();
+		
+		$("#gwForm").remove();
+	}
+}
+</script>
+
+	<div class="header">
+		<div class="col-width">
+
+			<div class="headerLeft">
+
+				<div class="logo"><h1><a href="/mainFrame.do">K LEAGUE PORTAL</a></h1></div>
+				<div class="main-menu">
+
+					<ul>	
+<!-- 선택된 1depth 메뉴 -->
+				<li><a class='active'>데이터센터</a></li>
+			<li><a href="javascript:moveMainFrame('0213');">리그운영</a></li>
+			</ul>
+
+				</div>
+				
+			</div>
+			
+			<div class="headerRight">
+				<div class="topBg"></div>
+				<ul class="top-ul">
+					<li class="ml20">
+						</li>
+					<li>
+						</li>
+				</ul>
+				<div class="topBg-right"></div>
+				
+			</div>
+			
+		</div>
+	</div>
+	<div class="headerLine"></div>
+
+	<!-- TOP 텍스트&오늘의 경기 -->
+	
+	<div class="headtext">
+	
+		<div class="col-width">
+	
+			<div class="headtextLeft">
+				<div class="today-calendar"><!-- CalenderLayout --></div>
+			</div>
+			
+			<div id="todayNewsArea" class="headtextCenter"><p></p></div>
+
+			<div class="headtextRight">
+				<div class="headtextRight-box">
+					<a href="#" id="btnTeamCrowd">
+						<div class="headtextRight-txt">
+							클럽별 관중
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+				
+				<div class="headtextRight-device">						
+				</div>
+				
+				<div class="headtextRight-box">
+					<a href="#" id="btnTodaysMatch">
+						<div class="headtextRight-txt">
+							오늘의 경기
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+				<div class="headtextRight-device">						
+				</div>
+				<div class="headtextRight-box">
+					<a href="#" id="btnBumRye">
+						<div class="headtextRight-txt">
+							범례
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+				<div class="headtextRight-device">						
+				</div>
+				<div class="headtextRight-box">
+					<a href="#" id="btnSitemap">
+						<div class="headtextRight-txt">
+							사이트맵
+						</div>
+						<div class="headtextRight-btn">
+							<div class="icon-btnhead"></div>
+						</div>	
+					</a>
+				</div>
+				
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<!-- // TOP 비쥬얼 이미지 // -->
+
+	<div class="headbgimage"><div class="img-sub-bg01"></div></div>
+
+	<!-- // 2depth 메뉴 // -->
+
+	<div class="sub-menu">
+
+		<div class="two-depthMenu col-width">
+
+			<ul>
+
+<li><a href="javascript:moveMainFrame('0012');">매치센터</a></li>
+		<li><a class="active">종합검색</a></li>
+		<li><a href="javascript:moveMainFrame('0409');">클럽</a></li>
+		<li><a href="javascript:moveMainFrame('0410');">선수</a></li>
+		<li><a href="javascript:moveMainFrame('0016');">공식기록</a></li>
+		<li><a href="javascript:moveMainFrame('0194');">부가기록</a></li>
+		</ul>
+
+		</div>
+
+	</div>
+
+	<!-- CONTENTS 전체 레이아웃 -->
+
+	<div class="content-area col-width">
+
+		<!-- NAVIGATION -->
+
+		<div class="navigation">
+			<p>
+				<span class="pr5"><img src="/images/portal/img-nav-home.png"></span>
+
+<img src="/images/portal/img-nav-arrowR.gif">
+				<span class="pl5 pr5">포탈서비스</span>
+<img src="/images/portal/img-nav-arrowR.gif">
+				<span class="pl5 pr5">데이터센터</span>
+<img src="/images/portal/img-nav-arrowR.gif">
+				<span class="pl5 pr5">종합검색</span>
+<img src="/images/portal/img-nav-arrowR.gif">
+				<span class="pl5 pr5">팀</span>
+</p>
+		</div>
+		
+		<div class="sub-area">
+			
+			<!-- 좌측 전체 레이아웃 (콘텐츠)-->
+			
+			<div class="sub-left">
+
+				<DIV id="contentsLayer" class="search-area">
+<!-- Start -->
+<!-- data/total/totalSearch -->
+				<div id = "totalView">
+
+					<!-- 타이틀, 메뉴 설명, 검색폼 레이아웃  -->
+
+					<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript">
+
+var commonvo   = {"menuVo":{"menuCd":"0307","menuNm":"팀","parentMenuCd":"0015","searchFormKey":"record,leagueId,meetYear,teamId,haGameType,weather,searchDateF,searchDateT","searchDataKey":"record,leagueId,meetYear,teamId,haGameType,weather,searchDateF,searchDateT","menuUrl":"/data/total/totalView.do","uriPath":"data/total/","chartYn":"N","btnQry":"Y","btnExl":"N","btnSave":"N","btnAdd":"N","btnDel":"N","btnPrt":"N","btnClr":"N","btnDwn":"N","searchChildrenYn":"Y","menuTypeCd":"total","helpFileSize":0,"regUserId":"platform","updUserId":"platform","searchCondition":"","searchKeyword":""},"searchVo":{"searchFormKey":["record","leagueId","meetYear","teamId","haGameType","weather","searchDateF","searchDateT"],"searchParam":"{\"leagueId\":\"1\",\"searchDateF\":\"2026/01/01\",\"record\":\"01\",\"teamId\":\"K21\",\"weather\":\"ALL\",\"searchDateT\":\"2026/08/14\",\"haGameType\":\"ALL\",\"meetYear\":\"2026\"}","selectSearchDate":"2026/08/14","searchDateF":[{"CODE_KEY":"2026/01/01","CODE_VAL":"2026/01/01","CODE_SEL":"Y"}],"selectSearchDateF":"2026/01/01","searchDateT":[{"CODE_KEY":"2026/08/14","CODE_VAL":"2026/08/14","CODE_SEL":"Y"}],"selectSearchDateT":"2026/08/14","meetYear":[{"CODE_KEY":"2026","CODE_VAL":"2026","CODE_SEL":"Y"},{"CODE_KEY":"2025","CODE_VAL":"2025","CODE_SEL":"N"},{"CODE_KEY":"2024","CODE_VAL":"2024","CODE_SEL":"N"},{"CODE_KEY":"2023","CODE_VAL":"2023","CODE_SEL":"N"},{"CODE_KEY":"2022","CODE_VAL":"2022","CODE_SEL":"N"},{"CODE_KEY":"2021","CODE_VAL":"2021","CODE_SEL":"N"},{"CODE_KEY":"2020","CODE_VAL":"2020","CODE_SEL":"N"},{"CODE_KEY":"2019","CODE_VAL":"2019","CODE_SEL":"N"},{"CODE_KEY":"2018","CODE_VAL":"2018","CODE_SEL":"N"},{"CODE_KEY":"2017","CODE_VAL":"2017","CODE_SEL":"N"},{"CODE_KEY":"2016","CODE_VAL":"2016","CODE_SEL":"N"},{"CODE_KEY":"2015","CODE_VAL":"2015","CODE_SEL":"N"},{"CODE_KEY":"2014","CODE_VAL":"2014","CODE_SEL":"N"},{"CODE_KEY":"2013","CODE_VAL":"2013","CODE_SEL":"N"},{"CODE_KEY":"2012","CODE_VAL":"2012","CODE_SEL":"N"},{"CODE_KEY":"2011","CODE_VAL":"2011","CODE_SEL":"N"},{"CODE_KEY":"2010","CODE_VAL":"2010","CODE_SEL":"N"},{"CODE_KEY":"2009","CODE_VAL":"2009","CODE_SEL":"N"},{"CODE_KEY":"2008","CODE_VAL":"2008","CODE_SEL":"N"},{"CODE_KEY":"2007","CODE_VAL":"2007","CODE_SEL":"N"},{"CODE_KEY":"2006","CODE_VAL":"2006","CODE_SEL":"N"},{"CODE_KEY":"2005","CODE_VAL":"2005","CODE_SEL":"N"},{"CODE_KEY":"2004","CODE_VAL":"2004","CODE_SEL":"N"},{"CODE_KEY":"2003","CODE_VAL":"2003","CODE_SEL":"N"},{"CODE_KEY":"2002","CODE_VAL":"2002","CODE_SEL":"N"},{"CODE_KEY":"2001","CODE_VAL":"2001","CODE_SEL":"N"},{"CODE_KEY":"2000","CODE_VAL":"2000","CODE_SEL":"N"},{"CODE_KEY":"1999","CODE_VAL":"1999","CODE_SEL":"N"},{"CODE_KEY":"1998","CODE_VAL":"1998","CODE_SEL":"N"},{"CODE_KEY":"1997","CODE_VAL":"1997","CODE_SEL":"N"},{"CODE_KEY":"1996","CODE_VAL":"1996","CODE_SEL":"N"},{"CODE_KEY":"1995","CODE_VAL":"1995","CODE_SEL":"N"},{"CODE_KEY":"1994","CODE_VAL":"1994","CODE_SEL":"N"},{"CODE_KEY":"1993","CODE_VAL":"1993","CODE_SEL":"N"},{"CODE_KEY":"1992","CODE_VAL":"1992","CODE_SEL":"N"},{"CODE_KEY":"1991","CODE_VAL":"1991","CODE_SEL":"N"},{"CODE_KEY":"1990","CODE_VAL":"1990","CODE_SEL":"N"},{"CODE_KEY":"1989","CODE_VAL":"1989","CODE_SEL":"N"},{"CODE_KEY":"1988","CODE_VAL":"1988","CODE_SEL":"N"},{"CODE_KEY":"1987","CODE_VAL":"1987","CODE_SEL":"N"},{"CODE_KEY":"1986","CODE_VAL":"1986","CODE_SEL":"N"},{"CODE_KEY":"1985","CODE_VAL":"1985","CODE_SEL":"N"},{"CODE_KEY":"1984","CODE_VAL":"1984","CODE_SEL":"N"},{"CODE_KEY":"1983","CODE_VAL":"1983","CODE_SEL":"N"}],"selectMeetYear":"2026","teamId":[{"CODE_KEY":"ALL","CODE_VAL":"전체","CODE_SEL":"N"},{"CODE_KEY":"K21","CODE_VAL":"강원","CODE_SEL":"Y"},{"CODE_KEY":"K22","CODE_VAL":"광주","CODE_SEL":"N"},{"CODE_KEY":"K35","CODE_VAL":"김천","CODE_SEL":"N"},{"CODE_KEY":"K10","CODE_VAL":"대전","CODE_SEL":"N"},{"CODE_KEY":"K26","CODE_VAL":"부천","CODE_SEL":"N"},{"CODE_KEY":"K09","CODE_VAL":"서울","CODE_SEL":"N"},{"CODE_KEY":"K27","CODE_VAL":"안양","CODE_SEL":"N"},{"CODE_KEY":"K01","CODE_VAL":"울산","CODE_SEL":"N"},{"CODE_KEY":"K18","CODE_VAL":"인천","CODE_SEL":"N"},{"CODE_KEY":"K05","CODE_VAL":"전북","CODE_SEL":"N"},{"CODE_KEY":"K04","CODE_VAL":"제주","CODE_SEL":"N"},{"CODE_KEY":"K03","CODE_VAL":"포항","CODE_SEL":"N"}],"selectTeamId":"K21","selectTeamIdStr":"강원","leagueId":[{"CODE_KEY":"1","CODE_VAL":"K리그1","CODE_SEL":"Y"},{"CODE_KEY":"2","CODE_VAL":"K리그2","CODE_SEL":"N"},{"CODE_KEY":"3","CODE_VAL":"플레이오프","CODE_SEL":"N"},{"CODE_KEY":"4","CODE_VAL":"리그컵","CODE_SEL":"N"},{"CODE_KEY":"5","CODE_VAL":"통산","CODE_SEL":"N"}],"selectLeagueId":"1","selectLeagueIdStr":"K리그1","record":[{"CODE_KEY":"01","CODE_VAL":"득점","CODE_SEL":"Y","CODE_TYPE":"01"},{"CODE_KEY":"02","CODE_VAL":"도움","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"10","CODE_VAL":"슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"16","CODE_VAL":"유효슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"17","CODE_VAL":"차단된 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"18","CODE_VAL":"빗나간 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"19","CODE_VAL":"PA내 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"36","CODE_VAL":"PA외 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"11","CODE_VAL":"오프사이드","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"37","CODE_VAL":"프리킥 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"38","CODE_VAL":"프리킥 유효슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"39","CODE_VAL":"프리킥 크로스","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"08","CODE_VAL":"코너킥","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"40","CODE_VAL":"스로인","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"35","CODE_VAL":"드리블","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"22","CODE_VAL":"패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"23","CODE_VAL":"키패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"42","CODE_VAL":"공격지역 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"43","CODE_VAL":"중앙지역 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"44","CODE_VAL":"수비지역 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"28","CODE_VAL":"롱 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"45","CODE_VAL":"중거리 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"46","CODE_VAL":"숏 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"24","CODE_VAL":"전방 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"25","CODE_VAL":"후방 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"47","CODE_VAL":"횡 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"29","CODE_VAL":"크로스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"48","CODE_VAL":"탈압박","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"32","CODE_VAL":"태클","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"30","CODE_VAL":"경합 지상","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"31","CODE_VAL":"경합 공중","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"34","CODE_VAL":"인터셉트","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"33","CODE_VAL":"클리어링","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"49","CODE_VAL":"차단","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"50","CODE_VAL":"획득","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"51","CODE_VAL":"블락","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"52","CODE_VAL":"볼미스","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"09","CODE_VAL":"파울","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"53","CODE_VAL":"피파울","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"12","CODE_VAL":"경고","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"13","CODE_VAL":"퇴장","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"54","CODE_VAL":"실점","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"55","CODE_VAL":"캐칭","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"56","CODE_VAL":"펀칭","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"57","CODE_VAL":"골킥","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"58","CODE_VAL":"공중볼 처리","CODE_SEL":"N","CODE_TYPE":"03"}],"selectRecord":"01","selectRecordStr":"득점","haGameType":[{"CODE_KEY":"ALL","CODE_VAL":"전체","CODE_SEL":"Y"},{"CODE_KEY":"1","CODE_VAL":"HOME","CODE_SEL":"N"},{"CODE_KEY":"2","CODE_VAL":"AWAY","CODE_SEL":"N"},{"CODE_KEY":"3","CODE_VAL":"중립","CODE_SEL":"N"}],"selectHaGameType":"","weather":[{"CODE_KEY":"ALL","CODE_VAL":"전체","CODE_SEL":"Y"},{"CODE_KEY":"1","CODE_VAL":"맑음","CODE_SEL":"N"},{"CODE_KEY":"2","CODE_VAL":"흐림","CODE_SEL":"N"},{"CODE_KEY":"3","CODE_VAL":"비","CODE_SEL":"N"},{"CODE_KEY":"4","CODE_VAL":"흐리고 비","CODE_SEL":"N"},{"CODE_KEY":"5","CODE_VAL":"눈","CODE_SEL":"N"}],"selectWeather":"","roundSt":0,"roundEnd":0,"dateSt":0,"dateEnd":0},"menuCodeVo":{"menuCd":"0307","menuTypeCode":"total","meetGameType":"0","workCode":"S","seasonFlag":"1","userId":"platform"}};
+var menuTypeCd = commonvo.menuVo.menuTypeCd;
+
+console.log("menuCD :: ", commonvo.menuCodeVo.menuCd);
+console.log("menuTypeCd :: ", commonvo.menuVo.menuTypeCd);
+console.log("commonvo :: \n", commonvo);
+console.log("### formKey :: \n", commonvo.searchVo.searchFormKey);
+
+function fnChange() {
+	getResource("");
+}
+
+//공통 Ajax 함수
+function getResource(commonvostr){
+
+	var formKey = commonvo.searchVo.searchFormKey;
+	var formVal = [];
+	var searchParam = {};
+	for(var i=0; i<formKey.length; i++) {
+		formVal[i] = $("#"+formKey[i]).val();
+		console.log("### DATA :: ", formKey[i] +" :: "+ formVal[i]);
+		
+		searchParam[formKey[i]] = formVal[i];
+	}
+	
+	commonvo.searchVo.searchFormVal = formVal;
+	commonvo.searchVo.searchParam = JSON.stringify(searchParam);
+	//console.log("### vo :: \n", commonvo);
+	
+	commonvostr = JSON.stringify(commonvo);
+	$("#taStr").val(commonvostr);
+	
+	gfn_transaction({
+		url:"/data/total/change.do",
+		type: "post",
+		async: false,
+		//data: {totalvostr:$("#taStr").val()},
+		data: {totalvostr:commonvostr},
+		dataType:'text',
+		success:function(rs){
+			$("#totalView").html(rs);
+		},
+		error:function(request,status,error){
+			console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+		}
+	}); // gfn_transaction
+}
+
+function initEvent(){
+	
+	var startRange = "0";
+	var endRange = "180";
+	
+	if (commonvo.searchVo.selectHalfF!=null) {
+		
+		var range1Code = commonvo.searchVo.selectHalfF;
+		var range2Code = commonvo.searchVo.selectHalfT;
+		
+		var range1Time = commonvo.searchVo.selectHalfTimeF;
+		var range2Time = commonvo.searchVo.selectHalfTimeT;
+		
+		/* console.log("코드확인")
+		console.log(range1Code)
+		console.log("시간확인")
+		console.log(range1Time)
+		
+		console.log("코드확인")
+		console.log(range2Code)
+		console.log("시간확인")
+		console.log(range2Time) */
+	
+		if (range1Code == '1') {
+				startRange = range1Time;
+				
+			if (range1Time== '+') {
+				startRange = '60';
+				$( "#amountData" ).val("전반추가 45+분");
+				$("#amount1min").val("+");
+				$("#amount1PeriodCd").val("1");
+			}else{
+				$( "#amountData" ).val("전반 "+range1Time+"분");
+	        	$("#amount1min").val(range1Time);
+	        	$("#amount1PeriodCd").val("1");
+			}
+		}else if (range1Code == '2') {
+				startRange = parseInt(range1Time)+60;
+				/* console.log(startRange) */
+			if (range1Time== '+') {
+				startRange = '120';
+				$( "#amountData" ).val("후반추가 45+분");
+				$("#amount1min").val("+");
+				$("#amount1PeriodCd").val("2");
+			}else{
+				$( "#amountData" ).val("후반 "+range1Time +"분");
+				$("#amount1min").val(range1Time);
+				$("#amount1PeriodCd").val("2");
+			}
+		}else if (range1Code == '3') {
+				startRange = parseInt(range1Time)+120;
+			
+			if (range1Time== '+') {
+				startRange = '150';
+				$("#amountData").val("연전추가 15+분");
+				$("#amount1min").val("+");
+				$("#amount1PeriodCd").val("3");
+			}else{
+				$("#amountData").val("연전 "+range1Time +"분");
+				$("#amount1min").val(range1Time);
+				$("#amount1PeriodCd").val("3");
+			}
+		}else if (range1Code == '4') {
+				startRange = parseInt(range1Time)+150;
+			
+			if (range1Time== '+') {
+				startRange = '180';
+				$( "#amountData" ).val("연후추가 +15분");
+				$("#amount1min").val("+");//여기서 부터
+				$("#amount1PeriodCd").val("4");
+			}else{
+				$( "#amountData" ).val("연후"+range1Time +"분");
+				$("#amount1min").val(range1Time);
+				$("#amount1PeriodCd").val("4");
+			}
+		}
+	
+			if (range2Code == '1') {
+				endRange = range2Time;
+				
+			if (range2Time== '+') {
+				endRange = '60';
+				$( "#amount2Data" ).val("전반추가 45+분");
+				$("#amount2min").val("+");
+				$("#amount2PeriodCd").val("1");
+			}else{
+				$( "#amount2Data" ).val("전반 "+range2Time+"분");
+		    	$("#amount2min").val(range2Time);
+		    	$("#amount2PeriodCd").val("1");
+			}
+		}else if (range2Code == '2') {
+				endRange = parseInt(range2Time)+60;
+				/* console.log(endRange) */
+			if (range2Time== '+') {
+				endRange = '120'
+				$( "#amount2Data" ).val("후반추가 45+분");
+				$("#amount2min").val("+");
+				$("#amount2PeriodCd").val("2");
+			}else{
+				$( "#amount2Data" ).val("후반 "+range2Time +"분");
+				$("#amount2min").val(range2Time);
+				$("#amount2PeriodCd").val("2");
+			}
+		}else if (range2Code == '3') {
+				endRange = parseInt(range2Time)+120;
+			
+			if (range2Time== '+') {
+				endRange = '150';
+				$("#amount2Data").val("연전추가 15+분");
+				$("#amount2min").val("+");
+				$("#amount2PeriodCd").val("3");
+			}else{
+				$("#amount2Data").val("연전 "+range2Time +"분");
+				$("#amount2min").val(range2Time);
+				$("#amount2PeriodCd").val("3");
+			}
+		}else if (range2Code == '4') {
+				endRange = parseInt(range2Time)+150;
+			
+			if (range2Time== '+') {
+				endRange = '180';
+				$( "#amount2Data" ).val("연후추가 +15분");
+				$("#amount2min").val("+");//여기서 부터
+				$("#amount2PeriodCd").val("4");
+			}else{
+				$( "#amount2Data" ).val("연후"+range2Time +"분");
+				$("#amount2min").val(range2Time);
+				$("#amount2PeriodCd").val("4");
+			}
+		}
+	
+	}
+	
+	
+	$( "#slider-range-total" ).slider({
+		  range: true,
+	      min: 0,
+	      max: 180,
+	      step: 15, 
+	      values: [startRange, endRange ],
+	      slide: function( event, ui ) {
+	        //change 이벤트 발생 시점
+	        //전반 0~45
+	        //range1 data
+	        var firstRangeMin =  ui.values[ 0 ]
+	        var firstRange2Min = firstRangeMin-60
+	        var firstRange3Min = firstRangeMin-120
+	        var firstRange4Min = firstRangeMin-150
+	      	//range2 data
+	        var secondRangeMin = ui.values[ 1 ]
+	        var secondRange2Min = secondRangeMin-60
+	        var secondRange3Min = secondRangeMin-120
+	        var secondRange4Min = secondRangeMin-150
+	        
+	        /* amount1PeriodCd */
+	        if (ui.values[ 0 ] <= 45) {//0~45
+	        	$( "#amountData" ).val("전반 "+firstRangeMin+"분");
+	        	$("#amount1min").val(firstRangeMin);
+	        	$("#amount1PeriodCd").val("1")
+			}else if (ui.values[ 0 ] > 45 && ui.values[ 0 ] <= 60) {//45~60
+				$( "#amountData" ).val("전반추가 45+분");
+				$("#amount1min").val("+");
+				$("#amount1PeriodCd").val("1")
+			}else if (ui.values[ 0 ] > 60 && ui.values[ 0 ] <= 105 ) {//60~105
+				$( "#amountData" ).val("후반 "+firstRange2Min +"분");
+				$("#amount1min").val(firstRange2Min);
+				$("#amount1PeriodCd").val("2");
+			}else if (ui.values[ 0 ] > 105 && ui.values[ 0 ] <=120) {//105~120
+				$( "#amountData" ).val("후반추가 45+분");
+				$("#amount1min").val("+");
+				$("#amount1PeriodCd").val("2");
+			}else if (ui.values[ 0 ] > 120 && ui.values[ 0 ] <= 135 ) {//120~135
+				$( "#amountData" ).val("연전 "+firstRange3Min +"분");
+				$("#amount1min").val(firstRange3Min);
+				$("#amount1PeriodCd").val("3");
+			}else if (ui.values[ 0 ] > 135 && ui.values[ 0 ] <= 150) {//135~150
+				//연전 추가
+				$( "#amountData" ).val("연전추가 15+분");
+				$("#amount1min").val("+");
+				$("#amount1PeriodCd").val("3");
+			}else if (ui.values[ 0 ] > 150 && ui.values[ 0 ] <= 165) {//150~165
+				$( "#amountData" ).val("연후"+firstRange4Min +"분");
+				$("#amount1min").val(firstRange4Min);
+				$("#amount1PeriodCd").val("4");
+			}else if (ui.values[ 0 ] > 165 && ui.values[ 0 ] <= 180) {//165~180
+				$( "#amountData" ).val("연후추가 +15분");
+				$("#amount1min").val("+");//여기서 부터
+				$("#amount1PeriodCd").val("4");
+			}
+	        
+	        /* amount2PeriodCd */
+	        if (ui.values[ 1 ] <= 45) {//0~45
+	        	$( "#amount2Data" ).val("전반 "+secondRangeMin+"분");
+	        	$("#amount2min").val(secondRangeMin);
+	        	$("#amount2PeriodCd").val("1");
+			}else if (ui.values[ 1 ] > 45 && ui.values[ 1 ] <= 60) {//45~60
+				$( "#amount2Data" ).val("전반추가 45+분");
+				$("#amount2min").val("+");
+				$("#amount2PeriodCd").val("1");
+			}else if (ui.values[ 1 ] > 60 && ui.values[ 1 ] <= 105 ) {//60~105
+				$( "#amount2Data" ).val("후반 "+secondRange2Min +"분");
+				$("#amount2min").val(secondRange2Min);
+				$("#amount2PeriodCd").val("2");
+			}else if (ui.values[ 1 ] > 105 && ui.values[ 1 ] <=120) {//105~120
+				$( "#amount2Data" ).val("후반추가 45+분");
+				$("#amount2min").val("+");
+				$("#amount2PeriodCd").val("2");
+			}else if (ui.values[ 1 ] > 120 && ui.values[ 1 ] <= 135 ) {//120~135
+				$( "#amount2Data" ).val("연전 "+secondRange3Min +"분");
+				$("#amount2min").val(secondRange3Min);
+				$("#amount2PeriodCd").val("3");
+			}else if (ui.values[ 1 ] > 135 && ui.values[ 1 ] <= 150) {//135~150
+				//연전 추가
+				$( "#amount2Data" ).val("연전추가 15+분");
+				$("#amount2min").val("+");
+				$("#amount2PeriodCd").val("3");
+			}else if (ui.values[ 1 ] > 150 && ui.values[ 1 ] <= 165) {//150~165
+				$( "#amount2Data" ).val("연후"+secondRange4Min +"분");
+				$("#amount2min").val(secondRange4Min);
+				$("#amount2PeriodCd").val("4");
+			}else if (ui.values[ 1 ] > 165 && ui.values[ 1 ] <= 180) {//165~180
+				$( "#amount2Data" ).val("연후추가 +15분");
+				$("#amount2min").val("+");//여기서 부터
+				$("#amount2PeriodCd").val("4");
+			}
+	        //여기서 함수를 타게만들어야함
+	      }
+	    });
+	
+	
+	var amountDataCheck = $("#amountData").val()
+	
+/* 	console.log("확인")
+	console.log(amountDataCheck) */
+	
+	
+ 	if (amountDataCheck == null||amountDataCheck=="") {
+		
+		$("#amountData").val("전반 "+$( "#slider-range-total" ).slider( "values", 0 )+"분 ");
+	    $("#amount1min").val("0");
+	    $("#amount1PeriodCd").val("1")
+	    
+	    $("#amount2Data").val("연후추가 +15분");
+	    $("#amount2min").val("+");
+	    $("#amount2PeriodCd").val("4");
+	} 
+	
+	//0.Button 권한설정
+	gfn_btnAuthSet();
+	
+	
+	
+	/* 달력Component 설정 */
+	$( "#datepicker,#searchDateF,#searchDateT" ).datepicker({
+		altFormat: "yyyy/mm/dd",
+		changeMonth:true,
+		changeYear:true,
+		yearRange:"c-50:c",
+		dateFormat:"yy/mm/dd",
+		dayNamesMin:[ "일","월","화","수","목","금","토" ], // 요일의 한글 형식.
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'] // 월의 한글 형식.
+	});   
+
+	$('#searchDateF').datepicker();
+	$('#searchDateT').datepicker();
+
+	if(gfn_isNull(commonvo.searchVo.selectSearchDateF) || commonvo.searchVo.selectSearchDateF == 0){
+		$('#searchDateF').val($.datepicker.formatDate('yy/mm/dd', new Date()));
+	}else{
+		$('#searchDateF').val(commonvo.searchVo.selectSearchDateF);	
+	}
+
+	if(gfn_isNull(commonvo.searchVo.selectSearchDateT) || commonvo.searchVo.selectSearchDateT == 0){
+		$('#searchDateT').val($.datepicker.formatDate('yy/mm/dd', new Date()));
+	}else{
+		$('#searchDateT').val(commonvo.searchVo.selectSearchDateT);	
+	}
+	
+	/* 창을 불러올 때 날짜범위 수정 */
+	$('#searchDateF').datepicker("option", "maxDate", $("#searchDateT").val());
+    $('#searchDateT').datepicker("option", "minDate", $("#searchDateF").val());
+	
+   /* 창을 닫을 때 날짜범위 수정 */
+    $('#searchDateF').datepicker("option", "onClose", function ( selectedDate ) {
+		$("#searchDateT").datepicker( "option", "minDate", selectedDate );
+    });
+    $('#searchDateT').datepicker("option", "onClose", function ( selectedDate ) {
+		$("#searchDateF").datepicker( "option", "maxDate", selectedDate );
+    });
+    
+    $("#btnSearchDttm,#btnStartDttm, #btnEndDttm").click(function(){
+		var idVal = $(this).attr("data-cal-id");
+		$("#"+idVal).datepicker("show");
+		return false;
+	});
+	
+    
+// 	//1. 대회년도 변경 > SearchBox 
+//     $('#meetYear').change(meetYearSelect=function(){
+//     	var year = $("#meetYear option:selected").val();
+		
+//     	commonvo.menuCodeVo.meetYear = year;
+// 		commonvo.menuCodeVo.workCode = 'Y';
+		
+// //     	var commonvostr = JSON.stringify(commonvo);
+// //     	getResource(commonvostr);
+// 	});
+  
+// 	//2. 대회명 변경 > SearchBox
+// 	$('#meetName').change(meetNameSelect=function(){
+// 		var meetseq = $("#meetName option:selected").val();
+//     	var meetname = $("#meetName option:selected").text();
+    	
+//     	commonvo.menuCodeVo.workCode = 'Y';
+// 		if (menuTypeCd=="030" || menuTypeCd=="040"){
+//     		commonvo.menuCodeVo.workCode = 'I';	
+//     	}
+
+// //     	var commonvostr = JSON.stringify(commonvo);
+// //     	getResource(commonvostr);
+// 	}); 
+
+// 	//3. 구단 변경 > SearchBox
+// 	$('#teamId').change(teamIdSelect=function(){
+// 		var teamId = $("#teamId option:selected").val();
+// 		var teamName = $("#teamId option:selected").text();
+
+// 		commonvo.menuCodeVo.workCode = 'S';
+// 		if (menuTypeCd=="030"){
+//     		commonvo.menuCodeVo.workCode = 'I';	
+//     	}
+
+// // 		var commonvostr = JSON.stringify(commonvo);
+// // 		getResource(commonvostr);
+// 	}); 
+
+// 	//3. 리그 변경 > SearchBox
+// 	$('#leagueId').change(leagueIdSelect=function(){
+// 		var leagueIdCd = $("#leagueId option:selected").val();
+// 		var leagueIdNm = $("#leagueId option:selected").text();
+		
+// 		commonvo.menuCodeVo.workCode = 'Y';
+
+// // 		var commonvostr = JSON.stringify(commonvo);
+// // 		getResource(commonvostr);
+// 	}); 
+
+// 	//3. 기록 변경 > SearchBox
+// 	$('#record').change(recordSelect=function(){
+// 		var recordCd = $("#record option:selected").val();
+// 		var recordNM = $("#record option:selected").text();
+		
+// 		commonvo.menuCodeVo.workCode = 'S';
+// 		if (menuTypeCd=="030"){
+//     		commonvo.menuCodeVo.workCode = 'I';	
+//     	}
+
+// // 		var commonvostr = JSON.stringify(commonvo);
+// // 		getResource(commonvostr);
+// 	}); 
+
+// 	//3. 포지션 변경 > SearchBox
+// 	$('#selectPosition').change(teamIdSelect=function(){
+// 		var positionCd = $("#selectPosition option:selected").val();
+// 		var positionNm = $("#selectPosition option:selected").text();
+		
+// 		commonvo.menuCodeVo.workCode = 'S';
+// 		if (menuTypeCd=="030"){
+//     		commonvo.menuCodeVo.workCode = 'I';	
+//     	}
+
+// // 		var commonvostr = JSON.stringify(commonvo);
+// // 		getResource(commonvostr);
+// 	}); 
+	
+// 	//3. H/A 구분 변경 > SearchBox
+// 	$('#haGameType').change(haGameTypeSelect=function(){
+// 		var haGameTypeseq = $("#haGameType option:selected").val();
+// 		var haGameTypename = $("#haGameType option:selected").text();
+		
+// 		commonvo.menuCodeVo.workCode = 'S';
+// 		if (menuTypeCd=="030"){
+//     		commonvo.menuCodeVo.workCode = 'I';	
+//     	}
+		
+// // 		var commonvostr = JSON.stringify(commonvo);
+// // 		getResource(commonvostr);
+// 	});
+	
+// 	//3. 날씨 변경 > SearchBox
+// 	$('#weather').change(weatherTypeSelect=function(){
+// 		var weathercd = $("#weather option:selected").val();
+// 		var weathername = $("#weather option:selected").text();
+		
+// 		commonvo.menuCodeVo.workCode = 'S';
+// 		if (menuTypeCd=="030"){
+//     		commonvo.menuCodeVo.workCode = 'I';	
+//     	}
+		
+// // 		var commonvostr = JSON.stringify(commonvo);
+// // 		getResource(commonvostr);
+// 	}); 
+	
+// 	//게임구분
+// 	$('#gameCode').change(gameCodeTypeSelect=function(){
+// 		var gamecd = $("#gameCode option:selected").val();
+// 		var gamename = $("#gameCode option:selected").text();
+		
+// 		commonvo.menuCodeVo.workCode = 'S';
+// 		if (menuTypeCd=="030"){
+//     		commonvo.menuCodeVo.workCode = 'I';	
+//     	}
+		
+// // 		var commonvostr = JSON.stringify(commonvo);
+// // 		getResource(commonvostr);
+// 	});
+	
+	//4. 검색버튼 클릭
+	$( "#btnSearch" ).on( "click", function() {
+		$( "#searchForm" ).trigger("submit");
+	});
+	
+	//검색조회 Function
+    $( "#searchForm" ).on( "submit", function() {
+    	
+    	if($('#topRank').val() != null && $('#topRank').val()!=""){
+    		var topRank = $('#topRank').val();
+    		if (topRank<=0){
+    			alert("양수를 입력하세요");
+    			return false;
+    		}
+    	}
+    	
+    	if($('#time').val() != null && $('#time').val()!=""){
+    		var time = $('#time').val();
+    		commonvo.searchVo.time = time;
+    	}
+		
+		//전후반 코드 설정
+		commonvo.searchVo.selectHalfF = $("#amount1PeriodCd").val()
+		commonvo.searchVo.selectHalfT = $("#amount2PeriodCd").val()
+		commonvo.searchVo.selectHalfTimeF = $("#amount1min").val();
+		commonvo.searchVo.selectHalfTimeT = $("#amount2min").val();
+		
+    	commonvo.menuCodeVo.workCode = 'S';
+    	
+		if (menuTypeCd=="030"){
+    		commonvo.menuCodeVo.workCode = 'I';	
+    	}
+		
+    	var commonvostr = ""; //JSON.stringify(commonvo);
+    	getResource(commonvostr);
+    	return false;
+    });
+	
+	
+	
+	//5. 인쇄버튼 클릭
+	$( "#btnPrint" ).on( "click", function() {
+		fn_print();
+	});
+
+}
+$(function(){
+	initEvent();
+	console.log(commonvo.searchVo.selectSearchDateF);
+	console.log(commonvo.searchVo.selectSearchDateT);
+});
+
+</script>
+<textarea id="taStr" style="display: none;"></textarea>
+<!-- // TITLE 레이아웃 -->
+<div class="sub-title">
+	<h2>팀</h2>
+	<p>홈/원정 경기 승률 정보를 제공합니다.
+	<p>
+		<!-- // 하단 이동 <a href="#bottom">bottom밑으로 이동 버튼</a> // -->
+</div>
+<!-- // SEARCH 검색 영역 -->
+	<div class="searchForm">
+		<form id="searchForm" method="post">
+			<div class="searchForm-box">
+
+				<!-- record      : S 기록      -->
+<!-- searchDateF : I 일자          -->
+<!-- searchDateT : I 일자          -->
+<!-- meetYear    : S 시즌              -->
+<!-- leagueId    : S 리그      -->
+<!-- teamId      : S 구단     -->
+<!-- haGameType  : S H/A구분     -->
+<!-- weather     : S 날씨     -->
+<!-- position    : S 포지션     -->
+<!-- topRank     : I 상위     -->
+<!-- ageF        : I 나이     -->
+<!-- ageT        : I 나이     -->
+<!-- gameCode    :       -->
+<!-- halfT       :       -->
+
+
+				<!-- 기록 > select -->
+				<div class="input-group-total-addon">
+					<div class="input-group-addon">기록</div>
+					<select name="record" id="record" class="select-control">
+						<option value="" disabled="disabled" class="bg-eblue bold">공격</option>
+							<option value="01" selected>&nbsp;&nbsp;&nbsp;&nbsp;득점</option>
+								<option value="02" >&nbsp;&nbsp;&nbsp;&nbsp;도움</option>
+								<option value="10" >&nbsp;&nbsp;&nbsp;&nbsp;슈팅</option>
+								<option value="16" >&nbsp;&nbsp;&nbsp;&nbsp;유효슈팅</option>
+								<option value="17" >&nbsp;&nbsp;&nbsp;&nbsp;차단된 슈팅</option>
+								<option value="18" >&nbsp;&nbsp;&nbsp;&nbsp;빗나간 슈팅</option>
+								<option value="19" >&nbsp;&nbsp;&nbsp;&nbsp;PA내 슈팅</option>
+								<option value="36" >&nbsp;&nbsp;&nbsp;&nbsp;PA외 슈팅</option>
+								<option value="11" >&nbsp;&nbsp;&nbsp;&nbsp;오프사이드</option>
+								<option value="37" >&nbsp;&nbsp;&nbsp;&nbsp;프리킥 슈팅</option>
+								<option value="38" >&nbsp;&nbsp;&nbsp;&nbsp;프리킥 유효슈팅</option>
+								<option value="39" >&nbsp;&nbsp;&nbsp;&nbsp;프리킥 크로스</option>
+								<option value="08" >&nbsp;&nbsp;&nbsp;&nbsp;코너킥</option>
+								<option value="40" >&nbsp;&nbsp;&nbsp;&nbsp;스로인</option>
+								<option value="35" >&nbsp;&nbsp;&nbsp;&nbsp;드리블</option>
+								<option value="" disabled="disabled" class="bg-eblue bold">패스</option>
+							<option value="22" >&nbsp;&nbsp;&nbsp;&nbsp;패스</option>
+										<option value="23" >&nbsp;&nbsp;&nbsp;&nbsp;키패스</option>
+										<option value="42" >&nbsp;&nbsp;&nbsp;&nbsp;공격지역 패스</option>
+										<option value="43" >&nbsp;&nbsp;&nbsp;&nbsp;중앙지역 패스</option>
+										<option value="44" >&nbsp;&nbsp;&nbsp;&nbsp;수비지역 패스</option>
+										<option value="28" >&nbsp;&nbsp;&nbsp;&nbsp;롱 패스</option>
+										<option value="45" >&nbsp;&nbsp;&nbsp;&nbsp;중거리 패스</option>
+										<option value="46" >&nbsp;&nbsp;&nbsp;&nbsp;숏 패스</option>
+										<option value="24" >&nbsp;&nbsp;&nbsp;&nbsp;전방 패스</option>
+										<option value="25" >&nbsp;&nbsp;&nbsp;&nbsp;후방 패스</option>
+										<option value="47" >&nbsp;&nbsp;&nbsp;&nbsp;횡 패스</option>
+										<option value="29" >&nbsp;&nbsp;&nbsp;&nbsp;크로스</option>
+										<option value="" disabled="disabled" class="bg-eblue bold">수비</option>
+							<option value="32" >&nbsp;&nbsp;&nbsp;&nbsp;태클</option>
+								<option value="30" >&nbsp;&nbsp;&nbsp;&nbsp;경합 지상</option>
+								<option value="31" >&nbsp;&nbsp;&nbsp;&nbsp;경합 공중</option>
+								<option value="34" >&nbsp;&nbsp;&nbsp;&nbsp;인터셉트</option>
+								<option value="33" >&nbsp;&nbsp;&nbsp;&nbsp;클리어링</option>
+								<option value="49" >&nbsp;&nbsp;&nbsp;&nbsp;차단</option>
+								<option value="50" >&nbsp;&nbsp;&nbsp;&nbsp;획득</option>
+								<option value="51" >&nbsp;&nbsp;&nbsp;&nbsp;블락</option>
+								<option value="52" >&nbsp;&nbsp;&nbsp;&nbsp;볼미스</option>
+								<option value="09" >&nbsp;&nbsp;&nbsp;&nbsp;파울</option>
+								<option value="53" >&nbsp;&nbsp;&nbsp;&nbsp;피파울</option>
+								<option value="12" >&nbsp;&nbsp;&nbsp;&nbsp;경고</option>
+								<option value="13" >&nbsp;&nbsp;&nbsp;&nbsp;퇴장</option>
+								<option value="54" >&nbsp;&nbsp;&nbsp;&nbsp;실점</option>
+								<option value="55" >&nbsp;&nbsp;&nbsp;&nbsp;캐칭</option>
+								<option value="56" >&nbsp;&nbsp;&nbsp;&nbsp;펀칭</option>
+								<option value="57" >&nbsp;&nbsp;&nbsp;&nbsp;골킥</option>
+								<option value="58" >&nbsp;&nbsp;&nbsp;&nbsp;공중볼 처리</option>
+								</select>
+				</div>
+						<!-- 리그 > select -->
+				<div class="input-group-total-addon">
+					<div class="input-group-addon">리그</div>
+					<select name="leagueId" id="leagueId" class="select-control">
+							<option value="1" selected>K리그1</option>
+							<option value="2" >K리그2</option>
+							<option value="3" >플레이오프</option>
+							<option value="4" >리그컵</option>
+							<option value="5" >통산</option>
+							</select>
+				</div>
+						<!-- 시즌 > select -->
+				<div class="input-group-total-addon">
+					<div class="input-group-addon">시즌</div>
+					<select name="meetYear" id="meetYear" class="select-control wid80">
+							<option value="2026" selected>2026</option>
+							<option value="2025" >2025</option>
+							<option value="2024" >2024</option>
+							<option value="2023" >2023</option>
+							<option value="2022" >2022</option>
+							<option value="2021" >2021</option>
+							<option value="2020" >2020</option>
+							<option value="2019" >2019</option>
+							<option value="2018" >2018</option>
+							<option value="2017" >2017</option>
+							<option value="2016" >2016</option>
+							<option value="2015" >2015</option>
+							<option value="2014" >2014</option>
+							<option value="2013" >2013</option>
+							<option value="2012" >2012</option>
+							<option value="2011" >2011</option>
+							<option value="2010" >2010</option>
+							<option value="2009" >2009</option>
+							<option value="2008" >2008</option>
+							<option value="2007" >2007</option>
+							<option value="2006" >2006</option>
+							<option value="2005" >2005</option>
+							<option value="2004" >2004</option>
+							<option value="2003" >2003</option>
+							<option value="2002" >2002</option>
+							<option value="2001" >2001</option>
+							<option value="2000" >2000</option>
+							<option value="1999" >1999</option>
+							<option value="1998" >1998</option>
+							<option value="1997" >1997</option>
+							<option value="1996" >1996</option>
+							<option value="1995" >1995</option>
+							<option value="1994" >1994</option>
+							<option value="1993" >1993</option>
+							<option value="1992" >1992</option>
+							<option value="1991" >1991</option>
+							<option value="1990" >1990</option>
+							<option value="1989" >1989</option>
+							<option value="1988" >1988</option>
+							<option value="1987" >1987</option>
+							<option value="1986" >1986</option>
+							<option value="1985" >1985</option>
+							<option value="1984" >1984</option>
+							<option value="1983" >1983</option>
+							</select>
+				</div>
+						<!-- 구단 > select -->
+				<div class="input-group-total-addon">
+					<div class="input-group-addon">구단</div>
+					<select name="teamId" id="teamId" class="select-control">
+							<option value="ALL" >전체</option>
+							<option value="K21" selected>강원</option>
+							<option value="K22" >광주</option>
+							<option value="K35" >김천</option>
+							<option value="K10" >대전</option>
+							<option value="K26" >부천</option>
+							<option value="K09" >서울</option>
+							<option value="K27" >안양</option>
+							<option value="K01" >울산</option>
+							<option value="K18" >인천</option>
+							<option value="K05" >전북</option>
+							<option value="K04" >제주</option>
+							<option value="K03" >포항</option>
+							</select>
+				</div>
+						<!-- H/A구분 > select -->
+				<div class="input-group-total-addon">
+					<div class="input-group-addon">H/A구분</div>
+					<select name="haGameType" id="haGameType" class="select-control">
+							<option value="ALL" selected>전체</option>
+							<option value="1" >HOME</option>
+							<option value="2" >AWAY</option>
+							<option value="3" >중립</option>
+							</select>
+				</div>
+						<!-- 날씨 > select -->
+				<div class="input-group-total-addon">
+					<div class="input-group-addon">날씨</div>
+					<select name="weather" id="weather" class="select-control wid80">
+							<option value="ALL" selected>전체</option>
+							<option value="1" >맑음</option>
+							<option value="2" >흐림</option>
+							<option value="3" >비</option>
+							<option value="4" >흐리고 비</option>
+							<option value="5" >눈</option>
+							</select>
+				</div>
+						<!-- 일자 F > input -->
+				<div class="input-group-total-addon pr0 mr0">
+					<div class="input-group-addon">일자</div>
+					<input id="searchDateF" name="searchDateF" value="2026/01/01" class="talbe-form-control wid80" readonly="readonly" />
+					<button type="button" id="btnStartDttm" class="btn-calendar btn-icon-calendar" data-cal-id="searchDateF"></button>
+				</div>
+						<!-- 일자 T > input -->
+				<div class="input-group-total-addon">
+					<span class="ml10 mr10">~</span>
+					<input id="searchDateT" name="searchDateT" value="2026/08/14" class="talbe-form-control wid80" readonly="readonly" />
+					<button type="button" id="btnEndDttm" class="btn-calendar btn-icon-calendar" data-cal-id="searchDateT"></button>
+				</div>
+						<div style="margin-top:7px;"></div> 
+				<!-- 슬라이더 테이블 -->
+				<table class="table box-line">
+					<tbody>
+						<tr>
+							<td width="44px" nowrap></td>
+							<td colspan="2" width="760px" nowrap>
+								<div id="slider-range-total" style="z-index: 4;"></div>
+								<input type="text" id="amount1min" style="display: none;">
+								<input type="text" id="amount1PeriodCd" style="display: none;">
+								<input type="text" id="amount2min" style="display: none;">
+								<input type="text" id="amount2PeriodCd" style="display: none;">
+							</td>
+							<td width="44px" nowrap></td>
+						</tr>
+						<tr>
+						<td width="42px" nowrap></td>
+						<td width="760px" nowrap colspan="2">
+							시간 : <input type="text" id="amountData" class="talbe-form-control wid90 hasDatepicker" readonly style="z-index: 5" > ~ <input type="text" id="amount2Data" class="talbe-form-control wid90 hasDatepicker" readonly style="z-index: 5" >
+						</td>
+						<td width="42px" nowrap></td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="margin-top:7px;"></div> 
+				<!-- 포지션 > select -->
+			</div>
+		</form>
+	</div>
+	<!-- // SEARCH 선택 결과 영역 // -->
+
+	<div class="searchResult">
+		<div class="searchResult-box">
+			<div class="searchResult-left">
+				<div class="searchResult-group wid100">
+					<img src="/images/portal/img-serchview.png">
+				</div>
+
+				<!-- // 공통 버튼 // -->
+				<div class="searchResult-right-btn mr20">
+					<button type="button" id="btnSearch" class="btn-primary btn-sm-search">조회</button>
+					<!-- <button type="button" id="btnPrint" class="btn-primary btn-sm-print">인쇄</button> -->
+				</div>
+			</div>
+			<!-- 시간 -->
+
+			<!-- 년도 -->
+			<div class="searchResult-right">
+				
+				<!-- 기록 > select -->
+				<div class="searchResult-group wid-20p">
+					<span class="searchResult-name">기록</span>
+							<p>득점</p>
+								</div>
+						<!-- 리그 > select -->
+				<div class="searchResult-group wid-20p">
+					<span class="searchResult-name">리그</span>
+							<p>K리그1</p>
+								</div>
+						<!-- 시즌 > select -->
+				<div class="searchResult-group wid-20p">
+					<span class="searchResult-name">시즌</span>
+							<p>2026</p>
+								</div>
+						</div>
+		</div>
+	</div>
+<!-- 검색 결과 레이아웃 -->
+					
+  					<!-- 차트 js -->
+<!-- <script src="/resources/chart/Chart.bundle.js"></script>
+<script src="/resources/chart/Chart.bundle.min.js"></script>
+<script src="/resources/chart/Chart.js"></script>
+<script src="/resources/chart/Chart.min.js"></script>
+<script src="/js/chart.js"></script> -->
+<script type="text/javascript" src="/resources/tablesorter/jquery.tablesorter.js"></script>
+<!-- 탭 js -->     
+<script src="/js/tab.js"></script>       
+<!-- 로우스펜 js -->
+<script src="/resources/jquery.rowspanizer.js"></script>
+<script type="text/javascript">
+	var jsonResultData = [{"TEAM_ID":"K21","team_name":"강원FC","team_s_name":"강원","CNT_RECORD":25,"GAME_CNT":21,"QTY_PER_WORK":1.190476190476,"RANK_CNT_RECORD":1}];
+	var commonViewData = {"menuVo":{"menuCd":"0307","menuNm":"팀","parentMenuCd":"0015","searchFormKey":"record,leagueId,meetYear,teamId,haGameType,weather,searchDateF,searchDateT","searchDataKey":"record,leagueId,meetYear,teamId,haGameType,weather,searchDateF,searchDateT","menuUrl":"/data/total/totalView.do","uriPath":"data/total/","chartYn":"N","btnQry":"Y","btnExl":"N","btnSave":"N","btnAdd":"N","btnDel":"N","btnPrt":"N","btnClr":"N","btnDwn":"N","searchChildrenYn":"Y","menuTypeCd":"total","helpFileSize":0,"regUserId":"platform","updUserId":"platform","searchCondition":"","searchKeyword":""},"searchVo":{"searchFormKey":["record","leagueId","meetYear","teamId","haGameType","weather","searchDateF","searchDateT"],"searchParam":"{\"leagueId\":\"1\",\"searchDateF\":\"2026/01/01\",\"record\":\"01\",\"teamId\":\"K21\",\"weather\":\"ALL\",\"searchDateT\":\"2026/08/14\",\"haGameType\":\"ALL\",\"meetYear\":\"2026\"}","selectSearchDate":"2026/08/14","searchDateF":[{"CODE_KEY":"2026/01/01","CODE_VAL":"2026/01/01","CODE_SEL":"Y"}],"selectSearchDateF":"2026/01/01","searchDateT":[{"CODE_KEY":"2026/08/14","CODE_VAL":"2026/08/14","CODE_SEL":"Y"}],"selectSearchDateT":"2026/08/14","meetYear":[{"CODE_KEY":"2026","CODE_VAL":"2026","CODE_SEL":"Y"},{"CODE_KEY":"2025","CODE_VAL":"2025","CODE_SEL":"N"},{"CODE_KEY":"2024","CODE_VAL":"2024","CODE_SEL":"N"},{"CODE_KEY":"2023","CODE_VAL":"2023","CODE_SEL":"N"},{"CODE_KEY":"2022","CODE_VAL":"2022","CODE_SEL":"N"},{"CODE_KEY":"2021","CODE_VAL":"2021","CODE_SEL":"N"},{"CODE_KEY":"2020","CODE_VAL":"2020","CODE_SEL":"N"},{"CODE_KEY":"2019","CODE_VAL":"2019","CODE_SEL":"N"},{"CODE_KEY":"2018","CODE_VAL":"2018","CODE_SEL":"N"},{"CODE_KEY":"2017","CODE_VAL":"2017","CODE_SEL":"N"},{"CODE_KEY":"2016","CODE_VAL":"2016","CODE_SEL":"N"},{"CODE_KEY":"2015","CODE_VAL":"2015","CODE_SEL":"N"},{"CODE_KEY":"2014","CODE_VAL":"2014","CODE_SEL":"N"},{"CODE_KEY":"2013","CODE_VAL":"2013","CODE_SEL":"N"},{"CODE_KEY":"2012","CODE_VAL":"2012","CODE_SEL":"N"},{"CODE_KEY":"2011","CODE_VAL":"2011","CODE_SEL":"N"},{"CODE_KEY":"2010","CODE_VAL":"2010","CODE_SEL":"N"},{"CODE_KEY":"2009","CODE_VAL":"2009","CODE_SEL":"N"},{"CODE_KEY":"2008","CODE_VAL":"2008","CODE_SEL":"N"},{"CODE_KEY":"2007","CODE_VAL":"2007","CODE_SEL":"N"},{"CODE_KEY":"2006","CODE_VAL":"2006","CODE_SEL":"N"},{"CODE_KEY":"2005","CODE_VAL":"2005","CODE_SEL":"N"},{"CODE_KEY":"2004","CODE_VAL":"2004","CODE_SEL":"N"},{"CODE_KEY":"2003","CODE_VAL":"2003","CODE_SEL":"N"},{"CODE_KEY":"2002","CODE_VAL":"2002","CODE_SEL":"N"},{"CODE_KEY":"2001","CODE_VAL":"2001","CODE_SEL":"N"},{"CODE_KEY":"2000","CODE_VAL":"2000","CODE_SEL":"N"},{"CODE_KEY":"1999","CODE_VAL":"1999","CODE_SEL":"N"},{"CODE_KEY":"1998","CODE_VAL":"1998","CODE_SEL":"N"},{"CODE_KEY":"1997","CODE_VAL":"1997","CODE_SEL":"N"},{"CODE_KEY":"1996","CODE_VAL":"1996","CODE_SEL":"N"},{"CODE_KEY":"1995","CODE_VAL":"1995","CODE_SEL":"N"},{"CODE_KEY":"1994","CODE_VAL":"1994","CODE_SEL":"N"},{"CODE_KEY":"1993","CODE_VAL":"1993","CODE_SEL":"N"},{"CODE_KEY":"1992","CODE_VAL":"1992","CODE_SEL":"N"},{"CODE_KEY":"1991","CODE_VAL":"1991","CODE_SEL":"N"},{"CODE_KEY":"1990","CODE_VAL":"1990","CODE_SEL":"N"},{"CODE_KEY":"1989","CODE_VAL":"1989","CODE_SEL":"N"},{"CODE_KEY":"1988","CODE_VAL":"1988","CODE_SEL":"N"},{"CODE_KEY":"1987","CODE_VAL":"1987","CODE_SEL":"N"},{"CODE_KEY":"1986","CODE_VAL":"1986","CODE_SEL":"N"},{"CODE_KEY":"1985","CODE_VAL":"1985","CODE_SEL":"N"},{"CODE_KEY":"1984","CODE_VAL":"1984","CODE_SEL":"N"},{"CODE_KEY":"1983","CODE_VAL":"1983","CODE_SEL":"N"}],"selectMeetYear":"2026","teamId":[{"CODE_KEY":"ALL","CODE_VAL":"전체","CODE_SEL":"N"},{"CODE_KEY":"K21","CODE_VAL":"강원","CODE_SEL":"Y"},{"CODE_KEY":"K22","CODE_VAL":"광주","CODE_SEL":"N"},{"CODE_KEY":"K35","CODE_VAL":"김천","CODE_SEL":"N"},{"CODE_KEY":"K10","CODE_VAL":"대전","CODE_SEL":"N"},{"CODE_KEY":"K26","CODE_VAL":"부천","CODE_SEL":"N"},{"CODE_KEY":"K09","CODE_VAL":"서울","CODE_SEL":"N"},{"CODE_KEY":"K27","CODE_VAL":"안양","CODE_SEL":"N"},{"CODE_KEY":"K01","CODE_VAL":"울산","CODE_SEL":"N"},{"CODE_KEY":"K18","CODE_VAL":"인천","CODE_SEL":"N"},{"CODE_KEY":"K05","CODE_VAL":"전북","CODE_SEL":"N"},{"CODE_KEY":"K04","CODE_VAL":"제주","CODE_SEL":"N"},{"CODE_KEY":"K03","CODE_VAL":"포항","CODE_SEL":"N"}],"selectTeamId":"K21","selectTeamIdStr":"강원","leagueId":[{"CODE_KEY":"1","CODE_VAL":"K리그1","CODE_SEL":"Y"},{"CODE_KEY":"2","CODE_VAL":"K리그2","CODE_SEL":"N"},{"CODE_KEY":"3","CODE_VAL":"플레이오프","CODE_SEL":"N"},{"CODE_KEY":"4","CODE_VAL":"리그컵","CODE_SEL":"N"},{"CODE_KEY":"5","CODE_VAL":"통산","CODE_SEL":"N"}],"selectLeagueId":"1","selectLeagueIdStr":"K리그1","record":[{"CODE_KEY":"01","CODE_VAL":"득점","CODE_SEL":"Y","CODE_TYPE":"01"},{"CODE_KEY":"02","CODE_VAL":"도움","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"10","CODE_VAL":"슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"16","CODE_VAL":"유효슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"17","CODE_VAL":"차단된 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"18","CODE_VAL":"빗나간 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"19","CODE_VAL":"PA내 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"36","CODE_VAL":"PA외 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"11","CODE_VAL":"오프사이드","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"37","CODE_VAL":"프리킥 슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"38","CODE_VAL":"프리킥 유효슈팅","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"39","CODE_VAL":"프리킥 크로스","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"08","CODE_VAL":"코너킥","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"40","CODE_VAL":"스로인","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"35","CODE_VAL":"드리블","CODE_SEL":"N","CODE_TYPE":"01"},{"CODE_KEY":"22","CODE_VAL":"패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"23","CODE_VAL":"키패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"42","CODE_VAL":"공격지역 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"43","CODE_VAL":"중앙지역 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"44","CODE_VAL":"수비지역 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"28","CODE_VAL":"롱 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"45","CODE_VAL":"중거리 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"46","CODE_VAL":"숏 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"24","CODE_VAL":"전방 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"25","CODE_VAL":"후방 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"47","CODE_VAL":"횡 패스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"29","CODE_VAL":"크로스","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"48","CODE_VAL":"탈압박","CODE_SEL":"N","CODE_TYPE":"02"},{"CODE_KEY":"32","CODE_VAL":"태클","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"30","CODE_VAL":"경합 지상","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"31","CODE_VAL":"경합 공중","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"34","CODE_VAL":"인터셉트","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"33","CODE_VAL":"클리어링","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"49","CODE_VAL":"차단","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"50","CODE_VAL":"획득","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"51","CODE_VAL":"블락","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"52","CODE_VAL":"볼미스","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"09","CODE_VAL":"파울","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"53","CODE_VAL":"피파울","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"12","CODE_VAL":"경고","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"13","CODE_VAL":"퇴장","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"54","CODE_VAL":"실점","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"55","CODE_VAL":"캐칭","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"56","CODE_VAL":"펀칭","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"57","CODE_VAL":"골킥","CODE_SEL":"N","CODE_TYPE":"03"},{"CODE_KEY":"58","CODE_VAL":"공중볼 처리","CODE_SEL":"N","CODE_TYPE":"03"}],"selectRecord":"01","selectRecordStr":"득점","haGameType":[{"CODE_KEY":"ALL","CODE_VAL":"전체","CODE_SEL":"Y"},{"CODE_KEY":"1","CODE_VAL":"HOME","CODE_SEL":"N"},{"CODE_KEY":"2","CODE_VAL":"AWAY","CODE_SEL":"N"},{"CODE_KEY":"3","CODE_VAL":"중립","CODE_SEL":"N"}],"selectHaGameType":"","weather":[{"CODE_KEY":"ALL","CODE_VAL":"전체","CODE_SEL":"Y"},{"CODE_KEY":"1","CODE_VAL":"맑음","CODE_SEL":"N"},{"CODE_KEY":"2","CODE_VAL":"흐림","CODE_SEL":"N"},{"CODE_KEY":"3","CODE_VAL":"비","CODE_SEL":"N"},{"CODE_KEY":"4","CODE_VAL":"흐리고 비","CODE_SEL":"N"},{"CODE_KEY":"5","CODE_VAL":"눈","CODE_SEL":"N"}],"selectWeather":"","roundSt":0,"roundEnd":0,"dateSt":0,"dateEnd":0},"menuCodeVo":{"menuCd":"0307","menuTypeCode":"total","meetGameType":"0","workCode":"S","seasonFlag":"1","userId":"platform"}};
+	
+	function resultInitEvent(){
+		/* 기록 구분 - 공격 */
+		$("#recordListAt li").click(function(){
+			var data_index =$(this).attr("data-index");
+			
+			var recordCd = $("#recordAt_"+data_index).val();
+			var recordNm = $("#recordAt_Nm_"+data_index).val();
+			
+			commonViewData.searchVo.selectRecordStr =recordNm;
+			commonViewData.searchVo.selectRecord =recordCd;
+			commonViewData.menuCodeVo.workCode ='S';
+	
+			var commonvostr = JSON.stringify(commonViewData);
+			
+	    	getResource(commonvostr);
+		});
+		
+		/* 기록 구분 - 수비 */
+		$("#recordListDf li").click(function(){
+				var data_index =$(this).attr("data-index");
+				
+				var recordCd = $("#recordDf_"+data_index).val();
+				var recordNm = $("#recordDf_Nm_"+data_index).val();
+				
+				commonViewData.searchVo.selectRecordStr =recordNm;
+				commonViewData.searchVo.selectRecord =recordCd;
+				commonViewData.menuCodeVo.workCode ='S';
+		
+				var commonvostr = JSON.stringify(commonViewData);
+				
+		    	getResource(commonvostr);
+			});
+		
+		/* 기록 구분 - 패스 */
+		$("#recordListPs li").click(function(){
+			var data_index =$(this).attr("data-index");
+			
+			var recordCd = $("#recordPs_"+ data_index).val();
+			var recordNm = $("#recordPs_Nm_"+data_index).val();
+			
+			commonViewData.searchVo.selectRecordStr =recordNm;
+			commonViewData.searchVo.selectRecord =recordCd;
+			commonViewData.menuCodeVo.workCode ='S';
+	
+			var commonvostr = JSON.stringify(commonViewData);
+			
+	    	getResource(commonvostr);
+		});
+	}
+	
+	$(document).ready(function(){
+		/* 탭 */
+		tabStart();
+		/* 차트 */
+		/* var jsonResultData = [{"TEAM_ID":"K21","team_name":"강원FC","team_s_name":"강원","CNT_RECORD":25,"GAME_CNT":21,"QTY_PER_WORK":1.190476190476,"RANK_CNT_RECORD":1}];
+		chartStart(jsonResultData); */
+		
+		$("#teamDatasTable").tablesorter({
+			
+			headers: {
+				0: {sorter : "digit", string : "max"},
+				1: {sorter : "text", string : "max"},
+				2: {sorter : "digit", string : "max"},
+				3: {sorter : "digit", string : "max"},
+				4: {sorter : "digit", string : "max"}
+			}
+		});
+		
+		resultInitEvent();
+	});
+	
+	//인쇄 Function
+	function fn_print() {
+		var d = new Date();
+		
+		var ds = {
+				"MENU_NM"   : commonViewData.menuVo.menuNm,
+				"MEET_YEAR" : commonViewData.searchVo.selectMeetYear,
+				"GAME_TYPE" : commonViewData.searchVo.selectGameTypeStr,
+				"MEET_NAME" : commonViewData.searchVo.selectMeetNameStr,
+				"TEAM_NAME" : commonViewData.searchVo.selectTeamIdStr,
+				"RECORD"         : commonViewData.searchVo.selectRecordStr,
+				"TOP_RANK"       : commonViewData.searchVo.topRank,
+				"SEARCH_DATE"    : commonViewData.searchVo.selectSearchDate,
+				"PRINT_COMPANY"  : "한국프로축구연맹",
+				"PRINT_DATETIME" : d.toLocaleString()
+		};
+		
+		var ds_0 = JSON.stringify([ds]);
+		var ds_1 = JSON.stringify(jsonResultData[0]);
+		
+		var _params = {
+						 projectName:"kleague"
+  		      			,formName:"result0054"
+						,dataset_0:encodeURIComponent(ds_0)
+						,dataset_1:encodeURIComponent(ds_1)
+		};
+		
+		gfn_openViewer(_params);
+	}
+</script>
+					<!-- 검색 결과 탭 영역 -->
+					<!-- // SEARCH 데이터(표) 결과 // -->
+					<div class="searchDataset sub-team-table">
+					<div id="tab-1" class="tab-content current">
+						<div class="board-table">
+							<table id="teamDatasTable" class="table tablesorter">
+								<thead>
+									<tr>
+										<th width="auto" class="bar_bottm_right_01">순위</th>
+										<th width="auto" class="bar_bottm_right_01">팀명</th>
+										<th width="auto" class="bar_bottm_right_01">득점</th>
+										<th width="auto" class="bar_bottm_right_01">경기수</th>
+										<th width="auto" class="bar_bottm_right_01">경기당득점</th>
+										</tr>
+								</thead>
+								<tbody>
+								<tr>
+											<td class="bar_bottm_right bold green"><span class="table-data-icon">1</span></td>
+													<td class="bar_bottm_right">강원</td>
+													<td class="bar_bottm_right blue bold">25</td>
+															<td class="bar_bottm_right">21</td>
+															<td class="bar_bottm_right blue bold">1.19</td>
+														</tr>
+										</tbody>
+							</table>
+						</div>
+			<div class="total-board-table-box">
+							<div class="total-board-table-box-title01">
+								<div class="total-board-table-box-top">
+									공격
+								</div>
+								<ul id="recordListAt">
+								<li class="total-board-table-btn" data-index="0">
+											<input type="hidden" name="record" id ="recordAt_0" value="01"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_0" value=""/>
+											<a href="#" class="active">득점</a>
+										</li>
+										<li class="total-board-table-btn" data-index="1">
+											<input type="hidden" name="record" id ="recordAt_1" value="02"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_1" value="도움"/>
+											<a href="#">도움</a>
+										</li>
+										<li class="total-board-table-btn" data-index="2">
+											<input type="hidden" name="record" id ="recordAt_2" value="10"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_2" value="슈팅"/>
+											<a href="#">슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="3">
+											<input type="hidden" name="record" id ="recordAt_3" value="16"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_3" value="유효슈팅"/>
+											<a href="#">유효슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="4">
+											<input type="hidden" name="record" id ="recordAt_4" value="17"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_4" value="차단된 슈팅"/>
+											<a href="#">차단된 슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="5">
+											<input type="hidden" name="record" id ="recordAt_5" value="18"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_5" value="빗나간 슈팅"/>
+											<a href="#">빗나간 슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="6">
+											<input type="hidden" name="record" id ="recordAt_6" value="19"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_6" value="PA내 슈팅"/>
+											<a href="#">PA내 슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="7">
+											<input type="hidden" name="record" id ="recordAt_7" value="36"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_7" value="PA외 슈팅"/>
+											<a href="#">PA외 슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="8">
+											<input type="hidden" name="record" id ="recordAt_8" value="11"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_8" value="오프사이드"/>
+											<a href="#">오프사이드</a>
+										</li>
+										<li class="total-board-table-btn" data-index="9">
+											<input type="hidden" name="record" id ="recordAt_9" value="37"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_9" value="프리킥 슈팅"/>
+											<a href="#">프리킥 슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="10">
+											<input type="hidden" name="record" id ="recordAt_10" value="38"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_10" value="프리킥 유효슈팅"/>
+											<a href="#">프리킥 유효슈팅</a>
+										</li>
+										<li class="total-board-table-btn" data-index="11">
+											<input type="hidden" name="record" id ="recordAt_11" value="39"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_11" value="프리킥 크로스"/>
+											<a href="#">프리킥 크로스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="12">
+											<input type="hidden" name="record" id ="recordAt_12" value="08"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_12" value="코너킥"/>
+											<a href="#">코너킥</a>
+										</li>
+										<li class="total-board-table-btn" data-index="13">
+											<input type="hidden" name="record" id ="recordAt_13" value="40"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_13" value="스로인"/>
+											<a href="#">스로인</a>
+										</li>
+										<li class="total-board-table-btn" data-index="14">
+											<input type="hidden" name="record" id ="recordAt_14" value="35"/>
+											<input type="hidden" name="record" id ="recordAt_Nm_14" value="드리블"/>
+											<a href="#">드리블</a>
+										</li>
+										</ul>
+							</div>
+							<div class="total-board-table-box-title02">
+								<div class="total-board-table-box-top">
+									패스
+								</div>
+									<ul id="recordListDf">
+								<li class="total-board-table-btn" data-index="15">
+											<input type="hidden" name="record" id ="recordDf_15" value="22"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_15" value="패스"/>
+											<a href="#">패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="16">
+											<input type="hidden" name="record" id ="recordDf_16" value="23"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_16" value="키패스"/>
+											<a href="#">키패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="17">
+											<input type="hidden" name="record" id ="recordDf_17" value="42"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_17" value="공격지역 패스"/>
+											<a href="#">공격지역 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="18">
+											<input type="hidden" name="record" id ="recordDf_18" value="43"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_18" value="중앙지역 패스"/>
+											<a href="#">중앙지역 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="19">
+											<input type="hidden" name="record" id ="recordDf_19" value="44"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_19" value="수비지역 패스"/>
+											<a href="#">수비지역 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="20">
+											<input type="hidden" name="record" id ="recordDf_20" value="28"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_20" value="롱 패스"/>
+											<a href="#">롱 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="21">
+											<input type="hidden" name="record" id ="recordDf_21" value="45"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_21" value="중거리 패스"/>
+											<a href="#">중거리 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="22">
+											<input type="hidden" name="record" id ="recordDf_22" value="46"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_22" value="숏 패스"/>
+											<a href="#">숏 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="23">
+											<input type="hidden" name="record" id ="recordDf_23" value="24"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_23" value="전방 패스"/>
+											<a href="#">전방 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="24">
+											<input type="hidden" name="record" id ="recordDf_24" value="25"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_24" value="후방 패스"/>
+											<a href="#">후방 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="25">
+											<input type="hidden" name="record" id ="recordDf_25" value="47"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_25" value="횡 패스"/>
+											<a href="#">횡 패스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="26">
+											<input type="hidden" name="record" id ="recordDf_26" value="29"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_26" value="크로스"/>
+											<a href="#">크로스</a>
+										</li>
+										<li class="total-board-table-btn" data-index="27">
+											<input type="hidden" name="record" id ="recordDf_27" value="48"/>
+											<input type="hidden" name="record" id ="recordDf_Nm_27" value="탈압박"/>
+											<a href="#">탈압박</a>
+										</li>
+										</ul>
+							</div>
+							<div class="total-board-table-box-title03">
+								<div class="total-board-table-box-top">
+									수비
+								</div>
+								<ul id="recordListPs">
+								<li class="total-board-table-btn" data-index="28">
+											<input type="hidden" name="record" id ="recordPs_28" value="32"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_28" value="태클"/>
+											<a href="#">태클</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="29">
+											<input type="hidden" name="record" id ="recordPs_29" value="30"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_29" value="경합 지상"/>
+											<a href="#">경합 지상</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="30">
+											<input type="hidden" name="record" id ="recordPs_30" value="31"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_30" value="경합 공중"/>
+											<a href="#">경합 공중</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="31">
+											<input type="hidden" name="record" id ="recordPs_31" value="34"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_31" value="인터셉트"/>
+											<a href="#">인터셉트</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="32">
+											<input type="hidden" name="record" id ="recordPs_32" value="33"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_32" value="클리어링"/>
+											<a href="#">클리어링</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="33">
+											<input type="hidden" name="record" id ="recordPs_33" value="49"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_33" value="차단"/>
+											<a href="#">차단</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="34">
+											<input type="hidden" name="record" id ="recordPs_34" value="50"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_34" value="획득"/>
+											<a href="#">획득</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="35">
+											<input type="hidden" name="record" id ="recordPs_35" value="51"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_35" value="블락"/>
+											<a href="#">블락</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="36">
+											<input type="hidden" name="record" id ="recordPs_36" value="52"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_36" value="볼미스"/>
+											<a href="#">볼미스</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="37">
+											<input type="hidden" name="record" id ="recordPs_37" value="09"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_37" value="파울"/>
+											<a href="#">파울</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="38">
+											<input type="hidden" name="record" id ="recordPs_38" value="53"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_38" value="피파울"/>
+											<a href="#">피파울</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="39">
+											<input type="hidden" name="record" id ="recordPs_39" value="12"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_39" value="경고"/>
+											<a href="#">경고</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="40">
+											<input type="hidden" name="record" id ="recordPs_40" value="13"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_40" value="퇴장"/>
+											<a href="#">퇴장</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="41">
+											<input type="hidden" name="record" id ="recordPs_41" value="54"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_41" value="실점"/>
+											<a href="#">실점</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="42">
+											<input type="hidden" name="record" id ="recordPs_42" value="55"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_42" value="캐칭"/>
+											<a href="#">캐칭</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="43">
+											<input type="hidden" name="record" id ="recordPs_43" value="56"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_43" value="펀칭"/>
+											<a href="#">펀칭</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="44">
+											<input type="hidden" name="record" id ="recordPs_44" value="57"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_44" value="골킥"/>
+											<a href="#">골킥</a>
+										</li>
+										</li>
+									<li class="total-board-table-btn" data-index="45">
+											<input type="hidden" name="record" id ="recordPs_45" value="58"/>
+											<input type="hidden" name="record" id ="recordPs_Nm_45" value="공중볼 처리"/>
+											<a href="#">공중볼 처리</a>
+										</li>
+										</li>
+									</ul>
+							</div>
+						</div>
+					</div>
+					<div id="imsi" class="graph-style01" style="display: none">
+							<canvas id="myChart" width="800" height="600"></canvas>
+						</div>
+					</div></div>
+				<!-- End -->
+				</DIV>
+
+			</div>
+
+			<!-- 우측 전체 레이아웃(우측 메뉴 + 팀순위) -->
+
+			<div class="sub-right" id="sub-right">
+
+				<!-- 3차 트리 메뉴 -->
+
+				<script>
+
+
+	/** 클릭한 메뉴 보임/숨김 처리 */
+
+	function setDisplayMenu(layerName, menuCd)
+	{
+		// 서브 메뉴 레이어 반전
+		
+		var subMenu = document.getElementById(layerName + '_' + menuCd);
+
+		if(subMenu != null)
+		{
+			var nowSubMenuDisply = subMenu.style.display;
+			
+			if(nowSubMenuDisply == 'none')
+			{
+				// 하위 메뉴 보임 
+				
+				subMenu.style.display = '';
+				
+				hiddenOtherMenu(layerName, menuCd);	// TODO::이외 메뉴 숨김 아직 구현안됨
+			}	
+			else if(nowSubMenuDisply == '')
+			{
+				// 하위 메뉴 숨김
+				
+				subMenu.style.display = 'none';
+			}
+			
+			toggleMenuIcon(layerName, menuCd);		// 메뉴 아이콘 반전
+		}
+	}
+
+	/** 메뉴 트리 아이콘 숨김/보임 처리 */
+
+	function toggleMenuIcon(layerName, menuCd)
+	{
+		// 메뉴 아이콘 반전
+
+		var subMenuIcon = document.getElementById(layerName + 'Icon_' + menuCd);
+
+		var nowIconClassName = subMenuIcon.className; 		
+		
+		if(!$("#" + layerName + 'Icon_' + menuCd).hasClass("on"))
+		{
+			// '+' 아이콘 표시
+			
+			$("#" + layerName + 'Icon_' + menuCd).addClass("on");
+		}
+		else
+		{
+			// '-' 아이콘 표시
+			
+			$("#" + layerName + 'Icon_' + menuCd).removeClass("on");
+		}
+	}
+
+	/** 현재 메뉴와 현재 메뉴가 속한 상위 메뉴 이외에 나머지 메뉴 숨김 처리 */
+
+	function hiddenOtherMenu(menuCd)
+	{
+		
+		
+	}
+
+
+</script>
+				<!-- 우측 메뉴 토글 -->
+				
+				<div class="sub-rightTop">
+					<div class="poT15 flR"><span class="img-txtSubmenu vaM">메뉴</span><a class="icon-btnsubHid ml10 show"></a></div>
+				</div>
+				
+				<!-- // 3depth 메뉴 구조 // -->
+				
+				<div class="sub-right-menu mb30">
+
+					<div class="menuTree-box">
+
+<SPAN style="display:none" class='active'>[0015], [0015, 0307, ]</SPAN>
+<SPAN style="display:none" class='active'>[0309, N], [0015, 0307, , ]</SPAN>
+<SPAN style="display:none" class='active'> [0, 1]</SPAN>
+
+	<UL id="subMenuLayer_0015" class='nav-third-level' style='display:'>
+							<li>
+
+		<a href="javascript:moveMainFrame('0309');">팀분석</a>
+				<SPAN style="display:none" class='active'>[0015], [0015, 0307, ]</SPAN>
+<SPAN style="display:none" class='active'>[0430, N], [0015, 0307, , ]</SPAN>
+<SPAN style="display:none" class='active'> [1, 1]</SPAN>
+
+	<a href="javascript:moveMainFrame('0430');">팀분석(기간별)</a>
+				<SPAN style="display:none" class='active'>[0015], [0015, 0307, ]</SPAN>
+<SPAN style="display:none" class='active'>[0308, N], [0015, 0307, , ]</SPAN>
+<SPAN style="display:none" class='active'> [1, 1]</SPAN>
+
+	<a href="javascript:moveMainFrame('0308');">선수분석</a>
+				<SPAN style="display:none" class='active'>[0015], [0015, 0307, ]</SPAN>
+<SPAN style="display:none" class='active'>[0307, N], [0015, 0307, , ]</SPAN>
+<SPAN style="display:none" class='active'> [1, 1]</SPAN>
+
+	<a href='#' class="active">팀</a>		
+				<SPAN style="display:none" class='active'>[0015], [0015, 0307, ]</SPAN>
+<SPAN style="display:none" class='active'>[0305, N], [0015, 0307, , ]</SPAN>
+<SPAN style="display:none" class='active'> [1, 1]</SPAN>
+
+	<a href="javascript:moveMainFrame('0305');">선수</a>
+				</li>
+			</ul>
+				
+	</li>
+			</ul>
+				
+	</div>
+					
+				</div><!-- 팀 순위표 -->
+
+				<script>
+<!--
+
+	function toggleTeamRank()
+	{
+		var teamRankLayer1 = document.getElementById("teamRankLayer1");
+		var teamRankLayer2 = document.getElementById("teamRankLayer2");
+
+		var btnTeamRank1 = document.getElementById("btnTeamRank1"); 
+		var btnTeamRank2 = document.getElementById("btnTeamRank2"); 
+		
+		if(teamRankLayer1.style.display == 'none' && teamRankLayer2.style.display == '')
+		{
+			teamRankLayer1.style.display = '';
+			teamRankLayer2.style.display = 'none';
+			
+			btnTeamRank1.className = "current active";
+			btnTeamRank2.className = "";			
+		}		
+		else if(teamRankLayer1.style.display == '' && teamRankLayer2.style.display == 'none')
+		{
+			teamRankLayer1.style.display = 'none';
+			teamRankLayer2.style.display = '';
+
+			btnTeamRank1.className = "";			
+			btnTeamRank2.className = "current active";			
+		}		
+	}
+
+//-->
+</script>
+
+				<div class="sub-right-team">
+				
+					<div class="sub-team-title">
+						<h3>팀순위표</h3>
+						<ul class="tab-team">
+							<li id="btnTeamRank1" class="current active"  onClick="toggleTeamRank();">
+								K리그 1
+							</li>
+							<li id="btnTeamRank2" class="" onClick="toggleTeamRank();">
+								K리그 2
+							</li>
+						</ul>
+					</div>					
+				
+					<div id="teamRankLayer1" class="sub-team-list">
+
+						<table class="team-table">
+						<colgroup>
+							<col width="10px">
+							<col width="40px">
+							<col width="auto">
+							<col width="50px">
+							<col width="50px">
+							<col width="10px">
+						</colgroup>
+						<thead>
+							<tr>
+								<td></td>
+								<td>순위</td>
+								<td>구단</td>
+								<td>경기</td>
+								<td>승점</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+<!-- <tr class="team-bg-color" onclick="javascript:fn_teamInfo('1', 'K09');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K09');">
+								<td></td>
+								<!-- <td class="team-font-color">1</td>   -->
+								<td class="">1</td>
+								<td><img src="/images/portal/img-emble-k09-sm.png" class="img-emble-reSize-24"/>서울</td>
+								<td>22</td>
+								<td>44</td>
+								<td></td>
+							</tr>
+<!-- <tr class="team-bg-color" onclick="javascript:fn_teamInfo('1', 'K01');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K01');">
+								<td></td>
+								<!-- <td class="team-font-color">2</td>   -->
+								<td class="">2</td>
+								<td><img src="/images/portal/img-emble-k01-sm.png" class="img-emble-reSize-24"/>울산</td>
+								<td>22</td>
+								<td>37</td>
+								<td></td>
+							</tr>
+<!-- <tr class="team-bg-color team-bg-line" onclick="javascript:fn_teamInfo('1', 'K05');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K05');">
+								<td></td>
+								<!-- <td class="team-font-color">3</td>   -->
+								<td class="">3</td>
+								<td><img src="/images/portal/img-emble-k05-sm.png" class="img-emble-reSize-24"/>전북</td>
+								<td>22</td>
+								<td>34</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('1', 'K21');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K21');">
+								<td></td>
+								<!-- <td class="team-font-color02">4</td>   -->
+								<td class="">4</td>
+								<td><img src="/images/portal/img-emble-k21-sm.png" class="img-emble-reSize-24"/>강원</td>
+								<td>21</td>
+								<td>32</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('1', 'K04');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K04');">
+								<td></td>
+								<!-- <td class="team-font-color02">5</td>   -->
+								<td class="">5</td>
+								<td><img src="/images/portal/img-emble-k04-sm.png" class="img-emble-reSize-24"/>제주</td>
+								<td>22</td>
+								<td>31</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('1', 'K27');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K27');">
+								<td></td>
+								<!-- <td class="team-font-color02">6</td>   -->
+								<td class="">6</td>
+								<td><img src="/images/portal/img-emble-k27-sm.png" class="img-emble-reSize-24"/>안양</td>
+								<td>22</td>
+								<td>30</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('1', 'K18');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K18');">
+								<td></td>
+								<!-- <td class="team-font-color02">7</td>   -->
+								<td class="">7</td>
+								<td><img src="/images/portal/img-emble-k18-sm.png" class="img-emble-reSize-24"/>인천</td>
+								<td>21</td>
+								<td>29</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('1', 'K03');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K03');">
+								<td></td>
+								<!-- <td class="team-font-color02">8</td>   -->
+								<td class="">8</td>
+								<td><img src="/images/portal/img-emble-k03-sm.png" class="img-emble-reSize-24"/>포항</td>
+								<td>22</td>
+								<td>28</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('1', 'K10');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K10');">
+								<td></td>
+								<!-- <td class="team-font-color02">9</td>   -->
+								<td class="">9</td>
+								<td><img src="/images/portal/img-emble-k10-sm.png" class="img-emble-reSize-24"/>대전</td>
+								<td>22</td>
+								<td>26</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('1', 'K35');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K35');">
+								<td></td>
+								<!-- <td class="team-font-color02">10</td>   -->
+								<td class="">10</td>
+								<td><img src="/images/portal/img-emble-k35-sm.png" class="img-emble-reSize-24"/>김천</td>
+								<td>22</td>
+								<td>24</td>
+								<td></td>
+							</tr>
+<!-- <tr class="team-bg-color-rowlank team-bg-line-rowlank" onclick="javascript:fn_teamInfo('1', 'K26');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K26');">
+								<td></td>
+								<!-- <td class="team-font-color02">11</td>   -->
+								<td class="">11</td>
+								<td><img src="/images/portal/img-emble-k26-sm.png" class="img-emble-reSize-24"/>부천</td>
+								<td>22</td>
+								<td>24</td>
+								<td></td>
+							</tr>
+<!-- <tr class="team-bg-color-rowlank" onclick="javascript:fn_teamInfo('1', 'K22');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('1', 'K22');">
+								<td></td>
+								<!-- <td class="team-font-color02">12</td>   -->
+								<td class="">12</td>
+								<td><img src="/images/portal/img-emble-k22-sm.png" class="img-emble-reSize-24"/>광주</td>
+								<td>22</td>
+								<td>11</td>
+								<td></td>
+							</tr>
+</tbody>
+						</table>
+					</div>
+											
+					<div id="teamRankLayer2" class="sub-team-list" style="display:none;">
+						<table class="team-table">
+						<colgroup>
+							<col width="10px">
+							<col width="40px">
+							<col width="auto">
+							<col width="50px">
+							<col width="50px">
+							<col width="10px">
+						</colgroup>
+						<thead>
+							<tr>
+								<td></td>
+								<td>순위</td>
+								<td>구단</td>
+								<td>경기</td>
+								<td>승점</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+<!-- <tr class="team-bg-color" onclick="javascript:fn_teamInfo('2', 'K02');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K02');">
+								<td></td>
+								<!-- <td class="team-font-color">1</td> -->
+								<td class="team-font-color">1</td>
+								<td><img src="/images/portal/img-emble-k02-sm.png" class="img-emble-reSize-24"/>수원</td>
+								<td>20</td>
+								<td>40</td>
+								<td></td>
+							</tr>
+<!-- <tr class="team-bg-color-rowhank" onclick="javascript:fn_teamInfo('2', 'K31');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K31');">
+								<td></td>
+								<!-- <td class="team-font-color">2</td> -->
+								<td class="team-font-color">2</td>
+								<td><img src="/images/portal/img-emble-k31-sm.png" class="img-emble-reSize-24"/>서울E</td>
+								<td>20</td>
+								<td>37</td>
+								<td></td>
+							</tr>
+<!-- <tr class="team-bg-color-rowhank" onclick="javascript:fn_teamInfo('2', 'K29');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K29');">
+								<td></td>
+								<!-- <td class="team-font-color">3</td> -->
+								<td class="team-font-color">3</td>
+								<td><img src="/images/portal/img-emble-k29-sm.png" class="img-emble-reSize-24"/>수원FC</td>
+								<td>19</td>
+								<td>36</td>
+								<td></td>
+							</tr>
+<!-- <tr class="team-bg-color-rowhank team-bg-line" onclick="javascript:fn_teamInfo('2', 'K06');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K06');">
+								<td></td>
+								<!-- <td class="team-font-color">4</td> -->
+								<td class="team-font-color">4</td>
+								<td><img src="/images/portal/img-emble-k06-sm.png" class="img-emble-reSize-24"/>부산</td>
+								<td>20</td>
+								<td>36</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K17');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K17');">
+								<td></td>
+								<!-- <td class="team-font-color02">5</td> -->
+								<td class="team-font-color02">5</td>
+								<td><img src="/images/portal/img-emble-k17-sm.png" class="img-emble-reSize-24"/>대구</td>
+								<td>20</td>
+								<td>35</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K39');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K39');">
+								<td></td>
+								<!-- <td class="team-font-color02">6</td> -->
+								<td class="team-font-color02">6</td>
+								<td><img src="/images/portal/img-emble-k39-sm.png" class="img-emble-reSize-24"/>화성</td>
+								<td>20</td>
+								<td>35</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K36');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K36');">
+								<td></td>
+								<!-- <td class="team-font-color02">7</td> -->
+								<td class="team-font-color02">7</td>
+								<td><img src="/images/portal/img-emble-k36-sm.png" class="img-emble-reSize-24"/>김포</td>
+								<td>20</td>
+								<td>30</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K34');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K34');">
+								<td></td>
+								<!-- <td class="team-font-color02">8</td> -->
+								<td class="team-font-color02">8</td>
+								<td><img src="/images/portal/img-emble-k34-sm.png" class="img-emble-reSize-24"/>충남아산</td>
+								<td>20</td>
+								<td>28</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K20');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K20');">
+								<td></td>
+								<!-- <td class="team-font-color02">9</td> -->
+								<td class="team-font-color02">9</td>
+								<td><img src="/images/portal/img-emble-k20-sm.png" class="img-emble-reSize-24"/>경남</td>
+								<td>20</td>
+								<td>25</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K08');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K08');">
+								<td></td>
+								<!-- <td class="team-font-color02">10</td> -->
+								<td class="team-font-color02">10</td>
+								<td><img src="/images/portal/img-emble-k08-sm.png" class="img-emble-reSize-24"/>성남</td>
+								<td>19</td>
+								<td>23</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K42');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K42');">
+								<td></td>
+								<!-- <td class="team-font-color02">11</td> -->
+								<td class="team-font-color02">11</td>
+								<td><img src="/images/portal/img-emble-k42-sm.png" class="img-emble-reSize-24"/>용인</td>
+								<td>20</td>
+								<td>22</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K40');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K40');">
+								<td></td>
+								<!-- <td class="team-font-color02">12</td> -->
+								<td class="team-font-color02">12</td>
+								<td><img src="/images/portal/img-emble-k40-sm.png" class="img-emble-reSize-24"/>파주</td>
+								<td>20</td>
+								<td>21</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K38');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K38');">
+								<td></td>
+								<!-- <td class="team-font-color02">13</td> -->
+								<td class="team-font-color02">13</td>
+								<td><img src="/images/portal/img-emble-k38-sm.png" class="img-emble-reSize-24"/>천안</td>
+								<td>20</td>
+								<td>20</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K37');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K37');">
+								<td></td>
+								<!-- <td class="team-font-color02">14</td> -->
+								<td class="team-font-color02">14</td>
+								<td><img src="/images/portal/img-emble-k37-sm.png" class="img-emble-reSize-24"/>충북청주</td>
+								<td>20</td>
+								<td>19</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K32');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K32');">
+								<td></td>
+								<!-- <td class="team-font-color02">15</td> -->
+								<td class="team-font-color02">15</td>
+								<td><img src="/images/portal/img-emble-k32-sm.png" class="img-emble-reSize-24"/>안산</td>
+								<td>20</td>
+								<td>19</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K07');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K07');">
+								<td></td>
+								<!-- <td class="team-font-color02">16</td> -->
+								<td class="team-font-color02">16</td>
+								<td><img src="/images/portal/img-emble-k07-sm.png" class="img-emble-reSize-24"/>전남</td>
+								<td>19</td>
+								<td>13</td>
+								<td></td>
+							</tr>
+<!-- <tr class="" onclick="javascript:fn_teamInfo('2', 'K41');"> -->
+							<tr class="" onclick="javascript:fn_teamInfo('2', 'K41');">
+								<td></td>
+								<!-- <td class="team-font-color02">17</td> -->
+								<td class="team-font-color02">17</td>
+								<td><img src="/images/portal/img-emble-k41-sm.png" class="img-emble-reSize-24"/>김해</td>
+								<td>19</td>
+								<td>11</td>
+								<td></td>
+							</tr>
+</tbody>
+						</table>
+					</div>
+					
+				</div>
+					</div>
+			
+		</div>
+		
+	</div>
+
+	<!-- // footer 레이아웃 // -->
+
+	<!-- // 푸터 탭 //-->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('ul.main-tab-team li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.main-tab-team li').removeClass('active');
+			$('.tab-emblem').removeClass('current');
+
+			$(this).addClass('active');
+			$("#"+tab_id).addClass('current');
+		 });
+		  
+	  	//Check to see if the window is top if not then display button
+	  	$(window).scroll(function(){
+	  		if ($(this).scrollTop() > 0) {
+	  			$('.scrollToTop').fadeIn();
+	  		} else {
+	  			$('.scrollToTop').fadeOut();
+	  		}
+	  	});
+
+	  	//Click event to scroll to top
+	  	$('.scrollToTop').click(function(){
+	  		$('html, body').animate({scrollTop : 0},500);
+	  		return false;
+	  	});
+	});
+	
+	function openPopup(url) {
+        // 팝업창 옵션 설정
+        const popupOptions = "width=1200,height=770,scrollbars=yes,resizable=yes";
+        window.open(url, "PopupWindow", popupOptions);
+    }
+	</script>
+	<div class="bottom-area">
+		<div class="footer-area col-width pt50">
+		<div class="main-notice-txt">
+				<span class="main-notice-txt-title"><img src="/images/portal/img-main-cin.png" class="pr10">K리그 데이터 포털 사용에 대한 안내</span>
+				<p>
+					<!-- - 2018년도 일부 부가기록의 경우 K리그2는 21라운드부터 제공됩니다. 일부 연도별 누계 데이터가 데이터 항목의 상이함으로 표출되지 않을 수 있습니다.<br> -->
+					- 데이터 포탈 사이트에서 제공하고 있는 경기 <span style="color: red;">부가기록 데이터</span>는 경기데이터 공급업체에서 제공한 기록 입니다. <span style="color: red;">(공급업체 : Bepro11)</span><br>
+					- 공식기록은 경기장에서 실시간으로 수집한 기록이고 부가기록은 영상기반으로 데이터를 수집한 것 입니다.<br>
+					- 부가기록은 실시간 업데이트됩니다.<br>
+					- <span style="color: red;">공식기록과 부가기록의 경우 차이가 발생할 수 있습니다.</span><br>
+					- 연도별 부가기록의 경우 기록 제공 업체의 변경에 따라 일부 기록 항목이 표출되지 않을 수 있습니다.<br>
+					<!-- - 데이터 포털 개선 작업으로 인해 2019 시즌 부가데이터 표출은 개막 후 2주 정도 소요될 예정입니다.<br> -->
+				</p>
+			</div>
+			<div class="main-team-linkArea">
+				<ul class="main-tab-team">
+					<li class="current active" data-tab="tab02-1">
+						K리그 1
+					</li>
+					<li class=""  data-tab="tab02-2">
+						K리그 2
+					</li>
+				</ul>
+			</div>
+			<div id="tab02-1" class="tab-emblem current">
+				<ul>
+					<li class="pl0"><a href="#"><img src="/images/portal/img-emble-k05-sm.png" class="img-emble-reSize-60" alt="전북" onclick="javascript:fn_teamInfo('1', 'K05');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k10-sm.png" class="img-emble-reSize-60" alt="대전" onclick="javascript:fn_teamInfo('1', 'K10');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k35-sm.png" class="img-emble-reSize-60" alt="김천상무" onclick="javascript:fn_teamInfo('1', 'K35');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k03-sm.png" class="img-emble-reSize-60" alt="포항" onclick="javascript:fn_teamInfo('1', 'K03');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k21-sm.png" class="img-emble-reSize-60" alt="강원" onclick="javascript:fn_teamInfo('1', 'K21');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k09-sm.png" class="img-emble-reSize-60" alt="서울" onclick="javascript:fn_teamInfo('1', 'K09');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k22-sm.png" class="img-emble-reSize-60" alt="광주" onclick="javascript:fn_teamInfo('1', 'K22');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k27-sm.png" class="img-emble-reSize-60" alt="안양" onclick="javascript:fn_teamInfo('1', 'K27');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k01-sm.png" class="img-emble-reSize-60" alt="울산" onclick="javascript:fn_teamInfo('1', 'K01');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k04-sm.png" class="img-emble-reSize-60" alt="제주SK" onclick="javascript:fn_teamInfo('1', 'K04');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k18-sm.png" class="img-emble-reSize-60" alt="인천" onclick="javascript:fn_teamInfo('2', 'K18');"></a></li>
+					<li class="pr0"><a href="#"><img src="/images/portal/img-emble-k26-sm.png" class="img-emble-reSize-60" alt="부천" onclick="javascript:fn_teamInfo('2', 'K26');"></a></li>
+				</ul>
+			</div>
+			<div id="tab02-2" class="tab-emblem wid77px" style="width: 100% !important; max-width: none !important; overflow: visible !important;">
+				<ul style="display: flex; justify-content: center; flex-wrap: nowrap; width: 100%; max-width: 1140px; margin: 0 auto; list-style: none; padding: 0;">
+					<style>
+						/* K리그 2 전용: 엠블럼 크기는 키우고 간격은 줄임 */
+						#tab02-2 li { 
+							width: 65px !important;    /* 개별 항목 너비 확보 */
+							padding: 0 4px !important;  /* 기존 9px에서 4px로 간격 축소 */
+							float: none !important; 
+							display: inline-block; 
+						}
+						#tab02-2 .img-emble-reSize-60 { 
+							width: 60px !important;    /* 엠블럼 크기를 다시 60px로 복구 */
+							height: auto !important; 
+						}
+					</style>
+					<li><a href="#"><img src="/images/portal/img-emble-k29-sm.png" class="img-emble-reSize-60" alt="수원FC" onclick="javascript:fn_teamInfo('1', 'K29');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k17-sm.png" class="img-emble-reSize-60" alt="대구" onclick="javascript:fn_teamInfo('1', 'K17');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k02-sm.png" class="img-emble-reSize-60" alt="수원" onclick="javascript:fn_teamInfo('2', 'K02');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k31-sm.png" class="img-emble-reSize-60" alt="서울E" onclick="javascript:fn_teamInfo('2', 'K31');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k08-sm.png" class="img-emble-reSize-60" alt="성남" onclick="javascript:fn_teamInfo('2', 'K08');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k07-sm.png" class="img-emble-reSize-60" alt="전남" onclick="javascript:fn_teamInfo('2', 'K07');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k36-sm.png" class="img-emble-reSize-60" alt="김포FC" onclick="javascript:fn_teamInfo('2', 'K36');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k06-sm.png" class="img-emble-reSize-60" alt="부산" onclick="javascript:fn_teamInfo('2', 'K06');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k34-sm.png" class="img-emble-reSize-60" alt="충남아산" onclick="javascript:fn_teamInfo('2', 'K34');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k39-sm.png" class="img-emble-reSize-60" alt="화성" onclick="javascript:fn_teamInfo('2', 'K39');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k20-sm.png" class="img-emble-reSize-60" alt="경남" onclick="javascript:fn_teamInfo('2', 'K20');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k37-sm.png" class="img-emble-reSize-60" alt="충북청주" onclick="javascript:fn_teamInfo('2', 'K37');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k38-sm.png" class="img-emble-reSize-60" alt="천안" onclick="javascript:fn_teamInfo('2', 'K38');"></a></li>
+					<li><a href="#"><img src="/images/portal/img-emble-k32-sm.png" class="img-emble-reSize-60" alt="안산" onclick="javascript:fn_teamInfo('2', 'K32');"></a></li>            
+					<li><a href="#"><img src="/images/portal/img-emble-k40-sm.png" class="img-emble-reSize-60" alt="파주" onclick="javascript:fn_teamInfo('2', 'K40');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k41-sm.png" class="img-emble-reSize-60" alt="김해" onclick="javascript:fn_teamInfo('2', 'K41');"></a></li>    
+					<li><a href="#"><img src="/images/portal/img-emble-k42-sm.png" class="img-emble-reSize-60" alt="용인" onclick="javascript:fn_teamInfo('2', 'K42');"></a></li>                        
+				</ul>
+			</div>
+			<!-- 
+			<div class="footer-spocer">
+				<a href="http://pr.kebhana.com/contents/kor/index.jsp" target="_blank"><img src="/images/portal/img-spon-hanabank.png" width="150"></a>
+				<a href="http://www.adidas.co.kr/" target="_blank"><img src="/images/portal/img-spon-adidas_blk.png" width="150"></a>
+				<a href="http://www.oilbank.co.kr/" target="_blank"><img src="/images/portal/img-spon-oilbank.png" width="150"></a>
+				<a href="http://www.easports.com/" target="_blank"><img src="/images/portal/img-spon-easports.png" width="50"></a>
+				<a href="http://mall.lottechilsung.co.kr/index.html" target="_blank"><img src="/images/portal/img-spon-getorade.png" width="150"></a>
+				<a href="http://www.interpark.com/malls/index.html" target="_blank"><img src="/images/portal/img-spon-interpark.png" width="150"></a>
+			</div>
+			 -->
+			<div class="footer">
+				<div class="footer-logo">
+					<img src="/images/portal/img-footer-logo.png" alt="로고">
+				</div>
+				<div class="footer-sns">
+					<a href="https://www.facebook.com/withKLEAGUE" target="_blank"><img src="/images/portal/img-footer-facebook.png" alt="페이스북"></a>
+					<a href="https://www.instagram.com/kleague/" target="_blank"><img src="/images/portal/img-footer-instagram.png" alt="인스타그램"></a>
+					<!-- <a href="#" onclick="window.open('https://www.facebook.com/withKLEAGUE','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');return false;" target="_blank"><img src="/images/portal/img-footer-twitt.png" alt="트위터"></a> -->
+					<a href="https://www.youtube.com/user/withkleague" target="_blank"><img src="/images/portal/img-footer-youtob.png" alt="유투브"></a>
+					<a href="https://post.naver.com/withkleague" target="_blank"><img src="/images/portal/img-footer-naver.png" alt="네이버 포스트"></a>
+				</div>
+				<div class="footer-familysite">
+					<p>FAMILY SITE</p>
+					<a href="http://www.fifa.com/worldcup/" target="_blank"><img src="/images/portal/img-footer-family01.png" alt="fifa"></a>
+					<a href="http://www.the-afc.com/" target="_blank"><img src="/images/portal/img-footer-family02.png" alt="afc"></a>
+					<a href="http://www.kfa.or.kr" target="_blank"><img src="/images/portal/img-footer-family03.png" alt="협회"></a>
+				</div>
+				<div class="cocyright">
+					<p>한국프로축구연맹(이하 ‘연맹’이라 한다)에서 운영하는 본 K리그 포털 서비스(이하 ‘서비스’라고 한다)에서 제공하는 모든 기록 및 자료, 데이터들은 보도 목적을 제외하고는 연맹의 사전 허가 없이 복사, 저장, 배포, 판매할 수 없습니다. 기사 작성 혹은 보도 목적으로 사용할 경우 모든 정보는 재가공하여 활용되어야 합니다. 이를 위반할 경우 손해배상의 대상 또는 민형사상의 법적인 책임을 물을 수 있습니다.</p>
+					<br/>
+					<br/>
+					<div class="left">
+					<p>46, Gyeonghuigung-gil, Jongno-gu, Seoul, 110-062 Rep. of KOREA<br>
+						Copyright K League. All rights reserved.
+					</p>
+					</div>
+					<div class="right">
+					<p><a href="javascript:void(0);" onclick="openPopup('/user/service/userTermsNicePopUp.do');" >이용약관</a> | <a href="javascript:void(0);" onclick="openPopup('/user/service/userPrivacyPolicy.do');" >개인정보보호정책</a>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- top 버튼 -->
+	<div class="top-btn-scroll">
+		<a href="#" class="scrollToTop">
+			<span class="top-btn-scroll-position">TOP</span>
+		</a>
+	</div>
+	
+	<!-- Loading Image -->
+	<div id="loading_goal" class="loading-goal hidden">
+		<div class="loading-goal-box">
+			<img src="/images/portal/loading-goal.gif">
+			<p>Loading...</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
