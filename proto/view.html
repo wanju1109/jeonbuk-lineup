@@ -22,24 +22,43 @@ h1 { margin:0; font-size:1.22rem; letter-spacing:-.03em; }
 .stat { background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 10px; }
 .stat b { display:block; color:var(--muted); font-size:.68rem; }
 .stat strong { font-size:1.1rem; }
-.bar { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; align-items:center; }
-.bar button, .bar select {
-  background:#fff; color:var(--text); border:1px solid var(--line);
-  border-radius:6px; padding:6px 10px; font-size:.78rem; cursor:pointer;
+.bar {
+  display:grid; gap:8px; margin-bottom:10px;
+  background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px;
 }
-.bar button.on { background:#1d4f91; color:#fff; border-color:#1d4f91; }
-.bar button.k2.on { background:#1a7a4c; border-color:#1a7a4c; }
+.bar .group { display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:center; }
+.bar .group > span { font-size:.72rem; font-weight:800; color:var(--muted); }
+.bar .seg {
+  display:grid; grid-template-columns:1fr 1fr; gap:0;
+  border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#f4f7fb;
+}
+.bar .seg button {
+  background:transparent; color:var(--text); border:0; border-right:1px solid var(--line);
+  padding:9px 10px; font-size:.82rem; font-weight:700; cursor:pointer;
+}
+.bar .seg button:last-child { border-right:0; }
+.bar .seg button.on { background:#1d4f91; color:#fff; }
+.bar .seg button.k2.on { background:#1a7a4c; }
+.bar .action { display:flex; justify-content:flex-end; }
+.bar .action button {
+  background:#fff; color:var(--text); border:1px solid var(--line);
+  border-radius:8px; padding:9px 14px; font-size:.8rem; font-weight:700; cursor:pointer;
+}
+.bar .action button:hover { border-color:#1d6fe8; color:#1d6fe8; }
 .rounds {
-  display:flex; flex-wrap:wrap; gap:5px; align-items:center;
-  margin:0 0 10px; padding:8px 8px 6px; background:#fff;
+  margin:0 0 10px; padding:8px; background:#fff;
   border:1px solid var(--line); border-radius:8px;
 }
-.rounds > b { font-size:.75rem; color:var(--muted); margin-right:4px; }
-.rounds button {
-  background:#f4f7fb; color:var(--text); border:1px solid var(--line);
-  border-radius:6px; padding:5px 8px; font-size:.74rem; cursor:pointer; line-height:1.25;
+.rounds > b { display:block; font-size:.75rem; color:var(--muted); margin:0 0 6px; }
+.rounds .grid {
+  display:grid; grid-template-columns:repeat(10, minmax(0, 1fr)); gap:5px;
 }
-.rounds button small { display:block; color:var(--muted); font-size:.64rem; font-weight:700; }
+.rounds button {
+  width:100%; min-height:44px; padding:4px 2px;
+  background:#f4f7fb; color:var(--text); border:1px solid var(--line);
+  border-radius:6px; font-size:.78rem; font-weight:800; cursor:pointer; line-height:1.15;
+}
+.rounds button small { display:block; color:var(--muted); font-size:.62rem; font-weight:700; }
 .rounds button.on { background:#1d4f91; color:#fff; border-color:#1d4f91; }
 .rounds button.on small { color:#c9dbf5; }
 .rounds button.live { border-color:#1d6fe8; }
@@ -108,6 +127,7 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
   .head { grid-template-columns:1fr auto; }
   .meta, .teams { text-align:left; }
   .mrow { grid-template-columns:56px 1fr 36px; }
+  .rounds .grid { grid-template-columns:repeat(5, minmax(0, 1fr)); }
 }
 </style>
 </head>
@@ -116,12 +136,24 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
   <h1>K리그 라운드 분석</h1>
   <p class="sub" id="sub">일정·결과는 K리그 데이터. 프로토 회차와 무관합니다.</p>
   <section class="stats" id="stats"></section>
-  <nav class="bar">
-    <button type="button" class="on" data-tab="up">예정 경기</button>
-    <button type="button" data-tab="done">지난 경기</button>
-    <button type="button" class="on" data-lg="K1">K리그1</button>
-    <button type="button" class="k2" data-lg="K2">K리그2</button>
-    <button type="button" class="ghost" id="analyzeAll">이 라운드 전부 분석</button>
+  <nav class="bar" id="bar">
+    <div class="group">
+      <span>경기</span>
+      <div class="seg">
+        <button type="button" class="on" data-tab="up">예정 경기</button>
+        <button type="button" data-tab="done">지난 경기</button>
+      </div>
+    </div>
+    <div class="group">
+      <span>리그</span>
+      <div class="seg">
+        <button type="button" class="on" data-lg="K1">K리그1</button>
+        <button type="button" class="k2" data-lg="K2">K리그2</button>
+      </div>
+    </div>
+    <div class="action">
+      <button type="button" id="analyzeAll">이 라운드 전부 분석</button>
+    </div>
   </nav>
   <nav class="rounds" id="rounds"></nav>
   <p class="legend">
@@ -233,22 +265,22 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
     if (!state.round || !stats[String(state.round)]) {
       state.round = pickDefaultRound(lg);
     }
-    var html = "<b>라운드</b>";
+    var html = "<b>라운드</b><div class=\"grid\">";
     rounds.forEach(function (r) {
       var info = stats[r];
       var done = info.fin > 0 && info.fin === info.total;
       var live = info.fin > 0 && info.fin < info.total;
-      var label = r + "R";
+      var rate = "";
       if (info.fin > 0 && info.mk > 0) {
-        var rate = Math.round((100 * info.hit) / info.mk);
-        label = r + "R(" + rate + "%)";
+        rate = "<small>" + Math.round((100 * info.hit) / info.mk) + "%</small>";
       }
       var cls = [];
       if (String(state.round) === String(r)) cls.push("on");
       if (live || (!done && info.fin === 0 && Number(r) === currentRound(lg))) cls.push("live");
       html += '<button type="button" data-round="' + esc(r) + '" class="' + cls.join(" ") + '">' +
-        esc(label) + "</button>";
+        esc(r) + "R" + rate + "</button>";
     });
+    html += "</div>";
     document.getElementById("rounds").innerHTML = html;
   }
 
