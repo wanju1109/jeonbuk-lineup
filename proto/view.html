@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>프로토 · K리그 분석</title>
+<style>
+:root {
+  --bg:#0f1419; --panel:#1a222c; --text:#e8eef4; --muted:#8b9aab;
+  --accent:#3d9cf0; --line:#2a3542; --err:#e57373; --ok:#3ecf8e;
+  --pick:#2a4a6a; --pickBorder:#4a9fe0;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0; font-family:"Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, #1b2a3d 0%, var(--bg) 55%);
+  color:var(--text); line-height:1.5;
+}
+.wrap { max-width:960px; margin:0 auto; padding:28px 18px 60px; }
+h1 { font-size:1.6rem; margin:0 0 6px; letter-spacing:-.02em; }
+.sub { color:var(--muted); margin:0 0 16px; font-size:.95rem; }
+.hint {
+  background:var(--panel); border:1px solid var(--line); border-radius:12px;
+  padding:12px 14px; margin:0 0 20px; color:#c5d0db; font-size:.88rem;
+}
+.meta { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
+.meta span {
+  background:var(--panel); border:1px solid var(--line);
+  padding:6px 10px; border-radius:8px; font-size:.85rem; color:var(--muted);
+}
+.toolbar { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+.toolbar button {
+  background:#243447; color:var(--text); border:1px solid var(--line);
+  border-radius:8px; padding:8px 12px; cursor:pointer; font-size:.85rem;
+}
+.toolbar button:hover { border-color:var(--accent); }
+.grid { display:grid; gap:14px; }
+.card {
+  background:linear-gradient(180deg, #1d2733, var(--panel));
+  border:1px solid var(--line); border-radius:14px; padding:16px 16px 14px;
+}
+.card header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.badge {
+  font-size:.75rem; font-weight:700; padding:3px 8px; border-radius:999px;
+  background:#243447; color:var(--accent);
+}
+time { color:var(--muted); font-size:.82rem; }
+h2 { margin:0 0 4px; font-size:1.15rem; }
+.vs { color:var(--muted); font-weight:500; font-size:.9em; }
+.stadium { margin:0 0 12px; color:var(--muted); font-size:.82rem; }
+.markets { display:grid; gap:8px; }
+.mrow {
+  display:grid; grid-template-columns:118px 1fr; gap:8px; align-items:center;
+  background:#121820; border:1px solid var(--line); border-radius:10px; padding:8px 10px;
+}
+.mlabel { font-size:.78rem; color:var(--muted); font-weight:700; }
+.mopts { display:flex; flex-wrap:wrap; gap:6px; }
+.mopts button {
+  min-width:52px; border:1px solid var(--line); background:#1a222c; color:var(--text);
+  border-radius:8px; padding:7px 10px; cursor:pointer; font-size:.85rem; font-weight:700;
+}
+.mopts button:hover { border-color:#5a7a9a; }
+.mopts button.active {
+  background:var(--pick); border-color:var(--pickBorder); color:#fff;
+}
+.mopts button.suggest:not(.active) {
+  outline:1px dashed rgba(61,156,240,.45);
+}
+.note {
+  margin:10px 0 0; width:100%; background:#121820; border:1px solid var(--line);
+  border-radius:8px; color:var(--text); padding:8px 10px; font-size:.88rem; resize:vertical;
+}
+.status { color:var(--muted); padding:24px 0; }
+.status.error { color:var(--err); }
+footer { margin-top:28px; color:var(--muted); font-size:.8rem; }
+@media (max-width:720px) {
+  .mrow { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1 id="title">프로토 · K리그</h1>
+  <p class="sub" id="subtitle">표준 조합 전체 표시 · 벳맨 화면과 비교 후 직접 픽</p>
+  <p class="hint">
+    핸디는 홈팀 기준 <strong>H+1 / H+2 / H-1 / H-2</strong>, 언더는 <strong>U/O 2.5 · 3.5</strong>를 항상 보여줍니다.
+    점선 테두리는 기존 추천(있을 때만), 클릭하면 내 픽입니다. 이 기기 브라우저에만 저장됩니다.
+  </p>
+  <div class="meta" id="meta"></div>
+  <div class="toolbar">
+    <button type="button" id="btnClear">내 픽 초기화</button>
+    <button type="button" id="btnExport">픽 JSON 복사</button>
+  </div>
+  <div class="grid" id="grid">
+    <p class="status" id="status">불러오는 중…</p>
+  </div>
+  <footer>
+    참고용입니다. 배당·라인 존재 여부는 벳맨 공지를 기준으로 직접 대조하세요.<br>
+    고정 URL: <code>view.html</code> · 일정 데이터: <code>data/current.json</code>
+  </footer>
+</main>
+<script>
+(function () {
+  "use strict";
+
+  var DATA_URL = "data/current.json";
+  var STORE_KEY = "proto_view_picks_v1";
+
+  /** Fixed menu: no Betman scrape required. */
+  var MARKET_DEFS = [
+    { id: "wdl", label: "승무패", opts: ["승", "무", "패"] },
+    { id: "h_p1", label: "핸디 H+1", opts: ["승", "무", "패"] },
+    { id: "h_p2", label: "핸디 H+2", opts: ["승", "무", "패"] },
+    { id: "h_m1", label: "핸디 H-1", opts: ["승", "무", "패"] },
+    { id: "h_m2", label: "핸디 H-2", opts: ["승", "무", "패"] },
+    { id: "ou25", label: "U/O 2.5", opts: ["언더", "오버"] },
+    { id: "ou35", label: "U/O 3.5", opts: ["언더", "오버"] }
+  ];
+
+  var state = {
+    data: null,
+    matches: [],
+    userPicks: loadPicks()
+  };
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function matchKey(row) {
+    return [row.date || "", row.home || "", row.away || ""].join("|");
+  }
+
+  function loadPicks() {
+    try {
+      var raw = localStorage.getItem(STORE_KEY);
+      if (!raw) return {};
+      var obj = JSON.parse(raw);
+      return obj && typeof obj === "object" ? obj : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function savePicks() {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(state.userPicks));
+    } catch (e) {
+      window.alert("픽 저장 실패: " + (e && e.message ? e.message : e));
+    }
+  }
+
+  function groupFixtures(fixtures) {
+    var map = {};
+    var order = [];
+    (fixtures || []).forEach(function (f) {
+      var k = matchKey(f);
+      if (!map[k]) {
+        map[k] = {
+          league: f.league || "",
+          date: f.date || "",
+          time: f.time || "",
+          home: f.home || "",
+          away: f.away || "",
+          stadium: f.stadium || "",
+          markets: {}
+        };
+        order.push(k);
+      }
+      if (f.market) map[k].markets[f.market] = f;
+    });
+    return order.map(function (k) { return map[k]; });
+  }
+
+  /**
+   * Map legacy single-line picks onto the fixed menu as suggestions.
+   * Handicap sign comes from fixture line when available.
+   */
+  function suggestFromLegacy(match, pickRow) {
+    var s = {};
+    if (!pickRow) return s;
+    if (pickRow.pick_wdl) s.wdl = pickRow.pick_wdl;
+    if (pickRow.pick_ou) s.ou25 = pickRow.pick_ou;
+
+    var handiFix = match.markets["핸디캡"];
+    var line = handiFix && handiFix.line != null ? Number(handiFix.line) : null;
+    if (pickRow.pick_handi) {
+      if (line === 1 || line === 1.0) s.h_p1 = pickRow.pick_handi;
+      else if (line === 2 || line === 2.0) s.h_p2 = pickRow.pick_handi;
+      else if (line === -1 || line === -1.0) s.h_m1 = pickRow.pick_handi;
+      else if (line === -2 || line === -2.0) s.h_m2 = pickRow.pick_handi;
+      else {
+        /* unknown line: show on both ±1 as soft hint only for +1 default */
+        s.h_p1 = pickRow.pick_handi;
+      }
+    }
+    if (pickRow.note) s.note = pickRow.note;
+    return s;
+  }
+
+  function getUser(key) {
+    return state.userPicks[key] || {};
+  }
+
+  function setUserField(key, field, value) {
+    if (!state.userPicks[key]) state.userPicks[key] = {};
+    if (value == null || value === "") delete state.userPicks[key][field];
+    else state.userPicks[key][field] = value;
+    if (Object.keys(state.userPicks[key]).length === 0) delete state.userPicks[key];
+    savePicks();
+  }
+
+  function render() {
+    var data = state.data;
+    if (!data) return;
+
+    var title = data.gameName || ("프로토 승부식 " + (data.round || "") + "회차");
+    document.title = title + " · K리그";
+    document.getElementById("title").textContent = title + " · K리그";
+
+    var n = state.matches.length;
+    document.getElementById("meta").innerHTML = [
+      data.round != null ? "<span>회차 " + esc(data.round) + (data.gmTs ? " (" + esc(data.gmTs) + ")" : "") + "</span>" : "",
+      data.saleEnd ? "<span>마감 " + esc(data.saleEnd) + "</span>" : "",
+      "<span>대상 " + n + "경기</span>",
+      "<span>표준 조합 7종/경기</span>",
+      data.generated_at ? "<span>일정 " + esc(data.generated_at) + "</span>" : ""
+    ].join("");
+
+    if (!n) {
+      document.getElementById("grid").innerHTML =
+        '<p class="status error">표시할 경기가 없습니다. data/current.json 을 확인하세요.</p>';
+      return;
+    }
+
+    var pickByKey = {};
+    (data.picks || []).forEach(function (p) {
+      pickByKey[matchKey(p)] = p;
+    });
+
+    var html = state.matches.map(function (m) {
+      var key = matchKey(m);
+      var suggest = suggestFromLegacy(m, pickByKey[key]);
+      var mine = getUser(key);
+      var noteVal = mine.note != null ? mine.note : (suggest.note || "");
+
+      var rows = MARKET_DEFS.map(function (md) {
+        var cur = mine[md.id];
+        var sug = suggest[md.id];
+        var btns = md.opts.map(function (opt) {
+          var cls = [];
+          if (cur === opt) cls.push("active");
+          else if (!cur && sug === opt) cls.push("suggest");
+          return (
+            '<button type="button" data-key="' + esc(key) + '" data-m="' + esc(md.id) +
+            '" data-v="' + esc(opt) + '" class="' + cls.join(" ") + '">' + esc(opt) + "</button>"
+          );
+        }).join("");
+        return (
+          '<div class="mrow">' +
+            '<div class="mlabel">' + esc(md.label) + "</div>" +
+            '<div class="mopts">' + btns + "</div>" +
+          "</div>"
+        );
+      }).join("");
+
+      return (
+        '<article class="card" data-match="' + esc(key) + '">' +
+          "<header>" +
+            '<span class="badge">' + esc(m.league || "?") + "</span>" +
+            "<time>" + esc(m.date) + " " + esc(m.time) + "</time>" +
+          "</header>" +
+          "<h2>" + esc(m.home) + ' <span class="vs">vs</span> ' + esc(m.away) + "</h2>" +
+          (m.stadium ? '<p class="stadium">' + esc(m.stadium) + "</p>" : "") +
+          '<div class="markets">' + rows + "</div>" +
+          '<textarea class="note" data-key="' + esc(key) + '" rows="2" placeholder="메모 (선택)">' +
+            esc(noteVal) +
+          "</textarea>" +
+        "</article>"
+      );
+    }).join("");
+
+    document.getElementById("grid").innerHTML = html;
+  }
+
+  function onGridClick(ev) {
+    var btn = ev.target.closest("button[data-m]");
+    if (!btn) return;
+    var key = btn.getAttribute("data-key");
+    var mid = btn.getAttribute("data-m");
+    var val = btn.getAttribute("data-v");
+    var cur = (getUser(key) || {})[mid];
+    setUserField(key, mid, cur === val ? null : val);
+    render();
+  }
+
+  function onNoteInput(ev) {
+    var ta = ev.target;
+    if (!ta.classList.contains("note")) return;
+    setUserField(ta.getAttribute("data-key"), "note", ta.value);
+  }
+
+  function clearPicks() {
+    if (!window.confirm("이 기기에 저장된 내 픽을 모두 지울까요?")) return;
+    state.userPicks = {};
+    savePicks();
+    render();
+  }
+
+  function exportPicks() {
+    var payload = {
+      exported_at: new Date().toISOString(),
+      round: state.data && state.data.round,
+      gmTs: state.data && state.data.gmTs,
+      picks: state.userPicks
+    };
+    var text = JSON.stringify(payload, null, 2);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () { window.alert("픽 JSON을 클립보드에 복사했습니다."); },
+        function () { window.prompt("복사:", text); }
+      );
+    } else {
+      window.prompt("복사:", text);
+    }
+  }
+
+  function fail(msg) {
+    document.getElementById("grid").innerHTML =
+      '<p class="status error">' + esc(msg) + "</p>";
+  }
+
+  document.getElementById("grid").addEventListener("click", onGridClick);
+  document.getElementById("grid").addEventListener("input", onNoteInput);
+  document.getElementById("btnClear").addEventListener("click", clearPicks);
+  document.getElementById("btnExport").addEventListener("click", exportPicks);
+
+  fetch(DATA_URL + "?v=" + Date.now(), { cache: "no-store" })
+    .then(function (res) {
+      if (!res.ok) throw new Error("current.json 로드 실패 (" + res.status + ")");
+      return res.json();
+    })
+    .then(function (data) {
+      state.data = data;
+      state.matches = groupFixtures(data.fixtures);
+      /* If fixtures empty but picks exist, still show matches from picks. */
+      if (!state.matches.length && data.picks && data.picks.length) {
+        state.matches = data.picks.map(function (p) {
+          return {
+            league: p.league || "",
+            date: p.date || "",
+            time: p.time || "",
+            home: p.home || "",
+            away: p.away || "",
+            stadium: p.stadium || "",
+            markets: {}
+          };
+        });
+      }
+      render();
+    })
+    .catch(function (err) {
+      fail(
+        "일정을 불러오지 못했습니다. (" +
+        (err && err.message ? err.message : err) + ")"
+      );
+    });
+})();
+</script>
+</body>
+</html>
