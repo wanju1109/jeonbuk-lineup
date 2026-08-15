@@ -171,10 +171,11 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     <span><i class="l-pick"></i>파란 테두리 + 체크 = 내 픽</span>
     <span><i class="l-hit"></i>파란 채움 = 픽이 실제와 같음(적중)</span>
     <span><i class="l-act"></i>노란 채움 = 실제 결과(픽과 다를 때)</span>
+    <span>승무패 칸의 숫자는 해외배당</span>
   </p>
   <section class="list" id="list"><p class="empty">불러오는 중…</p></section>
   <footer>
-    모델: 킥오프 이전 공격/수비·최근 폼·홈 이점 포아송. 핸디캡은 홈팀 기준.
+    승무패 픽은 모델, 핸디·언더 픽은 라이브스코어 해외배당(짧은 쪽). 칸의 숫자는 해외배당이다.
     예정 경기는 분석하기를 눌러야 픽이 열립니다.
   </footer>
 </main>
@@ -192,7 +193,8 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     ["ou35", "U/O 3.5", ["언더", "오버"]]
   ];
   var STORE = "kleague_view_open_v1";
-  var state = { data: null, tab: "up", league: "K1", round: null, opened: loadOpened() };
+  var LS = "https://livescore.co.kr/developer/";
+  var state = { data: null, tab: "up", league: "K1", round: null, opened: loadOpened(), lsErr: "" };
 
   function loadOpened() {
     try { return JSON.parse(localStorage.getItem(STORE) || "{}") || {}; }
@@ -207,9 +209,164 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       .replace(/&/g, "&amp;").replace(/</g, "&lt;")
       .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
-  function pct(v) {
-    if (v == null || v === "") return "";
-    return (Number(v) * 100).toFixed(0) + "%";
+  function keyTeam(name) {
+    var raw = String(name || "");
+    var n = raw.replace(/\s+/g, "").toLowerCase();
+    if (n.indexOf("수원삼성") === 0 || n.indexOf("블루윙") >= 0) return "수원삼성";
+    if (n === "수원fc" || n.indexOf("수원fc") === 0) return "수원fc";
+    n = n.replace(/하나시티즌/g, "하나");
+    n = n.replace(/시티즌/g, "");
+    n = n.replace(/skfc/g, "sk");
+    n = n.replace(/fc1995|1995|2008/g, "");
+    n = n.replace(/유나이티드|스틸러스|아이파크|드래곤즈|블루윙즈|상무|현대/g, "");
+    n = n.replace(/^fc/, "");
+    return n;
+  }
+  function lsPost(qs) {
+    return fetch(LS + "?" + qs, {
+      method: "POST",
+      headers: { "X-Requested-With": "XMLHttpRequest", "Accept": "*/*" },
+      body: "",
+      mode: "cors",
+      credentials: "omit"
+    }).then(function (r) {
+      if (!r.ok) throw new Error("livescore " + r.status);
+      return r.json();
+    });
+  }
+  function firstVal(block) {
+    if (!block || !block[0] || !block[0].v) return null;
+    return block[0].v;
+  }
+  function attachBoardOdds(rows) {
+    var map = {};
+    (rows || []).forEach(function (row) {
+      var lg = row.leagueName === "KOR D1" ? "K1" : row.leagueName === "KOR D2" ? "K2" : "";
+      if (!lg) return;
+      var od = row.odds_data;
+      var wdl = null;
+      if (od && od.w && od.d && od.l) {
+        wdl = { "승": od.w.v, "무": od.d.v, "패": od.l.v };
+      }
+      map[lg + "|" + row.date + "|" + keyTeam(row.home_name) + "|" + keyTeam(row.away_name)] = {
+        seq: row.seq,
+        wdl: wdl
+      };
+    });
+    (state.data.matches || []).forEach(function (m) {
+      var hit = map[m.league + "|" + m.date + "|" + keyTeam(m.home) + "|" + keyTeam(m.away)];
+      if (hit) m.ls = Object.assign({}, m.ls || {}, hit);
+    });
+  }
+  function loadBoardOdds() {
+    return lsPost("process=score_board&sports=soccer").then(function (rows) {
+      attachBoardOdds(rows);
+      state.lsErr = "";
+      var pending = (state.data.matches || []).filter(function (m) {
+        return !m.finished && m.ls && m.ls.seq && !m.ls.extra;
+      });
+      return Promise.all(pending.map(loadExtraOdds));
+    }).catch(function (err) {
+      state.lsErr = err && err.message ? err.message : "배당 로드 실패";
+    });
+  }
+  function loadExtraOdds(m) {
+    if (!m || !m.ls || !m.ls.seq || m.ls.extra) return Promise.resolve();
+    var seq = encodeURIComponent(m.ls.seq);
+    return Promise.all([
+      lsPost("new&seq&process=odds&seq=" + seq + "&kind="),
+      lsPost("new&seq&process=odds&seq=" + seq + "&kind=3"),
+      lsPost("new&seq&process=odds&seq=" + seq + "&kind=4")
+    ]).then(function (arr) {
+      m.ls.extra = true;
+      var wdl = arr[0] && arr[0].data;
+      var ov = wdl ? firstVal(wdl["1"]) : null;
+      var dv = wdl ? firstVal(wdl["2"]) : null;
+      if (ov) m.ls.wdl = { "승": ov.w, "무": ov.d, "패": ov.l };
+      if (dv) m.ls.proto = { "승": dv.w, "무": dv.d, "패": dv.l };
+      var ah = arr[1] && arr[1].data ? firstVal(arr[1].data["1"]) : null;
+      if (ah) m.ls.ah = ah;
+      var ou = arr[2] && arr[2].data ? firstVal(arr[2].data["1"]) : null;
+      if (ou) m.ls.ou = ou;
+      applyOverseasPicks(m);
+    }).catch(function () {});
+  }
+  function setPick(m, key, lab) {
+    if (!m.picks) m.picks = {};
+    if (!m.picks[key]) m.picks[key] = {};
+    m.picks[key].pick = lab;
+  }
+  function applyOverseasPicks(m) {
+    if (!m || m.finished || !m.ls) return;
+    var ah = m.ls.ah;
+    if (ah && ah.p != null) {
+      var line = Number(ah.p);
+      var hh = Number(ah.h);
+      var aa = Number(ah.a);
+      if (isFinite(line) && hh > 0 && aa > 0) {
+        function hp(homeLine) {
+          if (homeLine > line) return "승";
+          if (homeLine < line) return "패";
+          return hh <= aa ? "승" : "패";
+        }
+        setPick(m, "h_p1", hp(1));
+        setPick(m, "h_p2", hp(2));
+        setPick(m, "h_m1", hp(-1));
+        setPick(m, "h_m2", hp(-2));
+      }
+    }
+    var ou = m.ls.ou;
+    if (ou && ou.p != null) {
+      var tot = Number(ou.p);
+      var ov = Number(ou.o);
+      var un = Number(ou.u);
+      if (isFinite(tot) && ov > 0 && un > 0) {
+        var fav = un <= ov ? "언더" : "오버";
+        if (Math.abs(tot - 2.5) < 0.01) {
+          setPick(m, "ou25", fav);
+          setPick(m, "ou35", "언더");
+        } else if (Math.abs(tot - 3.5) < 0.01) {
+          setPick(m, "ou35", fav);
+          setPick(m, "ou25", "오버");
+        } else if (tot <= 2) {
+          setPick(m, "ou25", "오버");
+          setPick(m, "ou35", tot < 3 ? "오버" : fav);
+        } else if (tot >= 3) {
+          setPick(m, "ou25", "오버");
+          setPick(m, "ou35", tot <= 3.5 ? fav : "오버");
+        } else {
+          setPick(m, "ou25", tot > 2.5 ? "오버" : fav);
+          setPick(m, "ou35", "언더");
+        }
+      }
+    }
+  }
+  function cellOdds(m, key, opt) {
+    var ls = m.ls;
+    if (!ls) return "";
+    if (key === "wdl" && ls.wdl) return ls.wdl[opt] || "";
+    if (ls.ah) {
+      var line = Number(ls.ah.p);
+      var row = "";
+      if (line === 1) row = "h_p1";
+      else if (line === 2) row = "h_p2";
+      else if (line === -1) row = "h_m1";
+      else if (line === -2) row = "h_m2";
+      if (row === key) {
+        if (opt === "승") return ls.ah.h || "";
+        if (opt === "패") return ls.ah.a || "";
+      }
+    }
+    if (ls.ou) {
+      var tot = Number(ls.ou.p);
+      if (Math.abs(tot - 2.5) < 0.01 && key === "ou25") {
+        return opt === "언더" ? (ls.ou.u || "") : (ls.ou.o || "");
+      }
+      if (Math.abs(tot - 3.5) < 0.01 && key === "ou35") {
+        return opt === "언더" ? (ls.ou.u || "") : (ls.ou.o || "");
+      }
+    }
+    return "";
   }
   function md(d) {
     if (!d) return "";
@@ -330,7 +487,6 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     var p = (m.picks && m.picks[key]) || {};
     var pick = p.pick;
     var actual = m.finished && m.actual ? m.actual[key] : null;
-    var dist = p.dist || {};
     var cells = opts.map(function (opt) {
       var cls = ["cell"];
       var isPick = pick === opt;
@@ -338,7 +494,8 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       if (isPick && isAct) cls.push("hit");
       else if (isPick) cls.push("pick");
       else if (isAct) cls.push("actual");
-      var pr = dist[opt] != null ? "<small>" + pct(dist[opt]) + "</small>" : "";
+      var odds = cellOdds(m, key, opt);
+      var pr = odds ? "<small>" + esc(odds) + "</small>" : "";
       return '<div class="' + cls.join(" ") + '">' + esc(opt) + pr + "</div>";
     }).join("");
     var verdict = "";
@@ -362,9 +519,47 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     }).join("") + "</div>";
   }
 
+  function oddsLine(m) {
+    var ls = m.ls;
+    if (!ls) {
+      return state.lsErr
+        ? '<div class="formline">해외배당을 불러오지 못했다. (' + esc(state.lsErr) + ")</div>"
+        : "";
+    }
+    var parts = [];
+    if (ls.wdl) {
+      parts.push("해외 " + ls.wdl["승"] + " / " + ls.wdl["무"] + " / " + ls.wdl["패"]);
+    }
+    if (ls.proto) {
+      parts.push("국내 " + ls.proto["승"] + " / " + ls.proto["무"] + " / " + ls.proto["패"]);
+    }
+    if (ls.ah) {
+      parts.push("H" + ls.ah.p + " " + ls.ah.h + "/" + ls.ah.a);
+    }
+    if (ls.ou) {
+      parts.push("U/O " + ls.ou.p + " " + ls.ou.u + "/" + ls.ou.o);
+    }
+    if (!parts.length) return "";
+    var note = "";
+    if (!m.finished && (ls.ah || ls.ou)) {
+      var pk = m.picks || {};
+      note = " · 핸디·언더 픽은 이 배당 기준 (H+1 " +
+        esc((pk.h_p1 || {}).pick || "-") + " · H-1 " +
+        esc((pk.h_m1 || {}).pick || "-") + " · U2.5 " +
+        esc((pk.ou25 || {}).pick || "-") + " · U3.5 " +
+        esc((pk.ou35 || {}).pick || "-") + ")";
+    }
+    return '<div class="formline">배당(라이브스코어) ' + esc(parts.join(" · ")) + note + "</div>";
+  }
   function detailHtml(m) {
     var form = m.form || {};
-    var paras = ((m.reason && m.reason.paragraphs) || []).map(function (p) {
+    var paras = ((m.reason && m.reason.paragraphs) || []).filter(function (p) {
+      var s = String(p);
+      if (s.indexOf("칸에 보이는") >= 0) return false;
+      if (s.indexOf("핸디캡 홈") === 0) return false;
+      if (s.indexOf("언더오버") === 0) return false;
+      return true;
+    }).map(function (p) {
       return "<p>" + esc(p) + "</p>";
     }).join("");
     return (
@@ -374,6 +569,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       ", 승점 " + esc(form.away_pts) + ")" +
       (m.xg && m.xg.home != null ? " · 기대득점 " + m.xg.home + "-" + m.xg.away : "") +
       "</div>" +
+      oddsLine(m) +
       '<div class="why">' + paras + "</div>"
     );
   }
@@ -434,9 +630,10 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       return;
     }
     if (t.id === "analyzeAll") {
-      visible().forEach(function (m) { state.opened[m.id] = true; });
+      var rows = visible();
+      rows.forEach(function (m) { state.opened[m.id] = true; });
       saveOpened();
-      render();
+      Promise.all(rows.map(loadExtraOdds)).then(render);
     }
   });
   document.getElementById("rounds").addEventListener("click", function (ev) {
@@ -455,7 +652,9 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     else state.opened[id] = !state.opened[id];
     if (!state.opened[id]) delete state.opened[id];
     saveOpened();
-    render();
+    var m = (state.data.matches || []).filter(function (x) { return x.id === id; })[0];
+    if (state.opened[id] && m) loadExtraOdds(m).then(render);
+    else render();
   });
 
   fetch("data/league.json?v=" + Date.now(), { cache: "no-store" })
@@ -467,6 +666,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       state.data = data;
       state.round = roundForTab(state.league, state.tab);
       render();
+      return loadBoardOdds().then(render);
     })
     .catch(function (err) {
       document.getElementById("list").innerHTML =
