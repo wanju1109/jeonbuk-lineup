@@ -6,128 +6,145 @@
 <title>K리그 라운드 분석</title>
 <style>
 :root {
-  --bg:#f0f2f5; --card:#fff; --soft:#f7f8fa; --line:#d8dee6;
-  --text:#1b2430; --muted:#66768a; --k1:#1d4f91; --k2:#1a7a4c;
-  --pick:#1d6fe8; --hit:#1d6fe8; --miss:#c43c4b; --btn:#1d6fe8;
+  --bg:#eef1f4;
+  --card:#fff;
+  --ink:#14181f;
+  --muted:#6b7380;
+  --line:#e4e8ee;
+  --soft:#f6f7f9;
+  --accent:#2563eb;
+  --accent-2:#0f172a;
+  --k1:#2563eb;
+  --k2:#059669;
+  --pick:#2563eb;
+  --hit:#2563eb;
+  --miss:#dc2626;
+  --act:#f59e0b;
+  --shadow:0 1px 2px rgba(15,23,42,.04), 0 8px 24px rgba(15,23,42,.05);
+  --radius:14px;
 }
 * { box-sizing:border-box; }
 html,body {
-  margin:0; background:var(--bg); color:var(--text); color-scheme:light;
-  font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif; line-height:1.4;
+  margin:0; background:var(--bg); color:var(--ink); color-scheme:light;
+  font-family:"Pretendard","Noto Sans KR",system-ui,sans-serif; line-height:1.45;
 }
-.wrap { max-width:980px; margin:0 auto; padding:16px 12px 56px; }
-h1 { margin:0; font-size:1.22rem; letter-spacing:-.03em; }
-.sub { margin:4px 0 12px; color:var(--muted); font-size:.8rem; }
-.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:10px; }
-.stat { background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 10px; }
-.stat b { display:block; color:var(--muted); font-size:.68rem; }
-.stat strong { font-size:1.1rem; }
+.wrap { max-width:920px; margin:0 auto; padding:22px 16px 64px; }
+h1 { margin:0; font-size:1.28rem; letter-spacing:-.04em; font-weight:800; }
+.sub { margin:6px 0 16px; color:var(--muted); font-size:.8rem; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px; }
+.stat {
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:10px 12px; box-shadow:var(--shadow);
+}
+.stat b { display:block; color:var(--muted); font-size:.68rem; font-weight:650; }
+.stat strong { font-size:1.12rem; letter-spacing:-.03em; }
 .bar {
-  display:grid; gap:8px; margin-bottom:10px;
-  background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px;
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px;
+  margin-bottom:12px;
 }
-.bar .group { display:grid; grid-template-columns:64px 1fr; gap:8px; align-items:center; }
-.bar .group > span { font-size:.72rem; font-weight:800; color:var(--muted); }
-.bar .seg {
-  display:grid; grid-template-columns:1fr 1fr; gap:0;
-  border:1px solid var(--line); border-radius:8px; overflow:hidden; background:#f4f7fb;
+.pills {
+  display:inline-flex; padding:3px; gap:2px;
+  background:#fff; border:1px solid var(--line); border-radius:999px;
+  box-shadow:var(--shadow);
 }
-.bar .seg button {
-  background:transparent; color:var(--text); border:0; border-right:1px solid var(--line);
-  padding:9px 10px; font-size:.82rem; font-weight:700; cursor:pointer;
+.pills button {
+  appearance:none; border:0; background:transparent; color:var(--muted);
+  padding:7px 13px; border-radius:999px; font-size:.8rem; font-weight:700;
+  cursor:pointer; line-height:1.2;
 }
-.bar .seg button:last-child { border-right:0; }
-.bar .seg button.on { background:#1d4f91; color:#fff; }
-.bar .seg button.k2.on { background:#1a7a4c; }
-.bar .action { display:flex; justify-content:flex-end; }
+.pills button.on { background:var(--accent-2); color:#fff; }
+.pills.k2 button.on { background:#065f46; }
+.bar .action { margin-left:auto; }
 .bar .action button {
-  background:#fff; color:var(--text); border:1px solid var(--line);
-  border-radius:8px; padding:9px 14px; font-size:.8rem; font-weight:700; cursor:pointer;
+  background:#fff; color:var(--ink); border:1px solid var(--line);
+  border-radius:999px; padding:8px 13px; font-size:.78rem; font-weight:700;
+  cursor:pointer; box-shadow:var(--shadow);
 }
-.bar .action button:hover { border-color:#1d6fe8; color:#1d6fe8; }
+.bar .action button:hover { border-color:var(--accent); color:var(--accent); }
 .rounds {
-  margin:0 0 10px; padding:8px; background:#fff;
-  border:1px solid var(--line); border-radius:8px;
+  margin:0 0 12px; padding:12px; background:var(--card);
+  border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);
 }
-.rounds > b { display:block; font-size:.75rem; color:var(--muted); margin:0 0 6px; }
-.rounds .grid {
-  display:grid; grid-template-columns:repeat(10, minmax(0, 1fr)); gap:5px;
-}
+.rounds > b { display:block; font-size:.72rem; color:var(--muted); margin:0 0 8px; font-weight:700; }
+.rounds .grid { display:grid; grid-template-columns:repeat(10, minmax(0, 1fr)); gap:6px; }
 .rounds button {
-  width:100%; min-height:44px; padding:4px 2px;
-  background:#f4f7fb; color:var(--text); border:1px solid var(--line);
-  border-radius:6px; font-size:.78rem; font-weight:800; cursor:pointer; line-height:1.15;
+  width:100%; min-height:42px; padding:5px 2px;
+  background:var(--soft); color:var(--ink); border:1px solid transparent;
+  border-radius:10px; font-size:.76rem; font-weight:750; cursor:pointer; line-height:1.15;
 }
-.rounds button small { display:block; color:var(--muted); font-size:.62rem; font-weight:700; }
-.rounds button.on { background:#1d4f91; color:#fff; border-color:#1d4f91; }
-.rounds button.on small { color:#c9dbf5; }
-.rounds button.live { border-color:#1d6fe8; }
+.rounds button small { display:block; color:var(--muted); font-size:.6rem; font-weight:650; }
+.rounds button.on { background:var(--accent-2); color:#fff; }
+.rounds button.on small { color:#cbd5e1; }
+.rounds button.live { box-shadow:inset 0 0 0 1.5px var(--accent); }
 .legend {
-  display:flex; flex-wrap:wrap; gap:10px; margin:0 0 10px;
+  display:flex; flex-wrap:wrap; gap:12px; margin:0 0 12px;
   color:var(--muted); font-size:.72rem;
 }
 .legend i {
-  display:inline-block; width:18px; height:14px; border-radius:3px;
-  vertical-align:-2px; margin-right:4px; border:1px solid #bbb;
+  display:inline-block; width:16px; height:12px; border-radius:3px;
+  vertical-align:-1px; margin-right:4px; border:1px solid #c5ccd6;
 }
 .legend .l-pick { border:2px solid var(--pick); background:#fff; }
 .legend .l-hit { background:var(--hit); border-color:var(--hit); }
-.legend .l-act { background:#f3d9a8; border-color:#d4a24a; }
-.list { display:grid; gap:8px; }
-.row { background:#fff; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+.legend .l-act { background:#fde68a; border-color:#f59e0b; }
+.list { display:grid; gap:10px; }
+.row {
+  background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);
+}
 .head {
-  display:grid; grid-template-columns:92px 1fr 88px auto;
-  gap:8px; align-items:center; padding:8px 10px; background:#f0f4fa;
-  border-bottom:1px solid var(--line);
+  display:grid; grid-template-columns:100px 1fr 80px auto;
+  gap:8px; align-items:center; padding:12px 14px;
 }
 .meta { color:var(--muted); font-size:.72rem; }
 .lg { font-weight:800; color:var(--k1); }
 .row.k2 .lg { color:var(--k2); }
-.teams { font-weight:800; font-size:.95rem; text-align:center; }
+.teams { font-weight:800; font-size:.98rem; text-align:center; letter-spacing:-.03em; }
 .scorebox { text-align:center; }
-.scorebox b { display:block; font-size:1.15rem; letter-spacing:.02em; }
-.scorebox span { color:var(--muted); font-size:.66rem; }
+.scorebox b { display:block; font-size:1.18rem; letter-spacing:.01em; }
+.scorebox span { color:var(--muted); font-size:.64rem; }
 .btn {
-  background:var(--btn); color:#fff; border:0; border-radius:6px;
-  padding:6px 10px; font-size:.75rem; font-weight:700; cursor:pointer;
+  background:var(--accent-2); color:#fff; border:0; border-radius:9px;
+  padding:7px 11px; font-size:.74rem; font-weight:700; cursor:pointer;
 }
 .btn.ghost { background:#fff; border:1px solid var(--line); color:var(--muted); }
-.mkts { padding:6px 8px 8px; display:grid; gap:4px; }
-.mrow { display:grid; grid-template-columns:72px 1fr 44px; gap:6px; align-items:center; }
-.mlab { font-size:.72rem; font-weight:800; color:#4a5a6c; }
+.mkts { padding:0 12px 12px; display:grid; gap:5px; }
+.mrow { display:grid; grid-template-columns:68px 1fr 44px; gap:6px; align-items:center; }
+.mlab { font-size:.7rem; font-weight:750; color:#64748b; }
 .cells { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; }
 .cells.two { grid-template-columns:repeat(2,1fr); }
 .cell {
-  position:relative; background:#fff; border:1px solid #c9d4e2; border-radius:4px;
-  text-align:center; padding:5px 4px 4px; font-size:.78rem; font-weight:700; min-height:34px;
+  position:relative; background:var(--soft); border:1px solid transparent;
+  border-radius:8px; text-align:center; padding:6px 4px 5px;
+  font-size:.76rem; font-weight:750; min-height:36px;
 }
-.cell small { display:block; font-size:.62rem; font-weight:600; color:#7b8b9c; }
-.cell.pick { border:2px solid var(--pick); }
+.cell small { display:block; font-size:.6rem; font-weight:650; color:#94a3b8; }
+.cell.pick { border:2px solid var(--pick); background:#fff; }
 .cell.pick::before {
-  content:"✓"; position:absolute; top:0; left:3px; font-size:.62rem; color:var(--pick);
+  content:"✓"; position:absolute; top:1px; left:4px; font-size:.6rem; color:var(--pick);
 }
-.cell.actual { background:#f3d9a8; border-color:#d4a24a; }
-.cell.hit {
-  background:var(--hit); border-color:var(--hit); color:#fff;
-}
-.cell.hit small, .cell.hit::before { color:#d7e7ff; }
+.cell.actual { background:#fde68a; }
+.cell.hit { background:var(--hit); color:#fff; }
+.cell.hit small, .cell.hit::before { color:#dbeafe; }
 .cell.hit::before { content:"✓"; }
-.verdict { font-size:.68rem; font-weight:800; text-align:center; }
-.verdict.ok { color:#1d6fe8; }
+.verdict { font-size:.66rem; font-weight:800; text-align:center; }
+.verdict.ok { color:var(--accent); }
 .verdict.bad { color:var(--miss); }
-.detail { display:none; padding:8px 10px 10px; border-top:1px solid var(--line); background:#fafcfe; }
+.detail { display:none; padding:12px 14px 14px; border-top:1px solid var(--line); background:var(--soft); }
 .row.open .detail { display:block; }
 .formline { color:var(--muted); font-size:.74rem; margin-bottom:8px; }
-.why { display:grid; gap:6px; }
+.why { display:grid; gap:7px; }
 .why p { margin:0; font-size:.8rem; color:#334155; }
-.empty { color:var(--muted); padding:28px 4px; }
-footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
+.empty { color:var(--muted); padding:32px 4px; text-align:center; }
+footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
 @media (max-width:720px) {
   .stats { grid-template-columns:1fr 1fr; }
   .head { grid-template-columns:1fr auto; }
   .meta, .teams { text-align:left; }
-  .mrow { grid-template-columns:56px 1fr 36px; }
+  .mrow { grid-template-columns:52px 1fr 36px; }
   .rounds .grid { grid-template-columns:repeat(5, minmax(0, 1fr)); }
+  .bar .action { margin-left:0; width:100%; }
+  .bar .action button { width:100%; }
 }
 </style>
 </head>
@@ -137,19 +154,13 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
   <p class="sub" id="sub">일정·결과는 K리그 데이터. 프로토 회차와 무관합니다.</p>
   <section class="stats" id="stats"></section>
   <nav class="bar" id="bar">
-    <div class="group">
-      <span>경기</span>
-      <div class="seg">
-        <button type="button" class="on" data-tab="up">예정 경기</button>
-        <button type="button" data-tab="done">지난 경기</button>
-      </div>
+    <div class="pills" id="tabPills">
+      <button type="button" class="on" data-tab="up">예정</button>
+      <button type="button" data-tab="done">지난 경기</button>
     </div>
-    <div class="group">
-      <span>리그</span>
-      <div class="seg">
-        <button type="button" class="on" data-lg="K1">K리그1</button>
-        <button type="button" class="k2" data-lg="K2">K리그2</button>
-      </div>
+    <div class="pills" id="lgPills">
+      <button type="button" class="on" data-lg="K1">K리그1</button>
+      <button type="button" data-lg="K2">K리그2</button>
     </div>
     <div class="action">
       <button type="button" id="analyzeAll">이 라운드 전부 분석</button>
@@ -248,14 +259,26 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
     return keys.length ? keys[keys.length - 1] : "1";
   }
 
+  function paintTabs() {
+    document.querySelectorAll("[data-tab]").forEach(function (b) {
+      b.classList.toggle("on", b.getAttribute("data-tab") === state.tab);
+    });
+    document.querySelectorAll("[data-lg]").forEach(function (b) {
+      b.classList.toggle("on", b.getAttribute("data-lg") === state.league);
+    });
+  }
+
+  function roundForTab(lg, tab) {
+    if (tab === "done") return lastFinishedRound(lg);
+    return String(currentRound(lg));
+  }
+
   function syncTabToRound() {
     var info = roundStats(state.league)[String(state.round)];
     if (!info) return;
     if (info.fin === info.total && info.total > 0) state.tab = "done";
     else if (info.fin === 0) state.tab = "up";
-    document.querySelectorAll("[data-tab]").forEach(function (b) {
-      b.classList.toggle("on", b.getAttribute("data-tab") === state.tab);
-    });
+    paintTabs();
   }
 
   function fillRounds() {
@@ -263,7 +286,7 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
     var stats = roundStats(lg);
     var rounds = Object.keys(stats).sort(function (a, b) { return Number(a) - Number(b); });
     if (!state.round || !stats[String(state.round)]) {
-      state.round = pickDefaultRound(lg);
+      state.round = roundForTab(lg, state.tab);
     }
     var html = "<b>라운드</b><div class=\"grid\">";
     rounds.forEach(function (r) {
@@ -383,6 +406,7 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
   }
 
   function render() {
+    paintTabs();
     fillRounds();
     renderStats();
     var rows = visible();
@@ -395,25 +419,19 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
   }
 
   document.querySelector(".bar").addEventListener("click", function (ev) {
-    var t = ev.target;
+    var t = ev.target.closest("button");
+    if (!t) return;
     if (t.getAttribute("data-tab")) {
       state.tab = t.getAttribute("data-tab");
-      state.round = state.tab === "done"
-        ? lastFinishedRound(state.league)
-        : String(currentRound(state.league));
-      document.querySelectorAll("[data-tab]").forEach(function (b) {
-        b.classList.toggle("on", b === t);
-      });
+      state.round = roundForTab(state.league, state.tab);
       render();
+      return;
     }
     if (t.getAttribute("data-lg")) {
       state.league = t.getAttribute("data-lg");
-      state.round = pickDefaultRound(state.league);
-      document.querySelectorAll("[data-lg]").forEach(function (b) {
-        b.classList.toggle("on", b === t);
-      });
-      syncTabToRound();
+      state.round = roundForTab(state.league, state.tab);
       render();
+      return;
     }
     if (t.id === "analyzeAll") {
       visible().forEach(function (m) { state.opened[m.id] = true; });
@@ -447,8 +465,7 @@ footer { margin-top:18px; color:var(--muted); font-size:.72rem; }
     })
     .then(function (data) {
       state.data = data;
-      state.round = pickDefaultRound(state.league);
-      syncTabToRound();
+      state.round = roundForTab(state.league, state.tab);
       render();
     })
     .catch(function (err) {
