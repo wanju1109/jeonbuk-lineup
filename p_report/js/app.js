@@ -385,10 +385,21 @@
     $("awayName").textContent = meta.away?.name || "원정";
     $("scoreNum").textContent = "VS";
 
+    if ($("heroCopy")) {
+      const competition = meta.competition || "하나은행 K리그1";
+      const round = meta.round != null ? `${meta.round}라운드` : "";
+      const home = meta.home?.name || "홈";
+      const away = meta.away?.name || "원정";
+      $("heroCopy").innerHTML =
+        `${escapeHtml(competition)} ${escapeHtml(round)} · ` +
+        `${escapeHtml(home)} vs ${escapeHtml(away)}<br />` +
+        "경기가 시작되기 전, 숫자와 흐름을 먼저 읽어 둡니다. 킥오프 전에 전북 경기를 미리 준비합니다.";
+    }
+
     const venue = meta.venue || "";
     const att = meta.attendance_hint?.avg;
     $("metaLine").textContent = [
-      meta.competition,
+      meta.competition || "하나은행 K리그1",
       meta.round != null ? `${meta.round}라운드` : "",
       meta.kickoff_label,
       venue,
