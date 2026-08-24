@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "game_id": "146",
+    "year": "2026",
+    "round": 25,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "김천"
+    },
+    "away": {
+      "name": "전북"
+    },
+    "opponent": "김천",
+    "ha": "A",
+    "kickoff": "2026-08-25T19:00:00+09:00",
+    "kickoff_label": "2026-08-25 19:00 KST",
+    "date_md": "08/25",
+    "label": "김천 VS 전북 (146, 08/25)",
+    "hours_to_kickoff": 33.1,
+    "within_48h": true,
+    "published": true,
+    "generated_at": "2026-08-24T09:53:28.788417+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "25R PREVIEW · 김천 vs 전북",
+  "thesis": "김천 vs 전북. 전북 최근 W D L L W, 김천 최근 D L. 원정에서 초반 템포를 가져가며 박스 진입 질을 올리는 것이 이 프리뷰의 핵심이다.",
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "115",
+        "round": 20,
+        "date": "2026-07-25",
+        "home": "포항",
+        "away": "전북",
+        "score": "0:1",
+        "result": "W",
+        "opponent": "포항",
+        "ha": "A"
+      },
+      {
+        "game_id": "122",
+        "round": 21,
+        "date": "2026-08-01",
+        "home": "전북",
+        "away": "서울",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "서울",
+        "ha": "H"
+      },
+      {
+        "game_id": "131",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "전북",
+        "away": "제주",
+        "score": "1:3",
+        "result": "L",
+        "opponent": "제주",
+        "ha": "H"
+      },
+      {
+        "game_id": "137",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "부천",
+        "away": "전북",
+        "score": "3:2",
+        "result": "L",
+        "opponent": "부천",
+        "ha": "A"
+      },
+      {
+        "game_id": "140",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "전북",
+        "away": "울산",
+        "score": "1:0",
+        "result": "W",
+        "opponent": "울산",
+        "ha": "H"
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "11",
+        "round": 2,
+        "date": "2026-03-08",
+        "home": "김천",
+        "away": "전북",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "전북",
+        "ha": "H"
+      },
+      {
+        "game_id": "87",
+        "round": 15,
+        "date": "2026-05-17",
+        "home": "전북",
+        "away": "김천",
+        "score": "1:0",
+        "result": "L",
+        "opponent": "전북",
+        "ha": "A"
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "11",
+      "round": 2,
+      "date": "2026-03-08",
+      "home": "김천",
+      "away": "전북",
+      "score": "1:1",
+      "result": "D"
+    },
+    {
+      "game_id": "87",
+      "round": 15,
+      "date": "2026-05-17",
+      "home": "전북",
+      "away": "김천",
+      "score": "1:0",
+      "result": "W"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "전북",
+      "tags": [
+        "기회 창출↑",
+        "슈팅 많음"
+      ],
+      "record": "2승 1무 2패 / 최근 5경기",
+      "avg_xg": 1.74,
+      "avg_shots": 18.2
+    },
+    "opponent": {
+      "name": "김천",
+      "tags": [
+        "데이터 축적 중"
+      ],
+      "record": "0승 1무 1패 / 최근 2경기",
+      "avg_xg": 1.08,
+      "avg_shots": 7.5
+    }
+  },
+  "cards": [
+    {
+      "key": "edge",
+      "label": "전북이 유리한 점",
+      "items": [
+        "전북 최근 경기당 xG 평균 1.74. 박스 진입만 유지하면 기회는 열린다."
+      ]
+    },
+    {
+      "key": "risk",
+      "label": "전북이 불리한·조심할 점",
+      "items": [
+        "원정이다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심이다."
+      ]
+    },
+    {
+      "key": "key",
+      "label": "관전 포인트",
+      "items": [
+        "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐른다.",
+        "김천의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져온다.",
+        "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가른다."
+      ]
+    },
+    {
+      "key": "watch",
+      "label": "김천 경계 포인트",
+      "items": [
+        "김천 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계한다."
+      ]
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files (when available)"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+}
