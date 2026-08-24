@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "game_id": "146",
+    "year": "2026",
+    "round": 25,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "김천",
+      "team_id": "K35"
+    },
+    "away": {
+      "name": "전북",
+      "team_id": "K05"
+    },
+    "opponent": "김천",
+    "ha": "A",
+    "jeonbuk_match": true,
+    "venue": "김천 종합",
+    "attendance_hint": {
+      "avg": 2273,
+      "games": 11,
+      "total": 25004
+    },
+    "kickoff": "2026-08-25T19:00:00+09:00",
+    "kickoff_label": "2026-08-25 19:00 KST",
+    "date_md": "08/25",
+    "label": "김천 VS 전북 (146, 08/25)",
+    "hours_to_kickoff": 32.0,
+    "within_48h": true,
+    "published": true,
+    "generated_at": "2026-08-24T10:59:53.763774+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "25R PREVIEW · 김천 vs 전북",
+  "thesis": "김천 vs 전북. 전북 최근 W D L L W, 김천 최근 D L. 원정에서 기회 질(xG)과 슈팅 빈도를 유지하는 것이 이 경기의 핵심입니다.",
+  "briefing": [
+    "김천 vs 전북. 전북 최근 W D L L W (2승 1무 2패 / 최근 5경기, 5득 6실). 김천은 D L (0승 1무 1패 / 최근 2경기, 1득 2실).",
+    "최근 5경기 평균 — 전북 xG 1.74·슈팅 18.2·유효슈팅 6.0, 김천 xG 1.08·슈팅 7.5·유효슈팅 2.5. 패스 성공률 78.4% vs 82.8%.",
+    "올 시즌 맞대결 2경기 — 전북 1승 1무 0패.",
+    "경기장 김천 종합 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다."
+  ],
+  "scout": {
+    "contrast": "전북은 기회 창출↑, 슈팅 많음, 적극 압박 흐름이고, 김천은(는) 패스 안정, 낮은 블록형 그림입니다. 최근 xG 1.74 vs 1.08, 슈팅 18.2 vs 7.5, 파이널 서드 터치 25.1% vs 21.2%, 평균 터치 높이 47.5 vs 44.5입니다.",
+    "edge": [
+      "전북이 최근 기회 질(xG 1.74)에서 김천(1.08)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다."
+    ],
+    "risk": [
+      "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다.",
+      "김천형 낮은 블록은 전북 템포를 죽입니다. 점유만 높고 마무리가 약하면 역습 한 방에 끌려갈 수 있습니다."
+    ],
+    "target": [
+      "박스 밖 남발보다 오버랩·하프스페이스 침투 후 컷백을 노리는 편이 맞습니다.",
+      "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
+      "김천의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
+      "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
+    ],
+    "caution": [
+      "김천 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 1.74,
+        "opponent": 1.08,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 1.08,
+        "opponent": 0.95,
+        "better": "opponent"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 18.2,
+        "opponent": 7.5,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 6.0,
+        "opponent": 2.5,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 78.4,
+        "opponent": 82.8,
+        "suffix": "%",
+        "better": "opponent"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 25.1,
+        "opponent": 21.2,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 25.0,
+        "opponent": 12.5,
+        "better": "jeonbuk"
+      }
+    ],
+    "summary": "최근 5경기 기준 — 전북 xG 1.74 / xGA 1.08, 김천 xG 1.08 / xGA 0.95."
+  },
+  "h2h_summary": {
+    "wins": 1,
+    "draws": 1,
+    "losses": 0,
+    "games": 2
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "115",
+        "round": 20,
+        "date": "2026-07-25",
+        "home": "포항",
+        "away": "전북",
+        "score": "0:1",
+        "result": "W",
+        "opponent": "포항",
+        "ha": "A",
+        "xg": 1.32,
+        "xga": 1.53,
+        "shots": 10,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 0
+      },
+      {
+        "game_id": "122",
+        "round": 21,
+        "date": "2026-08-01",
+        "home": "전북",
+        "away": "서울",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "서울",
+        "ha": "H",
+        "xg": 1.07,
+        "xga": 0.36,
+        "shots": 14,
+        "sot": 5,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      {
+        "game_id": "131",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "전북",
+        "away": "제주",
+        "score": "1:3",
+        "result": "L",
+        "opponent": "제주",
+        "ha": "H",
+        "xg": 2.62,
+        "xga": 1.42,
+        "shots": 33,
+        "sot": 12,
+        "goals_for": 1,
+        "goals_against": 3
+      },
+      {
+        "game_id": "137",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "부천",
+        "away": "전북",
+        "score": "3:2",
+        "result": "L",
+        "opponent": "부천",
+        "ha": "A",
+        "xg": 2.62,
+        "xga": 1.63,
+        "shots": 24,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 3
+      },
+      {
+        "game_id": "140",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "전북",
+        "away": "울산",
+        "score": "1:0",
+        "result": "W",
+        "opponent": "울산",
+        "ha": "H",
+        "xg": 1.08,
+        "xga": 0.48,
+        "shots": 10,
+        "sot": 6,
+        "goals_for": 1,
+        "goals_against": 0
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "11",
+        "round": 2,
+        "date": "2026-03-08",
+        "home": "김천",
+        "away": "전북",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "전북",
+        "ha": "H",
+        "xg": 1.38,
+        "xga": 0.44,
+        "shots": 6,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 1
+      },
+      {
+        "game_id": "87",
+        "round": 15,
+        "date": "2026-05-17",
+        "home": "전북",
+        "away": "김천",
+        "score": "1:0",
+        "result": "L",
+        "opponent": "전북",
+        "ha": "A",
+        "xg": 0.79,
+        "xga": 1.46,
+        "shots": 9,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 1
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "11",
+      "round": 2,
+      "date": "2026-03-08",
+      "home": "김천",
+      "away": "전북",
+      "score": "1:1",
+      "result": "D",
+      "venue": "김천 종합"
+    },
+    {
+      "game_id": "87",
+      "round": 15,
+      "date": "2026-05-17",
+      "home": "전북",
+      "away": "김천",
+      "score": "1:0",
+      "result": "W",
+      "venue": "전주 월드컵"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "전북",
+      "team_id": "K05",
+      "tags": [
+        "기회 창출↑",
+        "슈팅 많음",
+        "적극 압박"
+      ],
+      "record": "2승 1무 2패 / 최근 5경기",
+      "goals_for": 5,
+      "goals_against": 6,
+      "goal_diff": -1,
+      "avg_xg": 1.74,
+      "avg_xga": 1.08,
+      "avg_shots": 18.2,
+      "avg_sot": 6.0,
+      "avg_pass_pct": 78.4,
+      "avg_final_third_pct": 25.1,
+      "avg_presses": 25.0,
+      "avg_x": 47.5,
+      "samples": 5
+    },
+    "opponent": {
+      "name": "김천",
+      "team_id": "K35",
+      "tags": [
+        "패스 안정",
+        "낮은 블록형"
+      ],
+      "record": "0승 1무 1패 / 최근 2경기",
+      "goals_for": 1,
+      "goals_against": 2,
+      "goal_diff": -1,
+      "avg_xg": 1.08,
+      "avg_xga": 0.95,
+      "avg_shots": 7.5,
+      "avg_sot": 2.5,
+      "avg_pass_pct": 82.8,
+      "avg_final_third_pct": 21.2,
+      "avg_presses": 12.5,
+      "avg_x": 44.5,
+      "samples": 2
+    }
+  },
+  "cards": [
+    {
+      "key": "edge",
+      "label": "전북이 유리한 점",
+      "items": [
+        "전북이 최근 기회 질(xG 1.74)에서 김천(1.08)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다."
+      ]
+    },
+    {
+      "key": "risk",
+      "label": "전북이 불리한·조심할 점",
+      "items": [
+        "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다.",
+        "김천형 낮은 블록은 전북 템포를 죽입니다. 점유만 높고 마무리가 약하면 역습 한 방에 끌려갈 수 있습니다."
+      ]
+    },
+    {
+      "key": "key",
+      "label": "관전 포인트",
+      "items": [
+        "박스 밖 남발보다 오버랩·하프스페이스 침투 후 컷백을 노리는 편이 맞습니다.",
+        "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
+        "김천의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
+        "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
+      ]
+    },
+    {
+      "key": "watch",
+      "label": "김천 경계 포인트",
+      "items": [
+        "김천 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
+      ]
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+}
