@@ -497,6 +497,7 @@
     const embedSrc = embedSrcUrl();
     const html = buildShareHtml(url, preview);
     const embedHtml = buildEmbedHtml(embedSrc);
+    const meta = preview?.meta || {};
 
     if ($("reportUrl")) {
       $("reportUrl").textContent = url;
@@ -504,6 +505,21 @@
     }
     if ($("shareCode")) $("shareCode").textContent = html;
     if ($("embedCode")) $("embedCode").textContent = embedHtml;
+    if ($("shareTargetMeta")) {
+      const label = [
+        meta.round != null ? `${meta.round}R` : "",
+        meta.home?.name || "",
+        "vs",
+        meta.away?.name || "",
+        meta.jeonbuk_match === false ? "(타팀)" : "",
+        meta.kickoff_label || "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+      $("shareTargetMeta").textContent = label
+        ? `지금 공유 대상: ${label}`
+        : "아직 불러온 프리뷰가 없습니다.";
+    }
     if ($("embedPreview")) {
       const gameId = preview?.meta?.game_id;
       const ref = encodeMatchRef(gameId);
@@ -525,39 +541,133 @@
     if (!res.ok) throw new Error(`index.json HTTP ${res.status}`);
     const data = await res.json();
     state.index = data;
-    fillSelect();
+    fillYearRound();
     return data;
   }
 
-  function fillSelect() {
-    const sel = $("previewSelect");
-    if (!sel) return;
-    const rows = state.index?.matches || [];
-    sel.innerHTML = "";
+  function indexMatches() {
+    return state.index?.matches || [];
+  }
+
+  function fillYearRound() {
+    const yearSel = $("yearSelect");
+    const roundSel = $("roundSelect");
+    if (!yearSel || !roundSel) {
+      fillSelectLegacy();
+      return;
+    }
+
+    const rows = indexMatches();
+    const years = [...new Set(rows.map((m) => String(m.year || new Date().getFullYear())))]
+      .filter(Boolean)
+      .sort()
+      .reverse();
+    if (!years.length) years.push(String(new Date().getFullYear()));
+
+    const wanted = queryGameId() || state.index?.active_game_id || "";
+    const wantedRow = rows.find((m) => String(m.game_id) === String(wanted));
+    const prevYear = yearSel.value;
+    yearSel.innerHTML = years.map((y) => `<option value="${y}">${y}</option>`).join("");
+    if (wantedRow?.year) yearSel.value = String(wantedRow.year);
+    else if (prevYear && years.includes(prevYear)) yearSel.value = prevYear;
+    else yearSel.value = years[0];
+
+    rebuildRounds(wantedRow?.round != null ? String(wantedRow.round) : "");
+  }
+
+  function rebuildRounds(preferredRound) {
+    const yearSel = $("yearSelect");
+    const roundSel = $("roundSelect");
+    if (!yearSel || !roundSel) return;
+
+    const year = yearSel.value;
+    const rounds = [
+      ...new Set(
+        indexMatches()
+          .filter((m) => String(m.year) === String(year))
+          .map((m) => Number(m.round))
+          .filter((n) => Number.isFinite(n) && n > 0)
+      ),
+    ].sort((a, b) => a - b);
+
+    const latest = rounds.length ? rounds[rounds.length - 1] : 1;
+    const keep =
+      preferredRound != null && preferredRound !== ""
+        ? Number(preferredRound)
+        : Number(roundSel.value) || latest;
+
+    roundSel.innerHTML = "";
+    const list = rounds.length ? rounds : Array.from({ length: MAX_ROUNDS }, (_, i) => i + 1);
+    list.forEach((r) => {
+      const opt = document.createElement("option");
+      opt.value = String(r);
+      opt.textContent = `${r}R`;
+      roundSel.appendChild(opt);
+    });
+    if (list.includes(keep)) roundSel.value = String(keep);
+    else roundSel.value = String(latest);
+
+    rebuildMatches();
+  }
+
+  function rebuildMatches() {
+    const matchSel = $("previewSelect");
+    if (!matchSel) return;
+    const year = $("yearSelect")?.value || "";
+    const round = $("roundSelect")?.value || "";
+    const rows = indexMatches()
+      .filter((m) => String(m.year) === String(year) && Number(m.round) === Number(round))
+      .slice()
+      .sort((a, b) => {
+        const aj = a.jeonbuk_match === false ? 1 : 0;
+        const bj = b.jeonbuk_match === false ? 1 : 0;
+        return aj - bj || String(a.game_id).localeCompare(String(b.game_id), undefined, { numeric: true });
+      });
+
+    const prev = matchSel.value;
+    const wanted = queryGameId() || state.preview?.meta?.game_id || state.index?.active_game_id || "";
+    matchSel.innerHTML = "";
     if (!rows.length) {
       const opt = document.createElement("option");
       opt.value = "";
-      opt.textContent = "예정 프리뷰 없음 · 수집 후 다시 열어 주세요";
-      sel.appendChild(opt);
+      opt.textContent = "이 라운드 프리뷰 없음 · build_preview 후 다시 열어 주세요";
+      matchSel.appendChild(opt);
       if ($("matchHelp")) {
-        $("matchHelp").textContent =
-          state.index?.note ||
-          "schedule 갱신 후 python p_report/scripts/build_preview.py 를 실행하세요.";
+        $("matchHelp").textContent = `${year}시즌 ${round}R 프리뷰 JSON이 아직 없습니다.`;
       }
       return;
     }
+
     rows.forEach((m) => {
       const opt = document.createElement("option");
       opt.value = String(m.game_id);
+      const jb = m.jeonbuk_match === false ? "" : " · 전북";
       const flag = m.published ? "" : " · 초안";
-      opt.textContent = `${m.round}R ${m.home} vs ${m.away}${flag}`;
+      opt.textContent = `${m.home} vs ${m.away}${jb}${flag}`;
+      matchSel.appendChild(opt);
+    });
+
+    if (prev && rows.some((m) => String(m.game_id) === String(prev))) matchSel.value = prev;
+    else if (wanted && rows.some((m) => String(m.game_id) === String(wanted))) matchSel.value = String(wanted);
+    else matchSel.value = String(rows[0].game_id);
+
+    if ($("matchHelp")) {
+      $("matchHelp").textContent =
+        `${year}시즌 ${round}R · ${rows.length}경기 · 불러온 뒤 「에버그린 링크」에서 카드 복사`;
+    }
+  }
+
+  function fillSelectLegacy() {
+    const sel = $("previewSelect");
+    if (!sel) return;
+    const rows = indexMatches();
+    sel.innerHTML = "";
+    rows.forEach((m) => {
+      const opt = document.createElement("option");
+      opt.value = String(m.game_id);
+      opt.textContent = `${m.round}R ${m.home} vs ${m.away}`;
       sel.appendChild(opt);
     });
-    const wanted = queryGameId() || state.index.active_game_id || rows[0].game_id;
-    if (wanted) sel.value = String(wanted);
-    if ($("matchHelp")) {
-      $("matchHelp").textContent = `프리뷰 ${rows.length}경기 · 48시간 윈도우 자동 게시`;
-    }
   }
 
   async function loadPreview(gameId) {
@@ -577,8 +687,17 @@
       return;
     }
     const data = await res.json();
+    const hit = indexMatches().find((m) => String(m.game_id) === String(id));
+    if (hit?.year != null && $("yearSelect")) {
+      $("yearSelect").value = String(hit.year);
+      rebuildRounds(String(hit.round));
+      if ($("previewSelect")) $("previewSelect").value = String(id);
+    }
     renderPreview(data);
     syncUrl(id);
+    if (document.body.classList.contains("edit-mode") && $("community")) {
+      /* keep author on the share block after loading a round */
+    }
   }
 
   function syncUrl(gameId) {
@@ -797,31 +916,22 @@
     try {
       await loadSchedule();
       fillOtherYearRound();
-      const selected = $("otherMatchSelect")?.value || gameId;
+      if (gameId && $("otherMatchSelect")) $("otherMatchSelect").value = gameId;
+      const selected = $("otherMatchSelect")?.value || "";
       if (!selected) {
-        showOtherPreviewMessage("경기를 먼저 선택해 주세요.", true);
+        setStatus("경기를 먼저 선택해 주세요.", true);
         return;
       }
-      const res = await fetch(`./data/${selected}.json?t=${Date.now()}`, { cache: "no-store" });
-      if (!res.ok) {
-        showOtherPreviewMessage(
-          `아직 이 경기 프리뷰 JSON이 없습니다.\n` +
-            `python p_report/scripts/build_preview.py 실행 후 다시 눌러 주세요.\n` +
-            `(game_id=${selected}, 라운드 ${$("otherRoundSelect")?.value || ""})`,
-          true
-        );
-        return;
-      }
-      const data = await res.json();
-      renderOtherPreview(data);
-      setStatus("");
+      await loadPreview(selected);
+      setStatus("타팀 프리뷰를 불러왔습니다. 「에버그린 링크」에서 카드를 복사하세요.");
+      $("community")?.scrollIntoView({ behavior: "smooth", block: "start" });
     } catch (err) {
       console.error(err);
-      showOtherPreviewMessage(String(err.message || err), true);
+      setStatus(String(err.message || err), true);
     } finally {
       if (btn) {
         btn.disabled = false;
-        btn.textContent = "프리뷰 불러오기";
+        btn.textContent = "타팀 프리뷰 가져오기";
       }
     }
   }
@@ -833,25 +943,40 @@
   }
 
   function bindUi() {
-    $("fetchBtn")?.addEventListener("click", () => loadPreview($("previewSelect")?.value));
+    $("yearSelect")?.addEventListener("change", () => rebuildRounds());
+    $("roundSelect")?.addEventListener("change", () => rebuildMatches());
+    $("fetchBtn")?.addEventListener("click", async () => {
+      await loadPreview($("previewSelect")?.value);
+      if (document.body.classList.contains("edit-mode")) {
+        setStatus("프리뷰를 불러왔습니다. 「에버그린 링크」에서 카드를 복사하세요.");
+      }
+    });
     $("previewSelect")?.addEventListener("change", () => {
       if ($("matchHelp")) {
-        $("matchHelp").textContent = "프리뷰 불러오기를 누르면 내용이 바뀝니다.";
+        $("matchHelp").textContent = "프리뷰 불러오기를 누르면 본문과 공유 링크가 바뀝니다.";
       }
     });
     $("copyShare")?.addEventListener("click", async () => {
       try {
+        if (!state.preview) {
+          setStatus("먼저 프리뷰를 불러오세요.", true);
+          return;
+        }
         const text = $("shareCode")?.textContent || buildShareHtml(publicPreviewUrl(), state.preview);
         await navigator.clipboard.writeText(text);
-        setStatus("프리뷰 링크 카드를 복사했습니다.");
+        setStatus("에버그린용 프리뷰 링크 카드를 복사했습니다. HTML 모드에 붙여넣으세요.");
       } catch (err) {
         setStatus("복사에 실패했습니다. 코드를 직접 드래그해 주세요.", true);
       }
     });
     $("copyUrl")?.addEventListener("click", async () => {
       try {
+        if (!state.preview) {
+          setStatus("먼저 프리뷰를 불러오세요.", true);
+          return;
+        }
         await navigator.clipboard.writeText(publicPreviewUrl());
-        setStatus("프리뷰 URL을 복사했습니다.");
+        setStatus("프리뷰 URL을 복사했습니다. (작성자 키 없음)");
       } catch (err) {
         setStatus("URL 복사에 실패했습니다.", true);
       }
