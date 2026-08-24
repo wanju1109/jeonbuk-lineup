@@ -331,6 +331,41 @@ def parse_score_from_goals(events: list, home_id: str, away_id: str) -> tuple[in
     return hs, as_
 
 
+def parse_official_score(html: str) -> tuple[int, int] | None:
+    """Prefer portal official score fields over chalk-board goal counts.
+
+    Some finished matches omit a GL event (or tag it differently) so counting
+    TYPE_DETAIL_CD=GL can under-report the true score.
+    """
+    hm = re.search(r'id=["\']homeGainGoal["\'][^>]*value=["\'](\d+)["\']', html or "", re.I)
+    if not hm:
+        hm = re.search(r'name=["\']homeGainGoal["\'][^>]*value=["\'](\d+)["\']', html or "", re.I)
+    am = re.search(r'id=["\']awayGainGoal["\'][^>]*value=["\'](\d+)["\']', html or "", re.I)
+    if not am:
+        am = re.search(r'name=["\']awayGainGoal["\'][^>]*value=["\'](\d+)["\']', html or "", re.I)
+    if not hm or not am:
+        return None
+    try:
+        return int(hm.group(1)), int(am.group(1))
+    except ValueError:
+        return None
+
+
+def resolve_match_score(
+    html: str, events: list, home_id: str, away_id: str
+) -> tuple[int, int, str]:
+    official = parse_official_score(html)
+    from_events = parse_score_from_goals(events, home_id, away_id)
+    if official is not None:
+        if official != from_events:
+            print(
+                f"[WARN] score mismatch official={official[0]}:{official[1]} "
+                f"events={from_events[0]}:{from_events[1]} → using official"
+            )
+        return official[0], official[1], "official"
+    return from_events[0], from_events[1], "events"
+
+
 def load_index() -> dict:
     if not INDEX_PATH.exists():
         return {"matches": [], "updated_at": None}
@@ -743,7 +778,9 @@ def build_payload(
     pass_matrix: dict | None = None,
 ) -> dict:
     home_meta, away_meta = infer_team_names(events, players, match.get("home") or "", match.get("away") or "")
-    hs, as_ = parse_score_from_goals(events, home_meta["team_id"], away_meta["team_id"])
+    hs, as_, score_source = resolve_match_score(
+        html, events, home_meta["team_id"], away_meta["team_id"]
+    )
     frame = parse_match_frame_meta(html)
 
     date = frame.get("date") or ""
@@ -780,6 +817,7 @@ def build_payload(
             "home": home_meta,
             "away": away_meta,
             "score": {"home": hs, "away": as_},
+            "score_source": score_source,
             "source": "K LEAGUE PORTAL CHALK BOARD",
             "note": "보도/커뮤니티 재가공용. 부가기록(Bepro11) 기준. 자동 수집.",
             "fetched_at": datetime.now(timezone.utc).isoformat(),
