@@ -1,0 +1,10 @@
+﻿# Local dumps / caches
+**/__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+c_report/data/_menu_*.html
+c_report/data/_collect_log.txt
+*.log
+.env
+.env.*
