@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JEONBUK MATCH AI PREVIEW</title>
+  <meta name="description" content="전북현대 다가올 경기를 48시간 전에 미리 읽는 AI 프리뷰. 최근 폼, 스타일 대비, 관전 포인트." />
+  <meta property="og:title" content="JEONBUK MATCH AI PREVIEW" />
+  <meta property="og:description" content="킥오프 전, 전북이 유리한 점·조심할 점·관전 포인트를 한 화면에." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/p_report/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="./css/preview.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="hero" id="top">
+      <img
+        class="hero-emblem"
+        src="https://portal.kleague.com/images/portal/img-emble-k05-sm.png"
+        alt=""
+        width="420"
+        height="420"
+        decoding="async"
+      />
+      <p class="hero-eyebrow">BEFORE KICKOFF</p>
+      <h1 class="brand">JEONBUK MATCH AI&nbsp;PREVIEW</h1>
+      <p class="hero-copy" id="heroCopy">
+        경기가 시작되기 전, 숫자와 흐름을 먼저 읽어 둡니다. 킥오프 48시간 안에 전북 경기를 자동으로 준비합니다.
+      </p>
+      <div class="match-picker panel editor-only" id="matchPicker">
+        <div class="fetch-grid">
+          <label>
+            <span>프리뷰</span>
+            <select id="previewSelect"></select>
+          </label>
+          <button class="btn btn-primary" id="fetchBtn" type="button">프리뷰 불러오기</button>
+        </div>
+        <p class="match-picker-help" id="matchHelp">다음 전북 경기 프리뷰를 고른 뒤 불러오세요.</p>
+      </div>
+      <div class="hero-actions editor-only">
+        <a class="btn btn-ghost" href="#matchup">매치업</a>
+        <a class="btn btn-ghost" href="#scout">스타일 대비</a>
+        <a class="btn btn-ghost" href="#cards">프리뷰 카드</a>
+        <a class="btn btn-ghost" href="#form">최근 폼</a>
+        <a class="btn btn-ghost" href="#otherLeague">타팀 프리뷰</a>
+        <a class="btn btn-ghost" href="#community">링크 만들기</a>
+        <a class="btn btn-ghost" href="../c_report/">경기 후 리포트 →</a>
+      </div>
+      <p class="hero-credit">
+        <span class="hero-credit-source">출처 K리그데이터포털</span>
+        <span class="hero-credit-copy">제작 전주월드컵경기장(에버그린)</span>
+      </p>
+    </header>
+
+    <div id="status" class="status hidden"></div>
+
+    <main class="page-main">
+      <section class="section" id="matchup">
+        <div class="section-head">
+          <h2>다가올 경기</h2>
+          <p>킥오프까지 남은 시간과 한 줄 전망입니다.</p>
+        </div>
+        <div class="panel matchup-panel">
+          <div class="countdown-live" id="countdown" aria-live="polite">
+            <div class="cd-unit"><span class="cd-num" id="cdDays">-</span><span class="cd-label">일</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-num" id="cdHours">-</span><span class="cd-label">시</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-num" id="cdMins">-</span><span class="cd-label">분</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-num" id="cdSecs">-</span><span class="cd-label">초</span></div>
+          </div>
+          <div class="scoreboard preview-board">
+            <div class="team-block home">
+              <img class="team-emblem" id="homeEmblem" alt="" width="72" height="72" decoding="async" hidden />
+              <div class="team-name" id="homeName">전북</div>
+            </div>
+            <div class="score-num preview-vs" id="scoreNum">VS</div>
+            <div class="team-block away">
+              <img class="team-emblem" id="awayEmblem" alt="" width="72" height="72" decoding="async" hidden />
+              <div class="team-name" id="awayName">상대</div>
+            </div>
+          </div>
+          <div class="meta-line" id="metaLine">프리뷰 로딩 중</div>
+          <p class="thesis" id="thesisBox"></p>
+          <div class="briefing-box" id="briefingBox"></div>
+          <div class="badge-row" id="badgeRow"></div>
+        </div>
+      </section>
+
+      <section class="section" id="numbers">
+        <div class="section-head">
+          <h2>숫자로 보는 매치업</h2>
+          <p>최근 5경기 평균 기준으로 홈·원정을 나란히 비교합니다.</p>
+        </div>
+        <div class="panel">
+          <p class="matchup-summary" id="matchupSummary"></p>
+          <div class="stat-compare" id="matchupBox"></div>
+        </div>
+      </section>
+
+      <section class="section" id="scout">
+        <div class="section-head">
+          <h2>전북 시점 · 스타일 대비</h2>
+          <p>양팀 최근 흐름을 비교한 뒤, 전북이 유리한 점·불리한 점·노릴 점·조심할 점을 정리합니다.</p>
+        </div>
+        <div class="panel scout-panel">
+          <p class="scout-contrast" id="scoutContrast"></p>
+          <div class="scout-grid" id="scoutBox"></div>
+        </div>
+      </section>
+
+      <section class="section" id="cards">
+        <div class="section-head">
+          <h2>프리뷰 카드</h2>
+          <p>전북 시점의 유리·불리·관전·경계 포인트입니다.</p>
+        </div>
+        <div class="preview-grid" id="cardsBox"></div>
+      </section>
+
+      <section class="section" id="style">
+        <div class="section-head">
+          <h2>스타일 한눈에</h2>
+          <p>최근 경기에서 읽히는 팀 태그와 핵심 지표입니다.</p>
+        </div>
+        <div class="style-grid" id="styleBox"></div>
+      </section>
+
+      <section class="section" id="form">
+        <div class="section-head">
+          <h2>최근 폼 · 맞대결</h2>
+          <p>홈·원정의 최근 결과(xG·슈팅 포함), 그리고 맞대결입니다.</p>
+        </div>
+        <div class="form-grid">
+          <div class="panel">
+            <h3 class="panel-title" id="jbFormTitle">전북 최근</h3>
+            <div id="jbForm" class="form-list"></div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title" id="oppFormTitle">상대 최근</h3>
+            <div id="oppForm" class="form-list"></div>
+          </div>
+          <div class="panel form-span">
+            <h3 class="panel-title">맞대결 <span class="h2h-record" id="h2hTitle">(전북 기준)</span> <span class="h2h-record" id="h2hRecord"></span></h3>
+            <div id="h2hBox" class="form-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section editor-only" id="otherLeague">
+        <div class="section-head">
+          <h2>다른 팀 경기 프리뷰</h2>
+          <p>같은 라운드의 <strong>전북전을 제외</strong>한 예정 경기를 골라 프리뷰합니다. 불러오기를 누르면 아래 카드가 그 경기로 바뀝니다. 링크 카드로 커뮤니티에도 올릴 수 있습니다.</p>
+        </div>
+        <div class="panel other-picker">
+          <div class="fetch-grid other-fetch-grid">
+            <label>
+              <span>연도</span>
+              <select id="otherYearSelect"></select>
+            </label>
+            <label>
+              <span>라운드</span>
+              <select id="otherRoundSelect"></select>
+            </label>
+            <label class="other-match-label">
+              <span>경기</span>
+              <select id="otherMatchSelect"></select>
+            </label>
+            <button class="btn btn-primary" id="otherFetchBtn" type="button">프리뷰 불러오기</button>
+          </div>
+          <p class="match-picker-help" id="otherMatchHelp">라운드를 고르면 전북전을 뺀 예정 경기가 목록에 뜹니다.</p>
+        </div>
+        <div id="otherPreview" class="other-report hidden" aria-live="polite"></div>
+      </section>
+
+      <section class="section editor-only" id="community">
+        <div class="section-head">
+          <h2>링크 만들기 (작성자 전용)</h2>
+          <p>주소에 <code>&amp;x=jb7k</code> 가 있을 때만 보입니다. 공유 링크에는 넣지 마세요.</p>
+        </div>
+        <div class="panel community">
+          <h3>1) 추천: 링크 카드 HTML 복사</h3>
+          <p class="help">
+            evergreenjb 글쓰기 → <strong>HTML/소스</strong> 모드 → 아래를 붙여넣기. 클릭하면 프리뷰가 새 창으로 열립니다.
+          </p>
+          <pre id="shareCode" class="embed-code"></pre>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="copyShare" type="button">링크 카드 복사</button>
+            <button class="btn btn-ghost" id="copyUrl" type="button">URL만 복사</button>
+          </div>
+
+          <h3>2) (선택) iframe — 운영진 허용 후에만</h3>
+          <p class="help">
+            운영진이 외부 멀티미디어 허용에
+            <code>wanju1109.github.io/</code> 를 추가해야 게시글 안에 화면이 보입니다.
+          </p>
+          <pre id="embedCode" class="embed-code"></pre>
+          <div class="btn-row">
+            <button class="btn btn-ghost" id="copyEmbed" type="button">iframe HTML 복사</button>
+          </div>
+
+          <h3>3) 미리보기</h3>
+          <div class="embed-preview-wrap">
+            <iframe
+              id="embedPreview"
+              title="전북 매치 프리뷰 미리보기"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <p class="help">공유용 프리뷰 URL (작성자 키 없음): <a id="reportUrl" href="./">로딩 중…</a></p>
+          <p class="help muted" id="sourceNote"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>JEONBUK MATCH AI PREVIEW · 킥오프 48시간 전 자동 생성 · 경기 후 분석은 c_report</p>
+    </footer>
+  </div>
+
+  <script src="../c_report/js/teamcolors.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
