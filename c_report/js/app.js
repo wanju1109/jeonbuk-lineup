@@ -399,9 +399,12 @@
       away: meta.away?.name,
       label: `${meta.home?.name || ""} ${meta.away?.name || ""}`,
     });
+    /* Author edit chrome stays JEONBUK; public viewer/embed use round title for other clubs. */
+    const useOtherBrand =
+      otherMatch && !document.body.classList.contains("edit-mode");
 
     if ($("brandTitle")) {
-      if (otherMatch) {
+      if (useOtherBrand) {
         const round = meta.round != null ? `${meta.round}R` : "";
         $("brandTitle").innerHTML = `K리그1 ${escapeHtml(round)} MATCH AI&nbsp;REPORT`;
         $("brandTitle").classList.add("brand-other");
@@ -417,7 +420,7 @@
         `${escapeHtml(meta.home.name)} vs ${escapeHtml(meta.away.name)}<br />` +
         "스코어만 보면 아쉽고, 숫자만 보면 어렵습니다. 골이 어떻게 나왔는지, 누가 어디서 뛰었는지를 이야기로 풀어 드립니다.";
     }
-    document.title = otherMatch
+    document.title = useOtherBrand
       ? `K리그1 ${meta.round != null ? meta.round + "R" : ""} 매치 리포트 | ${meta.home.name} vs ${meta.away.name}`
       : `전북 매치 리포트 | ${meta.home.name} vs ${meta.away.name}`;
 
