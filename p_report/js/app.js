@@ -560,6 +560,10 @@
     return state.index?.matches || [];
   }
 
+  function jeonbukIndexMatches() {
+    return indexMatches().filter((m) => m.jeonbuk_match !== false && isJeonbukMatch(m));
+  }
+
   function fillYearRound() {
     const yearSel = $("yearSelect");
     const roundSel = $("roundSelect");
@@ -568,7 +572,7 @@
       return;
     }
 
-    const rows = indexMatches();
+    const rows = jeonbukIndexMatches();
     const years = [...new Set(rows.map((m) => String(m.year || new Date().getFullYear())))]
       .filter(Boolean)
       .sort()
@@ -594,7 +598,7 @@
     const year = yearSel.value;
     const rounds = [
       ...new Set(
-        indexMatches()
+        jeonbukIndexMatches()
           .filter((m) => String(m.year) === String(year))
           .map((m) => Number(m.round))
           .filter((n) => Number.isFinite(n) && n > 0)
@@ -626,14 +630,12 @@
     if (!matchSel) return;
     const year = $("yearSelect")?.value || "";
     const round = $("roundSelect")?.value || "";
-    const rows = indexMatches()
+    const rows = jeonbukIndexMatches()
       .filter((m) => String(m.year) === String(year) && Number(m.round) === Number(round))
       .slice()
-      .sort((a, b) => {
-        const aj = a.jeonbuk_match === false ? 1 : 0;
-        const bj = b.jeonbuk_match === false ? 1 : 0;
-        return aj - bj || String(a.game_id).localeCompare(String(b.game_id), undefined, { numeric: true });
-      });
+      .sort((a, b) =>
+        String(a.game_id).localeCompare(String(b.game_id), undefined, { numeric: true })
+      );
 
     const prev = matchSel.value;
     const wanted = queryGameId() || state.preview?.meta?.game_id || state.index?.active_game_id || "";
@@ -641,10 +643,10 @@
     if (!rows.length) {
       const opt = document.createElement("option");
       opt.value = "";
-      opt.textContent = "이 라운드 프리뷰 없음 · build_preview 후 다시 열어 주세요";
+      opt.textContent = "이 라운드 전북 프리뷰 없음 · build_preview 후 다시 열어 주세요";
       matchSel.appendChild(opt);
       if ($("matchHelp")) {
-        $("matchHelp").textContent = `${year}시즌 ${round}R 프리뷰 JSON이 아직 없습니다.`;
+        $("matchHelp").textContent = `${year}시즌 ${round}R 전북 프리뷰가 아직 없습니다. 타팀은 아래 「다른 팀 경기 프리뷰」를 쓰세요.`;
       }
       return;
     }
@@ -652,9 +654,8 @@
     rows.forEach((m) => {
       const opt = document.createElement("option");
       opt.value = String(m.game_id);
-      const jb = m.jeonbuk_match === false ? "" : " · 전북";
       const flag = m.published ? "" : " · 초안";
-      opt.textContent = `${m.home} vs ${m.away}${jb}${flag}`;
+      opt.textContent = `${m.home} vs ${m.away}${flag}`;
       matchSel.appendChild(opt);
     });
 
@@ -664,14 +665,14 @@
 
     if ($("matchHelp")) {
       $("matchHelp").textContent =
-        `${year}시즌 ${round}R · ${rows.length}경기 · 불러온 뒤 「에버그린 링크」에서 카드 복사`;
+        `${year}시즌 ${round}R · 전북 ${rows.length}경기 · 불러온 뒤 「에버그린 링크」에서 카드 복사`;
     }
   }
 
   function fillSelectLegacy() {
     const sel = $("previewSelect");
     if (!sel) return;
-    const rows = indexMatches();
+    const rows = jeonbukIndexMatches();
     sel.innerHTML = "";
     rows.forEach((m) => {
       const opt = document.createElement("option");
@@ -1011,13 +1012,15 @@
     try {
       await Promise.all([loadIndex(), loadSchedule()]);
       fillOtherYearRound();
-      const wanted = queryGameId() || state.index?.active_game_id;
+      const jbRows = jeonbukIndexMatches();
+      const wanted =
+        queryGameId() ||
+        state.index?.active_game_id ||
+        (jbRows[0] && jbRows[0].game_id);
       if (wanted) await loadPreview(wanted);
-      else if ((state.index?.matches || []).length) {
-        await loadPreview(state.index.matches[0].game_id);
-      } else {
+      else {
         setStatus(
-          "아직 생성된 프리뷰가 없습니다.\n" +
+          "아직 생성된 전북 프리뷰가 없습니다.\n" +
             "1) c_report schedule 수집\n" +
             "2) python p_report/scripts/build_preview.py",
           true
