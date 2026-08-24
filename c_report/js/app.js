@@ -394,13 +394,32 @@
     const stats = Analyze.teamStats(events, meta.home.team_id, meta.away.team_id);
     const goalList = Analyze.goals(events);
 
+    const otherMatch = !isJeonbukMatch({
+      home: meta.home?.name,
+      away: meta.away?.name,
+      label: `${meta.home?.name || ""} ${meta.away?.name || ""}`,
+    });
+
+    if ($("brandTitle")) {
+      if (otherMatch) {
+        const round = meta.round != null ? `${meta.round}R` : "";
+        $("brandTitle").innerHTML = `K리그1 ${escapeHtml(round)} MATCH AI&nbsp;REPORT`;
+        $("brandTitle").classList.add("brand-other");
+      } else {
+        $("brandTitle").innerHTML = "JEONBUK MATCH AI&nbsp;REPORT";
+        $("brandTitle").classList.remove("brand-other");
+      }
+    }
+
     if ($("heroCopy")) {
       $("heroCopy").innerHTML =
         `${escapeHtml(meta.competition || "")} ${escapeHtml(String(meta.round || ""))}라운드 · ` +
         `${escapeHtml(meta.home.name)} vs ${escapeHtml(meta.away.name)}<br />` +
         "스코어만 보면 아쉽고, 숫자만 보면 어렵습니다. 골이 어떻게 나왔는지, 누가 어디서 뛰었는지를 이야기로 풀어 드립니다.";
     }
-    document.title = `전북 매치 리포트 | ${meta.home.name} vs ${meta.away.name}`;
+    document.title = otherMatch
+      ? `K리그1 ${meta.round != null ? meta.round + "R" : ""} 매치 리포트 | ${meta.home.name} vs ${meta.away.name}`
+      : `전북 매치 리포트 | ${meta.home.name} vs ${meta.away.name}`;
 
     $("homeName").textContent = meta.home.name;
     $("awayName").textContent = meta.away.name;
@@ -478,11 +497,6 @@
 
     const story = [];
     const briefing = Analyze.buildTacticalBriefing(meta, events, players, state.data.lineup);
-    const otherMatch = !isJeonbukMatch({
-      home: meta.home?.name,
-      away: meta.away?.name,
-      label: `${meta.home?.name || ""} ${meta.away?.name || ""}`,
-    });
     renderJeonbukScout(
       otherMatch ? Analyze.buildJeonbukScoutNote(meta, events, players, state.data.lineup) : null
     );
@@ -564,11 +578,22 @@
 
   function buildShareHtml(url, metaOverride) {
     const meta = metaOverride || state.data?.meta;
+    const other = !isJeonbukMatch({
+      home: meta?.home?.name,
+      away: meta?.away?.name,
+      label: `${meta?.home?.name || ""} ${meta?.away?.name || ""}`,
+    });
+    const brandLabel = other
+      ? `K리그1 ${meta?.round != null ? meta.round + "R" : ""} MATCH AI REPORT`
+      : "JEONBUK MATCH AI REPORT";
     const title = meta
       ? `${meta.round}R ${meta.home?.name || ""} ${meta.score?.home ?? ""}:${meta.score?.away ?? ""} ${meta.away?.name || ""}`.trim()
-      : "전북 매치 리포트";
+      : other
+        ? "K리그1 매치 리포트"
+        : "전북 매치 리포트";
     const safeTitle = escapeHtml(title);
     const safeUrl = escapeHtml(url);
+    const safeBrand = escapeHtml(brandLabel);
     // Match community link-attachment / iframe band width (1100px).
     return [
       '<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
@@ -579,7 +604,7 @@
       "칼럼/분석 탭을 누르면 미래의 분석관을 꿈꾸는 분들께서 작성한, 재미있고 상세한 분석 글들이 많이 있습니다.<br>",
       "AI는 잘못된 정보를 전달할 수 있습니다. 무조건 적인 신뢰 보다는 적당한 선에서 비판적인 시선으로 봐주세요.",
       "</p>",
-      '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.06em;color:#cfe8d8;background-color:#0f2a1c;">JEONBUK MATCH AI REPORT</p>',
+      `<p style="margin:0 0 6px;font-size:12px;letter-spacing:.06em;color:#cfe8d8;background-color:#0f2a1c;">${safeBrand}</p>`,
       `<p style="margin:0 0 10px;font-size:18px;font-weight:700;line-height:1.35;color:#f5fff8;background-color:#0f2a1c;">${safeTitle}</p>`,
       '<p style="margin:0 0 14px;font-size:13px;line-height:1.55;color:#d7efe3;background-color:#0f2a1c;">골 장면 · 히트맵 · xG를 한 화면에서 볼 수 있습니다.</p>',
       `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#b7f24a;color:#0a2218;font-weight:700;text-decoration:none;">리포트 새 창에서 보기 →</a>`,
