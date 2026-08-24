@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "제주 VS 대전 (155, 08/30)",
-    "hours_to_kickoff": 151.3,
+    "hours_to_kickoff": 148.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-24T11:41:29.123374+09:00",
+    "generated_at": "2026-08-24T14:27:00.396594+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 제주 vs 대전",
@@ -36,6 +36,7 @@
   "briefing": [
     "제주 vs 대전. 제주 최근 W D W W D (3승 2무 0패 / 최근 5경기). 대전 최근 L W D L W (2승 1무 2패 / 최근 5경기).",
     "최근 5경기 평균 — 제주 xG 1.63·슈팅 15.6, 대전 xG 1.91·슈팅 14.0. 패스 성공률 71.6% vs 74.9%.",
+    "올 시즌 맞대결 2경기 — 제주 기준 1승 1무 0패.",
     "경기장 제주 월드컵 · 제주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
@@ -107,10 +108,10 @@
     "summary": "최근 5경기 기준 — 제주 xG 1.63 / xGA 1.49, 대전 xG 1.91 / xGA 1.39."
   },
   "h2h_summary": {
-    "wins": 0,
-    "draws": 0,
+    "wins": 1,
+    "draws": 1,
     "losses": 0,
-    "games": 0
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -129,12 +130,7 @@
         "shots": 30,
         "sot": 5,
         "goals_for": 2,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 80.4,
-        "final_third_pct": 36.0,
-        "presses": 29,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "126",
@@ -151,12 +147,7 @@
         "shots": 14,
         "sot": 5,
         "goals_for": 3,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 75.1,
-        "final_third_pct": 26.7,
-        "presses": 27,
-        "stats_source": "portal"
+        "goals_against": 3
       },
       {
         "game_id": "131",
@@ -190,12 +181,7 @@
         "shots": 12,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 67.3,
-        "final_third_pct": 22.5,
-        "presses": 22,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "142",
@@ -212,12 +198,7 @@
         "shots": 13,
         "sot": 5,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 68.0,
-        "final_third_pct": 25.8,
-        "presses": 19,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ],
     "opponent": [
@@ -236,12 +217,7 @@
         "shots": 13,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 69.9,
-        "final_third_pct": 30.1,
-        "presses": 39,
-        "stats_source": "portal"
+        "goals_against": 3
       },
       {
         "game_id": "125",
@@ -258,12 +234,7 @@
         "shots": 16,
         "sot": 9,
         "goals_for": 2,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 83.3,
-        "final_third_pct": 27.9,
-        "presses": 24,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "127",
@@ -280,12 +251,7 @@
         "shots": 16,
         "sot": 9,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 73.3,
-        "final_third_pct": 28.6,
-        "presses": 21,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "135",
@@ -302,12 +268,7 @@
         "shots": 13,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 4,
-        "stats_limited": false,
-        "pass_pct": 66.0,
-        "final_third_pct": 26.9,
-        "presses": 21,
-        "stats_source": "portal"
+        "goals_against": 4
       },
       {
         "game_id": "143",
@@ -324,16 +285,32 @@
         "shots": 12,
         "sot": 4,
         "goals_for": 3,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 82.0,
-        "final_third_pct": 31.0,
-        "presses": 34,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "52",
+      "round": 9,
+      "date": "2026-04-22",
+      "home": "대전",
+      "away": "제주",
+      "score": "0:1",
+      "result": "W",
+      "venue": "대전 월드컵"
+    },
+    {
+      "game_id": "100",
+      "round": 17,
+      "date": "2026-07-12",
+      "home": "제주",
+      "away": "대전",
+      "score": "0:0",
+      "result": "D",
+      "venue": "제주 월드컵"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "제주",
@@ -356,7 +333,7 @@
       "avg_pass_pct": 71.6,
       "avg_final_third_pct": 26.0,
       "avg_presses": 21.2,
-      "avg_x": 48.2,
+      "avg_x": 46.8,
       "samples": 5
     },
     "opponent": {
@@ -380,7 +357,7 @@
       "avg_pass_pct": 74.9,
       "avg_final_third_pct": 28.9,
       "avg_presses": 27.8,
-      "avg_x": 50.0,
+      "avg_x": 51.1,
       "samples": 5
     }
   },

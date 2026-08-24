@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-26 19:00 KST",
     "date_md": "08/26",
     "label": "대전 VS 울산 (149, 08/26)",
-    "hours_to_kickoff": 55.3,
+    "hours_to_kickoff": 52.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-24T11:39:50.123116+09:00",
+    "generated_at": "2026-08-24T14:27:00.393517+09:00",
     "preview_hours": 48.0
   },
   "headline": "25R PREVIEW · 대전 vs 울산",
@@ -36,6 +36,7 @@
   "briefing": [
     "대전 vs 울산. 대전 최근 L W D L W (2승 1무 2패 / 최근 5경기). 울산 최근 W W W D L (3승 1무 1패 / 최근 5경기).",
     "최근 5경기 평균 — 대전 xG 1.91·슈팅 14.0, 울산 xG 1.44·슈팅 10.0. 패스 성공률 74.9% vs 75.1%.",
+    "올 시즌 맞대결 2경기 — 대전 기준 1승 1무 0패.",
     "경기장 대전 월드컵 · 대전 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
@@ -106,10 +107,10 @@
     "summary": "최근 5경기 기준 — 대전 xG 1.91 / xGA 1.39, 울산 xG 1.44 / xGA 1.16."
   },
   "h2h_summary": {
-    "wins": 0,
-    "draws": 0,
+    "wins": 1,
+    "draws": 1,
     "losses": 0,
-    "games": 0
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -128,12 +129,7 @@
         "shots": 13,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 69.9,
-        "final_third_pct": 30.1,
-        "presses": 39,
-        "stats_source": "portal"
+        "goals_against": 3
       },
       {
         "game_id": "125",
@@ -150,12 +146,7 @@
         "shots": 16,
         "sot": 9,
         "goals_for": 2,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 83.3,
-        "final_third_pct": 27.9,
-        "presses": 24,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "127",
@@ -172,12 +163,7 @@
         "shots": 16,
         "sot": 9,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 73.3,
-        "final_third_pct": 28.6,
-        "presses": 21,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "135",
@@ -194,12 +180,7 @@
         "shots": 13,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 4,
-        "stats_limited": false,
-        "pass_pct": 66.0,
-        "final_third_pct": 26.9,
-        "presses": 21,
-        "stats_source": "portal"
+        "goals_against": 4
       },
       {
         "game_id": "143",
@@ -216,12 +197,7 @@
         "shots": 12,
         "sot": 4,
         "goals_for": 3,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 82.0,
-        "final_third_pct": 31.0,
-        "presses": 34,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ],
     "opponent": [
@@ -240,12 +216,7 @@
         "shots": 8,
         "sot": 4,
         "goals_for": 3,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 60.2,
-        "final_third_pct": 18.2,
-        "presses": 13,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "124",
@@ -262,12 +233,7 @@
         "shots": 11,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 80.8,
-        "final_third_pct": 28.0,
-        "presses": 15,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "132",
@@ -284,12 +250,7 @@
         "shots": 10,
         "sot": 6,
         "goals_for": 2,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 84.4,
-        "final_third_pct": 15.2,
-        "presses": 14,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "138",
@@ -306,12 +267,7 @@
         "shots": 12,
         "sot": 7,
         "goals_for": 2,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 71.6,
-        "final_third_pct": 22.8,
-        "presses": 22,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "140",
@@ -332,7 +288,28 @@
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "60",
+      "round": 10,
+      "date": "2026-04-26",
+      "home": "울산",
+      "away": "대전",
+      "score": "1:4",
+      "result": "W",
+      "venue": "울산 문수"
+    },
+    {
+      "game_id": "103",
+      "round": 18,
+      "date": "2026-07-18",
+      "home": "대전",
+      "away": "울산",
+      "score": "2:2",
+      "result": "D",
+      "venue": "대전 월드컵"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "대전",
@@ -355,7 +332,7 @@
       "avg_pass_pct": 74.9,
       "avg_final_third_pct": 28.9,
       "avg_presses": 27.8,
-      "avg_x": 50.0,
+      "avg_x": 51.1,
       "samples": 5
     },
     "opponent": {
@@ -377,7 +354,7 @@
       "avg_pass_pct": 75.1,
       "avg_final_third_pct": 21.8,
       "avg_presses": 16.0,
-      "avg_x": 49.8,
+      "avg_x": 44.6,
       "samples": 5
     }
   },

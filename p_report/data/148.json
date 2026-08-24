@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-26 19:00 KST",
     "date_md": "08/26",
     "label": "안양 VS 인천 (148, 08/26)",
-    "hours_to_kickoff": 55.3,
+    "hours_to_kickoff": 52.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-24T11:39:31.007096+09:00",
+    "generated_at": "2026-08-24T14:27:00.392910+09:00",
     "preview_hours": 48.0
   },
   "headline": "25R PREVIEW · 안양 vs 인천",
@@ -36,10 +36,11 @@
   "briefing": [
     "안양 vs 인천. 안양 최근 W L D L L (1승 1무 3패 / 최근 5경기). 인천 최근 W W D D W (3승 2무 0패 / 최근 5경기).",
     "최근 5경기 평균 — 안양 xG 1.01·슈팅 10.6, 인천 xG 1.64·슈팅 13.0. 패스 성공률 73.5% vs 78.0%.",
+    "올 시즌 맞대결 2경기 — 안양 기준 1승 0무 1패.",
     "경기장 안양 종합 · 안양 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "안양은 부진, 수비 기회 허용 흐름이고, 인천은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.01 vs 1.64, 슈팅 10.6 vs 13.0, 파이널 서드 터치 22.5% vs 27.4%입니다.",
+    "contrast": "안양은 부진, 수비 기회 허용, 낮은 블록형 흐름이고, 인천은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.01 vs 1.64, 슈팅 10.6 vs 13.0, 파이널 서드 터치 22.5% vs 27.4%입니다.",
     "edge": [
       "홈 이점(안양). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -107,10 +108,10 @@
     "summary": "최근 5경기 기준 — 안양 xG 1.01 / xGA 2.05, 인천 xG 1.64 / xGA 1.0."
   },
   "h2h_summary": {
-    "wins": 0,
+    "wins": 1,
     "draws": 0,
-    "losses": 0,
-    "games": 0
+    "losses": 1,
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -129,12 +130,7 @@
         "shots": 11,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 67.0,
-        "final_third_pct": 19.5,
-        "presses": 8,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "124",
@@ -151,12 +147,7 @@
         "shots": 8,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 81.9,
-        "final_third_pct": 18.4,
-        "presses": 11,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "127",
@@ -173,12 +164,7 @@
         "shots": 21,
         "sot": 6,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 72.9,
-        "final_third_pct": 26.0,
-        "presses": 21,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "134",
@@ -195,12 +181,7 @@
         "shots": 9,
         "sot": 4,
         "goals_for": 0,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 73.4,
-        "final_third_pct": 26.9,
-        "presses": 25,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "139",
@@ -208,7 +189,7 @@
         "date": "2026-08-22",
         "home": "안양",
         "away": "서울",
-        "score": "0:6",
+        "score": "0:7",
         "result": "L",
         "opponent": "서울",
         "ha": "H",
@@ -217,12 +198,7 @@
         "shots": 4,
         "sot": 1,
         "goals_for": 0,
-        "goals_against": 6,
-        "stats_limited": false,
-        "pass_pct": 72.4,
-        "final_third_pct": 21.6,
-        "presses": 14,
-        "stats_source": "portal"
+        "goals_against": 6
       }
     ],
     "opponent": [
@@ -241,12 +217,7 @@
         "shots": 21,
         "sot": 6,
         "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 76.4,
-        "final_third_pct": 35.0,
-        "presses": 29,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "119",
@@ -263,12 +234,7 @@
         "shots": 16,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 80.9,
-        "final_third_pct": 35.7,
-        "presses": 34,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "126",
@@ -285,12 +251,7 @@
         "shots": 11,
         "sot": 6,
         "goals_for": 3,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 77.0,
-        "final_third_pct": 24.5,
-        "presses": 18,
-        "stats_source": "portal"
+        "goals_against": 3
       },
       {
         "game_id": "136",
@@ -307,12 +268,7 @@
         "shots": 9,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 75.6,
-        "final_third_pct": 21.7,
-        "presses": 9,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "144",
@@ -329,23 +285,40 @@
         "shots": 8,
         "sot": 1,
         "goals_for": 1,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 80.0,
-        "final_third_pct": 19.9,
-        "presses": 10,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "28",
+      "round": 5,
+      "date": "2026-03-22",
+      "home": "안양",
+      "away": "인천",
+      "score": "0:1",
+      "result": "L",
+      "venue": "안양 종합"
+    },
+    {
+      "game_id": "101",
+      "round": 17,
+      "date": "2026-07-12",
+      "home": "인천",
+      "away": "안양",
+      "score": "0:1",
+      "result": "W",
+      "venue": "인천 전용"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "안양",
       "team_id": "K27",
       "tags": [
         "부진",
-        "수비 기회 허용"
+        "수비 기회 허용",
+        "낮은 블록형"
       ],
       "record": "1승 1무 3패 / 최근 5경기",
       "goals_for": 4,
@@ -358,7 +331,7 @@
       "avg_pass_pct": 73.5,
       "avg_final_third_pct": 22.5,
       "avg_presses": 15.8,
-      "avg_x": 50.0,
+      "avg_x": 44.7,
       "samples": 5
     },
     "opponent": {
@@ -381,7 +354,7 @@
       "avg_pass_pct": 78.0,
       "avg_final_third_pct": 27.4,
       "avg_presses": 20.0,
-      "avg_x": 50.0,
+      "avg_x": 48.9,
       "samples": 5
     }
   },

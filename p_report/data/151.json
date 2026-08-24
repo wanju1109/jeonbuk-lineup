@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-29 19:00 KST",
     "date_md": "08/29",
     "label": "울산 VS 김천 (151, 08/29)",
-    "hours_to_kickoff": 127.3,
+    "hours_to_kickoff": 124.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-24T11:40:30.672001+09:00",
+    "generated_at": "2026-08-24T14:27:00.394734+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 울산 vs 김천",
@@ -36,6 +36,7 @@
   "briefing": [
     "울산 vs 김천. 울산 최근 W W W D L (3승 1무 1패 / 최근 5경기). 김천 최근 W W D D D (2승 3무 0패 / 최근 5경기).",
     "최근 5경기 평균 — 울산 xG 1.44·슈팅 10.0, 김천 xG 1.15·슈팅 10.8. 패스 성공률 75.1% vs 78.6%.",
+    "올 시즌 맞대결 2경기 — 울산 기준 1승 1무 0패.",
     "경기장 울산 문수 · 울산 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
@@ -107,10 +108,10 @@
     "summary": "최근 5경기 기준 — 울산 xG 1.44 / xGA 1.16, 김천 xG 1.15 / xGA 1.18."
   },
   "h2h_summary": {
-    "wins": 0,
-    "draws": 0,
+    "wins": 1,
+    "draws": 1,
     "losses": 0,
-    "games": 0
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -129,12 +130,7 @@
         "shots": 8,
         "sot": 4,
         "goals_for": 3,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 60.2,
-        "final_third_pct": 18.2,
-        "presses": 13,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "124",
@@ -151,12 +147,7 @@
         "shots": 11,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 80.8,
-        "final_third_pct": 28.0,
-        "presses": 15,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "132",
@@ -173,12 +164,7 @@
         "shots": 10,
         "sot": 6,
         "goals_for": 2,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 84.4,
-        "final_third_pct": 15.2,
-        "presses": 14,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "138",
@@ -195,12 +181,7 @@
         "shots": 12,
         "sot": 7,
         "goals_for": 2,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 71.6,
-        "final_third_pct": 22.8,
-        "presses": 22,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "140",
@@ -236,12 +217,7 @@
         "shots": 14,
         "sot": 7,
         "goals_for": 3,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 75.7,
-        "final_third_pct": 17.3,
-        "presses": 10,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "123",
@@ -258,12 +234,7 @@
         "shots": 10,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 81.5,
-        "final_third_pct": 19.3,
-        "presses": 26,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "130",
@@ -280,12 +251,7 @@
         "shots": 7,
         "sot": 2,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 77.0,
-        "final_third_pct": 15.6,
-        "presses": 15,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "136",
@@ -302,12 +268,7 @@
         "shots": 12,
         "sot": 5,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 78.9,
-        "final_third_pct": 15.2,
-        "presses": 14,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "142",
@@ -324,16 +285,32 @@
         "shots": 11,
         "sot": 3,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 79.9,
-        "final_third_pct": 20.8,
-        "presses": 23,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "27",
+      "round": 5,
+      "date": "2026-03-22",
+      "home": "울산",
+      "away": "김천",
+      "score": "0:0",
+      "result": "D",
+      "venue": "울산 문수"
+    },
+    {
+      "game_id": "69",
+      "round": 12,
+      "date": "2026-05-05",
+      "home": "김천",
+      "away": "울산",
+      "score": "1:2",
+      "result": "W",
+      "venue": "김천 종합"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "울산",
@@ -354,7 +331,7 @@
       "avg_pass_pct": 75.1,
       "avg_final_third_pct": 21.8,
       "avg_presses": 16.0,
-      "avg_x": 49.8,
+      "avg_x": 44.6,
       "samples": 5
     },
     "opponent": {
@@ -374,7 +351,7 @@
       "avg_pass_pct": 78.6,
       "avg_final_third_pct": 17.6,
       "avg_presses": 17.6,
-      "avg_x": 50.0,
+      "avg_x": 43.6,
       "samples": 5
     }
   },

@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-25 19:00 KST",
     "date_md": "08/25",
     "label": "김천 VS 전북 (146, 08/25)",
-    "hours_to_kickoff": 31.4,
+    "hours_to_kickoff": 28.5,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-08-24T11:38:34.831178+09:00",
+    "generated_at": "2026-08-24T14:27:00.390758+09:00",
     "preview_hours": 48.0
   },
   "headline": "25R PREVIEW · 김천 vs 전북",
@@ -40,7 +40,7 @@
     "경기장 김천 종합 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다."
   ],
   "scout": {
-    "contrast": "전북은 기회 창출↑, 슈팅 많음, 적극 압박 흐름이고, 김천은(는) 낮은 블록형 그림입니다. 최근 xG 1.74 vs 1.15, 슈팅 18.2 vs 10.8, 파이널 서드 터치 25.1% vs 17.6%, 평균 터치 높이 47.5 vs 50.0입니다.",
+    "contrast": "전북은 기회 창출↑, 슈팅 많음, 적극 압박 흐름이고, 김천은(는) 낮은 블록형 그림입니다. 최근 xG 1.74 vs 1.15, 슈팅 18.2 vs 10.8, 파이널 서드 터치 25.1% vs 17.6%, 평균 터치 높이 47.5 vs 43.6입니다.",
     "edge": [
       "전북이 최근 기회 질(xG 1.74)에서 김천(1.15)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다."
     ],
@@ -217,12 +217,7 @@
         "shots": 14,
         "sot": 7,
         "goals_for": 3,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 75.7,
-        "final_third_pct": 17.3,
-        "presses": 10,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "123",
@@ -239,12 +234,7 @@
         "shots": 10,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 81.5,
-        "final_third_pct": 19.3,
-        "presses": 26,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "130",
@@ -261,12 +251,7 @@
         "shots": 7,
         "sot": 2,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 77.0,
-        "final_third_pct": 15.6,
-        "presses": 15,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "136",
@@ -283,12 +268,7 @@
         "shots": 12,
         "sot": 5,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 78.9,
-        "final_third_pct": 15.2,
-        "presses": 14,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "142",
@@ -305,12 +285,7 @@
         "shots": 11,
         "sot": 3,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 79.9,
-        "final_third_pct": 20.8,
-        "presses": 23,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ]
   },
@@ -376,7 +351,7 @@
       "avg_pass_pct": 78.6,
       "avg_final_third_pct": 17.6,
       "avg_presses": 17.6,
-      "avg_x": 50.0,
+      "avg_x": 43.6,
       "samples": 5
     }
   },

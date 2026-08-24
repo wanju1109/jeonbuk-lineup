@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-29 19:00 KST",
     "date_md": "08/29",
     "label": "부천 VS 안양 (152, 08/29)",
-    "hours_to_kickoff": 127.3,
+    "hours_to_kickoff": 124.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-24T11:40:50.198273+09:00",
+    "generated_at": "2026-08-24T14:27:00.395344+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 부천 vs 안양",
@@ -36,10 +36,11 @@
   "briefing": [
     "부천 vs 안양. 부천 최근 L W D W W (3승 1무 1패 / 최근 5경기). 안양 최근 W L D L L (1승 1무 3패 / 최근 5경기).",
     "최근 5경기 평균 — 부천 xG 1.17·슈팅 10.0, 안양 xG 1.01·슈팅 10.6. 패스 성공률 59.6% vs 73.5%.",
+    "올 시즌 맞대결 2경기 — 부천 기준 1승 0무 1패.",
     "경기장 부천 종합 · 부천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "부천은 상승세, 수비 기회 허용, 낮은 블록형 흐름이고, 안양은(는) 부진, 수비 기회 허용 그림입니다. 최근 xG 1.17 vs 1.01, 슈팅 10.0 vs 10.6, 파이널 서드 터치 21.9% vs 22.5%입니다.",
+    "contrast": "부천은 상승세, 수비 기회 허용, 낮은 블록형 흐름이고, 안양은(는) 부진, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.17 vs 1.01, 슈팅 10.0 vs 10.6, 파이널 서드 터치 21.9% vs 22.5%입니다.",
     "edge": [
       "부천 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
       "안양 최근 흐름이 좋지 않습니다. 부천이 실수를 유도할 여지가 있습니다.",
@@ -107,10 +108,10 @@
     "summary": "최근 5경기 기준 — 부천 xG 1.17 / xGA 1.57, 안양 xG 1.01 / xGA 2.05."
   },
   "h2h_summary": {
-    "wins": 0,
+    "wins": 1,
     "draws": 0,
-    "losses": 0,
-    "games": 0
+    "losses": 1,
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -129,12 +130,7 @@
         "shots": 6,
         "sot": 1,
         "goals_for": 0,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 65.0,
-        "final_third_pct": 20.8,
-        "presses": 15,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "121",
@@ -151,12 +147,7 @@
         "shots": 9,
         "sot": 5,
         "goals_for": 3,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 36.8,
-        "final_third_pct": 29.2,
-        "presses": 17,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "128",
@@ -173,12 +164,7 @@
         "shots": 11,
         "sot": 4,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 76.6,
-        "final_third_pct": 15.7,
-        "presses": 8,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "137",
@@ -212,12 +198,7 @@
         "shots": 9,
         "sot": 4,
         "goals_for": 3,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 60.9,
-        "final_third_pct": 20.7,
-        "presses": 16,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ],
     "opponent": [
@@ -236,12 +217,7 @@
         "shots": 11,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 67.0,
-        "final_third_pct": 19.5,
-        "presses": 8,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "124",
@@ -258,12 +234,7 @@
         "shots": 8,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 81.9,
-        "final_third_pct": 18.4,
-        "presses": 11,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "127",
@@ -280,12 +251,7 @@
         "shots": 21,
         "sot": 6,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 72.9,
-        "final_third_pct": 26.0,
-        "presses": 21,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "134",
@@ -302,12 +268,7 @@
         "shots": 9,
         "sot": 4,
         "goals_for": 0,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 73.4,
-        "final_third_pct": 26.9,
-        "presses": 25,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "139",
@@ -315,7 +276,7 @@
         "date": "2026-08-22",
         "home": "안양",
         "away": "서울",
-        "score": "0:6",
+        "score": "0:7",
         "result": "L",
         "opponent": "서울",
         "ha": "H",
@@ -324,16 +285,32 @@
         "shots": 4,
         "sot": 1,
         "goals_for": 0,
-        "goals_against": 6,
-        "stats_limited": false,
-        "pass_pct": 72.4,
-        "final_third_pct": 21.6,
-        "presses": 14,
-        "stats_source": "portal"
+        "goals_against": 6
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "65",
+      "round": 11,
+      "date": "2026-05-02",
+      "home": "안양",
+      "away": "부천",
+      "score": "0:1",
+      "result": "W",
+      "venue": "안양 종합"
+    },
+    {
+      "game_id": "112",
+      "round": 19,
+      "date": "2026-07-22",
+      "home": "부천",
+      "away": "안양",
+      "score": "2:3",
+      "result": "L",
+      "venue": "부천 종합"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "부천",
@@ -354,7 +331,7 @@
       "avg_pass_pct": 59.6,
       "avg_final_third_pct": 21.9,
       "avg_presses": 13.8,
-      "avg_x": 48.3,
+      "avg_x": 41.6,
       "samples": 5
     },
     "opponent": {
@@ -362,7 +339,8 @@
       "team_id": "K27",
       "tags": [
         "부진",
-        "수비 기회 허용"
+        "수비 기회 허용",
+        "낮은 블록형"
       ],
       "record": "1승 1무 3패 / 최근 5경기",
       "goals_for": 4,
@@ -375,7 +353,7 @@
       "avg_pass_pct": 73.5,
       "avg_final_third_pct": 22.5,
       "avg_presses": 15.8,
-      "avg_x": 50.0,
+      "avg_x": 44.7,
       "samples": 5
     }
   },

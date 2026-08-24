@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "광주 VS 서울 (153, 08/30)",
-    "hours_to_kickoff": 151.3,
+    "hours_to_kickoff": 148.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-24T11:41:10.329287+09:00",
+    "generated_at": "2026-08-24T14:27:00.395931+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 광주 vs 서울",
@@ -36,6 +36,7 @@
   "briefing": [
     "광주 vs 서울. 광주 최근 L L D L L (0승 1무 4패 / 최근 5경기). 서울 최근 L D D W W (2승 2무 1패 / 최근 5경기).",
     "최근 5경기 평균 — 광주 xG 1.36·슈팅 11.6, 서울 xG 1.57·슈팅 12.6. 패스 성공률 79.1% vs 76.9%.",
+    "올 시즌 맞대결 2경기 — 광주 기준 0승 0무 2패.",
     "경기장 광주 월드컵 · 광주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
@@ -108,8 +109,8 @@
   "h2h_summary": {
     "wins": 0,
     "draws": 0,
-    "losses": 0,
-    "games": 0
+    "losses": 2,
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -128,12 +129,7 @@
         "shots": 8,
         "sot": 4,
         "goals_for": 0,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 74.1,
-        "final_third_pct": 23.8,
-        "presses": 18,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "125",
@@ -150,12 +146,7 @@
         "shots": 7,
         "sot": 2,
         "goals_for": 0,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 76.3,
-        "final_third_pct": 17.0,
-        "presses": 12,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "128",
@@ -172,12 +163,7 @@
         "shots": 14,
         "sot": 1,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 81.9,
-        "final_third_pct": 24.6,
-        "presses": 23,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "133",
@@ -194,12 +180,7 @@
         "shots": 21,
         "sot": 10,
         "goals_for": 1,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 86.6,
-        "final_third_pct": 23.7,
-        "presses": 28,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "144",
@@ -216,12 +197,7 @@
         "shots": 8,
         "sot": 4,
         "goals_for": 0,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 76.4,
-        "final_third_pct": 16.6,
-        "presses": 9,
-        "stats_source": "portal"
+        "goals_against": 1
       }
     ],
     "opponent": [
@@ -240,12 +216,7 @@
         "shots": 17,
         "sot": 1,
         "goals_for": 1,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 79.7,
-        "final_third_pct": 39.8,
-        "presses": 46,
-        "stats_source": "portal"
+        "goals_against": 3
       },
       {
         "game_id": "122",
@@ -279,12 +250,7 @@
         "shots": 5,
         "sot": 2,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 74.8,
-        "final_third_pct": 22.7,
-        "presses": 15,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "135",
@@ -301,12 +267,7 @@
         "shots": 17,
         "sot": 9,
         "goals_for": 4,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 77.5,
-        "final_third_pct": 33.4,
-        "presses": 20,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "139",
@@ -314,7 +275,7 @@
         "date": "2026-08-22",
         "home": "안양",
         "away": "서울",
-        "score": "0:6",
+        "score": "0:7",
         "result": "W",
         "opponent": "안양",
         "ha": "A",
@@ -323,16 +284,32 @@
         "shots": 17,
         "sot": 11,
         "goals_for": 6,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 73.2,
-        "final_third_pct": 23.1,
-        "presses": 19,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "26",
+      "round": 5,
+      "date": "2026-03-22",
+      "home": "서울",
+      "away": "광주",
+      "score": "5:0",
+      "result": "L",
+      "venue": "서울 월드컵"
+    },
+    {
+      "game_id": "80",
+      "round": 14,
+      "date": "2026-05-12",
+      "home": "광주",
+      "away": "서울",
+      "score": "0:1",
+      "result": "L",
+      "venue": "광주 월드컵"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "광주",
@@ -354,7 +331,7 @@
       "avg_pass_pct": 79.1,
       "avg_final_third_pct": 21.1,
       "avg_presses": 18.0,
-      "avg_x": 50.0,
+      "avg_x": 45.2,
       "samples": 5
     },
     "opponent": {
@@ -376,7 +353,7 @@
       "avg_pass_pct": 76.9,
       "avg_final_third_pct": 27.9,
       "avg_presses": 22.6,
-      "avg_x": 48.3,
+      "avg_x": 47.5,
       "samples": 5
     }
   },

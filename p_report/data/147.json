@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-25 19:00 KST",
     "date_md": "08/25",
     "label": "제주 VS 포항 (147, 08/25)",
-    "hours_to_kickoff": 31.3,
+    "hours_to_kickoff": 28.5,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-08-24T11:39:10.514521+09:00",
+    "generated_at": "2026-08-24T14:27:00.392278+09:00",
     "preview_hours": 48.0
   },
   "headline": "25R PREVIEW · 제주 vs 포항",
@@ -36,6 +36,7 @@
   "briefing": [
     "제주 vs 포항. 제주 최근 W D W W D (3승 2무 0패 / 최근 5경기). 포항 최근 L L L W L (1승 0무 4패 / 최근 5경기).",
     "최근 5경기 평균 — 제주 xG 1.63·슈팅 15.6, 포항 xG 0.99·슈팅 11.2. 패스 성공률 71.6% vs 83.1%.",
+    "올 시즌 맞대결 2경기 — 제주 기준 2승 0무 0패.",
     "경기장 제주 월드컵 · 제주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
@@ -109,10 +110,10 @@
     "summary": "최근 5경기 기준 — 제주 xG 1.63 / xGA 1.49, 포항 xG 0.99 / xGA 1.28."
   },
   "h2h_summary": {
-    "wins": 0,
+    "wins": 2,
     "draws": 0,
     "losses": 0,
-    "games": 0
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -131,12 +132,7 @@
         "shots": 30,
         "sot": 5,
         "goals_for": 2,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 80.4,
-        "final_third_pct": 36.0,
-        "presses": 29,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "126",
@@ -153,12 +149,7 @@
         "shots": 14,
         "sot": 5,
         "goals_for": 3,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 75.1,
-        "final_third_pct": 26.7,
-        "presses": 27,
-        "stats_source": "portal"
+        "goals_against": 3
       },
       {
         "game_id": "131",
@@ -192,12 +183,7 @@
         "shots": 12,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 67.3,
-        "final_third_pct": 22.5,
-        "presses": 22,
-        "stats_source": "portal"
+        "goals_against": 0
       },
       {
         "game_id": "142",
@@ -214,12 +200,7 @@
         "shots": 13,
         "sot": 5,
         "goals_for": 0,
-        "goals_against": 0,
-        "stats_limited": false,
-        "pass_pct": 68.0,
-        "final_third_pct": 25.8,
-        "presses": 19,
-        "stats_source": "portal"
+        "goals_against": 0
       }
     ],
     "opponent": [
@@ -255,12 +236,7 @@
         "shots": 9,
         "sot": 2,
         "goals_for": 0,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 80.4,
-        "final_third_pct": 17.1,
-        "presses": 9,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "132",
@@ -277,12 +253,7 @@
         "shots": 10,
         "sot": 0,
         "goals_for": 0,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 83.2,
-        "final_third_pct": 20.9,
-        "presses": 16,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "133",
@@ -299,12 +270,7 @@
         "shots": 5,
         "sot": 2,
         "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 86.9,
-        "final_third_pct": 10.1,
-        "presses": 5,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "141",
@@ -321,16 +287,32 @@
         "shots": 15,
         "sot": 3,
         "goals_for": 0,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 85.0,
-        "final_third_pct": 29.4,
-        "presses": 34,
-        "stats_source": "portal"
+        "goals_against": 3
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "37",
+      "round": 7,
+      "date": "2026-04-11",
+      "home": "포항",
+      "away": "제주",
+      "score": "0:2",
+      "result": "W",
+      "venue": "포항 스틸야드"
+    },
+    {
+      "game_id": "106",
+      "round": 18,
+      "date": "2026-07-18",
+      "home": "제주",
+      "away": "포항",
+      "score": "2:1",
+      "result": "W",
+      "venue": "제주 월드컵"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "제주",
@@ -353,7 +335,7 @@
       "avg_pass_pct": 71.6,
       "avg_final_third_pct": 26.0,
       "avg_presses": 21.2,
-      "avg_x": 48.2,
+      "avg_x": 46.8,
       "samples": 5
     },
     "opponent": {
@@ -376,7 +358,7 @@
       "avg_pass_pct": 83.1,
       "avg_final_third_pct": 21.1,
       "avg_presses": 18.6,
-      "avg_x": 50.1,
+      "avg_x": 46.8,
       "samples": 5
     }
   },

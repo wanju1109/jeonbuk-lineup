@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "강원 VS 포항 (156, 08/30)",
-    "hours_to_kickoff": 151.3,
+    "hours_to_kickoff": 148.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-24T11:41:48.196789+09:00",
+    "generated_at": "2026-08-24T14:27:00.397194+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 강원 vs 포항",
@@ -36,6 +36,7 @@
   "briefing": [
     "강원 vs 포항. 강원 최근 D L L D L (0승 2무 3패 / 최근 5경기). 포항 최근 L L L W L (1승 0무 4패 / 최근 5경기).",
     "최근 5경기 평균 — 강원 xG 1.07·슈팅 11.0, 포항 xG 0.99·슈팅 11.2. 패스 성공률 71.2% vs 83.1%.",
+    "올 시즌 맞대결 2경기 — 강원 기준 0승 1무 1패.",
     "경기장 강릉하이원아레나 · 강원 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
@@ -108,9 +109,9 @@
   },
   "h2h_summary": {
     "wins": 0,
-    "draws": 0,
-    "losses": 0,
-    "games": 0
+    "draws": 1,
+    "losses": 1,
+    "games": 2
   },
   "form": {
     "jeonbuk": [
@@ -129,12 +130,7 @@
         "shots": 10,
         "sot": 6,
         "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 64.3,
-        "final_third_pct": 20.1,
-        "presses": 11,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "117",
@@ -151,12 +147,7 @@
         "shots": 18,
         "sot": 7,
         "goals_for": 1,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 74.3,
-        "final_third_pct": 37.7,
-        "presses": 33,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "121",
@@ -173,12 +164,7 @@
         "shots": 12,
         "sot": 3,
         "goals_for": 0,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 77.1,
-        "final_third_pct": 30.4,
-        "presses": 28,
-        "stats_source": "portal"
+        "goals_against": 3
       },
       {
         "game_id": "138",
@@ -195,12 +181,7 @@
         "shots": 11,
         "sot": 4,
         "goals_for": 2,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 69.3,
-        "final_third_pct": 22.3,
-        "presses": 23,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "143",
@@ -217,12 +198,7 @@
         "shots": 4,
         "sot": 2,
         "goals_for": 0,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 70.9,
-        "final_third_pct": 13.0,
-        "presses": 3,
-        "stats_source": "portal"
+        "goals_against": 3
       }
     ],
     "opponent": [
@@ -258,12 +234,7 @@
         "shots": 9,
         "sot": 2,
         "goals_for": 0,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 80.4,
-        "final_third_pct": 17.1,
-        "presses": 9,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "132",
@@ -280,12 +251,7 @@
         "shots": 10,
         "sot": 0,
         "goals_for": 0,
-        "goals_against": 2,
-        "stats_limited": false,
-        "pass_pct": 83.2,
-        "final_third_pct": 20.9,
-        "presses": 16,
-        "stats_source": "portal"
+        "goals_against": 2
       },
       {
         "game_id": "133",
@@ -302,12 +268,7 @@
         "shots": 5,
         "sot": 2,
         "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "pass_pct": 86.9,
-        "final_third_pct": 10.1,
-        "presses": 5,
-        "stats_source": "portal"
+        "goals_against": 1
       },
       {
         "game_id": "141",
@@ -324,16 +285,32 @@
         "shots": 15,
         "sot": 3,
         "goals_for": 0,
-        "goals_against": 3,
-        "stats_limited": false,
-        "pass_pct": 85.0,
-        "final_third_pct": 29.4,
-        "presses": 34,
-        "stats_source": "portal"
+        "goals_against": 3
       }
     ]
   },
-  "h2h": [],
+  "h2h": [
+    {
+      "game_id": "7",
+      "round": 2,
+      "date": "2026-03-28",
+      "home": "포항",
+      "away": "강원",
+      "score": "1:0",
+      "result": "L",
+      "venue": "포항 스틸야드"
+    },
+    {
+      "game_id": "71",
+      "round": 12,
+      "date": "2026-05-05",
+      "home": "강원",
+      "away": "포항",
+      "score": "1:1",
+      "result": "D",
+      "venue": "강릉하이원아레나"
+    }
+  ],
   "style": {
     "jeonbuk": {
       "name": "강원",
@@ -355,7 +332,7 @@
       "avg_pass_pct": 71.2,
       "avg_final_third_pct": 24.7,
       "avg_presses": 19.6,
-      "avg_x": 50.0,
+      "avg_x": 47.7,
       "samples": 5
     },
     "opponent": {
@@ -378,7 +355,7 @@
       "avg_pass_pct": 83.1,
       "avg_final_third_pct": 21.1,
       "avg_presses": 18.6,
-      "avg_x": 50.1,
+      "avg_x": 46.8,
       "samples": 5
     }
   },
