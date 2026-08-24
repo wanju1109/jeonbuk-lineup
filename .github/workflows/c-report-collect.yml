@@ -1,0 +1,76 @@
+name: c_report chalk board collect
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Meet year (blank = current year)"
+        required: false
+        default: ""
+      round:
+        description: "Round only (blank = all rounds)"
+        required: false
+        default: ""
+      game_id:
+        description: "Single game id (optional)"
+        required: false
+        default: ""
+      team:
+        description: "Team filter (default 전북; leave blank with game_id to collect any club)"
+        required: false
+        default: "전북"
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect chalk board + schedule
+        env:
+          KLEAGUE_YEAR: ${{ github.event.inputs.year }}
+          KLEAGUE_ROUND: ${{ github.event.inputs.round }}
+          KLEAGUE_GAME_ID: ${{ github.event.inputs.game_id }}
+          KLEAGUE_MEET_SEQ: "1"
+          KLEAGUE_TEAM: ${{ github.event.inputs.team }}
+        run: |
+          set -e
+          if [ -z "$KLEAGUE_YEAR" ]; then
+            export KLEAGUE_YEAR="$(date +%Y)"
+          fi
+          # Cron / empty team without game_id → Jeonbuk chalk + full schedule.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            export KLEAGUE_TEAM="전북"
+          elif [ -z "${{ github.event.inputs.game_id }}" ] && [ -z "$KLEAGUE_TEAM" ]; then
+            export KLEAGUE_TEAM="전북"
+          fi
+          # Blank team + game_id → collect that match for any club.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+            && [ -n "${{ github.event.inputs.game_id }}" ] \
+            && [ "${{ github.event.inputs.team }}" = "" ]; then
+            export KLEAGUE_TEAM="*"
+          fi
+          python c_report/scripts/collect_chalkboard.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add c_report/data || true
+          if git diff --staged --quiet; then
+            echo "No data changes"
+            exit 0
+          fi
+          git commit -m "chore(c_report): update chalk board match data"
+          git push
