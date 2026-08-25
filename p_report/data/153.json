@@ -25,22 +25,22 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "광주 VS 서울 (153, 08/30)",
-    "hours_to_kickoff": 119.0,
+    "hours_to_kickoff": 115.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-25T20:01:18.102777+09:00",
+    "generated_at": "2026-08-25T23:32:25.439729+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 광주 vs 서울",
   "thesis": "광주 vs 서울. 광주 최근 L L D L L, 서울 최근 D D W W D. 홈 광주이(가) 템포를 가져가며 xG 1.36 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "광주 vs 서울. 광주 최근 L L D L L (0승 1무 4패 / 최근 5경기). 서울 최근 D D W W D (2승 3무 0패 / 최근 5경기).",
-    "최근 5경기 평균 — 광주 xG 1.36·슈팅 11.6, 서울 xG 1.28·슈팅 9.6. 패스 성공률 79.1% vs 77.2%.",
+    "최근 5경기 평균 — 광주 xG 1.36·슈팅 11.6, 서울 xG 1.55·슈팅 12.6. 패스 성공률 79.1% vs 77.0%.",
     "올 시즌 맞대결 2경기 — 광주 기준 0승 0무 2패.",
     "경기장 광주 월드컵 · 광주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "광주은 부진, 수비 기회 허용, 낮은 블록형 흐름이고, 서울은(는) 수비 단단, 낮은 블록형 그림입니다. 최근 xG 1.36 vs 1.28, 슈팅 11.6 vs 9.6, 파이널 서드 터치 21.1% vs 27.5%입니다.",
+    "contrast": "광주은 부진, 수비 기회 허용, 낮은 블록형 흐름이고, 서울은(는) 기회 창출↑, 슈팅 많음, 수비 단단 그림입니다. 최근 xG 1.36 vs 1.55, 슈팅 11.6 vs 12.6, 파이널 서드 터치 21.1% vs 27.3%입니다.",
     "edge": [
       "홈 이점(광주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -53,6 +53,7 @@
       "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
     ],
     "caution": [
+      "서울 압박 시도가 많습니다. 광주 빌드업 첫 패스 실수를 줄여야 합니다.",
       "서울 역습 첫 패스와 광주의 앞공간 커버."
     ]
   },
@@ -61,49 +62,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.36,
-        "opponent": 1.28,
-        "better": "jeonbuk"
+        "opponent": 1.55,
+        "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.42,
-        "opponent": 0.63,
+        "opponent": 0.69,
         "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 11.6,
-        "opponent": 9.6,
-        "better": "jeonbuk"
+        "opponent": 12.6,
+        "better": "opponent"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.2,
-        "opponent": 4.8,
+        "opponent": 5.4,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 79.1,
-        "opponent": 77.2,
+        "opponent": 77.0,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 21.1,
-        "opponent": 27.5,
+        "opponent": 27.3,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 18.0,
-        "opponent": 15.4,
-        "better": "jeonbuk"
+        "opponent": 20.8,
+        "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 광주 xG 1.36 / xGA 1.42, 서울 xG 1.28 / xGA 0.63."
+    "summary": "최근 5경기 기준 — 광주 xG 1.36 / xGA 1.42, 서울 xG 1.55 / xGA 0.69."
   },
   "h2h_summary": {
     "wins": 0,
@@ -278,16 +279,16 @@
         "result": "D",
         "opponent": "부천",
         "ha": "H",
-        "xg": 0.13,
-        "xga": 0.07,
-        "shots": 2,
-        "sot": 0,
+        "xg": 1.48,
+        "xga": 0.37,
+        "shots": 17,
+        "sot": 3,
         "goals_for": 0,
         "goals_against": 0,
         "stats_limited": false,
-        "pass_pct": 81.2,
-        "final_third_pct": 37.7,
-        "presses": 10,
+        "pass_pct": 80.3,
+        "final_third_pct": 36.4,
+        "presses": 37,
         "stats_source": "portal"
       }
     ]
@@ -342,20 +343,23 @@
       "name": "서울",
       "team_id": "K09",
       "tags": [
+        "기회 창출↑",
+        "슈팅 많음",
         "수비 단단",
+        "적극 압박",
         "낮은 블록형"
       ],
       "record": "2승 3무 0패 / 최근 5경기",
       "goals_for": 10,
       "goals_against": 1,
       "goal_diff": 9,
-      "avg_xg": 1.28,
-      "avg_xga": 0.63,
-      "avg_shots": 9.6,
-      "avg_sot": 4.8,
-      "avg_pass_pct": 77.2,
-      "avg_final_third_pct": 27.5,
-      "avg_presses": 15.4,
+      "avg_xg": 1.55,
+      "avg_xga": 0.69,
+      "avg_shots": 12.6,
+      "avg_sot": 5.4,
+      "avg_pass_pct": 77.0,
+      "avg_final_third_pct": 27.3,
+      "avg_presses": 20.8,
       "avg_x": 45.9,
       "samples": 5
     }
@@ -388,6 +392,7 @@
       "key": "watch",
       "label": "서울 경계 포인트",
       "items": [
+        "서울 압박 시도가 많습니다. 광주 빌드업 첫 패스 실수를 줄여야 합니다.",
         "서울 역습 첫 패스와 광주의 앞공간 커버."
       ]
     }

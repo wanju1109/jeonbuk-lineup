@@ -25,24 +25,23 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "강원 VS 포항 (156, 08/30)",
-    "hours_to_kickoff": 119.0,
+    "hours_to_kickoff": 115.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-25T20:01:34.889376+09:00",
+    "generated_at": "2026-08-25T23:32:41.158511+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 강원 vs 포항",
   "thesis": "강원 vs 포항. 강원 최근 D L L D L, 포항 최근 L L W L W. 홈 강원이(가) 템포를 가져가며 xG 1.07 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "강원 vs 포항. 강원 최근 D L L D L (0승 2무 3패 / 최근 5경기). 포항 최근 L L W L W (2승 0무 3패 / 최근 5경기).",
-    "최근 5경기 평균 — 강원 xG 1.07·슈팅 11.0, 포항 xG 0.75·슈팅 8.6. 패스 성공률 71.2% vs 84.2%.",
+    "최근 5경기 평균 — 강원 xG 1.07·슈팅 11.0, 포항 xG 0.89·슈팅 10.0. 패스 성공률 71.2% vs 83.0%.",
     "올 시즌 맞대결 2경기 — 강원 기준 0승 1무 1패.",
     "경기장 강릉하이원아레나 · 강원 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "강원은 부진, 비기는 흐름, 수비 기회 허용 흐름이고, 포항은(는) 부진, 기회 부족, 패스 안정 그림입니다. 최근 xG 1.07 vs 0.75, 슈팅 11.0 vs 8.6, 파이널 서드 터치 24.7% vs 20.0%입니다.",
+    "contrast": "강원은 부진, 비기는 흐름, 수비 기회 허용 흐름이고, 포항은(는) 부진, 기회 부족, 패스 안정 그림입니다. 최근 xG 1.07 vs 0.89, 슈팅 11.0 vs 10.0, 파이널 서드 터치 24.7% vs 19.5%입니다.",
     "edge": [
-      "강원이(가) 최근 xG 1.07로 포항(0.75)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "포항 최근 흐름이 좋지 않습니다. 강원이 실수를 유도할 여지가 있습니다.",
       "홈 이점(강원). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -63,49 +62,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.07,
-        "opponent": 0.75,
+        "opponent": 0.89,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.62,
-        "opponent": 1.03,
+        "opponent": 1.15,
         "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 11.0,
-        "opponent": 8.6,
+        "opponent": 10.0,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.4,
-        "opponent": 1.6,
+        "opponent": 2.2,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 71.2,
-        "opponent": 84.2,
+        "opponent": 83.0,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 24.7,
-        "opponent": 20.0,
+        "opponent": 19.5,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 19.6,
-        "opponent": 13.6,
+        "opponent": 14.8,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 강원 xG 1.07 / xGA 1.62, 포항 xG 0.75 / xGA 1.03."
+    "summary": "최근 5경기 기준 — 강원 xG 1.07 / xGA 1.62, 포항 xG 0.89 / xGA 1.15."
   },
   "h2h_summary": {
     "wins": 0,
@@ -276,20 +275,20 @@
         "date": "2026-08-25",
         "home": "제주",
         "away": "포항",
-        "score": "0:1",
+        "score": "1:2",
         "result": "W",
         "opponent": "제주",
         "ha": "A",
-        "xg": 0.36,
-        "xga": 0.05,
-        "shots": 4,
-        "sot": 1,
-        "goals_for": 1,
-        "goals_against": 0,
+        "xg": 1.04,
+        "xga": 0.64,
+        "shots": 11,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 1,
         "stats_limited": false,
-        "pass_pct": 85.4,
-        "final_third_pct": 22.6,
-        "presses": 4,
+        "pass_pct": 79.7,
+        "final_third_pct": 20.1,
+        "presses": 10,
         "stats_source": "portal"
       }
     ]
@@ -350,16 +349,16 @@
         "낮은 블록형"
       ],
       "record": "2승 0무 3패 / 최근 5경기",
-      "goals_for": 3,
-      "goals_against": 7,
+      "goals_for": 4,
+      "goals_against": 8,
       "goal_diff": -4,
-      "avg_xg": 0.75,
-      "avg_xga": 1.03,
-      "avg_shots": 8.6,
-      "avg_sot": 1.6,
-      "avg_pass_pct": 84.2,
-      "avg_final_third_pct": 20.0,
-      "avg_presses": 13.6,
+      "avg_xg": 0.89,
+      "avg_xga": 1.15,
+      "avg_shots": 10.0,
+      "avg_sot": 2.2,
+      "avg_pass_pct": 83.0,
+      "avg_final_third_pct": 19.5,
+      "avg_presses": 14.8,
       "avg_x": 46.7,
       "samples": 5
     }
@@ -369,7 +368,6 @@
       "key": "edge",
       "label": "강원이 유리한 점",
       "items": [
-        "강원이(가) 최근 xG 1.07로 포항(0.75)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
         "포항 최근 흐름이 좋지 않습니다. 강원이 실수를 유도할 여지가 있습니다.",
         "홈 이점(강원). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
       ]
