@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T08:24:45.586030+00:00",
+  "updated_at": "2026-08-25T11:00:59.291458+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -312,6 +312,19 @@
       "attendance": 18841,
       "file": "./data/140.json",
       "label": "전북 VS 울산 (140, 08/22)"
+    },
+    {
+      "game_id": "146",
+      "year": "2026",
+      "round": 25,
+      "home": "김천",
+      "away": "전북",
+      "score": "0:0",
+      "date": "2026-08-25",
+      "venue": "김천 종합",
+      "attendance": 0,
+      "file": "./data/146.json",
+      "label": "김천 VS 전북 (146, 08/25)"
     }
   ]
 }

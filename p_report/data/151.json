@@ -25,24 +25,24 @@
     "kickoff_label": "2026-08-29 19:00 KST",
     "date_md": "08/29",
     "label": "울산 VS 김천 (151, 08/29)",
-    "hours_to_kickoff": 97.6,
+    "hours_to_kickoff": 95.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-25T17:24:47.155695+09:00",
+    "generated_at": "2026-08-25T20:01:00.782285+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 울산 vs 김천",
-  "thesis": "울산 vs 김천. 울산 최근 W W W D L, 김천 최근 W W D D D. 홈 울산이(가) 템포를 가져가며 xG 1.44 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "울산 vs 김천. 울산 최근 W W W D L, 김천 최근 W D D D D. 홈 울산이(가) 템포를 가져가며 xG 1.44 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "울산 vs 김천. 울산 최근 W W W D L (3승 1무 1패 / 최근 5경기). 김천 최근 W W D D D (2승 3무 0패 / 최근 5경기).",
-    "최근 5경기 평균 — 울산 xG 1.44·슈팅 10.0, 김천 xG 1.15·슈팅 10.8. 패스 성공률 75.1% vs 78.6%.",
+    "울산 vs 김천. 울산 최근 W W W D L (3승 1무 1패 / 최근 5경기). 김천 최근 W D D D D (1승 4무 0패 / 최근 5경기).",
+    "최근 5경기 평균 — 울산 xG 1.44·슈팅 10.0, 김천 xG 0.84·슈팅 8.4. 패스 성공률 75.1% vs 80.5%.",
     "올 시즌 맞대결 2경기 — 울산 기준 1승 1무 0패.",
     "경기장 울산 문수 · 울산 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "울산은 상승세, 기회 창출↑, 낮은 블록형 흐름이고, 김천은(는) 낮은 블록형 그림입니다. 최근 xG 1.44 vs 1.15, 슈팅 10.0 vs 10.8, 파이널 서드 터치 21.8% vs 17.6%입니다.",
+    "contrast": "울산은 상승세, 기회 창출↑, 낮은 블록형 흐름이고, 김천은(는) 비기는 흐름, 기회 부족, 수비 단단 그림입니다. 최근 xG 1.44 vs 0.84, 슈팅 10.0 vs 8.4, 파이널 서드 터치 21.8% vs 19.4%입니다.",
     "edge": [
-      "울산이(가) 최근 xG 1.44로 김천(1.15)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "울산이(가) 최근 xG 1.44로 김천(0.84)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "울산 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
       "홈 이점(울산). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -63,49 +63,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.44,
-        "opponent": 1.15,
+        "opponent": 0.84,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.16,
-        "opponent": 1.18,
-        "better": "jeonbuk"
+        "opponent": 0.76,
+        "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 10.0,
-        "opponent": 10.8,
-        "better": "opponent"
+        "opponent": 8.4,
+        "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.2,
-        "opponent": 4.2,
-        "better": "even"
+        "opponent": 2.8,
+        "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 75.1,
-        "opponent": 78.6,
+        "opponent": 80.5,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 21.8,
-        "opponent": 17.6,
+        "opponent": 19.4,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 16.0,
-        "opponent": 17.6,
+        "opponent": 16.4,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 울산 xG 1.44 / xGA 1.16, 김천 xG 1.15 / xGA 1.18."
+    "summary": "최근 5경기 기준 — 울산 xG 1.44 / xGA 1.16, 김천 xG 0.84 / xGA 0.76."
   },
   "h2h_summary": {
     "wins": 1,
@@ -203,23 +203,6 @@
     ],
     "opponent": [
       {
-        "game_id": "116",
-        "round": 20,
-        "date": "2026-07-25",
-        "home": "김천",
-        "away": "대전",
-        "score": "3:2",
-        "result": "W",
-        "opponent": "대전",
-        "ha": "H",
-        "xg": 1.66,
-        "xga": 2.26,
-        "shots": 14,
-        "sot": 7,
-        "goals_for": 3,
-        "goals_against": 2
-      },
-      {
         "game_id": "123",
         "round": 21,
         "date": "2026-08-01",
@@ -286,6 +269,23 @@
         "sot": 3,
         "goals_for": 0,
         "goals_against": 0
+      },
+      {
+        "game_id": "146",
+        "round": 25,
+        "date": "2026-08-25",
+        "home": "김천",
+        "away": "전북",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "전북",
+        "ha": "H",
+        "xg": 0.11,
+        "xga": 0.12,
+        "shots": 2,
+        "sot": 0,
+        "goals_for": 0,
+        "goals_against": 0
       }
     ]
   },
@@ -338,20 +338,23 @@
       "name": "김천",
       "team_id": "K35",
       "tags": [
+        "비기는 흐름",
+        "기회 부족",
+        "수비 단단",
         "낮은 블록형"
       ],
-      "record": "2승 3무 0패 / 최근 5경기",
-      "goals_for": 5,
-      "goals_against": 3,
-      "goal_diff": 2,
-      "avg_xg": 1.15,
-      "avg_xga": 1.18,
-      "avg_shots": 10.8,
-      "avg_sot": 4.2,
-      "avg_pass_pct": 78.6,
-      "avg_final_third_pct": 17.6,
-      "avg_presses": 17.6,
-      "avg_x": 43.6,
+      "record": "1승 4무 0패 / 최근 5경기",
+      "goals_for": 2,
+      "goals_against": 1,
+      "goal_diff": 1,
+      "avg_xg": 0.84,
+      "avg_xga": 0.76,
+      "avg_shots": 8.4,
+      "avg_sot": 2.8,
+      "avg_pass_pct": 80.5,
+      "avg_final_third_pct": 19.4,
+      "avg_presses": 16.4,
+      "avg_x": 44.8,
       "samples": 5
     }
   },
@@ -360,7 +363,7 @@
       "key": "edge",
       "label": "울산이 유리한 점",
       "items": [
-        "울산이(가) 최근 xG 1.44로 김천(1.15)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+        "울산이(가) 최근 xG 1.44로 김천(0.84)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
         "울산 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
         "홈 이점(울산). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
       ]

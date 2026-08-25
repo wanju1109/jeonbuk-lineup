@@ -25,22 +25,22 @@
     "kickoff_label": "2026-08-29 19:00 KST",
     "date_md": "08/29",
     "label": "부천 VS 안양 (152, 08/29)",
-    "hours_to_kickoff": 97.6,
+    "hours_to_kickoff": 95.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-25T17:24:47.156729+09:00",
+    "generated_at": "2026-08-25T20:01:09.188626+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 부천 vs 안양",
-  "thesis": "부천 vs 안양. 부천 최근 L W D W W, 안양 최근 W L D L L. 홈 부천이(가) 템포를 가져가며 xG 1.17 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "부천 vs 안양. 부천 최근 W D W W D, 안양 최근 W L D L L. 홈 부천이(가) 템포를 가져가며 xG 1.07 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "부천 vs 안양. 부천 최근 L W D W W (3승 1무 1패 / 최근 5경기). 안양 최근 W L D L L (1승 1무 3패 / 최근 5경기).",
-    "최근 5경기 평균 — 부천 xG 1.17·슈팅 10.0, 안양 xG 1.01·슈팅 10.6. 패스 성공률 59.6% vs 73.5%.",
+    "부천 vs 안양. 부천 최근 W D W W D (3승 2무 0패 / 최근 5경기). 안양 최근 W L D L L (1승 1무 3패 / 최근 5경기).",
+    "최근 5경기 평균 — 부천 xG 1.07·슈팅 9.2, 안양 xG 1.01·슈팅 10.6. 패스 성공률 61.2% vs 73.5%.",
     "올 시즌 맞대결 2경기 — 부천 기준 1승 0무 1패.",
     "경기장 부천 종합 · 부천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "부천은 상승세, 수비 기회 허용, 낮은 블록형 흐름이고, 안양은(는) 부진, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.17 vs 1.01, 슈팅 10.0 vs 10.6, 파이널 서드 터치 21.9% vs 22.5%입니다.",
+    "contrast": "부천은 상승세, 수비 기회 허용, 낮은 블록형 흐름이고, 안양은(는) 부진, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.07 vs 1.01, 슈팅 9.2 vs 10.6, 파이널 서드 터치 22.2% vs 22.5%입니다.",
     "edge": [
       "부천 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
       "안양 최근 흐름이 좋지 않습니다. 부천이 실수를 유도할 여지가 있습니다.",
@@ -62,50 +62,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.17,
+        "jeonbuk": 1.07,
         "opponent": 1.01,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.57,
+        "jeonbuk": 1.33,
         "opponent": 2.05,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 10.0,
+        "jeonbuk": 9.2,
         "opponent": 10.6,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 4.2,
+        "jeonbuk": 4.4,
         "opponent": 3.8,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 59.6,
+        "jeonbuk": 61.2,
         "opponent": 73.5,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 21.9,
+        "jeonbuk": 22.2,
         "opponent": 22.5,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 13.8,
+        "jeonbuk": 12.0,
         "opponent": 15.8,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 부천 xG 1.17 / xGA 1.57, 안양 xG 1.01 / xGA 2.05."
+    "summary": "최근 5경기 기준 — 부천 xG 1.07 / xGA 1.33, 안양 xG 1.01 / xGA 2.05."
   },
   "h2h_summary": {
     "wins": 1,
@@ -115,23 +115,6 @@
   },
   "form": {
     "jeonbuk": [
-      {
-        "game_id": "119",
-        "round": 20,
-        "date": "2026-07-26",
-        "home": "인천",
-        "away": "부천",
-        "score": "2:0",
-        "result": "L",
-        "opponent": "인천",
-        "ha": "A",
-        "xg": 0.56,
-        "xga": 1.33,
-        "shots": 6,
-        "sot": 1,
-        "goals_for": 0,
-        "goals_against": 2
-      },
       {
         "game_id": "121",
         "round": 21,
@@ -199,6 +182,28 @@
         "sot": 4,
         "goals_for": 3,
         "goals_against": 0
+      },
+      {
+        "game_id": "145",
+        "round": 25,
+        "date": "2026-08-25",
+        "home": "서울",
+        "away": "부천",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "서울",
+        "ha": "A",
+        "xg": 0.07,
+        "xga": 0.13,
+        "shots": 2,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 0,
+        "stats_limited": false,
+        "pass_pct": 73.0,
+        "final_third_pct": 22.3,
+        "presses": 6,
+        "stats_source": "portal"
       }
     ],
     "opponent": [
@@ -320,18 +325,18 @@
         "수비 기회 허용",
         "낮은 블록형"
       ],
-      "record": "3승 1무 1패 / 최근 5경기",
+      "record": "3승 2무 0패 / 최근 5경기",
       "goals_for": 9,
-      "goals_against": 4,
-      "goal_diff": 5,
-      "avg_xg": 1.17,
-      "avg_xga": 1.57,
-      "avg_shots": 10.0,
-      "avg_sot": 4.2,
-      "avg_pass_pct": 59.6,
-      "avg_final_third_pct": 21.9,
-      "avg_presses": 13.8,
-      "avg_x": 41.6,
+      "goals_against": 2,
+      "goal_diff": 7,
+      "avg_xg": 1.07,
+      "avg_xga": 1.33,
+      "avg_shots": 9.2,
+      "avg_sot": 4.4,
+      "avg_pass_pct": 61.2,
+      "avg_final_third_pct": 22.2,
+      "avg_presses": 12.0,
+      "avg_x": 43.4,
       "samples": 5
     },
     "opponent": {

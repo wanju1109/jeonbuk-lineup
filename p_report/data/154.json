@@ -1,0 +1,403 @@
+{
+  "meta": {
+    "game_id": "154",
+    "year": "2026",
+    "round": 26,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "인천",
+      "team_id": "K18"
+    },
+    "away": {
+      "name": "전북",
+      "team_id": "K05"
+    },
+    "opponent": "인천",
+    "ha": "A",
+    "jeonbuk_match": true,
+    "venue": "인천 전용",
+    "attendance_hint": {
+      "avg": 10152,
+      "games": 12,
+      "total": 121824
+    },
+    "kickoff": "2026-08-30T19:00:00+09:00",
+    "kickoff_label": "2026-08-30 19:00 KST",
+    "date_md": "08/30",
+    "label": "인천 VS 전북 (154, 08/30)",
+    "hours_to_kickoff": 119.0,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-08-25T20:01:09.190310+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "26R PREVIEW · 인천 vs 전북",
+  "thesis": "인천 vs 전북. 전북 최근 D L L W D, 인천 최근 W W D D W. 원정에서 기회 질(xG)과 슈팅 빈도를 유지하는 것이 이 경기의 핵심입니다.",
+  "briefing": [
+    "인천 vs 전북. 전북 최근 D L L W D (1승 2무 2패 / 최근 5경기, 4득 6실). 인천은 W W D D W (3승 2무 0패 / 최근 5경기, 9득 5실).",
+    "최근 5경기 평균 — 전북 xG 1.5·슈팅 16.6·유효슈팅 5.6, 인천 xG 1.64·슈팅 13.0·유효슈팅 4.2. 패스 성공률 78.4% vs 78.0%.",
+    "올 시즌 맞대결 2경기 — 전북 0승 0무 2패.",
+    "경기장 인천 전용 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다."
+  ],
+  "scout": {
+    "contrast": "전북은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 인천은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.5 vs 1.64, 슈팅 16.6 vs 13.0, 파이널 서드 터치 26.1% vs 27.4%, 평균 터치 높이 48.2 vs 48.9입니다.",
+    "edge": [
+      "전북이 허용 xG 0.8로 수비 기회 관리가 인천(1.0)보다 낫습니다."
+    ],
+    "risk": [
+      "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다.",
+      "인천이(가) 상승세입니다. 한 방에 무너지지 않게 세트피스·역습 첫 패스를 막아야 합니다."
+    ],
+    "target": [
+      "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
+      "인천의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
+      "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
+    ],
+    "caution": [
+      "인천의 압박 시도가 많습니다. 빌드업 첫 패스 실패를 줄이지 않으면 박스 위기가 바로 옵니다.",
+      "인천 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 1.5,
+        "opponent": 1.64,
+        "better": "opponent"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 0.8,
+        "opponent": 1.0,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 16.6,
+        "opponent": 13.0,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 5.6,
+        "opponent": 4.2,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 78.4,
+        "opponent": 78.0,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 26.1,
+        "opponent": 27.4,
+        "suffix": "%",
+        "better": "opponent"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 24.0,
+        "opponent": 20.0,
+        "better": "jeonbuk"
+      }
+    ],
+    "summary": "최근 5경기 기준 — 전북 xG 1.5 / xGA 0.8, 인천 xG 1.64 / xGA 1.0."
+  },
+  "h2h_summary": {
+    "wins": 0,
+    "draws": 0,
+    "losses": 2,
+    "games": 2
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "122",
+        "round": 21,
+        "date": "2026-08-01",
+        "home": "전북",
+        "away": "서울",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "서울",
+        "ha": "H",
+        "xg": 1.07,
+        "xga": 0.36,
+        "shots": 14,
+        "sot": 5,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      {
+        "game_id": "131",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "전북",
+        "away": "제주",
+        "score": "1:3",
+        "result": "L",
+        "opponent": "제주",
+        "ha": "H",
+        "xg": 2.62,
+        "xga": 1.42,
+        "shots": 33,
+        "sot": 12,
+        "goals_for": 1,
+        "goals_against": 3
+      },
+      {
+        "game_id": "137",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "부천",
+        "away": "전북",
+        "score": "3:2",
+        "result": "L",
+        "opponent": "부천",
+        "ha": "A",
+        "xg": 2.62,
+        "xga": 1.63,
+        "shots": 24,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 3
+      },
+      {
+        "game_id": "140",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "전북",
+        "away": "울산",
+        "score": "1:0",
+        "result": "W",
+        "opponent": "울산",
+        "ha": "H",
+        "xg": 1.08,
+        "xga": 0.48,
+        "shots": 10,
+        "sot": 6,
+        "goals_for": 1,
+        "goals_against": 0
+      },
+      {
+        "game_id": "146",
+        "round": 25,
+        "date": "2026-08-25",
+        "home": "김천",
+        "away": "전북",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "김천",
+        "ha": "A",
+        "xg": 0.12,
+        "xga": 0.11,
+        "shots": 2,
+        "sot": 1,
+        "goals_for": 0,
+        "goals_against": 0
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "110",
+        "round": 19,
+        "date": "2026-07-21",
+        "home": "울산",
+        "away": "인천",
+        "score": "1:2",
+        "result": "W",
+        "opponent": "울산",
+        "ha": "A",
+        "xg": 3.52,
+        "xga": 0.64,
+        "shots": 21,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 1
+      },
+      {
+        "game_id": "119",
+        "round": 20,
+        "date": "2026-07-26",
+        "home": "인천",
+        "away": "부천",
+        "score": "2:0",
+        "result": "W",
+        "opponent": "부천",
+        "ha": "H",
+        "xg": 1.33,
+        "xga": 0.56,
+        "shots": 16,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 0
+      },
+      {
+        "game_id": "126",
+        "round": 21,
+        "date": "2026-08-02",
+        "home": "제주",
+        "away": "인천",
+        "score": "3:3",
+        "result": "D",
+        "opponent": "제주",
+        "ha": "A",
+        "xg": 1.43,
+        "xga": 1.48,
+        "shots": 11,
+        "sot": 6,
+        "goals_for": 3,
+        "goals_against": 3
+      },
+      {
+        "game_id": "136",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "인천",
+        "away": "김천",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "김천",
+        "ha": "H",
+        "xg": 0.83,
+        "xga": 1.13,
+        "shots": 9,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 1
+      },
+      {
+        "game_id": "144",
+        "round": 24,
+        "date": "2026-08-23",
+        "home": "광주",
+        "away": "인천",
+        "score": "0:1",
+        "result": "W",
+        "opponent": "광주",
+        "ha": "A",
+        "xg": 1.1,
+        "xga": 1.18,
+        "shots": 8,
+        "sot": 1,
+        "goals_for": 1,
+        "goals_against": 0
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "51",
+      "round": 9,
+      "date": "2026-04-21",
+      "home": "전북",
+      "away": "인천",
+      "score": "1:2",
+      "result": "L",
+      "venue": "전주 월드컵"
+    },
+    {
+      "game_id": "105",
+      "round": 18,
+      "date": "2026-07-18",
+      "home": "인천",
+      "away": "전북",
+      "score": "1:0",
+      "result": "L",
+      "venue": "인천 전용"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "전북",
+      "team_id": "K05",
+      "tags": [
+        "비기는 흐름",
+        "기회 창출↑",
+        "슈팅 많음",
+        "적극 압박"
+      ],
+      "record": "1승 2무 2패 / 최근 5경기",
+      "goals_for": 4,
+      "goals_against": 6,
+      "goal_diff": -2,
+      "avg_xg": 1.5,
+      "avg_xga": 0.8,
+      "avg_shots": 16.6,
+      "avg_sot": 5.6,
+      "avg_pass_pct": 78.4,
+      "avg_final_third_pct": 26.1,
+      "avg_presses": 24.0,
+      "avg_x": 48.2,
+      "samples": 5
+    },
+    "opponent": {
+      "name": "인천",
+      "team_id": "K18",
+      "tags": [
+        "상승세",
+        "기회 창출↑",
+        "슈팅 많음",
+        "적극 압박"
+      ],
+      "record": "3승 2무 0패 / 최근 5경기",
+      "goals_for": 9,
+      "goals_against": 5,
+      "goal_diff": 4,
+      "avg_xg": 1.64,
+      "avg_xga": 1.0,
+      "avg_shots": 13.0,
+      "avg_sot": 4.2,
+      "avg_pass_pct": 78.0,
+      "avg_final_third_pct": 27.4,
+      "avg_presses": 20.0,
+      "avg_x": 48.9,
+      "samples": 5
+    }
+  },
+  "cards": [
+    {
+      "key": "edge",
+      "label": "전북이 유리한 점",
+      "items": [
+        "전북이 허용 xG 0.8로 수비 기회 관리가 인천(1.0)보다 낫습니다."
+      ]
+    },
+    {
+      "key": "risk",
+      "label": "전북이 불리한·조심할 점",
+      "items": [
+        "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다.",
+        "인천이(가) 상승세입니다. 한 방에 무너지지 않게 세트피스·역습 첫 패스를 막아야 합니다."
+      ]
+    },
+    {
+      "key": "key",
+      "label": "관전 포인트",
+      "items": [
+        "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
+        "인천의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
+        "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
+      ]
+    },
+    {
+      "key": "watch",
+      "label": "인천 경계 포인트",
+      "items": [
+        "인천의 압박 시도가 많습니다. 빌드업 첫 패스 실패를 줄이지 않으면 박스 위기가 바로 옵니다.",
+        "인천 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
+      ]
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+}
