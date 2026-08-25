@@ -25,17 +25,17 @@
     "kickoff_label": "2026-08-29 19:00 KST",
     "date_md": "08/29",
     "label": "부천 VS 안양 (152, 08/29)",
-    "hours_to_kickoff": 86.1,
+    "hours_to_kickoff": 84.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-26T04:51:19.365619+09:00",
+    "generated_at": "2026-08-26T07:01:58.697880+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 부천 vs 안양",
   "thesis": "부천 vs 안양. 부천 최근 W D W W D, 안양 최근 W L D L L. 홈 부천이(가) 템포를 가져가며 xG 1.13 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "부천 vs 안양. 부천 최근 W D W W D (3승 2무 0패 / 최근 5경기). 안양 최근 W L D L L (1승 1무 3패 / 최근 5경기).",
-    "최근 5경기 평균 — 부천 xG 1.13·슈팅 9.8, 안양 xG 1.01·슈팅 10.6. 패스 성공률 59.3% vs 73.5%.",
+    "최근 5경기 평균 — 부천 xG 1.13·슈팅 9.8, 안양 xG 1.01·슈팅 10.6. 패스 성공률 59.1% vs 73.5%.",
     "올 시즌 맞대결 2경기 — 부천 기준 1승 0무 1패.",
     "경기장 부천 종합 · 부천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -86,7 +86,7 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 59.3,
+        "jeonbuk": 59.1,
         "opponent": 73.5,
         "suffix": "%",
         "better": "opponent"
@@ -200,7 +200,7 @@
         "goals_for": 0,
         "goals_against": 0,
         "stats_limited": false,
-        "pass_pct": 63.2,
+        "pass_pct": 62.4,
         "final_third_pct": 20.1,
         "presses": 16,
         "stats_source": "portal"
@@ -333,7 +333,7 @@
       "avg_xga": 1.6,
       "avg_shots": 9.8,
       "avg_sot": 4.6,
-      "avg_pass_pct": 59.3,
+      "avg_pass_pct": 59.1,
       "avg_final_third_pct": 21.7,
       "avg_presses": 14.0,
       "avg_x": 43.4,
