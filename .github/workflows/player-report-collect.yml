@@ -51,6 +51,7 @@ jobs:
             export KLEAGUE_FORCE=1
           fi
           python player_report/scripts/collect_players.py
+          python player_report/scripts/aggregate_events.py
 
       - name: Commit data
         run: |

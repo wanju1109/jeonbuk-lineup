@@ -63,14 +63,17 @@ jobs:
           fi
           python c_report/scripts/collect_chalkboard.py
 
+      - name: Fold chalk events into player index
+        run: python player_report/scripts/aggregate_events.py
+
       - name: Commit data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add c_report/data || true
+          git add c_report/data player_report/data/events_2026.json || true
           if git diff --staged --quiet; then
             echo "No data changes"
             exit 0
           fi
-          git commit -m "chore(c_report): update chalk board match data"
+          git commit -m "chore(c_report): update chalk board and player event totals"
           git push

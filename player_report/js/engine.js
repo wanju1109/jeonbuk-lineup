@@ -153,13 +153,29 @@ const PlayerEngine = (() => {
    * GK: clean-sheet rate and goals-against per game.
    * Caps are K League 1 season anchors, not FM attributes.
    */
-  function scoreCard(p) {
+  function evRow(p, events) {
+    if (!events) return null;
+    const id = String(p?.id || "");
+    if (events[id]) return events[id];
+    if (events.players && events.players[id]) return events.players[id];
+    return null;
+  }
+
+  function pg(n, games) {
+    if (!games) return 0;
+    return n / games;
+  }
+
+  function scoreCard(p, events) {
     const gk = isGk(p);
     const y = yearMerged(p, YEAR) || { apps: 0, a: 0, b: 0 };
     const c = career(p);
     const apps = y.apps;
     const appsAxis = pct(apps / 25);
     const careerAppsAxis = pct(c.apps / 200);
+    const ev = evRow(p, events);
+    const chalkGames = ev ? num(ev.games) : 0;
+    const chalk = chalkGames >= 3;
     let axes;
     let total;
     let attack;
@@ -167,6 +183,7 @@ const PlayerEngine = (() => {
     let involvements;
     let per = 0;
     let formula;
+    let tendNote;
 
     if (gk) {
       const ga = y.a;
@@ -181,18 +198,37 @@ const PlayerEngine = (() => {
       involvements = cs;
       per = csRate;
       attack = 0;
-      defend = Math.round(0.5 * axCsRate + 0.5 * axGa);
-      total = Math.round(0.35 * appsAxis + 0.35 * axCsRate + 0.3 * axGa);
-      formula =
-        "키퍼 기여점 = 0.35×min(출장/25,1) + 0.35×min(클린율/45%,1) + 0.30×실점억제(경기당 실점 0→100, 1.5→0)";
-      axes = [
-        { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
-        { key: "cs", label: "클린시트", value: axCs, raw: `${cs}회` },
-        { key: "csRate", label: "클린율", value: axCsRate, raw: apps ? `${Math.round(csRate * 100)}%` : "–" },
-        { key: "ga", label: "실점 억제", value: axGa, raw: apps ? `경기당 ${rate(ga, apps)}` : "–" },
-        { key: "cApps", label: "통산 출장", value: careerAppsAxis, raw: `${c.apps}경기` },
-        { key: "cCs", label: "통산 클린율", value: axCCs, raw: c.apps ? `${Math.round(cCsRate * 100)}%` : "–" },
-      ];
+      if (chalk) {
+        const axSave = pct(pg(num(ev.saves), chalkGames) / 4);
+        const axPass = pct(pg(num(ev.pass_ok), chalkGames) / 18);
+        defend = Math.round(0.4 * axCsRate + 0.35 * axGa + 0.25 * axSave);
+        total = Math.round(0.3 * appsAxis + 0.3 * axCsRate + 0.25 * axGa + 0.15 * axSave);
+        formula =
+          "키퍼 기여점 = 출장·클린율·실점억제(공식) + 선방(칠판). 부가기록(Bepro11).";
+        tendNote = `선방 ${ev.saves} · 실점 ${ev.conceded} · 칠판 ${chalkGames}경기`;
+        axes = [
+          { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
+          { key: "csRate", label: "클린율", value: axCsRate, raw: apps ? `${Math.round(csRate * 100)}%` : "–" },
+          { key: "ga", label: "실점 억제", value: axGa, raw: apps ? `경기당 ${rate(ga, apps)}` : "–" },
+          { key: "save", label: "선방", value: axSave, raw: `${num(ev.saves)}회` },
+          { key: "pass", label: "패스 성공", value: axPass, raw: `${num(ev.pass_ok)}/${num(ev.passes)}` },
+          { key: "air", label: "공중볼", value: pct(pg(num(ev.aerial_w), chalkGames) / 2), raw: `${num(ev.aerial_w)}승` },
+        ];
+      } else {
+        defend = Math.round(0.5 * axCsRate + 0.5 * axGa);
+        total = Math.round(0.35 * appsAxis + 0.35 * axCsRate + 0.3 * axGa);
+        formula =
+          "키퍼 기여점 = 0.35×min(출장/25,1) + 0.35×min(클린율/45%,1) + 0.30×실점억제. 칠판 표본이 적어 공식 표만 사용.";
+        tendNote = chalkGames ? `칠판 ${chalkGames}경기뿐이라 공식 클린·실점만.` : "칠판 표본 없음. 공식 클린·실점만.";
+        axes = [
+          { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
+          { key: "cs", label: "클린시트", value: axCs, raw: `${cs}회` },
+          { key: "csRate", label: "클린율", value: axCsRate, raw: apps ? `${Math.round(csRate * 100)}%` : "–" },
+          { key: "ga", label: "실점 억제", value: axGa, raw: apps ? `경기당 ${rate(ga, apps)}` : "–" },
+          { key: "cApps", label: "통산 출장", value: careerAppsAxis, raw: `${c.apps}경기` },
+          { key: "cCs", label: "통산 클린율", value: axCCs, raw: c.apps ? `${Math.round(cCsRate * 100)}%` : "–" },
+        ];
+      }
     } else {
       const g = y.a;
       const a = y.b;
@@ -203,19 +239,47 @@ const PlayerEngine = (() => {
       const axPer = pct(per / 0.4);
       const axInv = pct(involvements / 12);
       const axCInv = pct((c.a + c.b) / 40);
-      attack = axPer;
-      defend = Math.round(appsAxis * (1 - 0.55 * clamp01(per / 0.4)));
-      total = Math.round(0.4 * appsAxis + 0.35 * axInv + 0.25 * axPer);
-      formula =
-        "야수 기여점 = 0.40×min(출장/25,1) + 0.35×min((골+도움)/12,1) + 0.25×min(경기당 골+도움 / 0.40,1)";
-      axes = [
-        { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
-        { key: "g", label: "득점", value: axG, raw: `${g}골` },
-        { key: "ast", label: "도움", value: axA, raw: `${a}도움` },
-        { key: "per", label: "경기당 관여", value: axPer, raw: apps ? rate(involvements, apps) : "–" },
-        { key: "cApps", label: "통산 출장", value: careerAppsAxis, raw: `${c.apps}경기` },
-        { key: "cInv", label: "통산 관여", value: axCInv, raw: `${c.a + c.b} (골+도움)` },
-      ];
+      if (chalk) {
+        const defActs = num(ev.tackle_ok) + num(ev.int) + num(ev.cut) + num(ev.clg);
+        const axShot = pct(pg(num(ev.shots), chalkGames) / 2.4);
+        const axKey = pct(pg(num(ev.keypass), chalkGames) / 1.2);
+        const axDrib = pct(pg(num(ev.dribble_ok), chalkGames) / 2);
+        const axDef = pct(pg(defActs, chalkGames) / 6);
+        const axAir = pct(pg(num(ev.aerial_w), chalkGames) / 3);
+        attack = Math.round(0.3 * axShot + 0.25 * axKey + 0.2 * axDrib + 0.25 * axPer);
+        defend = Math.round(0.7 * axDef + 0.3 * axAir);
+        total = Math.round(0.22 * appsAxis + 0.22 * axInv + 0.28 * attack + 0.28 * defend);
+        formula =
+          "야수 기여점 = 공식 출장·골+도움 + 칠판 슈팅·키패스·드리블(공격) / 태클·차단·클리어·공중볼(수비). Bepro11 부가기록.";
+        tendNote =
+          `공격 슈팅 ${ev.shots}·키패스 ${ev.keypass}·드리블 ${ev.dribble_ok} / ` +
+          `수비 태클 ${ev.tackle_ok}·차단 ${num(ev.int) + num(ev.cut)}·클리어 ${ev.clg}·공중 ${ev.aerial_w} · 칠판 ${chalkGames}경기`;
+        axes = [
+          { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
+          { key: "shot", label: "슈팅", value: axShot, raw: `${num(ev.shots)}회` },
+          { key: "key", label: "키패스", value: axKey, raw: `${num(ev.keypass)}회` },
+          { key: "drib", label: "드리블", value: axDrib, raw: `${num(ev.dribble_ok)}/${num(ev.dribble)}` },
+          { key: "def", label: "수비 개입", value: axDef, raw: `${defActs}회` },
+          { key: "air", label: "공중볼", value: axAir, raw: `${num(ev.aerial_w)}승` },
+        ];
+      } else {
+        attack = axPer;
+        defend = Math.round(appsAxis * (1 - 0.55 * clamp01(per / 0.4)));
+        total = Math.round(0.4 * appsAxis + 0.35 * axInv + 0.25 * axPer);
+        formula =
+          "야수 기여점 = 0.40×출장 + 0.35×(골+도움) + 0.25×경기당 관여. 칠판 표본이 적어 공식 표만 사용.";
+        tendNote = chalkGames
+          ? `칠판 ${chalkGames}경기뿐이라 공격/수비는 공식 골+도움·출장으로 추정.`
+          : "칠판 표본 없음. 공격/수비는 공식 골+도움·출장으로 추정.";
+        axes = [
+          { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
+          { key: "g", label: "득점", value: axG, raw: `${g}골` },
+          { key: "ast", label: "도움", value: axA, raw: `${a}도움` },
+          { key: "per", label: "경기당 관여", value: axPer, raw: apps ? rate(involvements, apps) : "–" },
+          { key: "cApps", label: "통산 출장", value: careerAppsAxis, raw: `${c.apps}경기` },
+          { key: "cInv", label: "통산 관여", value: axCInv, raw: `${c.a + c.b} (골+도움)` },
+        ];
+      }
     }
 
     let tendKey = "balance";
@@ -246,8 +310,12 @@ const PlayerEngine = (() => {
       axes,
       tendKey,
       tendLabel,
+      tendNote,
       needle,
       formula,
+      chalk,
+      chalkGames,
+      ev,
     };
   }
 
@@ -293,7 +361,7 @@ const PlayerEngine = (() => {
       );
     }
     bits.push(
-      "아래 숫자는 K리그 선수 상세 표다. 기여점은 골+도움(키퍼는 클린율·실점)만 넣으며 FM 능력치가 아니다."
+      "아래 숫자는 K리그 선수 상세(공식)와 데이터포털 칠판(Bepro11 부가기록)이다. FM 능력치가 아니다."
     );
     return bits.join(" ");
   }
@@ -472,30 +540,78 @@ const PlayerEngine = (() => {
     return { a, b, rows, mixed, gk };
   }
 
-  function compareView(self, other) {
+  function compareView(self, other, events) {
     const rec = compareRows(self, other);
-    const a = scoreCard(self);
-    const b = scoreCard(other);
+    const a = scoreCard(self, events);
+    const b = scoreCard(other, events);
     const scoreRows = [
-      { key: "idx", label: "올해 기여점", mine: a.total, theirs: b.total },
-      { key: "atk", label: "공격 성향", mine: a.attack, theirs: b.attack },
-      { key: "def", label: "수비 성향", mine: a.defend, theirs: b.defend },
+      { key: "idx", label: "올해 기여점", mine: a.total, theirs: b.total, scale: 100 },
+      { key: "atk", label: "공격 성향", mine: a.attack, theirs: b.attack, scale: 100 },
+      { key: "def", label: "수비 성향", mine: a.defend, theirs: b.defend, scale: 100 },
     ];
+    if (a.chalk || b.chalk) {
+      const ae = a.ev || {};
+      const be = b.ev || {};
+      scoreRows.push({ key: "shot", label: "칠판 슈팅", mine: num(ae.shots), theirs: num(be.shots), scale: 0 });
+      scoreRows.push({ key: "keyp", label: "칠판 키패스", mine: num(ae.keypass), theirs: num(be.keypass), scale: 0 });
+      scoreRows.push({
+        key: "tk",
+        label: "칠판 태클 성공",
+        mine: num(ae.tackle_ok),
+        theirs: num(be.tackle_ok),
+        scale: 0,
+      });
+      scoreRows.push({
+        key: "blk",
+        label: "칠판 차단·클리어",
+        mine: num(ae.int) + num(ae.cut) + num(ae.clg),
+        theirs: num(be.int) + num(be.cut) + num(be.clg),
+        scale: 0,
+      });
+      scoreRows.push({
+        key: "air",
+        label: "칠판 공중볼 성공",
+        mine: num(ae.aerial_w),
+        theirs: num(be.aerial_w),
+        scale: 0,
+      });
+    }
     scoreRows.forEach((r) => {
-      r.d = r.mine != null && r.theirs != null ? r.mine - r.theirs : null;
+      r.d = r.mine != null && r.theirs != null ? Number((r.mine - r.theirs).toFixed(2)) : null;
     });
+    const useChalkRadar = a.chalk && b.chalk && !a.gk && !b.gk;
     return {
       rec,
       a,
       b,
       scoreRows,
-      radarLabels: ["올해 기여점", "공격 성향", "수비 성향", "출장 신뢰", "통산 출장"],
-      radarMine: [a.total, a.attack, a.defend, a.appsAxis, a.careerAppsAxis],
-      radarTheirs: [b.total, b.attack, b.defend, b.appsAxis, b.careerAppsAxis],
+      radarLabels: useChalkRadar
+        ? ["올해 기여점", "공격 성향", "수비 성향", "슈팅", "수비 개입", "공중볼"]
+        : ["올해 기여점", "공격 성향", "수비 성향", "출장 신뢰", "통산 출장"],
+      radarMine: useChalkRadar
+        ? [
+            a.total,
+            a.attack,
+            a.defend,
+            a.axes.find((x) => x.key === "shot")?.value || 0,
+            a.axes.find((x) => x.key === "def")?.value || 0,
+            a.axes.find((x) => x.key === "air")?.value || 0,
+          ]
+        : [a.total, a.attack, a.defend, a.appsAxis, a.careerAppsAxis],
+      radarTheirs: useChalkRadar
+        ? [
+            b.total,
+            b.attack,
+            b.defend,
+            b.axes.find((x) => x.key === "shot")?.value || 0,
+            b.axes.find((x) => x.key === "def")?.value || 0,
+            b.axes.find((x) => x.key === "air")?.value || 0,
+          ]
+        : [b.total, b.attack, b.defend, b.appsAxis, b.careerAppsAxis],
     };
   }
 
-  function rivalCopy(self, other) {
+  function rivalCopy(self, other, events) {
     const sY = yearRole(self, YEAR).season || { apps: 0, a: 0, b: 0 };
     const oY = yearRole(other, YEAR).season || { apps: 0, a: 0, b: 0 };
     const name = other.name || "비교 상대";
@@ -517,11 +633,14 @@ const PlayerEngine = (() => {
         `올해 득점 ${me} ${sY.a} / ${name} ${oY.a}, 도움 ${me} ${sY.b} / ${name} ${oY.b}.`
       );
     }
-    const sSc = scoreCard(self);
-    const oSc = scoreCard(other);
+    const sSc = scoreCard(self, events);
+    const oSc = scoreCard(other, events);
     bits.push(
       `올해 기여점 ${me} ${sSc.total}점(${sSc.tendLabel}), ${name} ${oSc.total}점(${oSc.tendLabel}).`
     );
+    if (sSc.chalk || oSc.chalk) {
+      bits.push("성향은 데이터포털 칠판(슈팅·키패스·태클·공중볼)을 더한 값이다.");
+    }
     return bits.join(" ");
   }
 
@@ -531,7 +650,7 @@ const PlayerEngine = (() => {
     return { apps: s.apps, a: s.a, b: s.b, label: y.label };
   }
 
-  function build(p) {
+  function build(p, events) {
     const rows = seasonRows(p);
     const notes = rows.map((row, i) => seasonNote(p, row, i ? rows[i - 1] : null)).reverse();
     const form = formText(p);
@@ -553,7 +672,7 @@ const PlayerEngine = (() => {
         text: roleEssay(p),
       },
       seasons: notes,
-      score: scoreCard(p),
+      score: scoreCard(p, events),
     };
   }
 

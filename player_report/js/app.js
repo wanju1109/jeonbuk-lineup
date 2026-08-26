@@ -1,6 +1,7 @@
 (() => {
-  const DATA_VER = "13";
+  const DATA_VER = "14";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
+  const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
 
   const state = {
@@ -14,6 +15,7 @@
     compareId: "",
     comparePlayer: null,
     rivals: [],
+    events: null,
     cache: new Map(),
   };
 
@@ -380,9 +382,11 @@
 
   function tendHtml(score, name) {
     const left = Math.max(4, Math.min(96, score.needle));
-    const note = score.gk
-      ? "키퍼 수비 성향은 클린율·경기당 실점."
-      : "야수 수비 성향은 태클 표가 없어 출장 신뢰에서 공격 산출을 뺀 값.";
+    const note = score.tendNote
+      ? score.tendNote
+      : score.gk
+        ? "키퍼 수비 성향은 클린율·경기당 실점."
+        : "야수 수비 성향은 태클 표가 없어 출장 신뢰에서 공격 산출을 뺀 값.";
     return (
       `<div class="tend-labels">` +
       `<span>공격</span>` +
@@ -547,7 +551,7 @@
         const active = String(m.id) === String(state.compareId) ? " active" : "";
         const urls = [m.photo, m.photo_fallback].filter(isPhotoUrl);
         const extra = full
-          ? `${escapeHtml(rivalStatLine(full, PlayerEngine.isGk(p)))} · 기여 ${PlayerEngine.scoreCard(full).total}`
+          ? `${escapeHtml(rivalStatLine(full, PlayerEngine.isGk(p)))} · 기여 ${PlayerEngine.scoreCard(full, state.events).total}`
           : "올해 –";
         return (
           `<button type="button" class="rival-card${active}" data-id="${escapeHtml(m.id)}">` +
@@ -573,9 +577,9 @@
       });
     const focus = state.comparePlayer;
     if (focus && String(focus.team_id) === String(p.team_id)) {
-      $("rivalText").textContent = PlayerEngine.rivalCopy(p, focus);
+      $("rivalText").textContent = PlayerEngine.rivalCopy(p, focus, state.events);
     } else if (state.rivals[0]) {
-      $("rivalText").textContent = PlayerEngine.rivalCopy(p, state.rivals[0]);
+      $("rivalText").textContent = PlayerEngine.rivalCopy(p, state.rivals[0], state.events);
     } else {
       $("rivalText").textContent = "";
     }
@@ -631,7 +635,7 @@
       $("cmpText").textContent = "";
       return;
     }
-    const view = PlayerEngine.compareView(p, other);
+    const view = PlayerEngine.compareView(p, other, state.events);
     $("cmpRadar").innerHTML =
       radarSvg(
         [
@@ -645,15 +649,16 @@
         { color: "#1764c0", label: `${other.name} · 파랑` },
       ]);
     $("cmpTend").innerHTML = cmpTendHtml(p.name, view.a, other.name, view.b);
-    const scoreBody = view.scoreRows
+    const scoreBody =       view.scoreRows
       .map((r) => {
         const d = r.d;
         const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
         const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
+        const unit = r.scale === 100;
         return (
-          `<tr><td>${escapeHtml(r.label)} (100점)</td>` +
-          `<td class="${r.mine != null ? vClass(r.mine) : ""}">${score100(r.mine)}</td>` +
-          `<td class="${r.theirs != null ? vClass(r.theirs) : ""}">${score100(r.theirs)}</td>` +
+          `<tr><td>${escapeHtml(r.label)}${unit ? " (100점)" : ""}</td>` +
+          `<td class="${unit && r.mine != null ? vClass(r.mine) : ""}">${unit ? score100(r.mine) : fmtNum(r.mine)}</td>` +
+          `<td class="${unit && r.theirs != null ? vClass(r.theirs) : ""}">${unit ? score100(r.theirs) : fmtNum(r.theirs)}</td>` +
           `<td class="${dCls}">${dTxt}</td></tr>`
         );
       })
@@ -681,12 +686,12 @@
       scoreBody +
       recBody +
       `</tbody></table>`;
-    $("cmpText").textContent = PlayerEngine.rivalCopy(p, other);
+    $("cmpText").textContent = PlayerEngine.rivalCopy(p, other, state.events);
   }
 
   function renderAnalysis(p) {
     if (typeof PlayerEngine === "undefined") return;
-    const analysis = PlayerEngine.build(p);
+    const analysis = PlayerEngine.build(p, state.events);
     const now = analysis.role.year;
     const extraFacts = [["올해 출장 구간", `${now.label} · ${dash(now.apps)}경기`]];
     const factsEl = $("facts");
@@ -770,7 +775,7 @@
     }
     $("sourceLine").innerHTML =
       `기록 ${escapeHtml(p.source || "K리그")} · 수집 ${escapeHtml((p.fetched_at || "").slice(0, 10))} · ` +
-      `기여점은 공식 골+도움(키퍼는 클린·실점) · ` +
+      `기여점은 공식 골+도움 + 칠판 부가기록 · ` +
       links.join(" · ");
     renderAnalysis(p);
     box.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -888,6 +893,12 @@
       const res = await fetch(DATA_INDEX);
       if (!res.ok) throw new Error("index " + res.status);
       state.index = await res.json();
+      try {
+        const evRes = await fetch(DATA_EVENTS);
+        if (evRes.ok) state.events = await evRes.json();
+      } catch (evErr) {
+        state.events = null;
+      }
       applyHash();
     } catch (err) {
       setStatus("선수 명단을 불러오지 못했습니다. 수집 스크립트를 먼저 실행하세요.");
