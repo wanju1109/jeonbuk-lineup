@@ -455,6 +455,21 @@ body:not(.edit-mode) .editor-only {
 }
 .hero-id .en { opacity: 0.75; margin-top: 6px; }
 .hero-id .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.share-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.hero-id .btn-primary {
+  background: var(--lime);
+  color: #123528;
+  border-color: transparent;
+}
+.hero-id .btn-ghost {
+  color: #f5fff8;
+  border-color: rgba(255, 255, 255, 0.35);
+}
 .tag {
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;

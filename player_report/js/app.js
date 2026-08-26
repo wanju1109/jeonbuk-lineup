@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "21";
+  const DATA_VER = "24";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -1031,6 +1031,10 @@
       `<span class="tag">${escapeHtml(p.position || "")}</span>` +
       `<span class="tag">${escapeHtml(p.nation || "")}</span>` +
       (p.age != null ? `<span class="tag">${escapeHtml(p.age)}세</span>` : "") +
+      `</div>` +
+      `<div class="share-row">` +
+      `<button type="button" class="btn btn-primary" data-share-action="card">에버그린에 공유</button>` +
+      `<button type="button" class="btn btn-ghost" data-share-action="url">URL 복사</button>` +
       `</div></div>`;
 
     const tot = p.summary?.total || {};
@@ -1158,6 +1162,22 @@
     $("searchInput").addEventListener("input", (e) => {
       state.q = e.target.value || "";
       renderSquad();
+    });
+    $("profile")?.addEventListener("click", async (e) => {
+      const btn = e.target.closest("[data-share-action]");
+      if (!btn) return;
+      const action = btn.getAttribute("data-share-action");
+      try {
+        if (action === "card") {
+          await copyText(buildShareHtml(publicShareUrl()));
+          setStatus("에버그린용 링크 카드를 복사했습니다. HTML 모드에 붙여넣으세요.");
+        } else if (action === "url") {
+          await copyText(publicShareUrl());
+          setStatus("프로필 URL을 복사했습니다.");
+        }
+      } catch (err) {
+        setStatus("복사에 실패했습니다. 아래 코드를 직접 드래그해 주세요.");
+      }
     });
     $("evergreenJump")?.addEventListener("click", (e) => {
       e.preventDefault();
