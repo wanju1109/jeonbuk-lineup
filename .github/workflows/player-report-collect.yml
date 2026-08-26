@@ -2,7 +2,8 @@ name: player_report collect
 
 on:
   schedule:
-    - cron: "40 3 * * 1"
+    # 15:00 UTC = 00:00 KST. GitHub may start a few minutes late.
+    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       year:
@@ -44,6 +45,10 @@ jobs:
           set -e
           if [ -z "$KLEAGUE_YEAR" ]; then
             export KLEAGUE_YEAR="$(date +%Y)"
+          fi
+          # Cached player JSON skips playerDetail. Nightly must refetch stats.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            export KLEAGUE_FORCE=1
           fi
           python player_report/scripts/collect_players.py
 
