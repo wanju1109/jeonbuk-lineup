@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "11";
+  const DATA_VER = "12";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
 

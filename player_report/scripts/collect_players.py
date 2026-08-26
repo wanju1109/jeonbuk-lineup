@@ -682,8 +682,45 @@ def enrich_player(card: dict, team: dict) -> dict:
     return player
 
 
+def year_apps(player: dict, year: str | None = None) -> int:
+    """Official appearance count for one season. 0 if the year row is missing."""
+    y = str(year or YEAR)
+    total = 0
+    for row in player.get("seasons") or []:
+        if str(row.get("season") or "") != y:
+            continue
+        tot = row.get("total") if isinstance(row.get("total"), dict) else {}
+        n = row.get("total_apps")
+        if n is None:
+            n = tot.get("apps")
+        parsed = None
+        try:
+            if n is not None and n != "":
+                parsed = int(n)
+        except (TypeError, ValueError):
+            parsed = None
+        if parsed is None:
+            parsed = 0
+            for key in ("k1", "k2", "po", "cup", "super_cup"):
+                block = row.get(key) if isinstance(row.get(key), dict) else {}
+                try:
+                    a = block.get("apps")
+                    parsed += int(a) if a is not None and a != "" else 0
+                except (TypeError, ValueError):
+                    pass
+        if parsed > 0:
+            total += parsed
+    return total
+
+
+def played_this_year(player: dict) -> bool:
+    return year_apps(player) > 0
+
+
 def keep_on_current_squad(club: dict, player: dict) -> bool:
-    """Keep only players on the Data Portal player list for this club."""
+    """Portal player list, and at least one official appearance this year."""
+    if not played_this_year(player):
+        return False
     roster = portal_player_list()
     tid = str(club.get("id") or "").upper()
     rows = roster.get(tid) or []
@@ -783,7 +820,7 @@ def main() -> int:
     index = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "year": YEAR,
-        "note": "보도/커뮤니티 재가공용. 현재 명단은 K리그 데이터포털 선수목록, 기록은 K리그 선수 상세.",
+        "note": "보도/커뮤니티 재가공용. 현재 명단은 데이터포털 선수목록 중 올해 공식 출장 1경기 이상. 기록은 K리그 선수 상세.",
         "leagues": out_leagues,
         "errors": errors[:50],
     }
