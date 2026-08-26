@@ -550,6 +550,7 @@ const DeepView = (() => {
 
   function roleCard(p, side) {
     const s = p.stat;
+    const duty = typeof Tactics !== "undefined" && Tactics.dutyNote ? Tactics.dutyNote(p) : null;
     const stats = [
       ["공을 만진 횟수", `${s.touches}회`],
       ["패스", `${s.completed}/${s.passes}`],
@@ -570,7 +571,12 @@ const DeepView = (() => {
       `</div>` +
       `<div class="dd-role-pos">평균 위치 X ${fmt(p.x)} · Y ${fmt(p.y)}${
         p.outLabel ? ` · ${escapeHtml(p.outLabel)} 교체` : ""
-      }</div>` +
+      }${p.inLabel ? ` · ${escapeHtml(p.inLabel)} 투입` : ""}</div>` +
+      (duty
+        ? `<p class="dd-role-duty${duty.familyMatch ? "" : " is-drift"}">부여 ${escapeHtml(
+            duty.assigned
+          )} → 실제 ${escapeHtml(duty.actual)}. ${escapeHtml(duty.verdict)}</p>`
+        : "") +
       `<dl class="dd-role-stats">` +
       stats.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd></div>`).join("") +
       `</dl>` +

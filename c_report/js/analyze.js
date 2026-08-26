@@ -508,6 +508,73 @@ const Analyze = (() => {
     return "";
   }
 
+  function playerHead(p) {
+    const no = p.backNo != null && p.backNo !== "" ? `#${p.backNo} ` : "";
+    const cap = p.captain ? " (C)" : "";
+    const pos = p.position || "";
+    const kind = p.starter === false ? "후보 투입" : "선발";
+    return `${no}${p.name || "선수"}${cap} · ${kind}${pos ? ` ${pos}` : ""}`;
+  }
+
+  function dutyParagraph(p) {
+    const d = p.duty || (typeof Tactics !== "undefined" && Tactics.dutyNote ? Tactics.dutyNote(p) : null);
+    if (!d) return playerHead(p);
+    const play = d.play ? ` 기록: ${d.play}.` : "";
+    return `${playerHead(p)}. 부여: 시트 ${d.assigned}. 실제: ${d.actual}.${play} ${d.verdict}`;
+  }
+
+  function buildDutyChapter(meta, events, players, lineup) {
+    if (typeof Tactics === "undefined" || typeof Tactics.playerDuties !== "function") {
+      return null;
+    }
+    let pack;
+    try {
+      pack = Tactics.playerDuties(meta, events, players, lineup);
+    } catch (err) {
+      console.error(err);
+      return null;
+    }
+    const home = pack.home;
+    const away = pack.away;
+    if (!home?.starters?.length && !away?.starters?.length) return null;
+
+    const paras = [];
+    paras.push(
+      "감독이 락커룸에서 한 말은 포털에 없습니다. 대신 경기 시트 포지션을 ‘부여한 역할’로, 평균 위치와 패스·슈팅·수비 기록을 ‘실제로 뛴 역할’로 읽습니다. 둘이 같으면 지시한 구간에서 그 일을 한 것이고, 다르면 감독이 그렇게 썼거나 선수가 자리를 이탈한 겁니다."
+    );
+
+    const sideBlock = (side) => {
+      const form = side.formation ? `${side.formation} 형태` : "형태를 숫자로 못 읽은 날";
+      const boss = side.manager ? `${side.manager} 감독` : `${side.name}`;
+      paras.push(
+        `${side.name} — ${boss}의 선발. 평균 자리로 보면 ${form}입니다.`
+      );
+      for (const p of side.starters || []) paras.push(dutyParagraph(p));
+      if (side.bench?.length) {
+        paras.push(`${side.name} 후보 투입 ${side.bench.length}명.`);
+        for (const p of side.bench) paras.push(dutyParagraph(p));
+      }
+      if (side.unused?.length) {
+        const names = side.unused
+          .map((p) => (p.backNo != null && p.backNo !== "" ? `#${p.backNo} ${p.name}` : p.name))
+          .join(", ");
+        paras.push(`${side.name}에서 뛰지 않은 후보: ${names}.`);
+      }
+    };
+
+    sideBlock(home);
+    sideBlock(away);
+
+    return {
+      kicker: "06 · 역할",
+      title: "감독이 맡긴 일, 선수가 한 일",
+      format: "duty",
+      lead: paras[0],
+      sides: [home, away],
+      paragraphs: paras,
+    };
+  }
+
   function sequenceBeforeGoal(events, goal, windowSec = 25) {
     const t = absSeconds(goal);
     const team = goal.TEAM_ID;
@@ -1053,10 +1120,13 @@ const Analyze = (() => {
       ].filter(Boolean),
     });
 
+    const dutyChapter = buildDutyChapter(meta, events, players, lineup);
+    if (dutyChapter) chapters.push(dutyChapter);
+
     const goalChapters = buildGoalNarratives(goalList, events, meta, pmap);
     if (goalChapters.length) {
       chapters.push({
-        kicker: "06 · 골 장면",
+        kicker: "07 · 골 장면",
         title: "골은 어떻게 나왔나",
         paragraphs: goalChapters.map((g) => `${g.title}. ${g.text}`),
       });
@@ -1065,7 +1135,7 @@ const Analyze = (() => {
     const subParas = buildSubParagraphs(meta, events, lineup, p1h, p1a, p2h, p2a);
     if (subParas && subParas.length) {
       chapters.push({
-        kicker: "07 · 교체",
+        kicker: "08 · 교체",
         title: "교체와 후반 조정",
         paragraphs: subParas,
       });
@@ -1093,7 +1163,7 @@ const Analyze = (() => {
     }
 
     chapters.push({
-      kicker: "08 · 다음에 고칠 점",
+      kicker: "09 · 다음에 고칠 점",
       title: "다음 경기를 위한 메모",
       paragraphs: coaching,
     });
@@ -1102,7 +1172,7 @@ const Analyze = (() => {
       kicker: "NOTE",
       title: "이 글을 읽는 법",
       paragraphs: [
-        "이 브리핑은 K리그 포털에 찍힌 패스·슈팅·태클 위치를 바탕으로 자동으로 만든 글입니다. 감독이 실제로 지시한 내용과 다를 수 있고, 그날 눈에 보이는 행동에 대한 해석입니다.",
+        "이 브리핑은 K리그 포털에 찍힌 패스·슈팅·태클 위치를 바탕으로 자동으로 만든 글입니다. 감독이 실제로 지시한 내용과 다를 수 있고, 그날 눈에 보이는 행동에 대한 해석입니다. 선수 역할의 ‘부여’는 경기 시트 포지션이고, ‘실제’는 평균 위치와 기록으로 추정한 이름입니다.",
         "어려운 용어는 오른쪽 용어 가이드에 풀어 두었습니다. 아래 히트맵, 슈팅 맵, 골 스토리에서 같은 이야기를 그림으로 다시 확인해 보세요. 글과 그림이 만나면, 경기가 훨씬 선명해집니다.",
       ],
     });

@@ -824,17 +824,15 @@
     try {
       box.innerHTML = briefing.chapters
         .map((ch, i) => {
-          const paras = (ch.paragraphs || [])
-            .filter(Boolean)
-            .map((p) => `<p>${escapeHtml(p)}</p>`)
-            .join("");
+          const body =
+            ch.format === "duty" ? renderDutyBody(ch) : renderBriefParas(ch.paragraphs);
           return (
             `<article class="brief-card" id="brief-${i + 1}" data-outline="${escapeHtml(
               ch.title || ""
             )}" data-kicker="${escapeHtml(ch.kicker || "")}">` +
             `<div class="brief-kicker">${escapeHtml(ch.kicker || "")}</div>` +
             `<h3 class="brief-title">${escapeHtml(ch.title || "")}</h3>` +
-            `<div class="brief-body">${paras}</div>` +
+            `<div class="brief-body">${body}</div>` +
             `</article>`
           );
         })
@@ -843,6 +841,64 @@
       console.error(err);
       box.innerHTML = `<div class="brief-card"><p class="meta-line">브리핑 렌더링 중 오류가 발생했습니다.</p></div>`;
     }
+  }
+
+  function renderBriefParas(paragraphs) {
+    return (paragraphs || [])
+      .filter(Boolean)
+      .map((p) => `<p>${escapeHtml(p)}</p>`)
+      .join("");
+  }
+
+  function renderDutyPlayer(p) {
+    const d = p.duty || {};
+    const no = p.backNo != null && p.backNo !== "" ? String(p.backNo) : "-";
+    const cap = p.captain ? " (C)" : "";
+    const kind = p.starter === false ? "후보 투입" : "선발";
+    const mismatch = d.familyMatch === false ? " is-drift" : "";
+    return (
+      `<article class="duty-player${mismatch}">` +
+      `<div class="duty-player-head">` +
+      `<span class="duty-no">${escapeHtml(no)}</span>` +
+      `<div>` +
+      `<div class="duty-name">${escapeHtml(p.name || "선수")}${escapeHtml(cap)}</div>` +
+      `<div class="duty-kind">${escapeHtml(kind)}${p.position ? ` · ${escapeHtml(p.position)}` : ""}</div>` +
+      `</div>` +
+      `</div>` +
+      `<div class="duty-row"><span>부여</span>${escapeHtml(d.assigned || "시트 없음")}</div>` +
+      `<div class="duty-row"><span>실제</span>${escapeHtml(d.actual || "추정 불가")}</div>` +
+      (d.play ? `<div class="duty-row"><span>기록</span>${escapeHtml(d.play)}</div>` : "") +
+      `<p class="duty-verdict">${escapeHtml(d.verdict || "")}</p>` +
+      `</article>`
+    );
+  }
+
+  function renderDutySide(side) {
+    if (!side) return "";
+    const form = side.formation ? `${side.formation} 형태` : "형태 미확인";
+    const boss = side.manager ? `${side.manager} 감독` : side.name;
+    const unused = (side.unused || [])
+      .map((p) => (p.backNo != null && p.backNo !== "" ? `#${p.backNo} ${p.name}` : p.name))
+      .join(", ");
+    return (
+      `<section class="duty-side">` +
+      `<h4 class="duty-side-name">${escapeHtml(side.name || "")}</h4>` +
+      `<p class="duty-side-lead">${escapeHtml(boss)}의 선발 · 평균 자리로 보면 ${escapeHtml(form)}.</p>` +
+      `<div class="duty-grid">${(side.starters || []).map(renderDutyPlayer).join("")}</div>` +
+      (side.bench?.length
+        ? `<h5 class="duty-subhead">후보 투입</h5><div class="duty-grid">${side.bench
+            .map(renderDutyPlayer)
+            .join("")}</div>`
+        : "") +
+      (unused ? `<p class="duty-unused">뛰지 않은 후보: ${escapeHtml(unused)}</p>` : "") +
+      `</section>`
+    );
+  }
+
+  function renderDutyBody(ch) {
+    const lead = ch.lead ? `<p>${escapeHtml(ch.lead)}</p>` : "";
+    const sides = (ch.sides || []).map(renderDutySide).join("");
+    return lead + (sides || renderBriefParas(ch.paragraphs));
   }
 
   function renderPeriodFlow(meta, events) {

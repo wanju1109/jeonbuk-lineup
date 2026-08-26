@@ -553,6 +553,8 @@ const Tactics = (() => {
         minutes: num(p.minutes, null),
         captain: Boolean(p.captain),
         outLabel: p.out_label || "",
+        inLabel: p.in_label || "",
+        starter: true,
       };
     });
 
@@ -571,6 +573,8 @@ const Tactics = (() => {
           minutes: null,
           captain: false,
           outLabel: "",
+          inLabel: "",
+          starter: true,
         });
       }
       nodes.sort((a, b) => b.touches - a.touches);
@@ -891,6 +895,162 @@ const Tactics = (() => {
         return { ...n, stat, role: roleLabel(n, stat, frame) };
       })
       .sort((a, b) => b.stat.touches - a.stat.touches);
+  }
+
+  function sheetJob(pos) {
+    const p = String(pos || "").toUpperCase();
+    if (p === "GK") return "골키퍼";
+    if (p === "DF") return "수비수";
+    if (p === "MF" || p === "MD") return "미드필더";
+    if (p === "FW") return "공격수";
+    return pos || "필드 선수";
+  }
+
+  function posFamily(pos) {
+    const p = String(pos || "").toUpperCase();
+    if (p === "GK") return "GK";
+    if (p === "DF") return "DF";
+    if (p === "FW") return "FW";
+    if (p === "MF" || p === "MD") return "MF";
+    return "";
+  }
+
+  function roleFamily(role) {
+    const r = String(role || "");
+    if (r.includes("골키퍼")) return "GK";
+    if (/센터백|풀백/.test(r)) return "DF";
+    if (/스트라이커|윙 포워드/.test(r)) return "FW";
+    return "MF";
+  }
+
+  function playBits(p) {
+    const s = p.stat || {};
+    const bits = [];
+    if (s.touches) bits.push(`공 관여 ${s.touches}회`);
+    if (s.passes) bits.push(`패스 ${s.completed || 0}/${s.passes}`);
+    if (s.progressive) bits.push(`전진 패스 ${s.progressive}회`);
+    if (s.keyPasses) bits.push(`키패스 ${s.keyPasses}회`);
+    if (s.shots) bits.push(`슈팅 ${s.shots}회 · xG ${s.xg || 0}`);
+    if (s.defActions) bits.push(`수비 ${s.defActions}회`);
+    if (p.outLabel) bits.push(`${p.outLabel} 교체 아웃`);
+    if (p.inLabel) bits.push(`${p.inLabel} 투입`);
+    return bits;
+  }
+
+  function dutyNote(p) {
+    const assigned = sheetJob(p.position);
+    const actual = p.role || "역할 불명";
+    const assignedFam = posFamily(p.position);
+    const familyMatch = !assignedFam || assignedFam === roleFamily(actual);
+    const touches = Number(p.stat?.touches || 0);
+    const bits = playBits(p);
+    let verdict;
+    if (touches < 8) {
+      verdict = p.inLabel
+        ? "투입은 됐지만 공 기록이 거의 없습니다. 역할이 안 보이면, 그 시간대에 일이 안 온 겁니다."
+        : "경기에 거의 안 보였습니다. 시트에 이름은 있어도, 그날 그림에는 없었습니다.";
+    } else if (familyMatch) {
+      verdict =
+        `시트 ${assigned}와 실제(${actual})가 맞습니다. 맡은 구간에서 그 일을 했습니다.`;
+    } else {
+      verdict =
+        `시트에는 ${assigned}인데, 실제로는 ${actual}처럼 뛰었습니다. 감독이 그렇게 쓰거나, 선수가 자리를 이탈한 그림입니다.`;
+    }
+    return {
+      assigned,
+      actual,
+      familyMatch,
+      touches,
+      play: bits.join(", "),
+      verdict,
+      starter: Boolean(p.starter),
+    };
+  }
+
+  function posOrder(pos) {
+    const p = String(pos || "").toUpperCase();
+    if (p === "GK") return 0;
+    if (p === "DF") return 1;
+    if (p === "MF" || p === "MD") return 2;
+    if (p === "FW") return 3;
+    return 9;
+  }
+
+  function backNoSort(p) {
+    const n = Number(p.backNo ?? p.back_no);
+    return Number.isFinite(n) ? n : 999;
+  }
+
+  function subNodesFromLineup(roster, events, teamId, homeId, players) {
+    const avg = averagePositions(events, teamId, homeId);
+    const byId = new Map();
+    for (const p of players || []) byId.set(String(p.player_id), p);
+    return (roster || [])
+      .filter((p) => !p.starter && (p.in_label || Number(p.minutes) > 0))
+      .map((p) => {
+        const id = String(p.player_id);
+        const pos = avg.get(id) || { x: 50, y: 50, touches: 0 };
+        return {
+          playerId: id,
+          name: p.name || byId.get(id)?.NAME || "선수",
+          backNo: p.back_no ?? pos.backNo ?? "",
+          position: p.position || byId.get(id)?.Position_Name || "",
+          x: pos.x,
+          y: pos.y,
+          touches: pos.touches,
+          minutes: num(p.minutes, null),
+          captain: Boolean(p.captain),
+          outLabel: p.out_label || "",
+          inLabel: p.in_label || "",
+          starter: false,
+        };
+      });
+  }
+
+  function unusedBench(roster) {
+    return (roster || [])
+      .filter((p) => !p.starter && !p.in_label && !(Number(p.minutes) > 0))
+      .map((p) => ({
+        name: p.name || "선수",
+        backNo: p.back_no,
+        position: p.position || "",
+      }));
+  }
+
+  function dutySide(meta, events, players, lineup, side) {
+    const homeId = meta.home.team_id;
+    const awayId = meta.away.team_id;
+    const teamId = side === "home" ? homeId : awayId;
+    const club = side === "home" ? meta.home : meta.away;
+    const roster = (lineup && lineup[side]) || [];
+    const shape = teamShape(events, players, lineup, side, teamId, homeId);
+    const frame = { blockHeight: shape.blockHeight, defLineX: shape.defLineX };
+    const starters = playerProfiles(events, teamId, homeId, shape.nodes, frame)
+      .map((p) => ({ ...p, starter: true, duty: dutyNote({ ...p, starter: true }) }))
+      .sort((a, b) => posOrder(a.position) - posOrder(b.position) || backNoSort(a) - backNoSort(b));
+    const benchNodes = subNodesFromLineup(roster, events, teamId, homeId, players);
+    const bench = playerProfiles(events, teamId, homeId, benchNodes, frame)
+      .map((p) => ({ ...p, starter: false, duty: dutyNote({ ...p, starter: false }) }))
+      .sort((a, b) => String(a.inLabel || "").localeCompare(String(b.inLabel || ""), "ko"));
+    return {
+      side,
+      name: club.name,
+      manager: club.manager || "",
+      formation: shape.formation?.label || "",
+      starters,
+      bench,
+      unused: unusedBench(roster),
+    };
+  }
+
+  function playerDuties(meta, events, players, lineup) {
+    if (!meta?.home?.team_id || !meta?.away?.team_id) {
+      throw new Error("역할 분석에 팀 ID가 필요합니다.");
+    }
+    return {
+      home: dutySide(meta, events, players, lineup, "home"),
+      away: dutySide(meta, events, players, lineup, "away"),
+    };
   }
 
   /* ------------------------------------------------------------------ *
@@ -1577,6 +1737,9 @@ const Tactics = (() => {
     LANES,
     THIRDS,
     analyze,
+    playerDuties,
+    dutyNote,
+    sheetJob,
     chrono,
     pov,
     absSeconds,
