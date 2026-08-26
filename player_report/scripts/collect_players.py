@@ -2,7 +2,9 @@
 """
 Collect K League 1/2 squads, career tables, and photo URLs.
 
-Source: kleague.com player list + playerDetail (official records).
+Current squads: K League Data Portal player list
+(data.kleague.com / portal.kleague.com Data Center > Players > Player list).
+Records: kleague.com playerDetail.
 Photos: club CDN when known, else official CloudFront / portal profile shot.
 Writes player_report/data/index.json and player_report/data/players/{id}.json.
 """
@@ -36,8 +38,15 @@ SLEEP = float(os.environ.get("KLEAGUE_SLEEP") or "0.25")
 
 BASE = "https://www.kleague.com"
 PORTAL = "https://portal.kleague.com"
+PORTAL_GUEST = (
+    f"{PORTAL}/user/loginById.do?portalGuest=rstNE9zxjdkUC9kbUA08XQ=="
+)
+PORTAL_PLAYER_LIST = f"{PORTAL}/data/player/playerList.do"
 CF = "https://d2tfp74nsbbrkr.cloudfront.net/v1/player"
 JBFC_PLAYER_API = "https://api.jbfc.kr/player"
+
+_portal_opener: urllib.request.OpenerDirector | None = None
+_portal_by_team: dict[str, list[dict]] | None = None
 
 # Club CDN filename can differ from the official K League player id
 # (Dodo: K League 20260374, club file 20269696.png).
@@ -449,7 +458,125 @@ def photo_bundle(team_id: str, player_id: str, kleague_photo: str, name: str = "
     }
 
 
+def portal_opener() -> urllib.request.OpenerDirector:
+    global _portal_opener
+    if _portal_opener is not None:
+        return _portal_opener
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor())
+    req = urllib.request.Request(
+        PORTAL_GUEST,
+        headers={
+            "User-Agent": UA,
+            "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8",
+            "Referer": PORTAL + "/",
+        },
+    )
+    try:
+        with opener.open(req, timeout=40) as resp:
+            resp.read()
+    except (urllib.error.HTTPError, urllib.error.URLError) as exc:
+        raise RuntimeError(f"portal guest login failed: {exc}") from exc
+    _portal_opener = opener
+    return opener
+
+
+def portal_get(url: str, timeout: int = 60) -> str:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": UA,
+            "Accept": "text/html,application/json;q=0.9,*/*;q=0.8",
+            "Referer": PORTAL + "/mainFrame.do",
+            "Origin": PORTAL,
+        },
+    )
+    try:
+        with portal_opener().open(req, timeout=timeout) as resp:
+            raw = resp.read()
+            enc = resp.headers.get_content_charset() or "utf-8"
+            return raw.decode(enc, "replace")
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError(f"HTTP {exc.code} for {url}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"network error for {url}: {exc}") from exc
+
+
+_PORTAL_POS_RE = re.compile(
+    r'<h1 class="club-playerPosition-title">\s*(GK|DF|MF|FW)\s*</h1>'
+    r"|moveMainFrameMcPlayer\('0416','(\d+)','(K\d+)'\)",
+)
+_PORTAL_BOX_RE = re.compile(
+    r"moveMainFrameMcPlayer\('0416','(\d+)','(K\d+)'\)[\s\S]{0,1200}?"
+    r'club-playerlist-nm-k">\s*(\d+)\.\s*([^<]+)',
+)
+
+
+def parse_portal_player_list(html: str) -> dict[str, list[dict]]:
+    """Parse Data Center > Players > Player list cards."""
+    pos = ""
+    rows: list[dict] = []
+    seen: set[tuple[str, str]] = set()
+    for m in _PORTAL_POS_RE.finditer(html or ""):
+        if m.group(1):
+            pos = m.group(1)
+            continue
+        pid, team_id = m.group(2), m.group(3)
+        key = (pid, team_id)
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append({"id": pid, "team_id": team_id, "position": pos or ""})
+    names: dict[tuple[str, str], tuple[int, str]] = {}
+    for m in _PORTAL_BOX_RE.finditer(html or ""):
+        names[(m.group(1), m.group(2))] = (int(m.group(3)), clean(m.group(4)))
+    by_team: dict[str, list[dict]] = {}
+    for row in rows:
+        hit = names.get((row["id"], row["team_id"]))
+        card = {
+            "id": row["id"],
+            "name": hit[1] if hit else "",
+            "team_id": row["team_id"],
+            "position": row["position"],
+            "back_no": hit[0] if hit else None,
+            "kleague_photo": "",
+        }
+        by_team.setdefault(row["team_id"], []).append(card)
+    for cards in by_team.values():
+        cards.sort(
+            key=lambda p: (
+                POS_ORDER.get(p.get("position") or "", 9),
+                p.get("back_no") is None,
+                p.get("back_no") or 99,
+                p.get("name") or "",
+            )
+        )
+    return by_team
+
+
+def portal_player_list() -> dict[str, list[dict]]:
+    """K League Data Portal player list (current registered squads)."""
+    global _portal_by_team
+    if _portal_by_team is not None:
+        return _portal_by_team
+    try:
+        html = portal_get(PORTAL_PLAYER_LIST)
+        by_team = parse_portal_player_list(html)
+        n = sum(len(v) for v in by_team.values())
+        log(f"  portal player list {n} players / {len(by_team)} clubs")
+        if n < 200:
+            raise RuntimeError(f"portal player list too small: {n}")
+        _portal_by_team = by_team
+    except Exception as exc:
+        log(f"  portal player list skip: {exc}")
+        _portal_by_team = {}
+    return _portal_by_team
+
+
 def collect_team_players(league_id: str, team: dict) -> list[dict]:
+    portal_rows = portal_player_list().get(str(team.get("id") or "").upper()) or []
+    if portal_rows:
+        log(f"  portal {team.get('id')} {len(portal_rows)}")
+        return portal_rows
     found: dict[str, dict] = {}
     for pos in ("gk", "df", "mf", "fw"):
         page = 1
@@ -556,21 +683,14 @@ def enrich_player(card: dict, team: dict) -> dict:
 
 
 def keep_on_current_squad(club: dict, player: dict) -> bool:
-    """Drop leftover registrations. Jeonbuk first-team source is the club API;
-    Korean academy players on the K League list stay. Foreigners not on the
-    club site (e.g. ended loans) are removed.
-    """
-    if club.get("id") != "K05":
+    """Keep only players on the Data Portal player list for this club."""
+    roster = portal_player_list()
+    tid = str(club.get("id") or "").upper()
+    rows = roster.get(tid) or []
+    if not rows:
         return True
-    roster = jbfc_roster()
-    name = str(player.get("name") or "").strip()
     pid = str(player.get("id") or "")
-    if name and name in roster:
-        return True
-    ids = {str(row.get("kl_player_id") or "") for row in roster.values()}
-    if pid and pid in ids:
-        return True
-    return str(player.get("nation") or "") == "한국"
+    return any(str(r.get("id")) == pid for r in rows)
 
 
 def index_entry(player: dict) -> dict:
@@ -663,7 +783,7 @@ def main() -> int:
     index = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "year": YEAR,
-        "note": "보도/커뮤니티 재가공용. 기록은 K리그 공식 선수 상세, 사진은 구단 CDN 또는 연맹 프로필.",
+        "note": "보도/커뮤니티 재가공용. 현재 명단은 K리그 데이터포털 선수목록, 기록은 K리그 선수 상세.",
         "leagues": out_leagues,
         "errors": errors[:50],
     }
