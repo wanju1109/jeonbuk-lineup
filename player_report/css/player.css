@@ -557,13 +557,14 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
 
 .fm-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: minmax(280px, 440px) 1fr;
   gap: 16px;
   align-items: center;
   padding-bottom: 8px;
 }
 
-.fm-radar svg { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; }
+.fm-radar svg { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto; }
+.fm-radar.wide svg { max-width: 480px; }
 .radar-legend {
   display: flex;
   flex-wrap: wrap;
@@ -607,11 +608,23 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
   margin: 18px 0 4px;
   font-size: 15px;
 }
+.rate-stack,
+#rateGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 8px 0 16px;
+}
+.rate-group h5 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
 .rate-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 10px;
-  margin: 8px 0 16px;
+  margin: 0;
 }
 .rate-card {
   border: 1px solid #d7e4da;
@@ -732,6 +745,14 @@ table.cmp th, table.cmp td {
 }
 table.cmp th { background: #eef5ef; font-size: 11px; color: var(--muted); }
 table.cmp td:first-child, table.cmp th:first-child { text-align: left; font-weight: 700; }
+table.cmp tr.cmp-sec th {
+  text-align: left;
+  background: #0a3d2e;
+  color: #f5fff8;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 8px 6px;
+}
 table.cmp .d-plus { color: #037340; font-weight: 700; }
 table.cmp .d-minus { color: #b42318; font-weight: 700; }
 

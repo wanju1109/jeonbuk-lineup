@@ -9,7 +9,7 @@
   <meta property="og:description" content="구단을 고르고 선수를 조회하면 공식 출장 기록과 시즌·팀 표를 한 화면에." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
-  <link rel="stylesheet" href="./css/player.css?v=15" />
+  <link rel="stylesheet" href="./css/player.css?v=16" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -91,9 +91,9 @@
             <div class="fm-radar" id="scoreRadar"></div>
             <div class="fm-bars" id="scoreBars"></div>
           </div>
-          <h4 class="rate-head">칠판 정확도</h4>
+          <h4 class="rate-head">정확도</h4>
           <p class="table-note" id="rateNote">패스 성공률 = 성공/시도. 슈팅 정확도 = 유효슈팅/슈팅. Bepro11 부가기록.</p>
-          <div class="rate-grid" id="rateGrid"></div>
+          <div id="rateGrid"></div>
         </section>
         <section class="block" id="yearBlock">
           <h3>연도별 기록</h3>
@@ -108,7 +108,7 @@
         <section class="block" id="compareBlock">
           <h3>기록 비교</h3>
           <div class="cmp-picker" id="cmpPicker"></div>
-          <div class="fm-radar" id="cmpRadar"></div>
+          <div class="fm-radar wide" id="cmpRadar"></div>
           <div class="tend-box" id="cmpTend"></div>
           <div class="cmp-table" id="cmpTable"></div>
           <div class="prose" id="cmpText"></div>
@@ -126,7 +126,7 @@
       </article>
     </main>
   </div>
-  <script src="./js/engine.js?v=15"></script>
-  <script src="./js/app.js?v=15"></script>
+  <script src="./js/engine.js?v=16"></script>
+  <script src="./js/app.js?v=16"></script>
 </body>
 </html>

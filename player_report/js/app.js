@@ -1,8 +1,12 @@
 (() => {
-  const DATA_VER = "15";
+  const DATA_VER = "16";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
+  const SELF_COLOR = "#037340";
+  const SELF_FILL = "rgba(3,115,64,0.22)";
+  const OTHER_COLOR = "#c2410c";
+  const OTHER_FILL = "rgba(194,65,12,0.20)";
 
   const state = {
     index: null,
@@ -324,10 +328,10 @@
 
   function radarSvg(seriesList, labels) {
     const n = labels.length;
-    const size = 300;
-    const cx = 150;
-    const cy = 150;
-    const r = 96;
+    const size = 440;
+    const cx = 220;
+    const cy = 220;
+    const r = 148;
     if (!n) return "";
     const rings = [0.25, 0.5, 0.75, 1]
       .map((t) => {
@@ -341,8 +345,8 @@
     }).join("");
     const labs = labels
       .map((lab, i) => {
-        const [x, y] = polar(cx, cy, r + 22, i, n);
-        return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#4a5d54">${escapeHtml(lab)}</text>`;
+        const [x, y] = polar(cx, cy, r + 32, i, n);
+        return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#4a5d54">${escapeHtml(lab)}</text>`;
       })
       .join("");
     const polys = seriesList
@@ -350,12 +354,14 @@
         const pts = (s.values || [])
           .map((v, i) => polar(cx, cy, r * (Math.max(0, Math.min(100, v || 0)) / 100), i, n).join(","))
           .join(" ");
+        const width = s.width || 2.6;
+        const dash = s.dash ? ` stroke-dasharray="${escapeHtml(s.dash)}"` : "";
         return (
-          `<polygon points="${pts}" fill="${s.fill}" stroke="${s.stroke}" stroke-width="2" />` +
+          `<polygon points="${pts}" fill="${s.fill}" stroke="${s.stroke}" stroke-width="${width}"${dash} />` +
           (s.values || [])
             .map((v, i) => {
               const [x, y] = polar(cx, cy, r * (Math.max(0, Math.min(100, v || 0)) / 100), i, n);
-              return `<circle cx="${x}" cy="${y}" r="3" fill="${s.stroke}" />`;
+              return `<circle cx="${x}" cy="${y}" r="4" fill="${s.stroke}" />`;
             })
             .join("")
         );
@@ -489,9 +495,9 @@
     $("tendBox").innerHTML = tendHtml(sc, p.name);
     $("scoreRadar").innerHTML =
       radarSvg(
-        [{ values: sc.axes.map((a) => a.value), fill: "rgba(3,115,64,0.22)", stroke: "#037340" }],
+        [{ values: sc.axes.map((a) => a.value), fill: SELF_FILL, stroke: SELF_COLOR }],
         sc.axes.map((a) => a.label)
-      ) + radarLegend([{ color: "#037340", label: `${p.name || "이 선수"} · 초록 · 100점` }]);
+      ) + radarLegend([{ color: SELF_COLOR, label: `${p.name || "이 선수"} · 초록 · 100점` }]);
     $("scoreBars").innerHTML = sc.axes
       .map((a) => {
         const cls = vClass(a.value);
@@ -521,16 +527,31 @@
       }
       if (rateGrid) {
         const shown = rates.filter((r) => r.pct != null);
-        rateGrid.innerHTML = shown
-          .map((r) => {
-            const cls = vClass(r.pct);
-            return (
-              `<div class="rate-card">` +
-              `<span>${escapeHtml(r.label)}</span>` +
-              `<strong class="${cls}">${escapeHtml(r.text)}</strong>` +
-              `<em>${escapeHtml(r.raw)}${r.hint ? ` · ${r.hint}` : ""}</em>` +
-              `</div>`
-            );
+        const groups = [];
+        shown.forEach((r) => {
+          const title = r.group || "기타";
+          let g = groups.find((x) => x.title === title);
+          if (!g) {
+            g = { title, items: [] };
+            groups.push(g);
+          }
+          g.items.push(r);
+        });
+        rateGrid.innerHTML = groups
+          .map((g) => {
+            const cards = g.items
+              .map((r) => {
+                const cls = vClass(r.pct);
+                return (
+                  `<div class="rate-card">` +
+                  `<span>${escapeHtml(r.label)}</span>` +
+                  `<strong class="${cls}">${escapeHtml(r.text)}</strong>` +
+                  `<em>${escapeHtml(r.raw)}${r.hint ? ` · ${r.hint}` : ""}</em>` +
+                  `</div>`
+                );
+              })
+              .join("");
+            return `<div class="rate-group"><h5>${escapeHtml(g.title)}</h5><div class="rate-grid">${cards}</div></div>`;
           })
           .join("");
       }
@@ -670,62 +691,61 @@
     $("cmpRadar").innerHTML =
       radarSvg(
         [
-          { values: view.radarMine, fill: "rgba(3,115,64,0.22)", stroke: "#037340" },
-          { values: view.radarTheirs, fill: "rgba(23,100,192,0.16)", stroke: "#1764c0" },
+          { values: view.radarMine, fill: SELF_FILL, stroke: SELF_COLOR, width: 2.8 },
+          {
+            values: view.radarTheirs,
+            fill: OTHER_FILL,
+            stroke: OTHER_COLOR,
+            width: 2.8,
+            dash: "7 5",
+          },
         ],
         view.radarLabels
       ) +
       radarLegend([
-        { color: "#037340", label: `${p.name} · 초록` },
-        { color: "#1764c0", label: `${other.name} · 파랑` },
+        { color: SELF_COLOR, label: `${p.name} · 초록` },
+        { color: OTHER_COLOR, label: `${other.name} · 주황` },
       ]);
     $("cmpTend").innerHTML = cmpTendHtml(p.name, view.a, other.name, view.b);
-    const scoreBody =       view.scoreRows
-      .map((r) => {
-        const d = r.d;
-        const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
-        const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
-        const unit100 = r.scale === 100;
-        const unitPct = r.scale === "pct";
-        const mineTxt = unit100 ? score100(r.mine) : unitPct ? (r.mine == null ? "–" : `${r.mine}%`) : fmtNum(r.mine);
-        const theirsTxt = unit100
-          ? score100(r.theirs)
-          : unitPct
-            ? r.theirs == null
-              ? "–"
-              : `${r.theirs}%`
-            : fmtNum(r.theirs);
-        const suffix = unit100 ? " (100점)" : unitPct ? " (%)" : "";
+    const cmpCell = (r, side) => {
+      const n = side === "mine" ? r.mine : r.theirs;
+      const unit100 = r.scale === 100;
+      const unitPct = r.scale === "pct";
+      const txt = unit100 ? score100(n) : unitPct ? (n == null ? "–" : `${n}%`) : fmtNum(n);
+      const cls = (unit100 || unitPct) && n != null ? vClass(n) : "";
+      return `<td class="${cls}">${txt}</td>`;
+    };
+    const cmpRowHtml = (r) => {
+      const d = r.d;
+      const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
+      const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
+      const unit100 = r.scale === 100;
+      const unitPct = r.scale === "pct";
+      const suffix = unit100 ? " (100점)" : unitPct ? " (%)" : "";
+      return (
+        `<tr><td>${escapeHtml(r.label)}${suffix}</td>` +
+        cmpCell(r, "mine") +
+        cmpCell(r, "theirs") +
+        `<td class="${dCls}">${dTxt}${unitPct && d != null ? "p" : ""}</td></tr>`
+      );
+    };
+    const body = (view.sections || [])
+      .filter((sec) => sec.rows && sec.rows.length)
+      .map((sec) => {
         return (
-          `<tr><td>${escapeHtml(r.label)}${suffix}</td>` +
-          `<td class="${(unit100 || unitPct) && r.mine != null ? vClass(r.mine) : ""}">${mineTxt}</td>` +
-          `<td class="${(unit100 || unitPct) && r.theirs != null ? vClass(r.theirs) : ""}">${theirsTxt}</td>` +
-          `<td class="${dCls}">${dTxt}${unitPct && d != null ? "p" : ""}</td></tr>`
-        );
-      })
-      .join("");
-    const recBody = view.rec.rows
-      .map((r) => {
-        const d = r.d;
-        const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
-        const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
-        return (
-          `<tr><td>${escapeHtml(r.label)}</td>` +
-          `<td>${fmtNum(r.mine)}</td>` +
-          `<td>${fmtNum(r.theirs)}</td>` +
-          `<td class="${dCls}">${dTxt}</td></tr>`
+          `<tr class="cmp-sec"><th colspan="4">${escapeHtml(sec.title)}</th></tr>` +
+          sec.rows.map(cmpRowHtml).join("")
         );
       })
       .join("");
     $("cmpTable").innerHTML =
       `<table class="cmp"><thead><tr>` +
       `<th>항목</th>` +
-      `<th><span class="lg-dot" style="background:#037340"></span>${escapeHtml(p.name)}</th>` +
-      `<th><span class="lg-dot" style="background:#1764c0"></span>${escapeHtml(other.name)}</th>` +
+      `<th><span class="lg-dot" style="background:${SELF_COLOR}"></span>${escapeHtml(p.name)}</th>` +
+      `<th><span class="lg-dot" style="background:${OTHER_COLOR}"></span>${escapeHtml(other.name)}</th>` +
       `<th>차이</th>` +
       `</tr></thead><tbody>` +
-      scoreBody +
-      recBody +
+      body +
       `</tbody></table>`;
     $("cmpText").textContent = PlayerEngine.rivalCopy(p, other, state.events);
   }

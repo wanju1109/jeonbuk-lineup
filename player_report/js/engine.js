@@ -184,17 +184,17 @@ const PlayerEngine = (() => {
     const save = ratePct(ev.saves, num(ev.saves) + num(ev.conceded));
     if (gk) {
       return [
-        { key: "pass", label: "패스 성공률", hint: "성공/시도", ...pass },
-        { key: "save", label: "선방률", hint: "선방/(선방+실점)", ...save },
-        { key: "air", label: "공중볼 승률", hint: "성공/(성공+실패)", ...air },
+        { key: "save", label: "선방률", hint: "선방/(선방+실점)", group: "골문", ...save },
+        { key: "pass", label: "패스 성공률", hint: "성공/시도", group: "패스", ...pass },
+        { key: "air", label: "공중볼 승률", hint: "성공/(성공+실패)", group: "수비", ...air },
       ];
     }
     return [
-      { key: "pass", label: "패스 성공률", hint: "성공/시도", ...pass },
-      { key: "shot", label: "슈팅 정확도", hint: "유효슈팅/슈팅", ...shot },
-      { key: "drib", label: "드리블 성공률", hint: "성공/시도", ...drib },
-      { key: "tk", label: "태클 성공률", hint: "성공/시도", ...tk },
-      { key: "air", label: "공중볼 승률", hint: "성공/(성공+실패)", ...air },
+      { key: "shot", label: "슈팅 정확도", hint: "유효슈팅/슈팅", group: "공격", ...shot },
+      { key: "drib", label: "드리블 성공률", hint: "성공/시도", group: "공격", ...drib },
+      { key: "pass", label: "패스 성공률", hint: "성공/시도", group: "패스", ...pass },
+      { key: "tk", label: "태클 성공률", hint: "성공/시도", group: "수비", ...tk },
+      { key: "air", label: "공중볼 승률", hint: "성공/(성공+실패)", group: "수비", ...air },
     ];
   }
 
@@ -601,89 +601,127 @@ const PlayerEngine = (() => {
     return { a, b, rows, mixed, gk };
   }
 
+  function withDiff(rows) {
+    (rows || []).forEach((r) => {
+      r.d = r.mine != null && r.theirs != null ? Number((r.mine - r.theirs).toFixed(2)) : null;
+    });
+    return rows || [];
+  }
+
   function compareView(self, other, events) {
     const rec = compareRows(self, other);
     const a = scoreCard(self, events);
     const b = scoreCard(other, events);
-    const scoreRows = [
-      { key: "idx", label: "올해 기여점", mine: a.total, theirs: b.total, scale: 100 },
-      { key: "atk", label: "공격 성향", mine: a.attack, theirs: b.attack, scale: 100 },
-      { key: "def", label: "수비 성향", mine: a.defend, theirs: b.defend, scale: 100 },
+    const ae = a.ev || {};
+    const be = b.ev || {};
+    const sections = [
+      {
+        title: "기여점",
+        rows: withDiff([
+          { key: "idx", label: "올해 기여점", mine: a.total, theirs: b.total, scale: 100 },
+          { key: "atk", label: "공격 성향", mine: a.attack, theirs: b.attack, scale: 100 },
+          { key: "def", label: "수비 성향", mine: a.defend, theirs: b.defend, scale: 100 },
+        ]),
+      },
     ];
     if (a.chalk || b.chalk) {
-      const ae = a.ev || {};
-      const be = b.ev || {};
-      scoreRows.push({
-        key: "passp",
-        label: "패스 성공률",
-        mine: rateVal(a, "pass"),
-        theirs: rateVal(b, "pass"),
-        scale: "pct",
-      });
       if (a.gk || b.gk) {
-        scoreRows.push({
-          key: "savep",
-          label: "선방률",
-          mine: rateVal(a, "save"),
-          theirs: rateVal(b, "save"),
-          scale: "pct",
+        sections.push({
+          title: "골문",
+          rows: withDiff([
+            {
+              key: "savep",
+              label: "선방률",
+              mine: rateVal(a, "save"),
+              theirs: rateVal(b, "save"),
+              scale: "pct",
+            },
+            {
+              key: "passp",
+              label: "패스 성공률",
+              mine: rateVal(a, "pass"),
+              theirs: rateVal(b, "pass"),
+              scale: "pct",
+            },
+          ]),
+        });
+      } else {
+        sections.push({
+          title: "공격",
+          rows: withDiff([
+            { key: "shot", label: "슈팅", mine: num(ae.shots), theirs: num(be.shots), scale: 0 },
+            {
+              key: "shotp",
+              label: "슈팅 정확도",
+              mine: rateVal(a, "shot"),
+              theirs: rateVal(b, "shot"),
+              scale: "pct",
+            },
+            { key: "keyp", label: "키패스", mine: num(ae.keypass), theirs: num(be.keypass), scale: 0 },
+            {
+              key: "dribp",
+              label: "드리블 성공률",
+              mine: rateVal(a, "drib"),
+              theirs: rateVal(b, "drib"),
+              scale: "pct",
+            },
+          ]),
+        });
+        sections.push({
+          title: "패스",
+          rows: withDiff([
+            {
+              key: "passp",
+              label: "패스 성공률",
+              mine: rateVal(a, "pass"),
+              theirs: rateVal(b, "pass"),
+              scale: "pct",
+            },
+          ]),
+        });
+        sections.push({
+          title: "수비",
+          rows: withDiff([
+            {
+              key: "tk",
+              label: "태클 성공",
+              mine: num(ae.tackle_ok),
+              theirs: num(be.tackle_ok),
+              scale: 0,
+            },
+            {
+              key: "tkp",
+              label: "태클 성공률",
+              mine: rateVal(a, "tk"),
+              theirs: rateVal(b, "tk"),
+              scale: "pct",
+            },
+            {
+              key: "blk",
+              label: "차단·클리어",
+              mine: num(ae.int) + num(ae.cut) + num(ae.clg),
+              theirs: num(be.int) + num(be.cut) + num(be.clg),
+              scale: 0,
+            },
+            {
+              key: "air",
+              label: "공중볼 성공",
+              mine: num(ae.aerial_w),
+              theirs: num(be.aerial_w),
+              scale: 0,
+            },
+          ]),
         });
       }
-      if (!a.gk && !b.gk) {
-        scoreRows.push({
-          key: "shotp",
-          label: "슈팅 정확도",
-          mine: rateVal(a, "shot"),
-          theirs: rateVal(b, "shot"),
-          scale: "pct",
-        });
-        scoreRows.push({
-          key: "dribp",
-          label: "드리블 성공률",
-          mine: rateVal(a, "drib"),
-          theirs: rateVal(b, "drib"),
-          scale: "pct",
-        });
-        scoreRows.push({
-          key: "tkp",
-          label: "태클 성공률",
-          mine: rateVal(a, "tk"),
-          theirs: rateVal(b, "tk"),
-          scale: "pct",
-        });
-      }
-      scoreRows.push({ key: "shot", label: "칠판 슈팅", mine: num(ae.shots), theirs: num(be.shots), scale: 0 });
-      scoreRows.push({ key: "keyp", label: "칠판 키패스", mine: num(ae.keypass), theirs: num(be.keypass), scale: 0 });
-      scoreRows.push({
-        key: "tk",
-        label: "칠판 태클 성공",
-        mine: num(ae.tackle_ok),
-        theirs: num(be.tackle_ok),
-        scale: 0,
-      });
-      scoreRows.push({
-        key: "blk",
-        label: "칠판 차단·클리어",
-        mine: num(ae.int) + num(ae.cut) + num(ae.clg),
-        theirs: num(be.int) + num(be.cut) + num(be.clg),
-        scale: 0,
-      });
-      scoreRows.push({
-        key: "air",
-        label: "칠판 공중볼 성공",
-        mine: num(ae.aerial_w),
-        theirs: num(be.aerial_w),
-        scale: 0,
-      });
     }
-    scoreRows.forEach((r) => {
-      r.d = r.mine != null && r.theirs != null ? Number((r.mine - r.theirs).toFixed(2)) : null;
-    });
+    sections.push({ title: "공식 기록", rows: rec.rows });
+    const scoreRows = sections.flatMap((s) => s.rows);
     const useChalkRadar = a.chalk && b.chalk && !a.gk && !b.gk;
     return {
       rec,
       a,
       b,
+      sections,
       scoreRows,
       radarLabels: useChalkRadar
         ? ["올해 기여점", "공격 성향", "수비 성향", "슈팅", "수비 개입", "공중볼"]
