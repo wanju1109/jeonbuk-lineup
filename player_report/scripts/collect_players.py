@@ -37,6 +37,11 @@ SLEEP = float(os.environ.get("KLEAGUE_SLEEP") or "0.25")
 BASE = "https://www.kleague.com"
 PORTAL = "https://portal.kleague.com"
 CF = "https://d2tfp74nsbbrkr.cloudfront.net/v1/player"
+JBFC_PLAYER_API = "https://api.jbfc.kr/player"
+
+# Club CDN filename can differ from the official K League player id
+# (Dodo: K League 20260374, club file 20269696.png).
+_jbfc_by_name: dict[str, dict] | None = None
 
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -202,7 +207,7 @@ def parse_list_cards(html: str, team_id: str, pos: str) -> list[dict]:
         img = ""
         im = re.search(r'<img[^>]+src="(https://d2tfp74nsbbrkr[^"]+)"', body)
         if im:
-            img = im.group(1)
+            img = valid_kleague_photo(im.group(1))
         name = ""
         nm = re.search(r'<span class="name">([^<]+)', body)
         if nm:
@@ -314,7 +319,7 @@ def parse_detail(html: str, player_id: str) -> dict:
         flags=re.I | re.S,
     )
     if pm:
-        photo = pm.group(1)
+        photo = valid_kleague_photo(pm.group(1))
 
     summary_rows = parse_stat_block(section_after(html, "요약"), is_gk, "summary")
     summary = {}
@@ -366,17 +371,73 @@ def parse_detail(html: str, player_id: str) -> dict:
     }
 
 
-def photo_bundle(team_id: str, player_id: str, kleague_photo: str) -> dict:
+def valid_kleague_photo(url: str) -> str:
+    u = (url or "").strip()
+    if not u:
+        return ""
+    if "d2tfp74nsbbrkr.cloudfront.net" in u:
+        path = urllib.parse.urlparse(u).path or ""
+        if "/player_" not in path and not path.lower().endswith(
+            (".png", ".jpg", ".jpeg", ".webp")
+        ):
+            return ""
+    return u
+
+
+def jbfc_roster() -> dict[str, dict]:
+    global _jbfc_by_name
+    if _jbfc_by_name is not None:
+        return _jbfc_by_name
+    by_name: dict[str, dict] = {}
+    try:
+        req = urllib.request.Request(
+            JBFC_PLAYER_API,
+            headers={
+                "User-Agent": UA,
+                "Accept": "application/json",
+                "Referer": "https://hyundai-motorsfc.com/team/proteam/mf",
+                "Origin": "https://hyundai-motorsfc.com",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=40) as resp:
+            payload = json.loads(resp.read().decode("utf-8", "replace"))
+        data = payload.get("data") or {}
+        for _pos, rows in data.items():
+            for row in rows or []:
+                name = str(row.get("name") or "").strip()
+                if name:
+                    by_name[name] = row
+        log(f"  jbfc roster {len(by_name)} players")
+    except Exception as exc:
+        log(f"  jbfc roster skip: {exc}")
+        by_name = {}
+    _jbfc_by_name = by_name
+    return _jbfc_by_name
+
+
+def club_photo_file_id(team_id: str, player_id: str, name: str) -> str:
+    if team_id == "K05":
+        row = jbfc_roster().get((name or "").strip())
+        cid = str((row or {}).get("kl_player_id") or "").strip()
+        if cid:
+            return cid
+    return player_id
+
+
+def photo_bundle(team_id: str, player_id: str, kleague_photo: str, name: str = "") -> dict:
     meta = CLUB_META.get(team_id, {})
     club = ""
     tmpl = meta.get("photo")
     if tmpl:
-        club = tmpl.format(year=YEAR, id=player_id)
+        file_id = club_photo_file_id(team_id, player_id, name)
+        club = tmpl.format(year=YEAR, id=file_id)
     portal = (
         f"{PORTAL}/common/playerPhotoById.do?playerId={player_id}"
         f"&recYn=Y&searchYear={YEAR}"
     )
-    cf = kleague_photo or f"{CF}/{YEAR}/{team_id}/player_{player_id}.png"
+    cf = valid_kleague_photo(kleague_photo)
+    if not cf:
+        cf = f"{CF}/{YEAR}/{team_id}/player_{player_id}.png"
     page = ""
     if meta.get("player"):
         page = meta["player"].format(id=player_id)
@@ -445,7 +506,12 @@ def enrich_player(card: dict, team: dict) -> dict:
     if cached and cached.get("seasons") is not None and cached.get("name"):
         # Refresh scout text even when records are cached.
         cached["scout"] = generate_scout(cached)
-        photos = photo_bundle(team["id"], card["id"], card.get("kleague_photo") or cached.get("photos", {}).get("kleague") or "")
+        photos = photo_bundle(
+            team["id"],
+            card["id"],
+            card.get("kleague_photo") or cached.get("photos", {}).get("kleague") or "",
+            card.get("name") or cached.get("name") or "",
+        )
         cached["photos"] = photos
         write_json(path, cached)
         return cached
@@ -457,6 +523,7 @@ def enrich_player(card: dict, team: dict) -> dict:
         team["id"],
         card["id"],
         card.get("kleague_photo") or detail.get("kleague_photo") or "",
+        detail.get("name") or card.get("name") or "",
     )
     player = {
         "id": card["id"],
@@ -490,13 +557,16 @@ def enrich_player(card: dict, team: dict) -> dict:
 
 def index_entry(player: dict) -> dict:
     photos = player.get("photos") or {}
+    club = photos.get("club") or ""
+    kleague = valid_kleague_photo(photos.get("kleague") or "")
+    portal = photos.get("portal") or ""
     return {
         "id": player.get("id"),
         "name": player.get("name"),
         "back_no": player.get("back_no"),
         "position": player.get("position"),
-        "photo": photos.get("club") or photos.get("kleague") or photos.get("portal") or "",
-        "photo_fallback": photos.get("portal") or photos.get("kleague") or "",
+        "photo": club or kleague or portal or "",
+        "photo_fallback": portal or kleague or "",
     }
 
 

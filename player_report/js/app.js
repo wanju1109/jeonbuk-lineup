@@ -93,10 +93,17 @@
     document.documentElement.style.setProperty("--club", color);
   }
 
+  function isPhotoUrl(url) {
+    const u = String(url || "").trim();
+    if (!u) return false;
+    if (/^https?:\/\/d2tfp74nsbbrkr\.cloudfront\.net\/?$/i.test(u)) return false;
+    return true;
+  }
+
   function photoUrls(p) {
     const photos = p?.photos || {};
     const urls = [photos.club, photos.kleague, photos.portal, p?.photo, p?.photo_fallback];
-    return [...new Set(urls.filter(Boolean))];
+    return [...new Set(urls.filter(isPhotoUrl))];
   }
 
   function imgHtml(urls, alt, cls) {
@@ -229,7 +236,7 @@
     grid.innerHTML = list
       .map((p) => {
         const active = String(p.id) === String(state.playerId) ? " active" : "";
-        const urls = [p.photo, p.photo_fallback].filter(Boolean);
+        const urls = [p.photo, p.photo_fallback].filter(isPhotoUrl);
         return (
           `<button type="button" class="player-card${active}" data-id="${escapeHtml(p.id)}">` +
           `<div class="shot">${imgHtml(urls, p.name, "face")}</div>` +
@@ -510,7 +517,7 @@
         const attr = full ? PlayerEngine.attributes(full) : null;
         const y = full ? PlayerEngine.yearRole(full, PlayerEngine.YEAR) : null;
         const active = String(m.id) === String(state.compareId) ? " active" : "";
-        const urls = [m.photo, m.photo_fallback].filter(Boolean);
+        const urls = [m.photo, m.photo_fallback].filter(isPhotoUrl);
         return (
           `<button type="button" class="rival-card${active}" data-id="${escapeHtml(m.id)}">` +
           `<div class="shot">${imgHtml(urls, m.name, "face")}</div>` +
