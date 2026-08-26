@@ -855,22 +855,33 @@
     const no = p.backNo != null && p.backNo !== "" ? String(p.backNo) : "-";
     const cap = p.captain ? " (C)" : "";
     const kind = p.starter === false ? "후보 투입" : "선발";
-    const mismatch = d.familyMatch === false ? " is-drift" : "";
+    const pos = isBenchPosSafe(p.position) ? "" : p.position;
+    const role = d.actual || p.role || "";
+    const kindLine = [kind, pos, role].filter(Boolean).join(" · ");
+    const mismatch = d.drift ? " is-drift" : "";
     return (
       `<article class="duty-player${mismatch}">` +
       `<div class="duty-player-head">` +
       `<span class="duty-no">${escapeHtml(no)}</span>` +
       `<div>` +
       `<div class="duty-name">${escapeHtml(p.name || "선수")}${escapeHtml(cap)}</div>` +
-      `<div class="duty-kind">${escapeHtml(kind)}${p.position ? ` · ${escapeHtml(p.position)}` : ""}</div>` +
+      `<div class="duty-kind">${escapeHtml(kindLine)}</div>` +
       `</div>` +
       `</div>` +
-      `<div class="duty-row"><span>부여</span>${escapeHtml(d.assigned || "시트 없음")}</div>` +
-      `<div class="duty-row"><span>실제</span>${escapeHtml(d.actual || "추정 불가")}</div>` +
+      (d.drift && d.driftLine
+        ? `<div class="duty-row duty-drift"><span>이탈</span>${escapeHtml(d.driftLine)}</div>`
+        : "") +
       (d.play ? `<div class="duty-row"><span>기록</span>${escapeHtml(d.play)}</div>` : "") +
-      `<p class="duty-verdict">${escapeHtml(d.verdict || "")}</p>` +
+      (d.verdict ? `<p class="duty-verdict">${escapeHtml(d.verdict)}</p>` : "") +
       `</article>`
     );
+  }
+
+  function isBenchPosSafe(pos) {
+    const t = String(pos || "").trim();
+    if (!t) return true;
+    const up = t.toUpperCase();
+    return t.includes("대기") || t === "벤치" || up === "SUB" || up === "BENCH";
   }
 
   function renderDutySide(side) {

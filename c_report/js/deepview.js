@@ -572,10 +572,10 @@ const DeepView = (() => {
       `<div class="dd-role-pos">평균 위치 X ${fmt(p.x)} · Y ${fmt(p.y)}${
         p.outLabel ? ` · ${escapeHtml(p.outLabel)} 교체` : ""
       }${p.inLabel ? ` · ${escapeHtml(p.inLabel)} 투입` : ""}</div>` +
-      (duty
-        ? `<p class="dd-role-duty${duty.familyMatch ? "" : " is-drift"}">부여 ${escapeHtml(
-            duty.assigned
-          )} → 실제 ${escapeHtml(duty.actual)}. ${escapeHtml(duty.verdict)}</p>`
+      (duty && (duty.drift || duty.verdict)
+        ? `<p class="dd-role-duty${duty.drift ? " is-drift" : ""}">${
+            duty.drift && duty.driftLine ? `${escapeHtml(duty.driftLine)} ` : ""
+          }${escapeHtml(duty.verdict || "")}</p>`
         : "") +
       `<dl class="dd-role-stats">` +
       stats.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd></div>`).join("") +

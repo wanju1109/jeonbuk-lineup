@@ -1294,8 +1294,8 @@ body.embed-mode #howto {
   color: #274439;
 }
 
-.duty-row span {
-  color: var(--muted);
+.duty-row.duty-drift {
+  color: #8a5a10;
   font-weight: 600;
 }
 

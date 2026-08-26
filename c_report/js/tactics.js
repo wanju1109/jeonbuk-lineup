@@ -897,16 +897,25 @@ const Tactics = (() => {
       .sort((a, b) => b.stat.touches - a.stat.touches);
   }
 
+  function isBenchPos(pos) {
+    const p = String(pos || "").trim();
+    if (!p) return true;
+    const up = p.toUpperCase();
+    return p.includes("대기") || p === "벤치" || up === "SUB" || up === "BENCH";
+  }
+
   function sheetJob(pos) {
+    if (isBenchPos(pos)) return "";
     const p = String(pos || "").toUpperCase();
     if (p === "GK") return "골키퍼";
     if (p === "DF") return "수비수";
     if (p === "MF" || p === "MD") return "미드필더";
     if (p === "FW") return "공격수";
-    return pos || "필드 선수";
+    return "";
   }
 
   function posFamily(pos) {
+    if (isBenchPos(pos)) return "";
     const p = String(pos || "").toUpperCase();
     if (p === "GK") return "GK";
     if (p === "DF") return "DF";
@@ -923,6 +932,21 @@ const Tactics = (() => {
     return "MF";
   }
 
+  /*
+   * DF→풀백, MF→왼쪽 미드 is the same job with a finer label. Only treat a
+   * change of line (defender playing as a 9, striker sitting as a 6) as drift.
+   */
+  function isJobDrift(assignedFam, actual) {
+    if (!assignedFam) return false;
+    const got = roleFamily(actual);
+    if (assignedFam === got) return false;
+    if (assignedFam === "MF" && got === "FW" && /윙/.test(actual)) return false;
+    if (assignedFam === "FW" && got === "MF" && /윙어|공격형 미드|하프스페이스/.test(actual)) {
+      return false;
+    }
+    return true;
+  }
+
   function playBits(p) {
     const s = p.stat || {};
     const bits = [];
@@ -937,32 +961,98 @@ const Tactics = (() => {
     return bits;
   }
 
+  function playVerdict(p) {
+    const s = p.stat || {};
+    const role = String(p.role || "");
+    const t = Number(s.touches || 0);
+    const passes = Number(s.passes || 0);
+    const ok = Number(s.completed || 0);
+    const prog = Number(s.progressive || 0);
+    const defn = Number(s.defActions || 0);
+    const shots = Number(s.shots || 0);
+    const xg = Number(s.xg || 0);
+    const box = Number(s.boxTouches || 0);
+    const keys = Number(s.keyPasses || 0);
+    const progRate = passes ? prog / passes : 0;
+    const parts = [];
+
+    if (t < 8) {
+      if (p.inLabel) {
+        return `${p.inLabel} 투입됐지만 공 관여 ${t}회. 그 시간에 일이 안 온 교체입니다.`;
+      }
+      return `공 관여 ${t}회. 경기에 거의 안 보였습니다.`;
+    }
+
+    if (role.includes("골키퍼")) {
+      if (passes >= 20) {
+        parts.push(`후방 패스 ${ok}/${passes}회. 손끝보다 발끝으로 경기를 시작한 날입니다.`);
+      } else if (passes >= 8) {
+        parts.push(`패스 ${ok}/${passes}회. 짧게 내주며 빌드업에 가담했습니다.`);
+      } else {
+        parts.push(`필드 패스가 ${passes}회뿐입니다. 뒤에서 처리해야 할 공이 적었거나, 길게 걷어낸 비중이 큽니다.`);
+      }
+      if (defn >= 5) parts.push(`골문 앞 처리 ${defn}회.`);
+      return parts.join(" ");
+    }
+
+    if (t >= 80) parts.push(`공 관여 ${t}회. 경기가 이 선수를 거쳐 갔습니다.`);
+    else if (t >= 55) parts.push(`공 관여 ${t}회. 순환의 한 축이었습니다.`);
+    else if (t <= 22 && p.starter !== false) {
+      parts.push(`선발인데 공 관여 ${t}회. 경기 흐름에서 겉돈 그림입니다.`);
+    }
+
+    if (passes >= 20 && progRate >= 0.16 && prog >= 6) {
+      parts.push(`전진 패스 ${prog}회. 옆으로 돌리기보다 앞으로 보냈습니다.`);
+    } else if (passes >= 25 && progRate < 0.08) {
+      parts.push(`패스 ${ok}/${passes}인데 전진은 ${prog}회. 안전하게 옆으로 돌린 연결입니다.`);
+    }
+
+    if (defn >= 14) parts.push(`수비 행동 ${defn}회. 끊고 막는 일이 많았습니다.`);
+
+    if (shots >= 3 || xg >= 0.35) {
+      parts.push(`슈팅 ${shots}회, xG ${xg}. 마무리 장면에 이름을 올렸습니다.`);
+    } else if (box >= 8 && /풀백|윙|스트라이커|공격형/.test(role)) {
+      parts.push(`박스 안 터치 ${box}회. 골문 근처까지 들어간 날입니다.`);
+    }
+
+    if (keys >= 3) parts.push(`키패스 ${keys}회.`);
+
+    if (/오버래핑 풀백/.test(role) && box < 3 && prog < 4) {
+      parts.push(`공격형 풀백으로 읽히지만, 올라가서 만든 일은 적습니다.`);
+    }
+    if (/홀딩|딥라잉/.test(role) && prog >= 10) {
+      parts.push(`수비형 자리인데 전진 패스가 ${prog}회. 뒤에서 경기를 연 쪽입니다.`);
+    }
+
+    if (p.outLabel) parts.push(`${p.outLabel}에 교체됐습니다.`);
+    else if (p.inLabel) parts.push(`${p.inLabel} 투입 이후의 기록입니다.`);
+
+    if (!parts.length) {
+      return `${role}. 공 ${t}회, 패스 ${ok}/${passes}, 수비 ${defn}회.`;
+    }
+    return parts.slice(0, 3).join(" ");
+  }
+
   function dutyNote(p) {
     const assigned = sheetJob(p.position);
-    const actual = p.role || "역할 불명";
+    const actual = p.role || "";
     const assignedFam = posFamily(p.position);
-    const familyMatch = !assignedFam || assignedFam === roleFamily(actual);
-    const touches = Number(p.stat?.touches || 0);
+    const drift = isJobDrift(assignedFam, actual);
     const bits = playBits(p);
-    let verdict;
-    if (touches < 8) {
-      verdict = p.inLabel
-        ? "투입은 됐지만 공 기록이 거의 없습니다. 역할이 안 보이면, 그 시간대에 일이 안 온 겁니다."
-        : "경기에 거의 안 보였습니다. 시트에 이름은 있어도, 그날 그림에는 없었습니다.";
-    } else if (familyMatch) {
-      verdict =
-        `시트 ${assigned}와 실제(${actual})가 맞습니다. 맡은 구간에서 그 일을 했습니다.`;
-    } else {
-      verdict =
-        `시트에는 ${assigned}인데, 실제로는 ${actual}처럼 뛰었습니다. 감독이 그렇게 쓰거나, 선수가 자리를 이탈한 그림입니다.`;
-    }
+    const verdict = playVerdict(p);
+    const driftLine = drift
+      ? `시트는 ${assigned}인데 실제로는 ${actual}처럼 뛰었습니다.`
+      : "";
     return {
       assigned,
       actual,
-      familyMatch,
+      familyMatch: !drift,
+      drift,
+      showAssigned: Boolean(assigned) && drift,
       touches,
       play: bits.join(", "),
       verdict,
+      driftLine,
       starter: Boolean(p.starter),
     };
   }
@@ -994,7 +1084,9 @@ const Tactics = (() => {
           playerId: id,
           name: p.name || byId.get(id)?.NAME || "선수",
           backNo: p.back_no ?? pos.backNo ?? "",
-          position: p.position || byId.get(id)?.Position_Name || "",
+          position: isBenchPos(p.position)
+            ? byId.get(id)?.Position_Name || byId.get(id)?.position || ""
+            : p.position || byId.get(id)?.Position_Name || "",
           x: pos.x,
           y: pos.y,
           touches: pos.touches,

@@ -520,7 +520,9 @@ const Analyze = (() => {
     const d = p.duty || (typeof Tactics !== "undefined" && Tactics.dutyNote ? Tactics.dutyNote(p) : null);
     if (!d) return playerHead(p);
     const play = d.play ? ` 기록: ${d.play}.` : "";
-    return `${playerHead(p)}. 부여: 시트 ${d.assigned}. 실제: ${d.actual}.${play} ${d.verdict}`;
+    const drift = d.driftLine ? ` ${d.driftLine}` : "";
+    const role = d.actual ? ` · ${d.actual}` : "";
+    return `${playerHead(p)}${role}.${play}${drift} ${d.verdict || ""}`.replace(/\s+/g, " ").trim();
   }
 
   function buildDutyChapter(meta, events, players, lineup) {
@@ -540,7 +542,7 @@ const Analyze = (() => {
 
     const paras = [];
     paras.push(
-      "감독이 락커룸에서 한 말은 포털에 없습니다. 대신 경기 시트 포지션을 ‘부여한 역할’로, 평균 위치와 패스·슈팅·수비 기록을 ‘실제로 뛴 역할’로 읽습니다. 둘이 같으면 지시한 구간에서 그 일을 한 것이고, 다르면 감독이 그렇게 썼거나 선수가 자리를 이탈한 겁니다."
+      "시트 포지션(수비수·미드필더)과 ‘왼쪽 풀백’처럼 한 단계 구체화한 이름은 같은 일입니다. 그 짝을 맞춰 주는 문장은 적지 않습니다. 아래는 그날 공을 얼마나 만졌는지, 앞으로 보냈는지, 수비에 가담했는지만 적습니다. 시트와 실제 라인이 다를 때만 이탈로 표시합니다."
     );
 
     const sideBlock = (side) => {
@@ -1172,7 +1174,7 @@ const Analyze = (() => {
       kicker: "NOTE",
       title: "이 글을 읽는 법",
       paragraphs: [
-        "이 브리핑은 K리그 포털에 찍힌 패스·슈팅·태클 위치를 바탕으로 자동으로 만든 글입니다. 감독이 실제로 지시한 내용과 다를 수 있고, 그날 눈에 보이는 행동에 대한 해석입니다. 선수 역할의 ‘부여’는 경기 시트 포지션이고, ‘실제’는 평균 위치와 기록으로 추정한 이름입니다.",
+        "이 브리핑은 K리그 포털에 찍힌 패스·슈팅·태클 위치를 바탕으로 자동으로 만든 글입니다. 감독이 실제로 지시한 내용과 다를 수 있습니다. 선수 역할은 시트와 같은 라인(수비수↔풀백)이면 생략하고, 라인이 바뀌었거나 그날 기록이 말할 때만 적습니다.",
         "어려운 용어는 오른쪽 용어 가이드에 풀어 두었습니다. 아래 히트맵, 슈팅 맵, 골 스토리에서 같은 이야기를 그림으로 다시 확인해 보세요. 글과 그림이 만나면, 경기가 훨씬 선명해집니다.",
       ],
     });
