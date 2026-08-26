@@ -9,7 +9,7 @@
   <meta property="og:description" content="구단을 고르고 선수를 조회하면 공식 출장 기록과 시즌·팀 표를 한 화면에." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
-  <link rel="stylesheet" href="./css/player.css?v=20" />
+  <link rel="stylesheet" href="./css/player.css?v=21" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -26,6 +26,7 @@
       <div class="hero-nav">
         <a class="btn btn-ghost" href="../c_report/">경기 리포트</a>
         <a class="btn btn-ghost" href="../p_report/">프리뷰</a>
+        <a class="btn btn-ghost editor-only" href="#community" id="evergreenJump">에버그린 링크</a>
       </div>
       <p class="hero-credit">
         <span>출처 K리그 공식 홈페이지 · 데이터포털</span>
@@ -123,8 +124,53 @@
         <p class="source-line" id="sourceLine"></p>
       </article>
     </main>
+
+    <section class="section editor-only" id="community">
+      <div class="section-head">
+        <p class="kicker">작성자 전용</p>
+        <h2>에버그린 링크 만들기</h2>
+        <p>주소에 <code>?x=jb7k</code> 가 있을 때만 보입니다. 공유 URL에는 작성자 키를 넣지 마세요. 선수·비교를 고르면 아래 카드가 그 화면으로 갱신됩니다.</p>
+      </div>
+      <div class="panel community">
+        <h3>0) 공유할 선수 선택</h3>
+        <p class="help" id="shareTargetMeta">아직 고른 선수가 없습니다. 위에서 구단·선수를 누르면 링크가 만들어집니다.</p>
+
+        <h3>1) 추천: 에버그린 링크 카드 HTML 복사</h3>
+        <p class="help">
+          evergreenjb 글쓰기 → <strong>HTML/소스</strong> 모드 → <strong>링크 카드 복사</strong>한 내용을 붙여넣기.
+          클릭하면 해당 선수 프로필이 새 창으로 열립니다. 에버그린은 GitHub Pages iframe을 막으므로 이 카드가 기본입니다.
+        </p>
+        <pre id="shareCode" class="embed-code"></pre>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="copyShare" type="button">에버그린 링크 카드 복사</button>
+          <button class="btn btn-ghost" id="copyUrl" type="button">URL만 복사</button>
+        </div>
+
+        <h3>2) (선택) iframe — 운영진 허용 후에만</h3>
+        <p class="help">
+          운영진이 외부 멀티미디어 허용에
+          <code>wanju1109.github.io/</code> 를 추가해야 게시글 안에 화면이 보입니다.
+        </p>
+        <pre id="embedCode" class="embed-code"></pre>
+        <div class="btn-row">
+          <button class="btn btn-ghost" id="copyEmbed" type="button">iframe HTML 복사</button>
+        </div>
+
+        <h3>3) 미리보기</h3>
+        <div class="embed-preview-wrap">
+          <iframe
+            id="embedPreview"
+            title="K리그 선수 프로필 미리보기"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <p class="help">공유용 프로필 URL (작성자 키 없음): <a id="reportUrl" href="./">로딩 중…</a></p>
+      </div>
+    </section>
   </div>
-  <script src="./js/engine.js?v=20"></script>
-  <script src="./js/app.js?v=20"></script>
+  <script src="./js/engine.js?v=21"></script>
+  <script src="./js/app.js?v=21"></script>
 </body>
 </html>

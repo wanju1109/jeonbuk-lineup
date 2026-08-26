@@ -1,8 +1,10 @@
 (() => {
-  const DATA_VER = "20";
+  const DATA_VER = "21";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
+  const CANONICAL = "https://wanju1109.github.io/jeonbuk-lineup/player_report/";
+  const EDIT_TOKEN = "jb7k";
   const SELF_COLOR = "#037340";
   const SELF_FILL = "rgba(3,115,64,0.22)";
   const OTHER_COLOR = "#c2410c";
@@ -61,11 +63,184 @@
     };
   }
 
-  function writeHash() {
+  function routeHash() {
     const bits = [state.leagueId, state.teamId, state.playerId].filter(Boolean);
     if (state.playerId && state.compareId) bits.push("vs", state.compareId);
-    const next = bits.length ? `#/${bits.join("/")}` : "";
-    if (location.hash !== next) history.replaceState(null, "", next || location.pathname);
+    return bits.length ? `#/${bits.join("/")}` : "";
+  }
+
+  function writeHash() {
+    const next = routeHash();
+    if (location.hash === next) return;
+    const path = location.pathname + location.search;
+    try {
+      history.replaceState(null, "", path + next);
+    } catch (err) {
+      location.hash = next.replace(/^#/, "");
+    }
+  }
+
+  function isEditQuery() {
+    try {
+      const p = new URLSearchParams(location.search || "");
+      return p.get("x") === EDIT_TOKEN || p.get("edit") === "1";
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function applyViewMode() {
+    document.body.classList.toggle("edit-mode", isEditQuery());
+  }
+
+  function pageBaseNoQuery() {
+    return String(window.location.href.split("#")[0].split("?")[0] || "");
+  }
+
+  function normalizeBase(base) {
+    let b = String(base || "").trim();
+    if (!b) return CANONICAL;
+    if (!/\.html$/i.test(b) && !/\/$/.test(b)) b += "/";
+    return b;
+  }
+
+  function publicShareUrl() {
+    const current = pageBaseNoQuery();
+    const base = /wanju1109\.github\.io/i.test(current) ? current : CANONICAL;
+    return `${normalizeBase(base)}${routeHash()}`;
+  }
+
+  function previewShareUrl() {
+    const current = pageBaseNoQuery();
+    if (/localhost|127\.0\.0\.1/i.test(window.location.hostname)) {
+      return `${normalizeBase(current)}${routeHash()}`;
+    }
+    return publicShareUrl();
+  }
+
+  function yearLine(p) {
+    if (!p || typeof PlayerEngine === "undefined") return "";
+    try {
+      const y = PlayerEngine.yearLine(p);
+      if (!y) return "";
+      if (PlayerEngine.isGk(p)) {
+        return `올해 ${y.apps}경기 · 실점 ${y.a} · 클린 ${y.b}`;
+      }
+      return `올해 ${y.apps}경기 · ${y.a}골 ${y.b}도움`;
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function shareCopy() {
+    const p = state.player;
+    const team = currentTeam();
+    const teamName = p?.team_full || p?.team_name || team?.full || team?.name || "";
+    if (!p) {
+      return {
+        title: teamName ? `${teamName} 선수 프로필` : "K리그 선수 프로필",
+        sub: "구단을 고르고 선수를 누르면 공식 출장·득점·도움을 한 장에 모읍니다.",
+        meta: teamName ? `현재: ${teamName} 선수단` : "아직 고른 선수가 없습니다. 위에서 구단·선수를 누르면 링크가 만들어집니다.",
+      };
+    }
+    const other = state.comparePlayer && String(state.compareId) === String(state.comparePlayer.id)
+      ? state.comparePlayer
+      : null;
+    const pos = p.position || "";
+    const no = p.back_no != null ? `No.${p.back_no}` : "";
+    const bits = [pos, no].filter(Boolean).join(" ");
+    let title;
+    if (other) {
+      title = `${p.name} vs ${other.name}${teamName ? " · " + teamName : ""}`;
+    } else {
+      title = `${teamName} ${p.name}${bits ? " · " + bits : ""}`.trim();
+    }
+    let sub = yearLine(p) || "공식 출장 · 득점 · 도움과 칠판 패스·슈팅 기록.";
+    if (other) sub += ` · ${p.name} vs ${other.name} 기록 비교`;
+    return {
+      title,
+      sub,
+      meta: other
+        ? `현재: ${p.name} vs ${other.name}${teamName ? " · " + teamName : ""}`
+        : `현재: ${teamName} ${p.name}${bits ? " · " + bits : ""}`.trim(),
+    };
+  }
+
+  function buildShareHtml(url) {
+    const copy = shareCopy();
+    const safeTitle = escapeHtml(copy.title);
+    const safeSub = escapeHtml(copy.sub);
+    const safeUrl = escapeHtml(url);
+    return [
+      '<div style="display:block;width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
+      '<table cellpadding="0" cellspacing="0" border="0" bgcolor="#0f2a1c" width="1100" style="width:100% !important;max-width:1100px;min-width:100%;border-collapse:collapse;background-color:#0f2a1c;color:#f5fff8;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box;">',
+      '<tr><td bgcolor="#0f2a1c" style="padding:16px 18px;background-color:#0f2a1c;color:#f5fff8;">',
+      '<p style="margin:0 0 14px;font-size:13px;line-height:1.7;color:#e8f6ee;background-color:#0f2a1c;">',
+      "AI를 활용하여 작성한 REPORT 입니다.<br>",
+      "칼럼/분석 탭을 누르면 미래의 분석관을 꿈꾸는 분들께서 작성한, 재미있고 상세한 분석 글들이 많이 있습니다.<br>",
+      "AI는 잘못된 정보를 전달할 수 있습니다. 무조건적인 신뢰보다는 적당한 선에서 비판적인 시선으로 봐주세요.",
+      "</p>",
+      '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.06em;color:#f0b429;background-color:#0f2a1c;">K LEAGUE PLAYER REPORT</p>',
+      `<p style="margin:0 0 10px;font-size:18px;font-weight:700;line-height:1.35;color:#f5fff8;background-color:#0f2a1c;">${safeTitle}</p>`,
+      `<p style="margin:0 0 14px;font-size:13px;line-height:1.55;color:#d7efe3;background-color:#0f2a1c;">${safeSub}</p>`,
+      `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#b7f24a;color:#0a2218;font-weight:700;text-decoration:none;">프로필 새 창에서 보기 →</a>`,
+      "</td></tr></table></div>",
+    ].join("");
+  }
+
+  function buildEmbedHtml(src) {
+    return [
+      '<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
+      `<iframe src="${escapeHtml(src)}" title="K리그 선수 프로필" width="100%" height="920" style="width:100%;max-width:1100px;height:920px;border:0;border-radius:12px;overflow:hidden;background:#f3f7f2;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>`,
+      "</div>",
+    ].join("");
+  }
+
+  async function copyText(text) {
+    const value = String(text || "");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(value);
+        return;
+      } catch (err) {
+        // Fall through to execCommand for locked iframes / older browsers.
+      }
+    }
+    const ta = document.createElement("textarea");
+    ta.value = value;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch (err) {
+      ok = false;
+    }
+    document.body.removeChild(ta);
+    if (!ok) throw new Error("copy failed");
+  }
+
+  function setupCommunityEmbed() {
+    if (!isEditQuery()) return;
+    const reportUrl = publicShareUrl();
+    const previewUrl = previewShareUrl();
+    const shareHtml = buildShareHtml(reportUrl);
+    const embedHtml = buildEmbedHtml(reportUrl);
+    const copy = shareCopy();
+    if ($("shareTargetMeta")) $("shareTargetMeta").textContent = copy.meta;
+    if ($("shareCode")) $("shareCode").textContent = shareHtml;
+    if ($("embedCode")) $("embedCode").textContent = embedHtml;
+    if ($("reportUrl")) {
+      $("reportUrl").textContent = reportUrl;
+      $("reportUrl").href = reportUrl;
+    }
+    const frame = $("embedPreview");
+    if (frame && frame.getAttribute("src") !== previewUrl) {
+      frame.src = previewUrl;
+    }
   }
 
   function currentLeague() {
@@ -899,9 +1074,13 @@
     renderRivals(p);
     if (!state.compareId) {
       const mates = teammatesSamePos(p);
-      if (mates[0]) state.compareId = mates[0].id;
+      if (mates[0]) {
+        state.compareId = mates[0].id;
+        writeHash();
+      }
     }
     if (state.compareId) await loadCompare(state.compareId);
+    setupCommunityEmbed();
   }
 
   async function loadCompare(id) {
@@ -915,6 +1094,7 @@
       }
       renderCompare(state.player);
       renderRivals(state.player);
+      setupCommunityEmbed();
     } catch (err) {
       $("cmpTable").innerHTML = `<p class="empty-note">비교 상대 데이터를 찾지 못했습니다.</p>`;
     }
@@ -929,9 +1109,11 @@
       renderProfile(p);
       setStatus("");
       loadRivals(p);
+      setupCommunityEmbed();
     } catch (err) {
       setStatus("선수 데이터를 아직 수집하지 못했거나 파일을 찾지 못했습니다.");
       renderProfile(null);
+      setupCommunityEmbed();
     }
   }
 
@@ -949,6 +1131,7 @@
     } else if (!state.playerId) {
       renderProfile(null);
     }
+    setupCommunityEmbed();
   }
 
   function bind() {
@@ -976,6 +1159,36 @@
       state.q = e.target.value || "";
       renderSquad();
     });
+    $("evergreenJump")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      $("community")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    $("copyShare")?.addEventListener("click", async () => {
+      try {
+        const text = $("shareCode")?.textContent || buildShareHtml(publicShareUrl());
+        await copyText(text);
+        setStatus("에버그린용 프로필 링크 카드를 복사했습니다. HTML 모드에 붙여넣으세요.");
+      } catch (err) {
+        setStatus("복사에 실패했습니다. 코드를 직접 드래그해 주세요.");
+      }
+    });
+    $("copyUrl")?.addEventListener("click", async () => {
+      try {
+        await copyText(publicShareUrl());
+        setStatus("프로필 URL을 복사했습니다. (작성자 키 없음)");
+      } catch (err) {
+        setStatus("URL 복사에 실패했습니다.");
+      }
+    });
+    $("copyEmbed")?.addEventListener("click", async () => {
+      try {
+        const text = $("embedCode")?.textContent || buildEmbedHtml(publicShareUrl());
+        await copyText(text);
+        setStatus("iframe HTML을 복사했습니다.");
+      } catch (err) {
+        setStatus("복사에 실패했습니다.");
+      }
+    });
     window.addEventListener("hashchange", () => {
       applyHash();
     });
@@ -1001,6 +1214,7 @@
   }
 
   async function boot() {
+    applyViewMode();
     bind();
     try {
       const res = await fetch(DATA_INDEX);
