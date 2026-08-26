@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "25";
+  const DATA_VER = "26";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -69,16 +69,26 @@
     return bits.length ? `#/${bits.join("/")}` : "";
   }
 
-  function writeHash() {
+  function urlWithHash(hash) {
+    return location.pathname + location.search + (hash || "");
+  }
+
+  function writeHash(mode) {
     const next = routeHash();
     if (location.hash === next) return;
-    const path = location.pathname + location.search;
+    const url = urlWithHash(next);
     try {
-      history.replaceState(null, "", path + next);
+      if (mode === "replace") history.replaceState(null, "", url);
+      else history.pushState(null, "", url);
     } catch (err) {
+      appliedUrl = url;
       location.hash = next.replace(/^#/, "");
+      return;
     }
+    appliedUrl = url;
   }
+
+  let appliedUrl = "";
 
   function isEditQuery() {
     try {
@@ -1088,7 +1098,7 @@
       const mates = teammatesSamePos(p);
       if (mates[0]) {
         state.compareId = mates[0].id;
-        writeHash();
+        writeHash("replace");
       }
     }
     if (state.compareId) await loadCompare(state.compareId);
@@ -1217,13 +1227,20 @@
         setStatus("복사에 실패했습니다.");
       }
     });
+    window.addEventListener("popstate", () => {
+      applyHash();
+    });
     window.addEventListener("hashchange", () => {
       applyHash();
     });
   }
 
   function applyHash() {
+    const key = urlWithHash(location.hash || "");
+    if (key === appliedUrl) return;
+    appliedUrl = key;
     const h = parseHash();
+    const prevPlayer = state.playerId;
     if (h.leagueId) state.leagueId = h.leagueId;
     if (h.teamId) state.teamId = h.teamId;
     state.playerId = h.playerId || "";
@@ -1232,6 +1249,8 @@
       state.player = null;
       state.comparePlayer = null;
       state.rivals = [];
+    } else if (!state.compareId) {
+      state.comparePlayer = null;
     }
     if (!state.teamId) {
       const lg = currentLeague();
@@ -1239,6 +1258,7 @@
     }
     renderAll();
     if (state.playerId) loadPlayer(state.playerId);
+    else if (prevPlayer) $("squadSection")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   async function boot() {
