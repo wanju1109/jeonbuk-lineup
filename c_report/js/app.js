@@ -392,7 +392,7 @@
     applyTeamColors(meta);
     const pmap = Analyze.playerMap(players);
     const stats = Analyze.teamStats(events, meta.home.team_id, meta.away.team_id);
-    const goalList = Analyze.goals(events);
+    const goalList = Analyze.goals(events, meta);
 
     const otherMatch = !isJeonbukMatch({
       home: meta.home?.name,
@@ -445,7 +445,7 @@
     const h = stats[meta.home.team_id];
     const a = stats[meta.away.team_id];
     const periods = Analyze.periodStats(events, meta.home.team_id, meta.away.team_id);
-    const flow = Analyze.flowAfterFirstGoal(events, meta.home.team_id, meta.away.team_id);
+    const flow = Analyze.flowAfterFirstGoal(events, meta.home.team_id, meta.away.team_id, meta);
     const att = Analyze.attendanceCompare(meta, state.index, state.clubAttendance);
 
     const homeName = meta.home.name || "홈";
@@ -849,7 +849,7 @@
     const homeId = meta.home.team_id;
     const awayId = meta.away.team_id;
     const periods = Analyze.periodStats(events, homeId, awayId);
-    const flow = Analyze.flowAfterFirstGoal(events, homeId, awayId);
+    const flow = Analyze.flowAfterFirstGoal(events, homeId, awayId, meta);
     const homeName = meta.home.name || "홈";
     const awayName = meta.away.name || "원정";
 
@@ -1048,8 +1048,36 @@
 
   function renderGoals(goalList, pmap, meta) {
     const box = $("goalList");
+    const seqBox = $("goalSeq");
+    const canvas = $("goalCanvas");
+    const section = $("goals");
+
+    const paintEmptyPitch = () => {
+      if (seqBox) seqBox.innerHTML = "";
+      section?.removeAttribute("data-side");
+      if (!canvas || typeof Pitch === "undefined") return;
+      try {
+        Pitch.render(canvas, {
+          mode: "sequence",
+          points: [],
+          homeTeamId: meta?.home?.team_id,
+          direction: pitchDirection(meta),
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
     if (!goalList.length) {
-      box.innerHTML = "<div class='meta'>골 이벤트가 없습니다.</div>";
+      const hs = Number(meta?.score?.home);
+      const as = Number(meta?.score?.away);
+      const nilNil = hs === 0 && as === 0;
+      if (box) {
+        box.innerHTML = nilNil
+          ? "<div class='meta'>스코어 0-0 · 골이 없어 골 스토리를 그리지 않습니다.</div>"
+          : "<div class='meta'>이 경기 CHALK BOARD에 골 이벤트가 없습니다.</div>";
+      }
+      paintEmptyPitch();
       return;
     }
     if (state.selectedGoalIdx >= goalList.length) state.selectedGoalIdx = 0;
@@ -1082,29 +1110,33 @@
     const goal = goalList[state.selectedGoalIdx];
     const goalSide = goal.TEAM_ID === meta.home.team_id ? "home" : "away";
     /* Drives the colour of the sequence numbers and pitch arrows below. */
-    $("goals")?.setAttribute("data-side", goalSide);
+    section?.setAttribute("data-side", goalSide);
     const seq = Analyze.sequenceBeforeGoal(state.data.events, goal, 28);
     const points = seq.map((e) => Pitch.normalizePoint(e, meta.home.team_id));
 
-    $("goalSeq").innerHTML = seq
-      .map((e, i) => {
-        const label = Analyze.actionLabel(e);
-        const nm = Analyze.nameOf(pmap, e.PLAYER_ID);
-        return `<div class="seq-step"><div class="n">${i + 1}</div><div class="body"><strong>${escapeHtml(
-          nm
-        )}</strong> · ${escapeHtml(label)}<br><span style="color:#5d7268;font-size:12px">${escapeHtml(
-          Analyze.formatClock(e)
-        )}</span></div></div>`;
-      })
-      .join("");
+    if (seqBox) {
+      seqBox.innerHTML = seq
+        .map((e, i) => {
+          const label = Analyze.actionLabel(e);
+          const nm = Analyze.nameOf(pmap, e.PLAYER_ID);
+          return `<div class="seq-step"><div class="n">${i + 1}</div><div class="body"><strong>${escapeHtml(
+            nm
+          )}</strong> · ${escapeHtml(label)}<br><span style="color:#5d7268;font-size:12px">${escapeHtml(
+            Analyze.formatClock(e)
+          )}</span></div></div>`;
+        })
+        .join("");
+    }
 
-    Pitch.render($("goalCanvas"), {
-      mode: "sequence",
-      points,
-      homeTeamId: meta.home.team_id,
-      accent: sideColor(goalSide, "pitch"),
-      direction: pitchDirection(meta),
-    });
+    if (canvas) {
+      Pitch.render(canvas, {
+        mode: "sequence",
+        points,
+        homeTeamId: meta.home.team_id,
+        accent: sideColor(goalSide, "pitch"),
+        direction: pitchDirection(meta),
+      });
+    }
   }
 
   function renderPlayers(events, players, meta) {

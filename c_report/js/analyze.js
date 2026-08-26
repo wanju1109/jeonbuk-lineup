@@ -152,9 +152,19 @@ const Analyze = (() => {
     return out;
   }
 
-  function goals(events) {
-    return events
-      .filter((e) => e.TYPE_DETAIL_CD === "GL")
+  function goals(events, meta) {
+    const list = Array.isArray(events) ? events : [];
+    const hs = Number(meta?.score?.home);
+    const as = Number(meta?.score?.away);
+    if (Number.isFinite(hs) && Number.isFinite(as) && hs === 0 && as === 0) {
+      return [];
+    }
+    const allowed = new Set(
+      [meta?.home?.team_id, meta?.away?.team_id].filter(Boolean)
+    );
+    return list
+      .filter((e) => e && e.TYPE_DETAIL_CD === "GL")
+      .filter((e) => !allowed.size || allowed.has(e.TEAM_ID))
       .sort((a, b) => absSeconds(a) - absSeconds(b));
   }
 
@@ -189,8 +199,11 @@ const Analyze = (() => {
     return out;
   }
 
-  function flowAfterFirstGoal(events, homeId, awayId) {
-    const goalList = goals(events);
+  function flowAfterFirstGoal(events, homeId, awayId, meta) {
+    const goalList = goals(
+      events,
+      meta || { home: { team_id: homeId }, away: { team_id: awayId } }
+    );
     if (!goalList.length) {
       return {
         hasFirstGoal: false,
@@ -319,6 +332,180 @@ const Analyze = (() => {
       away: lineup?.away || [],
       subs: lineup?.subs || [],
     };
+  }
+
+  function pickBySeed(seed, items) {
+    const arr = (items || []).filter(Boolean);
+    if (!arr.length) return "";
+    const s = String(seed ?? "");
+    let h = 2166136261;
+    for (let i = 0; i < s.length; i += 1) {
+      h ^= s.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return arr[(h >>> 0) % arr.length];
+  }
+
+  function subAbsMinute(s) {
+    if (!s) return null;
+    const period = Number(s.period || 0);
+    const m = Number(s.minute ?? s.min);
+    if (!Number.isFinite(m)) return null;
+    if (period >= 2) return 45 + m;
+    return m;
+  }
+
+  function subSwapLabel(s) {
+    if (!s) return "";
+    const team = s.team_name || "";
+    const fmt = (p) => {
+      if (!p || !p.name) return "";
+      return p.back_no != null && p.back_no !== "" ? `#${p.back_no} ${p.name}` : p.name;
+    };
+    const outN = fmt(s.player_out);
+    const inN = fmt(s.player_in);
+    if (outN && inN) return `${team} ${outN} → ${inN}`.trim();
+    if (inN) return `${team} ${inN} 투입`.trim();
+    return "";
+  }
+
+  function isHalfTimeSub(s) {
+    const period = Number(s?.period || 0);
+    const m = Number(s?.minute ?? s?.min);
+    const label = String(s?.time_label || "");
+    if (period === 2 && Number.isFinite(m) && m <= 1) return true;
+    return /후반\s*0\s*'/.test(label);
+  }
+
+  function shotSplitAt(events, absMin, homeId, awayId) {
+    const blank = () => ({ shots: 0, xg: 0 });
+    const before = { [homeId]: blank(), [awayId]: blank() };
+    const after = { [homeId]: blank(), [awayId]: blank() };
+    if (!Number.isFinite(absMin)) return { before, after };
+    const t = absMin * 60;
+    for (const e of events || []) {
+      if (e.TYPE_CD !== "ST") continue;
+      const row = (absSeconds(e) < t ? before : after)[e.TEAM_ID];
+      if (!row) continue;
+      row.shots += 1;
+      row.xg += Number(e.EXPECTED_GOAL || 0);
+    }
+    return { before, after };
+  }
+
+  function buildSubParagraphs(meta, events, lineup, p1h, p1a, p2h, p2a) {
+    const subs = lineup?.subs || [];
+    if (!subs.length) return null;
+    const home = meta.home.name;
+    const away = meta.away.name;
+    const homeId = meta.home.team_id;
+    const awayId = meta.away.team_id;
+    const hs = Number(meta.score?.home);
+    const as = Number(meta.score?.away);
+    const seed = `${meta.game_id || ""}:${meta.round || ""}:${subs.length}`;
+    const homeSubs = subs.filter((s) => s.team_id === homeId || s.ha === "H");
+    const awaySubs = subs.filter((s) => s.team_id === awayId || s.ha === "A");
+    const ordered = [...subs].sort((a, b) => {
+      const pa = subAbsMinute(a);
+      const pb = subAbsMinute(b);
+      if (pa == null && pb == null) return 0;
+      if (pa == null) return 1;
+      if (pb == null) return -1;
+      return pa - pb;
+    });
+    const first = ordered[0];
+    const last = ordered[ordered.length - 1];
+    const firstMin = subAbsMinute(first);
+    const lastMin = subAbsMinute(last);
+    const htCount = subs.filter(isHalfTimeSub).length;
+    const lateCount = subs.filter((s) => {
+      const m = subAbsMinute(s);
+      return m != null && m >= 75;
+    }).length;
+    const firstSwap = subSwapLabel(first);
+    const lastSwap = last && last !== first ? subSwapLabel(last) : "";
+    const firstLabel = first?.time_label || (Number.isFinite(firstMin) ? `${firstMin}분` : "");
+
+    const countLine = `기록된 교체는 ${subs.length}회입니다. ${home} ${homeSubs.length}회, ${away} ${awaySubs.length}회.`;
+
+    let open;
+    if (hs === 0 && as === 0) {
+      open = pickBySeed(seed + ":open0", [
+        `${countLine} ${firstLabel ? `첫 카드는 ${firstLabel}${firstSwap ? ` · ${firstSwap}` : ""}입니다.` : ""} 0-0이 이어진 날의 교체는 점수판을 뒤집는 한 방이 아니라, 막힌 길을 다른 길로 바꿔 보려는 손입니다.`,
+        `${countLine} ${firstSwap ? `시작은 ${firstSwap}.` : ""} 무득점 경기에선 교체 한 명이 골을 보장하지 않습니다. 다만 누가 공을 받을지, 어느 높이에서 싸울지는 분명히 바뀝니다.`,
+        `${countLine} 스코어가 끝까지 0-0이면 교체는 ‘체력 교체’로 보이기 쉽습니다. ${firstLabel ? `${firstLabel}에 나온 첫 카드는` : "첫 카드는"} 그 교착을 흔들려는 시도로 읽는 편이 맞습니다.`,
+      ]);
+    } else if (hs !== as) {
+      const leader = hs > as ? home : away;
+      const trailer = hs > as ? away : home;
+      open = pickBySeed(seed + ":openW", [
+        `${countLine} ${firstLabel ? `가장 이른 교체는 ${firstLabel}입니다.` : ""} ${eunNeun(leader)} 리드를 지키려 했고, ${eunNeun(trailer)} 흐름을 바꾸려 했습니다. 같은 교체라도 하는 쪽의 숙제는 정반대입니다.`,
+        `${countLine} ${firstSwap ? `첫 장면은 ${firstSwap}.` : ""} ${iGa(leader)} 앞서 있는 그림에서 카드를 썼고, ${eunNeun(trailer)} 추격 카드를 꺼내야 하는 입장이었습니다.`,
+        `${countLine} 리드 팀의 교체는 템포를 죽이는 쪽에, 추격 팀의 교체는 문을 여는 쪽에 가깝습니다. ${firstLabel ? `${firstLabel} 전후가 그 갈림입니다.` : ""}`,
+      ]);
+    } else {
+      open = pickBySeed(seed + ":openD", [
+        `${countLine} ${firstLabel ? `첫 교체는 ${firstLabel}${firstSwap ? ` · ${firstSwap}` : ""}입니다.` : ""} 동점 상황에서 나온 카드는 수비 한 장을 더 쌓기보다, 다음 골의 방향을 바꾸려는 성격이 강합니다.`,
+        `${countLine} 스코어가 묶인 채 교체가 이어졌습니다. ${firstSwap ? `시작은 ${firstSwap}.` : "먼저 움직인 쪽이 경기의 다음 그림을 제안한 셈입니다."}`,
+      ]);
+    }
+
+    let timing;
+    if (htCount >= 1) {
+      timing = pickBySeed(seed + ":ht", [
+        `하프타임 전후 교체가 ${htCount}회입니다. 전반을 보고 조합을 고친 계획 수정에 가깝습니다. 체력이 떨어져서가 아니라, 그림 자체를 갈아 끼운 겁니다.`,
+        `후반 시작과 함께 카드가 나왔습니다. 쉬는 시간에 전술을 고친 신호입니다. 60분 전에 급하게 불을 끈 교체와는 결이 다릅니다.`,
+      ]);
+    } else if (Number.isFinite(firstMin) && firstMin <= 60 && !isHalfTimeSub(first)) {
+      timing = pickBySeed(seed + ":early", [
+        `${firstLabel || "이른 시간"}에 이미 카드를 썼습니다. 측면 1대1이나 중원 싸움에서 밀렸다고 보고 시스템을 바꾼 신호일 때가 많습니다.`,
+        `이른 교체는 체력 안배가 아닙니다. 전반에 계획이 통하지 않았다고 본 쪽의 항복 선언에 가깝습니다.`,
+      ]);
+    } else if (lateCount >= 3 || (Number.isFinite(lastMin) && lastMin >= 80)) {
+      timing = pickBySeed(seed + ":late", [
+        `후반 막판 교체가 ${lateCount || subs.length}회입니다. ${lastSwap ? `마지막은 ${lastSwap}.` : ""} 리드를 지키거나, 세트피스 한 방을 노리거나, 추가시간 다리를 바꾸는 카드입니다.`,
+        `교체의 무게가 후반 끝에 실렸습니다. 흔한 그림이지만, 한 명이 들어가며 템포가 확 바뀌기도 합니다. ${lastLabelLine(last, lastSwap)}`,
+      ]);
+    } else {
+      timing = pickBySeed(seed + ":mid", [
+        `후반 중반 전후가 교체 중심입니다. 체력 관리와 역할 교체가 겹친 구간입니다. ${firstSwap ? `시작은 ${firstSwap}.` : ""}`,
+        `한 번에 그림을 갈아엎기보다, 구간마다 한 장씩 바꾼 날에 가깝습니다. ${lastSwap ? `마지막 카드는 ${lastSwap}.` : ""}`,
+      ]);
+    }
+
+    const split = shotSplitAt(events, firstMin, homeId, awayId);
+    const bShots = (split.before[homeId]?.shots || 0) + (split.before[awayId]?.shots || 0);
+    const aShots = (split.after[homeId]?.shots || 0) + (split.after[awayId]?.shots || 0);
+    const h2open =
+      (p2h?.shots || 0) + (p2a?.shots || 0) >= (p1h?.shots || 0) + (p1a?.shots || 0) + 4;
+    let effect;
+    if (hs === 0 && as === 0) {
+      effect = pickBySeed(seed + ":fx0", [
+        `교체 이후에도 골망은 안 흔들렸습니다. 문을 열려고 사람을 바꿨지만, 마지막 25m에서 길이 끝까지 안 나온 날입니다.`,
+        `카드를 꺼내도 0-0이면, 문제는 얼굴이 아니라 길이었을 수 있습니다. 선수만 바뀌고 박스 진입 패턴은 그대로인 그림입니다.`,
+        aShots > bShots + 2
+          ? `첫 교체 이후 슈팅은 늘었습니다. 경기는 열렸는데 마무리가 안 된, 답답한 0-0입니다.`
+          : `교체 전후 슈팅 양이 크게 안 늘었습니다. 흐름을 흔들려 했지만, 상대 블록이 그대로 버틴 쪽에 가깝습니다.`,
+      ]);
+    } else if (h2open || aShots >= bShots + 4) {
+      effect = pickBySeed(seed + ":fxOpen", [
+        `교체 이후 슈팅이 늘었습니다. 적어도 경기를 열리게 만드는 데는 성공한 조정입니다. 열리기만 하고 실점하면 라인 높이 관리가 실패한 것입니다.`,
+        `사람이 바뀐 뒤 슈팅이 늘었다면 과제는 통한 겁니다. 남은 질문은 그 슈팅이 좋은 자리였느냐입니다.`,
+      ]);
+    } else {
+      effect = pickBySeed(seed + ":fxFlat", [
+        `교체 후에도 슈팅이 크게 늘지 않았습니다. 팀 구조보다 선수 한 명을 바꾼 교체에 가까웠을 수 있습니다.`,
+        `얼굴은 바뀌었는데 길은 그대로인 그림입니다. 다음 경기에선 교체 한 장의 과제를 더 분명하게 가져가야 합니다.`,
+      ]);
+    }
+
+    return [open, timing, effect].map((t) => String(t || "").replace(/\s+/g, " ").trim()).filter(Boolean);
+  }
+
+  function lastLabelLine(last, lastSwap) {
+    if (lastSwap) return `마지막은 ${lastSwap}.`;
+    if (last?.time_label) return `마지막 카드는 ${last.time_label}.`;
+    return "";
   }
 
   function sequenceBeforeGoal(events, goal, windowSec = 25) {
@@ -742,8 +929,8 @@ const Analyze = (() => {
     const away = meta.away.name;
     const stats = teamStats(events, homeId, awayId);
     const periods = periodStats(events, homeId, awayId);
-    const flow = flowAfterFirstGoal(events, homeId, awayId);
-    const goalList = goals(events);
+    const flow = flowAfterFirstGoal(events, homeId, awayId, meta);
+    const goalList = goals(events, meta);
     const pmap = playerMap(players);
     const zoneH = zoneShare(events, homeId, homeId);
     const zoneA = zoneShare(events, awayId, homeId);
@@ -875,29 +1062,12 @@ const Analyze = (() => {
       });
     }
 
-    const subs = lineup?.subs || [];
-    if (subs.length) {
-      const homeSubs = subs.filter((s) => s.team_id === homeId || s.ha === "H");
-      const awaySubs = subs.filter((s) => s.team_id === awayId || s.ha === "A");
-      const earliest = [...subs].sort(
-        (a, b) => Number(a.minute ?? a.min ?? 99) - Number(b.minute ?? b.min ?? 99)
-      )[0];
-      const earlyMin = Number(earliest?.minute ?? earliest?.min);
-      const earlyLabel = earliest?.time_label || (Number.isFinite(earlyMin) ? `${earlyMin}분` : "");
+    const subParas = buildSubParagraphs(meta, events, lineup, p1h, p1a, p2h, p2a);
+    if (subParas && subParas.length) {
       chapters.push({
         kicker: "07 · 교체",
         title: "교체와 후반 조정",
-        paragraphs: [
-          `기록된 교체는 ${subs.length}회입니다. ${home} ${homeSubs.length}회, ${away} ${awaySubs.length}회. ${
-            earlyLabel ? `가장 이른 교체는 ${earlyLabel} 전후입니다.` : ""
-          } 교체는 체력 보충만이 아닙니다. 감독이 “이 그림으론 안 된다”고 판단한 순간이기도 합니다.`,
-          Number.isFinite(earlyMin) && earlyMin <= 60
-            ? "이른 교체는 측면 1대1이나 중원 싸움에서 밀렸다고 보고, 시스템을 바꾼 신호일 때가 많습니다. 60분 전에 카드를 쓰면, 그만큼 경기가 계획대로 안 돌아가고 있다는 뜻입니다."
-            : "후반 중후반 교체가 중심이라면, 체력 관리·리드 지키기·추격 카드 성격이 강합니다. 흔한 그림이지만, 한 명이 들어가며 템포가 확 바뀌기도 합니다.",
-          p2h.shots + p2a.shots >= p1h.shots + p1a.shots + 4
-            ? "교체 이후 슈팅이 늘었다면, 적어도 경기를 열리게 만드는 데는 성공한 조정입니다. 열리기만 하고 실점하면 라인 높이 관리가 실패한 것입니다. 문을 열었는데 상대가 먼저 들어간 날이죠."
-            : "교체 후에도 슈팅이 크게 늘지 않았다면, 팀 구조보다 선수 한 명을 바꾼 교체에 가까웠을 수 있습니다. 얼굴은 바뀌었는데 길은 그대로인 그림입니다.",
-        ],
+        paragraphs: subParas,
       });
     }
 
@@ -1211,6 +1381,15 @@ const Analyze = (() => {
     lines.push("━━━━━━━━━━━━━━━━━━━━");
     lines.push("3. 골 스토리");
     lines.push("━━━━━━━━━━━━━━━━━━━━");
+    if (!goalList.length) {
+      const hs = Number(meta?.score?.home);
+      const as = Number(meta?.score?.away);
+      if (hs === 0 && as === 0) {
+        lines.push("스코어 0-0. 골 스토리로 풀어 줄 장면이 없습니다.");
+      } else {
+        lines.push("이 경기 CHALK BOARD에 골 이벤트가 없습니다.");
+      }
+    }
     goalList.forEach((g, gi) => {
       const nm = nameOf(pmap, g.PLAYER_ID);
       const team = g.TEAM_ID === meta.home.team_id ? meta.home.name : meta.away.name;

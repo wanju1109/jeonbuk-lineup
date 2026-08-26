@@ -404,6 +404,13 @@ const Pitch = (() => {
   }
 
   function render(canvas, opts) {
+    const wrap = canvas.parentElement;
+    const tip = wrap && wrap.querySelector(".pitch-tooltip");
+    if (tip) {
+      tip.hidden = true;
+      tip.innerHTML = "";
+    }
+
     const dpr = window.devicePixelRatio || 1;
     const cssW = canvas.clientWidth || 720;
     const cssH = Math.round(cssW * 0.66);
