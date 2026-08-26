@@ -9,7 +9,7 @@
   <meta property="og:description" content="구단을 고르고 선수를 조회하면 공식 출장 기록과 시즌·팀 표를 한 화면에." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
-  <link rel="stylesheet" href="./css/player.css?v=12" />
+  <link rel="stylesheet" href="./css/player.css?v=13" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -19,7 +19,8 @@
       <h1 class="brand">PLAYER REPORT</h1>
       <p class="hero-copy">
         구단을 고르고 선수를 누르면, 공식 출장·득점·도움·클린시트와 거쳐 온 팀,
-        같은 포지션 출장 비교를 한 장에 모읍니다. 추정 능력치는 넣지 않습니다.
+        같은 포지션 출장 비교와 골+도움 기여점 레이더를 한 장에 모읍니다.
+        점수는 FM 능력치가 아니라 K리그 공식 출장·득점·도움(키퍼는 클린·실점)입니다.
         사진은 구단 프로필을 우선하고, 없으면 연맹 공식 컷으로 대체합니다.
       </p>
       <div class="hero-nav">
@@ -81,6 +82,16 @@
           <div class="form-chart" id="formChart"></div>
           <div class="prose" id="formText"></div>
         </section>
+        <section class="block" id="scoreBlock">
+          <h3>기여점</h3>
+          <p class="table-note" id="scoreNote"></p>
+          <div class="fm-head" id="scoreHead"></div>
+          <div class="tend-box" id="tendBox"></div>
+          <div class="fm-grid">
+            <div class="fm-radar" id="scoreRadar"></div>
+            <div class="fm-bars" id="scoreBars"></div>
+          </div>
+        </section>
         <section class="block" id="yearBlock">
           <h3>연도별 기록</h3>
           <div class="year-list" id="yearTimeline"></div>
@@ -94,6 +105,8 @@
         <section class="block" id="compareBlock">
           <h3>기록 비교</h3>
           <div class="cmp-picker" id="cmpPicker"></div>
+          <div class="fm-radar" id="cmpRadar"></div>
+          <div class="tend-box" id="cmpTend"></div>
           <div class="cmp-table" id="cmpTable"></div>
           <div class="prose" id="cmpText"></div>
         </section>
@@ -110,7 +123,7 @@
       </article>
     </main>
   </div>
-  <script src="./js/engine.js?v=12"></script>
-  <script src="./js/app.js?v=12"></script>
+  <script src="./js/engine.js?v=13"></script>
+  <script src="./js/app.js?v=13"></script>
 </body>
 </html>

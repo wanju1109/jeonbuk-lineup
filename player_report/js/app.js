@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "12";
+  const DATA_VER = "13";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
 
@@ -302,6 +302,109 @@
     return String(n);
   }
 
+  function vClass(n) {
+    if (n >= 80) return "v-top";
+    if (n >= 65) return "v-hi";
+    if (n >= 45) return "v-ok";
+    if (n >= 25) return "v-mid";
+    return "v-low";
+  }
+
+  function score100(n) {
+    if (n == null || n === "") return "–";
+    return `${n} / 100`;
+  }
+
+  function polar(cx, cy, r, i, n) {
+    const ang = -Math.PI / 2 + (i / n) * 2 * Math.PI;
+    return [cx + r * Math.cos(ang), cy + r * Math.sin(ang)];
+  }
+
+  function radarSvg(seriesList, labels) {
+    const n = labels.length;
+    const size = 300;
+    const cx = 150;
+    const cy = 150;
+    const r = 96;
+    if (!n) return "";
+    const rings = [0.25, 0.5, 0.75, 1]
+      .map((t) => {
+        const pts = Array.from({ length: n }, (_, i) => polar(cx, cy, r * t, i, n).join(",")).join(" ");
+        return `<polygon points="${pts}" fill="none" stroke="#c5d6ca" stroke-width="1" />`;
+      })
+      .join("");
+    const spokes = Array.from({ length: n }, (_, i) => {
+      const [x, y] = polar(cx, cy, r, i, n);
+      return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#c5d6ca" stroke-width="1" />`;
+    }).join("");
+    const labs = labels
+      .map((lab, i) => {
+        const [x, y] = polar(cx, cy, r + 22, i, n);
+        return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#4a5d54">${escapeHtml(lab)}</text>`;
+      })
+      .join("");
+    const polys = seriesList
+      .map((s) => {
+        const pts = (s.values || [])
+          .map((v, i) => polar(cx, cy, r * (Math.max(0, Math.min(100, v || 0)) / 100), i, n).join(","))
+          .join(" ");
+        return (
+          `<polygon points="${pts}" fill="${s.fill}" stroke="${s.stroke}" stroke-width="2" />` +
+          (s.values || [])
+            .map((v, i) => {
+              const [x, y] = polar(cx, cy, r * (Math.max(0, Math.min(100, v || 0)) / 100), i, n);
+              return `<circle cx="${x}" cy="${y}" r="3" fill="${s.stroke}" />`;
+            })
+            .join("")
+        );
+      })
+      .join("");
+    return `<svg viewBox="0 0 ${size} ${size}" role="img">${rings}${spokes}${polys}${labs}</svg>`;
+  }
+
+  function radarLegend(items) {
+    return (
+      `<div class="radar-legend">` +
+      (items || [])
+        .map(
+          (it) =>
+            `<span class="lg-item">` +
+            `<i style="background:${escapeHtml(it.color)}"></i>` +
+            `${escapeHtml(it.label)}` +
+            `</span>`
+        )
+        .join("") +
+      `</div>`
+    );
+  }
+
+  function tendHtml(score, name) {
+    const left = Math.max(4, Math.min(96, score.needle));
+    const note = score.gk
+      ? "키퍼 수비 성향은 클린율·경기당 실점."
+      : "야수 수비 성향은 태클 표가 없어 출장 신뢰에서 공격 산출을 뺀 값.";
+    return (
+      `<div class="tend-labels">` +
+      `<span>공격</span>` +
+      `<strong>${escapeHtml(name || "")} · ${escapeHtml(score.tendLabel)}</strong>` +
+      `<span>수비</span>` +
+      `</div>` +
+      `<div class="tend-track" role="img" aria-label="${escapeHtml(score.tendLabel)}">` +
+      `<i class="tend-needle" style="left:${left}%"></i>` +
+      `</div>` +
+      `<p class="tend-note">${escapeHtml(note)} 공격 ${score.attack} · 수비 ${score.defend}</p>`
+    );
+  }
+
+  function cmpTendHtml(selfName, a, otherName, b) {
+    return (
+      `<div class="tend-dual">` +
+      tendHtml(a, selfName) +
+      tendHtml(b, otherName) +
+      `</div>`
+    );
+  }
+
   function sparkSvg(spark, gk) {
     const rows = spark || [];
     if (!rows.length) return `<p class="empty-note">시즌 흐름을 그릴 공식 행이 없습니다.</p>`;
@@ -371,6 +474,34 @@
     $("formText").innerHTML = badge + escapeHtml(analysis.form.text || "");
   }
 
+  function renderScore(p, analysis) {
+    const sc = analysis.score;
+    if (!sc) return;
+    $("scoreNote").textContent = sc.formula;
+    $("scoreHead").innerHTML =
+      `<div class="fm-cap"><span>올해 기여점</span><strong>${sc.total}</strong><em>100점 만점</em></div>` +
+      `<div class="fm-cap"><span>공격 성향</span><strong>${sc.attack}</strong><em>경기당 골+도움</em></div>` +
+      `<div class="fm-cap"><span>수비 성향</span><strong>${sc.defend}</strong><em>${escapeHtml(sc.tendLabel)}</em></div>`;
+    $("tendBox").innerHTML = tendHtml(sc, p.name);
+    $("scoreRadar").innerHTML =
+      radarSvg(
+        [{ values: sc.axes.map((a) => a.value), fill: "rgba(3,115,64,0.22)", stroke: "#037340" }],
+        sc.axes.map((a) => a.label)
+      ) + radarLegend([{ color: "#037340", label: `${p.name || "이 선수"} · 초록 · 100점` }]);
+    $("scoreBars").innerHTML = sc.axes
+      .map((a) => {
+        const cls = vClass(a.value);
+        return (
+          `<div class="fm-row">` +
+          `<span class="lab">${escapeHtml(a.label)}</span>` +
+          `<div class="bar"><i class="${cls}" style="width:${a.value}%"></i></div>` +
+          `<span class="num ${cls}">${score100(a.value)}</span>` +
+          `</div>`
+        );
+      })
+      .join("");
+  }
+
   function renderYears(p, analysis) {
     const gk = PlayerEngine.isGk(p);
     const rows = analysis.seasons || [];
@@ -415,11 +546,14 @@
         const full = state.rivals.find((r) => String(r.id) === String(m.id));
         const active = String(m.id) === String(state.compareId) ? " active" : "";
         const urls = [m.photo, m.photo_fallback].filter(isPhotoUrl);
+        const extra = full
+          ? `${escapeHtml(rivalStatLine(full, PlayerEngine.isGk(p)))} · 기여 ${PlayerEngine.scoreCard(full).total}`
+          : "올해 –";
         return (
           `<button type="button" class="rival-card${active}" data-id="${escapeHtml(m.id)}">` +
           `<div class="shot">${imgHtml(urls, m.name, "face")}</div>` +
           `<div class="meta">` +
-          `<span class="ca">${escapeHtml(rivalStatLine(full, PlayerEngine.isGk(p)))}</span>` +
+          `<span class="ca">${extra}</span>` +
           `<span class="nm">${escapeHtml(m.name)}</span>` +
           `<span class="ps">${m.back_no != null ? "No." + escapeHtml(m.back_no) : ""} · ${escapeHtml(m.position || "")}</span>` +
           `</div></button>`
@@ -491,31 +625,61 @@
     renderComparePicker(p);
     const other = state.comparePlayer;
     if (!other) {
+      $("cmpRadar").innerHTML = "";
+      $("cmpTend").innerHTML = "";
       $("cmpTable").innerHTML = `<p class="empty-note">경쟁자 카드나 검색으로 비교 상대를 고르세요.</p>`;
       $("cmpText").textContent = "";
       return;
     }
-    const cmp = PlayerEngine.compareRows(p, other);
+    const view = PlayerEngine.compareView(p, other);
+    $("cmpRadar").innerHTML =
+      radarSvg(
+        [
+          { values: view.radarMine, fill: "rgba(3,115,64,0.22)", stroke: "#037340" },
+          { values: view.radarTheirs, fill: "rgba(23,100,192,0.16)", stroke: "#1764c0" },
+        ],
+        view.radarLabels
+      ) +
+      radarLegend([
+        { color: "#037340", label: `${p.name} · 초록` },
+        { color: "#1764c0", label: `${other.name} · 파랑` },
+      ]);
+    $("cmpTend").innerHTML = cmpTendHtml(p.name, view.a, other.name, view.b);
+    const scoreBody = view.scoreRows
+      .map((r) => {
+        const d = r.d;
+        const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
+        const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
+        return (
+          `<tr><td>${escapeHtml(r.label)} (100점)</td>` +
+          `<td class="${r.mine != null ? vClass(r.mine) : ""}">${score100(r.mine)}</td>` +
+          `<td class="${r.theirs != null ? vClass(r.theirs) : ""}">${score100(r.theirs)}</td>` +
+          `<td class="${dCls}">${dTxt}</td></tr>`
+        );
+      })
+      .join("");
+    const recBody = view.rec.rows
+      .map((r) => {
+        const d = r.d;
+        const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
+        const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
+        return (
+          `<tr><td>${escapeHtml(r.label)}</td>` +
+          `<td>${fmtNum(r.mine)}</td>` +
+          `<td>${fmtNum(r.theirs)}</td>` +
+          `<td class="${dCls}">${dTxt}</td></tr>`
+        );
+      })
+      .join("");
     $("cmpTable").innerHTML =
       `<table class="cmp"><thead><tr>` +
-      `<th>공식 기록</th>` +
+      `<th>항목</th>` +
       `<th><span class="lg-dot" style="background:#037340"></span>${escapeHtml(p.name)}</th>` +
       `<th><span class="lg-dot" style="background:#1764c0"></span>${escapeHtml(other.name)}</th>` +
       `<th>차이</th>` +
       `</tr></thead><tbody>` +
-      cmp.rows
-        .map((r) => {
-          const d = r.d;
-          const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
-          const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
-          return (
-            `<tr><td>${escapeHtml(r.label)}</td>` +
-            `<td>${fmtNum(r.mine)}</td>` +
-            `<td>${fmtNum(r.theirs)}</td>` +
-            `<td class="${dCls}">${dTxt}</td></tr>`
-          );
-        })
-        .join("") +
+      scoreBody +
+      recBody +
       `</tbody></table>`;
     $("cmpText").textContent = PlayerEngine.rivalCopy(p, other);
   }
@@ -542,6 +706,7 @@
     $("scoutProfile").textContent = analysis.profile || "";
     renderRole(analysis);
     renderForm(p, analysis);
+    renderScore(p, analysis);
     renderYears(p, analysis);
     renderRivals(p);
     renderCompare(p);
@@ -605,7 +770,7 @@
     }
     $("sourceLine").innerHTML =
       `기록 ${escapeHtml(p.source || "K리그")} · 수집 ${escapeHtml((p.fetched_at || "").slice(0, 10))} · ` +
-      `추정 능력치 없음 · ` +
+      `기여점은 공식 골+도움(키퍼는 클린·실점) · ` +
       links.join(" · ");
     renderAnalysis(p);
     box.scrollIntoView({ behavior: "smooth", block: "start" });

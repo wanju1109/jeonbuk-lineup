@@ -700,6 +700,43 @@ table.cmp td:first-child, table.cmp th:first-child { text-align: left; font-weig
 table.cmp .d-plus { color: #037340; font-weight: 700; }
 table.cmp .d-minus { color: #b42318; font-weight: 700; }
 
+.tend-box { margin: 4px 0 16px; }
+.tend-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.tend-labels span { color: var(--muted); }
+.tend-track {
+  position: relative;
+  height: 12px;
+  margin: 8px 0 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #037340 0%, #d6f56a 48%, #1764c0 100%);
+}
+.tend-needle {
+  position: absolute;
+  top: -5px;
+  width: 4px;
+  height: 22px;
+  background: #10231c;
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.tend-note {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.tend-dual {
+  display: grid;
+  gap: 12px;
+  margin: 8px 0 14px;
+}
+
 .empty-note {
   margin: 0 0 12px;
   font-size: 13px;

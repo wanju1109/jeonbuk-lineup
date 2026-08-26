@@ -1,7 +1,7 @@
 /**
- * Official K League record helpers.
- * Appearance, goal, assist, goals-conceded, clean-sheet tables only.
- * No invented 1-20 ratings, CA, or PA.
+ * Official K League record helpers, plus a published index.
+ * Index uses only apps / goals / assists (GK: conceded / clean sheets).
+ * No invented FM 1-20, CA, or PA.
  */
 const PlayerEngine = (() => {
   const YEAR = 2026;
@@ -138,6 +138,119 @@ const PlayerEngine = (() => {
     return (n / d).toFixed(digits == null ? 2 : digits);
   }
 
+  function clamp01(x) {
+    if (!Number.isFinite(x)) return 0;
+    return Math.max(0, Math.min(1, x));
+  }
+
+  function pct(x) {
+    return Math.round(clamp01(x) * 100);
+  }
+
+  /**
+   * Season index everyone can check against the official table.
+   * Field: goal involvements (G+A), the same counting Transfermarkt / broadcast graphics use.
+   * GK: clean-sheet rate and goals-against per game.
+   * Caps are K League 1 season anchors, not FM attributes.
+   */
+  function scoreCard(p) {
+    const gk = isGk(p);
+    const y = yearMerged(p, YEAR) || { apps: 0, a: 0, b: 0 };
+    const c = career(p);
+    const apps = y.apps;
+    const appsAxis = pct(apps / 25);
+    const careerAppsAxis = pct(c.apps / 200);
+    let axes;
+    let total;
+    let attack;
+    let defend;
+    let involvements;
+    let per = 0;
+    let formula;
+
+    if (gk) {
+      const ga = y.a;
+      const cs = y.b;
+      const csRate = apps ? cs / apps : 0;
+      const gaRate = apps ? ga / apps : 0;
+      const axCs = pct(cs / 10);
+      const axCsRate = pct(csRate / 0.45);
+      const axGa = pct(1 - Math.min(gaRate, 1.5) / 1.5);
+      const cCsRate = c.apps ? c.b / c.apps : 0;
+      const axCCs = pct(cCsRate / 0.45);
+      involvements = cs;
+      per = csRate;
+      attack = 0;
+      defend = Math.round(0.5 * axCsRate + 0.5 * axGa);
+      total = Math.round(0.35 * appsAxis + 0.35 * axCsRate + 0.3 * axGa);
+      formula =
+        "키퍼 기여점 = 0.35×min(출장/25,1) + 0.35×min(클린율/45%,1) + 0.30×실점억제(경기당 실점 0→100, 1.5→0)";
+      axes = [
+        { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
+        { key: "cs", label: "클린시트", value: axCs, raw: `${cs}회` },
+        { key: "csRate", label: "클린율", value: axCsRate, raw: apps ? `${Math.round(csRate * 100)}%` : "–" },
+        { key: "ga", label: "실점 억제", value: axGa, raw: apps ? `경기당 ${rate(ga, apps)}` : "–" },
+        { key: "cApps", label: "통산 출장", value: careerAppsAxis, raw: `${c.apps}경기` },
+        { key: "cCs", label: "통산 클린율", value: axCCs, raw: c.apps ? `${Math.round(cCsRate * 100)}%` : "–" },
+      ];
+    } else {
+      const g = y.a;
+      const a = y.b;
+      involvements = g + a;
+      per = apps ? involvements / apps : 0;
+      const axG = pct(g / 10);
+      const axA = pct(a / 8);
+      const axPer = pct(per / 0.4);
+      const axInv = pct(involvements / 12);
+      const axCInv = pct((c.a + c.b) / 40);
+      attack = axPer;
+      defend = Math.round(appsAxis * (1 - 0.55 * clamp01(per / 0.4)));
+      total = Math.round(0.4 * appsAxis + 0.35 * axInv + 0.25 * axPer);
+      formula =
+        "야수 기여점 = 0.40×min(출장/25,1) + 0.35×min((골+도움)/12,1) + 0.25×min(경기당 골+도움 / 0.40,1)";
+      axes = [
+        { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
+        { key: "g", label: "득점", value: axG, raw: `${g}골` },
+        { key: "ast", label: "도움", value: axA, raw: `${a}도움` },
+        { key: "per", label: "경기당 관여", value: axPer, raw: apps ? rate(involvements, apps) : "–" },
+        { key: "cApps", label: "통산 출장", value: careerAppsAxis, raw: `${c.apps}경기` },
+        { key: "cInv", label: "통산 관여", value: axCInv, raw: `${c.a + c.b} (골+도움)` },
+      ];
+    }
+
+    let tendKey = "balance";
+    let tendLabel = "균형형";
+    if (gk) {
+      tendKey = "defend";
+      tendLabel = apps ? "골문 수비형" : "출전 적음";
+    } else if (attack >= defend + 12) {
+      tendKey = "attack";
+      tendLabel = "공격형";
+    } else if (defend >= attack + 12) {
+      tendKey = "defend";
+      tendLabel = "수비형";
+    }
+    const denom = attack + defend;
+    const needle = denom ? Math.round((defend / denom) * 100) : 50;
+
+    return {
+      gk,
+      apps,
+      involvements,
+      per,
+      total,
+      attack,
+      defend,
+      appsAxis,
+      careerAppsAxis,
+      axes,
+      tendKey,
+      tendLabel,
+      needle,
+      formula,
+    };
+  }
+
   function signed(n) {
     if (!Number.isFinite(n)) return "–";
     return (n > 0 ? "+" : "") + String(n);
@@ -179,7 +292,9 @@ const PlayerEngine = (() => {
           (now.apps ? ` 경기당 득점 ${rate(now.a, now.apps)}.` : "")
       );
     }
-    bits.push("아래 숫자는 K리그 선수 상세 표이며, 능력치 추정은 넣지 않는다.");
+    bits.push(
+      "아래 숫자는 K리그 선수 상세 표다. 기여점은 골+도움(키퍼는 클린율·실점)만 넣으며 FM 능력치가 아니다."
+    );
     return bits.join(" ");
   }
 
@@ -357,6 +472,29 @@ const PlayerEngine = (() => {
     return { a, b, rows, mixed, gk };
   }
 
+  function compareView(self, other) {
+    const rec = compareRows(self, other);
+    const a = scoreCard(self);
+    const b = scoreCard(other);
+    const scoreRows = [
+      { key: "idx", label: "올해 기여점", mine: a.total, theirs: b.total },
+      { key: "atk", label: "공격 성향", mine: a.attack, theirs: b.attack },
+      { key: "def", label: "수비 성향", mine: a.defend, theirs: b.defend },
+    ];
+    scoreRows.forEach((r) => {
+      r.d = r.mine != null && r.theirs != null ? r.mine - r.theirs : null;
+    });
+    return {
+      rec,
+      a,
+      b,
+      scoreRows,
+      radarLabels: ["올해 기여점", "공격 성향", "수비 성향", "출장 신뢰", "통산 출장"],
+      radarMine: [a.total, a.attack, a.defend, a.appsAxis, a.careerAppsAxis],
+      radarTheirs: [b.total, b.attack, b.defend, b.appsAxis, b.careerAppsAxis],
+    };
+  }
+
   function rivalCopy(self, other) {
     const sY = yearRole(self, YEAR).season || { apps: 0, a: 0, b: 0 };
     const oY = yearRole(other, YEAR).season || { apps: 0, a: 0, b: 0 };
@@ -379,6 +517,11 @@ const PlayerEngine = (() => {
         `올해 득점 ${me} ${sY.a} / ${name} ${oY.a}, 도움 ${me} ${sY.b} / ${name} ${oY.b}.`
       );
     }
+    const sSc = scoreCard(self);
+    const oSc = scoreCard(other);
+    bits.push(
+      `올해 기여점 ${me} ${sSc.total}점(${sSc.tendLabel}), ${name} ${oSc.total}점(${oSc.tendLabel}).`
+    );
     return bits.join(" ");
   }
 
@@ -410,6 +553,7 @@ const PlayerEngine = (() => {
         text: roleEssay(p),
       },
       seasons: notes,
+      score: scoreCard(p),
     };
   }
 
@@ -418,6 +562,8 @@ const PlayerEngine = (() => {
     build,
     rivalCopy,
     compareRows,
+    compareView,
+    scoreCard,
     career,
     yearRole,
     yearLine,
