@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "24";
+  const DATA_VER = "25";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -104,10 +104,22 @@
     return b;
   }
 
-  function publicShareUrl() {
+  function publicHomeUrl() {
     const current = pageBaseNoQuery();
     const base = /wanju1109\.github\.io/i.test(current) ? current : CANONICAL;
-    return `${normalizeBase(base)}${routeHash()}`;
+    return normalizeBase(base);
+  }
+
+  function publicShareUrl() {
+    return `${publicHomeUrl()}${routeHash()}`;
+  }
+
+  function homeShareCopy() {
+    return {
+      title: "K리그 선수 프로필",
+      sub: "구단을 고르고 선수를 누르면 공식 출장·득점·도움과 칠판 기록을 한 장에 모읍니다.",
+      meta: "공유 대상: 선수 프로필 메인",
+    };
   }
 
   function previewShareUrl() {
@@ -166,8 +178,8 @@
     };
   }
 
-  function buildShareHtml(url) {
-    const copy = shareCopy();
+  function buildShareHtml(url, copyOverride) {
+    const copy = copyOverride || shareCopy();
     const safeTitle = escapeHtml(copy.title);
     const safeSub = escapeHtml(copy.sub);
     const safeUrl = escapeHtml(url);
@@ -183,7 +195,7 @@
       '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.06em;color:#f0b429;background-color:#0f2a1c;">K LEAGUE PLAYER REPORT</p>',
       `<p style="margin:0 0 10px;font-size:18px;font-weight:700;line-height:1.35;color:#f5fff8;background-color:#0f2a1c;">${safeTitle}</p>`,
       `<p style="margin:0 0 14px;font-size:13px;line-height:1.55;color:#d7efe3;background-color:#0f2a1c;">${safeSub}</p>`,
-      `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#b7f24a;color:#0a2218;font-weight:700;text-decoration:none;">프로필 새 창에서 보기 →</a>`,
+      `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#b7f24a;color:#0a2218;font-weight:700;text-decoration:none;">선수 프로필 새 창에서 보기 →</a>`,
       "</td></tr></table></div>",
     ].join("");
   }
@@ -1031,10 +1043,6 @@
       `<span class="tag">${escapeHtml(p.position || "")}</span>` +
       `<span class="tag">${escapeHtml(p.nation || "")}</span>` +
       (p.age != null ? `<span class="tag">${escapeHtml(p.age)}세</span>` : "") +
-      `</div>` +
-      `<div class="share-row">` +
-      `<button type="button" class="btn btn-primary" data-share-action="card">에버그린에 공유</button>` +
-      `<button type="button" class="btn btn-ghost" data-share-action="url">URL 복사</button>` +
       `</div></div>`;
 
     const tot = p.summary?.total || {};
@@ -1163,20 +1171,20 @@
       state.q = e.target.value || "";
       renderSquad();
     });
-    $("profile")?.addEventListener("click", async (e) => {
-      const btn = e.target.closest("[data-share-action]");
-      if (!btn) return;
-      const action = btn.getAttribute("data-share-action");
+    $("shareHomeCard")?.addEventListener("click", async () => {
       try {
-        if (action === "card") {
-          await copyText(buildShareHtml(publicShareUrl()));
-          setStatus("에버그린용 링크 카드를 복사했습니다. HTML 모드에 붙여넣으세요.");
-        } else if (action === "url") {
-          await copyText(publicShareUrl());
-          setStatus("프로필 URL을 복사했습니다.");
-        }
+        await copyText(buildShareHtml(publicHomeUrl(), homeShareCopy()));
+        setStatus("메인 화면 에버그린 링크 카드를 복사했습니다. HTML 모드에 붙여넣으세요.");
       } catch (err) {
-        setStatus("복사에 실패했습니다. 아래 코드를 직접 드래그해 주세요.");
+        setStatus("복사에 실패했습니다.");
+      }
+    });
+    $("shareHomeUrl")?.addEventListener("click", async () => {
+      try {
+        await copyText(publicHomeUrl());
+        setStatus("메인 화면 URL을 복사했습니다.");
+      } catch (err) {
+        setStatus("URL 복사에 실패했습니다.");
       }
     });
     $("evergreenJump")?.addEventListener("click", (e) => {
