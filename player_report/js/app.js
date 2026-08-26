@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "19";
+  const DATA_VER = "20";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -332,8 +332,9 @@
     const cx = size / 2;
     const cy = size / 2;
     const r = size * 0.34;
-    const labOff = Math.max(30, size * 0.07);
-    const font = size >= 520 ? 14 : 13;
+    const font = n >= 8 ? 11 : size >= 520 ? 14 : 13;
+    const labOff = n >= 8 ? Math.max(34, size * 0.08) : Math.max(30, size * 0.07);
+    const dot = n >= 8 ? 3 : 4;
     if (!n) return "";
     const rings = [0.25, 0.5, 0.75, 1]
       .map((t) => {
@@ -363,13 +364,30 @@
           (s.values || [])
             .map((v, i) => {
               const [x, y] = polar(cx, cy, r * (Math.max(0, Math.min(100, v || 0)) / 100), i, n);
-              return `<circle cx="${x}" cy="${y}" r="4" fill="${s.stroke}" />`;
+              return `<circle cx="${x}" cy="${y}" r="${dot}" fill="${s.stroke}" />`;
             })
             .join("")
         );
       })
       .join("");
     return `<svg viewBox="0 0 ${size} ${size}" role="img">${rings}${spokes}${polys}${labs}</svg>`;
+  }
+
+  function radarPanel(title, seriesList, labels, size) {
+    if (!labels || !labels.length) return "";
+    return (
+      `<div class="fm-radar">` +
+      `<p class="radar-cap">${escapeHtml(title)}</p>` +
+      radarSvg(seriesList, labels, size) +
+      `</div>`
+    );
+  }
+
+  function cmpSeries(mine, theirs) {
+    return [
+      { values: mine, fill: SELF_FILL, stroke: SELF_COLOR, width: 2.6 },
+      { values: theirs, fill: OTHER_FILL, stroke: OTHER_COLOR, width: 2.6, dash: "7 5" },
+    ];
   }
 
   function radarLegend(items) {
@@ -380,8 +398,7 @@
           (it) =>
             `<span class="lg-item">` +
             `<i style="background:${escapeHtml(it.color)}"></i>` +
-            `${escapeHtml(it.label)}` +
-            `</span>`
+            `${escapeHtml(it.label)}</span>`
         )
         .join("") +
       `</div>`
@@ -495,11 +512,30 @@
       `<div class="fm-cap"><span>공격 성향</span><strong>${sc.attack}</strong><em>경기당 골+도움</em></div>` +
       `<div class="fm-cap"><span>수비 성향</span><strong>${sc.defend}</strong><em>${escapeHtml(sc.tendLabel)}</em></div>`;
     $("tendBox").innerHTML = tendHtml(sc, p.name);
-    $("scoreRadar").innerHTML =
-      radarSvg(
+    const det = PlayerEngine.detailRadar(sc);
+    const pair = $("scoreRadars");
+    const overview =
+      radarPanel(
+        "요약",
         [{ values: sc.axes.map((a) => a.value), fill: SELF_FILL, stroke: SELF_COLOR }],
-        sc.axes.map((a) => a.label)
-      ) + radarLegend([{ color: SELF_COLOR, label: `${p.name || "이 선수"} · 초록 · 100점` }]);
+        sc.axes.map((a) => a.label),
+        420
+      );
+    const detail = det.labels.length
+      ? radarPanel(
+          "상세",
+          [{ values: det.values, fill: SELF_FILL, stroke: SELF_COLOR }],
+          det.labels,
+          420
+        )
+      : "";
+    if (pair) {
+      pair.classList.toggle("one", !detail);
+      pair.innerHTML =
+        overview +
+        detail +
+        radarLegend([{ color: SELF_COLOR, label: `${p.name || "이 선수"} · 초록 · 100점` }]);
+    }
     $("scoreBars").innerHTML = sc.axes
       .map((a) => {
         const cls = vClass(a.value);
@@ -683,32 +719,35 @@
     renderComparePicker(p);
     const other = state.comparePlayer;
     if (!other) {
-      $("cmpRadar").innerHTML = "";
+      $("cmpRadars").innerHTML = "";
       $("cmpTend").innerHTML = "";
       $("cmpTable").innerHTML = `<p class="empty-note">경쟁자 카드나 검색으로 비교 상대를 고르세요.</p>`;
       $("cmpText").textContent = "";
       return;
     }
     const view = PlayerEngine.compareView(p, other, state.events);
-    $("cmpRadar").innerHTML =
-      radarSvg(
-        [
-          { values: view.radarMine, fill: SELF_FILL, stroke: SELF_COLOR, width: 2.8 },
-          {
-            values: view.radarTheirs,
-            fill: OTHER_FILL,
-            stroke: OTHER_COLOR,
-            width: 2.8,
-            dash: "7 5",
-          },
-        ],
-        view.radarLabels,
-        560
-      ) +
-      radarLegend([
-        { color: SELF_COLOR, label: `${p.name} · 초록` },
-        { color: OTHER_COLOR, label: `${other.name} · 주황` },
-      ]);
+    const detA = view.detailA || { labels: [], values: [] };
+    const detB = view.detailB || { labels: [], values: [] };
+    const detLabels = detA.labels.length ? detA.labels : detB.labels;
+    const legend = radarLegend([
+      { color: SELF_COLOR, label: `${p.name} · 초록` },
+      { color: OTHER_COLOR, label: `${other.name} · 주황` },
+    ]);
+    $("cmpRadars").classList.toggle("one", !detLabels.length);
+    $("cmpRadars").innerHTML =
+      radarPanel("요약", cmpSeries(view.radarMine, view.radarTheirs), view.radarLabels, 420) +
+      (detLabels.length
+        ? radarPanel(
+            "상세",
+            cmpSeries(
+              detA.values.length ? detA.values : detLabels.map(() => 0),
+              detB.values.length ? detB.values : detLabels.map(() => 0)
+            ),
+            detLabels,
+            420
+          )
+        : "") +
+      legend;
     $("cmpTend").innerHTML = cmpTendHtml(p.name, view.a, other.name, view.b);
     const cmpWinner = (r) => {
       if (r.mine == null || r.theirs == null || !Number.isFinite(Number(r.mine)) || !Number.isFinite(Number(r.theirs))) {

@@ -380,6 +380,49 @@ const PlayerEngine = (() => {
     return r && r.pct != null ? r.pct : null;
   }
 
+  function axisVal(sc, key) {
+    const row = (sc.axes || []).find((x) => x.key === key);
+    return row && Number.isFinite(row.value) ? row.value : 0;
+  }
+
+  function rateOr0(sc, key) {
+    const n = rateVal(sc, key);
+    return n == null ? 0 : n;
+  }
+
+  function detailRadar(sc) {
+    if (!sc) return { labels: [], values: [] };
+    if (sc.gk && sc.chalk) {
+      return {
+        labels: ["클린율", "실점억제", "선방", "선방률", "패스", "출장"],
+        values: [
+          axisVal(sc, "csRate"),
+          axisVal(sc, "ga"),
+          axisVal(sc, "save"),
+          rateOr0(sc, "save"),
+          rateOr0(sc, "pass"),
+          sc.appsAxis || 0,
+        ],
+      };
+    }
+    if (!sc.gk && sc.chalk) {
+      return {
+        labels: ["슈팅", "슈팅정확", "키패스", "드리블", "패스", "태클", "차단", "공중볼"],
+        values: [
+          axisVal(sc, "shot"),
+          rateOr0(sc, "shot"),
+          axisVal(sc, "key"),
+          rateOr0(sc, "drib"),
+          rateOr0(sc, "pass"),
+          rateOr0(sc, "tk"),
+          axisVal(sc, "def"),
+          axisVal(sc, "air"),
+        ],
+      };
+    }
+    return { labels: [], values: [] };
+  }
+
   function signed(n) {
     if (!Number.isFinite(n)) return "–";
     return (n > 0 ? "+" : "") + String(n);
@@ -747,6 +790,8 @@ const PlayerEngine = (() => {
             b.axes.find((x) => x.key === "air")?.value || 0,
           ]
         : [b.total, b.attack, b.defend, b.appsAxis, b.careerAppsAxis],
+      detailA: detailRadar(a),
+      detailB: detailRadar(b),
     };
   }
 
@@ -822,6 +867,7 @@ const PlayerEngine = (() => {
     compareRows,
     compareView,
     scoreCard,
+    detailRadar,
     career,
     yearRole,
     yearLine,

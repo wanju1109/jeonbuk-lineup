@@ -563,8 +563,25 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
   padding-bottom: 8px;
 }
 
+.radar-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  align-items: start;
+  margin-bottom: 14px;
+}
+.radar-pair .radar-legend { grid-column: 1 / -1; }
+.radar-cap {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
 .fm-radar svg { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto; }
-.fm-radar.wide svg { max-width: 560px; }
+.radar-pair.one { grid-template-columns: minmax(280px, 440px); }
+.radar-pair.one .fm-radar svg { max-width: 440px; }
 .radar-legend {
   display: flex;
   flex-wrap: wrap;
@@ -838,4 +855,5 @@ table.cmp .win-mark {
   .block { padding: 18px 16px 4px; }
   .role-cards { grid-template-columns: 1fr; }
   .fm-grid { grid-template-columns: 1fr; }
+  .radar-pair { grid-template-columns: 1fr; }
 }
