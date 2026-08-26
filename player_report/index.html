@@ -9,7 +9,7 @@
   <meta property="og:description" content="구단을 고르고 선수를 조회하면 공식 출장 기록과 시즌·팀 표를 한 화면에." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
-  <link rel="stylesheet" href="./css/player.css?v=14" />
+  <link rel="stylesheet" href="./css/player.css?v=15" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -20,7 +20,7 @@
       <p class="hero-copy">
         구단을 고르고 선수를 누르면, 공식 출장·득점·도움·클린시트와 거쳐 온 팀,
         같은 포지션 출장 비교와 골+도움 기여점 레이더를 한 장에 모읍니다.
-        점수는 FM 능력치가 아니라 K리그 공식 출장·득점·도움과 데이터포털 칠판(패스·태클·공중볼)입니다.
+        점수는 FM 능력치가 아니라 K리그 공식 출장·득점·도움과 데이터포털 칠판(패스 성공률·슈팅 정확도·태클)입니다.
         사진은 구단 프로필을 우선하고, 없으면 연맹 공식 컷으로 대체합니다.
       </p>
       <div class="hero-nav">
@@ -91,6 +91,9 @@
             <div class="fm-radar" id="scoreRadar"></div>
             <div class="fm-bars" id="scoreBars"></div>
           </div>
+          <h4 class="rate-head">칠판 정확도</h4>
+          <p class="table-note" id="rateNote">패스 성공률 = 성공/시도. 슈팅 정확도 = 유효슈팅/슈팅. Bepro11 부가기록.</p>
+          <div class="rate-grid" id="rateGrid"></div>
         </section>
         <section class="block" id="yearBlock">
           <h3>연도별 기록</h3>
@@ -123,7 +126,7 @@
       </article>
     </main>
   </div>
-  <script src="./js/engine.js?v=14"></script>
-  <script src="./js/app.js?v=14"></script>
+  <script src="./js/engine.js?v=15"></script>
+  <script src="./js/app.js?v=15"></script>
 </body>
 </html>

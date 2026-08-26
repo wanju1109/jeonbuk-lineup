@@ -166,6 +166,38 @@ const PlayerEngine = (() => {
     return n / games;
   }
 
+  function ratePct(ok, att) {
+    const a = num(att);
+    const o = num(ok);
+    if (!a) return { pct: null, raw: "–", text: "–" };
+    const p = Math.round((o / a) * 100);
+    return { pct: p, raw: `${o}/${a}`, text: `${p}%` };
+  }
+
+  function chalkRates(ev, gk) {
+    if (!ev) return [];
+    const pass = ratePct(ev.pass_ok, ev.passes);
+    const shot = ratePct(ev.sot, ev.shots);
+    const drib = ratePct(ev.dribble_ok, ev.dribble);
+    const tk = ratePct(ev.tackle_ok, ev.tackle);
+    const air = ratePct(ev.aerial_w, num(ev.aerial_w) + num(ev.aerial_l));
+    const save = ratePct(ev.saves, num(ev.saves) + num(ev.conceded));
+    if (gk) {
+      return [
+        { key: "pass", label: "패스 성공률", hint: "성공/시도", ...pass },
+        { key: "save", label: "선방률", hint: "선방/(선방+실점)", ...save },
+        { key: "air", label: "공중볼 승률", hint: "성공/(성공+실패)", ...air },
+      ];
+    }
+    return [
+      { key: "pass", label: "패스 성공률", hint: "성공/시도", ...pass },
+      { key: "shot", label: "슈팅 정확도", hint: "유효슈팅/슈팅", ...shot },
+      { key: "drib", label: "드리블 성공률", hint: "성공/시도", ...drib },
+      { key: "tk", label: "태클 성공률", hint: "성공/시도", ...tk },
+      { key: "air", label: "공중볼 승률", hint: "성공/(성공+실패)", ...air },
+    ];
+  }
+
   function scoreCard(p, events) {
     const gk = isGk(p);
     const y = yearMerged(p, YEAR) || { apps: 0, a: 0, b: 0 };
@@ -176,6 +208,7 @@ const PlayerEngine = (() => {
     const ev = evRow(p, events);
     const chalkGames = ev ? num(ev.games) : 0;
     const chalk = chalkGames >= 3;
+    const rates = chalk ? chalkRates(ev, gk) : [];
     let axes;
     let total;
     let attack;
@@ -205,13 +238,19 @@ const PlayerEngine = (() => {
         total = Math.round(0.3 * appsAxis + 0.3 * axCsRate + 0.25 * axGa + 0.15 * axSave);
         formula =
           "키퍼 기여점 = 출장·클린율·실점억제(공식) + 선방(칠판). 부가기록(Bepro11).";
-        tendNote = `선방 ${ev.saves} · 실점 ${ev.conceded} · 칠판 ${chalkGames}경기`;
+        const passR = ratePct(ev.pass_ok, ev.passes);
+        const saveR = ratePct(ev.saves, num(ev.saves) + num(ev.conceded));
+        tendNote =
+          `선방 ${ev.saves} · 실점 ${ev.conceded}` +
+          (saveR.pct != null ? ` · 선방률 ${saveR.text}` : "") +
+          (passR.pct != null ? ` · 패스 ${passR.text} (${passR.raw})` : "") +
+          ` · 칠판 ${chalkGames}경기`;
         axes = [
           { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
           { key: "csRate", label: "클린율", value: axCsRate, raw: apps ? `${Math.round(csRate * 100)}%` : "–" },
           { key: "ga", label: "실점 억제", value: axGa, raw: apps ? `경기당 ${rate(ga, apps)}` : "–" },
           { key: "save", label: "선방", value: axSave, raw: `${num(ev.saves)}회` },
-          { key: "pass", label: "패스 성공", value: axPass, raw: `${num(ev.pass_ok)}/${num(ev.passes)}` },
+          { key: "pass", label: "패스 성공", value: axPass, raw: passR.pct != null ? `${passR.text} (${passR.raw})` : "–" },
           { key: "air", label: "공중볼", value: pct(pg(num(ev.aerial_w), chalkGames) / 2), raw: `${num(ev.aerial_w)}승` },
         ];
       } else {
@@ -249,16 +288,32 @@ const PlayerEngine = (() => {
         attack = Math.round(0.3 * axShot + 0.25 * axKey + 0.2 * axDrib + 0.25 * axPer);
         defend = Math.round(0.7 * axDef + 0.3 * axAir);
         total = Math.round(0.22 * appsAxis + 0.22 * axInv + 0.28 * attack + 0.28 * defend);
+        const passR = ratePct(ev.pass_ok, ev.passes);
+        const shotR = ratePct(ev.sot, ev.shots);
+        const dribR = ratePct(ev.dribble_ok, ev.dribble);
         formula =
           "야수 기여점 = 공식 출장·골+도움 + 칠판 슈팅·키패스·드리블(공격) / 태클·차단·클리어·공중볼(수비). Bepro11 부가기록.";
         tendNote =
-          `공격 슈팅 ${ev.shots}·키패스 ${ev.keypass}·드리블 ${ev.dribble_ok} / ` +
-          `수비 태클 ${ev.tackle_ok}·차단 ${num(ev.int) + num(ev.cut)}·클리어 ${ev.clg}·공중 ${ev.aerial_w} · 칠판 ${chalkGames}경기`;
+          (passR.pct != null ? `패스 ${passR.text} (${passR.raw}) · ` : "") +
+          (shotR.pct != null ? `슈팅 정확 ${shotR.text} (${shotR.raw}) · ` : "") +
+          `키패스 ${ev.keypass} · 드리블 ${dribR.raw}` +
+          ` / 태클 ${ev.tackle_ok}·차단 ${num(ev.int) + num(ev.cut)}·클리어 ${ev.clg}·공중 ${ev.aerial_w}` +
+          ` · 칠판 ${chalkGames}경기`;
         axes = [
           { key: "apps", label: "출장 신뢰", value: appsAxis, raw: `${apps}경기` },
-          { key: "shot", label: "슈팅", value: axShot, raw: `${num(ev.shots)}회` },
+          {
+            key: "shot",
+            label: "슈팅",
+            value: axShot,
+            raw: shotR.pct != null ? `${num(ev.shots)}회 · ${shotR.text}` : `${num(ev.shots)}회`,
+          },
           { key: "key", label: "키패스", value: axKey, raw: `${num(ev.keypass)}회` },
-          { key: "drib", label: "드리블", value: axDrib, raw: `${num(ev.dribble_ok)}/${num(ev.dribble)}` },
+          {
+            key: "drib",
+            label: "드리블",
+            value: axDrib,
+            raw: dribR.pct != null ? `${dribR.text} (${dribR.raw})` : "–",
+          },
           { key: "def", label: "수비 개입", value: axDef, raw: `${defActs}회` },
           { key: "air", label: "공중볼", value: axAir, raw: `${num(ev.aerial_w)}승` },
         ];
@@ -316,7 +371,13 @@ const PlayerEngine = (() => {
       chalk,
       chalkGames,
       ev,
+      rates,
     };
+  }
+
+  function rateVal(sc, key) {
+    const r = (sc.rates || []).find((x) => x.key === key);
+    return r && r.pct != null ? r.pct : null;
   }
 
   function signed(n) {
@@ -552,6 +613,45 @@ const PlayerEngine = (() => {
     if (a.chalk || b.chalk) {
       const ae = a.ev || {};
       const be = b.ev || {};
+      scoreRows.push({
+        key: "passp",
+        label: "패스 성공률",
+        mine: rateVal(a, "pass"),
+        theirs: rateVal(b, "pass"),
+        scale: "pct",
+      });
+      if (a.gk || b.gk) {
+        scoreRows.push({
+          key: "savep",
+          label: "선방률",
+          mine: rateVal(a, "save"),
+          theirs: rateVal(b, "save"),
+          scale: "pct",
+        });
+      }
+      if (!a.gk && !b.gk) {
+        scoreRows.push({
+          key: "shotp",
+          label: "슈팅 정확도",
+          mine: rateVal(a, "shot"),
+          theirs: rateVal(b, "shot"),
+          scale: "pct",
+        });
+        scoreRows.push({
+          key: "dribp",
+          label: "드리블 성공률",
+          mine: rateVal(a, "drib"),
+          theirs: rateVal(b, "drib"),
+          scale: "pct",
+        });
+        scoreRows.push({
+          key: "tkp",
+          label: "태클 성공률",
+          mine: rateVal(a, "tk"),
+          theirs: rateVal(b, "tk"),
+          scale: "pct",
+        });
+      }
       scoreRows.push({ key: "shot", label: "칠판 슈팅", mine: num(ae.shots), theirs: num(be.shots), scale: 0 });
       scoreRows.push({ key: "keyp", label: "칠판 키패스", mine: num(ae.keypass), theirs: num(be.keypass), scale: 0 });
       scoreRows.push({

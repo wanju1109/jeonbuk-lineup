@@ -591,7 +591,7 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
 .fm-bars { display: flex; flex-direction: column; gap: 7px; }
 .fm-row {
   display: grid;
-  grid-template-columns: 72px 1fr 58px;
+  grid-template-columns: 72px 1fr 92px;
   gap: 8px;
   align-items: center;
   font-size: 13px;
@@ -602,6 +602,41 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
   text-align: right;
   font-size: 12px;
   white-space: nowrap;
+}
+.rate-head {
+  margin: 18px 0 4px;
+  font-size: 15px;
+}
+.rate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 8px 0 16px;
+}
+.rate-card {
+  border: 1px solid #d7e4da;
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.rate-card span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.rate-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 4px 0 2px;
+}
+.rate-card em {
+  display: block;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--muted);
 }
 .bar {
   height: 10px;

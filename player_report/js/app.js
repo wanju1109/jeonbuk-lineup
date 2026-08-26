@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "14";
+  const DATA_VER = "15";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -495,15 +495,46 @@
     $("scoreBars").innerHTML = sc.axes
       .map((a) => {
         const cls = vClass(a.value);
+        const shown = a.raw ? escapeHtml(a.raw) : score100(a.value);
         return (
           `<div class="fm-row">` +
           `<span class="lab">${escapeHtml(a.label)}</span>` +
           `<div class="bar"><i class="${cls}" style="width:${a.value}%"></i></div>` +
-          `<span class="num ${cls}">${score100(a.value)}</span>` +
+          `<span class="num ${cls}">${shown}</span>` +
           `</div>`
         );
       })
       .join("");
+    const rates = sc.rates || [];
+    const rateGrid = $("rateGrid");
+    const rateNote = $("rateNote");
+    if (!rates.length) {
+      if (rateNote) {
+        rateNote.textContent = "칠판 3경기 미만이면 패스 성공률·슈팅 정확도를 계산하지 않습니다. K리그2는 칠판 표본이 없습니다.";
+      }
+      if (rateGrid) rateGrid.innerHTML = "";
+    } else {
+      if (rateNote) {
+        rateNote.textContent = sc.gk
+          ? "패스 성공률 = 성공/시도. 선방률 = 선방/(선방+실점). Bepro11 부가기록."
+          : "패스 성공률 = 성공/시도. 슈팅 정확도 = 유효슈팅/슈팅. Bepro11 부가기록.";
+      }
+      if (rateGrid) {
+        const shown = rates.filter((r) => r.pct != null);
+        rateGrid.innerHTML = shown
+          .map((r) => {
+            const cls = vClass(r.pct);
+            return (
+              `<div class="rate-card">` +
+              `<span>${escapeHtml(r.label)}</span>` +
+              `<strong class="${cls}">${escapeHtml(r.text)}</strong>` +
+              `<em>${escapeHtml(r.raw)}${r.hint ? ` · ${r.hint}` : ""}</em>` +
+              `</div>`
+            );
+          })
+          .join("");
+      }
+    }
   }
 
   function renderYears(p, analysis) {
@@ -654,12 +685,22 @@
         const d = r.d;
         const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
         const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
-        const unit = r.scale === 100;
+        const unit100 = r.scale === 100;
+        const unitPct = r.scale === "pct";
+        const mineTxt = unit100 ? score100(r.mine) : unitPct ? (r.mine == null ? "–" : `${r.mine}%`) : fmtNum(r.mine);
+        const theirsTxt = unit100
+          ? score100(r.theirs)
+          : unitPct
+            ? r.theirs == null
+              ? "–"
+              : `${r.theirs}%`
+            : fmtNum(r.theirs);
+        const suffix = unit100 ? " (100점)" : unitPct ? " (%)" : "";
         return (
-          `<tr><td>${escapeHtml(r.label)}${unit ? " (100점)" : ""}</td>` +
-          `<td class="${unit && r.mine != null ? vClass(r.mine) : ""}">${unit ? score100(r.mine) : fmtNum(r.mine)}</td>` +
-          `<td class="${unit && r.theirs != null ? vClass(r.theirs) : ""}">${unit ? score100(r.theirs) : fmtNum(r.theirs)}</td>` +
-          `<td class="${dCls}">${dTxt}</td></tr>`
+          `<tr><td>${escapeHtml(r.label)}${suffix}</td>` +
+          `<td class="${(unit100 || unitPct) && r.mine != null ? vClass(r.mine) : ""}">${mineTxt}</td>` +
+          `<td class="${(unit100 || unitPct) && r.theirs != null ? vClass(r.theirs) : ""}">${theirsTxt}</td>` +
+          `<td class="${dCls}">${dTxt}${unitPct && d != null ? "p" : ""}</td></tr>`
         );
       })
       .join("");
