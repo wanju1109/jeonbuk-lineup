@@ -755,6 +755,12 @@ table.cmp tr.cmp-sec th {
 }
 table.cmp .d-plus { color: #037340; font-weight: 700; }
 table.cmp .d-minus { color: #b42318; font-weight: 700; }
+table.cmp td.win {
+  background: #e8ff3d;
+  color: #10231c;
+  font-weight: 800;
+  box-shadow: inset 0 0 0 1px #c6e000;
+}
 
 .tend-box { margin: 4px 0 16px; }
 .tend-labels {

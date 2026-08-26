@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "17";
+  const DATA_VER = "18";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -710,12 +710,23 @@
         { color: OTHER_COLOR, label: `${other.name} · 주황` },
       ]);
     $("cmpTend").innerHTML = cmpTendHtml(p.name, view.a, other.name, view.b);
+    const cmpWinner = (r) => {
+      if (r.mine == null || r.theirs == null || !Number.isFinite(Number(r.mine)) || !Number.isFinite(Number(r.theirs))) {
+        return "";
+      }
+      if (Number(r.mine) === Number(r.theirs)) return "";
+      const low = r.better === "low";
+      const mineWins = low ? Number(r.mine) < Number(r.theirs) : Number(r.mine) > Number(r.theirs);
+      return mineWins ? "mine" : "theirs";
+    };
     const cmpCell = (r, side) => {
       const n = side === "mine" ? r.mine : r.theirs;
       const unit100 = r.scale === 100;
       const unitPct = r.scale === "pct";
       const txt = unit100 ? score100(n) : unitPct ? (n == null ? "–" : `${n}%`) : fmtNum(n);
-      const cls = (unit100 || unitPct) && n != null ? vClass(n) : "";
+      const cls = [(unit100 || unitPct) && n != null ? vClass(n) : "", cmpWinner(r) === side ? "win" : ""]
+        .filter(Boolean)
+        .join(" ");
       return `<td class="${cls}">${txt}</td>`;
     };
     const cmpRowHtml = (r) => {

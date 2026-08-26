@@ -556,13 +556,14 @@ const PlayerEngine = (() => {
       { key: "yApps", label: `${YEAR} 출장`, mine: a.year.apps, theirs: b.year.apps },
     ];
     if (!mixed && gk) {
-      rows.push({ key: "yGc", label: `${YEAR} 실점`, mine: a.year.a, theirs: b.year.a });
+      rows.push({ key: "yGc", label: `${YEAR} 실점`, mine: a.year.a, theirs: b.year.a, better: "low" });
       rows.push({ key: "yCs", label: `${YEAR} 클린시트`, mine: a.year.b, theirs: b.year.b });
       rows.push({
         key: "yGpa",
         label: `${YEAR} 경기당 실점`,
         mine: a.year.apps ? Number(rate(a.year.a, a.year.apps)) : null,
         theirs: b.year.apps ? Number(rate(b.year.a, b.year.apps)) : null,
+        better: "low",
       });
     } else if (!mixed) {
       rows.push({ key: "yG", label: `${YEAR} 득점`, mine: a.year.a, theirs: b.year.a });
@@ -589,7 +590,7 @@ const PlayerEngine = (() => {
     }
     rows.push({ key: "cApps", label: "통산 출장", mine: a.career.apps, theirs: b.career.apps });
     if (!mixed && gk) {
-      rows.push({ key: "cGc", label: "통산 실점", mine: a.career.a, theirs: b.career.a });
+      rows.push({ key: "cGc", label: "통산 실점", mine: a.career.a, theirs: b.career.a, better: "low" });
       rows.push({ key: "cCs", label: "통산 클린시트", mine: a.career.b, theirs: b.career.b });
     } else if (!mixed) {
       rows.push({ key: "cG", label: "통산 득점", mine: a.career.a, theirs: b.career.a });
