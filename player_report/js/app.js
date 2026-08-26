@@ -10,6 +10,10 @@
     q: "",
     playerId: "",
     player: null,
+    compareId: "",
+    comparePlayer: null,
+    rivals: [],
+    cache: new Map(),
   };
 
   const $ = (id) => document.getElementById(id);
@@ -41,15 +45,18 @@
   function parseHash() {
     const raw = (location.hash || "").replace(/^#\/?/, "");
     const parts = raw.split("/").filter(Boolean);
+    const vsAt = parts.indexOf("vs");
     return {
       leagueId: parts[0] || "",
       teamId: parts[1] || "",
-      playerId: parts[2] || "",
+      playerId: parts[2] && parts[2] !== "vs" ? parts[2] : "",
+      compareId: vsAt >= 0 ? parts[vsAt + 1] || "" : "",
     };
   }
 
   function writeHash() {
     const bits = [state.leagueId, state.teamId, state.playerId].filter(Boolean);
+    if (state.playerId && state.compareId) bits.push("vs", state.compareId);
     const next = bits.length ? `#/${bits.join("/")}` : "";
     if (location.hash !== next) history.replaceState(null, "", next || location.pathname);
   }
@@ -100,6 +107,54 @@
     img.src = rest[0];
   };
 
+  function vClass(n) {
+    if (n >= 17) return "v-top";
+    if (n >= 14) return "v-hi";
+    if (n >= 11) return "v-ok";
+    if (n >= 7) return "v-mid";
+    return "v-low";
+  }
+
+  function allPlayersFlat() {
+    const out = [];
+    (state.index?.leagues || []).forEach((lg) => {
+      (lg.teams || []).forEach((t) => {
+        (t.players || []).forEach((p) => {
+          out.push({
+            id: p.id,
+            name: p.name,
+            back_no: p.back_no,
+            position: p.position,
+            photo: p.photo,
+            photo_fallback: p.photo_fallback,
+            teamId: t.id,
+            teamName: t.name,
+            leagueId: lg.id,
+          });
+        });
+      });
+    });
+    return out;
+  }
+
+  function teammatesSamePos(p) {
+    const team = currentTeam();
+    const pos = String(p?.position || "").toUpperCase();
+    return (team?.players || []).filter(
+      (x) => String(x.id) !== String(p.id) && String(x.position || "").toUpperCase() === pos
+    );
+  }
+
+  async function fetchPlayer(id) {
+    if (!id) return null;
+    if (state.cache.has(id)) return state.cache.get(id);
+    const res = await fetch(DATA_PLAYER(id), { cache: "no-cache" });
+    if (!res.ok) throw new Error("player " + res.status);
+    const p = await res.json();
+    state.cache.set(id, p);
+    return p;
+  }
+
   function renderClubs() {
     const lg = currentLeague();
     const strip = $("clubStrip");
@@ -123,6 +178,9 @@
         state.teamId = btn.getAttribute("data-team") || "";
         state.playerId = "";
         state.player = null;
+        state.compareId = "";
+        state.comparePlayer = null;
+        state.rivals = [];
         writeHash();
         renderAll();
       });
@@ -171,6 +229,8 @@
         const id = btn.getAttribute("data-id");
         if (!id) return;
         state.playerId = id;
+        state.compareId = "";
+        state.comparePlayer = null;
         writeHash();
         loadPlayer(id);
       });
@@ -218,6 +278,333 @@
       })
       .join("");
     return head + body + `</tbody></table>`;
+  }
+
+  function polar(cx, cy, r, i, n) {
+    const ang = -Math.PI / 2 + (i / n) * 2 * Math.PI;
+    return [cx + r * Math.cos(ang), cy + r * Math.sin(ang)];
+  }
+
+  function radarSvg(seriesList, labels) {
+    const n = labels.length;
+    const size = 300;
+    const cx = 150;
+    const cy = 150;
+    const r = 96;
+    if (!n) return "";
+    const rings = [0.25, 0.5, 0.75, 1]
+      .map((t) => {
+        const pts = Array.from({ length: n }, (_, i) => polar(cx, cy, r * t, i, n).join(",")).join(" ");
+        return `<polygon points="${pts}" fill="none" stroke="#c5d6ca" stroke-width="1" />`;
+      })
+      .join("");
+    const spokes = Array.from({ length: n }, (_, i) => {
+      const [x, y] = polar(cx, cy, r, i, n);
+      return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#c5d6ca" stroke-width="1" />`;
+    }).join("");
+    const labs = labels
+      .map((lab, i) => {
+        const [x, y] = polar(cx, cy, r + 18, i, n);
+        return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="#4a5d54">${escapeHtml(lab)}</text>`;
+      })
+      .join("");
+    const polys = seriesList
+      .map((s) => {
+        const pts = (s.values || [])
+          .map((v, i) => polar(cx, cy, r * (Math.max(0, Math.min(20, v || 0)) / 20), i, n).join(","))
+          .join(" ");
+        return (
+          `<polygon points="${pts}" fill="${s.fill}" stroke="${s.stroke}" stroke-width="2" />` +
+          (s.values || [])
+            .map((v, i) => {
+              const [x, y] = polar(cx, cy, r * (Math.max(0, Math.min(20, v || 0)) / 20), i, n);
+              return `<circle cx="${x}" cy="${y}" r="3" fill="${s.stroke}" />`;
+            })
+            .join("")
+        );
+      })
+      .join("");
+    return `<svg viewBox="0 0 ${size} ${size}" role="img">${rings}${spokes}${polys}${labs}</svg>`;
+  }
+
+  function sparkSvg(spark, gk) {
+    const rows = spark || [];
+    if (!rows.length) return `<p class="empty-note">시즌 흐름을 그릴 공식 행이 없습니다.</p>`;
+    const w = 640;
+    const h = 148;
+    const padL = 36;
+    const padR = 16;
+    const padT = 18;
+    const padB = 28;
+    const iw = w - padL - padR;
+    const ih = h - padT - padB;
+    const maxApps = Math.max(8, ...rows.map((r) => r.apps || 0));
+    const maxSec = Math.max(1, ...rows.map((r) => (gk ? r.b : r.a + r.b) || 0));
+    function x(i) {
+      return padL + (rows.length === 1 ? iw / 2 : (i / (rows.length - 1)) * iw);
+    }
+    function yApps(v) {
+      return padT + ih - (v / maxApps) * ih;
+    }
+    function ySec(v) {
+      return padT + ih - (v / maxSec) * ih;
+    }
+    const appsLine = rows.map((r, i) => `${x(i)},${yApps(r.apps || 0)}`).join(" ");
+    const secLine = rows
+      .map((r, i) => `${x(i)},${ySec(gk ? r.b || 0 : (r.a || 0) + (r.b || 0))}`)
+      .join(" ");
+    const ticks = rows
+      .map((r, i) => {
+        return (
+          `<text class="axis" x="${x(i)}" y="${h - 8}" text-anchor="middle">${escapeHtml(String(r.season).slice(2))}</text>` +
+          `<circle cx="${x(i)}" cy="${yApps(r.apps || 0)}" r="3.5" fill="#037340" />`
+        );
+      })
+      .join("");
+    const legend = gk ? "초록 출장 · 라임 클린시트" : "초록 출장 · 라임 공격포인트";
+    return (
+      `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${escapeHtml(legend)}">` +
+      `<text class="axis" x="${padL}" y="12">${escapeHtml(legend)}</text>` +
+      `<polyline fill="none" stroke="#037340" stroke-width="2.4" points="${appsLine}" />` +
+      `<polyline fill="none" stroke="#8fb52a" stroke-width="2" points="${secLine}" />` +
+      ticks +
+      `</svg>`
+    );
+  }
+
+  function renderFm(p, analysis) {
+    const attr = analysis.attributes;
+    $("fmHead").innerHTML =
+      `<div class="fm-cap"><span>CA</span><strong>${attr.ca}</strong></div>` +
+      `<div class="fm-cap"><span>PA</span><strong>${attr.pa}</strong></div>` +
+      `<div class="fm-cap"><span>POS</span><strong>${escapeHtml(attr.pos)}</strong></div>`;
+    $("fmRadar").innerHTML = radarSvg(
+      [{ values: attr.list.map((a) => a.value), fill: "rgba(3,115,64,0.22)", stroke: "#037340" }],
+      attr.list.map((a) => a.label)
+    );
+    $("fmBars").innerHTML = attr.list
+      .map((a) => {
+        const cls = vClass(a.value);
+        const pct = Math.round((a.value / 20) * 100);
+        return (
+          `<div class="fm-row">` +
+          `<span class="lab">${escapeHtml(a.label)}</span>` +
+          `<div class="bar"><i class="${cls}" style="width:${pct}%"></i></div>` +
+          `<span class="num ${cls}">${a.value}</span>` +
+          `</div>`
+        );
+      })
+      .join("");
+  }
+
+  function renderRole(analysis) {
+    const past = analysis.role.career;
+    const now = analysis.role.year;
+    const shift = analysis.role.shift;
+    const trendCls = shift === "상승" ? "up" : shift === "하락" ? "down" : "flat";
+    $("roleCards").innerHTML =
+      `<div class="role-card"><span>그동안</span><strong>${escapeHtml(past.label)}</strong><em>시즌당 ${dash(past.appsAvg)}경기</em></div>` +
+      `<div class="role-card"><span>올해</span><strong>${escapeHtml(now.label)}</strong><em>${dash(now.apps)}경기</em></div>` +
+      `<div class="role-card"><span>변화</span><strong><span class="trend ${trendCls}">${escapeHtml(shift)}</span></strong><em>출장 기준 추정</em></div>`;
+    $("roleText").textContent = analysis.role.text || "";
+  }
+
+  function renderForm(p, analysis) {
+    const gk = PlayerEngine.isGk(p);
+    $("formChart").innerHTML = sparkSvg(analysis.form.spark, gk);
+    const badge =
+      analysis.form.trend === "up"
+        ? `<span class="trend up">상승</span> `
+        : analysis.form.trend === "down"
+          ? `<span class="trend down">하락</span> `
+          : `<span class="trend flat">유지</span> `;
+    $("formText").innerHTML = badge + escapeHtml(analysis.form.text || "");
+  }
+
+  function renderYears(p, analysis) {
+    const gk = PlayerEngine.isGk(p);
+    const rows = analysis.seasons || [];
+    if (!rows.length) {
+      $("yearTimeline").innerHTML = `<p class="empty-note">연도별 공식 시즌 행이 없습니다.</p>`;
+      return;
+    }
+    $("yearTimeline").innerHTML = rows
+      .map((r) => {
+        const extra = gk ? `실점 ${r.a} · 클린 ${r.b}` : `${r.a}골 ${r.b}도움`;
+        return (
+          `<article class="year-item">` +
+          `<div class="yh"><b>${escapeHtml(r.season)}</b>` +
+          `<span class="yr">${escapeHtml(r.team)} · ${escapeHtml(r.role)} · 출장 ${r.apps} · ${escapeHtml(extra)}</span></div>` +
+          `<p>${escapeHtml(r.text)}</p>` +
+          `</article>`
+        );
+      })
+      .join("");
+  }
+
+  function renderRivals(p) {
+    const mates = teammatesSamePos(p);
+    const team = currentTeam();
+    $("rivalNote").textContent = team
+      ? `${team.full || team.name} ${p.position || ""} 경쟁자. 카드를 누르면 아래에서 능력치를 비교합니다.`
+      : "";
+    if (!mates.length) {
+      $("rivalGrid").innerHTML = `<p class="empty-note">같은 포지션 팀 동료가 명단에 없습니다.</p>`;
+      $("rivalText").textContent = "";
+      return;
+    }
+    $("rivalGrid").innerHTML = mates
+      .map((m) => {
+        const full = state.rivals.find((r) => String(r.id) === String(m.id));
+        const attr = full ? PlayerEngine.attributes(full) : null;
+        const y = full ? PlayerEngine.yearRole(full, PlayerEngine.YEAR) : null;
+        const active = String(m.id) === String(state.compareId) ? " active" : "";
+        const urls = [m.photo, m.photo_fallback].filter(Boolean);
+        return (
+          `<button type="button" class="rival-card${active}" data-id="${escapeHtml(m.id)}">` +
+          `<div class="shot">${imgHtml(urls, m.name, "face")}</div>` +
+          `<div class="meta">` +
+          `<span class="ca">${attr ? "CA " + attr.ca : "CA –"}</span>` +
+          `<span class="nm">${escapeHtml(m.name)}</span>` +
+          `<span class="ps">${m.back_no != null ? "No." + escapeHtml(m.back_no) : ""} · ${escapeHtml(m.position || "")}` +
+          `${y ? " · 올해 " + y.apps + "경기" : ""}</span>` +
+          `</div></button>`
+        );
+      })
+      .join("");
+    $("rivalGrid")
+      .querySelectorAll(".rival-card")
+      .forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-id");
+          if (!id) return;
+          state.compareId = id;
+          writeHash();
+          loadCompare(id);
+        });
+      });
+    const focus = state.comparePlayer;
+    if (focus && String(focus.team_id) === String(p.team_id)) {
+      $("rivalText").textContent = PlayerEngine.rivalCopy(p, focus);
+    } else if (state.rivals[0]) {
+      $("rivalText").textContent = PlayerEngine.rivalCopy(p, state.rivals[0]);
+    } else {
+      $("rivalText").textContent = "";
+    }
+  }
+
+  function renderComparePicker(p) {
+    const mates = teammatesSamePos(p);
+    const flat = allPlayersFlat();
+    const options = flat
+      .filter((x) => String(x.id) !== String(p.id))
+      .slice(0, 1200)
+      .map((x) => `<option value="${escapeHtml(x.name)} (${escapeHtml(x.teamName)} ${escapeHtml(x.position || "")})" data-id="${escapeHtml(x.id)}"></option>`)
+      .join("");
+    const mateOpts = mates
+      .map((m) => {
+        const sel = String(m.id) === String(state.compareId) ? " selected" : "";
+        return `<option value="${escapeHtml(m.id)}"${sel}>${escapeHtml(m.name)} · ${m.back_no != null ? "No." + m.back_no : ""}</option>`;
+      })
+      .join("");
+    $("cmpPicker").innerHTML =
+      `<label for="cmpMate">같은 포지션</label>` +
+      `<select id="cmpMate"><option value="">선택</option>${mateOpts}</select>` +
+      `<label for="cmpSearch">다른 선수</label>` +
+      `<input id="cmpSearch" list="cmpAll" placeholder="이름 검색 후 엔터" />` +
+      `<datalist id="cmpAll">${options}</datalist>`;
+    $("cmpMate").addEventListener("change", (e) => {
+      const id = e.target.value;
+      if (!id) return;
+      state.compareId = id;
+      writeHash();
+      loadCompare(id);
+    });
+    $("cmpSearch").addEventListener("change", (e) => {
+      const q = String(e.target.value || "").trim();
+      if (!q) return;
+      const hit =
+        flat.find((x) => `${x.name} (${x.teamName} ${x.position || ""})` === q) ||
+        flat.find((x) => x.name === q && String(x.id) !== String(p.id));
+      if (!hit) return;
+      state.compareId = hit.id;
+      writeHash();
+      loadCompare(hit.id);
+    });
+  }
+
+  function renderCompare(p) {
+    renderComparePicker(p);
+    const other = state.comparePlayer;
+    if (!other) {
+      $("cmpRadar").innerHTML = "";
+      $("cmpTable").innerHTML = `<p class="empty-note">경쟁자 카드나 검색으로 비교 상대를 고르세요.</p>`;
+      $("cmpText").textContent = "";
+      return;
+    }
+    const cmp = PlayerEngine.compareRows(p, other);
+    const labels = cmp.rows.filter((r) => r.mine != null && r.theirs != null).map((r) => r.label);
+    const mine = cmp.rows.filter((r) => r.mine != null && r.theirs != null).map((r) => r.mine);
+    const theirs = cmp.rows.filter((r) => r.mine != null && r.theirs != null).map((r) => r.theirs);
+    $("cmpRadar").innerHTML = radarSvg(
+      [
+        { values: mine, fill: "rgba(3,115,64,0.22)", stroke: "#037340" },
+        { values: theirs, fill: "rgba(23,100,192,0.16)", stroke: "#1764c0" },
+      ],
+      labels
+    );
+    $("cmpTable").innerHTML =
+      `<table class="cmp"><thead><tr>` +
+      `<th>항목</th><th>${escapeHtml(p.name)}</th><th>${escapeHtml(other.name)}</th><th>차이</th>` +
+      `</tr></thead><tbody>` +
+      cmp.rows
+        .map((r) => {
+          const d = r.d;
+          const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
+          const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
+          return (
+            `<tr><td>${escapeHtml(r.label)}</td>` +
+            `<td class="${r.mine != null ? vClass(r.mine) : ""}">${dash(r.mine)}</td>` +
+            `<td class="${r.theirs != null ? vClass(r.theirs) : ""}">${dash(r.theirs)}</td>` +
+            `<td class="${dCls}">${dTxt}</td></tr>`
+          );
+        })
+        .join("") +
+      `<tr><td>CA</td><td>${cmp.a.ca}</td><td>${cmp.b.ca}</td><td class="${cmp.a.ca - cmp.b.ca >= 0 ? "d-plus" : "d-minus"}">${cmp.a.ca - cmp.b.ca >= 0 ? "+" : ""}${cmp.a.ca - cmp.b.ca}</td></tr>` +
+      `<tr><td>PA</td><td>${cmp.a.pa}</td><td>${cmp.b.pa}</td><td class="${cmp.a.pa - cmp.b.pa >= 0 ? "d-plus" : "d-minus"}">${cmp.a.pa - cmp.b.pa >= 0 ? "+" : ""}${cmp.a.pa - cmp.b.pa}</td></tr>` +
+      `</tbody></table>`;
+    $("cmpText").textContent = PlayerEngine.rivalCopy(p, other);
+  }
+
+  function renderAnalysis(p) {
+    if (typeof PlayerEngine === "undefined") return;
+    const analysis = PlayerEngine.build(p);
+    const attr = analysis.attributes;
+    const now = analysis.role.year;
+    const extraFacts = [
+      ["환산 CA / PA", `${attr.ca} / ${attr.pa}`],
+      ["올해 역할", `${now.label} · ${dash(now.apps)}경기`],
+    ];
+    const factsEl = $("facts");
+    extraFacts.forEach(([k, v]) => {
+      const div = document.createElement("div");
+      div.className = "fact";
+      div.innerHTML = `<span>${escapeHtml(k)}</span><strong>${escapeHtml(dash(v))}</strong>`;
+      factsEl.appendChild(div);
+    });
+    const tags = document.querySelector("#dossierHero .tags");
+    if (tags) {
+      tags.insertAdjacentHTML(
+        "beforeend",
+        `<span class="tag">CA ${attr.ca}</span><span class="tag">${escapeHtml(now.label)}</span>`
+      );
+    }
+    renderFm(p, analysis);
+    renderRole(analysis);
+    renderForm(p, analysis);
+    renderYears(p, analysis);
+    renderRivals(p);
+    renderCompare(p);
   }
 
   function renderProfile(p) {
@@ -282,20 +669,66 @@
     }
     $("sourceLine").innerHTML =
       `기록 ${escapeHtml(p.source || "K리그")} · 수집 ${escapeHtml((p.fetched_at || "").slice(0, 10))} · ` +
+      `능력치는 공식 숫자 환산 · ` +
       links.join(" · ");
+    renderAnalysis(p);
     box.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  async function loadRivals(p) {
+    const mates = teammatesSamePos(p);
+    const loaded = [];
+    for (const m of mates.slice(0, 24)) {
+      try {
+        const full = await fetchPlayer(m.id);
+        if (full) loaded.push(full);
+      } catch (err) {
+        /* skip missing dossier */
+      }
+    }
+    state.rivals = loaded;
+    if (p && String(state.playerId) === String(p.id)) {
+      renderRivals(p);
+      if (!state.compareId && loaded[0]) {
+        const ranked = loaded
+          .slice()
+          .sort((a, b) => (PlayerEngine.yearRole(b, PlayerEngine.YEAR).apps || 0) - (PlayerEngine.yearRole(a, PlayerEngine.YEAR).apps || 0));
+        state.compareId = ranked[0].id;
+        state.comparePlayer = ranked[0];
+        writeHash();
+      }
+      if (state.compareId && !state.comparePlayer) {
+        await loadCompare(state.compareId);
+        return;
+      }
+      renderCompare(p);
+      renderRivals(p);
+    }
+  }
+
+  async function loadCompare(id) {
+    if (!id || !state.player) return;
+    try {
+      const other = await fetchPlayer(id);
+      if (String(state.compareId) !== String(id)) return;
+      state.comparePlayer = other;
+      renderCompare(state.player);
+      renderRivals(state.player);
+    } catch (err) {
+      $("cmpTable").innerHTML = `<p class="empty-note">비교 상대 데이터를 찾지 못했습니다.</p>`;
+    }
   }
 
   async function loadPlayer(id) {
     setStatus("선수 기록을 불러오는 중…");
     try {
-      const res = await fetch(DATA_PLAYER(id), { cache: "no-cache" });
-      if (!res.ok) throw new Error("player " + res.status);
-      const p = await res.json();
+      const p = await fetchPlayer(id);
       state.player = p;
       renderSquad();
       renderProfile(p);
       setStatus("");
+      loadRivals(p);
+      if (state.compareId) loadCompare(state.compareId);
     } catch (err) {
       setStatus("선수 데이터를 아직 수집하지 못했거나 파일을 찾지 못했습니다.");
       renderProfile(null);
@@ -326,6 +759,9 @@
         state.teamId = lg?.teams?.[0]?.id || "";
         state.playerId = "";
         state.player = null;
+        state.compareId = "";
+        state.comparePlayer = null;
+        state.rivals = [];
         writeHash();
         renderAll();
       });
@@ -349,7 +785,13 @@
     const h = parseHash();
     if (h.leagueId) state.leagueId = h.leagueId;
     if (h.teamId) state.teamId = h.teamId;
-    if (h.playerId) state.playerId = h.playerId;
+    state.playerId = h.playerId || "";
+    state.compareId = h.compareId || "";
+    if (!state.playerId) {
+      state.player = null;
+      state.comparePlayer = null;
+      state.rivals = [];
+    }
     if (!state.teamId) {
       const lg = currentLeague();
       state.teamId = lg?.teams?.[0]?.id || "";
