@@ -786,7 +786,7 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
 
 .rival-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
   gap: 10px;
   margin-bottom: 12px;
 }
@@ -800,21 +800,25 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
   text-align: left;
   font-family: inherit;
   color: inherit;
+  max-width: 200px;
 }
 .rival-card.active { outline: 2px solid var(--club); }
 .rival-card .shot {
-  height: 120px;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  position: relative;
   background: #dfe8e1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   overflow: hidden;
 }
-.rival-card .shot img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+.rival-card .shot img,
+.rival-card .shot .empty {
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 14px);
+  object-fit: contain;
+  object-position: center bottom;
 }
 .rival-card .meta { padding: 10px 12px 12px; }
 .rival-card .nm { font-weight: 700; display: block; }
