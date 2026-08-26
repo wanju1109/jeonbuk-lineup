@@ -1,6 +1,7 @@
 (() => {
-  const DATA_INDEX = `./data/index.json?v=${Date.now()}`;
-  const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${Date.now()}`;
+  const DATA_VER = "9";
+  const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
+  const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
 
   const state = {
     index: null,
@@ -114,7 +115,7 @@
     const src = escapeHtml(list[0]);
     const rest = list.slice(1).map(escapeHtml).join("|");
     return (
-      `<img class="${cls}" src="${src}" alt="${escapeHtml(alt)}" loading="lazy" ` +
+      `<img class="${cls}" src="${src}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" ` +
       `data-fallbacks="${escapeHtml(rest)}" onerror="window.__photoFallback(this)" />`
     );
   }
@@ -172,7 +173,7 @@
   async function fetchPlayer(id) {
     if (!id) return null;
     if (state.cache.has(id)) return state.cache.get(id);
-    const res = await fetch(DATA_PLAYER(id), { cache: "no-cache" });
+    const res = await fetch(DATA_PLAYER(id));
     if (!res.ok) throw new Error("player " + res.status);
     const p = await res.json();
     state.cache.set(id, p);
@@ -742,34 +743,13 @@
   }
 
   async function loadRivals(p) {
-    const mates = teammatesSamePos(p);
-    const loaded = [];
-    for (const m of mates.slice(0, 24)) {
-      try {
-        const full = await fetchPlayer(m.id);
-        if (full) loaded.push(full);
-      } catch (err) {
-        /* skip missing dossier */
-      }
+    state.rivals = [];
+    renderRivals(p);
+    if (!state.compareId) {
+      const mates = teammatesSamePos(p);
+      if (mates[0]) state.compareId = mates[0].id;
     }
-    state.rivals = loaded;
-    if (p && String(state.playerId) === String(p.id)) {
-      renderRivals(p);
-      if (!state.compareId && loaded[0]) {
-        const ranked = loaded
-          .slice()
-          .sort((a, b) => (PlayerEngine.yearRole(b, PlayerEngine.YEAR).apps || 0) - (PlayerEngine.yearRole(a, PlayerEngine.YEAR).apps || 0));
-        state.compareId = ranked[0].id;
-        state.comparePlayer = ranked[0];
-        writeHash();
-      }
-      if (state.compareId && !state.comparePlayer) {
-        await loadCompare(state.compareId);
-        return;
-      }
-      renderCompare(p);
-      renderRivals(p);
-    }
+    if (state.compareId) await loadCompare(state.compareId);
   }
 
   async function loadCompare(id) {
@@ -778,6 +758,9 @@
       const other = await fetchPlayer(id);
       if (String(state.compareId) !== String(id)) return;
       state.comparePlayer = other;
+      if (!state.rivals.some((r) => String(r.id) === String(other.id))) {
+        state.rivals.push(other);
+      }
       renderCompare(state.player);
       renderRivals(state.player);
     } catch (err) {
@@ -869,7 +852,7 @@
   async function boot() {
     bind();
     try {
-      const res = await fetch(DATA_INDEX, { cache: "no-cache" });
+      const res = await fetch(DATA_INDEX);
       if (!res.ok) throw new Error("index " + res.status);
       state.index = await res.json();
       applyHash();

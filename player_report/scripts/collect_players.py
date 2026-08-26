@@ -555,6 +555,24 @@ def enrich_player(card: dict, team: dict) -> dict:
     return player
 
 
+def keep_on_current_squad(club: dict, player: dict) -> bool:
+    """Drop leftover registrations. Jeonbuk first-team source is the club API;
+    Korean academy players on the K League list stay. Foreigners not on the
+    club site (e.g. ended loans) are removed.
+    """
+    if club.get("id") != "K05":
+        return True
+    roster = jbfc_roster()
+    name = str(player.get("name") or "").strip()
+    pid = str(player.get("id") or "")
+    if name and name in roster:
+        return True
+    ids = {str(row.get("kl_player_id") or "") for row in roster.values()}
+    if pid and pid in ids:
+        return True
+    return str(player.get("nation") or "") == "한국"
+
+
 def index_entry(player: dict) -> dict:
     photos = player.get("photos") or {}
     club = photos.get("club") or ""
@@ -605,6 +623,9 @@ def main() -> int:
             for card in cards:
                 try:
                     full = enrich_player(card, club)
+                    if not keep_on_current_squad(club, full):
+                        log(f"  drop stale {full.get('id')} {full.get('name')}")
+                        continue
                     players_idx.append(index_entry(full))
                     time.sleep(SLEEP)
                 except Exception as exc:
