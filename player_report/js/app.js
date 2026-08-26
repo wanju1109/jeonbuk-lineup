@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "18";
+  const DATA_VER = "19";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -724,10 +724,9 @@
       const unit100 = r.scale === 100;
       const unitPct = r.scale === "pct";
       const txt = unit100 ? score100(n) : unitPct ? (n == null ? "–" : `${n}%`) : fmtNum(n);
-      const cls = [(unit100 || unitPct) && n != null ? vClass(n) : "", cmpWinner(r) === side ? "win" : ""]
-        .filter(Boolean)
-        .join(" ");
-      return `<td class="${cls}">${txt}</td>`;
+      const win = cmpWinner(r) === side;
+      const inner = win ? `<span class="win-mark">${txt}</span>` : txt;
+      return `<td class="${win ? "win" : ""}">${inner}</td>`;
     };
     const cmpRowHtml = (r) => {
       const d = r.d;
