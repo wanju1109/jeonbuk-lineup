@@ -557,16 +557,16 @@ const PlayerEngine = (() => {
     else if (samePos) bits.push(`${eunNeun(name)} 다른 팀이지만 같은 포지션이다. 유형 비교에 가깝다.`);
     else bits.push(`${eunNeun(name)} 포지션이 다르다. 능력치 축이 일부만 겹친다.`);
     bits.push(
-      `올해 출장 ${me} ${sY.apps} vs ${name} ${oY.apps}. 환산 CA ${cmp.a.ca} vs ${cmp.b.ca}.`
+      `올해 출장 ${me} ${sY.apps} vs ${name} ${oY.apps}. 현재 능력(CA) ${cmp.a.ca}/100 vs ${cmp.b.ca}/100.`
     );
     if (sY.apps > oY.apps + 5) bits.push(`출장만 보면 지금 사이클의 1순위는 ${me} 쪽이다.`);
     else if (oY.apps > sY.apps + 5) bits.push(`출장만 보면 지금 사이클의 1순위는 ${name} 쪽이다.`);
     else bits.push("출장이 비슷하면, 감독은 매치업 따라 둘을 섞고 있을 가능성이 크다.");
     if (plus.length) {
-      bits.push(`${iGa(me)} 앞서는 항목은 ` + plus.map((d) => `${d.label}(${d.mine}대${d.theirs})`).join(", ") + "이다.");
+      bits.push(`${iGa(me)} 앞서는 항목은 ` + plus.map((d) => `${d.label}(${d.mine}/20대${d.theirs}/20)`).join(", ") + "이다.");
     }
     if (minus.length) {
-      bits.push(`${name}에게 밀리는 항목은 ` + minus.map((d) => `${d.label}(${d.mine}대${d.theirs})`).join(", ") + "이다.");
+      bits.push(`${name}에게 밀리는 항목은 ` + minus.map((d) => `${d.label}(${d.mine}/20대${d.theirs}/20)`).join(", ") + "이다.");
     }
     if (gk && oGk) {
       bits.push("키퍼 경쟁은 친다. 한 경기가 아니라 한 달이 단위고, 실수 하나가 시즌을 갈라놓는다.");

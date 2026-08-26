@@ -344,6 +344,39 @@
     return `<svg viewBox="0 0 ${size} ${size}" role="img">${rings}${spokes}${polys}${labs}</svg>`;
   }
 
+  function radarLegend(items) {
+    return (
+      `<div class="radar-legend">` +
+      (items || [])
+        .map(
+          (it) =>
+            `<span class="lg-item">` +
+            `<i style="background:${escapeHtml(it.color)}"></i>` +
+            `${escapeHtml(it.label)}` +
+            `</span>`
+        )
+        .join("") +
+      `</div>`
+    );
+  }
+
+  const POS_KO = { GK: "골키퍼", DF: "수비수", MF: "미드필더", FW: "공격수" };
+
+  function posKo(pos) {
+    const key = String(pos || "").toUpperCase();
+    return POS_KO[key] ? `${POS_KO[key]}(${key})` : key;
+  }
+
+  function score20(n) {
+    if (n == null || n === "") return "–";
+    return `${n} / 20`;
+  }
+
+  function score100(n) {
+    if (n == null || n === "") return "–";
+    return `${n} / 100`;
+  }
+
   function sparkSvg(spark, gk) {
     const rows = spark || [];
     if (!rows.length) return `<p class="empty-note">시즌 흐름을 그릴 공식 행이 없습니다.</p>`;
@@ -392,13 +425,14 @@
   function renderFm(p, analysis) {
     const attr = analysis.attributes;
     $("fmHead").innerHTML =
-      `<div class="fm-cap"><span>CA</span><strong>${attr.ca}</strong></div>` +
-      `<div class="fm-cap"><span>PA</span><strong>${attr.pa}</strong></div>` +
-      `<div class="fm-cap"><span>POS</span><strong>${escapeHtml(attr.pos)}</strong></div>`;
-    $("fmRadar").innerHTML = radarSvg(
-      [{ values: attr.list.map((a) => a.value), fill: "rgba(3,115,64,0.22)", stroke: "#037340" }],
-      attr.list.map((a) => a.label)
-    );
+      `<div class="fm-cap"><span>현재 능력(CA)</span><strong>${attr.ca}</strong><em>100점 만점</em></div>` +
+      `<div class="fm-cap"><span>잠재 능력(PA)</span><strong>${attr.pa}</strong><em>100점 만점</em></div>` +
+      `<div class="fm-cap"><span>포지션(POS)</span><strong>${escapeHtml(posKo(attr.pos))}</strong><em>주 포지션</em></div>`;
+    $("fmRadar").innerHTML =
+      radarSvg(
+        [{ values: attr.list.map((a) => a.value), fill: "rgba(3,115,64,0.22)", stroke: "#037340" }],
+        attr.list.map((a) => a.label)
+      ) + radarLegend([{ color: "#037340", label: `${p.name || "이 선수"} · 초록 · 20점 만점` }]);
     $("fmBars").innerHTML = attr.list
       .map((a) => {
         const cls = vClass(a.value);
@@ -407,7 +441,7 @@
           `<div class="fm-row">` +
           `<span class="lab">${escapeHtml(a.label)}</span>` +
           `<div class="bar"><i class="${cls}" style="width:${pct}%"></i></div>` +
-          `<span class="num ${cls}">${a.value}</span>` +
+          `<span class="num ${cls}">${score20(a.value)}</span>` +
           `</div>`
         );
       })
@@ -481,7 +515,7 @@
           `<button type="button" class="rival-card${active}" data-id="${escapeHtml(m.id)}">` +
           `<div class="shot">${imgHtml(urls, m.name, "face")}</div>` +
           `<div class="meta">` +
-          `<span class="ca">${attr ? "CA " + attr.ca : "CA –"}</span>` +
+          `<span class="ca">${attr ? "현재 " + score100(attr.ca) : "현재 –"}</span>` +
           `<span class="nm">${escapeHtml(m.name)}</span>` +
           `<span class="ps">${m.back_no != null ? "No." + escapeHtml(m.back_no) : ""} · ${escapeHtml(m.position || "")}` +
           `${y ? " · 올해 " + y.apps + "경기" : ""}</span>` +
@@ -563,16 +597,24 @@
     const labels = cmp.rows.filter((r) => r.mine != null && r.theirs != null).map((r) => r.label);
     const mine = cmp.rows.filter((r) => r.mine != null && r.theirs != null).map((r) => r.mine);
     const theirs = cmp.rows.filter((r) => r.mine != null && r.theirs != null).map((r) => r.theirs);
-    $("cmpRadar").innerHTML = radarSvg(
-      [
-        { values: mine, fill: "rgba(3,115,64,0.22)", stroke: "#037340" },
-        { values: theirs, fill: "rgba(23,100,192,0.16)", stroke: "#1764c0" },
-      ],
-      labels
-    );
+    $("cmpRadar").innerHTML =
+      radarSvg(
+        [
+          { values: mine, fill: "rgba(3,115,64,0.22)", stroke: "#037340" },
+          { values: theirs, fill: "rgba(23,100,192,0.16)", stroke: "#1764c0" },
+        ],
+        labels
+      ) +
+      radarLegend([
+        { color: "#037340", label: `${p.name} · 초록` },
+        { color: "#1764c0", label: `${other.name} · 파랑` },
+      ]);
     $("cmpTable").innerHTML =
       `<table class="cmp"><thead><tr>` +
-      `<th>항목</th><th>${escapeHtml(p.name)}</th><th>${escapeHtml(other.name)}</th><th>차이</th>` +
+      `<th>항목 (만점)</th>` +
+      `<th><span class="lg-dot" style="background:#037340"></span>${escapeHtml(p.name)}</th>` +
+      `<th><span class="lg-dot" style="background:#1764c0"></span>${escapeHtml(other.name)}</th>` +
+      `<th>차이</th>` +
       `</tr></thead><tbody>` +
       cmp.rows
         .map((r) => {
@@ -580,15 +622,15 @@
           const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
           const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
           return (
-            `<tr><td>${escapeHtml(r.label)}</td>` +
-            `<td class="${r.mine != null ? vClass(r.mine) : ""}">${dash(r.mine)}</td>` +
-            `<td class="${r.theirs != null ? vClass(r.theirs) : ""}">${dash(r.theirs)}</td>` +
+            `<tr><td>${escapeHtml(r.label)} (20점)</td>` +
+            `<td class="${r.mine != null ? vClass(r.mine) : ""}">${score20(r.mine)}</td>` +
+            `<td class="${r.theirs != null ? vClass(r.theirs) : ""}">${score20(r.theirs)}</td>` +
             `<td class="${dCls}">${dTxt}</td></tr>`
           );
         })
         .join("") +
-      `<tr><td>CA</td><td>${cmp.a.ca}</td><td>${cmp.b.ca}</td><td class="${cmp.a.ca - cmp.b.ca >= 0 ? "d-plus" : "d-minus"}">${cmp.a.ca - cmp.b.ca >= 0 ? "+" : ""}${cmp.a.ca - cmp.b.ca}</td></tr>` +
-      `<tr><td>PA</td><td>${cmp.a.pa}</td><td>${cmp.b.pa}</td><td class="${cmp.a.pa - cmp.b.pa >= 0 ? "d-plus" : "d-minus"}">${cmp.a.pa - cmp.b.pa >= 0 ? "+" : ""}${cmp.a.pa - cmp.b.pa}</td></tr>` +
+      `<tr><td>현재 능력(CA) (100점)</td><td>${score100(cmp.a.ca)}</td><td>${score100(cmp.b.ca)}</td><td class="${cmp.a.ca - cmp.b.ca >= 0 ? "d-plus" : "d-minus"}">${cmp.a.ca - cmp.b.ca >= 0 ? "+" : ""}${cmp.a.ca - cmp.b.ca}</td></tr>` +
+      `<tr><td>잠재 능력(PA) (100점)</td><td>${score100(cmp.a.pa)}</td><td>${score100(cmp.b.pa)}</td><td class="${cmp.a.pa - cmp.b.pa >= 0 ? "d-plus" : "d-minus"}">${cmp.a.pa - cmp.b.pa >= 0 ? "+" : ""}${cmp.a.pa - cmp.b.pa}</td></tr>` +
       `</tbody></table>`;
     $("cmpText").textContent = PlayerEngine.rivalCopy(p, other);
   }
@@ -599,7 +641,7 @@
     const attr = analysis.attributes;
     const now = analysis.role.year;
     const extraFacts = [
-      ["환산 CA / PA", `${attr.ca} / ${attr.pa}`],
+      ["현재 능력(CA) / 잠재 능력(PA)", `${score100(attr.ca)} · ${score100(attr.pa)}`],
       ["올해 역할", `${now.label} · ${dash(now.apps)}경기`],
     ];
     const factsEl = $("facts");
@@ -613,7 +655,7 @@
     if (tags) {
       tags.insertAdjacentHTML(
         "beforeend",
-        `<span class="tag">CA ${attr.ca}</span><span class="tag">${escapeHtml(now.label)}</span>`
+        `<span class="tag">현재 ${score100(attr.ca)}</span><span class="tag">${escapeHtml(now.label)}</span>`
       );
     }
     renderFm(p, analysis);
