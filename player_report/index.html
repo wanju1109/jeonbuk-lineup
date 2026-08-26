@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K리그 선수 프로필</title>
+  <meta name="description" content="K리그1·K리그2 구단별 선수 프로필. 공식 기록, 구단 사진, 스카우팅 노트." />
+  <meta property="og:title" content="K리그 선수 프로필" />
+  <meta property="og:description" content="구단을 고르고 선수를 조회하면 경력과 특징을 한 화면에." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
+  <link rel="stylesheet" href="./css/player.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="hero" id="top">
+      <p class="hero-eyebrow">K LEAGUE PLAYER DOSSIER</p>
+      <h1 class="brand">PLAYER REPORT</h1>
+      <p class="hero-copy">
+        구단을 고르고 선수를 누르면, 공식 출장 기록과 거쳐 온 팀, 스카우팅 노트를 한 장에 모읍니다.
+        사진은 구단 프로필을 우선하고, 없으면 연맹 공식 컷으로 대체합니다.
+      </p>
+      <div class="hero-nav">
+        <a class="btn btn-ghost" href="../c_report/">경기 리포트</a>
+        <a class="btn btn-ghost" href="../p_report/">프리뷰</a>
+      </div>
+      <p class="hero-credit">
+        <span>출처 K리그 공식 홈페이지 · 데이터포털</span>
+        <span>제작 전주월드컵경기장(에버그린)</span>
+      </p>
+    </header>
+
+    <div id="status" class="status hidden"></div>
+
+    <section class="panel picker" id="picker">
+      <div class="picker-row">
+        <div class="seg" role="tablist" aria-label="리그">
+          <button type="button" class="seg-btn active" data-league="1" id="btnK1">K리그1</button>
+          <button type="button" class="seg-btn" data-league="2" id="btnK2">K리그2</button>
+        </div>
+        <label class="search-wrap">
+          <span class="sr">선수 검색</span>
+          <input id="searchInput" type="search" placeholder="이름 · 배번 검색" autocomplete="off" />
+        </label>
+      </div>
+      <div class="club-strip" id="clubStrip"></div>
+    </section>
+
+    <section class="section" id="squadSection">
+      <div class="section-head">
+        <p class="kicker" id="squadKicker">선수단</p>
+        <h2 id="squadTitle">구단을 선택하세요</h2>
+      </div>
+      <div class="pos-filter" id="posFilter">
+        <button type="button" class="chip active" data-pos="ALL">전체</button>
+        <button type="button" class="chip" data-pos="GK">GK</button>
+        <button type="button" class="chip" data-pos="DF">DF</button>
+        <button type="button" class="chip" data-pos="MF">MF</button>
+        <button type="button" class="chip" data-pos="FW">FW</button>
+      </div>
+      <div class="squad-grid" id="squadGrid"></div>
+    </section>
+
+    <main class="profile hidden" id="profile">
+      <article class="dossier" id="dossier">
+        <div class="dossier-hero" id="dossierHero"></div>
+        <div class="facts" id="facts"></div>
+        <section class="block">
+          <h3>특징</h3>
+          <div class="prose" id="scoutProfile"></div>
+        </section>
+        <section class="block two">
+          <div>
+            <h3>장점</h3>
+            <div class="prose" id="scoutPlus"></div>
+          </div>
+          <div>
+            <h3>단점</h3>
+            <div class="prose" id="scoutMinus"></div>
+          </div>
+        </section>
+        <section class="block">
+          <h3>시즌별 기록</h3>
+          <p class="table-note" id="tableNote"></p>
+          <div class="table-wrap" id="seasonTable"></div>
+        </section>
+        <section class="block">
+          <h3>팀별 기록</h3>
+          <div class="table-wrap" id="teamTable"></div>
+        </section>
+        <p class="source-line" id="sourceLine"></p>
+      </article>
+    </main>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>

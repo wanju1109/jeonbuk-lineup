@@ -1,0 +1,60 @@
+name: player_report collect
+
+on:
+  schedule:
+    - cron: "40 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Season year (blank = current)"
+        required: false
+        default: ""
+      team_id:
+        description: "Single team id like K05 (blank = all K1/K2)"
+        required: false
+        default: ""
+      force:
+        description: "Refetch playerDetail even if cached (1/0)"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect squads and career tables
+        env:
+          KLEAGUE_YEAR: ${{ github.event.inputs.year }}
+          KLEAGUE_TEAM_ID: ${{ github.event.inputs.team_id }}
+          KLEAGUE_FORCE: ${{ github.event.inputs.force }}
+          KLEAGUE_SLEEP: "0.2"
+        run: |
+          set -e
+          if [ -z "$KLEAGUE_YEAR" ]; then
+            export KLEAGUE_YEAR="$(date +%Y)"
+          fi
+          python player_report/scripts/collect_players.py
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add player_report || true
+          if git diff --staged --quiet; then
+            echo "No data changes"
+            exit 0
+          fi
+          git commit -m "chore(player_report): refresh K League player dossiers"
+          git push
