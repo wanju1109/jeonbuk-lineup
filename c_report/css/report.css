@@ -2143,8 +2143,25 @@ body.embed-mode .hero {
   margin-bottom: 14px;
 }
 
-.dd-h3-row .dd-h3 {
-  margin: 0;
+.dd-h3-row .team-toggle {
+  position: relative;
+  z-index: 3;
+}
+
+#ddRoleTeamToggle .team-btn {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#ddRoleTeamToggle .team-btn:not(.active) {
+  opacity: 1;
+  color: var(--ink);
+  background: #fff;
+}
+
+#ddRoleTeamToggle .team-btn:not(.active) .team-emblem {
+  filter: none;
+  opacity: 0.85;
 }
 
 .dd-note {

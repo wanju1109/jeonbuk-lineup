@@ -517,6 +517,19 @@ const DeepView = (() => {
     }
 
     const sections = [];
+    const cardHtml = (p) => {
+      try {
+        return roleCard(p, side);
+      } catch (err) {
+        console.error("[DeepView] roleCard failed:", err);
+        return (
+          `<article class="dd-role">` +
+          `<p class="dd-empty">${escapeHtml(p?.name || "선수")} 카드를 만들지 못했습니다.</p>` +
+          `</article>`
+        );
+      }
+    };
+
     for (const pos of POS_ORDER) {
       const bucket = byPos.get(pos);
       if (!bucket?.length) continue;
@@ -524,10 +537,7 @@ const DeepView = (() => {
       sections.push(
         `<section class="dd-role-pos-group">` +
         `<h4 class="dd-role-pos-label">${escapeHtml(POS_LABEL[pos] || pos)}</h4>` +
-        `<div class="dd-role-sub-grid">${bucket
-          .sort(sortByBackNo)
-          .map((p) => roleCard(p, side))
-          .join("")}</div>` +
+        `<div class="dd-role-sub-grid">${bucket.sort(sortByBackNo).map(cardHtml).join("")}</div>` +
         `</section>`
       );
     }
@@ -536,11 +546,8 @@ const DeepView = (() => {
       if (POS_ORDER.includes(pos)) continue;
       sections.push(
         `<section class="dd-role-pos-group">` +
-        `<h4 class="dd-role-pos-label">${escapeHtml(pos)}</h4>` +
-        `<div class="dd-role-sub-grid">${bucket
-          .sort(sortByBackNo)
-          .map((p) => roleCard(p, side))
-          .join("")}</div>` +
+        `<h4 class="dd-role-pos-label">${escapeHtml(pos || "기타")}</h4>` +
+        `<div class="dd-role-sub-grid">${bucket.sort(sortByBackNo).map(cardHtml).join("")}</div>` +
         `</section>`
       );
     }
@@ -549,15 +556,22 @@ const DeepView = (() => {
   }
 
   function roleCard(p, side) {
-    const s = p.stat;
-    const duty = typeof Tactics !== "undefined" && Tactics.dutyNote ? Tactics.dutyNote(p) : null;
+    const s = p.stat || {};
+    let duty = null;
+    try {
+      if (typeof Tactics !== "undefined" && typeof Tactics.dutyNote === "function") {
+        duty = Tactics.dutyNote(p);
+      }
+    } catch (err) {
+      console.error("[DeepView] dutyNote failed:", err);
+    }
     const stats = [
-      ["공을 만진 횟수", `${s.touches}회`],
-      ["패스", `${s.completed}/${s.passes}`],
-      ["전진 패스(앞으로 간 패스)", `${s.progressive}회`],
-      ["키패스(슈팅으로 이어진 패스)", `${s.keyPasses}회`],
-      ["박스 안 터치", `${s.boxTouches}회`],
-      ["수비 행동", `${s.defActions}회`],
+      ["공을 만진 횟수", `${s.touches ?? 0}회`],
+      ["패스", `${s.completed ?? 0}/${s.passes ?? 0}`],
+      ["전진 패스(앞으로 간 패스)", `${s.progressive ?? 0}회`],
+      ["키패스(슈팅으로 이어진 패스)", `${s.keyPasses ?? 0}회`],
+      ["박스 안 터치", `${s.boxTouches ?? 0}회`],
+      ["수비 행동", `${s.defActions ?? 0}회`],
     ];
     if (s.shots) stats.push(["슈팅", `${s.shots}회 · xG ${fmt(s.xg, 2)}`]);
     return (
@@ -565,8 +579,8 @@ const DeepView = (() => {
       `<div class="dd-role-top">` +
       `<span class="dd-role-no">${escapeHtml(String(p.backNo ?? "-"))}</span>` +
       `<div>` +
-      `<div class="dd-role-name">${escapeHtml(p.name)}${p.captain ? " (C)" : ""}</div>` +
-      `<div class="dd-role-label">${escapeHtml(p.role)}</div>` +
+      `<div class="dd-role-name">${escapeHtml(p.name || "선수")}${p.captain ? " (C)" : ""}</div>` +
+      `<div class="dd-role-label">${escapeHtml(p.role || "")}</div>` +
       `</div>` +
       `</div>` +
       `<div class="dd-role-pos">평균 위치 X ${fmt(p.x)} · Y ${fmt(p.y)}${
@@ -584,41 +598,84 @@ const DeepView = (() => {
     );
   }
 
-  function renderRoles(ctx) {
-    const box = $("ddRoles");
-    if (!box) return;
-    const team = roleSide === "away" ? ctx.away : ctx.home;
-    const list = team.players.filter((p) => p.stat.touches > 0);
-    box.innerHTML = list.length
-      ? groupRoleCards(list, roleSide)
-      : `<p class="dd-empty">선발 라인업 데이터가 없어 역할 카드를 만들 수 없습니다.</p>`;
-    box.setAttribute("data-side", roleSide);
+  function roleTabButtons() {
+    const wrap = $("ddRoleTeamToggle");
+    if (wrap) return [...wrap.querySelectorAll("[data-dd-team]")];
+    return [...document.querySelectorAll("#deepdive [data-dd-team]")];
+  }
 
-    document.querySelectorAll("[data-dd-team]").forEach((btn) => {
+  function setRoleTabState() {
+    roleTabButtons().forEach((btn) => {
       const on = btn.getAttribute("data-dd-team") === roleSide;
       btn.classList.toggle("active", on);
       btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.disabled = false;
     });
+  }
 
+  function roleListForSide(ctx, side) {
+    const team = side === "away" ? ctx.away : ctx.home;
+    const raw = Array.isArray(team?.players) ? team.players : [];
+    return raw.filter((p) => p && (p.stat || p.name));
+  }
+
+  function renderRoles(ctx) {
+    const box = $("ddRoles");
     const caption = $("ddRolesCaption");
+    setRoleTabState();
+    if (!box) return;
+
+    const team = roleSide === "away" ? ctx?.away : ctx?.home;
+    let list = [];
+    try {
+      list = roleListForSide(ctx, roleSide);
+    } catch (err) {
+      console.error("[DeepView] role list failed:", err);
+      box.innerHTML = `<p class="dd-empty">역할 카드를 만드는 중 오류가 발생했습니다.</p>`;
+      if (caption) {
+        caption.textContent = "";
+        caption.className = `dd-roles-caption dd-side-${roleSide}`;
+      }
+      return;
+    }
+
+    box.setAttribute("data-side", roleSide);
     if (caption) {
-      const name = roleSide === "away" ? ctx.awayName : ctx.homeName;
-      caption.innerHTML = `<strong>${escapeHtml(name)}</strong> 선수 ${list.length}명을 보고 있습니다.`;
+      const name = roleSide === "away" ? ctx?.awayName : ctx?.homeName;
+      caption.innerHTML = list.length
+        ? `<strong>${escapeHtml(name || "")}</strong> 선수 ${list.length}명을 보고 있습니다.`
+        : `<strong>${escapeHtml(name || "")}</strong> 역할 카드에 넣을 선수가 없습니다.`;
       caption.className = `dd-roles-caption dd-side-${roleSide}`;
+    }
+
+    if (!list.length) {
+      box.innerHTML = `<p class="dd-empty">선발 라인업 데이터가 없어 역할 카드를 만들 수 없습니다.</p>`;
+      return;
+    }
+
+    try {
+      box.innerHTML = groupRoleCards(list, roleSide);
+    } catch (err) {
+      console.error("[DeepView] role cards failed:", err);
+      box.innerHTML =
+        `<p class="dd-empty">역할 카드를 그리는 중 오류가 발생했습니다: ${escapeHtml(err.message || err)}</p>`;
     }
   }
 
   function bindRoleTabs(ctx) {
-    document.querySelectorAll("[data-dd-team]").forEach((btn) => {
+    roleTabButtons().forEach((btn) => {
       if (btn._ddBound) return;
       btn._ddBound = true;
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
         roleSide = btn.getAttribute("data-dd-team") === "away" ? "away" : "home";
+        setRoleTabState();
         if (currentCtx) renderRoles(currentCtx);
       });
     });
-    const homeBtn = document.querySelector('[data-dd-team="home"]');
-    const awayBtn = document.querySelector('[data-dd-team="away"]');
+    const homeBtn = roleTabButtons().find((b) => b.getAttribute("data-dd-team") === "home");
+    const awayBtn = roleTabButtons().find((b) => b.getAttribute("data-dd-team") === "away");
     if (homeBtn) {
       homeBtn.innerHTML =
         emblemHtml(ctx.meta?.home?.team_id, ctx.homeName) +
@@ -629,6 +686,7 @@ const DeepView = (() => {
         emblemHtml(ctx.meta?.away?.team_id, ctx.awayName) +
         `<span>${escapeHtml(ctx.awayName)}</span>`;
     }
+    setRoleTabState();
   }
 
   /* ------------------------------------------------------------------ *
