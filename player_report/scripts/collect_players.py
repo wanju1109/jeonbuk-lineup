@@ -561,6 +561,12 @@ def main() -> int:
                     "players": players_idx,
                 }
             )
+        team_blocks.sort(
+            key=lambda t: (
+                0 if t.get("id") == "K05" or t.get("name") == "전북" else 1,
+                t.get("name") or "",
+            )
+        )
         out_leagues.append({"id": lg["id"], "name": lg["name"], "teams": team_blocks})
 
     index = {

@@ -66,6 +66,23 @@
     return leagues.find((l) => String(l.id) === String(state.leagueId)) || leagues[0] || null;
   }
 
+  function isJeonbuk(t) {
+    return String(t?.id || "").toUpperCase() === "K05" || String(t?.name || "") === "전북";
+  }
+
+  function sortedTeams(teams) {
+    return (teams || []).slice().sort((a, b) => {
+      const aj = isJeonbuk(a) ? 0 : 1;
+      const bj = isJeonbuk(b) ? 0 : 1;
+      if (aj !== bj) return aj - bj;
+      return String(a.name || "").localeCompare(String(b.name || ""), "ko");
+    });
+  }
+
+  function defaultTeamId(lg) {
+    return sortedTeams(lg?.teams || [])[0]?.id || "";
+  }
+
   function currentTeam() {
     const lg = currentLeague();
     return (lg?.teams || []).find((t) => t.id === state.teamId) || null;
@@ -162,7 +179,7 @@
       strip.innerHTML = "";
       return;
     }
-    strip.innerHTML = (lg.teams || [])
+    strip.innerHTML = sortedTeams(lg.teams)
       .map((t) => {
         const active = t.id === state.teamId ? " active" : "";
         return (
@@ -756,7 +773,7 @@
       b.addEventListener("click", () => {
         state.leagueId = b.getAttribute("data-league") || "1";
         const lg = currentLeague();
-        state.teamId = lg?.teams?.[0]?.id || "";
+        state.teamId = defaultTeamId(lg);
         state.playerId = "";
         state.player = null;
         state.compareId = "";
@@ -794,7 +811,7 @@
     }
     if (!state.teamId) {
       const lg = currentLeague();
-      state.teamId = lg?.teams?.[0]?.id || "";
+      state.teamId = defaultTeamId(lg);
     }
     renderAll();
     if (state.playerId) loadPlayer(state.playerId);
