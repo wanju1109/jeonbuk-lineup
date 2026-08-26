@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K리그 선수 프로필</title>
-  <meta name="description" content="K리그1·K리그2 구단별 선수 프로필. 공식 기록, 연도별 특징, 역할, FM식 능력치, 포지션 경쟁 비교." />
+  <meta name="description" content="K리그1·K리그2 구단별 선수 프로필. 공식 출장·득점·도움·클린시트 기록만." />
   <meta property="og:title" content="K리그 선수 프로필" />
-  <meta property="og:description" content="구단을 고르고 선수를 조회하면 경력, 역할, 능력치, 경쟁자 비교까지 한 화면에." />
+  <meta property="og:description" content="구단을 고르고 선수를 조회하면 공식 출장 기록과 시즌·팀 표를 한 화면에." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
-  <link rel="stylesheet" href="./css/player.css?v=9" />
+  <link rel="stylesheet" href="./css/player.css?v=10" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -18,8 +18,8 @@
       <p class="hero-eyebrow">K LEAGUE PLAYER DOSSIER</p>
       <h1 class="brand">PLAYER REPORT</h1>
       <p class="hero-copy">
-        구단을 고르고 선수를 누르면, 공식 출장 기록과 거쳐 온 팀, 연도별 특징, 올해 역할,
-        FM식 능력치, 같은 포지션 경쟁자 비교를 한 장에 모읍니다.
+        구단을 고르고 선수를 누르면, 공식 출장·득점·도움·클린시트와 거쳐 온 팀,
+        같은 포지션 출장 비교를 한 장에 모읍니다. 추정 능력치는 넣지 않습니다.
         사진은 구단 프로필을 우선하고, 없으면 연맹 공식 컷으로 대체합니다.
       </p>
       <div class="hero-nav">
@@ -68,18 +68,8 @@
         <div class="dossier-hero" id="dossierHero"></div>
         <div class="facts" id="facts"></div>
         <section class="block">
-          <h3>특징</h3>
+          <h3>기록 요약</h3>
           <div class="prose" id="scoutProfile"></div>
-        </section>
-        <section class="block two">
-          <div>
-            <h3>장점</h3>
-            <div class="prose" id="scoutPlus"></div>
-          </div>
-          <div>
-            <h3>단점</h3>
-            <div class="prose" id="scoutMinus"></div>
-          </div>
         </section>
         <section class="block" id="roleBlock">
           <h3>역할</h3>
@@ -92,20 +82,8 @@
           <div class="prose" id="formText"></div>
         </section>
         <section class="block" id="yearBlock">
-          <h3>연도별 특징</h3>
+          <h3>연도별 기록</h3>
           <div class="year-list" id="yearTimeline"></div>
-        </section>
-        <section class="block" id="fmBlock">
-          <h3>능력치</h3>
-          <p class="table-note" id="fmNote">
-            세부 능력은 20점 만점, 현재 능력(CA)·잠재 능력(PA)은 100점 만점.
-            K리그 공식 출장·득점·클린시트와 키·나이로 환산한 값이며 Football Manager 데이터베이스가 아닙니다.
-          </p>
-          <div class="fm-head" id="fmHead"></div>
-          <div class="fm-grid">
-            <div class="fm-radar" id="fmRadar"></div>
-            <div class="fm-bars" id="fmBars"></div>
-          </div>
         </section>
         <section class="block" id="rivalBlock">
           <h3>포지션 경쟁</h3>
@@ -114,12 +92,9 @@
           <div class="prose" id="rivalText"></div>
         </section>
         <section class="block" id="compareBlock">
-          <h3>능력치 비교</h3>
+          <h3>기록 비교</h3>
           <div class="cmp-picker" id="cmpPicker"></div>
-          <div class="fm-grid">
-            <div class="fm-radar" id="cmpRadar"></div>
-            <div class="cmp-table" id="cmpTable"></div>
-          </div>
+          <div class="cmp-table" id="cmpTable"></div>
           <div class="prose" id="cmpText"></div>
         </section>
         <section class="block">
@@ -135,7 +110,7 @@
       </article>
     </main>
   </div>
-  <script src="./js/engine.js?v=9"></script>
-  <script src="./js/app.js?v=9"></script>
+  <script src="./js/engine.js?v=10"></script>
+  <script src="./js/app.js?v=10"></script>
 </body>
 </html>
