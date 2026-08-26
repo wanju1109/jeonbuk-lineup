@@ -1,10 +1,11 @@
 (() => {
-  const DATA_VER = "26";
+  const DATA_VER = "27";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
   const CANONICAL = "https://wanju1109.github.io/jeonbuk-lineup/player_report/";
   const EDIT_TOKEN = "jb7k";
+  const EMBED_TOKEN = "y";
   const SELF_COLOR = "#037340";
   const SELF_FILL = "rgba(3,115,64,0.22)";
   const OTHER_COLOR = "#c2410c";
@@ -99,8 +100,18 @@
     }
   }
 
+  function isEmbedQuery() {
+    try {
+      const p = new URLSearchParams(location.search || "");
+      return p.get("f") === EMBED_TOKEN || p.get("embed") === "1";
+    } catch (err) {
+      return false;
+    }
+  }
+
   function applyViewMode() {
     document.body.classList.toggle("edit-mode", isEditQuery());
+    document.body.classList.toggle("embed-mode", isEmbedQuery());
   }
 
   function pageBaseNoQuery() {
@@ -118,6 +129,12 @@
     const current = pageBaseNoQuery();
     const base = /wanju1109\.github\.io/i.test(current) ? current : CANONICAL;
     return normalizeBase(base);
+  }
+
+  function publicEmbedUrl() {
+    const home = publicHomeUrl();
+    const join = home.includes("?") ? "&" : "?";
+    return `${home}${join}f=${encodeURIComponent(EMBED_TOKEN)}`;
   }
 
   function publicShareUrl() {
@@ -246,13 +263,13 @@
   }
 
   function setupCommunityEmbed() {
+    if (isEmbedQuery()) return;
     if (!isEditQuery()) return;
-    const reportUrl = publicShareUrl();
-    const previewUrl = previewShareUrl();
-    const shareHtml = buildShareHtml(reportUrl);
-    const embedHtml = buildEmbedHtml(reportUrl);
-    const copy = shareCopy();
-    if ($("shareTargetMeta")) $("shareTargetMeta").textContent = copy.meta;
+    const reportUrl = publicHomeUrl();
+    const embedSrc = publicEmbedUrl();
+    const shareHtml = buildShareHtml(reportUrl, homeShareCopy());
+    const embedHtml = buildEmbedHtml(embedSrc);
+    if ($("shareTargetMeta")) $("shareTargetMeta").textContent = homeShareCopy().meta;
     if ($("shareCode")) $("shareCode").textContent = shareHtml;
     if ($("embedCode")) $("embedCode").textContent = embedHtml;
     if ($("reportUrl")) {
@@ -260,8 +277,11 @@
       $("reportUrl").href = reportUrl;
     }
     const frame = $("embedPreview");
-    if (frame && frame.getAttribute("src") !== previewUrl) {
-      frame.src = previewUrl;
+    const previewSrc = /localhost|127\.0\.0\.1/i.test(window.location.hostname)
+      ? `${normalizeBase(pageBaseNoQuery())}?f=${encodeURIComponent(EMBED_TOKEN)}`
+      : embedSrc;
+    if (frame && frame.getAttribute("src") !== previewSrc) {
+      frame.src = previewSrc;
     }
   }
 
@@ -1197,13 +1217,21 @@
         setStatus("URL 복사에 실패했습니다.");
       }
     });
+    $("shareHomeEmbed")?.addEventListener("click", async () => {
+      try {
+        await copyText(buildEmbedHtml(publicEmbedUrl()));
+        setStatus("iframe HTML을 복사했습니다. 운영진이 wanju1109.github.io/ 를 허용해야 글 안에 보입니다.");
+      } catch (err) {
+        setStatus("복사에 실패했습니다.");
+      }
+    });
     $("evergreenJump")?.addEventListener("click", (e) => {
       e.preventDefault();
       $("community")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
     $("copyShare")?.addEventListener("click", async () => {
       try {
-        const text = $("shareCode")?.textContent || buildShareHtml(publicShareUrl());
+        const text = $("shareCode")?.textContent || buildShareHtml(publicHomeUrl(), homeShareCopy());
         await copyText(text);
         setStatus("에버그린용 프로필 링크 카드를 복사했습니다. HTML 모드에 붙여넣으세요.");
       } catch (err) {
@@ -1212,7 +1240,7 @@
     });
     $("copyUrl")?.addEventListener("click", async () => {
       try {
-        await copyText(publicShareUrl());
+        await copyText(publicHomeUrl());
         setStatus("프로필 URL을 복사했습니다. (작성자 키 없음)");
       } catch (err) {
         setStatus("URL 복사에 실패했습니다.");
@@ -1220,7 +1248,7 @@
     });
     $("copyEmbed")?.addEventListener("click", async () => {
       try {
-        const text = $("embedCode")?.textContent || buildEmbedHtml(publicShareUrl());
+        const text = $("embedCode")?.textContent || buildEmbedHtml(publicEmbedUrl());
         await copyText(text);
         setStatus("iframe HTML을 복사했습니다.");
       } catch (err) {

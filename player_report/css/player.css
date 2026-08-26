@@ -164,6 +164,21 @@ body:not(.edit-mode) .editor-only {
   display: none !important;
 }
 
+body.embed-mode .hero-copy,
+body.embed-mode .hero-nav,
+body.embed-mode .hero-credit,
+body.embed-mode #community {
+  display: none !important;
+}
+
+body.embed-mode .hero {
+  padding: 18px 20px;
+}
+
+body.embed-mode .brand {
+  font-size: 28px;
+}
+
 .panel.community {
   background: #0f2a1c;
   color: #f5fff8;
