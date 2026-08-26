@@ -1,5 +1,5 @@
 (() => {
-  const DATA_VER = "16";
+  const DATA_VER = "17";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
@@ -326,12 +326,14 @@
     return [cx + r * Math.cos(ang), cy + r * Math.sin(ang)];
   }
 
-  function radarSvg(seriesList, labels) {
+  function radarSvg(seriesList, labels, size) {
     const n = labels.length;
-    const size = 440;
-    const cx = 220;
-    const cy = 220;
-    const r = 148;
+    size = size || 440;
+    const cx = size / 2;
+    const cy = size / 2;
+    const r = size * 0.34;
+    const labOff = Math.max(30, size * 0.07);
+    const font = size >= 520 ? 14 : 13;
     if (!n) return "";
     const rings = [0.25, 0.5, 0.75, 1]
       .map((t) => {
@@ -345,8 +347,8 @@
     }).join("");
     const labs = labels
       .map((lab, i) => {
-        const [x, y] = polar(cx, cy, r + 32, i, n);
-        return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#4a5d54">${escapeHtml(lab)}</text>`;
+        const [x, y] = polar(cx, cy, r + labOff, i, n);
+        return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="${font}" fill="#4a5d54">${escapeHtml(lab)}</text>`;
       })
       .join("");
     const polys = seriesList
@@ -700,7 +702,8 @@
             dash: "7 5",
           },
         ],
-        view.radarLabels
+        view.radarLabels,
+        560
       ) +
       radarLegend([
         { color: SELF_COLOR, label: `${p.name} · 초록` },

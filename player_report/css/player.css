@@ -564,7 +564,7 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
 }
 
 .fm-radar svg { width: 100%; max-width: 440px; height: auto; display: block; margin: 0 auto; }
-.fm-radar.wide svg { max-width: 480px; }
+.fm-radar.wide svg { max-width: 560px; }
 .radar-legend {
   display: flex;
   flex-wrap: wrap;
