@@ -25,17 +25,17 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "강원 VS 포항 (156, 08/30)",
-    "hours_to_kickoff": 85.7,
+    "hours_to_kickoff": 81.1,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-27T05:15:05.220076+09:00",
+    "generated_at": "2026-08-27T09:53:48.661625+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 강원 vs 포항",
   "thesis": "강원 vs 포항. 강원 최근 L L D L D, 포항 최근 L L W L W. 홈 강원이(가) 템포를 가져가며 xG 1.4 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "강원 vs 포항. 강원 최근 L L D L D (0승 2무 3패 / 최근 5경기). 포항 최근 L L W L W (2승 0무 3패 / 최근 5경기).",
-    "최근 5경기 평균 — 강원 xG 1.4·슈팅 14.6, 포항 xG 0.89·슈팅 10.0. 패스 성공률 74.1% vs 83.0%.",
+    "최근 5경기 평균 — 강원 xG 1.4·슈팅 14.6, 포항 xG 0.89·슈팅 10.0. 패스 성공률 74.0% vs 83.0%.",
     "올 시즌 맞대결 2경기 — 강원 기준 0승 1무 1패.",
     "경기장 강릉하이원아레나 · 강원 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -86,7 +86,7 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 74.1,
+        "jeonbuk": 74.0,
         "opponent": 83.0,
         "suffix": "%",
         "better": "opponent"
@@ -200,7 +200,7 @@
         "goals_for": 2,
         "goals_against": 2,
         "stats_limited": false,
-        "pass_pct": 78.8,
+        "pass_pct": 78.4,
         "final_third_pct": 38.3,
         "presses": 33,
         "stats_source": "portal"
@@ -340,7 +340,7 @@
       "avg_xga": 1.84,
       "avg_shots": 14.6,
       "avg_sot": 5.6,
-      "avg_pass_pct": 74.1,
+      "avg_pass_pct": 74.0,
       "avg_final_third_pct": 28.3,
       "avg_presses": 24.0,
       "avg_x": 49.0,
