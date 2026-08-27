@@ -1,0 +1,54 @@
+name: proto results update
+
+on:
+  schedule:
+    # Every 6 hours UTC — pick up finished K League scores.
+    - cron: "40 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Season year (blank = current)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: proto-results-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply official scores to proto league.json
+        env:
+          KLEAGUE_YEAR: ${{ github.event.inputs.year }}
+        run: |
+          set -e
+          if [ -z "$KLEAGUE_YEAR" ]; then
+            export KLEAGUE_YEAR="$(date +%Y)"
+          fi
+          python proto/scripts/update_results.py
+
+      - name: Commit proto data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add proto/data/league.json || true
+          if git diff --staged --quiet; then
+            echo "No proto result changes"
+            exit 0
+          fi
+          git commit -m "chore(proto): apply finished K League scores"
+          git push
