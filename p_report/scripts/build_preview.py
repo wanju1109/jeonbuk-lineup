@@ -385,6 +385,19 @@ def form_row_from_schedule(row: dict, team: str, idx: dict[str, dict]) -> dict:
     }
 
 
+def schedule_already_played(row: dict) -> bool:
+    """Treat a fixture as played even if schedule.json still has end_yn=N.
+
+    Jeonbuk-only collects often leave other-team results marked unfinished.
+    """
+    if str(row.get("end_yn") or "N").upper() == "Y":
+        return True
+    kickoff = parse_md_kickoff(str(row.get("year") or YEAR), str(row.get("date_md") or ""))
+    if not kickoff:
+        return False
+    return now_kst() - kickoff >= timedelta(hours=2)
+
+
 def recent_form_merged(
     catalog: dict[str, dict],
     schedule_matches: list[dict],
@@ -397,7 +410,7 @@ def recent_form_merged(
     for r in recent_form_catalog(catalog, team, 999):
         by_gid[str(r["game_id"])] = r
     for row in schedule_matches:
-        if row.get("end_yn") != "Y":
+        if not schedule_already_played(row):
             continue
         home, away = row.get("home") or "", row.get("away") or ""
         if team not in home and team not in away:
@@ -434,7 +447,7 @@ def fetch_scores_for_form(
             MAIN_FRAME,
             PortalClient,
             extract_js_array,
-            parse_score_from_goals,
+            resolve_match_score,
         )
     except Exception as exc:
         print(f"[WARN] form portal fetch unavailable: {exc}")
@@ -475,12 +488,13 @@ def fetch_scores_for_form(
                 continue
             home = r.get("home") or sched.get("home") or ""
             away = r.get("away") or sched.get("away") or ""
-            hs, aws = parse_score_from_goals(events, home_id, away_id)
+            hs, aws, score_source = resolve_match_score(html, events, str(home_id), str(away_id))
             score = f"{hs}:{aws}"
             r["score"] = score
             r["result"] = result_for(team, home, away, score)
             r["goals_for"] = hs if team in home else aws
             r["goals_against"] = aws if team in home else hs
+            r["score_source"] = score_source
 
             tid = home_id if team in home else away_id
             oid = away_id if team in home else home_id

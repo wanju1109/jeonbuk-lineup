@@ -25,28 +25,27 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "인천 VS 전북 (154, 08/30)",
-    "hours_to_kickoff": 96.0,
-    "within_48h": false,
-    "published": false,
-    "generated_at": "2026-08-26T19:02:08.899220+09:00",
-    "preview_hours": 48.0
+    "hours_to_kickoff": 77.9,
+    "within_48h": true,
+    "published": true,
+    "generated_at": "2026-08-27T13:07:30.166073+09:00",
+    "preview_hours": 96.0
   },
   "headline": "26R PREVIEW · 인천 vs 전북",
-  "thesis": "인천 vs 전북. 전북 최근 D L L W D, 인천 최근 W W D D W. 원정에서 기회 질(xG)과 슈팅 빈도를 유지하는 것이 이 경기의 핵심입니다.",
+  "thesis": "인천 vs 전북. 전북 최근 D L L W D, 인천 최근 W D D W L. 원정에서 기회 질(xG)과 슈팅 빈도를 유지하는 것이 이 경기의 핵심입니다.",
   "briefing": [
-    "인천 vs 전북. 전북 최근 D L L W D (1승 2무 2패 / 최근 5경기, 4득 6실). 인천은 W W D D W (3승 2무 0패 / 최근 5경기, 9득 5실).",
-    "최근 5경기 평균 — 전북 xG 1.55·슈팅 17.4·유효슈팅 6.0, 인천 xG 1.64·슈팅 13.0·유효슈팅 4.2. 패스 성공률 76.8% vs 78.0%.",
+    "인천 vs 전북. 전북 최근 D L L W D (1승 2무 2패 / 최근 5경기, 4득 6실). 인천은 W D D W L (2승 2무 1패 / 최근 5경기, 8득 6실).",
+    "최근 5경기 평균 — 전북 xG 1.55·슈팅 17.4·유효슈팅 6.0, 인천 xG 1.16·슈팅 11.0·유효슈팅 3.4. 패스 성공률 76.8% vs 78.2%.",
     "올 시즌 맞대결 2경기 — 전북 0승 0무 2패.",
     "경기장 인천 전용 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다."
   ],
   "scout": {
-    "contrast": "전북은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 인천은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.55 vs 1.64, 슈팅 17.4 vs 13.0, 파이널 서드 터치 26.9% vs 27.4%, 평균 터치 높이 48.9 vs 48.9입니다.",
+    "contrast": "전북은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 인천은(는) 적극 압박 그림입니다. 최근 xG 1.55 vs 1.16, 슈팅 17.4 vs 11.0, 파이널 서드 터치 26.9% vs 26.3%, 평균 터치 높이 48.9 vs 48.4입니다.",
     "edge": [
-      "중원 볼 경합과 측면 숫자에서 앞서면 전북 페이스로 가져올 수 있습니다."
+      "전북이 최근 기회 질(xG 1.55)에서 인천(1.16)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다."
     ],
     "risk": [
-      "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다.",
-      "인천이(가) 상승세입니다. 한 방에 무너지지 않게 세트피스·역습 첫 패스를 막아야 합니다."
+      "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다."
     ],
     "target": [
       "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
@@ -63,40 +62,40 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.55,
-        "opponent": 1.64,
-        "better": "opponent"
+        "opponent": 1.16,
+        "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 0.96,
-        "opponent": 1.0,
+        "opponent": 1.12,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
         "jeonbuk": 17.4,
-        "opponent": 13.0,
+        "opponent": 11.0,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 6.0,
-        "opponent": 4.2,
+        "opponent": 3.4,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 76.8,
-        "opponent": 78.0,
+        "opponent": 78.2,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 26.9,
-        "opponent": 27.4,
+        "opponent": 26.3,
         "suffix": "%",
-        "better": "opponent"
+        "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
@@ -105,7 +104,7 @@
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 전북 xG 1.55 / xGA 0.96, 인천 xG 1.64 / xGA 1.0."
+    "summary": "최근 5경기 기준 — 전북 xG 1.55 / xGA 0.96, 인천 xG 1.16 / xGA 1.12."
   },
   "h2h_summary": {
     "wins": 0,
@@ -203,23 +202,6 @@
     ],
     "opponent": [
       {
-        "game_id": "110",
-        "round": 19,
-        "date": "2026-07-21",
-        "home": "울산",
-        "away": "인천",
-        "score": "1:2",
-        "result": "W",
-        "opponent": "울산",
-        "ha": "A",
-        "xg": 3.52,
-        "xga": 0.64,
-        "shots": 21,
-        "sot": 6,
-        "goals_for": 2,
-        "goals_against": 1
-      },
-      {
         "game_id": "119",
         "round": 20,
         "date": "2026-07-26",
@@ -286,6 +268,29 @@
         "sot": 1,
         "goals_for": 1,
         "goals_against": 0
+      },
+      {
+        "game_id": "148",
+        "round": 25,
+        "date": "2026-08-26",
+        "home": "안양",
+        "away": "인천",
+        "score": "2:1",
+        "result": "L",
+        "opponent": "안양",
+        "ha": "A",
+        "xg": 1.09,
+        "xga": 1.26,
+        "shots": 11,
+        "sot": 2,
+        "goals_for": 1,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 77.5,
+        "final_third_pct": 29.9,
+        "presses": 29,
+        "stats_source": "portal"
       }
     ]
   },
@@ -339,23 +344,20 @@
       "name": "인천",
       "team_id": "K18",
       "tags": [
-        "상승세",
-        "기회 창출↑",
-        "슈팅 많음",
         "적극 압박"
       ],
-      "record": "3승 2무 0패 / 최근 5경기",
-      "goals_for": 9,
-      "goals_against": 5,
-      "goal_diff": 4,
-      "avg_xg": 1.64,
-      "avg_xga": 1.0,
-      "avg_shots": 13.0,
-      "avg_sot": 4.2,
-      "avg_pass_pct": 78.0,
-      "avg_final_third_pct": 27.4,
+      "record": "2승 2무 1패 / 최근 5경기",
+      "goals_for": 8,
+      "goals_against": 6,
+      "goal_diff": 2,
+      "avg_xg": 1.16,
+      "avg_xga": 1.12,
+      "avg_shots": 11.0,
+      "avg_sot": 3.4,
+      "avg_pass_pct": 78.2,
+      "avg_final_third_pct": 26.3,
       "avg_presses": 20.0,
-      "avg_x": 48.9,
+      "avg_x": 48.4,
       "samples": 5
     }
   },
@@ -364,15 +366,14 @@
       "key": "edge",
       "label": "전북이 유리한 점",
       "items": [
-        "중원 볼 경합과 측면 숫자에서 앞서면 전북 페이스로 가져올 수 있습니다."
+        "전북이 최근 기회 질(xG 1.55)에서 인천(1.16)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다."
       ]
     },
     {
       "key": "risk",
       "label": "전북이 불리한·조심할 점",
       "items": [
-        "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다.",
-        "인천이(가) 상승세입니다. 한 방에 무너지지 않게 세트피스·역습 첫 패스를 막아야 합니다."
+        "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다."
       ]
     },
     {

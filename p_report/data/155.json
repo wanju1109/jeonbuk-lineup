@@ -25,27 +25,28 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "제주 VS 대전 (155, 08/30)",
-    "hours_to_kickoff": 96.0,
-    "within_48h": false,
-    "published": false,
-    "generated_at": "2026-08-26T19:02:22.084222+09:00",
-    "preview_hours": 48.0
+    "hours_to_kickoff": 77.9,
+    "within_48h": true,
+    "published": true,
+    "generated_at": "2026-08-27T13:07:45.300435+09:00",
+    "preview_hours": 96.0
   },
   "headline": "26R PREVIEW · 제주 vs 대전",
-  "thesis": "제주 vs 대전. 제주 최근 D W W D L, 대전 최근 L W D L W. 홈 제주이(가) 템포를 가져가며 xG 1.3 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "제주 vs 대전. 제주 최근 D W W D L, 대전 최근 W D L W W. 홈 제주이(가) 템포를 가져가며 xG 1.3 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "제주 vs 대전. 제주 최근 D W W D L (2승 2무 1패 / 최근 5경기). 대전 최근 L W D L W (2승 1무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 제주 xG 1.3·슈팅 12.0, 대전 xG 1.91·슈팅 14.0. 패스 성공률 71.2% vs 74.9%.",
+    "제주 vs 대전. 제주 최근 D W W D L (2승 2무 1패 / 최근 5경기). 대전 최근 W D L W W (3승 1무 1패 / 최근 5경기).",
+    "최근 5경기 평균 — 제주 xG 1.3·슈팅 12.0, 대전 xG 1.83·슈팅 14.4. 패스 성공률 71.2% vs 76.8%.",
     "올 시즌 맞대결 2경기 — 제주 기준 1승 1무 0패.",
     "경기장 제주 월드컵 · 제주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "제주은 슈팅 많음, 수비 기회 허용, 적극 압박 흐름이고, 대전은(는) 기회 창출↑, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 1.3 vs 1.91, 슈팅 12.0 vs 14.0, 파이널 서드 터치 23.7% vs 28.9%입니다.",
+    "contrast": "제주은 슈팅 많음, 수비 기회 허용, 적극 압박 흐름이고, 대전은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.3 vs 1.83, 슈팅 12.0 vs 14.4, 파이널 서드 터치 23.7% vs 29.7%입니다.",
     "edge": [
       "홈 이점(제주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
-      "대전의 xG 1.91가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다."
+      "대전의 xG 1.83가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다.",
+      "대전이(가) 상승세입니다. 한 번의 역습·세트피스에 흔들릴 수 있습니다."
     ],
     "target": [
       "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
@@ -62,49 +63,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.3,
-        "opponent": 1.91,
+        "opponent": 1.83,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.39,
-        "opponent": 1.39,
-        "better": "even"
+        "opponent": 1.16,
+        "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 12.0,
-        "opponent": 14.0,
+        "opponent": 14.4,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.4,
-        "opponent": 6.0,
+        "opponent": 6.6,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 71.2,
-        "opponent": 74.9,
+        "opponent": 76.8,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 23.7,
-        "opponent": 28.9,
+        "opponent": 29.7,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 20.6,
-        "opponent": 27.8,
+        "opponent": 27.2,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 제주 xG 1.3 / xGA 1.39, 대전 xG 1.91 / xGA 1.39."
+    "summary": "최근 5경기 기준 — 제주 xG 1.3 / xGA 1.39, 대전 xG 1.83 / xGA 1.16."
   },
   "h2h_summary": {
     "wins": 1,
@@ -199,6 +200,7 @@
         "goals_for": 1,
         "goals_against": 2,
         "stats_limited": false,
+        "score_source": "official",
         "pass_pct": 78.1,
         "final_third_pct": 24.6,
         "presses": 26,
@@ -206,23 +208,6 @@
       }
     ],
     "opponent": [
-      {
-        "game_id": "116",
-        "round": 20,
-        "date": "2026-07-25",
-        "home": "김천",
-        "away": "대전",
-        "score": "3:2",
-        "result": "L",
-        "opponent": "김천",
-        "ha": "A",
-        "xg": 2.26,
-        "xga": 1.66,
-        "shots": 13,
-        "sot": 4,
-        "goals_for": 2,
-        "goals_against": 3
-      },
       {
         "game_id": "125",
         "round": 21,
@@ -290,6 +275,29 @@
         "sot": 4,
         "goals_for": 3,
         "goals_against": 0
+      },
+      {
+        "game_id": "149",
+        "round": 25,
+        "date": "2026-08-26",
+        "home": "대전",
+        "away": "울산",
+        "score": "2:1",
+        "result": "W",
+        "opponent": "울산",
+        "ha": "H",
+        "xg": 1.88,
+        "xga": 0.51,
+        "shots": 15,
+        "sot": 7,
+        "goals_for": 2,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 79.4,
+        "final_third_pct": 34.3,
+        "presses": 36,
+        "stats_source": "portal"
       }
     ]
   },
@@ -342,24 +350,24 @@
       "name": "대전",
       "team_id": "K10",
       "tags": [
+        "상승세",
         "기회 창출↑",
         "슈팅 많음",
-        "수비 기회 허용",
         "전진 점유",
         "적극 압박"
       ],
-      "record": "2승 1무 2패 / 최근 5경기",
+      "record": "3승 1무 1패 / 최근 5경기",
       "goals_for": 9,
-      "goals_against": 8,
-      "goal_diff": 1,
-      "avg_xg": 1.91,
-      "avg_xga": 1.39,
-      "avg_shots": 14.0,
-      "avg_sot": 6.0,
-      "avg_pass_pct": 74.9,
-      "avg_final_third_pct": 28.9,
-      "avg_presses": 27.8,
-      "avg_x": 51.1,
+      "goals_against": 6,
+      "goal_diff": 3,
+      "avg_xg": 1.83,
+      "avg_xga": 1.16,
+      "avg_shots": 14.4,
+      "avg_sot": 6.6,
+      "avg_pass_pct": 76.8,
+      "avg_final_third_pct": 29.7,
+      "avg_presses": 27.2,
+      "avg_x": 50.8,
       "samples": 5
     }
   },
@@ -375,7 +383,8 @@
       "key": "risk",
       "label": "제주이 불리한·조심할 점",
       "items": [
-        "대전의 xG 1.91가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다."
+        "대전의 xG 1.83가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다.",
+        "대전이(가) 상승세입니다. 한 번의 역습·세트피스에 흔들릴 수 있습니다."
       ]
     },
     {
