@@ -26,7 +26,7 @@ MEETS = (
     ("K2", os.environ.get("KLEAGUE_MEET_K2") or "2"),
 )
 
-MARKETS = ("wdl", "h_p1", "h_p2", "h_m1", "h_m2", "ou25", "ou35")
+MARKETS = ("wdl", "ou25")
 
 # Longest aliases first so 수원삼성 / 서울이랜드 win over 수원 / 서울.
 ALIASES = (
@@ -106,24 +106,10 @@ def actuals(home: int, away: int) -> dict[str, str]:
         wdl = "패"
     else:
         wdl = "무"
-
-    def hd(line: int) -> str:
-        adj = home + line
-        if adj > away:
-            return "승"
-        if adj < away:
-            return "패"
-        return "무"
-
     total = home + away
     return {
         "wdl": wdl,
-        "h_p1": hd(1),
-        "h_p2": hd(2),
-        "h_m1": hd(-1),
-        "h_m2": hd(-2),
         "ou25": "오버" if total > 2.5 else "언더",
-        "ou35": "오버" if total > 3.5 else "언더",
     }
 
 
@@ -155,7 +141,6 @@ def rebuild_summary(matches: list[dict]) -> dict:
             if rnd not in by_round:
                 by_round[rnd] = {
                     "wdl_rate": 0.0,
-                    "handicap_rate": 0.0,
                     "ou_rate": 0.0,
                     "rates": {k: 0.0 for k in MARKETS},
                     "raw": {k: [0, 0] for k in MARKETS},
@@ -175,7 +160,6 @@ def rebuild_summary(matches: list[dict]) -> dict:
                 rates[key] = pct(h, t)
             block["rates"] = rates
             block["wdl_rate"] = rates["wdl"]
-            block["handicap_rate"] = rates["h_p1"]
             block["ou_rate"] = rates["ou25"]
         hits = {}
         for key in MARKETS:
@@ -185,9 +169,6 @@ def rebuild_summary(matches: list[dict]) -> dict:
             "wdl_hit": hits["wdl"]["hit"],
             "wdl_total": hits["wdl"]["total"],
             "wdl_rate": hits["wdl"]["rate"],
-            "handicap_hit": hits["h_p1"]["hit"],
-            "handicap_total": hits["h_p1"]["total"],
-            "handicap_rate": hits["h_p1"]["rate"],
             "ou_hit": hits["ou25"]["hit"],
             "ou_total": hits["ou25"]["total"],
             "ou_rate": hits["ou25"]["rate"],
@@ -196,6 +177,93 @@ def rebuild_summary(matches: list[dict]) -> dict:
             "by_round": dict(sorted(by_round.items(), key=lambda kv: int(kv[0]))),
         }
     return summary
+
+
+def keep_keys(src: dict | None, keys: tuple[str, ...]) -> dict | None:
+    if not isinstance(src, dict):
+        return src
+    out: dict = {}
+    for k in keys:
+        if k in src:
+            out[k] = src[k]
+    return out
+
+
+def slim_reason(match: dict) -> dict | None:
+    reason = match.get("reason")
+    if not isinstance(reason, dict):
+        return reason
+    picks = match.get("picks") or {}
+    wdl = (picks.get("wdl") or {}).get("pick") if isinstance(picks.get("wdl"), dict) else None
+    ou = (picks.get("ou25") or {}).get("pick") if isinstance(picks.get("ou25"), dict) else None
+    old = str(reason.get("headline") or "")
+    conf = ""
+    found = re.search(r"\(신뢰 [^)]+\)", old)
+    if found:
+        conf = " " + found.group(0)
+    headline = f"승무패 {wdl or '-'} · U/O 2.5 {ou or '-'}{conf}"
+    paras = []
+    for p in reason.get("paragraphs") or []:
+        s = str(p)
+        if s.startswith("핸디캡 홈"):
+            continue
+        if s.startswith("언더오버 3.5"):
+            continue
+        s = s.replace(
+            "핸디캡·언더오버는 포아송 스코어 행렬을 그대로 쓴다.",
+            "U/O 2.5는 포아송 스코어 행렬을 그대로 쓴다.",
+        )
+        s = s.replace(
+            "칸에 보이는 %는 핸디·언더와 같은 포아송 스코어 행렬이다. 그래서 홈 +1/+2 승 확률은 일반 승 확률보다 작을 수 없다. ",
+            "칸에 보이는 %는 포아송 스코어 행렬이다. ",
+        )
+        paras.append(s)
+    return {"headline": headline, "paragraphs": paras}
+
+
+def slim_match(match: dict) -> None:
+    picks = match.get("picks")
+    if isinstance(picks, dict):
+        match["picks"] = keep_keys(picks, MARKETS) or {}
+    score = match.get("score")
+    if match.get("finished") and isinstance(score, list) and len(score) >= 2:
+        try:
+            hs = int(score[0])
+            aws = int(score[1])
+        except (TypeError, ValueError):
+            hs = None
+            aws = None
+        if hs is not None and aws is not None:
+            act = actuals(hs, aws)
+            match["actual"] = act
+            match["hit"] = hits_for(match, act)
+        elif isinstance(match.get("actual"), dict):
+            match["actual"] = keep_keys(match.get("actual"), MARKETS)
+            if isinstance(match.get("hit"), dict):
+                match["hit"] = keep_keys(match.get("hit"), MARKETS)
+    elif isinstance(match.get("actual"), dict):
+        match["actual"] = keep_keys(match.get("actual"), MARKETS)
+        if isinstance(match.get("hit"), dict):
+            match["hit"] = keep_keys(match.get("hit"), MARKETS)
+    reason = slim_reason(match)
+    if reason is not None:
+        match["reason"] = reason
+
+
+def slim_league_data(data: dict) -> None:
+    method = data.get("method")
+    if isinstance(method, dict):
+        method["markets"] = ["승무패", "언더오버 2.5"]
+        method["model"] = (
+            "WDL=walk-forward best of 10000 on 2024-2026 "
+            "(GD+PPG+form+H2H/nemesis); U/O 2.5=Poisson"
+        )
+        notes = str(method.get("notes") or "")
+        method["notes"] = notes.replace("핸디캡·언더오버는 포아송", "U/O 2.5는 포아송")
+    for match in data.get("matches") or []:
+        if isinstance(match, dict):
+            slim_match(match)
+    data["summary"] = rebuild_summary(data.get("matches") or [])
 
 
 def current_rounds(matches: list[dict]) -> dict[str, int]:
@@ -308,6 +376,18 @@ def apply_scores(data: dict, scores: dict) -> int:
 
 def main() -> int:
     data = load_league()
+    slim_only = os.environ.get("SLIM_ONLY", "").lower() in ("1", "true", "yes")
+    if slim_only:
+        slim_league_data(data)
+        data["generated_at"] = now_kst().strftime("%Y-%m-%d %H:%M:%S")
+        try:
+            save_league(data)
+        except OSError as exc:
+            print(f"[ERR] write failed: {exc}")
+            return 1
+        print(f"[DONE] slim-only current_round={data.get('current_round')} path={PROTO_DATA}")
+        return 0
+
     pending = [m for m in data.get("matches") or [] if not m.get("finished")]
     print(f"[INFO] league.json pending={len(pending)}")
     if not pending:
@@ -385,6 +465,7 @@ def main() -> int:
         print("[PENDING] " + line)
     data["summary"] = rebuild_summary(data.get("matches") or [])
     data["current_round"] = current_rounds(data.get("matches") or [])
+    slim_league_data(data)
     data["generated_at"] = now_kst().strftime("%Y-%m-%d %H:%M:%S")
     try:
         save_league(data)
