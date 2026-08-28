@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Fill finished scores into proto/data/league.json and recompute hit rates.
+"""Fill proto/data/league.json with K League fixtures and official scores.
 
-Picks stay as generated. This script only applies official K League scores
-to unfinished fixtures and rebuilds summary / current_round.
+Existing 1–26 picks stay as generated. New rounds (27–33 now, 34–38 finals
+and promotion playoffs when the portal publishes them) get Poisson WDL + U/O 2.5
+from kickoff-prior results only.
 """
 
 from __future__ import annotations
 
 import json
+import math
 import os
 import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
+from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -25,6 +28,13 @@ MEETS = (
     ("K1", os.environ.get("KLEAGUE_MEET_K1") or "1"),
     ("K2", os.environ.get("KLEAGUE_MEET_K2") or "2"),
 )
+EXTRA_MEET_SEQS = tuple(
+    s.strip()
+    for s in (os.environ.get("KLEAGUE_EXTRA_MEETS") or "3,4,5").split(",")
+    if s.strip()
+)
+PO_ROUND_BASE = 39
+GOAL_CAP = 8
 
 MARKETS = ("wdl", "ou25")
 
@@ -267,27 +277,32 @@ def slim_league_data(data: dict) -> None:
 
 
 def current_rounds(matches: list[dict]) -> dict[str, int]:
+    today = now_kst().strftime("%Y-%m-%d")
     out: dict[str, int] = {}
     for lg in ("K1", "K2"):
-        by_r: dict[int, list[dict]] = {}
-        for m in matches:
-            if m.get("league") != lg:
-                continue
+        rows = [m for m in matches if m.get("league") == lg]
+        if not rows:
+            out[lg] = 1
+            continue
+        upcoming: list[tuple[str, int]] = []
+        max_rnd = 1
+        for m in rows:
             try:
                 rnd = int(m.get("round"))
             except (TypeError, ValueError):
                 continue
-            by_r.setdefault(rnd, []).append(m)
-        if not by_r:
-            out[lg] = 1
+            max_rnd = max(max_rnd, rnd)
+            if m.get("finished"):
+                continue
+            d = str(m.get("date") or "9999-99-99")
+            upcoming.append((d, rnd))
+        future = [x for x in upcoming if x[0] >= today]
+        pool = future or upcoming
+        if not pool:
+            out[lg] = max_rnd
             continue
-        chosen = max(by_r)
-        for rnd in sorted(by_r):
-            rows = by_r[rnd]
-            if not all(r.get("finished") for r in rows):
-                chosen = rnd
-                break
-        out[lg] = chosen
+        pool.sort(key=lambda x: (x[0], x[1]))
+        out[lg] = pool[0][1]
     return out
 
 
@@ -311,13 +326,14 @@ def import_portal():
     try:
         from collect_chalkboard import (  # noqa: WPS433
             MAIN_FRAME,
+            ROUND_LIST,
             PortalClient,
             fetch_matches,
             parse_official_score,
         )
     except ImportError as exc:
         raise RuntimeError(f"cannot import portal helpers: {exc}") from exc
-    return PortalClient, fetch_matches, parse_official_score, MAIN_FRAME
+    return PortalClient, fetch_matches, parse_official_score, MAIN_FRAME, ROUND_LIST
 
 
 def fetch_official(
@@ -344,6 +360,360 @@ def fetch_official(
         print(f"[WARN] score fetch failed game={game_id}: {exc}")
         return None
     return parse_official_score(html)
+
+
+def fetch_rounds_labeled(client, round_list_url: str, meet_seq: str) -> list[tuple[str, str]]:
+    try:
+        text = client.request(
+            round_list_url,
+            data={"meetYear": YEAR, "meetSeq": meet_seq},
+        )
+        payload = json.loads(text)
+    except Exception as exc:
+        print(f"[WARN] meet={meet_seq} round list failed: {exc}")
+        return []
+    tag = payload.get("optionTag") or ""
+    out: list[tuple[str, str]] = []
+    for m in re.finditer(r'<option\s+value="(\d+)"[^>]*>(.*?)</option>', tag, flags=re.I | re.S):
+        rid = m.group(1)
+        label = unescape(re.sub(r"<[^>]+>", " ", m.group(2)))
+        label = re.sub(r"\s+", " ", label).strip()
+        out.append((rid, label))
+    return out
+
+
+def meet_kind(meet_seq: str, labels: list[tuple[str, str]]) -> tuple[str, str] | None:
+    blob = " ".join(lab for _, lab in labels)
+    if any(k in blob for k in ("컵", "CUP", "Cup")):
+        return None
+    if meet_seq == "1":
+        return ("K1", "league")
+    if meet_seq == "2":
+        return ("K2", "league")
+    if any(k in blob for k in ("승강", "플레이오프", "P.O", "PO")):
+        return ("K1", "playoff")
+    if any(k in blob for k in ("파이널", "파이날")):
+        return ("K1", "final")
+    return None
+
+
+def mapped_round(kind: str, portal_round: int) -> int:
+    if kind == "playoff":
+        return PO_ROUND_BASE + max(portal_round, 1) - 1
+    return portal_round
+
+
+def iso_date(date_md: str) -> str:
+    md = str(date_md or "").replace(".", "/").strip()
+    parts = md.split("/")
+    if len(parts) != 2:
+        return ""
+    try:
+        month = int(parts[0])
+        day = int(parts[1])
+    except ValueError:
+        return ""
+    if month < 1 or month > 12 or day < 1 or day > 31:
+        return ""
+    return f"{YEAR}-{month:02d}-{day:02d}"
+
+
+def display_book(matches: list[dict]) -> dict[str, str]:
+    book: dict[str, str] = {}
+    for m in matches:
+        for side in ("home", "away"):
+            name = str(m.get(side) or "")
+            key = key_team(name)
+            if key and key not in book:
+                book[key] = name
+    return book
+
+
+def canon_name(book: dict[str, str], raw: str) -> str:
+    key = key_team(raw)
+    return book.get(key) or str(raw or "").strip()
+
+
+def match_fingerprint(league: str, home: str, away: str, rnd: int) -> tuple:
+    return (league, key_team(home), key_team(away), int(rnd))
+
+
+def poisson_pmf(lmb: float, k: int) -> float:
+    if lmb <= 0:
+        return 1.0 if k == 0 else 0.0
+    return math.exp(-lmb) * (lmb ** k) / math.factorial(k)
+
+
+def team_record(rows: list[dict], team: str) -> dict:
+    key = key_team(team)
+    w = d = l = 0
+    gf = ga = 0.0
+    form: list[str] = []
+    for m in rows:
+        score = m.get("score")
+        if not isinstance(score, list) or len(score) < 2:
+            continue
+        try:
+            hs, aws = int(score[0]), int(score[1])
+        except (TypeError, ValueError):
+            continue
+        home_key = key_team(m.get("home") or "")
+        away_key = key_team(m.get("away") or "")
+        if home_key == key:
+            gf += hs
+            ga += aws
+            if hs > aws:
+                res = "W"
+                w += 1
+            elif hs < aws:
+                res = "L"
+                l += 1
+            else:
+                res = "D"
+                d += 1
+        elif away_key == key:
+            gf += aws
+            ga += hs
+            if aws > hs:
+                res = "W"
+                w += 1
+            elif aws < hs:
+                res = "L"
+                l += 1
+            else:
+                res = "D"
+                d += 1
+        else:
+            continue
+        form.append(res)
+    games = w + d + l
+    return {
+        "form": "".join(form[-5:]) if form else "-",
+        "record": f"{w}-{d}-{l}",
+        "pts": w * 3 + d,
+        "gf": gf,
+        "ga": ga,
+        "games": games,
+    }
+
+
+def prior_finished(matches: list[dict], league: str, before: str) -> list[dict]:
+    out = []
+    for m in matches:
+        if m.get("league") != league or not m.get("finished"):
+            continue
+        d = str(m.get("date") or "")
+        if not d:
+            continue
+        if before and d >= before:
+            continue
+        out.append(m)
+    return out
+
+
+def poisson_preview(matches: list[dict], league: str, home: str, away: str, date: str) -> dict:
+    prior = prior_finished(matches, league, date)
+    home_rec = team_record(prior, home)
+    away_rec = team_record(prior, away)
+    home_gf = []
+    home_ga = []
+    away_gf = []
+    away_ga = []
+    for m in prior:
+        score = m.get("score")
+        if not isinstance(score, list) or len(score) < 2:
+            continue
+        try:
+            hs, aws = int(score[0]), int(score[1])
+        except (TypeError, ValueError):
+            continue
+        home_gf.append(hs)
+        home_ga.append(aws)
+        away_gf.append(aws)
+        away_ga.append(hs)
+    avg_hg = sum(home_gf) / len(home_gf) if home_gf else 1.2
+    avg_ag = sum(away_gf) / len(away_gf) if away_gf else 1.0
+
+    def split_avg(team: str, ha: str) -> tuple[float, float]:
+        gf_list = []
+        ga_list = []
+        key = key_team(team)
+        for m in prior:
+            score = m.get("score")
+            if not isinstance(score, list) or len(score) < 2:
+                continue
+            try:
+                hs, aws = int(score[0]), int(score[1])
+            except (TypeError, ValueError):
+                continue
+            if ha == "H" and key_team(m.get("home") or "") == key:
+                gf_list.append(hs)
+                ga_list.append(aws)
+            elif ha == "A" and key_team(m.get("away") or "") == key:
+                gf_list.append(aws)
+                ga_list.append(hs)
+        if not gf_list:
+            return avg_hg if ha == "H" else avg_ag, avg_ag if ha == "H" else avg_hg
+        return sum(gf_list) / len(gf_list), sum(ga_list) / len(ga_list)
+
+    h_att, h_def = split_avg(home, "H")
+    a_att, a_def = split_avg(away, "A")
+    xh = max(0.25, min(4.0, (h_att * a_def / max(avg_ag, 0.4) + avg_hg) / 2.0))
+    xa = max(0.25, min(4.0, (a_att * h_def / max(avg_hg, 0.4) + avg_ag) / 2.0))
+
+    p_home = p_draw = p_away = 0.0
+    p_under = 0.0
+    for i in range(GOAL_CAP + 1):
+        pi = poisson_pmf(xh, i)
+        for j in range(GOAL_CAP + 1):
+            pj = poisson_pmf(xa, j)
+            p = pi * pj
+            if i > j:
+                p_home += p
+            elif i == j:
+                p_draw += p
+            else:
+                p_away += p
+            if i + j <= 2:
+                p_under += p
+    tot = p_home + p_draw + p_away
+    if tot <= 0:
+        tot = 1.0
+    p_home /= tot
+    p_draw /= tot
+    p_away /= tot
+    p_over = max(0.0, 1.0 - p_under)
+    wdl_pick = "승"
+    wdl_p = p_home
+    if p_draw >= wdl_p:
+        wdl_pick, wdl_p = "무", p_draw
+    if p_away >= wdl_p:
+        wdl_pick, wdl_p = "패", p_away
+    ou_pick = "언더" if p_under >= p_over else "오버"
+    ou_p = p_under if ou_pick == "언더" else p_over
+    return {
+        "xg": {"home": round(xh, 3), "away": round(xa, 3)},
+        "form": {
+            "home": home_rec["form"],
+            "away": away_rec["form"],
+            "home_record": home_rec["record"],
+            "away_record": away_rec["record"],
+            "home_pts": home_rec["pts"],
+            "away_pts": away_rec["pts"],
+            "home_gf": home_rec["gf"],
+            "home_ga": home_rec["ga"],
+            "away_gf": away_rec["gf"],
+            "away_ga": away_rec["ga"],
+        },
+        "picks": {
+            "wdl": {
+                "pick": wdl_pick,
+                "prob": round(wdl_p, 4),
+                "dist": {
+                    "승": round(p_home, 4),
+                    "무": round(p_draw, 4),
+                    "패": round(p_away, 4),
+                },
+                "line": None,
+            },
+            "ou25": {
+                "pick": ou_pick,
+                "prob": round(ou_p, 4),
+                "dist": {
+                    "언더": round(p_under, 4),
+                    "오버": round(p_over, 4),
+                },
+                "line": "U/O 2.5",
+            },
+        },
+    }
+
+
+def build_new_match(
+    league: str,
+    rnd: int,
+    home: str,
+    away: str,
+    date: str,
+    date_md: str,
+    kind: str,
+    existing: list[dict],
+) -> dict:
+    prev = poisson_preview(existing, league, home, away, date)
+    wdl = prev["picks"]["wdl"]["pick"]
+    ou = prev["picks"]["ou25"]["pick"]
+    stage = "승강 플레이오프" if kind == "playoff" else ("파이널 라운드" if rnd >= 34 else "정규 라운드")
+    xh = prev["xg"]["home"]
+    xa = prev["xg"]["away"]
+    dist = prev["picks"]["wdl"]["dist"]
+    oud = prev["picks"]["ou25"]["dist"]
+    mid = f"{league}-{rnd}-{home}-{away}-{date or 'tbd'}"
+    return {
+        "id": mid,
+        "league": league,
+        "round": rnd,
+        "date": date,
+        "time": "",
+        "home": home,
+        "away": away,
+        "venue": "",
+        "finished": False,
+        "score": None,
+        "form": prev["form"],
+        "picks": prev["picks"],
+        "actual": None,
+        "hit": None,
+        "reason": {
+            "headline": f"승무패 {wdl} · U/O 2.5 {ou} (신뢰 보통)",
+            "paragraphs": [
+                f"킥오프 직전 {league} 종료 경기만 사용한다. {stage}.",
+                f"홈 {home} 최근 폼 {prev['form']['home']} ({prev['form']['home_record']}, 승점 {prev['form']['home_pts']}). "
+                f"원정 {away} 최근 폼 {prev['form']['away']} ({prev['form']['away_record']}, 승점 {prev['form']['away_pts']}).",
+                "27R 이후 승무패와 U/O 2.5는 같은 포아송 스코어 행렬에서 뽑는다. 1–26R 승무패 픽은 기존 워크포워드를 유지한다.",
+                f"포아송 기대득점은 홈 {xh}골, 원정 {xa}골이다.",
+                f"승무패 추정은 홈승 {dist['승']*100:.1f}%, 무 {dist['무']*100:.1f}%, 원정승 {dist['패']*100:.1f}%. 픽 {wdl}.",
+                f"언더오버 2.5: 언더 {oud['언더']*100:.1f}% / 오버 {oud['오버']*100:.1f}% → 픽 {ou}.",
+            ],
+        },
+        "xg": prev["xg"],
+        "confidence": "보통",
+        "date_md": date_md,
+        "stage": kind,
+    }
+
+
+def load_local_k1_rows() -> list[dict]:
+    path = ROOT / "c_report" / "data" / "schedule.json"
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    rows = []
+    for row in payload.get("matches") or []:
+        try:
+            rnd = int(row.get("round"))
+        except (TypeError, ValueError):
+            continue
+        home = row.get("home") or ""
+        away = row.get("away") or ""
+        if not home or not away:
+            continue
+        rows.append(
+            {
+                "league": "K1",
+                "round": rnd,
+                "home": home,
+                "away": away,
+                "end_yn": str(row.get("end_yn") or "N").upper(),
+                "date_md": row.get("date_md") or "",
+                "game_id": str(row.get("game_id") or ""),
+                "kind": "league",
+                "meet_seq": "1",
+            }
+        )
+    return rows
 
 
 def apply_scores(data: dict, scores: dict) -> int:
@@ -388,13 +758,7 @@ def main() -> int:
         print(f"[DONE] slim-only current_round={data.get('current_round')} path={PROTO_DATA}")
         return 0
 
-    pending = [m for m in data.get("matches") or [] if not m.get("finished")]
-    print(f"[INFO] league.json pending={len(pending)}")
-    if not pending:
-        print("[DONE] nothing to update")
-        return 0
-
-    PortalClient, fetch_matches, parse_official_score, MAIN_FRAME = import_portal()
+    PortalClient, fetch_matches, parse_official_score, MAIN_FRAME, ROUND_LIST = import_portal()
     client = PortalClient()
     try:
         client.login_guest()
@@ -402,55 +766,169 @@ def main() -> int:
         print(f"[ERR] portal login failed: {exc}")
         return 1
 
-    # Only hit the portal for rounds that still have unfinished proto matches.
-    needed: dict[str, set[int]] = {"K1": set(), "K2": set()}
-    for m in pending:
-        lg = m.get("league")
-        if lg in needed:
-            try:
-                needed[lg].add(int(m.get("round")))
-            except (TypeError, ValueError):
-                pass
+    catalog: list[dict] = []
+    seen_fp: set[tuple] = set()
+    meet_jobs: list[tuple[str, str]] = list(MEETS)
+    for extra in EXTRA_MEET_SEQS:
+        if extra not in {m[1] for m in meet_jobs}:
+            meet_jobs.append(("?", extra))
 
-    scores: dict[tuple, tuple[int, int]] = {}
-    for league, meet_seq in MEETS:
-        rounds_needed = sorted(needed.get(league) or [])
-        if not rounds_needed:
+    for league_hint, meet_seq in meet_jobs:
+        labeled = fetch_rounds_labeled(client, ROUND_LIST, meet_seq)
+        if not labeled:
             continue
-        print(f"[INFO] fetching {league} rounds {rounds_needed}")
-        for rid in rounds_needed:
+        classified = meet_kind(meet_seq, labeled)
+        if classified is None:
+            print(f"[SKIP] meet={meet_seq} (cup or unknown)")
+            continue
+        league, kind = classified
+        if league_hint in ("K1", "K2") and league != league_hint:
+            league = league_hint
+        print(f"[INFO] meet={meet_seq} league={league} kind={kind} rounds={len(labeled)}")
+        for rid, label in labeled:
+            try:
+                portal_round = int(rid)
+            except ValueError:
+                continue
+            rnd = mapped_round(kind, portal_round)
             try:
                 rows = fetch_matches(client, YEAR, meet_seq, str(rid))
             except Exception as exc:
                 print(f"[WARN] {league} R{rid} list failed: {exc}")
                 continue
+            time.sleep(0.08)
             for row in rows:
                 home = row.get("home") or ""
                 away = row.get("away") or ""
-                gid = str(row.get("game_id") or "")
-                end_yn = str(row.get("end_yn") or "N").upper()
-                if not gid:
+                if not home or not away:
                     continue
-                score = fetch_official(
-                    client,
-                    parse_official_score,
-                    MAIN_FRAME,
-                    YEAR,
-                    meet_seq,
-                    str(rid),
-                    gid,
+                fp = match_fingerprint(league, home, away, rnd)
+                if fp in seen_fp:
+                    continue
+                seen_fp.add(fp)
+                catalog.append(
+                    {
+                        "league": league,
+                        "round": rnd,
+                        "home": home,
+                        "away": away,
+                        "end_yn": str(row.get("end_yn") or "N").upper(),
+                        "date_md": row.get("date_md") or "",
+                        "game_id": str(row.get("game_id") or ""),
+                        "kind": kind,
+                        "meet_seq": meet_seq,
+                        "portal_round": str(rid),
+                    }
                 )
-                time.sleep(0.12)
-                if score is None:
-                    continue
-                hs, aws = score
-                if end_yn != "Y" and hs == 0 and aws == 0:
-                    continue
-                scores[(league, key_team(home), key_team(away), int(rid))] = (hs, aws)
-                print(f"[OK] {league} R{rid} {home} {hs}:{aws} {away} end={end_yn}")
-            time.sleep(0.08)
 
-    print(f"[INFO] portal scores={len(scores)}")
+    for row in load_local_k1_rows():
+        fp = match_fingerprint(row["league"], row["home"], row["away"], row["round"])
+        if fp in seen_fp:
+            continue
+        seen_fp.add(fp)
+        catalog.append(row)
+        print(
+            f"[LOCAL] {row['league']} R{row['round']} {row['home']} vs {row['away']}"
+        )
+
+    matches = list(data.get("matches") or [])
+    book = display_book(matches)
+    existing = {
+        match_fingerprint(
+            str(m.get("league") or ""),
+            str(m.get("home") or ""),
+            str(m.get("away") or ""),
+            int(m.get("round") or 0),
+        )
+        for m in matches
+        if m.get("round") is not None
+    }
+    added = 0
+    for row in catalog:
+        home = canon_name(book, row["home"])
+        away = canon_name(book, row["away"])
+        book[key_team(home)] = home
+        book[key_team(away)] = away
+        fp = match_fingerprint(row["league"], home, away, row["round"])
+        if fp in existing:
+            continue
+        date = iso_date(row.get("date_md") or "")
+        newbie = build_new_match(
+            row["league"],
+            row["round"],
+            home,
+            away,
+            date,
+            row.get("date_md") or "",
+            row.get("kind") or "league",
+            matches,
+        )
+        matches.append(newbie)
+        existing.add(fp)
+        added += 1
+        print(
+            f"[ADD] {row['league']} R{row['round']} {home} vs {away} "
+            f"{date or row.get('date_md')}"
+        )
+    data["matches"] = matches
+    print(f"[INFO] added fixtures={added} total={len(matches)}")
+
+    pending = [m for m in matches if not m.get("finished")]
+    scores: dict[tuple, tuple[int, int]] = {}
+    fetch_jobs = []
+    pending_fp = {
+        match_fingerprint(
+            str(m.get("league") or ""),
+            str(m.get("home") or ""),
+            str(m.get("away") or ""),
+            int(m.get("round") or 0),
+        )
+        for m in pending
+        if m.get("round") is not None
+    }
+    for row in catalog:
+        fp = match_fingerprint(row["league"], row["home"], row["away"], row["round"])
+        # also match canon names
+        fp2 = match_fingerprint(
+            row["league"],
+            canon_name(book, row["home"]),
+            canon_name(book, row["away"]),
+            row["round"],
+        )
+        if fp not in pending_fp and fp2 not in pending_fp:
+            continue
+        gid = row.get("game_id") or ""
+        if not gid:
+            continue
+        end_yn = row.get("end_yn") or "N"
+        fetch_jobs.append((row, gid, end_yn))
+
+    print(f"[INFO] score fetches={len(fetch_jobs)} pending={len(pending)}")
+    for row, gid, end_yn in fetch_jobs:
+        meet_seq = str(row.get("meet_seq") or "1")
+        portal_round = str(row.get("portal_round") or row.get("round") or "")
+        score = fetch_official(
+            client,
+            parse_official_score,
+            MAIN_FRAME,
+            YEAR,
+            meet_seq,
+            portal_round,
+            gid,
+        )
+        time.sleep(0.12)
+        if score is None:
+            continue
+        hs, aws = score
+        if end_yn != "Y" and hs == 0 and aws == 0:
+            continue
+        home = canon_name(book, row["home"])
+        away = canon_name(book, row["away"])
+        scores[(row["league"], key_team(home), key_team(away), int(row["round"]))] = (hs, aws)
+        print(
+            f"[OK] {row['league']} R{row['round']} {home} {hs}:{aws} {away} end={end_yn}"
+        )
+
     updated = apply_scores(data, scores)
     leftover = []
     for match in data.get("matches") or []:
@@ -461,8 +939,7 @@ def main() -> int:
             f"{key_team(match.get('home') or '')} vs {key_team(match.get('away') or '')} "
             f"({match.get('home')} / {match.get('away')})"
         )
-    for line in leftover:
-        print("[PENDING] " + line)
+    print(f"[INFO] still unfinished={len(leftover)}")
     data["summary"] = rebuild_summary(data.get("matches") or [])
     data["current_round"] = current_rounds(data.get("matches") or [])
     slim_league_data(data)
@@ -473,7 +950,7 @@ def main() -> int:
         print(f"[ERR] write failed: {exc}")
         return 1
     print(
-        f"[DONE] updated={updated} current_round={data['current_round']} "
+        f"[DONE] added={added} scored={updated} current_round={data['current_round']} "
         f"path={PROTO_DATA}"
     )
     return 0

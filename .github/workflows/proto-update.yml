@@ -2,8 +2,8 @@ name: proto results update
 
 on:
   schedule:
-    # Every 6 hours UTC — pick up finished K League scores.
-    - cron: "40 */6 * * *"
+    # Every day 01:20 KST — pick up results and newly published finals/PO.
+    - cron: "20 16 * * *"
   workflow_dispatch:
     inputs:
       year:
@@ -21,7 +21,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,5 +50,5 @@ jobs:
             echo "No proto result changes"
             exit 0
           fi
-          git commit -m "chore(proto): apply finished K League scores"
+          git commit -m "chore(proto): daily K League fixtures and scores"
           git push
