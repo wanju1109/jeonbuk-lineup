@@ -20,7 +20,6 @@ from collect_players import (  # noqa: E402
     YEAR,
     enrich_player,
     index_entry,
-    played_this_year,
     portal_player_list,
     write_json,
 )
@@ -71,15 +70,6 @@ def main() -> int:
                     else:
                         full = enrich_player(card, club)
                         time.sleep(SLEEP)
-                    if not played_this_year(full):
-                        dropped.append(
-                            (
-                                tid,
-                                pid,
-                                str(full.get("name") or card.get("name") or ""),
-                            )
-                        )
-                        continue
                     players_idx.append(index_entry(full))
                     if pid not in old:
                         added.append((tid, pid, str(full.get("name") or card.get("name") or "")))
@@ -106,7 +96,7 @@ def main() -> int:
     index["updated_at"] = datetime.now(timezone.utc).isoformat()
     index["year"] = YEAR
     index["note"] = (
-        "보도/커뮤니티 재가공용. 현재 명단은 데이터포털 선수목록 중 올해 공식 출장 1경기 이상. 기록은 K리그 선수 상세."
+        "보도/커뮤니티 재가공용. 현재 명단은 K리그 데이터포털 등록 선수단(이적 반영). 올해 출장 0이어도 등록되어 있으면 표시. 기록은 K리그 선수 상세."
     )
     if errors:
         index["errors"] = errors[:50]

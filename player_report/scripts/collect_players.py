@@ -726,16 +726,19 @@ def played_this_year(player: dict) -> bool:
 
 
 def keep_on_current_squad(club: dict, player: dict) -> bool:
-    """Portal player list, and at least one official appearance this year."""
-    if not played_this_year(player):
-        return False
+    """Keep whoever the Data Portal currently registers at this club.
+
+    Transfer window: 0 official apps still count (new signing on the bench).
+    If the portal list for the club is empty (fetch failed), keep players
+    who already appeared this year so the grid is not wiped.
+    """
     roster = portal_player_list()
     tid = str(club.get("id") or "").upper()
     rows = roster.get(tid) or []
-    if not rows:
-        return True
     pid = str(player.get("id") or "")
-    return any(str(r.get("id")) == pid for r in rows)
+    if rows:
+        return any(str(r.get("id")) == pid for r in rows)
+    return played_this_year(player)
 
 
 def index_entry(player: dict) -> dict:
@@ -828,7 +831,7 @@ def main() -> int:
     index = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "year": YEAR,
-        "note": "보도/커뮤니티 재가공용. 현재 명단은 데이터포털 선수목록 중 올해 공식 출장 1경기 이상. 기록은 K리그 선수 상세.",
+        "note": "보도/커뮤니티 재가공용. 현재 명단은 K리그 데이터포털 등록 선수단(이적 반영). 올해 출장 0이어도 등록되어 있으면 표시. 기록은 K리그 선수 상세.",
         "leagues": out_leagues,
         "errors": errors[:50],
     }
