@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "제주 VS 대전 (155, 08/30)",
-    "hours_to_kickoff": 57.5,
-    "within_48h": false,
-    "published": false,
-    "generated_at": "2026-08-28T09:29:18.394090+09:00",
+    "hours_to_kickoff": 42.5,
+    "within_48h": true,
+    "published": true,
+    "generated_at": "2026-08-29T00:31:00.362533+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 제주 vs 대전",
@@ -117,6 +117,7 @@
     "jeonbuk": [
       {
         "game_id": "126",
+        "year": "2026",
         "round": 21,
         "date": "2026-08-02",
         "home": "제주",
@@ -134,6 +135,7 @@
       },
       {
         "game_id": "131",
+        "year": "2026",
         "round": 22,
         "date": "2026-08-08",
         "home": "전북",
@@ -151,6 +153,7 @@
       },
       {
         "game_id": "134",
+        "year": "2026",
         "round": 23,
         "date": "2026-08-15",
         "home": "제주",
@@ -168,6 +171,7 @@
       },
       {
         "game_id": "142",
+        "year": "2026",
         "round": 24,
         "date": "2026-08-22",
         "home": "제주",
@@ -185,6 +189,7 @@
       },
       {
         "game_id": "147",
+        "year": "2026",
         "round": 25,
         "date": "2026-08-25",
         "home": "제주",
@@ -210,6 +215,7 @@
     "opponent": [
       {
         "game_id": "125",
+        "year": "2026",
         "round": 21,
         "date": "2026-08-02",
         "home": "대전",
@@ -227,6 +233,7 @@
       },
       {
         "game_id": "127",
+        "year": "2026",
         "round": 22,
         "date": "2026-08-08",
         "home": "안양",
@@ -244,6 +251,7 @@
       },
       {
         "game_id": "135",
+        "year": "2026",
         "round": 23,
         "date": "2026-08-15",
         "home": "서울",
@@ -261,6 +269,7 @@
       },
       {
         "game_id": "143",
+        "year": "2026",
         "round": 24,
         "date": "2026-08-23",
         "home": "대전",
@@ -278,6 +287,7 @@
       },
       {
         "game_id": "149",
+        "year": "2026",
         "round": 25,
         "date": "2026-08-26",
         "home": "대전",

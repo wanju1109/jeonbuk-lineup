@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "광주 VS 서울 (153, 08/30)",
-    "hours_to_kickoff": 57.5,
-    "within_48h": false,
-    "published": false,
-    "generated_at": "2026-08-28T09:29:00.409989+09:00",
+    "hours_to_kickoff": 42.5,
+    "within_48h": true,
+    "published": true,
+    "generated_at": "2026-08-29T00:30:47.885610+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 광주 vs 서울",
@@ -116,6 +116,7 @@
     "jeonbuk": [
       {
         "game_id": "125",
+        "year": "2026",
         "round": 21,
         "date": "2026-08-02",
         "home": "대전",
@@ -133,6 +134,7 @@
       },
       {
         "game_id": "128",
+        "year": "2026",
         "round": 22,
         "date": "2026-08-08",
         "home": "부천",
@@ -150,6 +152,7 @@
       },
       {
         "game_id": "133",
+        "year": "2026",
         "round": 23,
         "date": "2026-08-15",
         "home": "광주",
@@ -167,6 +170,7 @@
       },
       {
         "game_id": "144",
+        "year": "2026",
         "round": 24,
         "date": "2026-08-23",
         "home": "광주",
@@ -184,6 +188,7 @@
       },
       {
         "game_id": "150",
+        "year": "2026",
         "round": 25,
         "date": "2026-08-26",
         "home": "강원",
@@ -209,6 +214,7 @@
     "opponent": [
       {
         "game_id": "122",
+        "year": "2026",
         "round": 21,
         "date": "2026-08-01",
         "home": "전북",
@@ -226,6 +232,7 @@
       },
       {
         "game_id": "130",
+        "year": "2026",
         "round": 22,
         "date": "2026-08-08",
         "home": "김천",
@@ -243,6 +250,7 @@
       },
       {
         "game_id": "135",
+        "year": "2026",
         "round": 23,
         "date": "2026-08-15",
         "home": "서울",
@@ -260,6 +268,7 @@
       },
       {
         "game_id": "139",
+        "year": "2026",
         "round": 24,
         "date": "2026-08-22",
         "home": "안양",
@@ -277,6 +286,7 @@
       },
       {
         "game_id": "145",
+        "year": "2026",
         "round": 25,
         "date": "2026-08-25",
         "home": "서울",

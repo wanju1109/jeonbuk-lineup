@@ -25,10 +25,10 @@
     "kickoff_label": "2026-08-30 19:00 KST",
     "date_md": "08/30",
     "label": "인천 VS 전북 (154, 08/30)",
-    "hours_to_kickoff": 57.5,
-    "within_48h": false,
-    "published": false,
-    "generated_at": "2026-08-28T09:28:42.599864+09:00",
+    "hours_to_kickoff": 42.5,
+    "within_48h": true,
+    "published": true,
+    "generated_at": "2026-08-29T00:30:35.739131+09:00",
     "preview_hours": 48.0
   },
   "headline": "26R PREVIEW · 인천 vs 전북",
@@ -116,6 +116,7 @@
     "jeonbuk": [
       {
         "game_id": "122",
+        "year": "2026",
         "round": 21,
         "date": "2026-08-01",
         "home": "전북",
@@ -133,6 +134,7 @@
       },
       {
         "game_id": "131",
+        "year": "2026",
         "round": 22,
         "date": "2026-08-08",
         "home": "전북",
@@ -150,6 +152,7 @@
       },
       {
         "game_id": "137",
+        "year": "2026",
         "round": 23,
         "date": "2026-08-16",
         "home": "부천",
@@ -167,6 +170,7 @@
       },
       {
         "game_id": "140",
+        "year": "2026",
         "round": 24,
         "date": "2026-08-22",
         "home": "전북",
@@ -184,6 +188,7 @@
       },
       {
         "game_id": "146",
+        "year": "2026",
         "round": 25,
         "date": "2026-08-25",
         "home": "김천",
@@ -203,6 +208,7 @@
     "opponent": [
       {
         "game_id": "119",
+        "year": "2026",
         "round": 20,
         "date": "2026-07-26",
         "home": "인천",
@@ -220,6 +226,7 @@
       },
       {
         "game_id": "126",
+        "year": "2026",
         "round": 21,
         "date": "2026-08-02",
         "home": "제주",
@@ -237,6 +244,7 @@
       },
       {
         "game_id": "136",
+        "year": "2026",
         "round": 23,
         "date": "2026-08-16",
         "home": "인천",
@@ -254,6 +262,7 @@
       },
       {
         "game_id": "144",
+        "year": "2026",
         "round": 24,
         "date": "2026-08-23",
         "home": "광주",
@@ -271,6 +280,7 @@
       },
       {
         "game_id": "148",
+        "year": "2026",
         "round": 25,
         "date": "2026-08-26",
         "home": "안양",
