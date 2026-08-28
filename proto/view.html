@@ -66,13 +66,14 @@ h1 { margin:0; font-size:1.28rem; letter-spacing:-.04em; font-weight:800; }
   border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);
 }
 .rounds > b { display:block; font-size:.72rem; color:var(--muted); margin:0 0 8px; font-weight:700; }
+.rounds > b .hint { font-weight:650; font-size:.65rem; margin-left:6px; }
 .rounds .grid { display:grid; grid-template-columns:repeat(10, minmax(0, 1fr)); gap:6px; }
 .rounds button {
-  width:100%; min-height:42px; padding:5px 2px;
+  width:100%; min-height:44px; padding:5px 2px;
   background:var(--soft); color:var(--ink); border:1px solid transparent;
   border-radius:10px; font-size:.76rem; font-weight:750; cursor:pointer; line-height:1.15;
 }
-.rounds button small { display:block; color:var(--muted); font-size:.6rem; font-weight:650; }
+.rounds button small { display:block; color:var(--muted); font-size:.55rem; font-weight:650; letter-spacing:-.02em; }
 .rounds button.on { background:var(--accent-2); color:#fff; }
 .rounds button.on small { color:#cbd5e1; }
 .rounds button.live { box-shadow:inset 0 0 0 1.5px var(--accent); }
@@ -320,6 +321,10 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     var p = String(d).split("-");
     return p.length === 3 ? p[1] + "." + p[2] : d;
   }
+  function pctRound(hit, mk) {
+    if (!mk) return "-";
+    return Math.round((100 * hit) / mk) + "%";
+  }
   function currentRound(lg) {
     return (state.data && state.data.current_round && state.data.current_round[lg]) || 1;
   }
@@ -343,14 +348,14 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     (state.data.matches || []).forEach(function (m) {
       if (m.league !== lg) return;
       var r = String(m.round);
-      if (!map[r]) map[r] = { total: 0, fin: 0, hit: 0, mk: 0 };
+      if (!map[r]) map[r] = { total: 0, fin: 0, wdlHit: 0, wdlMk: 0, ouHit: 0, ouMk: 0 };
       map[r].total += 1;
       if (!m.finished) return;
       map[r].fin += 1;
-      MK.forEach(function (x) {
-        map[r].mk += 1;
-        if (m.hit && m.hit[x[0]]) map[r].hit += 1;
-      });
+      map[r].wdlMk += 1;
+      if (m.hit && m.hit.wdl) map[r].wdlHit += 1;
+      map[r].ouMk += 1;
+      if (m.hit && m.hit.ou25) map[r].ouHit += 1;
     });
     return map;
   }
@@ -392,14 +397,14 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     if (!state.round || !stats[String(state.round)]) {
       state.round = roundForTab(lg, state.tab);
     }
-    var html = "<b>라운드</b><div class=\"grid\">";
+    var html = "<b>라운드 <span class=\"hint\">승무패 / U/O</span></b><div class=\"grid\">";
     rounds.forEach(function (r) {
       var info = stats[r];
       var done = info.fin > 0 && info.fin === info.total;
       var live = info.fin > 0 && info.fin < info.total;
       var rate = "";
-      if (info.fin > 0 && info.mk > 0) {
-        rate = "<small>" + Math.round((100 * info.hit) / info.mk) + "%</small>";
+      if (info.fin > 0 && (info.wdlMk > 0 || info.ouMk > 0)) {
+        rate = "<small>" + pctRound(info.wdlHit, info.wdlMk) + "/" + pctRound(info.ouHit, info.ouMk) + "</small>";
       }
       var cls = [];
       if (String(state.round) === String(r)) cls.push("on");
