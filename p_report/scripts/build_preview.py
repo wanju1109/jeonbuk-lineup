@@ -9,7 +9,7 @@ Also always refreshes the next unfinished Jeonbuk match as a draft
 Reads:
   - c_report/data/schedule.json
   - c_report/data/index.json
-  - c_report/data/{game_id}.json (all collected matches)
+  - c_report/data chalkboard JSON (2026: {game_id}.json, later: {year}/{game_id}.json)
   - c_report/data/club-attendance.json (optional)
 
 Writes:
@@ -33,7 +33,18 @@ INDEX_OUT = OUT_DIR / "index.json"
 
 PREVIEW_HOURS = float(os.environ.get("PREVIEW_HOURS") or "48")
 OTHER_PREVIEW_DAYS = float(os.environ.get("OTHER_PREVIEW_DAYS") or "7")
-YEAR = os.environ.get("KLEAGUE_YEAR") or str(datetime.now().year)
+LEGACY_FLAT_YEAR = "2026"
+META_JSON = ("index.json", "schedule.json", "club-attendance.json", "collected.json")
+
+
+def kleague_year() -> str:
+    env = (os.environ.get("KLEAGUE_YEAR") or "").strip()
+    if env:
+        return env
+    return str(datetime.now(timezone(timedelta(hours=9))).year)
+
+
+YEAR = kleague_year()
 JEONBUK = "전북"
 KST = timezone(timedelta(hours=9))
 
@@ -255,7 +266,7 @@ def team_row_from_events(events: list, team_id: str, home_id: str) -> dict:
     return row
 
 
-def parse_match_file(path: Path) -> dict | None:
+def parse_match_file(path: Path, year: str | None = None) -> dict | None:
     data = load_json(path)
     if not isinstance(data, dict):
         return None
@@ -271,6 +282,7 @@ def parse_match_file(path: Path) -> dict | None:
     score_txt = f"{score.get('home', '-')}:{score.get('away', '-')}"
     return {
         "game_id": str(meta.get("game_id") or path.stem),
+        "year": str(meta.get("meet_year") or year or YEAR),
         "round": meta.get("round"),
         "date": meta.get("date") or "",
         "home": home.get("name") or "",
@@ -287,18 +299,34 @@ def parse_match_file(path: Path) -> dict | None:
     }
 
 
+def match_catalog_key(year: str, gid: str) -> str:
+    return f"{year}|{gid}"
+
+
+def iter_c_match_paths() -> list[tuple[str, Path]]:
+    rows: list[tuple[str, Path]] = []
+    if not C_DATA.exists():
+        return rows
+    for path in C_DATA.glob("*.json"):
+        if path.name in META_JSON:
+            continue
+        if path.stem.isdigit():
+            rows.append((LEGACY_FLAT_YEAR, path))
+    for folder in sorted(C_DATA.glob("20[0-9][0-9]")):
+        if not folder.is_dir():
+            continue
+        for path in folder.glob("*.json"):
+            if path.stem.isdigit():
+                rows.append((folder.name, path))
+    return rows
+
+
 def load_match_catalog() -> dict[str, dict]:
     catalog: dict[str, dict] = {}
-    if not C_DATA.exists():
-        return catalog
-    for path in sorted(C_DATA.glob("*.json")):
-        if path.name in ("index.json", "schedule.json", "club-attendance.json"):
-            continue
-        if not path.stem.isdigit():
-            continue
-        parsed = parse_match_file(path)
+    for year, path in iter_c_match_paths():
+        parsed = parse_match_file(path, year)
         if parsed:
-            catalog[parsed["game_id"]] = parsed
+            catalog[match_catalog_key(str(parsed.get("year") or year), parsed["game_id"])] = parsed
     return catalog
 
 
@@ -315,6 +343,7 @@ def recent_form_catalog(catalog: dict[str, dict], team: str, limit: int = 5) -> 
         rows.append(
             {
                 "game_id": m["game_id"],
+                "year": m.get("year") or YEAR,
                 "round": m.get("round"),
                 "date": m.get("date") or "",
                 "home": home,
@@ -352,7 +381,7 @@ def index_by_game_id(index_matches: list[dict]) -> dict[str, dict]:
     for m in index_matches:
         gid = str(m.get("game_id") or "")
         if gid:
-            out[gid] = m
+            out[match_catalog_key(str(m.get("year") or YEAR), gid)] = m
     return out
 
 
@@ -362,11 +391,12 @@ def form_row_from_schedule(row: dict, team: str, idx: dict[str, dict]) -> dict:
     away = row.get("away") or ""
     opp = away if team in home else home
     ha = "H" if team in home else "A"
-    hit = idx.get(gid) or {}
+    hit = idx.get(match_catalog_key(str(row.get("year") or YEAR), gid)) or {}
     score = (hit.get("score") or "").strip()
     date = (hit.get("date") or "").strip() or schedule_date_iso(row)
     return {
         "game_id": gid,
+        "year": str(row.get("year") or YEAR),
         "round": row.get("round"),
         "date": date,
         "home": home,
@@ -406,9 +436,9 @@ def recent_form_merged(
     limit: int = 5,
 ) -> list[dict]:
     idx = index_by_game_id(index_matches)
-    by_gid: dict[str, dict] = {}
+    by_key: dict[str, dict] = {}
     for r in recent_form_catalog(catalog, team, 999):
-        by_gid[str(r["game_id"])] = r
+        by_key[match_catalog_key(str(r.get("year") or YEAR), str(r["game_id"]))] = r
     for row in schedule_matches:
         if not schedule_already_played(row):
             continue
@@ -416,11 +446,12 @@ def recent_form_merged(
         if team not in home and team not in away:
             continue
         gid = str(row.get("game_id") or "")
-        if not gid or gid in by_gid:
+        key = match_catalog_key(str(row.get("year") or YEAR), gid)
+        if not gid or key in by_key:
             continue
-        by_gid[gid] = form_row_from_schedule(row, team, idx)
+        by_key[key] = form_row_from_schedule(row, team, idx)
     rows = sorted(
-        by_gid.values(),
+        by_key.values(),
         key=lambda x: (str(x.get("date") or ""), int(x.get("round") or 0)),
     )
     return rows[-limit:]
@@ -453,7 +484,11 @@ def fetch_scores_for_form(
         print(f"[WARN] form portal fetch unavailable: {exc}")
         return
 
-    sched_by_id = {str(m.get("game_id")): m for m in schedule_matches if m.get("game_id")}
+    sched_by_id = {
+        match_catalog_key(str(m.get("year") or YEAR), str(m.get("game_id"))): m
+        for m in schedule_matches
+        if m.get("game_id")
+    }
     client = PortalClient()
     try:
         client.login_guest()
@@ -463,7 +498,7 @@ def fetch_scores_for_form(
 
     for r in pending:
         gid = str(r.get("game_id") or "")
-        sched = sched_by_id.get(gid) or {}
+        sched = sched_by_id.get(match_catalog_key(str(r.get("year") or YEAR), gid)) or {}
         year = str(sched.get("year") or YEAR)
         round_id = str(sched.get("round") or r.get("round") or "")
         if not round_id:
@@ -1004,7 +1039,7 @@ def build_neutral_briefing(
 def team_samples(catalog: dict[str, dict], form: list[dict], team: str) -> list[dict]:
     samples = []
     for r in form:
-        m = catalog.get(str(r["game_id"]))
+        m = catalog.get(match_catalog_key(str(r.get("year") or YEAR), str(r["game_id"])))
         if m:
             tid = m["home_id"] if team in (m.get("home") or "") else m["away_id"]
             samples.append(m["stats"].get(tid, blank_team_row()))
@@ -1236,10 +1271,11 @@ def pick_other_targets(schedule_matches: list[dict]) -> list[tuple[dict, datetim
         if hours < 0 or hours > horizon:
             continue
         gid = str(row.get("game_id") or "")
+        key = match_catalog_key(str(row.get("year") or YEAR), gid)
         published = 0 <= hours <= PREVIEW_HOURS
-        prev = by_id.get(gid)
+        prev = by_id.get(key)
         if prev is None or (published and not prev[2]):
-            by_id[gid] = (row, kickoff, published)
+            by_id[key] = (row, kickoff, published)
     return list(by_id.values())
 
 
@@ -1265,7 +1301,7 @@ def pick_targets(schedule_matches: list[dict]) -> list[tuple[dict, datetime, boo
     by_id: dict[str, tuple[dict, datetime, bool]] = {}
     next_row, next_ko = upcoming[0]
     next_hours = (next_ko - now).total_seconds() / 3600.0
-    by_id[str(next_row.get("game_id") or "")] = (
+    by_id[match_catalog_key(str(next_row.get("year") or YEAR), str(next_row.get("game_id") or ""))] = (
         next_row,
         next_ko,
         0 <= next_hours <= PREVIEW_HOURS,
@@ -1273,7 +1309,11 @@ def pick_targets(schedule_matches: list[dict]) -> list[tuple[dict, datetime, boo
     for row, kickoff in upcoming:
         hours = (kickoff - now).total_seconds() / 3600.0
         if 0 <= hours <= PREVIEW_HOURS:
-            by_id[str(row.get("game_id") or "")] = (row, kickoff, True)
+            by_id[match_catalog_key(str(row.get("year") or YEAR), str(row.get("game_id") or ""))] = (
+                row,
+                kickoff,
+                True,
+            )
     return list(by_id.values())
 
 
@@ -1295,11 +1335,15 @@ def main() -> None:
     other_targets = pick_other_targets(schedule_matches)
     merged: dict[str, tuple[dict, datetime, bool]] = {}
     for row, kickoff, published in targets:
-        merged[str(row.get("game_id") or "")] = (row, kickoff, published)
+        merged[match_catalog_key(str(row.get("year") or YEAR), str(row.get("game_id") or ""))] = (
+            row,
+            kickoff,
+            published,
+        )
     for row, kickoff, published in other_targets:
-        gid = str(row.get("game_id") or "")
-        if gid not in merged:
-            merged[gid] = (row, kickoff, published)
+        key = match_catalog_key(str(row.get("year") or YEAR), str(row.get("game_id") or ""))
+        if key not in merged:
+            merged[key] = (row, kickoff, published)
 
     if not merged:
         payload = {

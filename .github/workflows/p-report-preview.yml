@@ -39,7 +39,7 @@ jobs:
         run: |
           set -e
           if [ -z "$KLEAGUE_YEAR" ]; then
-            export KLEAGUE_YEAR="$(date +%Y)"
+            export KLEAGUE_YEAR="$(TZ=Asia/Seoul date +%Y)"
           fi
           # Schedule refresh only — chalk for unfinished games is skipped by collector.
           python c_report/scripts/collect_chalkboard.py || true
@@ -51,7 +51,7 @@ jobs:
         run: |
           set -e
           if [ -z "$KLEAGUE_YEAR" ]; then
-            export KLEAGUE_YEAR="$(date +%Y)"
+            export KLEAGUE_YEAR="$(TZ=Asia/Seoul date +%Y)"
           fi
           if [ -z "$PREVIEW_HOURS" ]; then
             export PREVIEW_HOURS=48
@@ -62,7 +62,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add p_report/data c_report/data/schedule.json c_report/data/index.json || true
+          git add p_report/data c_report/data || true
           if git diff --staged --quiet; then
             echo "No preview changes"
             exit 0

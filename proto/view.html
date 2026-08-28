@@ -425,7 +425,8 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       box("승무패 적중", "wdl") +
       box("U/O 2.5 적중", "ou25");
     document.getElementById("sub").textContent =
-      "2026시즌 · 생성 " + (state.data.generated_at || "-") +
+      (state.data.season ? state.data.season + "시즌 · " : "") +
+      "생성 " + (state.data.generated_at || "-") +
       " · 지난 경기는 예측과 실제를 같이 표시, 예정 경기는 분석하기를 누를 때 공개";
   }
 

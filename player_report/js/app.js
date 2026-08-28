@@ -1,7 +1,6 @@
 (() => {
-  const DATA_VER = "27";
+  const DATA_VER = "28";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
-  const DATA_EVENTS = `./data/events_2026.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
   const CANONICAL = "https://wanju1109.github.io/jeonbuk-lineup/player_report/";
   const EDIT_TOKEN = "jb7k";
@@ -1296,11 +1295,18 @@
       const res = await fetch(DATA_INDEX);
       if (!res.ok) throw new Error("index " + res.status);
       state.index = await res.json();
-      try {
-        const evRes = await fetch(DATA_EVENTS);
-        if (evRes.ok) state.events = await evRes.json();
-      } catch (evErr) {
-        state.events = null;
+      const year = String(state.index.year || "").trim();
+      if (year && typeof PlayerEngine !== "undefined" && PlayerEngine.setSeasonYear) {
+        PlayerEngine.setSeasonYear(year);
+      }
+      const evYear = year || (typeof PlayerEngine !== "undefined" ? String(PlayerEngine.YEAR) : "");
+      if (evYear) {
+        try {
+          const evRes = await fetch(`./data/events_${evYear}.json?v=${DATA_VER}`);
+          if (evRes.ok) state.events = await evRes.json();
+        } catch (evErr) {
+          state.events = null;
+        }
       }
       applyHash();
     } catch (err) {

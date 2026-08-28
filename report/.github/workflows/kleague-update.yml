@@ -34,8 +34,12 @@ jobs:
 
       - name: Collect official K LEAGUE data
         env:
-          KLEAGUE_YEAR: "2026"
+          KLEAGUE_YEAR: ""
         run: |
+          set -e
+          if [ -z "$KLEAGUE_YEAR" ]; then
+            export KLEAGUE_YEAR="$(TZ=Asia/Seoul date +%Y)"
+          fi
           python scripts/collect_kleague.py
 
       - name: Commit updated data

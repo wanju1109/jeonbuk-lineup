@@ -4,7 +4,26 @@
  * No invented FM 1-20, CA, or PA.
  */
 const PlayerEngine = (() => {
-  const YEAR = 2026;
+  function kstYear() {
+    try {
+      const parts = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Seoul",
+        year: "numeric",
+      }).formatToParts(new Date());
+      const y = Number((parts.find((p) => p.type === "year") || {}).value);
+      if (Number.isFinite(y) && y >= 2000) return y;
+    } catch (err) {
+      /* fall through */
+    }
+    return new Date().getFullYear();
+  }
+
+  let YEAR = kstYear();
+
+  function setSeasonYear(y) {
+    const n = Number(y);
+    if (Number.isFinite(n) && n >= 2000 && n <= 2100) YEAR = n;
+  }
 
   const CURATED_YEARS = {
     "20180025": {
@@ -861,7 +880,8 @@ const PlayerEngine = (() => {
   }
 
   return {
-    YEAR,
+    get YEAR() { return YEAR; },
+    setSeasonYear,
     build,
     rivalCopy,
     compareRows,

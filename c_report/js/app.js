@@ -1450,11 +1450,18 @@
   }
 
   async function loadCollectedIds() {
-    const ids = new Set((state.index?.matches || []).map((m) => String(m.game_id)));
+    const ids = new Set();
+    (state.index?.matches || []).forEach((m) => {
+      const gid = String(m.game_id || "");
+      if (!gid) return;
+      ids.add(`${m.year || ""}|${gid}`);
+      ids.add(gid);
+    });
     try {
       const res = await fetch(`./data/collected.json?t=${Date.now()}`, { cache: "no-store" });
       if (res.ok) {
         const data = await res.json();
+        (data.keys || []).forEach((id) => ids.add(String(id)));
         (data.game_ids || []).forEach((id) => ids.add(String(id)));
       }
     } catch (err) {
@@ -1465,7 +1472,9 @@
 
   function otherMatchStatusLabel(m, roundList) {
     const gid = String(m.game_id || "");
-    const hasData = state.collectedIds?.has(gid);
+    const hasData =
+      state.collectedIds?.has(`${m.year || ""}|${gid}`) ||
+      state.collectedIds?.has(gid);
     if (m.end_yn === "Y") {
       return hasData ? "" : " · 미수집";
     }

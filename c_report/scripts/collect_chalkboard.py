@@ -3,7 +3,8 @@
 Collect K League CHALK BOARD events for Jeonbuk matches.
 
 Uses the public guest portal session (same as data.kleague.com).
-Writes c_report/data/{game_id}.json and updates c_report/data/index.json.
+Writes chalkboard JSON. 2026 stays at c_report/data/{game_id}.json;
+later seasons use c_report/data/{year}/{game_id}.json so IDs do not collide.
 """
 
 from __future__ import annotations
@@ -15,7 +16,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
 
@@ -29,7 +30,18 @@ MATCH_LIST = BASE + "/data/matc/getMatchInfoByRoundIdForSelectTagJson.do"
 ROUND_LIST = BASE + "/data/matc/getRoundInfoByMeetYearSeqForSelectTagJson.do"
 MAIN_FRAME = BASE + "/mainFrame.do"
 
-YEAR = os.environ.get("KLEAGUE_YEAR") or str(datetime.now().year)
+LEGACY_FLAT_YEAR = "2026"
+META_JSON = ("index.json", "schedule.json", "club-attendance.json", "collected.json")
+
+
+def kleague_year() -> str:
+    env = (os.environ.get("KLEAGUE_YEAR") or "").strip()
+    if env:
+        return env
+    return str(datetime.now(timezone(timedelta(hours=9))).year)
+
+
+YEAR = kleague_year()
 MEET_SEQ = os.environ.get("KLEAGUE_MEET_SEQ") or "1"  # K League 1
 ROUND = os.environ.get("KLEAGUE_ROUND")  # optional single round
 GAME_ID = os.environ.get("KLEAGUE_GAME_ID")  # optional single game
@@ -43,6 +55,43 @@ FORCE = os.environ.get("KLEAGUE_FORCE", "").lower() in ("1", "true", "yes")
 SCHEDULE_PATH = DATA_DIR / "schedule.json"
 COLLECTED_PATH = DATA_DIR / "collected.json"
 JEONBUK_KEY = "전북"
+
+
+def match_json_path(year: str, gid: str) -> Path:
+    y = str(year or "")
+    if y == LEGACY_FLAT_YEAR:
+        return DATA_DIR / f"{gid}.json"
+    return DATA_DIR / y / f"{gid}.json"
+
+
+def match_rel_url(year: str, gid: str) -> str:
+    y = str(year or "")
+    if y == LEGACY_FLAT_YEAR:
+        return f"./data/{gid}.json"
+    return f"./data/{y}/{gid}.json"
+
+
+def match_key(year: str, gid: str) -> str:
+    return f"{year}|{gid}"
+
+
+def iter_match_files() -> list[tuple[str, Path]]:
+    """Return (year, path) for chalkboard match JSON files."""
+    rows: list[tuple[str, Path]] = []
+    if not DATA_DIR.exists():
+        return rows
+    for path in DATA_DIR.glob("*.json"):
+        if path.name in META_JSON:
+            continue
+        if path.stem.isdigit():
+            rows.append((LEGACY_FLAT_YEAR, path))
+    for folder in sorted(DATA_DIR.glob("20[0-9][0-9]")):
+        if not folder.is_dir():
+            continue
+        for path in folder.glob("*.json"):
+            if path.stem.isdigit():
+                rows.append((folder.name, path))
+    return rows
 
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -386,7 +435,7 @@ def save_index(matches: list[dict]) -> None:
         blob = f"{m.get('home') or ''}{m.get('away') or ''}{m.get('label') or ''}"
         if JEONBUK_KEY not in blob:
             continue
-        uniq[gid] = m
+        uniq[match_key(str(m.get("year") or ""), gid)] = m
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "matches": sorted(
@@ -398,17 +447,18 @@ def save_index(matches: list[dict]) -> None:
 
 
 def save_collected() -> None:
-    """List every numeric game_id JSON on disk (Jeonbuk + other clubs)."""
+    """List chalkboard files on disk (Jeonbuk + other clubs)."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    keys: list[str] = []
     ids: set[str] = set()
-    for path in DATA_DIR.glob("*.json"):
-        if path.name in ("index.json", "schedule.json", "club-attendance.json", "collected.json"):
-            continue
-        if path.stem.isdigit():
-            ids.add(path.stem)
+    for year, path in iter_match_files():
+        gid = path.stem
+        keys.append(match_key(year, gid))
+        ids.add(gid)
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "game_ids": sorted(ids, key=lambda x: int(x)),
+        "keys": sorted(keys),
     }
     COLLECTED_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -421,14 +471,18 @@ def save_schedule(rows: list[dict], year: str, meet_seq: str) -> None:
             prev = json.loads(SCHEDULE_PATH.read_text(encoding="utf-8"))
             for m in prev.get("matches") or []:
                 gid = str(m.get("game_id") or "")
-                if gid:
-                    by_key[gid] = m
+                if not gid:
+                    continue
+                y = str(m.get("year") or year)
+                by_key[match_key(y, gid)] = m
         except Exception:
             pass
     for m in rows:
         gid = str(m.get("game_id") or "")
-        if gid:
-            by_key[gid] = m
+        if not gid:
+            continue
+        y = str(m.get("year") or year)
+        by_key[match_key(y, gid)] = m
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "year": year,
@@ -836,7 +890,12 @@ def main() -> None:
     client.login_guest()
 
     index = load_index()
-    by_id = {str(m.get("game_id")): m for m in index.get("matches", []) if m.get("game_id")}
+    by_id = {}
+    for m in index.get("matches", []):
+        gid = str(m.get("game_id") or "")
+        if not gid:
+            continue
+        by_id[match_key(str(m.get("year") or ""), gid)] = m
 
     if GAME_ID:
         round_ids = [ROUND] if ROUND else fetch_rounds(client, YEAR, MEET_SEQ)
@@ -879,9 +938,9 @@ def main() -> None:
                 continue
 
             gid = str(match["game_id"])
-            out_path = DATA_DIR / f"{gid}.json"
+            out_path = match_json_path(YEAR, gid)
             if SKIP_EXISTING and not FORCE and out_path.exists():
-                print(f"[SKIP] game_id={gid} already exists")
+                print(f"[SKIP] game_id={gid} year={YEAR} already exists")
                 continue
             try:
                 print(f"[FETCH] R{rid} {label}")
@@ -897,6 +956,7 @@ def main() -> None:
                     packed.get("lineup"),
                     packed.get("pass_matrix"),
                 )
+                out_path.parent.mkdir(parents=True, exist_ok=True)
                 out_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
                 entry = {
                     "game_id": gid,
@@ -908,11 +968,11 @@ def main() -> None:
                     "date": payload["meta"].get("date") or "",
                     "venue": payload["meta"].get("venue") or "",
                     "attendance": payload["meta"].get("attendance"),
-                    "file": f"./data/{gid}.json",
+                    "file": match_rel_url(YEAR, gid),
                     "label": label,
                 }
                 if JEONBUK_KEY in f"{entry['home']}{entry['away']}{label}":
-                    by_id[gid] = entry
+                    by_id[match_key(YEAR, gid)] = entry
                 collected += 1
                 print(f"[OK] game_id={gid} events={len(payload['events'])}")
                 time.sleep(0.4)

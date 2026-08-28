@@ -44,7 +44,7 @@ jobs:
         run: |
           set -e
           if [ -z "$KLEAGUE_YEAR" ]; then
-            export KLEAGUE_YEAR="$(date +%Y)"
+            export KLEAGUE_YEAR="$(TZ=Asia/Seoul date +%Y)"
           fi
           # Cached player JSON skips playerDetail. Nightly must refetch stats.
           if [ "${{ github.event_name }}" = "schedule" ]; then

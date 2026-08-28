@@ -33,7 +33,7 @@ MATCH_CHART_URLS = [
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 MATCH_DIR = DATA_DIR / "matches"
-YEAR = os.environ.get("KLEAGUE_YEAR") or str(datetime.now().year)
+YEAR = os.environ.get("KLEAGUE_YEAR") or str(datetime.now(timezone(timedelta(hours=9))).year)
 LEAGUES = [("1", 33), ("2", 39)]
 
 session = requests.Session()

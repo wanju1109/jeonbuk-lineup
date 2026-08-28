@@ -19,10 +19,20 @@ from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PROTO_DATA = ROOT / "proto" / "data" / "league.json"
+PROTO_DIR = ROOT / "proto" / "data"
+PROTO_DATA = PROTO_DIR / "league.json"
 C_REPORT_SCRIPTS = ROOT / "c_report" / "scripts"
-YEAR = os.environ.get("KLEAGUE_YEAR") or str(datetime.now().year)
 KST = timezone(timedelta(hours=9))
+
+
+def kleague_year() -> str:
+    env = (os.environ.get("KLEAGUE_YEAR") or "").strip()
+    if env:
+        return env
+    return str(datetime.now(KST).year)
+
+
+YEAR = kleague_year()
 
 MEETS = (
     ("K1", os.environ.get("KLEAGUE_MEET_K1") or "1"),
@@ -315,8 +325,64 @@ def load_league() -> dict:
         raise RuntimeError(f"league.json parse failed: {exc}") from exc
 
 
+def season_of(data: dict) -> str:
+    s = data.get("season")
+    if s is None or s == "":
+        return ""
+    return str(s)
+
+
+def empty_season(old: dict, year: str) -> dict:
+    try:
+        season_val: int | str = int(year)
+    except ValueError:
+        season_val = year
+    method = old.get("method")
+    if not isinstance(method, dict):
+        method = {}
+    return {
+        "generated_at": now_kst().strftime("%Y-%m-%d %H:%M:%S"),
+        "season": season_val,
+        "current_round": {"K1": 1, "K2": 1},
+        "method": method,
+        "summary": {},
+        "matches": [],
+    }
+
+
+def archive_and_reset_if_new_season(data: dict) -> dict:
+    old = season_of(data)
+    if not old:
+        try:
+            data["season"] = int(YEAR)
+        except ValueError:
+            data["season"] = YEAR
+        return data
+    if old == YEAR:
+        return data
+    archive = PROTO_DIR / f"league_{old}.json"
+    try:
+        if not archive.exists():
+            archive.write_text(
+                json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            print(f"[INFO] archived {old} season -> {archive.name}")
+        else:
+            print(f"[INFO] archive exists {archive.name}, starting {YEAR}")
+    except OSError as exc:
+        raise RuntimeError(f"archive {archive} failed: {exc}") from exc
+    n = len(data.get("matches") or [])
+    print(f"[INFO] new season {YEAR}; cleared {n} matches from {old}")
+    return empty_season(data, YEAR)
+
+
 def save_league(data: dict) -> None:
-    PROTO_DATA.parent.mkdir(parents=True, exist_ok=True)
+    PROTO_DIR.mkdir(parents=True, exist_ok=True)
+    try:
+        data["season"] = int(YEAR)
+    except ValueError:
+        data["season"] = YEAR
     text = json.dumps(data, ensure_ascii=False, indent=2)
     PROTO_DATA.write_text(text + "\n", encoding="utf-8")
 
@@ -692,6 +758,8 @@ def load_local_k1_rows() -> list[dict]:
         return []
     rows = []
     for row in payload.get("matches") or []:
+        if str(row.get("year") or "") != str(YEAR):
+            continue
         try:
             rnd = int(row.get("round"))
         except (TypeError, ValueError):
@@ -745,7 +813,16 @@ def apply_scores(data: dict, scores: dict) -> int:
 
 
 def main() -> int:
-    data = load_league()
+    try:
+        data = load_league()
+    except (FileNotFoundError, RuntimeError) as exc:
+        print(f"[ERR] {exc}")
+        return 1
+    try:
+        data = archive_and_reset_if_new_season(data)
+    except RuntimeError as exc:
+        print(f"[ERR] {exc}")
+        return 1
     slim_only = os.environ.get("SLIM_ONLY", "").lower() in ("1", "true", "yes")
     if slim_only:
         slim_league_data(data)

@@ -19,7 +19,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
 
@@ -31,7 +31,15 @@ sys.path.insert(0, str(SCRIPTS))
 
 from scout import _age, generate_scout  # noqa: E402
 
-YEAR = os.environ.get("KLEAGUE_YEAR") or str(datetime.now().year)
+
+def kleague_year() -> str:
+    env = (os.environ.get("KLEAGUE_YEAR") or "").strip()
+    if env:
+        return env
+    return str(datetime.now(timezone(timedelta(hours=9))).year)
+
+
+YEAR = kleague_year()
 FORCE = os.environ.get("KLEAGUE_FORCE", "").lower() in ("1", "true", "yes")
 ONLY_TEAM = (os.environ.get("KLEAGUE_TEAM_ID") or "").strip().upper()
 SLEEP = float(os.environ.get("KLEAGUE_SLEEP") or "0.25")

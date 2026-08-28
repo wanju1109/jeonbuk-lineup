@@ -47,7 +47,7 @@ jobs:
         run: |
           set -e
           if [ -z "$KLEAGUE_YEAR" ]; then
-            export KLEAGUE_YEAR="$(date +%Y)"
+            export KLEAGUE_YEAR="$(TZ=Asia/Seoul date +%Y)"
           fi
           # Cron / empty team without game_id → Jeonbuk chalk + full schedule.
           if [ "${{ github.event_name }}" = "schedule" ]; then
@@ -70,7 +70,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add c_report/data player_report/data/events_2026.json || true
+          git add c_report/data player_report/data/events_*.json || true
           if git diff --staged --quiet; then
             echo "No data changes"
             exit 0

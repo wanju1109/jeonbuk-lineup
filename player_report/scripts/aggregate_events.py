@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fold CHALK BOARD match JSON into one compact player-season file.
 
-Reads c_report/data/{game_id}.json (Bepro11 extra events).
+Reads c_report/data chalkboard JSON (flat 2026 files, {year}/ later).
 Writes player_report/data/events_{year}.json.
 Does not store raw match files again.
 """
@@ -11,13 +11,24 @@ from __future__ import annotations
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 C_DATA = ROOT.parent / "c_report" / "data"
 OUT_DIR = ROOT / "data"
-YEAR = os.environ.get("KLEAGUE_YEAR") or str(datetime.now().year)
+LEGACY_FLAT_YEAR = "2026"
+META_JSON = ("index.json", "schedule.json", "club-attendance.json", "collected.json")
+
+
+def kleague_year() -> str:
+    env = (os.environ.get("KLEAGUE_YEAR") or "").strip()
+    if env:
+        return env
+    return str(datetime.now(timezone(timedelta(hours=9))).year)
+
+
+YEAR = kleague_year()
 
 INT_KEYS = (
     "minutes",
@@ -200,15 +211,31 @@ def finalize(players: dict) -> dict:
     return out
 
 
+def iter_season_match_files(year: str) -> list[Path]:
+    rows: list[Path] = []
+    if not C_DATA.is_dir():
+        return rows
+    if str(year) == LEGACY_FLAT_YEAR:
+        for path in C_DATA.glob("*.json"):
+            if path.name in META_JSON:
+                continue
+            if path.stem.isdigit():
+                rows.append(path)
+    folder = C_DATA / str(year)
+    if folder.is_dir():
+        for path in folder.glob("*.json"):
+            if path.stem.isdigit():
+                rows.append(path)
+    return rows
+
+
 def main() -> int:
     if not C_DATA.is_dir():
         print("FAIL missing %s" % C_DATA, flush=True)
         return 1
     players: dict[str, dict] = {}
     games = []
-    for path in sorted(C_DATA.glob("*.json"), key=lambda p: p.name):
-        if not path.stem.isdigit():
-            continue
+    for path in sorted(iter_season_match_files(YEAR), key=lambda p: p.name):
         gid = ingest_match(path, players)
         if gid:
             games.append(gid)
