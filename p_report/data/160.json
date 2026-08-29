@@ -1,18 +1,18 @@
 {
   "meta": {
-    "game_id": "155",
+    "game_id": "160",
     "year": "2026",
-    "round": 26,
+    "round": 27,
     "competition": "하나은행 K리그1",
     "home": {
       "name": "제주",
       "team_id": "K04"
     },
     "away": {
-      "name": "대전",
-      "team_id": "K10"
+      "name": "울산",
+      "team_id": "K01"
     },
-    "opponent": "대전",
+    "opponent": "울산",
     "ha": "H",
     "jeonbuk_match": false,
     "venue": "제주 월드컵",
@@ -21,32 +21,31 @@
       "games": 13,
       "total": 67139
     },
-    "kickoff": "2026-08-30T19:00:00+09:00",
-    "kickoff_label": "2026-08-30 19:00 KST",
-    "date_md": "08/30",
-    "label": "제주 VS 대전 (155, 08/30)",
-    "hours_to_kickoff": 23.8,
-    "within_48h": true,
-    "published": true,
-    "generated_at": "2026-08-29T19:14:34.209804+09:00",
+    "kickoff": "2026-09-05T19:00:00+09:00",
+    "kickoff_label": "2026-09-05 19:00 KST",
+    "date_md": "09/05",
+    "label": "제주 VS 울산 (160, 09/05)",
+    "hours_to_kickoff": 167.7,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-08-29T19:15:47.945628+09:00",
     "preview_hours": 48.0
   },
-  "headline": "26R PREVIEW · 제주 vs 대전",
-  "thesis": "제주 vs 대전. 제주 최근 D W W D L, 대전 최근 W D L W W. 홈 제주이(가) 템포를 가져가며 xG 1.3 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "headline": "27R PREVIEW · 제주 vs 울산",
+  "thesis": "제주 vs 울산. 제주 최근 D W W D L, 울산 최근 W W D L L. 홈 제주이(가) 템포를 가져가며 xG 1.3 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "제주 vs 대전. 제주 최근 D W W D L (2승 2무 1패 / 최근 5경기). 대전 최근 W D L W W (3승 1무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 제주 xG 1.3·슈팅 12.0, 대전 xG 1.83·슈팅 14.4. 패스 성공률 71.2% vs 76.8%.",
-    "올 시즌 맞대결 2경기 — 제주 기준 1승 1무 0패.",
+    "제주 vs 울산. 제주 최근 D W W D L (2승 2무 1패 / 최근 5경기). 울산 최근 W W D L L (2승 1무 2패 / 최근 5경기).",
+    "최근 5경기 평균 — 제주 xG 1.3·슈팅 12.0, 울산 xG 1.28·슈팅 9.0. 패스 성공률 71.2% vs 77.5%.",
+    "올 시즌 맞대결 2경기 — 제주 기준 0승 0무 2패.",
     "경기장 제주 월드컵 · 제주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "제주은 슈팅 많음, 수비 기회 허용, 적극 압박 흐름이고, 대전은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.3 vs 1.83, 슈팅 12.0 vs 14.4, 파이널 서드 터치 23.7% vs 29.7%입니다.",
+    "contrast": "제주은 슈팅 많음, 수비 기회 허용, 적극 압박 흐름이고, 울산은(는) 낮은 블록형 그림입니다. 최근 xG 1.3 vs 1.28, 슈팅 12.0 vs 9.0, 파이널 서드 터치 23.7% vs 21.4%입니다.",
     "edge": [
       "홈 이점(제주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
-      "대전의 xG 1.83가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다.",
-      "대전이(가) 상승세입니다. 한 번의 역습·세트피스에 흔들릴 수 있습니다."
+      "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
     ],
     "target": [
       "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
@@ -54,8 +53,7 @@
       "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
     ],
     "caution": [
-      "대전 압박 시도가 많습니다. 제주 빌드업 첫 패스 실수를 줄여야 합니다.",
-      "대전 역습 첫 패스와 제주의 앞공간 커버."
+      "울산 역습 첫 패스와 제주의 앞공간 커버."
     ]
   },
   "matchup": {
@@ -63,54 +61,54 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.3,
-        "opponent": 1.83,
-        "better": "opponent"
+        "opponent": 1.28,
+        "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.39,
-        "opponent": 1.16,
+        "opponent": 1.22,
         "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 12.0,
-        "opponent": 14.4,
-        "better": "opponent"
+        "opponent": 9.0,
+        "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.4,
-        "opponent": 6.6,
-        "better": "opponent"
+        "opponent": 4.0,
+        "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 71.2,
-        "opponent": 76.8,
+        "opponent": 77.5,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 23.7,
-        "opponent": 29.7,
+        "opponent": 21.4,
         "suffix": "%",
-        "better": "opponent"
+        "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 20.6,
-        "opponent": 27.2,
-        "better": "opponent"
+        "opponent": 15.8,
+        "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 제주 xG 1.3 / xGA 1.39, 대전 xG 1.83 / xGA 1.16."
+    "summary": "최근 5경기 기준 — 제주 xG 1.3 / xGA 1.39, 울산 xG 1.28 / xGA 1.22."
   },
   "h2h_summary": {
-    "wins": 1,
-    "draws": 1,
-    "losses": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 2,
     "games": 2
   },
   "form": {
@@ -214,76 +212,76 @@
     ],
     "opponent": [
       {
-        "game_id": "125",
+        "game_id": "124",
         "year": "2026",
         "round": 21,
         "date": "2026-08-02",
-        "home": "대전",
-        "away": "광주",
-        "score": "2:0",
+        "home": "울산",
+        "away": "안양",
+        "score": "2:1",
         "result": "W",
-        "opponent": "광주",
+        "opponent": "안양",
         "ha": "H",
-        "xg": 1.79,
-        "xga": 0.74,
-        "shots": 16,
-        "sot": 9,
+        "xg": 2.13,
+        "xga": 1.42,
+        "shots": 11,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 1
+      },
+      {
+        "game_id": "132",
+        "year": "2026",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "포항",
+        "away": "울산",
+        "score": "0:2",
+        "result": "W",
+        "opponent": "포항",
+        "ha": "A",
+        "xg": 0.89,
+        "xga": 0.51,
+        "shots": 10,
+        "sot": 6,
         "goals_for": 2,
         "goals_against": 0
       },
       {
-        "game_id": "127",
-        "year": "2026",
-        "round": 22,
-        "date": "2026-08-08",
-        "home": "안양",
-        "away": "대전",
-        "score": "1:1",
-        "result": "D",
-        "opponent": "안양",
-        "ha": "A",
-        "xg": 2.16,
-        "xga": 1.56,
-        "shots": 16,
-        "sot": 9,
-        "goals_for": 1,
-        "goals_against": 1
-      },
-      {
-        "game_id": "135",
+        "game_id": "138",
         "year": "2026",
         "round": 23,
-        "date": "2026-08-15",
-        "home": "서울",
-        "away": "대전",
-        "score": "4:1",
-        "result": "L",
-        "opponent": "서울",
-        "ha": "A",
-        "xg": 1.06,
-        "xga": 2.73,
-        "shots": 13,
-        "sot": 4,
-        "goals_for": 1,
-        "goals_against": 4
-      },
-      {
-        "game_id": "143",
-        "year": "2026",
-        "round": 24,
-        "date": "2026-08-23",
-        "home": "대전",
+        "date": "2026-08-16",
+        "home": "울산",
         "away": "강원",
-        "score": "3:0",
-        "result": "W",
+        "score": "2:2",
+        "result": "D",
         "opponent": "강원",
         "ha": "H",
-        "xg": 2.28,
-        "xga": 0.25,
+        "xg": 2.41,
+        "xga": 1.21,
         "shots": 12,
-        "sot": 4,
-        "goals_for": 3,
-        "goals_against": 0
+        "sot": 7,
+        "goals_for": 2,
+        "goals_against": 2
+      },
+      {
+        "game_id": "140",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "전북",
+        "away": "울산",
+        "score": "1:0",
+        "result": "L",
+        "opponent": "전북",
+        "ha": "A",
+        "xg": 0.48,
+        "xga": 1.08,
+        "shots": 9,
+        "sot": 0,
+        "goals_for": 0,
+        "goals_against": 1
       },
       {
         "game_id": "149",
@@ -293,44 +291,44 @@
         "home": "대전",
         "away": "울산",
         "score": "2:1",
-        "result": "W",
-        "opponent": "울산",
-        "ha": "H",
-        "xg": 1.88,
-        "xga": 0.51,
-        "shots": 15,
-        "sot": 7,
-        "goals_for": 2,
-        "goals_against": 1,
+        "result": "L",
+        "opponent": "대전",
+        "ha": "A",
+        "xg": 0.51,
+        "xga": 1.88,
+        "shots": 3,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 79.4,
-        "final_third_pct": 34.3,
-        "presses": 36,
+        "pass_pct": 72.1,
+        "final_third_pct": 16.3,
+        "presses": 12,
         "stats_source": "portal"
       }
     ]
   },
   "h2h": [
     {
-      "game_id": "52",
-      "round": 9,
-      "date": "2026-04-22",
-      "home": "대전",
-      "away": "제주",
-      "score": "0:1",
-      "result": "W",
-      "venue": "대전 월드컵"
+      "game_id": "22",
+      "round": 4,
+      "date": "2026-03-18",
+      "home": "제주",
+      "away": "울산",
+      "score": "0:2",
+      "result": "L",
+      "venue": "제주 월드컵"
     },
     {
-      "game_id": "100",
-      "round": 17,
-      "date": "2026-07-12",
-      "home": "제주",
-      "away": "대전",
-      "score": "0:0",
-      "result": "D",
-      "venue": "제주 월드컵"
+      "game_id": "82",
+      "round": 14,
+      "date": "2026-05-13",
+      "home": "울산",
+      "away": "제주",
+      "score": "2:1",
+      "result": "L",
+      "venue": "울산 문수"
     }
   ],
   "style": {
@@ -357,27 +355,23 @@
       "samples": 5
     },
     "opponent": {
-      "name": "대전",
-      "team_id": "K10",
+      "name": "울산",
+      "team_id": "K01",
       "tags": [
-        "상승세",
-        "기회 창출↑",
-        "슈팅 많음",
-        "전진 점유",
-        "적극 압박"
+        "낮은 블록형"
       ],
-      "record": "3승 1무 1패 / 최근 5경기",
-      "goals_for": 9,
+      "record": "2승 1무 2패 / 최근 5경기",
+      "goals_for": 7,
       "goals_against": 6,
-      "goal_diff": 3,
-      "avg_xg": 1.83,
-      "avg_xga": 1.16,
-      "avg_shots": 14.4,
-      "avg_sot": 6.6,
-      "avg_pass_pct": 76.8,
-      "avg_final_third_pct": 29.7,
-      "avg_presses": 27.2,
-      "avg_x": 50.8,
+      "goal_diff": 1,
+      "avg_xg": 1.28,
+      "avg_xga": 1.22,
+      "avg_shots": 9.0,
+      "avg_sot": 4.0,
+      "avg_pass_pct": 77.5,
+      "avg_final_third_pct": 21.4,
+      "avg_presses": 15.8,
+      "avg_x": 47.0,
       "samples": 5
     }
   },
@@ -393,8 +387,7 @@
       "key": "risk",
       "label": "제주이 불리한·조심할 점",
       "items": [
-        "대전의 xG 1.83가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다.",
-        "대전이(가) 상승세입니다. 한 번의 역습·세트피스에 흔들릴 수 있습니다."
+        "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
       ]
     },
     {
@@ -408,10 +401,9 @@
     },
     {
       "key": "watch",
-      "label": "대전 경계 포인트",
+      "label": "울산 경계 포인트",
       "items": [
-        "대전 압박 시도가 많습니다. 제주 빌드업 첫 패스 실수를 줄여야 합니다.",
-        "대전 역습 첫 패스와 제주의 앞공간 커버."
+        "울산 역습 첫 패스와 제주의 앞공간 커버."
       ]
     }
   ],
