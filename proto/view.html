@@ -176,7 +176,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
   </p>
   <section class="list" id="list"><p class="empty">불러오는 중…</p></section>
   <footer>
-    승무패 픽은 모델, U/O 2.5 픽은 라이브스코어 해외배당(짧은 쪽). 칸의 숫자는 해외배당이다.
+    승무패는 GD 모델 + 해외배당 보정(강한 우세·저신뢰 시). U/O 2.5는 포아송 튜닝. 칸 숫자는 해외배당.
     예정 경기는 분석하기를 눌러야 픽이 열립니다.
   </footer>
 </main>
@@ -289,20 +289,60 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     if (!m.picks[key]) m.picks[key] = {};
     m.picks[key].pick = lab;
   }
+  function oddsFavorite(wdl) {
+    var best = "승";
+    var min = Infinity;
+    ["승", "무", "패"].forEach(function (k) {
+      var v = Number(wdl[k]);
+      if (isFinite(v) && v > 0 && v < min) {
+        min = v;
+        best = k;
+      }
+    });
+    return { pick: best, min: min };
+  }
+  function impliedTop(wdl) {
+    var inv = {};
+    var sum = 0;
+    ["승", "무", "패"].forEach(function (k) {
+      var v = Number(wdl[k]);
+      inv[k] = 1 / (isFinite(v) && v > 0 ? v : 99);
+      sum += inv[k];
+    });
+    var top = 0;
+    ["승", "무", "패"].forEach(function (k) {
+      top = Math.max(top, inv[k] / sum);
+    });
+    return top;
+  }
+  function wdlGap(m) {
+    var dist = m.picks && m.picks.wdl && m.picks.wdl.dist;
+    if (!dist) return 0;
+    var vals = ["승", "무", "패"].map(function (k) { return Number(dist[k] || 0); }).sort(function (a, b) { return b - a; });
+    return vals.length > 1 ? vals[0] - vals[1] : vals[0];
+  }
+  function applyWdlOdds(m) {
+    if (!m || m.finished || !m.ls || !m.ls.wdl) return;
+    if (!m.picks || !m.picks.wdl) return;
+    var wdl = m.ls.wdl;
+    var model = m.picks.wdl.model_pick || m.picks.wdl.pick;
+    if (!model) return;
+    var fav = oddsFavorite(wdl);
+    var top = impliedTop(wdl);
+    var gap = wdlGap(m);
+    var pick = model;
+    if (model === fav.pick) {
+      pick = model;
+    } else if (fav.min <= 1.80 && top >= 0.44) {
+      pick = fav.pick;
+    } else if (gap < 0.07 && top >= 0.42) {
+      pick = fav.pick;
+    }
+    setPick(m, "wdl", pick);
+  }
   function applyOverseasPicks(m) {
     if (!m || m.finished || !m.ls) return;
-    var ou = m.ls.ou;
-    if (ou && ou.p != null) {
-      var tot = Number(ou.p);
-      var ov = Number(ou.o);
-      var un = Number(ou.u);
-      if (isFinite(tot) && ov > 0 && un > 0) {
-        var fav = un <= ov ? "언더" : "오버";
-        if (Math.abs(tot - 2.5) < 0.01) setPick(m, "ou25", fav);
-        else if (tot < 2.5) setPick(m, "ou25", "오버");
-        else setPick(m, "ou25", fav);
-      }
-    }
+    applyWdlOdds(m);
   }
   function cellOdds(m, key, opt) {
     var ls = m.ls;
