@@ -176,7 +176,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
   </p>
   <section class="list" id="list"><p class="empty">불러오는 중…</p></section>
   <footer>
-    승무패는 GD 모델 + 해외배당 보정(강한 우세·저신뢰 시). U/O 2.5는 포아송 튜닝. 칸 숫자는 해외배당.
+    승무패는 GD 모델 + Pinnacle·라이브스코어 해외배당 보정. U/O 2.5는 포아송 튜닝. 칸 숫자는 통합 해외배당.
     예정 경기는 분석하기를 눌러야 픽이 열립니다.
   </footer>
 </main>
@@ -321,10 +321,17 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     var vals = ["승", "무", "패"].map(function (k) { return Number(dist[k] || 0); }).sort(function (a, b) { return b - a; });
     return vals.length > 1 ? vals[0] - vals[1] : vals[0];
   }
+  function mergedWdl(m) {
+    var od = m.odds;
+    if (od && od.wdl) return od.wdl;
+    if (m.ls && m.ls.wdl) return m.ls.wdl;
+    return null;
+  }
   function applyWdlOdds(m) {
-    if (!m || m.finished || !m.ls || !m.ls.wdl) return;
+    if (!m || m.finished) return;
     if (!m.picks || !m.picks.wdl) return;
-    var wdl = m.ls.wdl;
+    var wdl = mergedWdl(m);
+    if (!wdl) return;
     var model = m.picks.wdl.model_pick || m.picks.wdl.pick;
     if (!model) return;
     var fav = oddsFavorite(wdl);
@@ -341,13 +348,16 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     setPick(m, "wdl", pick);
   }
   function applyOverseasPicks(m) {
-    if (!m || m.finished || !m.ls) return;
+    if (!m || m.finished) return;
     applyWdlOdds(m);
   }
   function cellOdds(m, key, opt) {
+    if (key === "wdl") {
+      var wdl = mergedWdl(m);
+      if (wdl) return wdl[opt] || "";
+    }
     var ls = m.ls;
     if (!ls) return "";
-    if (key === "wdl" && ls.wdl) return ls.wdl[opt] || "";
     if (key === "ou25" && ls.ou) {
       var tot = Number(ls.ou.p);
       if (Math.abs(tot - 2.5) < 0.01) {
@@ -512,29 +522,31 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
   }
 
   function oddsLine(m) {
+    var od = m.odds;
     var ls = m.ls;
-    if (!ls) {
+    var parts = [];
+    if (od && od.wdl) {
+      var src = (od.sources || []).join("+") || "해외";
+      parts.push(src + " " + od.wdl["승"] + " / " + od.wdl["무"] + " / " + od.wdl["패"]);
+    } else if (ls && ls.wdl) {
+      parts.push("해외 " + ls.wdl["승"] + " / " + ls.wdl["무"] + " / " + ls.wdl["패"]);
+    }
+    if (ls && ls.proto) {
+      parts.push("국내 " + ls.proto["승"] + " / " + ls.proto["무"] + " / " + ls.proto["패"]);
+    }
+    if (ls && ls.ou && Math.abs(Number(ls.ou.p) - 2.5) < 0.01) {
+      parts.push("U/O 2.5 " + ls.ou.u + "/" + ls.ou.o);
+    }
+    if (!parts.length) {
       return state.lsErr
         ? '<div class="formline">해외배당을 불러오지 못했다. (' + esc(state.lsErr) + ")</div>"
         : "";
     }
-    var parts = [];
-    if (ls.wdl) {
-      parts.push("해외 " + ls.wdl["승"] + " / " + ls.wdl["무"] + " / " + ls.wdl["패"]);
+    var tag = "";
+    if (!m.finished && m.picks && m.picks.wdl && m.picks.wdl.odds_tag) {
+      tag = " · 승무패 보정 " + esc(m.picks.wdl.odds_tag);
     }
-    if (ls.proto) {
-      parts.push("국내 " + ls.proto["승"] + " / " + ls.proto["무"] + " / " + ls.proto["패"]);
-    }
-    if (ls.ou && Math.abs(Number(ls.ou.p) - 2.5) < 0.01) {
-      parts.push("U/O 2.5 " + ls.ou.u + "/" + ls.ou.o);
-    }
-    if (!parts.length) return "";
-    var note = "";
-    if (!m.finished && ls.ou) {
-      var pk = m.picks || {};
-      note = " · U/O 2.5 픽 " + esc((pk.ou25 || {}).pick || "-");
-    }
-    return '<div class="formline">배당(라이브스코어) ' + esc(parts.join(" · ")) + note + "</div>";
+    return '<div class="formline">배당 ' + esc(parts.join(" · ")) + tag + "</div>";
   }
   function detailHtml(m) {
     var form = m.form || {};
