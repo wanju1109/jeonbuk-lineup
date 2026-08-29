@@ -25,27 +25,27 @@
     "kickoff_label": "2026-09-05 19:00 KST",
     "date_md": "09/05",
     "label": "제주 VS 울산 (160, 09/05)",
-    "hours_to_kickoff": 167.7,
+    "hours_to_kickoff": 161.2,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-29T19:15:47.945628+09:00",
+    "generated_at": "2026-08-30T01:50:34.410217+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 제주 vs 울산",
-  "thesis": "제주 vs 울산. 제주 최근 D W W D L, 울산 최근 W W D L L. 홈 제주이(가) 템포를 가져가며 xG 1.3 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "제주 vs 울산. 제주 최근 D W W D L, 울산 최근 W D L L W. 홈 제주이(가) 템포를 가져가며 xG 1.3 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "제주 vs 울산. 제주 최근 D W W D L (2승 2무 1패 / 최근 5경기). 울산 최근 W W D L L (2승 1무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 제주 xG 1.3·슈팅 12.0, 울산 xG 1.28·슈팅 9.0. 패스 성공률 71.2% vs 77.5%.",
+    "제주 vs 울산. 제주 최근 D W W D L (2승 2무 1패 / 최근 5경기). 울산 최근 W D L L W (2승 1무 2패 / 최근 5경기).",
+    "최근 5경기 평균 — 제주 xG 1.3·슈팅 12.0, 울산 xG 1.62·슈팅 9.8. 패스 성공률 71.2% vs 71.3%.",
     "올 시즌 맞대결 2경기 — 제주 기준 0승 0무 2패.",
     "경기장 제주 월드컵 · 제주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "제주은 슈팅 많음, 수비 기회 허용, 적극 압박 흐름이고, 울산은(는) 낮은 블록형 그림입니다. 최근 xG 1.3 vs 1.28, 슈팅 12.0 vs 9.0, 파이널 서드 터치 23.7% vs 21.4%입니다.",
+    "contrast": "제주은 슈팅 많음, 수비 기회 허용, 적극 압박 흐름이고, 울산은(는) 기회 창출↑, 낮은 블록형 그림입니다. 최근 xG 1.3 vs 1.62, 슈팅 12.0 vs 9.8, 파이널 서드 터치 23.7% vs 20.1%입니다.",
     "edge": [
       "홈 이점(제주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
-      "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+      "울산의 xG 1.62가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다."
     ],
     "target": [
       "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
@@ -61,49 +61,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.3,
-        "opponent": 1.28,
-        "better": "jeonbuk"
+        "opponent": 1.62,
+        "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.39,
-        "opponent": 1.22,
+        "opponent": 1.14,
         "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 12.0,
-        "opponent": 9.0,
+        "opponent": 9.8,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.4,
-        "opponent": 4.0,
-        "better": "jeonbuk"
+        "opponent": 5.0,
+        "better": "opponent"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 71.2,
-        "opponent": 77.5,
+        "opponent": 71.3,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 23.7,
-        "opponent": 21.4,
+        "opponent": 20.1,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 20.6,
-        "opponent": 15.8,
+        "opponent": 15.0,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 제주 xG 1.3 / xGA 1.39, 울산 xG 1.28 / xGA 1.22."
+    "summary": "최근 5경기 기준 — 제주 xG 1.3 / xGA 1.39, 울산 xG 1.62 / xGA 1.14."
   },
   "h2h_summary": {
     "wins": 0,
@@ -212,24 +212,6 @@
     ],
     "opponent": [
       {
-        "game_id": "124",
-        "year": "2026",
-        "round": 21,
-        "date": "2026-08-02",
-        "home": "울산",
-        "away": "안양",
-        "score": "2:1",
-        "result": "W",
-        "opponent": "안양",
-        "ha": "H",
-        "xg": 2.13,
-        "xga": 1.42,
-        "shots": 11,
-        "sot": 4,
-        "goals_for": 2,
-        "goals_against": 1
-      },
-      {
         "game_id": "132",
         "year": "2026",
         "round": 22,
@@ -306,6 +288,30 @@
         "final_third_pct": 16.3,
         "presses": 12,
         "stats_source": "portal"
+      },
+      {
+        "game_id": "151",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-29",
+        "home": "울산",
+        "away": "김천",
+        "score": "3:1",
+        "result": "W",
+        "opponent": "김천",
+        "ha": "H",
+        "xg": 3.79,
+        "xga": 1.02,
+        "shots": 15,
+        "sot": 9,
+        "goals_for": 3,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 49.7,
+        "final_third_pct": 21.7,
+        "presses": 11,
+        "stats_source": "portal"
       }
     ]
   },
@@ -358,20 +364,21 @@
       "name": "울산",
       "team_id": "K01",
       "tags": [
+        "기회 창출↑",
         "낮은 블록형"
       ],
       "record": "2승 1무 2패 / 최근 5경기",
-      "goals_for": 7,
+      "goals_for": 8,
       "goals_against": 6,
-      "goal_diff": 1,
-      "avg_xg": 1.28,
-      "avg_xga": 1.22,
-      "avg_shots": 9.0,
-      "avg_sot": 4.0,
-      "avg_pass_pct": 77.5,
-      "avg_final_third_pct": 21.4,
-      "avg_presses": 15.8,
-      "avg_x": 47.0,
+      "goal_diff": 2,
+      "avg_xg": 1.62,
+      "avg_xga": 1.14,
+      "avg_shots": 9.8,
+      "avg_sot": 5.0,
+      "avg_pass_pct": 71.3,
+      "avg_final_third_pct": 20.1,
+      "avg_presses": 15.0,
+      "avg_x": 47.4,
       "samples": 5
     }
   },
@@ -387,7 +394,7 @@
       "key": "risk",
       "label": "제주이 불리한·조심할 점",
       "items": [
-        "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+        "울산의 xG 1.62가 더 높습니다. 제주이 실점을 막는 전환 수비가 관건입니다."
       ]
     },
     {
