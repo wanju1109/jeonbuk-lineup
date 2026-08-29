@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28 11:26:53",
+  "generated_at": "2026-08-29 09:40:00",
   "season": 2026,
   "current_round": {
     "K1": 26,
@@ -496,26 +496,26 @@
       }
     },
     "K2": {
-      "wdl_hit": 81,
-      "wdl_total": 184,
-      "wdl_rate": 44.02,
-      "ou_hit": 89,
-      "ou_total": 184,
-      "ou_rate": 48.37,
+      "wdl_hit": 82,
+      "wdl_total": 186,
+      "wdl_rate": 44.09,
+      "ou_hit": 90,
+      "ou_total": 186,
+      "ou_rate": 48.39,
       "rates": {
-        "wdl": 44.02,
-        "ou25": 48.37
+        "wdl": 44.09,
+        "ou25": 48.39
       },
       "hits": {
         "wdl": {
-          "hit": 81,
-          "total": 184,
-          "rate": 44.02
+          "hit": 82,
+          "total": 186,
+          "rate": 44.09
         },
         "ou25": {
-          "hit": 89,
-          "total": 184,
-          "rate": 48.37
+          "hit": 90,
+          "total": 186,
+          "rate": 48.39
         }
       },
       "by_round": {
@@ -930,6 +930,24 @@
             "ou25": [
               2,
               8
+            ]
+          }
+        },
+        "24": {
+          "wdl_rate": 50.0,
+          "ou_rate": 50.0,
+          "rates": {
+            "wdl": 50.0,
+            "ou25": 50.0
+          },
+          "raw": {
+            "wdl": [
+              1,
+              2
+            ],
+            "ou25": [
+              1,
+              2
             ]
           }
         }
@@ -26256,8 +26274,11 @@
       "home": "안산 그리너스",
       "away": "대구 FC",
       "venue": "안산 와스타디움",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        1,
+        2
+      ],
       "form": {
         "home": "WLWDD",
         "away": "WDLLW",
@@ -26291,8 +26312,14 @@
           "line": "U/O 2.5"
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "패",
+        "ou25": "오버"
+      },
+      "hit": {
+        "wdl": true,
+        "ou25": true
+      },
       "reason": {
         "headline": "승무패 패 · U/O 2.5 오버 (신뢰 높음)",
         "paragraphs": [
@@ -26323,8 +26350,11 @@
       "home": "전남 드래곤즈",
       "away": "천안 시티",
       "venue": "광양 전용",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        1,
+        0
+      ],
       "form": {
         "home": "DLWDL",
         "away": "LLLDL",
@@ -26358,8 +26388,14 @@
           "line": "U/O 2.5"
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "승",
+        "ou25": "언더"
+      },
+      "hit": {
+        "wdl": false,
+        "ou25": false
+      },
       "reason": {
         "headline": "승무패 패 · U/O 2.5 오버 (신뢰 낮음)",
         "paragraphs": [
