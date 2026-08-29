@@ -31,7 +31,7 @@ html,body {
 .wrap { max-width:920px; margin:0 auto; padding:22px 16px 64px; }
 h1 { margin:0; font-size:1.28rem; letter-spacing:-.04em; font-weight:800; }
 .sub { margin:6px 0 16px; color:var(--muted); font-size:.8rem; }
-.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:14px; }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:14px; }
 .stat {
   background:var(--card); border:1px solid var(--line); border-radius:12px;
   padding:10px 12px; box-shadow:var(--shadow);
@@ -66,13 +66,14 @@ h1 { margin:0; font-size:1.28rem; letter-spacing:-.04em; font-weight:800; }
   border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);
 }
 .rounds > b { display:block; font-size:.72rem; color:var(--muted); margin:0 0 8px; font-weight:700; }
+.rounds > b .hint { font-weight:650; font-size:.65rem; margin-left:6px; }
 .rounds .grid { display:grid; grid-template-columns:repeat(10, minmax(0, 1fr)); gap:6px; }
 .rounds button {
-  width:100%; min-height:42px; padding:5px 2px;
+  width:100%; min-height:44px; padding:5px 2px;
   background:var(--soft); color:var(--ink); border:1px solid transparent;
   border-radius:10px; font-size:.76rem; font-weight:750; cursor:pointer; line-height:1.15;
 }
-.rounds button small { display:block; color:var(--muted); font-size:.6rem; font-weight:650; }
+.rounds button small { display:block; color:var(--muted); font-size:.55rem; font-weight:650; letter-spacing:-.02em; }
 .rounds button.on { background:var(--accent-2); color:#fff; }
 .rounds button.on small { color:#cbd5e1; }
 .rounds button.live { box-shadow:inset 0 0 0 1.5px var(--accent); }
@@ -175,7 +176,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
   </p>
   <section class="list" id="list"><p class="empty">불러오는 중…</p></section>
   <footer>
-    승무패·핸디·언더 예정 픽은 라이브스코어 해외배당(짧은 쪽). 지난 경기 적중은 모델 백테스트.
+    승무패 픽은 모델, U/O 2.5 픽은 라이브스코어 해외배당(짧은 쪽). 칸의 숫자는 해외배당이다.
     예정 경기는 분석하기를 눌러야 픽이 열립니다.
   </footer>
 </main>
@@ -185,12 +186,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
 
   var MK = [
     ["wdl", "승무패", ["승", "무", "패"]],
-    ["h_p1", "H+1", ["승", "무", "패"]],
-    ["h_p2", "H+2", ["승", "무", "패"]],
-    ["h_m1", "H-1", ["승", "무", "패"]],
-    ["h_m2", "H-2", ["승", "무", "패"]],
-    ["ou25", "U/O 2.5", ["언더", "오버"]],
-    ["ou35", "U/O 3.5", ["언더", "오버"]]
+    ["ou25", "U/O 2.5", ["언더", "오버"]]
   ];
   var STORE = "kleague_view_open_v1";
   var LS = "https://livescore.co.kr/developer/";
@@ -255,10 +251,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     });
     (state.data.matches || []).forEach(function (m) {
       var hit = map[m.league + "|" + m.date + "|" + keyTeam(m.home) + "|" + keyTeam(m.away)];
-      if (hit) {
-        m.ls = Object.assign({}, m.ls || {}, hit);
-        if (!m.finished) applyOverseasPicks(m);
-      }
+      if (hit) m.ls = Object.assign({}, m.ls || {}, hit);
     });
   }
   function loadBoardOdds() {
@@ -278,7 +271,6 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     var seq = encodeURIComponent(m.ls.seq);
     return Promise.all([
       lsPost("new&seq&process=odds&seq=" + seq + "&kind="),
-      lsPost("new&seq&process=odds&seq=" + seq + "&kind=3"),
       lsPost("new&seq&process=odds&seq=" + seq + "&kind=4")
     ]).then(function (arr) {
       m.ls.extra = true;
@@ -287,9 +279,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       var dv = wdl ? firstVal(wdl["2"]) : null;
       if (ov) m.ls.wdl = { "승": ov.w, "무": ov.d, "패": ov.l };
       if (dv) m.ls.proto = { "승": dv.w, "무": dv.d, "패": dv.l };
-      var ah = arr[1] && arr[1].data ? firstVal(arr[1].data["1"]) : null;
-      if (ah) m.ls.ah = ah;
-      var ou = arr[2] && arr[2].data ? firstVal(arr[2].data["1"]) : null;
+      var ou = arr[1] && arr[1].data ? firstVal(arr[1].data["1"]) : null;
       if (ou) m.ls.ou = ou;
       applyOverseasPicks(m);
     }).catch(function () {});
@@ -301,35 +291,6 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
   }
   function applyOverseasPicks(m) {
     if (!m || m.finished || !m.ls) return;
-    var wdl = m.ls.wdl;
-    if (wdl) {
-      var opts = [
-        { k: "승", v: Number(wdl["승"]) },
-        { k: "무", v: Number(wdl["무"]) },
-        { k: "패", v: Number(wdl["패"]) }
-      ].filter(function (x) { return x.v > 0; });
-      if (opts.length) {
-        opts.sort(function (a, b) { return a.v - b.v; });
-        setPick(m, "wdl", opts[0].k);
-      }
-    }
-    var ah = m.ls.ah;
-    if (ah && ah.p != null) {
-      var line = Number(ah.p);
-      var hh = Number(ah.h);
-      var aa = Number(ah.a);
-      if (isFinite(line) && hh > 0 && aa > 0) {
-        function hp(homeLine) {
-          if (homeLine > line) return "승";
-          if (homeLine < line) return "패";
-          return hh <= aa ? "승" : "패";
-        }
-        setPick(m, "h_p1", hp(1));
-        setPick(m, "h_p2", hp(2));
-        setPick(m, "h_m1", hp(-1));
-        setPick(m, "h_m2", hp(-2));
-      }
-    }
     var ou = m.ls.ou;
     if (ou && ou.p != null) {
       var tot = Number(ou.p);
@@ -337,22 +298,9 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       var un = Number(ou.u);
       if (isFinite(tot) && ov > 0 && un > 0) {
         var fav = un <= ov ? "언더" : "오버";
-        if (Math.abs(tot - 2.5) < 0.01) {
-          setPick(m, "ou25", fav);
-          setPick(m, "ou35", "언더");
-        } else if (Math.abs(tot - 3.5) < 0.01) {
-          setPick(m, "ou35", fav);
-          setPick(m, "ou25", "오버");
-        } else if (tot <= 2) {
-          setPick(m, "ou25", "오버");
-          setPick(m, "ou35", tot < 3 ? "오버" : fav);
-        } else if (tot >= 3) {
-          setPick(m, "ou25", "오버");
-          setPick(m, "ou35", tot <= 3.5 ? fav : "오버");
-        } else {
-          setPick(m, "ou25", tot > 2.5 ? "오버" : fav);
-          setPick(m, "ou35", "언더");
-        }
+        if (Math.abs(tot - 2.5) < 0.01) setPick(m, "ou25", fav);
+        else if (tot < 2.5) setPick(m, "ou25", "오버");
+        else setPick(m, "ou25", fav);
       }
     }
   }
@@ -360,24 +308,9 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     var ls = m.ls;
     if (!ls) return "";
     if (key === "wdl" && ls.wdl) return ls.wdl[opt] || "";
-    if (ls.ah) {
-      var line = Number(ls.ah.p);
-      var row = "";
-      if (line === 1) row = "h_p1";
-      else if (line === 2) row = "h_p2";
-      else if (line === -1) row = "h_m1";
-      else if (line === -2) row = "h_m2";
-      if (row === key) {
-        if (opt === "승") return ls.ah.h || "";
-        if (opt === "패") return ls.ah.a || "";
-      }
-    }
-    if (ls.ou) {
+    if (key === "ou25" && ls.ou) {
       var tot = Number(ls.ou.p);
-      if (Math.abs(tot - 2.5) < 0.01 && key === "ou25") {
-        return opt === "언더" ? (ls.ou.u || "") : (ls.ou.o || "");
-      }
-      if (Math.abs(tot - 3.5) < 0.01 && key === "ou35") {
+      if (Math.abs(tot - 2.5) < 0.01) {
         return opt === "언더" ? (ls.ou.u || "") : (ls.ou.o || "");
       }
     }
@@ -387,6 +320,10 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     if (!d) return "";
     var p = String(d).split("-");
     return p.length === 3 ? p[1] + "." + p[2] : d;
+  }
+  function pctRound(hit, mk) {
+    if (!mk) return "-";
+    return Math.round((100 * hit) / mk) + "%";
   }
   function currentRound(lg) {
     return (state.data && state.data.current_round && state.data.current_round[lg]) || 1;
@@ -411,14 +348,14 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     (state.data.matches || []).forEach(function (m) {
       if (m.league !== lg) return;
       var r = String(m.round);
-      if (!map[r]) map[r] = { total: 0, fin: 0, hit: 0, mk: 0 };
+      if (!map[r]) map[r] = { total: 0, fin: 0, wdlHit: 0, wdlMk: 0, ouHit: 0, ouMk: 0 };
       map[r].total += 1;
       if (!m.finished) return;
       map[r].fin += 1;
-      MK.forEach(function (x) {
-        map[r].mk += 1;
-        if (m.hit && m.hit[x[0]]) map[r].hit += 1;
-      });
+      map[r].wdlMk += 1;
+      if (m.hit && m.hit.wdl) map[r].wdlHit += 1;
+      map[r].ouMk += 1;
+      if (m.hit && m.hit.ou25) map[r].ouHit += 1;
     });
     return map;
   }
@@ -460,14 +397,14 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     if (!state.round || !stats[String(state.round)]) {
       state.round = roundForTab(lg, state.tab);
     }
-    var html = "<b>라운드</b><div class=\"grid\">";
+    var html = "<b>라운드 <span class=\"hint\">승무패 / U/O</span></b><div class=\"grid\">";
     rounds.forEach(function (r) {
       var info = stats[r];
       var done = info.fin > 0 && info.fin === info.total;
       var live = info.fin > 0 && info.fin < info.total;
       var rate = "";
-      if (info.fin > 0 && info.mk > 0) {
-        rate = "<small>" + Math.round((100 * info.hit) / info.mk) + "%</small>";
+      if (info.fin > 0 && (info.wdlMk > 0 || info.ouMk > 0)) {
+        rate = "<small>" + pctRound(info.wdlHit, info.wdlMk) + "/" + pctRound(info.ouHit, info.ouMk) + "</small>";
       }
       var cls = [];
       if (String(state.round) === String(r)) cls.push("on");
@@ -490,11 +427,11 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     document.getElementById("stats").innerHTML =
       '<div class="stat"><b>' + (state.league === "K1" ? "K리그1" : "K리그2") +
       " 현재</b><strong>" + currentRound(state.league) + "R</strong></div>" +
-      box("H+1 적중", "h_p1") +
       box("승무패 적중", "wdl") +
       box("U/O 2.5 적중", "ou25");
     document.getElementById("sub").textContent =
-      "2026시즌 · 생성 " + (state.data.generated_at || "-") +
+      (state.data.season ? state.data.season + "시즌 · " : "") +
+      "생성 " + (state.data.generated_at || "-") +
       " · 지난 경기는 예측과 실제를 같이 표시, 예정 경기는 분석하기를 누를 때 공개";
   }
 
@@ -548,21 +485,14 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     if (ls.proto) {
       parts.push("국내 " + ls.proto["승"] + " / " + ls.proto["무"] + " / " + ls.proto["패"]);
     }
-    if (ls.ah) {
-      parts.push("H" + ls.ah.p + " " + ls.ah.h + "/" + ls.ah.a);
-    }
-    if (ls.ou) {
-      parts.push("U/O " + ls.ou.p + " " + ls.ou.u + "/" + ls.ou.o);
+    if (ls.ou && Math.abs(Number(ls.ou.p) - 2.5) < 0.01) {
+      parts.push("U/O 2.5 " + ls.ou.u + "/" + ls.ou.o);
     }
     if (!parts.length) return "";
     var note = "";
-    if (!m.finished && (ls.ah || ls.ou)) {
+    if (!m.finished && ls.ou) {
       var pk = m.picks || {};
-      note = " · 핸디·언더 픽은 이 배당 기준 (H+1 " +
-        esc((pk.h_p1 || {}).pick || "-") + " · H-1 " +
-        esc((pk.h_m1 || {}).pick || "-") + " · U2.5 " +
-        esc((pk.ou25 || {}).pick || "-") + " · U3.5 " +
-        esc((pk.ou35 || {}).pick || "-") + ")";
+      note = " · U/O 2.5 픽 " + esc((pk.ou25 || {}).pick || "-");
     }
     return '<div class="formline">배당(라이브스코어) ' + esc(parts.join(" · ")) + note + "</div>";
   }
@@ -572,7 +502,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       var s = String(p);
       if (s.indexOf("칸에 보이는") >= 0) return false;
       if (s.indexOf("핸디캡 홈") === 0) return false;
-      if (s.indexOf("언더오버") === 0) return false;
+      if (s.indexOf("언더오버 3.5") === 0) return false;
       return true;
     }).map(function (p) {
       return "<p>" + esc(p) + "</p>";
