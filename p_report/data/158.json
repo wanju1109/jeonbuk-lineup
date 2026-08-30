@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-05 19:00 KST",
     "date_md": "09/05",
     "label": "서울 VS 인천 (158, 09/05)",
-    "hours_to_kickoff": 132.7,
+    "hours_to_kickoff": 130.4,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-31T06:16:04.188931+09:00",
+    "generated_at": "2026-08-31T08:37:08.800250+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 서울 vs 인천",
   "thesis": "서울 vs 인천. 서울 최근 D W W W W, 인천 최근 D D W L D. 홈 서울이(가) 템포를 가져가며 xG 2.25 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "서울 vs 인천. 서울 최근 D W W W W (4승 1무 0패 / 최근 5경기). 인천 최근 D D W L D (1승 3무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 서울 xG 2.25·슈팅 16.2, 인천 xG 1.01·슈팅 9.4. 패스 성공률 76.8% vs 77.3%.",
+    "최근 5경기 평균 — 서울 xG 2.25·슈팅 16.2, 인천 xG 1.01·슈팅 9.4. 패스 성공률 76.7% vs 77.3%.",
     "올 시즌 맞대결 2경기 — 서울 기준 2승 0무 0패.",
     "경기장 서울 월드컵 · 서울 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -86,7 +86,7 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 76.8,
+        "jeonbuk": 76.7,
         "opponent": 77.3,
         "suffix": "%",
         "better": "opponent"
@@ -212,7 +212,7 @@
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 78.8,
+        "pass_pct": 78.4,
         "final_third_pct": 39.1,
         "presses": 26,
         "stats_source": "portal"
@@ -358,7 +358,7 @@
       "avg_xga": 0.57,
       "avg_shots": 16.2,
       "avg_sot": 8.0,
-      "avg_pass_pct": 76.8,
+      "avg_pass_pct": 76.7,
       "avg_final_third_pct": 30.9,
       "avg_presses": 23.4,
       "avg_x": 47.6,

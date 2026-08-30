@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-05 19:00 KST",
     "date_md": "09/05",
     "label": "부천 VS 대전 (157, 09/05)",
-    "hours_to_kickoff": 132.7,
+    "hours_to_kickoff": 130.4,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-31T06:15:43.126838+09:00",
+    "generated_at": "2026-08-31T08:36:52.756293+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 부천 vs 대전",
   "thesis": "부천 vs 대전. 부천 최근 D W W L D, 대전 최근 D L W W L. 홈 부천이(가) 템포를 가져가며 xG 1.08 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "부천 vs 대전. 부천 최근 D W W L D (2승 2무 1패 / 최근 5경기). 대전 최근 D L W W L (2승 1무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 부천 xG 1.08·슈팅 10.4, 대전 xG 1.87·슈팅 13.4. 패스 성공률 65.2% vs 74.8%.",
+    "최근 5경기 평균 — 부천 xG 1.08·슈팅 10.4, 대전 xG 1.87·슈팅 13.4. 패스 성공률 65.2% vs 74.7%.",
     "올 시즌 맞대결 2경기 — 부천 기준 0승 2무 0패.",
     "경기장 부천 종합 · 부천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -86,7 +86,7 @@
       {
         "label": "패스 성공률",
         "jeonbuk": 65.2,
-        "opponent": 74.8,
+        "opponent": 74.7,
         "suffix": "%",
         "better": "opponent"
       },
@@ -315,7 +315,7 @@
         "goals_against": 3,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 73.4,
+        "pass_pct": 73.0,
         "final_third_pct": 27.9,
         "presses": 35,
         "stats_source": "portal"
@@ -383,7 +383,7 @@
       "avg_xga": 1.2,
       "avg_shots": 13.4,
       "avg_sot": 5.4,
-      "avg_pass_pct": 74.8,
+      "avg_pass_pct": 74.7,
       "avg_final_third_pct": 29.7,
       "avg_presses": 29.4,
       "avg_x": 50.3,

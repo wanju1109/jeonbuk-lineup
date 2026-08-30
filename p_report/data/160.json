@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-05 19:00 KST",
     "date_md": "09/05",
     "label": "제주 VS 울산 (160, 09/05)",
-    "hours_to_kickoff": 132.7,
+    "hours_to_kickoff": 130.4,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-31T06:16:34.490337+09:00",
+    "generated_at": "2026-08-31T08:37:29.991089+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 제주 vs 울산",
   "thesis": "제주 vs 울산. 제주 최근 W W D L W, 울산 최근 W D L L W. 홈 제주이(가) 템포를 가져가며 xG 1.2 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "제주 vs 울산. 제주 최근 W W D L W (3승 1무 1패 / 최근 5경기). 울산 최근 W D L L W (2승 1무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 제주 xG 1.2·슈팅 11.8, 울산 xG 1.62·슈팅 9.8. 패스 성공률 70.1% vs 71.0%.",
+    "최근 5경기 평균 — 제주 xG 1.2·슈팅 11.8, 울산 xG 1.62·슈팅 9.8. 패스 성공률 70.0% vs 71.0%.",
     "올 시즌 맞대결 2경기 — 제주 기준 0승 0무 2패.",
     "경기장 제주 월드컵 · 제주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -85,7 +85,7 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 70.1,
+        "jeonbuk": 70.0,
         "opponent": 71.0,
         "suffix": "%",
         "better": "opponent"
@@ -211,7 +211,7 @@
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 69.8,
+        "pass_pct": 69.5,
         "final_third_pct": 25.0,
         "presses": 9,
         "stats_source": "portal"
@@ -360,7 +360,7 @@
       "avg_xga": 1.5,
       "avg_shots": 11.8,
       "avg_sot": 4.6,
-      "avg_pass_pct": 70.1,
+      "avg_pass_pct": 70.0,
       "avg_final_third_pct": 23.3,
       "avg_presses": 17.0,
       "avg_x": 46.5,
