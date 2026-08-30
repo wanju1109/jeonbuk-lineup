@@ -25,24 +25,24 @@
     "kickoff_label": "2026-09-05 19:00 KST",
     "date_md": "09/05",
     "label": "서울 VS 인천 (158, 09/05)",
-    "hours_to_kickoff": 141.9,
+    "hours_to_kickoff": 137.2,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-30T21:03:10.938616+09:00",
+    "generated_at": "2026-08-31T01:49:39.324335+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 서울 vs 인천",
-  "thesis": "서울 vs 인천. 서울 최근 D W W W W, 인천 최근 D D W L ?. 홈 서울이(가) 템포를 가져가며 xG 1.9 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "서울 vs 인천. 서울 최근 D W W W W, 인천 최근 D D W L D. 홈 서울이(가) 템포를 가져가며 xG 2.25 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "서울 vs 인천. 서울 최근 D W W W W (4승 1무 0패 / 최근 5경기). 인천 최근 D D W L ? (1승 2무 1패 / 최근 4경기).",
-    "최근 5경기 평균 — 서울 xG 1.9·슈팅 14.2, 인천 xG 1.11·슈팅 9.8. 패스 성공률 75.5% vs 77.5%.",
+    "서울 vs 인천. 서울 최근 D W W W W (4승 1무 0패 / 최근 5경기). 인천 최근 D D W L D (1승 3무 1패 / 최근 5경기).",
+    "최근 5경기 평균 — 서울 xG 2.25·슈팅 16.2, 인천 xG 1.01·슈팅 9.4. 패스 성공률 76.8% vs 77.3%.",
     "올 시즌 맞대결 2경기 — 서울 기준 2승 0무 0패.",
     "경기장 서울 월드컵 · 서울 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "서울은 상승세, 기회 창출↑, 슈팅 많음 흐름이고, 인천은(는) 비기는 흐름 그림입니다. 최근 xG 1.9 vs 1.11, 슈팅 14.2 vs 9.8, 파이널 서드 터치 29.2% vs 24.0%입니다.",
+    "contrast": "서울은 상승세, 기회 창출↑, 슈팅 많음 흐름이고, 인천은(는) 비기는 흐름 그림입니다. 최근 xG 2.25 vs 1.01, 슈팅 16.2 vs 9.4, 파이널 서드 터치 30.9% vs 24.0%입니다.",
     "edge": [
-      "서울이(가) 최근 xG 1.9로 인천(1.11)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "서울이(가) 최근 xG 2.25로 인천(1.01)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "서울 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
       "홈 이점(서울). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -62,50 +62,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.9,
-        "opponent": 1.11,
+        "jeonbuk": 2.25,
+        "opponent": 1.01,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 0.55,
-        "opponent": 1.26,
+        "jeonbuk": 0.57,
+        "opponent": 1.17,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 14.2,
-        "opponent": 9.8,
+        "jeonbuk": 16.2,
+        "opponent": 9.4,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 7.2,
+        "jeonbuk": 8.0,
         "opponent": 3.2,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 75.5,
-        "opponent": 77.5,
+        "jeonbuk": 76.8,
+        "opponent": 77.3,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 29.2,
+        "jeonbuk": 30.9,
         "opponent": 24.0,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 21.0,
-        "opponent": 16.5,
+        "jeonbuk": 23.4,
+        "opponent": 17.0,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 서울 xG 1.9 / xGA 0.55, 인천 xG 1.11 / xGA 1.26."
+    "summary": "최근 5경기 기준 — 서울 xG 2.25 / xGA 0.57, 인천 xG 1.01 / xGA 1.17."
   },
   "h2h_summary": {
     "wins": 2,
@@ -204,17 +204,17 @@
         "result": "W",
         "opponent": "광주",
         "ha": "A",
-        "xg": 2.12,
-        "xga": 0.35,
-        "shots": 15,
-        "sot": 11,
+        "xg": 3.85,
+        "xga": 0.47,
+        "shots": 25,
+        "sot": 15,
         "goals_for": 5,
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 72.1,
-        "final_third_pct": 30.5,
-        "presses": 14,
+        "pass_pct": 78.8,
+        "final_third_pct": 39.1,
+        "presses": 26,
         "stats_source": "portal"
       }
     ],
@@ -304,17 +304,16 @@
         "date": "2026-08-30",
         "home": "인천",
         "away": "전북",
-        "score": "-",
-        "result": "?",
+        "score": "1:1",
+        "result": "D",
         "opponent": "전북",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 0.58,
+        "xga": 0.82,
+        "shots": 8,
+        "sot": 3,
+        "goals_for": 0,
+        "goals_against": 1
       }
     ]
   },
@@ -355,13 +354,13 @@
       "goals_for": 16,
       "goals_against": 3,
       "goal_diff": 13,
-      "avg_xg": 1.9,
-      "avg_xga": 0.55,
-      "avg_shots": 14.2,
-      "avg_sot": 7.2,
-      "avg_pass_pct": 75.5,
-      "avg_final_third_pct": 29.2,
-      "avg_presses": 21.0,
+      "avg_xg": 2.25,
+      "avg_xga": 0.57,
+      "avg_shots": 16.2,
+      "avg_sot": 8.0,
+      "avg_pass_pct": 76.8,
+      "avg_final_third_pct": 30.9,
+      "avg_presses": 23.4,
       "avg_x": 47.6,
       "samples": 5
     },
@@ -371,19 +370,19 @@
       "tags": [
         "비기는 흐름"
       ],
-      "record": "1승 2무 1패 / 최근 4경기",
+      "record": "1승 3무 1패 / 최근 5경기",
       "goals_for": 6,
-      "goals_against": 6,
-      "goal_diff": 0,
-      "avg_xg": 1.11,
-      "avg_xga": 1.26,
-      "avg_shots": 9.8,
+      "goals_against": 7,
+      "goal_diff": -1,
+      "avg_xg": 1.01,
+      "avg_xga": 1.17,
+      "avg_shots": 9.4,
       "avg_sot": 3.2,
-      "avg_pass_pct": 77.5,
+      "avg_pass_pct": 77.3,
       "avg_final_third_pct": 24.0,
-      "avg_presses": 16.5,
-      "avg_x": 46.7,
-      "samples": 4
+      "avg_presses": 17.0,
+      "avg_x": 46.5,
+      "samples": 5
     }
   },
   "cards": [
@@ -391,7 +390,7 @@
       "key": "edge",
       "label": "서울이 유리한 점",
       "items": [
-        "서울이(가) 최근 xG 1.9로 인천(1.11)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+        "서울이(가) 최근 xG 2.25로 인천(1.01)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
         "서울 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
         "홈 이점(서울). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
       ]

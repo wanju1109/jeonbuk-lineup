@@ -25,28 +25,28 @@
     "kickoff_label": "2026-09-06 19:00 KST",
     "date_md": "09/06",
     "label": "김천 VS 광주 (162, 09/06)",
-    "hours_to_kickoff": 165.9,
+    "hours_to_kickoff": 161.2,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-30T21:04:24.243832+09:00",
+    "generated_at": "2026-08-31T01:50:59.167430+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 김천 vs 광주",
   "thesis": "김천 vs 광주. 김천 최근 D D D D L, 광주 최근 D L L D L. 홈 김천이(가) 템포를 가져가며 xG 1.01 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "김천 vs 광주. 김천 최근 D D D D L (0승 4무 1패 / 최근 5경기). 광주 최근 D L L D L (0승 2무 3패 / 최근 5경기).",
-    "최근 5경기 평균 — 김천 xG 1.01·슈팅 11.4, 광주 xG 1.36·슈팅 11.8. 패스 성공률 73.6% vs 77.5%.",
+    "최근 5경기 평균 — 김천 xG 1.01·슈팅 11.4, 광주 xG 1.37·슈팅 12.0. 패스 성공률 73.6% vs 77.8%.",
     "올 시즌 맞대결 2경기 — 김천 기준 0승 2무 0패.",
     "경기장 김천 종합 · 김천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "김천은 비기는 흐름, 수비 기회 허용, 적극 압박 흐름이고, 광주은(는) 부진, 비기는 흐름, 수비 기회 허용 그림입니다. 최근 xG 1.01 vs 1.36, 슈팅 11.4 vs 11.8, 파이널 서드 터치 22.0% vs 19.3%입니다.",
+    "contrast": "김천은 비기는 흐름, 수비 기회 허용, 적극 압박 흐름이고, 광주은(는) 부진, 비기는 흐름, 슈팅 많음 그림입니다. 최근 xG 1.01 vs 1.37, 슈팅 11.4 vs 12.0, 파이널 서드 터치 22.0% vs 18.6%입니다.",
     "edge": [
       "광주 최근 흐름이 좋지 않습니다. 김천이 실수를 유도할 여지가 있습니다.",
       "홈 이점(김천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
-      "광주의 xG 1.36가 더 높습니다. 김천이 실점을 막는 전환 수비가 관건입니다."
+      "광주의 xG 1.37가 더 높습니다. 김천이 실점을 막는 전환 수비가 관건입니다."
     ],
     "target": [
       "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
@@ -62,19 +62,19 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.01,
-        "opponent": 1.36,
+        "opponent": 1.37,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.43,
-        "opponent": 1.51,
+        "opponent": 1.84,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
         "jeonbuk": 11.4,
-        "opponent": 11.8,
+        "opponent": 12.0,
         "better": "opponent"
       },
       {
@@ -86,25 +86,25 @@
       {
         "label": "패스 성공률",
         "jeonbuk": 73.6,
-        "opponent": 77.5,
+        "opponent": 77.8,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 22.0,
-        "opponent": 19.3,
+        "opponent": 18.6,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 22.8,
-        "opponent": 15.4,
+        "opponent": 15.8,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 김천 xG 1.01 / xGA 1.43, 광주 xG 1.36 / xGA 1.51."
+    "summary": "최근 5경기 기준 — 김천 xG 1.01 / xGA 1.43, 광주 xG 1.37 / xGA 1.84."
   },
   "h2h_summary": {
     "wins": 0,
@@ -301,17 +301,17 @@
         "result": "L",
         "opponent": "서울",
         "ha": "H",
-        "xg": 0.42,
-        "xga": 2.17,
-        "shots": 7,
+        "xg": 0.47,
+        "xga": 3.85,
+        "shots": 8,
         "sot": 6,
         "goals_for": 2,
         "goals_against": 5,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 72.9,
-        "final_third_pct": 19.4,
-        "presses": 9,
+        "pass_pct": 74.6,
+        "final_third_pct": 15.7,
+        "presses": 11,
         "stats_source": "portal"
       }
     ]
@@ -367,6 +367,7 @@
       "tags": [
         "부진",
         "비기는 흐름",
+        "슈팅 많음",
         "수비 기회 허용",
         "낮은 블록형"
       ],
@@ -374,13 +375,13 @@
       "goals_for": 5,
       "goals_against": 10,
       "goal_diff": -5,
-      "avg_xg": 1.36,
-      "avg_xga": 1.51,
-      "avg_shots": 11.8,
+      "avg_xg": 1.37,
+      "avg_xga": 1.84,
+      "avg_shots": 12.0,
       "avg_sot": 5.4,
-      "avg_pass_pct": 77.5,
-      "avg_final_third_pct": 19.3,
-      "avg_presses": 15.4,
+      "avg_pass_pct": 77.8,
+      "avg_final_third_pct": 18.6,
+      "avg_presses": 15.8,
       "avg_x": 48.6,
       "samples": 5
     }
@@ -398,7 +399,7 @@
       "key": "risk",
       "label": "김천이 불리한·조심할 점",
       "items": [
-        "광주의 xG 1.36가 더 높습니다. 김천이 실점을 막는 전환 수비가 관건입니다."
+        "광주의 xG 1.37가 더 높습니다. 김천이 실점을 막는 전환 수비가 관건입니다."
       ]
     },
     {

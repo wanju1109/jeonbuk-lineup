@@ -25,24 +25,24 @@
     "kickoff_label": "2026-09-05 19:00 KST",
     "date_md": "09/05",
     "label": "전북 VS 포항 (159, 09/05)",
-    "hours_to_kickoff": 142.0,
+    "hours_to_kickoff": 137.2,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-08-30T21:02:15.513445+09:00",
+    "generated_at": "2026-08-31T01:48:49.735543+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 전북 vs 포항",
-  "thesis": "전북 vs 포항. 전북 최근 L L W D ?, 포항 최근 L W L W D. 홈에서 기회 질(xG)과 슈팅 빈도를 유지하는 것이 이 경기의 핵심입니다.",
+  "thesis": "전북 vs 포항. 전북 최근 L L W D D, 포항 최근 L W L W D. 홈에서 기회 질(xG)과 슈팅 빈도를 유지하는 것이 이 경기의 핵심입니다.",
   "briefing": [
-    "전북 vs 포항. 전북 최근 L L W D ? (1승 1무 2패 / 최근 4경기, 4득 6실). 포항은 L W L W D (2승 1무 2패 / 최근 5경기, 4득 7실).",
-    "최근 5경기 평균 — 전북 xG 1.67·슈팅 18.2·유효슈팅 6.2, 포항 xG 0.82·슈팅 9.2·유효슈팅 2.0. 패스 성공률 77.1% vs 82.6%.",
+    "전북 vs 포항. 전북 최근 L L W D D (1승 2무 2패 / 최근 5경기, 5득 6실). 포항은 L W L W D (2승 1무 2패 / 최근 5경기, 4득 7실).",
+    "최근 5경기 평균 — 전북 xG 1.5·슈팅 17.0·유효슈팅 5.8, 포항 xG 0.87·슈팅 9.8·유효슈팅 2.2. 패스 성공률 77.8% vs 81.9%.",
     "올 시즌 맞대결 2경기 — 전북 2승 0무 0패.",
     "경기장 전주 월드컵 · 전북 홈. 전주 홈에서 템포와 라인 높이를 올리는 쪽이 유리합니다."
   ],
   "scout": {
-    "contrast": "전북은 기회 창출↑, 슈팅 많음, 적극 압박 흐름이고, 포항은(는) 기회 부족, 패스 안정, 낮은 블록형 그림입니다. 최근 xG 1.67 vs 0.82, 슈팅 18.2 vs 9.2, 파이널 서드 터치 26.5% vs 19.3%, 평균 터치 높이 49.1 vs 48.3입니다.",
+    "contrast": "전북은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 포항은(는) 기회 부족, 낮은 블록형 그림입니다. 최근 xG 1.5 vs 0.87, 슈팅 17.0 vs 9.8, 파이널 서드 터치 25.1% vs 19.6%, 평균 터치 높이 48.0 vs 48.3입니다.",
     "edge": [
-      "전북이 최근 기회 질(xG 1.67)에서 포항(0.82)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다.",
+      "전북이 최근 기회 질(xG 1.5)에서 포항(0.87)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다.",
       "홈 이점. 전주에서 라인 높이를 올려도 관중·익숙한 공간이 받쳐 줍니다."
     ],
     "risk": [
@@ -62,50 +62,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.67,
-        "opponent": 0.82,
+        "jeonbuk": 1.5,
+        "opponent": 0.87,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.11,
-        "opponent": 1.13,
+        "jeonbuk": 1.0,
+        "opponent": 1.15,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 18.2,
-        "opponent": 9.2,
+        "jeonbuk": 17.0,
+        "opponent": 9.8,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 6.2,
-        "opponent": 2.0,
+        "jeonbuk": 5.8,
+        "opponent": 2.2,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 77.1,
-        "opponent": 82.6,
+        "jeonbuk": 77.8,
+        "opponent": 81.9,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 26.5,
-        "opponent": 19.3,
+        "jeonbuk": 25.1,
+        "opponent": 19.6,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 29.5,
-        "opponent": 14.6,
+        "jeonbuk": 26.8,
+        "opponent": 15.2,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 4경기 기준 — 전북 xG 1.67 / xGA 1.11, 포항 xG 0.82 / xGA 1.13."
+    "summary": "최근 5경기 기준 — 전북 xG 1.5 / xGA 1.0, 포항 xG 0.87 / xGA 1.15."
   },
   "h2h_summary": {
     "wins": 2,
@@ -194,17 +194,16 @@
         "date": "2026-08-30",
         "home": "인천",
         "away": "전북",
-        "score": "-",
-        "result": "?",
+        "score": "1:1",
+        "result": "D",
         "opponent": "인천",
         "ha": "A",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 0.82,
+        "xga": 0.58,
+        "shots": 12,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 0
       }
     ],
     "opponent": [
@@ -297,17 +296,17 @@
         "result": "D",
         "opponent": "강원",
         "ha": "A",
-        "xg": 0.28,
-        "xga": 0.89,
-        "shots": 5,
-        "sot": 1,
+        "xg": 0.53,
+        "xga": 1.01,
+        "shots": 8,
+        "sot": 2,
         "goals_for": 0,
         "goals_against": 0,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 78.6,
-        "final_third_pct": 15.8,
-        "presses": 8,
+        "pass_pct": 74.9,
+        "final_third_pct": 17.7,
+        "presses": 11,
         "stats_source": "portal"
       }
     ]
@@ -339,43 +338,43 @@
       "name": "전북",
       "team_id": "K05",
       "tags": [
+        "비기는 흐름",
         "기회 창출↑",
         "슈팅 많음",
         "적극 압박"
       ],
-      "record": "1승 1무 2패 / 최근 4경기",
-      "goals_for": 4,
+      "record": "1승 2무 2패 / 최근 5경기",
+      "goals_for": 5,
       "goals_against": 6,
-      "goal_diff": -2,
-      "avg_xg": 1.67,
-      "avg_xga": 1.11,
-      "avg_shots": 18.2,
-      "avg_sot": 6.2,
-      "avg_pass_pct": 77.1,
-      "avg_final_third_pct": 26.5,
-      "avg_presses": 29.5,
-      "avg_x": 49.1,
-      "samples": 4
+      "goal_diff": -1,
+      "avg_xg": 1.5,
+      "avg_xga": 1.0,
+      "avg_shots": 17.0,
+      "avg_sot": 5.8,
+      "avg_pass_pct": 77.8,
+      "avg_final_third_pct": 25.1,
+      "avg_presses": 26.8,
+      "avg_x": 48.0,
+      "samples": 5
     },
     "opponent": {
       "name": "포항",
       "team_id": "K03",
       "tags": [
         "기회 부족",
-        "패스 안정",
         "낮은 블록형"
       ],
       "record": "2승 1무 2패 / 최근 5경기",
       "goals_for": 4,
       "goals_against": 7,
       "goal_diff": -3,
-      "avg_xg": 0.82,
-      "avg_xga": 1.13,
-      "avg_shots": 9.2,
-      "avg_sot": 2.0,
-      "avg_pass_pct": 82.6,
-      "avg_final_third_pct": 19.3,
-      "avg_presses": 14.6,
+      "avg_xg": 0.87,
+      "avg_xga": 1.15,
+      "avg_shots": 9.8,
+      "avg_sot": 2.2,
+      "avg_pass_pct": 81.9,
+      "avg_final_third_pct": 19.6,
+      "avg_presses": 15.2,
       "avg_x": 48.3,
       "samples": 5
     }
@@ -385,7 +384,7 @@
       "key": "edge",
       "label": "전북이 유리한 점",
       "items": [
-        "전북이 최근 기회 질(xG 1.67)에서 포항(0.82)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다.",
+        "전북이 최근 기회 질(xG 1.5)에서 포항(0.87)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다.",
         "홈 이점. 전주에서 라인 높이를 올려도 관중·익숙한 공간이 받쳐 줍니다."
       ]
     },
