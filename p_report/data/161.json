@@ -1,0 +1,434 @@
+{
+  "meta": {
+    "game_id": "161",
+    "year": "2026",
+    "round": 27,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "안양",
+      "team_id": "K27"
+    },
+    "away": {
+      "name": "강원",
+      "team_id": "K21"
+    },
+    "opponent": "강원",
+    "ha": "H",
+    "jeonbuk_match": false,
+    "venue": "안양 종합",
+    "attendance_hint": {
+      "avg": 7625,
+      "games": 11,
+      "total": 83876
+    },
+    "kickoff": "2026-09-06T19:00:00+09:00",
+    "kickoff_label": "2026-09-06 19:00 KST",
+    "date_md": "09/06",
+    "label": "안양 VS 강원 (161, 09/06)",
+    "hours_to_kickoff": 165.9,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-08-30T21:04:03.934344+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "27R PREVIEW · 안양 vs 강원",
+  "thesis": "안양 vs 강원. 안양 최근 D L L W D, 강원 최근 L D L D D. 홈 안양이(가) 템포를 가져가며 xG 0.84 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "briefing": [
+    "안양 vs 강원. 안양 최근 D L L W D (1승 2무 2패 / 최근 5경기). 강원 최근 L D L D D (0승 3무 2패 / 최근 5경기).",
+    "최근 5경기 평균 — 안양 xG 0.84·슈팅 10.4, 강원 xG 1.17·슈팅 12.8. 패스 성공률 74.3% vs 74.2%.",
+    "올 시즌 맞대결 2경기 — 안양 기준 1승 1무 0패.",
+    "경기장 안양 종합 · 안양 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
+  ],
+  "scout": {
+    "contrast": "안양은 비기는 흐름, 기회 부족, 수비 기회 허용 흐름이고, 강원은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 0.84 vs 1.17, 슈팅 10.4 vs 12.8, 파이널 서드 터치 22.3% vs 26.2%입니다.",
+    "edge": [
+      "홈 이점(안양). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+    ],
+    "risk": [
+      "강원의 xG 1.17가 더 높습니다. 안양이 실점을 막는 전환 수비가 관건입니다."
+    ],
+    "target": [
+      "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
+      "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
+      "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+    ],
+    "caution": [
+      "강원 압박 시도가 많습니다. 안양 빌드업 첫 패스 실수를 줄여야 합니다.",
+      "강원 역습 첫 패스와 안양의 앞공간 커버."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 0.84,
+        "opponent": 1.17,
+        "better": "opponent"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 1.66,
+        "opponent": 1.68,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 10.4,
+        "opponent": 12.8,
+        "better": "opponent"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 3.6,
+        "opponent": 4.6,
+        "better": "opponent"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 74.3,
+        "opponent": 74.2,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 22.3,
+        "opponent": 26.2,
+        "suffix": "%",
+        "better": "opponent"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 15.4,
+        "opponent": 21.0,
+        "better": "opponent"
+      }
+    ],
+    "summary": "최근 5경기 기준 — 안양 xG 0.84 / xGA 1.66, 강원 xG 1.17 / xGA 1.68."
+  },
+  "h2h_summary": {
+    "wins": 1,
+    "draws": 1,
+    "losses": 0,
+    "games": 2
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "127",
+        "year": "2026",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "안양",
+        "away": "대전",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "대전",
+        "ha": "H",
+        "xg": 1.56,
+        "xga": 2.16,
+        "shots": 21,
+        "sot": 6,
+        "goals_for": 1,
+        "goals_against": 1
+      },
+      {
+        "game_id": "134",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-15",
+        "home": "제주",
+        "away": "안양",
+        "score": "1:0",
+        "result": "L",
+        "opponent": "제주",
+        "ha": "A",
+        "xg": 0.53,
+        "xga": 1.35,
+        "shots": 9,
+        "sot": 4,
+        "goals_for": 0,
+        "goals_against": 1
+      },
+      {
+        "game_id": "139",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "안양",
+        "away": "서울",
+        "score": "0:7",
+        "result": "L",
+        "opponent": "서울",
+        "ha": "H",
+        "xg": 0.28,
+        "xga": 2.62,
+        "shots": 4,
+        "sot": 1,
+        "goals_for": 0,
+        "goals_against": 6
+      },
+      {
+        "game_id": "148",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-26",
+        "home": "안양",
+        "away": "인천",
+        "score": "2:1",
+        "result": "W",
+        "opponent": "인천",
+        "ha": "H",
+        "xg": 1.26,
+        "xga": 1.09,
+        "shots": 6,
+        "sot": 3,
+        "goals_for": 2,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 76.0,
+        "final_third_pct": 13.1,
+        "presses": 8,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "152",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-29",
+        "home": "부천",
+        "away": "안양",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "부천",
+        "ha": "A",
+        "xg": 0.58,
+        "xga": 1.09,
+        "shots": 12,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 76.9,
+        "final_third_pct": 23.7,
+        "presses": 9,
+        "stats_source": "portal"
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "121",
+        "year": "2026",
+        "round": 21,
+        "date": "2026-08-01",
+        "home": "강원",
+        "away": "부천",
+        "score": "0:3",
+        "result": "L",
+        "opponent": "부천",
+        "ha": "H",
+        "xg": 1.19,
+        "xga": 1.36,
+        "shots": 12,
+        "sot": 3,
+        "goals_for": 0,
+        "goals_against": 3
+      },
+      {
+        "game_id": "138",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "울산",
+        "away": "강원",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "울산",
+        "ha": "A",
+        "xg": 1.21,
+        "xga": 2.41,
+        "shots": 11,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 2
+      },
+      {
+        "game_id": "143",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-23",
+        "home": "대전",
+        "away": "강원",
+        "score": "3:0",
+        "result": "L",
+        "opponent": "대전",
+        "ha": "A",
+        "xg": 0.25,
+        "xga": 2.28,
+        "shots": 4,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 3
+      },
+      {
+        "game_id": "150",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-26",
+        "home": "강원",
+        "away": "광주",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "광주",
+        "ha": "H",
+        "xg": 2.32,
+        "xga": 1.87,
+        "shots": 28,
+        "sot": 12,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 78.4,
+        "final_third_pct": 38.3,
+        "presses": 33,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "156",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-30",
+        "home": "강원",
+        "away": "포항",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "포항",
+        "ha": "H",
+        "xg": 0.89,
+        "xga": 0.48,
+        "shots": 9,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 0,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 75.1,
+        "final_third_pct": 27.0,
+        "presses": 18,
+        "stats_source": "portal"
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "17",
+      "round": 3,
+      "date": "2026-03-15",
+      "home": "강원",
+      "away": "안양",
+      "score": "1:1",
+      "result": "D",
+      "venue": "강릉하이원아레나"
+    },
+    {
+      "game_id": "117",
+      "round": 20,
+      "date": "2026-07-26",
+      "home": "안양",
+      "away": "강원",
+      "score": "2:1",
+      "result": "W",
+      "venue": "안양 종합"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "안양",
+      "team_id": "K27",
+      "tags": [
+        "비기는 흐름",
+        "기회 부족",
+        "수비 기회 허용"
+      ],
+      "record": "1승 2무 2패 / 최근 5경기",
+      "goals_for": 4,
+      "goals_against": 10,
+      "goal_diff": -6,
+      "avg_xg": 0.84,
+      "avg_xga": 1.66,
+      "avg_shots": 10.4,
+      "avg_sot": 3.6,
+      "avg_pass_pct": 74.3,
+      "avg_final_third_pct": 22.3,
+      "avg_presses": 15.4,
+      "avg_x": 48.0,
+      "samples": 5
+    },
+    "opponent": {
+      "name": "강원",
+      "team_id": "K21",
+      "tags": [
+        "비기는 흐름",
+        "슈팅 많음",
+        "수비 기회 허용",
+        "적극 압박"
+      ],
+      "record": "0승 3무 2패 / 최근 5경기",
+      "goals_for": 4,
+      "goals_against": 10,
+      "goal_diff": -6,
+      "avg_xg": 1.17,
+      "avg_xga": 1.68,
+      "avg_shots": 12.8,
+      "avg_sot": 4.6,
+      "avg_pass_pct": 74.2,
+      "avg_final_third_pct": 26.2,
+      "avg_presses": 21.0,
+      "avg_x": 47.9,
+      "samples": 5
+    }
+  },
+  "cards": [
+    {
+      "key": "edge",
+      "label": "안양이 유리한 점",
+      "items": [
+        "홈 이점(안양). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+      ]
+    },
+    {
+      "key": "risk",
+      "label": "안양이 불리한·조심할 점",
+      "items": [
+        "강원의 xG 1.17가 더 높습니다. 안양이 실점을 막는 전환 수비가 관건입니다."
+      ]
+    },
+    {
+      "key": "key",
+      "label": "관전 포인트",
+      "items": [
+        "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
+        "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
+        "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+      ]
+    },
+    {
+      "key": "watch",
+      "label": "강원 경계 포인트",
+      "items": [
+        "강원 압박 시도가 많습니다. 안양 빌드업 첫 패스 실수를 줄여야 합니다.",
+        "강원 역습 첫 패스와 안양의 앞공간 커버."
+      ]
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+}
