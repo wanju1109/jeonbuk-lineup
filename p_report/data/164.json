@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "game_id": "164",
+    "year": "2026",
+    "round": 28,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "인천",
+      "team_id": "K18"
+    },
+    "away": {
+      "name": "부천",
+      "team_id": "K26"
+    },
+    "opponent": "부천",
+    "ha": "H",
+    "jeonbuk_match": false,
+    "venue": "인천 전용",
+    "attendance_hint": {
+      "avg": 10152,
+      "games": 12,
+      "total": 121824
+    },
+    "kickoff": "2026-09-08T19:00:00+09:00",
+    "kickoff_label": "2026-09-08 19:00 KST",
+    "date_md": "09/08",
+    "label": "인천 VS 부천 (164, 09/08)",
+    "hours_to_kickoff": 163.7,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-09-01T23:15:41.149637+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "28R PREVIEW · 인천 vs 부천",
+  "thesis": "인천 vs 부천. 인천 최근 D D W L D, 부천 최근 D W W L D. 홈 인천이(가) 템포를 가져가며 xG 1.01 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "briefing": [
+    "인천 vs 부천. 인천 최근 D D W L D (1승 3무 1패 / 최근 5경기). 부천 최근 D W W L D (2승 2무 1패 / 최근 5경기).",
+    "최근 5경기 평균 — 인천 xG 1.01·슈팅 9.4, 부천 xG 1.08·슈팅 10.4. 패스 성공률 77.3% vs 65.2%.",
+    "올 시즌 맞대결 2경기 — 인천 기준 1승 1무 0패.",
+    "경기장 인천 전용 · 인천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
+  ],
+  "scout": {
+    "contrast": "인천은 비기는 흐름 흐름이고, 부천은(는) 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.01 vs 1.08, 슈팅 9.4 vs 10.4, 파이널 서드 터치 24.0% vs 20.5%입니다.",
+    "edge": [
+      "홈 이점(인천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+    ],
+    "risk": [
+      "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+    ],
+    "target": [
+      "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
+      "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
+      "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+    ],
+    "caution": [
+      "부천 역습 첫 패스와 인천의 앞공간 커버."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 1.01,
+        "opponent": 1.08,
+        "better": "opponent"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 1.17,
+        "opponent": 1.48,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 9.4,
+        "opponent": 10.4,
+        "better": "opponent"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 3.2,
+        "opponent": 4.4,
+        "better": "opponent"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 77.3,
+        "opponent": 65.2,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 24.0,
+        "opponent": 20.5,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 17.0,
+        "opponent": 14.6,
+        "better": "jeonbuk"
+      }
+    ],
+    "summary": "최근 5경기 기준 — 인천 xG 1.01 / xGA 1.17, 부천 xG 1.08 / xGA 1.48."
+  },
+  "h2h_summary": {
+    "wins": 1,
+    "draws": 1,
+    "losses": 0,
+    "games": 2
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "126",
+        "year": "2026",
+        "round": 21,
+        "date": "2026-08-02",
+        "home": "제주",
+        "away": "인천",
+        "score": "3:3",
+        "result": "D",
+        "opponent": "제주",
+        "ha": "A",
+        "xg": 1.43,
+        "xga": 1.48,
+        "shots": 11,
+        "sot": 6,
+        "goals_for": 3,
+        "goals_against": 3
+      },
+      {
+        "game_id": "136",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "인천",
+        "away": "김천",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "김천",
+        "ha": "H",
+        "xg": 0.83,
+        "xga": 1.13,
+        "shots": 9,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 1
+      },
+      {
+        "game_id": "144",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-23",
+        "home": "광주",
+        "away": "인천",
+        "score": "0:1",
+        "result": "W",
+        "opponent": "광주",
+        "ha": "A",
+        "xg": 1.1,
+        "xga": 1.18,
+        "shots": 8,
+        "sot": 1,
+        "goals_for": 1,
+        "goals_against": 0
+      },
+      {
+        "game_id": "148",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-26",
+        "home": "안양",
+        "away": "인천",
+        "score": "2:1",
+        "result": "L",
+        "opponent": "안양",
+        "ha": "A",
+        "xg": 1.09,
+        "xga": 1.26,
+        "shots": 11,
+        "sot": 2,
+        "goals_for": 1,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 77.5,
+        "final_third_pct": 29.9,
+        "presses": 29,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "154",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-30",
+        "home": "인천",
+        "away": "전북",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "전북",
+        "ha": "H",
+        "xg": 0.58,
+        "xga": 0.82,
+        "shots": 8,
+        "sot": 3,
+        "goals_for": 0,
+        "goals_against": 1
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "128",
+        "year": "2026",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "부천",
+        "away": "광주",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "광주",
+        "ha": "H",
+        "xg": 0.79,
+        "xga": 1.63,
+        "shots": 11,
+        "sot": 4,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      {
+        "game_id": "137",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "부천",
+        "away": "전북",
+        "score": "3:2",
+        "result": "W",
+        "opponent": "전북",
+        "ha": "H",
+        "xg": 1.63,
+        "xga": 2.62,
+        "shots": 15,
+        "sot": 7,
+        "goals_for": 3,
+        "goals_against": 2
+      },
+      {
+        "game_id": "141",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "부천",
+        "away": "포항",
+        "score": "3:0",
+        "result": "W",
+        "opponent": "포항",
+        "ha": "H",
+        "xg": 1.51,
+        "xga": 1.1,
+        "shots": 9,
+        "sot": 4,
+        "goals_for": 3,
+        "goals_against": 0
+      },
+      {
+        "game_id": "145",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-25",
+        "home": "서울",
+        "away": "부천",
+        "score": "1:0",
+        "result": "L",
+        "opponent": "서울",
+        "ha": "A",
+        "xg": 0.37,
+        "xga": 1.48,
+        "shots": 5,
+        "sot": 3,
+        "goals_for": 0,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 62.4,
+        "final_third_pct": 20.1,
+        "presses": 16,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "152",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-29",
+        "home": "부천",
+        "away": "안양",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "안양",
+        "ha": "H",
+        "xg": 1.09,
+        "xga": 0.58,
+        "shots": 12,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 67.0,
+        "final_third_pct": 23.2,
+        "presses": 20,
+        "stats_source": "portal"
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "46",
+      "round": 8,
+      "date": "2026-04-18",
+      "home": "부천",
+      "away": "인천",
+      "score": "2:2",
+      "result": "D",
+      "venue": "부천 종합"
+    },
+    {
+      "game_id": "119",
+      "round": 20,
+      "date": "2026-07-26",
+      "home": "인천",
+      "away": "부천",
+      "score": "2:0",
+      "result": "W",
+      "venue": "인천 전용"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "인천",
+      "team_id": "K18",
+      "tags": [
+        "비기는 흐름"
+      ],
+      "record": "1승 3무 1패 / 최근 5경기",
+      "goals_for": 6,
+      "goals_against": 7,
+      "goal_diff": -1,
+      "avg_xg": 1.01,
+      "avg_xga": 1.17,
+      "avg_shots": 9.4,
+      "avg_sot": 3.2,
+      "avg_pass_pct": 77.3,
+      "avg_final_third_pct": 24.0,
+      "avg_presses": 17.0,
+      "avg_x": 46.5,
+      "samples": 5
+    },
+    "opponent": {
+      "name": "부천",
+      "team_id": "K26",
+      "tags": [
+        "수비 기회 허용",
+        "낮은 블록형"
+      ],
+      "record": "2승 2무 1패 / 최근 5경기",
+      "goals_for": 7,
+      "goals_against": 4,
+      "goal_diff": 3,
+      "avg_xg": 1.08,
+      "avg_xga": 1.48,
+      "avg_shots": 10.4,
+      "avg_sot": 4.4,
+      "avg_pass_pct": 65.2,
+      "avg_final_third_pct": 20.5,
+      "avg_presses": 14.6,
+      "avg_x": 44.7,
+      "samples": 5
+    }
+  },
+  "cards": [
+    {
+      "key": "edge",
+      "label": "인천이 유리한 점",
+      "items": [
+        "홈 이점(인천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+      ]
+    },
+    {
+      "key": "risk",
+      "label": "인천이 불리한·조심할 점",
+      "items": [
+        "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+      ]
+    },
+    {
+      "key": "key",
+      "label": "관전 포인트",
+      "items": [
+        "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
+        "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
+        "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+      ]
+    },
+    {
+      "key": "watch",
+      "label": "부천 경계 포인트",
+      "items": [
+        "부천 역습 첫 패스와 인천의 앞공간 커버."
+      ]
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+}

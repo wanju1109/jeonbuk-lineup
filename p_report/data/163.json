@@ -1,0 +1,434 @@
+{
+  "meta": {
+    "game_id": "163",
+    "year": "2026",
+    "round": 28,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "울산",
+      "team_id": "K01"
+    },
+    "away": {
+      "name": "서울",
+      "team_id": "K09"
+    },
+    "opponent": "서울",
+    "ha": "H",
+    "jeonbuk_match": false,
+    "venue": "울산 문수",
+    "attendance_hint": {
+      "avg": 11000,
+      "games": 12,
+      "total": 131997
+    },
+    "kickoff": "2026-09-08T19:00:00+09:00",
+    "kickoff_label": "2026-09-08 19:00 KST",
+    "date_md": "09/08",
+    "label": "울산 VS 서울 (163, 09/08)",
+    "hours_to_kickoff": 163.7,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-09-01T23:15:17.861356+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "28R PREVIEW · 울산 vs 서울",
+  "thesis": "울산 vs 서울. 울산 최근 W D L L W, 서울 최근 D W W W W. 홈 울산이(가) 템포를 가져가며 xG 1.62 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "briefing": [
+    "울산 vs 서울. 울산 최근 W D L L W (2승 1무 2패 / 최근 5경기). 서울 최근 D W W W W (4승 1무 0패 / 최근 5경기).",
+    "최근 5경기 평균 — 울산 xG 1.62·슈팅 9.8, 서울 xG 2.25·슈팅 16.2. 패스 성공률 71.0% vs 76.7%.",
+    "올 시즌 맞대결 2경기 — 울산 기준 1승 0무 1패.",
+    "경기장 울산 문수 · 울산 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
+  ],
+  "scout": {
+    "contrast": "울산은 기회 창출↑, 낮은 블록형 흐름이고, 서울은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.62 vs 2.25, 슈팅 9.8 vs 16.2, 파이널 서드 터치 20.1% vs 30.9%입니다.",
+    "edge": [
+      "홈 이점(울산). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+    ],
+    "risk": [
+      "서울의 xG 2.25가 더 높습니다. 울산이 실점을 막는 전환 수비가 관건입니다.",
+      "서울이(가) 상승세입니다. 한 번의 역습·세트피스에 흔들릴 수 있습니다."
+    ],
+    "target": [
+      "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
+      "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
+      "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+    ],
+    "caution": [
+      "서울 역습 첫 패스와 울산의 앞공간 커버."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 1.62,
+        "opponent": 2.25,
+        "better": "opponent"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 1.14,
+        "opponent": 0.57,
+        "better": "opponent"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 9.8,
+        "opponent": 16.2,
+        "better": "opponent"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 5.0,
+        "opponent": 8.0,
+        "better": "opponent"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 71.0,
+        "opponent": 76.7,
+        "suffix": "%",
+        "better": "opponent"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 20.1,
+        "opponent": 30.9,
+        "suffix": "%",
+        "better": "opponent"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 15.0,
+        "opponent": 23.4,
+        "better": "opponent"
+      }
+    ],
+    "summary": "최근 5경기 기준 — 울산 xG 1.62 / xGA 1.14, 서울 xG 2.25 / xGA 0.57."
+  },
+  "h2h_summary": {
+    "wins": 1,
+    "draws": 0,
+    "losses": 1,
+    "games": 2
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "132",
+        "year": "2026",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "포항",
+        "away": "울산",
+        "score": "0:2",
+        "result": "W",
+        "opponent": "포항",
+        "ha": "A",
+        "xg": 0.89,
+        "xga": 0.51,
+        "shots": 10,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 0
+      },
+      {
+        "game_id": "138",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "울산",
+        "away": "강원",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "강원",
+        "ha": "H",
+        "xg": 2.41,
+        "xga": 1.21,
+        "shots": 12,
+        "sot": 7,
+        "goals_for": 2,
+        "goals_against": 2
+      },
+      {
+        "game_id": "140",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "전북",
+        "away": "울산",
+        "score": "1:0",
+        "result": "L",
+        "opponent": "전북",
+        "ha": "A",
+        "xg": 0.48,
+        "xga": 1.08,
+        "shots": 9,
+        "sot": 0,
+        "goals_for": 0,
+        "goals_against": 1
+      },
+      {
+        "game_id": "149",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-26",
+        "home": "대전",
+        "away": "울산",
+        "score": "2:1",
+        "result": "L",
+        "opponent": "대전",
+        "ha": "A",
+        "xg": 0.51,
+        "xga": 1.88,
+        "shots": 3,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 72.1,
+        "final_third_pct": 16.3,
+        "presses": 12,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "151",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-29",
+        "home": "울산",
+        "away": "김천",
+        "score": "3:1",
+        "result": "W",
+        "opponent": "김천",
+        "ha": "H",
+        "xg": 3.79,
+        "xga": 1.02,
+        "shots": 15,
+        "sot": 9,
+        "goals_for": 3,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 48.4,
+        "final_third_pct": 21.7,
+        "presses": 11,
+        "stats_source": "portal"
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "130",
+        "year": "2026",
+        "round": 22,
+        "date": "2026-08-08",
+        "home": "김천",
+        "away": "서울",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "김천",
+        "ha": "A",
+        "xg": 0.56,
+        "xga": 0.67,
+        "shots": 5,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      {
+        "game_id": "135",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-15",
+        "home": "서울",
+        "away": "대전",
+        "score": "4:1",
+        "result": "W",
+        "opponent": "대전",
+        "ha": "H",
+        "xg": 2.73,
+        "xga": 1.06,
+        "shots": 17,
+        "sot": 9,
+        "goals_for": 4,
+        "goals_against": 1
+      },
+      {
+        "game_id": "139",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "안양",
+        "away": "서울",
+        "score": "0:7",
+        "result": "W",
+        "opponent": "안양",
+        "ha": "A",
+        "xg": 2.62,
+        "xga": 0.28,
+        "shots": 17,
+        "sot": 11,
+        "goals_for": 6,
+        "goals_against": 0
+      },
+      {
+        "game_id": "145",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-25",
+        "home": "서울",
+        "away": "부천",
+        "score": "1:0",
+        "result": "W",
+        "opponent": "부천",
+        "ha": "H",
+        "xg": 1.48,
+        "xga": 0.37,
+        "shots": 17,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 0,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 79.8,
+        "final_third_pct": 36.4,
+        "presses": 37,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "153",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-30",
+        "home": "광주",
+        "away": "서울",
+        "score": "2:5",
+        "result": "W",
+        "opponent": "광주",
+        "ha": "A",
+        "xg": 3.85,
+        "xga": 0.47,
+        "shots": 25,
+        "sot": 15,
+        "goals_for": 5,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 78.4,
+        "final_third_pct": 39.1,
+        "presses": 26,
+        "stats_source": "portal"
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "8",
+      "round": 2,
+      "date": "2026-04-15",
+      "home": "울산",
+      "away": "서울",
+      "score": "2:3",
+      "result": "L",
+      "venue": "울산 문수"
+    },
+    {
+      "game_id": "120",
+      "round": 20,
+      "date": "2026-07-26",
+      "home": "서울",
+      "away": "울산",
+      "score": "1:3",
+      "result": "W",
+      "venue": "서울 월드컵"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "울산",
+      "team_id": "K01",
+      "tags": [
+        "기회 창출↑",
+        "낮은 블록형"
+      ],
+      "record": "2승 1무 2패 / 최근 5경기",
+      "goals_for": 8,
+      "goals_against": 6,
+      "goal_diff": 2,
+      "avg_xg": 1.62,
+      "avg_xga": 1.14,
+      "avg_shots": 9.8,
+      "avg_sot": 5.0,
+      "avg_pass_pct": 71.0,
+      "avg_final_third_pct": 20.1,
+      "avg_presses": 15.0,
+      "avg_x": 47.4,
+      "samples": 5
+    },
+    "opponent": {
+      "name": "서울",
+      "team_id": "K09",
+      "tags": [
+        "상승세",
+        "기회 창출↑",
+        "슈팅 많음",
+        "수비 단단",
+        "전진 점유"
+      ],
+      "record": "4승 1무 0패 / 최근 5경기",
+      "goals_for": 16,
+      "goals_against": 3,
+      "goal_diff": 13,
+      "avg_xg": 2.25,
+      "avg_xga": 0.57,
+      "avg_shots": 16.2,
+      "avg_sot": 8.0,
+      "avg_pass_pct": 76.7,
+      "avg_final_third_pct": 30.9,
+      "avg_presses": 23.4,
+      "avg_x": 47.6,
+      "samples": 5
+    }
+  },
+  "cards": [
+    {
+      "key": "edge",
+      "label": "울산이 유리한 점",
+      "items": [
+        "홈 이점(울산). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+      ]
+    },
+    {
+      "key": "risk",
+      "label": "울산이 불리한·조심할 점",
+      "items": [
+        "서울의 xG 2.25가 더 높습니다. 울산이 실점을 막는 전환 수비가 관건입니다.",
+        "서울이(가) 상승세입니다. 한 번의 역습·세트피스에 흔들릴 수 있습니다."
+      ]
+    },
+    {
+      "key": "key",
+      "label": "관전 포인트",
+      "items": [
+        "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
+        "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
+        "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+      ]
+    },
+    {
+      "key": "watch",
+      "label": "서울 경계 포인트",
+      "items": [
+        "서울 역습 첫 패스와 울산의 앞공간 커버."
+      ]
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+}
