@@ -25,22 +25,22 @@
     "kickoff_label": "2026-09-05 19:00 KST",
     "date_md": "09/05",
     "label": "부천 VS 대전 (157, 09/05)",
-    "hours_to_kickoff": 91.8,
+    "hours_to_kickoff": 87.3,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-01T23:13:13.456032+09:00",
+    "generated_at": "2026-09-02T03:39:46.872253+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 부천 vs 대전",
-  "thesis": "부천 vs 대전. 부천 최근 D W W L D, 대전 최근 D L W W L. 홈 부천이(가) 템포를 가져가며 xG 1.08 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "부천 vs 대전. 부천 최근 D W W L ?, 대전 최근 D L W W L. 홈 부천이(가) 템포를 가져가며 xG 1.07 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "부천 vs 대전. 부천 최근 D W W L D (2승 2무 1패 / 최근 5경기). 대전 최근 D L W W L (2승 1무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 부천 xG 1.08·슈팅 10.4, 대전 xG 1.87·슈팅 13.4. 패스 성공률 65.2% vs 74.7%.",
+    "부천 vs 대전. 부천 최근 D W W L ? (2승 1무 1패 / 최근 4경기). 대전 최근 D L W W L (2승 1무 2패 / 최근 5경기).",
+    "최근 5경기 평균 — 부천 xG 1.07·슈팅 10.0, 대전 xG 1.87·슈팅 13.4. 패스 성공률 64.7% vs 74.7%.",
     "올 시즌 맞대결 2경기 — 부천 기준 0승 2무 0패.",
     "경기장 부천 종합 · 부천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "부천은 수비 기회 허용, 낮은 블록형 흐름이고, 대전은(는) 기회 창출↑, 슈팅 많음, 전진 점유 그림입니다. 최근 xG 1.08 vs 1.87, 슈팅 10.4 vs 13.4, 파이널 서드 터치 20.5% vs 29.7%입니다.",
+    "contrast": "부천은 수비 기회 허용, 낮은 블록형 흐름이고, 대전은(는) 기회 창출↑, 슈팅 많음, 전진 점유 그림입니다. 최근 xG 1.07 vs 1.87, 슈팅 10.0 vs 13.4, 파이널 서드 터치 19.9% vs 29.7%입니다.",
     "edge": [
       "홈 이점(부천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -61,50 +61,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.08,
+        "jeonbuk": 1.07,
         "opponent": 1.87,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.48,
+        "jeonbuk": 1.71,
         "opponent": 1.2,
         "better": "opponent"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 10.4,
+        "jeonbuk": 10.0,
         "opponent": 13.4,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 4.4,
+        "jeonbuk": 4.5,
         "opponent": 5.4,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 65.2,
+        "jeonbuk": 64.7,
         "opponent": 74.7,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 20.5,
+        "jeonbuk": 19.9,
         "opponent": 29.7,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 14.6,
+        "jeonbuk": 13.2,
         "opponent": 29.4,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 부천 xG 1.08 / xGA 1.48, 대전 xG 1.87 / xGA 1.2."
+    "summary": "최근 4경기 기준 — 부천 xG 1.07 / xGA 1.71, 대전 xG 1.87 / xGA 1.2."
   },
   "h2h_summary": {
     "wins": 0,
@@ -199,22 +199,17 @@
         "date": "2026-08-29",
         "home": "부천",
         "away": "안양",
-        "score": "1:1",
-        "result": "D",
+        "score": "-",
+        "result": "?",
         "opponent": "안양",
         "ha": "H",
-        "xg": 1.09,
-        "xga": 0.58,
-        "shots": 12,
-        "sot": 4,
-        "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "score_source": "official",
-        "pass_pct": 67.0,
-        "final_third_pct": 23.2,
-        "presses": 20,
-        "stats_source": "portal"
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": null,
+        "goals_against": null,
+        "stats_limited": true
       }
     ],
     "opponent": [
@@ -352,19 +347,19 @@
         "수비 기회 허용",
         "낮은 블록형"
       ],
-      "record": "2승 2무 1패 / 최근 5경기",
-      "goals_for": 7,
-      "goals_against": 4,
+      "record": "2승 1무 1패 / 최근 4경기",
+      "goals_for": 6,
+      "goals_against": 3,
       "goal_diff": 3,
-      "avg_xg": 1.08,
-      "avg_xga": 1.48,
-      "avg_shots": 10.4,
-      "avg_sot": 4.4,
-      "avg_pass_pct": 65.2,
-      "avg_final_third_pct": 20.5,
-      "avg_presses": 14.6,
-      "avg_x": 44.7,
-      "samples": 5
+      "avg_xg": 1.07,
+      "avg_xga": 1.71,
+      "avg_shots": 10.0,
+      "avg_sot": 4.5,
+      "avg_pass_pct": 64.7,
+      "avg_final_third_pct": 19.9,
+      "avg_presses": 13.2,
+      "avg_x": 43.3,
+      "samples": 4
     },
     "opponent": {
       "name": "대전",
