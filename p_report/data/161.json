@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-06 19:00 KST",
     "date_md": "09/06",
     "label": "안양 VS 강원 (161, 09/06)",
-    "hours_to_kickoff": 133.1,
+    "hours_to_kickoff": 129.3,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-01T05:54:55.300866+09:00",
+    "generated_at": "2026-09-01T09:42:54.776808+09:00",
     "preview_hours": 48.0
   },
   "headline": "27R PREVIEW · 안양 vs 강원",
@@ -40,7 +40,7 @@
     "경기장 안양 종합 · 안양 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "안양은 비기는 흐름, 기회 부족, 수비 기회 허용 흐름이고, 강원은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 0.84 vs 1.2, 슈팅 10.4 vs 13.0, 파이널 서드 터치 22.3% vs 26.2%입니다.",
+    "contrast": "안양은 비기는 흐름, 기회 부족, 수비 기회 허용 흐름이고, 강원은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 0.84 vs 1.2, 슈팅 10.4 vs 13.0, 파이널 서드 터치 22.3% vs 26.3%입니다.",
     "edge": [
       "홈 이점(안양). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -68,8 +68,8 @@
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.66,
-        "opponent": 1.69,
-        "better": "jeonbuk"
+        "opponent": 1.65,
+        "better": "opponent"
       },
       {
         "label": "슈팅",
@@ -93,7 +93,7 @@
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 22.3,
-        "opponent": 26.2,
+        "opponent": 26.3,
         "suffix": "%",
         "better": "opponent"
       },
@@ -104,7 +104,7 @@
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 안양 xG 0.84 / xGA 1.66, 강원 xG 1.2 / xGA 1.69."
+    "summary": "최근 5경기 기준 — 안양 xG 0.84 / xGA 1.66, 강원 xG 1.2 / xGA 1.65."
   },
   "h2h_summary": {
     "wins": 1,
@@ -308,7 +308,7 @@
         "opponent": "포항",
         "ha": "H",
         "xg": 1.01,
-        "xga": 0.53,
+        "xga": 0.31,
         "shots": 10,
         "sot": 2,
         "goals_for": 0,
@@ -316,7 +316,7 @@
         "stats_limited": false,
         "score_source": "official",
         "pass_pct": 73.8,
-        "final_third_pct": 27.2,
+        "final_third_pct": 27.4,
         "presses": 22,
         "stats_source": "portal"
       }
@@ -381,11 +381,11 @@
       "goals_against": 10,
       "goal_diff": -6,
       "avg_xg": 1.2,
-      "avg_xga": 1.69,
+      "avg_xga": 1.65,
       "avg_shots": 13.0,
       "avg_sot": 4.6,
       "avg_pass_pct": 73.9,
-      "avg_final_third_pct": 26.2,
+      "avg_final_third_pct": 26.3,
       "avg_presses": 21.8,
       "avg_x": 47.9,
       "samples": 5
