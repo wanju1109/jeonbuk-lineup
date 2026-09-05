@@ -1,0 +1,423 @@
+{
+  "meta": {
+    "game_id": "166",
+    "year": "2026",
+    "round": 28,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "강원",
+      "team_id": "K21"
+    },
+    "away": {
+      "name": "전북",
+      "team_id": "K05"
+    },
+    "opponent": "강원",
+    "ha": "A",
+    "jeonbuk_match": true,
+    "venue": "강릉하이원아레나",
+    "attendance_hint": {
+      "avg": 6538,
+      "games": 10,
+      "total": 65384
+    },
+    "kickoff": "2026-09-09T19:00:00+09:00",
+    "kickoff_label": "2026-09-09 19:00 KST",
+    "date_md": "09/09",
+    "label": "강원 VS 전북 (166, 09/09)",
+    "hours_to_kickoff": 95.2,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-09-05T19:46:43.478313+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "28R PREVIEW · 강원 vs 전북",
+  "thesis": "강원 vs 전북. 전북 최근 L W D D D, 강원 최근 L D L D D. 원정에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
+  "briefing": [
+    "강원 vs 전북. 전북 최근 L W D D D (1승 3무 1패 / 최근 5경기, 4득 3실). 강원은 L D L D D (0승 3무 2패 / 최근 5경기, 4득 10실).",
+    "최근 5경기 평균 — 전북 xG 0.98·슈팅 10.4·유효슈팅 3.4, 강원 xG 1.2·슈팅 13.0·유효슈팅 4.6. 패스 성공률 80.1% vs 73.9%.",
+    "올 시즌 맞대결 2경기 — 전북 0승 1무 1패.",
+    "경기장 강릉하이원아레나 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다."
+  ],
+  "scout": {
+    "contrast": "전북은 비기는 흐름, 수비 단단, 낮은 블록형 흐름이고, 강원은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 0.98 vs 1.2, 슈팅 10.4 vs 13.0, 파이널 서드 터치 21.4% vs 26.3%, 평균 터치 높이 46.3 vs 47.9입니다.",
+    "edge": [
+      "전북이 허용 xG 0.72로 수비 기회 관리가 강원(1.65)보다 낫습니다."
+    ],
+    "risk": [
+      "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다."
+    ],
+    "target": [
+      "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
+      "강원의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
+      "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
+    ],
+    "caution": [
+      "강원의 압박 시도가 많습니다. 빌드업 첫 패스 실패를 줄이지 않으면 박스 위기가 바로 옵니다.",
+      "강원 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 0.98,
+        "opponent": 1.2,
+        "better": "opponent"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 0.72,
+        "opponent": 1.65,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 10.4,
+        "opponent": 13.0,
+        "better": "opponent"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 3.4,
+        "opponent": 4.6,
+        "better": "opponent"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 80.1,
+        "opponent": 73.9,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 21.4,
+        "opponent": 26.3,
+        "suffix": "%",
+        "better": "opponent"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 18.4,
+        "opponent": 21.8,
+        "better": "opponent"
+      }
+    ],
+    "summary": "최근 5경기 기준 — 전북 xG 0.98 / xGA 0.72, 강원 xG 1.2 / xGA 1.65."
+  },
+  "h2h_summary": {
+    "wins": 0,
+    "draws": 1,
+    "losses": 1,
+    "games": 2
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "137",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "부천",
+        "away": "전북",
+        "score": "3:2",
+        "result": "L",
+        "opponent": "부천",
+        "ha": "A",
+        "xg": 2.62,
+        "xga": 1.63,
+        "shots": 24,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 3
+      },
+      {
+        "game_id": "140",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-22",
+        "home": "전북",
+        "away": "울산",
+        "score": "1:0",
+        "result": "W",
+        "opponent": "울산",
+        "ha": "H",
+        "xg": 1.08,
+        "xga": 0.48,
+        "shots": 10,
+        "sot": 6,
+        "goals_for": 1,
+        "goals_against": 0
+      },
+      {
+        "game_id": "146",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-25",
+        "home": "김천",
+        "away": "전북",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "김천",
+        "ha": "A",
+        "xg": 0.36,
+        "xga": 0.91,
+        "shots": 6,
+        "sot": 3,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      {
+        "game_id": "154",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-30",
+        "home": "인천",
+        "away": "전북",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "인천",
+        "ha": "A",
+        "xg": 0.82,
+        "xga": 0.58,
+        "shots": 12,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 0
+      },
+      {
+        "game_id": "159",
+        "year": "2026",
+        "round": 27,
+        "date": "2026-09-05",
+        "home": "전북",
+        "away": "포항",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "포항",
+        "ha": "H",
+        "xg": 0.0,
+        "xga": 0.0,
+        "shots": 0,
+        "sot": 0,
+        "goals_for": 0,
+        "goals_against": 0
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "121",
+        "year": "2026",
+        "round": 21,
+        "date": "2026-08-01",
+        "home": "강원",
+        "away": "부천",
+        "score": "0:3",
+        "result": "L",
+        "opponent": "부천",
+        "ha": "H",
+        "xg": 1.19,
+        "xga": 1.36,
+        "shots": 12,
+        "sot": 3,
+        "goals_for": 0,
+        "goals_against": 3
+      },
+      {
+        "game_id": "138",
+        "year": "2026",
+        "round": 23,
+        "date": "2026-08-16",
+        "home": "울산",
+        "away": "강원",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "울산",
+        "ha": "A",
+        "xg": 1.21,
+        "xga": 2.41,
+        "shots": 11,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 2
+      },
+      {
+        "game_id": "143",
+        "year": "2026",
+        "round": 24,
+        "date": "2026-08-23",
+        "home": "대전",
+        "away": "강원",
+        "score": "3:0",
+        "result": "L",
+        "opponent": "대전",
+        "ha": "A",
+        "xg": 0.25,
+        "xga": 2.28,
+        "shots": 4,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 3
+      },
+      {
+        "game_id": "150",
+        "year": "2026",
+        "round": 25,
+        "date": "2026-08-26",
+        "home": "강원",
+        "away": "광주",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "광주",
+        "ha": "H",
+        "xg": 2.32,
+        "xga": 1.87,
+        "shots": 28,
+        "sot": 12,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 78.4,
+        "final_third_pct": 38.3,
+        "presses": 33,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "156",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-30",
+        "home": "강원",
+        "away": "포항",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "포항",
+        "ha": "H",
+        "xg": 1.01,
+        "xga": 0.31,
+        "shots": 10,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 0,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 73.8,
+        "final_third_pct": 27.4,
+        "presses": 22,
+        "stats_source": "portal"
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "43",
+      "round": 8,
+      "date": "2026-04-18",
+      "home": "강원",
+      "away": "전북",
+      "score": "1:1",
+      "result": "D",
+      "venue": "강릉하이원아레나"
+    },
+    {
+      "game_id": "91",
+      "round": 16,
+      "date": "2026-07-04",
+      "home": "전북",
+      "away": "강원",
+      "score": "1:2",
+      "result": "L",
+      "venue": "전주 월드컵"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "전북",
+      "team_id": "K05",
+      "tags": [
+        "비기는 흐름",
+        "수비 단단",
+        "낮은 블록형",
+        "적극 압박"
+      ],
+      "record": "1승 3무 1패 / 최근 5경기",
+      "goals_for": 4,
+      "goals_against": 3,
+      "goal_diff": 1,
+      "avg_xg": 0.98,
+      "avg_xga": 0.72,
+      "avg_shots": 10.4,
+      "avg_sot": 3.4,
+      "avg_pass_pct": 80.1,
+      "avg_final_third_pct": 21.4,
+      "avg_presses": 18.4,
+      "avg_x": 46.3,
+      "samples": 5
+    },
+    "opponent": {
+      "name": "강원",
+      "team_id": "K21",
+      "tags": [
+        "비기는 흐름",
+        "슈팅 많음",
+        "수비 기회 허용",
+        "적극 압박"
+      ],
+      "record": "0승 3무 2패 / 최근 5경기",
+      "goals_for": 4,
+      "goals_against": 10,
+      "goal_diff": -6,
+      "avg_xg": 1.2,
+      "avg_xga": 1.65,
+      "avg_shots": 13.0,
+      "avg_sot": 4.6,
+      "avg_pass_pct": 73.9,
+      "avg_final_third_pct": 26.3,
+      "avg_presses": 21.8,
+      "avg_x": 47.9,
+      "samples": 5
+    }
+  },
+  "cards": [
+    {
+      "key": "edge",
+      "label": "전북이 유리한 점",
+      "items": [
+        "전북이 허용 xG 0.72로 수비 기회 관리가 강원(1.65)보다 낫습니다."
+      ]
+    },
+    {
+      "key": "risk",
+      "label": "전북이 불리한·조심할 점",
+      "items": [
+        "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다."
+      ]
+    },
+    {
+      "key": "key",
+      "label": "관전 포인트",
+      "items": [
+        "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
+        "강원의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
+        "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
+      ]
+    },
+    {
+      "key": "watch",
+      "label": "강원 경계 포인트",
+      "items": [
+        "강원의 압박 시도가 많습니다. 빌드업 첫 패스 실패를 줄이지 않으면 박스 위기가 바로 옵니다.",
+        "강원 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
+      ]
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+}

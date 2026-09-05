@@ -25,27 +25,27 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "포항 VS 김천 (168, 09/09)",
-    "hours_to_kickoff": 101.3,
+    "hours_to_kickoff": 95.2,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-05T13:43:25.784674+09:00",
+    "generated_at": "2026-09-05T19:47:58.252001+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 포항 vs 김천",
-  "thesis": "포항 vs 김천. 포항 최근 L W L W D, 김천 최근 D D D D L. 홈 포항이(가) 템포를 가져가며 xG 0.82 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "포항 vs 김천. 포항 최근 W L W D D, 김천 최근 D D D D L. 홈 포항이(가) 템포를 가져가며 xG 0.72 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "포항 vs 김천. 포항 최근 L W L W D (2승 1무 2패 / 최근 5경기). 김천 최근 D D D D L (0승 4무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 포항 xG 0.82·슈팅 9.8, 김천 xG 1.01·슈팅 11.4. 패스 성공률 81.9% vs 73.6%.",
+    "포항 vs 김천. 포항 최근 W L W D D (2승 2무 1패 / 최근 5경기). 김천 최근 D D D D L (0승 4무 1패 / 최근 5경기).",
+    "최근 5경기 평균 — 포항 xG 0.72·슈팅 7.8, 김천 xG 1.01·슈팅 11.4. 패스 성공률 65.3% vs 73.6%.",
     "올 시즌 맞대결 2경기 — 포항 기준 0승 1무 1패.",
     "경기장 포항 스틸야드 · 포항 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "포항은 기회 부족, 낮은 블록형 흐름이고, 김천은(는) 비기는 흐름, 수비 기회 허용, 적극 압박 그림입니다. 최근 xG 0.82 vs 1.01, 슈팅 9.8 vs 11.4, 파이널 서드 터치 19.6% vs 22.0%입니다.",
+    "contrast": "포항은 기회 부족, 낮은 블록형 흐름이고, 김천은(는) 비기는 흐름, 수비 기회 허용, 적극 압박 그림입니다. 최근 xG 0.72 vs 1.01, 슈팅 7.8 vs 11.4, 파이널 서드 터치 15.5% vs 22.0%입니다.",
     "edge": [
       "홈 이점(포항). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
-      "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+      "김천의 xG 1.01가 더 높습니다. 포항이 실점을 막는 전환 수비가 관건입니다."
     ],
     "target": [
       "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
@@ -61,19 +61,19 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 0.82,
+        "jeonbuk": 0.72,
         "opponent": 1.01,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.15,
+        "jeonbuk": 0.98,
         "opponent": 1.43,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 9.8,
+        "jeonbuk": 7.8,
         "opponent": 11.4,
         "better": "opponent"
       },
@@ -85,26 +85,26 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 81.9,
+        "jeonbuk": 65.3,
         "opponent": 73.6,
         "suffix": "%",
-        "better": "jeonbuk"
+        "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 19.6,
+        "jeonbuk": 15.5,
         "opponent": 22.0,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 15.2,
+        "jeonbuk": 12.0,
         "opponent": 22.8,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 포항 xG 0.82 / xGA 1.15, 김천 xG 1.01 / xGA 1.43."
+    "summary": "최근 5경기 기준 — 포항 xG 0.72 / xGA 0.98, 김천 xG 1.01 / xGA 1.43."
   },
   "h2h_summary": {
     "wins": 0,
@@ -114,24 +114,6 @@
   },
   "form": {
     "jeonbuk": [
-      {
-        "game_id": "132",
-        "year": "2026",
-        "round": 22,
-        "date": "2026-08-08",
-        "home": "포항",
-        "away": "울산",
-        "score": "0:2",
-        "result": "L",
-        "opponent": "울산",
-        "ha": "H",
-        "xg": 0.51,
-        "xga": 0.89,
-        "shots": 10,
-        "sot": 0,
-        "goals_for": 0,
-        "goals_against": 2
-      },
       {
         "game_id": "133",
         "year": "2026",
@@ -215,6 +197,24 @@
         "final_third_pct": 17.7,
         "presses": 11,
         "stats_source": "portal"
+      },
+      {
+        "game_id": "159",
+        "year": "2026",
+        "round": 27,
+        "date": "2026-09-05",
+        "home": "전북",
+        "away": "포항",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "전북",
+        "ha": "A",
+        "xg": 0.0,
+        "xga": 0.0,
+        "shots": 0,
+        "sot": 0,
+        "goals_for": 0,
+        "goals_against": 0
       }
     ],
     "opponent": [
@@ -346,18 +346,18 @@
         "기회 부족",
         "낮은 블록형"
       ],
-      "record": "2승 1무 2패 / 최근 5경기",
+      "record": "2승 2무 1패 / 최근 5경기",
       "goals_for": 4,
-      "goals_against": 7,
-      "goal_diff": -3,
-      "avg_xg": 0.82,
-      "avg_xga": 1.15,
-      "avg_shots": 9.8,
+      "goals_against": 5,
+      "goal_diff": -1,
+      "avg_xg": 0.72,
+      "avg_xga": 0.98,
+      "avg_shots": 7.8,
       "avg_sot": 2.2,
-      "avg_pass_pct": 81.9,
-      "avg_final_third_pct": 19.6,
-      "avg_presses": 15.2,
-      "avg_x": 48.3,
+      "avg_pass_pct": 65.3,
+      "avg_final_third_pct": 15.5,
+      "avg_presses": 12.0,
+      "avg_x": 44.5,
       "samples": 5
     },
     "opponent": {
@@ -395,7 +395,7 @@
       "key": "risk",
       "label": "포항이 불리한·조심할 점",
       "items": [
-        "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+        "김천의 xG 1.01가 더 높습니다. 포항이 실점을 막는 전환 수비가 관건입니다."
       ]
     },
     {
