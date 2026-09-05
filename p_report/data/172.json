@@ -25,24 +25,24 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "대전 VS 포항 (172, 09/12)",
-    "hours_to_kickoff": 167.2,
+    "hours_to_kickoff": 162.6,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-05T19:49:22.556676+09:00",
+    "generated_at": "2026-09-06T00:26:30.915660+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 대전 vs 포항",
-  "thesis": "대전 vs 포항. 대전 최근 L W W L W, 포항 최근 W L W D D. 홈 대전이(가) 템포를 가져가며 xG 1.64 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "대전 vs 포항. 대전 최근 L W W L W, 포항 최근 W L W D D. 홈 대전이(가) 템포를 가져가며 xG 1.8 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "대전 vs 포항. 대전 최근 L W W L W (3승 0무 2패 / 최근 5경기). 포항 최근 W L W D D (2승 2무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 대전 xG 1.64·슈팅 11.2, 포항 xG 0.72·슈팅 7.8. 패스 성공률 74.5% vs 65.3%.",
+    "최근 5경기 평균 — 대전 xG 1.8·슈팅 12.4, 포항 xG 0.72·슈팅 7.8. 패스 성공률 73.7% vs 65.3%.",
     "올 시즌 맞대결 2경기 — 대전 기준 0승 0무 2패.",
     "경기장 대전 월드컵 · 대전 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "대전은 상승세, 기회 창출↑, 적극 압박 흐름이고, 포항은(는) 기회 부족, 낮은 블록형 그림입니다. 최근 xG 1.64 vs 0.72, 슈팅 11.2 vs 7.8, 파이널 서드 터치 27.6% vs 15.5%입니다.",
+    "contrast": "대전은 상승세, 기회 창출↑, 슈팅 많음 흐름이고, 포항은(는) 기회 부족, 낮은 블록형 그림입니다. 최근 xG 1.8 vs 0.72, 슈팅 12.4 vs 7.8, 파이널 서드 터치 28.6% vs 15.5%입니다.",
     "edge": [
-      "대전이(가) 최근 xG 1.64로 포항(0.72)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "대전이(가) 최근 xG 1.8로 포항(0.72)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "대전 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
       "홈 이점(대전). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -62,50 +62,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.64,
+        "jeonbuk": 1.8,
         "opponent": 0.72,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 0.96,
+        "jeonbuk": 1.12,
         "opponent": 0.98,
-        "better": "jeonbuk"
+        "better": "opponent"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 11.2,
+        "jeonbuk": 12.4,
         "opponent": 7.8,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 4.4,
+        "jeonbuk": 5.2,
         "opponent": 2.2,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 74.5,
+        "jeonbuk": 73.7,
         "opponent": 65.3,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 27.6,
+        "jeonbuk": 28.6,
         "opponent": 15.5,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 27.8,
+        "jeonbuk": 29.4,
         "opponent": 12.0,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 대전 xG 1.64 / xGA 0.96, 포항 xG 0.72 / xGA 0.98."
+    "summary": "최근 5경기 기준 — 대전 xG 1.8 / xGA 1.12, 포항 xG 0.72 / xGA 0.98."
   },
   "h2h_summary": {
     "wins": 0,
@@ -206,21 +206,21 @@
         "date": "2026-09-05",
         "home": "부천",
         "away": "대전",
-        "score": "0:2",
+        "score": "0:5",
         "result": "W",
         "opponent": "부천",
         "ha": "A",
-        "xg": 1.0,
-        "xga": 0.37,
-        "shots": 5,
-        "sot": 4,
-        "goals_for": 2,
+        "xg": 1.81,
+        "xga": 1.14,
+        "shots": 11,
+        "sot": 8,
+        "goals_for": 5,
         "goals_against": 0,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 72.1,
-        "final_third_pct": 17.7,
-        "presses": 13,
+        "pass_pct": 68.1,
+        "final_third_pct": 22.7,
+        "presses": 21,
         "stats_source": "portal"
       }
     ],
@@ -358,19 +358,21 @@
       "tags": [
         "상승세",
         "기회 창출↑",
+        "슈팅 많음",
+        "전진 점유",
         "적극 압박"
       ],
       "record": "3승 0무 2패 / 최근 5경기",
-      "goals_for": 9,
+      "goals_for": 12,
       "goals_against": 8,
-      "goal_diff": 1,
-      "avg_xg": 1.64,
-      "avg_xga": 0.96,
-      "avg_shots": 11.2,
-      "avg_sot": 4.4,
-      "avg_pass_pct": 74.5,
-      "avg_final_third_pct": 27.6,
-      "avg_presses": 27.8,
+      "goal_diff": 4,
+      "avg_xg": 1.8,
+      "avg_xga": 1.12,
+      "avg_shots": 12.4,
+      "avg_sot": 5.2,
+      "avg_pass_pct": 73.7,
+      "avg_final_third_pct": 28.6,
+      "avg_presses": 29.4,
       "avg_x": 50.3,
       "samples": 5
     },
@@ -401,7 +403,7 @@
       "key": "edge",
       "label": "대전이 유리한 점",
       "items": [
-        "대전이(가) 최근 xG 1.64로 포항(0.72)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+        "대전이(가) 최근 xG 1.8로 포항(0.72)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
         "대전 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
         "홈 이점(대전). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
       ]
