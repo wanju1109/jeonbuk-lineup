@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "부천 VS 제주 (171, 09/12)",
-    "hours_to_kickoff": 157.5,
+    "hours_to_kickoff": 154.9,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-06T05:32:59.763549+09:00",
+    "generated_at": "2026-09-06T08:04:55.064969+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 부천 vs 제주",
   "thesis": "부천 vs 제주. 부천 최근 W W L D L, 제주 최근 W D L W D. 홈 부천이(가) 템포를 가져가며 xG 1.15 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "부천 vs 제주. 부천 최근 W W L D L (2승 1무 2패 / 최근 5경기). 제주 최근 W D L W D (2승 2무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 부천 xG 1.15·슈팅 11.4, 제주 xG 1.12·슈팅 13.2. 패스 성공률 64.3% vs 71.5%.",
+    "최근 5경기 평균 — 부천 xG 1.15·슈팅 11.4, 제주 xG 1.12·슈팅 13.2. 패스 성공률 64.2% vs 71.5%.",
     "올 시즌 맞대결 2경기 — 부천 기준 0승 0무 2패.",
     "경기장 부천 종합 · 부천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -85,7 +85,7 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 64.3,
+        "jeonbuk": 64.2,
         "opponent": 71.5,
         "suffix": "%",
         "better": "opponent"
@@ -217,7 +217,7 @@
         "goals_against": 5,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 72.3,
+        "pass_pct": 72.0,
         "final_third_pct": 29.0,
         "presses": 19,
         "stats_source": "portal"
@@ -371,7 +371,7 @@
       "avg_xga": 1.52,
       "avg_shots": 11.4,
       "avg_sot": 4.6,
-      "avg_pass_pct": 64.3,
+      "avg_pass_pct": 64.2,
       "avg_final_third_pct": 23.2,
       "avg_presses": 16.8,
       "avg_x": 46.6,

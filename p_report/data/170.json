@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "울산 VS 인천 (170, 09/12)",
-    "hours_to_kickoff": 157.5,
+    "hours_to_kickoff": 154.9,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-06T05:32:32.627149+09:00",
+    "generated_at": "2026-09-06T08:04:19.865681+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 울산 vs 인천",
   "thesis": "울산 vs 인천. 울산 최근 D L L W D, 인천 최근 D W L D L. 홈 울산이(가) 템포를 가져가며 xG 1.54 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "울산 vs 인천. 울산 최근 D L L W D (1승 2무 2패 / 최근 5경기). 인천 최근 D W L D L (1승 2무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 울산 xG 1.54·슈팅 9.2, 인천 xG 0.77·슈팅 8.4. 패스 성공률 66.4% vs 73.5%.",
+    "최근 5경기 평균 — 울산 xG 1.54·슈팅 9.2, 인천 xG 0.77·슈팅 8.4. 패스 성공률 66.3% vs 73.4%.",
     "올 시즌 맞대결 2경기 — 울산 기준 1승 0무 1패.",
     "경기장 울산 문수 · 울산 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -85,8 +85,8 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 66.4,
-        "opponent": 73.5,
+        "jeonbuk": 66.3,
+        "opponent": 73.4,
         "suffix": "%",
         "better": "opponent"
       },
@@ -217,7 +217,7 @@
         "goals_against": 0,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 61.1,
+        "pass_pct": 60.8,
         "final_third_pct": 20.7,
         "presses": 12,
         "stats_source": "portal"
@@ -321,7 +321,7 @@
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 58.3,
+        "pass_pct": 57.8,
         "final_third_pct": 18.6,
         "presses": 12,
         "stats_source": "portal"
@@ -367,7 +367,7 @@
       "avg_xga": 1.24,
       "avg_shots": 9.2,
       "avg_sot": 4.4,
-      "avg_pass_pct": 66.4,
+      "avg_pass_pct": 66.3,
       "avg_final_third_pct": 21.2,
       "avg_presses": 14.6,
       "avg_x": 48.8,
@@ -389,7 +389,7 @@
       "avg_xga": 1.38,
       "avg_shots": 8.4,
       "avg_sot": 2.4,
-      "avg_pass_pct": 73.5,
+      "avg_pass_pct": 73.4,
       "avg_final_third_pct": 22.8,
       "avg_presses": 15.8,
       "avg_x": 47.0,

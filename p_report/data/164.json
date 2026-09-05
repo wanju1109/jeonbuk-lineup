@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-08 19:00 KST",
     "date_md": "09/08",
     "label": "인천 VS 부천 (164, 09/08)",
-    "hours_to_kickoff": 61.5,
+    "hours_to_kickoff": 59.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-06T05:30:55.619358+09:00",
+    "generated_at": "2026-09-06T08:02:12.947919+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 인천 vs 부천",
   "thesis": "인천 vs 부천. 인천 최근 D W L D L, 부천 최근 W W L D L. 홈 인천이(가) 템포를 가져가며 xG 0.77 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "인천 vs 부천. 인천 최근 D W L D L (1승 2무 2패 / 최근 5경기). 부천 최근 W W L D L (2승 1무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 인천 xG 0.77·슈팅 8.4, 부천 xG 1.15·슈팅 11.4. 패스 성공률 73.5% vs 64.3%.",
+    "최근 5경기 평균 — 인천 xG 0.77·슈팅 8.4, 부천 xG 1.15·슈팅 11.4. 패스 성공률 73.4% vs 64.2%.",
     "올 시즌 맞대결 2경기 — 인천 기준 1승 1무 0패.",
     "경기장 인천 전용 · 인천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -84,8 +84,8 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 73.5,
-        "opponent": 64.3,
+        "jeonbuk": 73.4,
+        "opponent": 64.2,
         "suffix": "%",
         "better": "jeonbuk"
       },
@@ -210,7 +210,7 @@
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 58.3,
+        "pass_pct": 57.8,
         "final_third_pct": 18.6,
         "presses": 12,
         "stats_source": "portal"
@@ -320,7 +320,7 @@
         "goals_against": 5,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 72.3,
+        "pass_pct": 72.0,
         "final_third_pct": 29.0,
         "presses": 19,
         "stats_source": "portal"
@@ -366,7 +366,7 @@
       "avg_xga": 1.38,
       "avg_shots": 8.4,
       "avg_sot": 2.4,
-      "avg_pass_pct": 73.5,
+      "avg_pass_pct": 73.4,
       "avg_final_third_pct": 22.8,
       "avg_presses": 15.8,
       "avg_x": 47.0,
@@ -386,7 +386,7 @@
       "avg_xga": 1.52,
       "avg_shots": 11.4,
       "avg_sot": 4.6,
-      "avg_pass_pct": 64.3,
+      "avg_pass_pct": 64.2,
       "avg_final_third_pct": 23.2,
       "avg_presses": 16.8,
       "avg_x": 46.6,
