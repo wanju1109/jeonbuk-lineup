@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "포항 VS 김천 (168, 09/09)",
-    "hours_to_kickoff": 61.4,
+    "hours_to_kickoff": 59.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-07T05:34:26.604771+09:00",
+    "generated_at": "2026-09-07T07:58:14.860630+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 포항 vs 김천",
@@ -315,7 +315,7 @@
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 78.3,
+        "pass_pct": 78.1,
         "final_third_pct": 27.3,
         "presses": 22,
         "stats_source": "portal"

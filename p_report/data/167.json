@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "광주 VS 제주 (167, 09/09)",
-    "hours_to_kickoff": 61.4,
+    "hours_to_kickoff": 59.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-07T05:33:56.854126+09:00",
+    "generated_at": "2026-09-07T07:57:54.371897+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 광주 vs 제주",
   "thesis": "광주 vs 제주. 광주 최근 L L D L D, 제주 최근 W D L W D. 홈 광주이(가) 템포를 가져가며 xG 1.41 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "광주 vs 제주. 광주 최근 L L D L D (0승 2무 3패 / 최근 5경기). 제주 최근 W D L W D (2승 2무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 광주 xG 1.41·슈팅 11.0, 제주 xG 1.12·슈팅 13.2. 패스 성공률 77.1% vs 71.5%.",
+    "최근 5경기 평균 — 광주 xG 1.41·슈팅 11.0, 제주 xG 1.12·슈팅 13.2. 패스 성공률 77.0% vs 71.5%.",
     "올 시즌 맞대결 2경기 — 광주 기준 0승 1무 1패.",
     "경기장 광주 월드컵 · 광주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
@@ -86,7 +86,7 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 77.1,
+        "jeonbuk": 77.0,
         "opponent": 71.5,
         "suffix": "%",
         "better": "jeonbuk"
@@ -218,7 +218,7 @@
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 78.2,
+        "pass_pct": 77.9,
         "final_third_pct": 9.3,
         "presses": 6,
         "stats_source": "portal"
@@ -376,7 +376,7 @@
       "avg_xga": 2.17,
       "avg_shots": 11.0,
       "avg_sot": 6.4,
-      "avg_pass_pct": 77.1,
+      "avg_pass_pct": 77.0,
       "avg_final_third_pct": 15.5,
       "avg_presses": 12.4,
       "avg_x": 48.7,
