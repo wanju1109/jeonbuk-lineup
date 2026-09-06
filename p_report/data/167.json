@@ -25,23 +25,24 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "광주 VS 제주 (167, 09/09)",
-    "hours_to_kickoff": 70.8,
+    "hours_to_kickoff": 66.4,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-06T20:09:29.466618+09:00",
+    "generated_at": "2026-09-07T00:35:45.178614+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 광주 vs 제주",
-  "thesis": "광주 vs 제주. 광주 최근 L L D L L, 제주 최근 W D L W D. 홈 광주이(가) 템포를 가져가며 xG 1.07 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "광주 vs 제주. 광주 최근 L L D L D, 제주 최근 W D L W D. 홈 광주이(가) 템포를 가져가며 xG 1.41 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "광주 vs 제주. 광주 최근 L L D L L (0승 1무 4패 / 최근 5경기). 제주 최근 W D L W D (2승 2무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 광주 xG 1.07·슈팅 9.6, 제주 xG 1.12·슈팅 13.2. 패스 성공률 77.6% vs 71.5%.",
+    "광주 vs 제주. 광주 최근 L L D L D (0승 2무 3패 / 최근 5경기). 제주 최근 W D L W D (2승 2무 1패 / 최근 5경기).",
+    "최근 5경기 평균 — 광주 xG 1.41·슈팅 11.0, 제주 xG 1.12·슈팅 13.2. 패스 성공률 77.1% vs 71.5%.",
     "올 시즌 맞대결 2경기 — 광주 기준 0승 1무 1패.",
     "경기장 광주 월드컵 · 광주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "광주은 부진, 수비 기회 허용, 낮은 블록형 흐름이고, 제주은(는) 슈팅 많음, 적극 압박 그림입니다. 최근 xG 1.07 vs 1.12, 슈팅 9.6 vs 13.2, 파이널 서드 터치 15.2% vs 24.7%입니다.",
+    "contrast": "광주은 부진, 비기는 흐름, 기회 창출↑ 흐름이고, 제주은(는) 슈팅 많음, 적극 압박 그림입니다. 최근 xG 1.41 vs 1.12, 슈팅 11.0 vs 13.2, 파이널 서드 터치 15.5% vs 24.7%입니다.",
     "edge": [
+      "광주이(가) 최근 xG 1.41로 제주(1.12)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "홈 이점(광주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
@@ -61,50 +62,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.07,
+        "jeonbuk": 1.41,
         "opponent": 1.12,
-        "better": "opponent"
+        "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.88,
+        "jeonbuk": 2.17,
         "opponent": 1.08,
         "better": "opponent"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 9.6,
+        "jeonbuk": 11.0,
         "opponent": 13.2,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 5.4,
+        "jeonbuk": 6.4,
         "opponent": 5.0,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 77.6,
+        "jeonbuk": 77.1,
         "opponent": 71.5,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 15.2,
+        "jeonbuk": 15.5,
         "opponent": 24.7,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 11.6,
+        "jeonbuk": 12.4,
         "opponent": 21.4,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 광주 xG 1.07 / xGA 1.88, 제주 xG 1.12 / xGA 1.08."
+    "summary": "최근 5경기 기준 — 광주 xG 1.41 / xGA 2.17, 제주 xG 1.12 / xGA 1.08."
   },
   "h2h_summary": {
     "wins": 0,
@@ -205,21 +206,21 @@
         "date": "2026-09-06",
         "home": "김천",
         "away": "광주",
-        "score": "1:0",
-        "result": "L",
+        "score": "2:2",
+        "result": "D",
         "opponent": "김천",
         "ha": "A",
-        "xg": 0.09,
-        "xga": 0.99,
-        "shots": 2,
-        "sot": 1,
-        "goals_for": 0,
-        "goals_against": 1,
+        "xg": 1.81,
+        "xga": 2.4,
+        "shots": 9,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 80.6,
-        "final_third_pct": 7.5,
-        "presses": 2,
+        "pass_pct": 78.2,
+        "final_third_pct": 9.3,
+        "presses": 6,
         "stats_source": "portal"
       }
     ],
@@ -362,20 +363,22 @@
       "team_id": "K22",
       "tags": [
         "부진",
+        "비기는 흐름",
+        "기회 창출↑",
         "수비 기회 허용",
         "낮은 블록형"
       ],
-      "record": "0승 1무 4패 / 최근 5경기",
-      "goals_for": 5,
-      "goals_against": 11,
-      "goal_diff": -6,
-      "avg_xg": 1.07,
-      "avg_xga": 1.88,
-      "avg_shots": 9.6,
-      "avg_sot": 5.4,
-      "avg_pass_pct": 77.6,
-      "avg_final_third_pct": 15.2,
-      "avg_presses": 11.6,
+      "record": "0승 2무 3패 / 최근 5경기",
+      "goals_for": 7,
+      "goals_against": 12,
+      "goal_diff": -5,
+      "avg_xg": 1.41,
+      "avg_xga": 2.17,
+      "avg_shots": 11.0,
+      "avg_sot": 6.4,
+      "avg_pass_pct": 77.1,
+      "avg_final_third_pct": 15.5,
+      "avg_presses": 12.4,
       "avg_x": 48.7,
       "samples": 5
     },
@@ -406,6 +409,7 @@
       "key": "edge",
       "label": "광주이 유리한 점",
       "items": [
+        "광주이(가) 최근 xG 1.41로 제주(1.12)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
         "홈 이점(광주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
       ]
     },

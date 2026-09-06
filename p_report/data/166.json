@@ -25,24 +25,24 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "강원 VS 전북 (166, 09/09)",
-    "hours_to_kickoff": 70.9,
+    "hours_to_kickoff": 66.4,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-06T20:08:17.361977+09:00",
+    "generated_at": "2026-09-07T00:34:51.523294+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 강원 vs 전북",
   "thesis": "강원 vs 전북. 전북 최근 L W D D D, 강원 최근 D L D D W. 원정에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
   "briefing": [
-    "강원 vs 전북. 전북 최근 L W D D D (1승 3무 1패 / 최근 5경기, 4득 3실). 강원은 D L D D W (1승 3무 1패 / 최근 5경기, 5득 7실).",
-    "최근 5경기 평균 — 전북 xG 0.98·슈팅 10.4·유효슈팅 3.4, 강원 xG 1.03·슈팅 11.8·유효슈팅 4.6. 패스 성공률 80.1% vs 73.4%.",
+    "강원 vs 전북. 전북 최근 L W D D D (1승 3무 1패 / 최근 5경기, 4득 3실). 강원은 D L D D W (1승 3무 1패 / 최근 5경기, 7득 7실).",
+    "최근 5경기 평균 — 전북 xG 0.98·슈팅 10.4·유효슈팅 3.4, 강원 xG 1.23·슈팅 13.0·유효슈팅 5.0. 패스 성공률 80.1% vs 72.3%.",
     "올 시즌 맞대결 2경기 — 전북 0승 1무 1패.",
     "경기장 강릉하이원아레나 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다."
   ],
   "scout": {
-    "contrast": "전북은 비기는 흐름, 수비 단단, 낮은 블록형 흐름이고, 강원은(는) 비기는 흐름, 수비 기회 허용, 적극 압박 그림입니다. 최근 xG 0.98 vs 1.03, 슈팅 10.4 vs 11.8, 파이널 서드 터치 21.4% vs 24.0%, 평균 터치 높이 46.3 vs 47.5입니다.",
+    "contrast": "전북은 비기는 흐름, 수비 단단, 낮은 블록형 흐름이고, 강원은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 0.98 vs 1.23, 슈팅 10.4 vs 13.0, 파이널 서드 터치 21.4% vs 25.1%, 평균 터치 높이 46.3 vs 47.5입니다.",
     "edge": [
-      "전북이 허용 xG 0.72로 수비 기회 관리가 강원(1.38)보다 낫습니다."
+      "전북이 허용 xG 0.72로 수비 기회 관리가 강원(1.43)보다 낫습니다."
     ],
     "risk": [
       "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다."
@@ -62,49 +62,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 0.98,
-        "opponent": 1.03,
+        "opponent": 1.23,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 0.72,
-        "opponent": 1.38,
+        "opponent": 1.43,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
         "jeonbuk": 10.4,
-        "opponent": 11.8,
+        "opponent": 13.0,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 3.4,
-        "opponent": 4.6,
+        "opponent": 5.0,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 80.1,
-        "opponent": 73.4,
+        "opponent": 72.3,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 21.4,
-        "opponent": 24.0,
+        "opponent": 25.1,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 18.4,
-        "opponent": 18.0,
-        "better": "jeonbuk"
+        "opponent": 20.0,
+        "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 전북 xG 0.98 / xGA 0.72, 강원 xG 1.03 / xGA 1.38."
+    "summary": "최근 5경기 기준 — 전북 xG 0.98 / xGA 0.72, 강원 xG 1.23 / xGA 1.43."
   },
   "h2h_summary": {
     "wins": 0,
@@ -297,21 +297,21 @@
         "date": "2026-09-06",
         "home": "안양",
         "away": "강원",
-        "score": "0:1",
+        "score": "0:3",
         "result": "W",
         "opponent": "안양",
         "ha": "A",
-        "xg": 0.35,
-        "xga": 0.03,
-        "shots": 6,
-        "sot": 3,
-        "goals_for": 1,
+        "xg": 1.37,
+        "xga": 0.28,
+        "shots": 12,
+        "sot": 5,
+        "goals_for": 3,
         "goals_against": 0,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 74.5,
-        "final_third_pct": 18.8,
-        "presses": 9,
+        "pass_pct": 69.2,
+        "final_third_pct": 24.6,
+        "presses": 19,
         "stats_source": "portal"
       }
     ]
@@ -367,20 +367,21 @@
       "team_id": "K21",
       "tags": [
         "비기는 흐름",
+        "슈팅 많음",
         "수비 기회 허용",
         "적극 압박"
       ],
       "record": "1승 3무 1패 / 최근 5경기",
-      "goals_for": 5,
+      "goals_for": 7,
       "goals_against": 7,
-      "goal_diff": -2,
-      "avg_xg": 1.03,
-      "avg_xga": 1.38,
-      "avg_shots": 11.8,
-      "avg_sot": 4.6,
-      "avg_pass_pct": 73.4,
-      "avg_final_third_pct": 24.0,
-      "avg_presses": 18.0,
+      "goal_diff": 0,
+      "avg_xg": 1.23,
+      "avg_xga": 1.43,
+      "avg_shots": 13.0,
+      "avg_sot": 5.0,
+      "avg_pass_pct": 72.3,
+      "avg_final_third_pct": 25.1,
+      "avg_presses": 20.0,
       "avg_x": 47.5,
       "samples": 5
     }
@@ -390,7 +391,7 @@
       "key": "edge",
       "label": "전북이 유리한 점",
       "items": [
-        "전북이 허용 xG 0.72로 수비 기회 관리가 강원(1.38)보다 낫습니다."
+        "전북이 허용 xG 0.72로 수비 기회 관리가 강원(1.43)보다 낫습니다."
       ]
     },
     {
