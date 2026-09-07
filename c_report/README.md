@@ -63,7 +63,7 @@ python -m http.server 8080
 이미 **2026시즌 1~22R 전북 경기 22개**가 수집되어 있습니다.
 
 자동 갱신:
-- GitHub Actions `c_report chalk board collect` (6시간마다)
+- GitHub Actions `c_report chalk board collect` (매일 자정 KST)
 - 로컬: `python c_report/scripts/collect_chalkboard.py`
 
 워크플로 파일은 저장소 루트 `.github/workflows/c-report-collect.yml` 에 두세요.

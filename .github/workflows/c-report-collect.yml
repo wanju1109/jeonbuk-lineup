@@ -2,7 +2,8 @@ name: c_report chalk board collect
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    # GitHub cron is UTC. 15:00 UTC = 00:00 KST (matches are finished by then).
+    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       year:

@@ -51,10 +51,30 @@ TEAM_FILTER = "" if str(_raw_team).strip() in ("", "*", "ALL", "any") else str(_
 # Skip games that already have a JSON file (set FORCE=1 to re-fetch).
 SKIP_EXISTING = os.environ.get("KLEAGUE_SKIP_EXISTING", "1").lower() not in ("0", "false", "no")
 FORCE = os.environ.get("KLEAGUE_FORCE", "").lower() in ("1", "true", "yes")
+# Full chalk boards are large; early/kickoff snapshots stay tiny.
+INCOMPLETE_EVENT_MIN = int(os.environ.get("KLEAGUE_INCOMPLETE_EVENT_MIN", "100"))
 
 SCHEDULE_PATH = DATA_DIR / "schedule.json"
 COLLECTED_PATH = DATA_DIR / "collected.json"
 JEONBUK_KEY = "전북"
+
+
+def is_incomplete_match_json(path: Path) -> bool:
+    """Return True when an existing file looks like a premature snapshot."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return True
+    if not isinstance(data, dict):
+        return True
+    events = data.get("events") or []
+    if not isinstance(events, list) or len(events) < INCOMPLETE_EVENT_MIN:
+        return True
+    meta = data.get("meta") if isinstance(data.get("meta"), dict) else {}
+    attendance = meta.get("attendance")
+    if attendance in (None, 0, "0"):
+        return True
+    return False
 
 
 def match_json_path(year: str, gid: str) -> Path:
@@ -940,8 +960,14 @@ def main() -> None:
             gid = str(match["game_id"])
             out_path = match_json_path(YEAR, gid)
             if SKIP_EXISTING and not FORCE and out_path.exists():
-                print(f"[SKIP] game_id={gid} year={YEAR} already exists")
-                continue
+                if is_incomplete_match_json(out_path):
+                    print(
+                        f"[REFRESH] game_id={gid} year={YEAR} "
+                        "incomplete snapshot - re-fetch"
+                    )
+                else:
+                    print(f"[SKIP] game_id={gid} year={YEAR} already exists")
+                    continue
             try:
                 print(f"[FETCH] R{rid} {label}")
                 packed = fetch_chalkboard(client, YEAR, MEET_SEQ, rid, gid)
