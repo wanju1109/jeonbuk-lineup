@@ -25,22 +25,22 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "포항 VS 김천 (168, 09/09)",
-    "hours_to_kickoff": 59.0,
+    "hours_to_kickoff": 53.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-07T07:58:14.860630+09:00",
+    "generated_at": "2026-09-07T13:57:59.739904+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 포항 vs 김천",
-  "thesis": "포항 vs 김천. 포항 최근 W L W D D, 김천 최근 D D D L D. 홈 포항이(가) 템포를 가져가며 xG 0.72 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "포항 vs 김천. 포항 최근 W L W D L, 김천 최근 D D D L D. 홈 포항이(가) 템포를 가져가며 xG 0.98 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "포항 vs 김천. 포항 최근 W L W D D (2승 2무 1패 / 최근 5경기). 김천 최근 D D D L D (0승 4무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 포항 xG 0.72·슈팅 7.8, 김천 xG 1.36·슈팅 14.4. 패스 성공률 65.3% vs 73.8%.",
+    "포항 vs 김천. 포항 최근 W L W D L (2승 1무 2패 / 최근 5경기). 김천 최근 D D D L D (0승 4무 1패 / 최근 5경기).",
+    "최근 5경기 평균 — 포항 xG 0.98·슈팅 11.0, 김천 xG 1.36·슈팅 14.4. 패스 성공률 80.3% vs 73.8%.",
     "올 시즌 맞대결 2경기 — 포항 기준 0승 1무 1패.",
     "경기장 포항 스틸야드 · 포항 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
   ],
   "scout": {
-    "contrast": "포항은 기회 부족, 낮은 블록형 흐름이고, 김천은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 0.72 vs 1.36, 슈팅 7.8 vs 14.4, 파이널 서드 터치 15.5% vs 24.4%입니다.",
+    "contrast": "포항은 낮은 블록형 흐름이고, 김천은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 0.98 vs 1.36, 슈팅 11.0 vs 14.4, 파이널 서드 터치 20.7% vs 24.4%입니다.",
     "edge": [
       "홈 이점(포항). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -61,50 +61,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 0.72,
+        "jeonbuk": 0.98,
         "opponent": 1.36,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 0.98,
+        "jeonbuk": 1.17,
         "opponent": 1.68,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 7.8,
+        "jeonbuk": 11.0,
         "opponent": 14.4,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 2.2,
+        "jeonbuk": 3.8,
         "opponent": 4.8,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 65.3,
+        "jeonbuk": 80.3,
         "opponent": 73.8,
         "suffix": "%",
-        "better": "opponent"
+        "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 15.5,
+        "jeonbuk": 20.7,
         "opponent": 24.4,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 12.0,
+        "jeonbuk": 15.6,
         "opponent": 24.2,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 포항 xG 0.72 / xGA 0.98, 김천 xG 1.36 / xGA 1.68."
+    "summary": "최근 5경기 기준 — 포항 xG 0.98 / xGA 1.17, 김천 xG 1.36 / xGA 1.68."
   },
   "h2h_summary": {
     "wins": 0,
@@ -205,16 +205,16 @@
         "date": "2026-09-05",
         "home": "전북",
         "away": "포항",
-        "score": "0:0",
-        "result": "D",
+        "score": "2:0",
+        "result": "L",
         "opponent": "전북",
         "ha": "A",
-        "xg": 0.0,
-        "xga": 0.0,
-        "shots": 0,
-        "sot": 0,
+        "xg": 1.29,
+        "xga": 0.97,
+        "shots": 16,
+        "sot": 8,
         "goals_for": 0,
-        "goals_against": 0
+        "goals_against": 2
       }
     ],
     "opponent": [
@@ -349,21 +349,20 @@
       "name": "포항",
       "team_id": "K03",
       "tags": [
-        "기회 부족",
         "낮은 블록형"
       ],
-      "record": "2승 2무 1패 / 최근 5경기",
+      "record": "2승 1무 2패 / 최근 5경기",
       "goals_for": 4,
-      "goals_against": 5,
-      "goal_diff": -1,
-      "avg_xg": 0.72,
-      "avg_xga": 0.98,
-      "avg_shots": 7.8,
-      "avg_sot": 2.2,
-      "avg_pass_pct": 65.3,
-      "avg_final_third_pct": 15.5,
-      "avg_presses": 12.0,
-      "avg_x": 44.5,
+      "goals_against": 7,
+      "goal_diff": -3,
+      "avg_xg": 0.98,
+      "avg_xga": 1.17,
+      "avg_shots": 11.0,
+      "avg_sot": 3.8,
+      "avg_pass_pct": 80.3,
+      "avg_final_third_pct": 20.7,
+      "avg_presses": 15.6,
+      "avg_x": 48.4,
       "samples": 5
     },
     "opponent": {
