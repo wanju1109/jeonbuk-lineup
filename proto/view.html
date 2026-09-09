@@ -154,6 +154,20 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
   <h1>K리그 라운드 분석</h1>
   <p class="sub" id="sub">일정·결과는 K리그 데이터. 프로토 회차와 무관합니다.</p>
   <section class="stats" id="stats"></section>
+  <details class="rounds">
+    <summary>예측 확률과 검증 결과 읽는 법</summary>
+    <p>파란 체크는 저장된 픽입니다. 모델 확률 1위와 다른 기존 픽은 근거에 따로 안내합니다.
+    모델 40%는 비슷한 조건에서 해당 결과가 약 40%라는 추정이며, 확정이나 적중률 보장이 아닙니다.
+    배당은 확률과 단위가 다릅니다. 실시간 배당으로 픽을 바꾸지 않습니다.</p>
+    <p>2026-02-28~09-08 종료 363경기 점검: 저장 픽과 모델 확률 1위가 다른 경기 71건.
+    과거 저장 픽 적중은 158/363(43.53%)이며, 당시 사전 저장 여부를 모두 확인할 수 없어 실전 성과로 단정하지 않습니다.</p>
+    <p>날짜순 재검증: 07-22 이전 255경기로 후보를 선택하고, 이후 108경기로 평가했습니다.
+    기존 포아송 42/108(38.89%), 선정한 보정 후보 41/108(37.96%). 적중률 개선이 확인되지 않아 모델 교체는 보류했습니다.
+    같은 날과 미래 결과, 시점이 확인되지 않은 배당은 예측 입력에서 제외했습니다.
+    이 수치는 저장 픽 성과와 다른, 모델 재계산 실험입니다.</p>
+    <p><a href="data/prediction_validation.json">경기별 검증 결과 JSON</a> ·
+    <a href="VALIDATION.md">검증 방법과 한계</a></p>
+  </details>
   <nav class="bar" id="bar">
     <div class="pills" id="tabPills">
       <button type="button" class="on" data-tab="up">예정</button>
@@ -172,14 +186,16 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     <span><i class="l-pick"></i>파란 테두리 + 체크 = 내 픽</span>
     <span><i class="l-hit"></i>파란 채움 = 픽이 실제와 같음(적중)</span>
     <span><i class="l-act"></i>노란 채움 = 실제 결과(픽과 다를 때)</span>
-    <span>승무패 칸의 숫자는 해외배당</span>
+    <span>모델 % = 결과별 추정 확률 · 배당 = 배당률</span>
   </p>
   <section class="list" id="list"><p class="empty">불러오는 중…</p></section>
   <footer>
-    승무패는 GD 모델 + Pinnacle·라이브스코어 해외배당 보정. U/O 2.5는 포아송 튜닝. 칸 숫자는 통합 해외배당.
+    저장된 픽과 모델 확률을 함께 표시합니다. 해외배당은 참고 정보이며 픽을 변경하지 않습니다.
+    모델 확률은 실제 적중률 보장이 아니며, 지난 경기의 픽은 보존합니다.
     예정 경기는 분석하기를 눌러야 픽이 열립니다.
   </footer>
 </main>
+<script src="prediction-display.js"></script>
 <script>
 (function () {
   "use strict";
@@ -281,75 +297,12 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       if (dv) m.ls.proto = { "승": dv.w, "무": dv.d, "패": dv.l };
       var ou = arr[1] && arr[1].data ? firstVal(arr[1].data["1"]) : null;
       if (ou) m.ls.ou = ou;
-      applyOverseasPicks(m);
+      // Odds are reference data; they never overwrite a saved prediction.
     }).catch(function () {});
   }
-  function setPick(m, key, lab) {
-    if (!m.picks) m.picks = {};
-    if (!m.picks[key]) m.picks[key] = {};
-    m.picks[key].pick = lab;
-  }
-  function oddsFavorite(wdl) {
-    var best = "승";
-    var min = Infinity;
-    ["승", "무", "패"].forEach(function (k) {
-      var v = Number(wdl[k]);
-      if (isFinite(v) && v > 0 && v < min) {
-        min = v;
-        best = k;
-      }
-    });
-    return { pick: best, min: min };
-  }
-  function impliedTop(wdl) {
-    var inv = {};
-    var sum = 0;
-    ["승", "무", "패"].forEach(function (k) {
-      var v = Number(wdl[k]);
-      inv[k] = 1 / (isFinite(v) && v > 0 ? v : 99);
-      sum += inv[k];
-    });
-    var top = 0;
-    ["승", "무", "패"].forEach(function (k) {
-      top = Math.max(top, inv[k] / sum);
-    });
-    return top;
-  }
-  function wdlGap(m) {
-    var dist = m.picks && m.picks.wdl && m.picks.wdl.dist;
-    if (!dist) return 0;
-    var vals = ["승", "무", "패"].map(function (k) { return Number(dist[k] || 0); }).sort(function (a, b) { return b - a; });
-    return vals.length > 1 ? vals[0] - vals[1] : vals[0];
-  }
   function mergedWdl(m) {
-    var od = m.odds;
-    if (od && od.wdl) return od.wdl;
-    if (m.ls && m.ls.wdl) return m.ls.wdl;
-    return null;
-  }
-  function applyWdlOdds(m) {
-    if (!m || m.finished) return;
-    if (!m.picks || !m.picks.wdl) return;
-    var wdl = mergedWdl(m);
-    if (!wdl) return;
-    var model = m.picks.wdl.model_pick || m.picks.wdl.pick;
-    if (!model) return;
-    var fav = oddsFavorite(wdl);
-    var top = impliedTop(wdl);
-    var gap = wdlGap(m);
-    var pick = model;
-    if (model === fav.pick) {
-      pick = model;
-    } else if (fav.min <= 1.80 && top >= 0.44) {
-      pick = fav.pick;
-    } else if (gap < 0.07 && top >= 0.42) {
-      pick = fav.pick;
-    }
-    setPick(m, "wdl", pick);
-  }
-  function applyOverseasPicks(m) {
-    if (!m || m.finished) return;
-    applyWdlOdds(m);
+    if (m.odds && m.odds.wdl) return m.odds.wdl;
+    return m.ls && m.ls.wdl || null;
   }
   function cellOdds(m, key, opt) {
     if (key === "wdl") {
@@ -477,8 +430,8 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
     document.getElementById("stats").innerHTML =
       '<div class="stat"><b>' + (state.league === "K1" ? "K리그1" : "K리그2") +
       " 현재</b><strong>" + currentRound(state.league) + "R</strong></div>" +
-      box("승무패 적중", "wdl") +
-      box("U/O 2.5 적중", "ou25");
+      box("저장 픽 승무패 적중", "wdl") +
+      box("저장 픽 U/O 2.5 적중", "ou25");
     document.getElementById("sub").textContent =
       (state.data.season ? state.data.season + "시즌 · " : "") +
       "생성 " + (state.data.generated_at || "-") +
@@ -497,7 +450,9 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       else if (isPick) cls.push("pick");
       else if (isAct) cls.push("actual");
       var odds = cellOdds(m, key, opt);
-      var pr = odds ? "<small>" + esc(odds) + "</small>" : "";
+      var probability = PredictionDisplay.probability(p, opt);
+      var pr = probability === null ? "" : "<small>모델 " + (100 * probability).toFixed(1) + "%</small>";
+      if (odds) pr += "<small>배당 " + esc(odds) + "</small>";
       return '<div class="' + cls.join(" ") + '">' + esc(opt) + pr + "</div>";
     }).join("");
     var verdict = "";
@@ -567,6 +522,7 @@ footer { margin-top:20px; color:var(--muted); font-size:.72rem; }
       (m.xg && m.xg.home != null ? " · 기대득점 " + m.xg.home + "-" + m.xg.away : "") +
       "</div>" +
       oddsLine(m) +
+      '<div class="formline">' + esc(PredictionDisplay.explanation(m.picks && m.picks.wdl)) + "</div>" +
       '<div class="why">' + paras + "</div>"
     );
   }
