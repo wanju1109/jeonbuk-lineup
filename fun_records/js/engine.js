@@ -439,6 +439,406 @@
     return out;
   }
 
+  function winStreaks(rows, minLen) {
+    const out = [];
+    let i = 0;
+    while (i < rows.length) {
+      if (rows[i].result !== "W") {
+        i += 1;
+        continue;
+      }
+      let j = i;
+      while (j < rows.length && rows[j].result === "W") j += 1;
+      const length = j - i;
+      if (length >= minLen) out.push({ start: rows[i], end: rows[j - 1], length });
+      i = j;
+    }
+    return out;
+  }
+
+  function gamesBetween(rows, afterDate, untilDate) {
+    let started = false;
+    let n = 0;
+    for (const m of rows) {
+      if (m.date === afterDate) {
+        started = true;
+        continue;
+      }
+      if (!started) continue;
+      if (untilDate && m.date === untilDate) break;
+      n += 1;
+    }
+    return n;
+  }
+
+  function quirkFacts(rows) {
+    const out = [];
+    if (rows.length < 10) return out;
+    const asOf = rows[rows.length - 1].date;
+
+    for (const minLen of [2, 3, 4]) {
+      const streaks = winStreaks(rows, minLen);
+      if (!streaks.length) continue;
+      const label = `${minLen}연승`;
+      let cur = 0;
+      for (let i = rows.length - 1; i >= 0; i--) {
+        if (rows[i].result === "W") cur += 1;
+        else break;
+      }
+      const last = streaks[streaks.length - 1];
+      if (cur >= minLen && streaks.length >= 2) {
+        const prev = streaks[streaks.length - 2];
+        const gapDays = daysBetween(prev.end.date, last.start.date);
+        const gapGames = gamesBetween(rows, prev.end.date, last.start.date);
+        if (gapDays != null && gapDays >= 30) {
+          out.push(
+            fact(
+              `streak_gap_${minLen}`,
+              "잡학",
+              `${label} 공백`,
+              `${prev.end.date}에 ${prev.length}연승이 끝난 뒤, 다음 ${label}까지 ${gapDays}일·${gapGames}경기가 걸렸습니다.`,
+              `공백 종료: ${last.start.date}부터 ${last.length}연승 (~${last.end.date}, vs ${last.end.opponent})`,
+              asOf,
+              ["연승", "공백"],
+              96
+            )
+          );
+        }
+      } else if (cur < minLen) {
+        const gapDays = daysBetween(last.end.date, asOf);
+        const gapGames = gamesBetween(rows, last.end.date, null);
+        if (gapDays != null && gapDays >= 14) {
+          out.push(
+            fact(
+              `streak_drought_${minLen}`,
+              "잡학",
+              `${label} 가뭄`,
+              `${last.end.date} 이후 ${label}이 없습니다. 벌써 ${gapDays}일·${gapGames}경기째.`,
+              `그날 ${last.length}연승이 끝났습니다 (vs ${last.end.opponent}, ${last.end.hs}:${last.end.as}).`,
+              asOf,
+              ["연승", "가뭄"],
+              97
+            )
+          );
+        }
+      }
+    }
+
+    const wins = rows.filter((m) => m.result === "W");
+    if (wins.length >= 2) {
+      let best = null;
+      for (let i = 0; i < wins.length - 1; i++) {
+        const d = daysBetween(wins[i].date, wins[i + 1].date);
+        if (d == null) continue;
+        if (!best || d > best.d) best = { d, a: wins[i], b: wins[i + 1] };
+      }
+      if (best && best.d >= 60) {
+        out.push(
+          fact(
+            "longest_win_wait",
+            "잡학",
+            "가장 길었던 승리 공백",
+            `승리와 승리 사이 최장 간격은 ${best.d}일 — ${best.a.date} vs ${best.a.opponent} 다음이 ${best.b.date} vs ${best.b.opponent}.`,
+            "",
+            asOf,
+            ["승리", "공백"],
+            88
+          )
+        );
+      }
+    }
+
+    const byMd = new Map();
+    for (const m of rows) {
+      const md = String(m.date || "").slice(5, 10);
+      if (md.length !== 5) continue;
+      if (!byMd.has(md)) byMd.set(md, []);
+      byMd.get(md).push(m);
+    }
+    let calendarDone = false;
+    const mdEntries = [...byMd.entries()].sort((a, b) => b[1].length - a[1].length);
+    for (const [md, lst] of mdEntries) {
+      if (lst.length < 3 || calendarDone) break;
+      const results = lst.map((x) => x.result);
+      const draws = results.filter((r) => r === "D").length;
+      if (draws >= 2 && new Set(results).size <= 2) {
+        const [month, day] = md.split("-").map(Number);
+        out.push(
+          fact(
+            `calendar_${md}`,
+            "잡학",
+            `${month}월 ${day}일의 저주?`,
+            `${month}월 ${day}일 전북 경기는 지금까지 ${lst.length}번 — 무승부 ${draws}·승 ${results.filter((r) => r === "W").length}·패 ${results.filter((r) => r === "L").length}.`,
+            lst.map((x) => `${x.date} ${x.result}(${x.hs}:${x.as})`).join(", "),
+            asOf,
+            ["기념일", "캘린더"],
+            93
+          )
+        );
+        calendarDone = true;
+      }
+    }
+    const may5 = byMd.get("05-05") || [];
+    if (may5.length >= 2) {
+      out.push(
+        fact(
+          "calendar_05_05",
+          "잡학",
+          "5월 5일 전북",
+          `어린이날(5/5) 전북 경기는 ${may5.length}번: ` + may5.map((x) => `${x.year} ${x.result}`).join(" / ") + ".",
+          may5.map((x) => `${x.date} ${x.result}(${x.hs}:${x.as}) vs ${x.opponent}`).join(", "),
+          asOf,
+          ["5월5일", "캘린더"],
+          94
+        )
+      );
+    }
+
+    const scoreC = new Map();
+    for (const m of rows) {
+      const sc = `${m.hs}:${m.as}`;
+      scoreC.set(sc, (scoreC.get(sc) || 0) + 1);
+    }
+    const scoreRank = [...scoreC.entries()].sort((a, b) => b[1] - a[1]);
+    if (scoreRank.length) {
+      const [sc, n] = scoreRank[0];
+      const pct = Math.round((1000 * n) / rows.length) / 10;
+      out.push(
+        fact(
+          "favorite_score",
+          "잡학",
+          "가장 자주 나온 스코어",
+          `2020년 이후 가장 흔한 스코어는 ${sc} — ${n}번(${pct}%).`,
+          scoreRank.slice(0, 3).map(([s, c]) => `${s} ${c}회`).join(" · "),
+          asOf,
+          ["스코어"],
+          72
+        )
+      );
+    }
+
+    const opps = [...new Set(rows.map((m) => m.opponent).filter(Boolean))].sort();
+    for (const opp of opps) {
+      const away = rows.filter((m) => m.opponent === opp && m.ha === "A");
+      if (away.length >= 2 && away.every((m) => m.result !== "W")) {
+        const last = away[away.length - 1];
+        out.push(
+          fact(
+            `never_away_win_${opp}`,
+            "잡학",
+            `${opp} 원정 무승`,
+            `2020년 이후 ${opp} 원정에서 아직 이겨 본 적이 없습니다 (${away.length}경기).`,
+            `최근: ${last.date} ${last.result} ${last.hs}:${last.as}`,
+            asOf,
+            ["원정", opp],
+            91
+          )
+        );
+      }
+    }
+
+    const years = [...new Set(rows.map((m) => String(m.year)).filter(Boolean))].sort();
+    const firstBits = [];
+    for (const y of years.slice(-4)) {
+      const fw = rows.find((m) => String(m.year) === y && m.result === "W");
+      if (fw) firstBits.push(`${y} ${fw.date.slice(5)} vs ${fw.opponent}`);
+    }
+    if (firstBits.length) {
+      out.push(
+        fact(
+          "season_first_wins",
+          "잡학",
+          "시즌 첫 승 달력",
+          "최근 시즌 첫 승: " + firstBits.join(" · ") + ".",
+          "",
+          asOf,
+          ["시즌", "첫승"],
+          70
+        )
+      );
+    }
+
+    let bestBlank = [];
+    let curBlank = [];
+    for (const m of rows) {
+      if (Number(m.gf || 0) === 0) curBlank.push(m);
+      else {
+        if (curBlank.length > bestBlank.length) bestBlank = curBlank.slice();
+        curBlank = [];
+      }
+    }
+    if (curBlank.length > bestBlank.length) bestBlank = curBlank.slice();
+    if (bestBlank.length >= 2) {
+      out.push(
+        fact(
+          "worst_blank",
+          "잡학",
+          "최장 무득점 행진",
+          `최장 무득점은 ${bestBlank.length}경기 (${bestBlank[0].date}~${bestBlank[bestBlank.length - 1].date}).`,
+          bestBlank.map((m) => `${m.date} vs ${m.opponent} ${m.hs}:${m.as}`).join(" → "),
+          asOf,
+          ["무득점"],
+          82
+        )
+      );
+    }
+    curBlank = [];
+    for (let i = rows.length - 1; i >= 0; i--) {
+      if (Number(rows[i].gf || 0) === 0) curBlank.push(rows[i]);
+      else break;
+    }
+    if (curBlank.length >= 2) {
+      out.push(
+        fact(
+          "current_blank",
+          "잡학",
+          "지금 무득점 중?",
+          `최근 ${curBlank.length}경기 연속 무득점입니다.`,
+          "",
+          asOf,
+          ["무득점"],
+          86
+        )
+      );
+    }
+
+    const wRows = rows.filter((m) => m.result === "W");
+    if (wRows.length) {
+      const one = wRows.filter((m) => Math.abs(Number(m.gf || 0) - Number(m.ga || 0)) === 1);
+      const pct = Math.round((1000 * one.length) / wRows.length) / 10;
+      out.push(
+        fact(
+          "one_goal_wins",
+          "잡학",
+          "1골 차 승리 비중",
+          `승리 ${wRows.length}경기 중 1골 차 승리가 ${one.length}번(${pct}%).`,
+          one.length
+            ? `최근 1골 차 승: ${one[one.length - 1].date} vs ${one[one.length - 1].opponent} (${one[one.length - 1].hs}:${one[one.length - 1].as})`
+            : "",
+          asOf,
+          ["승리"],
+          74
+        )
+      );
+    }
+
+    const btts = rows.filter((m) => Number(m.gf || 0) > 0 && Number(m.ga || 0) > 0);
+    out.push(
+      fact(
+        "btts_rate",
+        "잡학",
+        "양팀 득점(BTTS)",
+        `양 팀이 모두 득점한 경기는 ${btts.length}/${rows.length} (${Math.round((1000 * btts.length) / rows.length) / 10}%).`,
+        "",
+        asOf,
+        ["BTTS"],
+        66
+      )
+    );
+
+    let lastBig = null;
+    for (const m of rows) {
+      if (Number(m.gf || 0) >= 3) lastBig = m;
+    }
+    if (lastBig) {
+      const d = daysBetween(lastBig.date, asOf);
+      const gamesSince = gamesBetween(rows, lastBig.date, null);
+      if (d != null && d >= 20 && gamesSince >= 3) {
+        out.push(
+          fact(
+            "big_win_drought",
+            "잡학",
+            "대량득점 가뭄",
+            `3골 이상 넣은 경기가 ${lastBig.date} 이후 ${d}일·${gamesSince}경기째 없습니다.`,
+            `그날 vs ${lastBig.opponent} ${lastBig.hs}:${lastBig.as} (${lastBig.gf}골)`,
+            asOf,
+            ["득점", "가뭄"],
+            84
+          )
+        );
+      }
+    }
+
+    let bestD = [];
+    let curD = [];
+    for (const m of rows) {
+      if (m.result === "D") curD.push(m);
+      else {
+        if (curD.length > bestD.length) bestD = curD.slice();
+        curD = [];
+      }
+    }
+    if (curD.length > bestD.length) bestD = curD.slice();
+    if (bestD.length >= 3) {
+      out.push(
+        fact(
+          "draw_cluster",
+          "잡학",
+          "무승부 클러스터",
+          `최장 연속 무는 ${bestD.length}경기 (${bestD[0].date}~${bestD[bestD.length - 1].date}).`,
+          "",
+          asOf,
+          ["무승부"],
+          78
+        )
+      );
+    }
+
+    const weekend = [];
+    const weekday = [];
+    for (const m of rows) {
+      const dt = parseDate(m.date);
+      if (!dt) continue;
+      (dt.getDay() === 0 || dt.getDay() === 6 ? weekend : weekday).push(m);
+    }
+    if (weekend.length >= 20 && weekday.length >= 15) {
+      const wp = Math.round((1000 * weekend.filter((m) => m.result === "W").length) / weekend.length) / 10;
+      const dp = Math.round((1000 * weekday.filter((m) => m.result === "W").length) / weekday.length) / 10;
+      const better = wp >= dp ? "주말" : "평일";
+      out.push(
+        fact(
+          "weekend_weekday",
+          "잡학",
+          "주말 vs 평일",
+          `주말 승률 ${wp}%(${weekend.length}경기), 평일 승률 ${dp}%(${weekday.length}경기) — ${better}에 더 강했습니다.`,
+          "",
+          asOf,
+          ["주말", "평일"],
+          69
+        )
+      );
+    }
+
+    const byOpp = new Map();
+    for (const m of rows) {
+      if (!m.opponent) continue;
+      if (!byOpp.has(m.opponent)) byOpp.set(m.opponent, []);
+      byOpp.get(m.opponent).push(m);
+    }
+    for (const [opp, lst] of byOpp) {
+      if (lst.length < 3) continue;
+      const tail = lst.slice(-3);
+      if (new Set(tail.map((m) => m.result)).size === 1) {
+        const res = tail[0].result;
+        const label = { W: "승리", D: "무승부", L: "패배" }[res] || res;
+        out.push(
+          fact(
+            `opp_same3_${opp}_${res}`,
+            "잡학",
+            `${opp}전 최근 3연속 ${label}`,
+            `${opp} 상대 최근 3경기가 모두 ${label}입니다.`,
+            tail.map((m) => `${m.date} ${m.hs}:${m.as} (${m.ha === "H" ? "홈" : "원정"})`).join(" · "),
+            asOf,
+            [opp, "연속"],
+            87
+          )
+        );
+      }
+    }
+
+    return out;
+  }
+
   function curatedFacts(asOf) {
     return CURATED.map((c) => {
       const event = c.event_date || asOf;
@@ -463,6 +863,7 @@
     const facts = [
       ...curatedFacts(asOf),
       ...streakFacts(rows),
+      ...quirkFacts(rows),
       ...venueFacts(rows),
       ...scoreFacts(rows),
       ...goalFacts(rows),

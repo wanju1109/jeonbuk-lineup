@@ -462,7 +462,6 @@ def misc_facts(rows: list[dict]) -> list[dict]:
                 priority=58,
             )
         )
-    # Comeback? (can't know without period scores) — skip
     # Attendance max
     with_att = [m for m in rows if isinstance(m.get("attendance"), (int, float)) and m.get("attendance")]
     if with_att:
@@ -482,6 +481,436 @@ def misc_facts(rows: list[dict]) -> list[dict]:
     return out
 
 
+def _win_streaks(rows: list[dict], min_len: int = 2) -> list[tuple[dict, dict, int]]:
+    """Return (start_match, end_match, length) for win streaks >= min_len."""
+    out = []
+    i = 0
+    n = len(rows)
+    while i < n:
+        if rows[i].get("result") != "W":
+            i += 1
+            continue
+        j = i
+        while j < n and rows[j].get("result") == "W":
+            j += 1
+        length = j - i
+        if length >= min_len:
+            out.append((rows[i], rows[j - 1], length))
+        i = j
+    return out
+
+
+def quirk_facts(rows: list[dict]) -> list[dict]:
+    """Odd, story-like trivia — droughts, calendar twins, habits."""
+    out: list[dict] = []
+    if len(rows) < 10:
+        return out
+    as_of = rows[-1].get("date") or ""
+
+    # --- Multi-win streak drought (e.g. "no 2+ streak since May 5") ---
+    streaks2 = _win_streaks(rows, 2)
+    streaks3 = _win_streaks(rows, 3)
+    for min_len, streaks, label in ((2, streaks2, "2연승"), (3, streaks3, "3연승"), (4, _win_streaks(rows, 4), "4연승")):
+        if len(streaks) < 1:
+            continue
+        # Current open streak length
+        cur = 0
+        for m in reversed(rows):
+            if m.get("result") == "W":
+                cur += 1
+            else:
+                break
+        last_end = streaks[-1][1]
+        # If currently on a qualifying streak, talk about the previous gap instead
+        if cur >= min_len and len(streaks) >= 2:
+            prev_end = streaks[-2][1]
+            next_start = streaks[-1][0]
+            gap_days = days_between(prev_end.get("date") or "", next_start.get("date") or "")
+            gap_games = 0
+            started = False
+            for m in rows:
+                if m.get("date") == prev_end.get("date"):
+                    started = True
+                    continue
+                if not started:
+                    continue
+                if m.get("date") == next_start.get("date"):
+                    break
+                gap_games += 1
+            if gap_days and gap_days >= 30:
+                out.append(
+                    fact(
+                        f"streak_gap_{min_len}",
+                        "잡학",
+                        f"{label} 공백",
+                        f"{prev_end.get('date')}에 {streaks[-2][2]}연승이 끝난 뒤, "
+                        f"다음 {label}까지 {gap_days}일·{gap_games}경기가 걸렸습니다.",
+                        detail=(
+                            f"공백 종료: {next_start.get('date')}부터 {streaks[-1][2]}연승 "
+                            f"(~{last_end.get('date')}, vs {last_end.get('opponent')})"
+                        ),
+                        as_of=as_of,
+                        tags=["연승", "공백"],
+                        priority=96,
+                    )
+                )
+        elif cur < min_len:
+            gap_days = days_between(last_end.get("date") or "", as_of)
+            # games since streak ended
+            gap_games = 0
+            started = False
+            for m in rows:
+                if m.get("date") == last_end.get("date"):
+                    started = True
+                    continue
+                if started:
+                    gap_games += 1
+            if gap_days and gap_days >= 14:
+                out.append(
+                    fact(
+                        f"streak_drought_{min_len}",
+                        "잡학",
+                        f"{label} 가뭄",
+                        f"{last_end.get('date')} 이후 {label}이 없습니다. 벌써 {gap_days}일·{gap_games}경기째.",
+                        detail=(
+                            f"그날 {streaks[-1][2]}연승이 끝났습니다 "
+                            f"(vs {last_end.get('opponent')}, {last_end.get('hs')}:{last_end.get('as')})."
+                        ),
+                        as_of=as_of,
+                        tags=["연승", "가뭄"],
+                        priority=97,
+                    )
+                )
+
+    # --- Longest wait between two wins ---
+    wins = [m for m in rows if m.get("result") == "W"]
+    if len(wins) >= 2:
+        best = None
+        for a, b in zip(wins, wins[1:]):
+            d = days_between(a.get("date") or "", b.get("date") or "")
+            if d is None:
+                continue
+            if best is None or d > best[0]:
+                best = (d, a, b)
+        if best and best[0] >= 60:
+            d, a, b = best
+            out.append(
+                fact(
+                    "longest_win_wait",
+                    "잡학",
+                    "가장 길었던 승리 공백",
+                    f"승리와 승리 사이 최장 간격은 {d}일 — "
+                    f"{a.get('date')} vs {a.get('opponent')} 다음이 {b.get('date')} vs {b.get('opponent')}.",
+                    as_of=as_of,
+                    tags=["승리", "공백"],
+                    priority=88,
+                )
+            )
+
+    # --- Calendar twins: same month-day across years ---
+    by_md: dict[str, list] = {}
+    for m in rows:
+        md = str(m.get("date") or "")[5:10]
+        if len(md) == 5:
+            by_md.setdefault(md, []).append(m)
+    # Prefer quirky dates with 3+ samples
+    for md, lst in sorted(by_md.items(), key=lambda kv: -len(kv[1])):
+        if len(lst) < 3:
+            continue
+        results = [x.get("result") for x in lst]
+        # All draws except maybe last
+        if results.count("D") >= 2 and len(set(results)) <= 2:
+            detail = ", ".join(
+                f"{x.get('date')} {x.get('result')}({x.get('hs')}:{x.get('as')})" for x in lst
+            )
+            month, day = md.split("-")
+            out.append(
+                fact(
+                    f"calendar_{md}",
+                    "잡학",
+                    f"{int(month)}월 {int(day)}일의 저주?",
+                    f"{int(month)}월 {int(day)}일 전북 경기는 지금까지 {len(lst)}번 — "
+                    f"무승부 {results.count('D')}·승 {results.count('W')}·패 {results.count('L')}.",
+                    detail=detail,
+                    as_of=as_of,
+                    tags=["기념일", "캘린더"],
+                    priority=93,
+                )
+            )
+            break  # one strong calendar card is enough per refresh band; more below
+    # Extra calendar: specifically 05-05 if present
+    may5 = by_md.get("05-05") or []
+    if len(may5) >= 2:
+        detail = ", ".join(
+            f"{x.get('date')} {x.get('result')}({x.get('hs')}:{x.get('as')}) vs {x.get('opponent')}"
+            for x in may5
+        )
+        out.append(
+            fact(
+                "calendar_05_05",
+                "잡학",
+                "5월 5일 전북",
+                f"어린이날(5/5) 전북 경기는 {len(may5)}번: "
+                + " / ".join(f"{x.get('year')} {x.get('result')}" for x in may5)
+                + ".",
+                detail=detail,
+                as_of=as_of,
+                tags=["5월5일", "캘린더"],
+                priority=94,
+            )
+        )
+
+    # --- Most common scoreline ---
+    from collections import Counter
+
+    score_c = Counter(f"{m.get('hs')}:{m.get('as')}" for m in rows)
+    if score_c:
+        sc, n = score_c.most_common(1)[0]
+        pct = round(100.0 * n / len(rows), 1)
+        out.append(
+            fact(
+                "favorite_score",
+                "잡학",
+                "가장 자주 나온 스코어",
+                f"2020년 이후 가장 흔한 스코어는 {sc} — {n}번({pct}%).",
+                detail=" · ".join(f"{s} {c}회" for s, c in score_c.most_common(3)),
+                as_of=as_of,
+                tags=["스코어"],
+                priority=72,
+            )
+        )
+
+    # --- Never won away vs opponent ---
+    for opp in sorted({m.get("opponent") for m in rows if m.get("opponent")}):
+        away = [m for m in rows if m.get("opponent") == opp and m.get("ha") == "A"]
+        if len(away) >= 2 and all(m.get("result") != "W" for m in away):
+            last = away[-1]
+            out.append(
+                fact(
+                    f"never_away_win_{opp}",
+                    "잡학",
+                    f"{opp} 원정 무승",
+                    f"2020년 이후 {opp} 원정에서 아직 이겨 본 적이 없습니다 ({len(away)}경기).",
+                    detail=f"최근: {last.get('date')} {last.get('result')} {last.get('hs')}:{last.get('as')}",
+                    as_of=as_of,
+                    tags=["원정", opp],
+                    priority=91,
+                )
+            )
+
+    # --- First win of each season ---
+    years = sorted({str(m.get("year")) for m in rows if m.get("year")})
+    first_bits = []
+    for y in years[-4:]:
+        fw = next((m for m in rows if str(m.get("year")) == y and m.get("result") == "W"), None)
+        if fw:
+            first_bits.append(f"{y} {fw.get('date')[5:]} vs {fw.get('opponent')}")
+    if first_bits:
+        out.append(
+            fact(
+                "season_first_wins",
+                "잡학",
+                "시즌 첫 승 달력",
+                "최근 시즌 첫 승: " + " · ".join(first_bits) + ".",
+                as_of=as_of,
+                tags=["시즌", "첫승"],
+                priority=70,
+            )
+        )
+
+    # --- Scoring drought (0 goals streak) ---
+    best_blank = []
+    cur_blank = []
+    for m in rows:
+        if int(m.get("gf") or 0) == 0:
+            cur_blank.append(m)
+        else:
+            if len(cur_blank) > len(best_blank):
+                best_blank = cur_blank[:]
+            cur_blank = []
+    if len(cur_blank) > len(best_blank):
+        best_blank = cur_blank[:]
+    if len(best_blank) >= 2:
+        out.append(
+            fact(
+                "worst_blank",
+                "잡학",
+                "최장 무득점 행진",
+                f"최장 무득점은 {len(best_blank)}경기 "
+                f"({best_blank[0].get('date')}~{best_blank[-1].get('date')}).",
+                detail=" → ".join(
+                    f"{m.get('date')} vs {m.get('opponent')} {m.get('hs')}:{m.get('as')}"
+                    for m in best_blank
+                ),
+                as_of=as_of,
+                tags=["무득점"],
+                priority=82,
+            )
+        )
+    # current blank?
+    cur_blank = []
+    for m in reversed(rows):
+        if int(m.get("gf") or 0) == 0:
+            cur_blank.append(m)
+        else:
+            break
+    if len(cur_blank) >= 2:
+        out.append(
+            fact(
+                "current_blank",
+                "잡학",
+                "지금 무득점 중?",
+                f"최근 {len(cur_blank)}경기 연속 무득점입니다.",
+                as_of=as_of,
+                tags=["무득점"],
+                priority=86,
+            )
+        )
+
+    # --- One-goal wins habit ---
+    w_rows = [m for m in rows if m.get("result") == "W"]
+    if w_rows:
+        one = [m for m in w_rows if abs(int(m.get("gf") or 0) - int(m.get("ga") or 0)) == 1]
+        pct = round(100.0 * len(one) / len(w_rows), 1)
+        out.append(
+            fact(
+                "one_goal_wins",
+                "잡학",
+                "1골 차 승리 비중",
+                f"승리 {len(w_rows)}경기 중 1골 차 승리가 {len(one)}번({pct}%).",
+                detail=f"최근 1골 차 승: {one[-1].get('date')} vs {one[-1].get('opponent')} ({one[-1].get('hs')}:{one[-1].get('as')})"
+                if one
+                else "",
+                as_of=as_of,
+                tags=["승리"],
+                priority=74,
+            )
+        )
+
+    # --- BTTS ---
+    btts = [m for m in rows if int(m.get("gf") or 0) > 0 and int(m.get("ga") or 0) > 0]
+    out.append(
+        fact(
+            "btts_rate",
+            "잡학",
+            "양팀 득점(BTTS)",
+            f"양 팀이 모두 득점한 경기는 {len(btts)}/{len(rows)} "
+            f"({round(100.0 * len(btts) / len(rows), 1)}%).",
+            as_of=as_of,
+            tags=["BTTS"],
+            priority=66,
+        )
+    )
+
+    # --- High-scoring drought (no 3+ gf) ---
+    last_big = None
+    for m in rows:
+        if int(m.get("gf") or 0) >= 3:
+            last_big = m
+    if last_big:
+        d = days_between(last_big.get("date") or "", as_of)
+        games_since = 0
+        started = False
+        for m in rows:
+            if m.get("date") == last_big.get("date"):
+                started = True
+                continue
+            if started:
+                games_since += 1
+        if d and d >= 20 and games_since >= 3:
+            out.append(
+                fact(
+                    "big_win_drought",
+                    "잡학",
+                    "대량득점 가뭄",
+                    f"3골 이상 넣은 경기가 {last_big.get('date')} 이후 {d}일·{games_since}경기째 없습니다.",
+                    detail=f"그날 vs {last_big.get('opponent')} {last_big.get('hs')}:{last_big.get('as')} ({last_big.get('gf')}골)",
+                    as_of=as_of,
+                    tags=["득점", "가뭄"],
+                    priority=84,
+                )
+            )
+
+    # --- Draw clusters ---
+    best_d = []
+    cur_d = []
+    for m in rows:
+        if m.get("result") == "D":
+            cur_d.append(m)
+        else:
+            if len(cur_d) > len(best_d):
+                best_d = cur_d[:]
+            cur_d = []
+    if len(cur_d) > len(best_d):
+        best_d = cur_d[:]
+    if len(best_d) >= 3:
+        out.append(
+            fact(
+                "draw_cluster",
+                "잡학",
+                "무승부 클러스터",
+                f"최장 연속 무는 {len(best_d)}경기 "
+                f"({best_d[0].get('date')}~{best_d[-1].get('date')}).",
+                as_of=as_of,
+                tags=["무승부"],
+                priority=78,
+            )
+        )
+
+    # --- Weekend vs weekday win rate ---
+    weekend = []
+    weekday = []
+    for m in rows:
+        dt = parse_date(m.get("date") or "")
+        if not dt:
+            continue
+        (weekend if dt.weekday() >= 5 else weekday).append(m)
+    if len(weekend) >= 20 and len(weekday) >= 15:
+        wp = round(100.0 * sum(1 for m in weekend if m.get("result") == "W") / len(weekend), 1)
+        dp = round(100.0 * sum(1 for m in weekday if m.get("result") == "W") / len(weekday), 1)
+        better = "주말" if wp >= dp else "평일"
+        out.append(
+            fact(
+                "weekend_weekday",
+                "잡학",
+                "주말 vs 평일",
+                f"주말 승률 {wp}%({len(weekend)}경기), 평일 승률 {dp}%({len(weekday)}경기) — {better}에 더 강했습니다.",
+                as_of=as_of,
+                tags=["주말", "평일"],
+                priority=69,
+            )
+        )
+
+    # --- Same opponent thrice same result recently ---
+    by_opp: dict[str, list] = {}
+    for m in rows:
+        by_opp.setdefault(m.get("opponent") or "", []).append(m)
+    for opp, lst in by_opp.items():
+        if not opp or len(lst) < 3:
+            continue
+        tail = lst[-3:]
+        if len({m.get("result") for m in tail}) == 1:
+            res = tail[0].get("result")
+            label = {"W": "승리", "D": "무승부", "L": "패배"}.get(res or "", res)
+            out.append(
+                fact(
+                    f"opp_same3_{opp}_{res}",
+                    "잡학",
+                    f"{opp}전 최근 3연속 {label}",
+                    f"{opp} 상대 최근 3경기가 모두 {label}입니다.",
+                    detail=" · ".join(
+                        f"{m.get('date')} {m.get('hs')}:{m.get('as')} ({'홈' if m.get('ha')=='H' else '원정'})"
+                        for m in tail
+                    ),
+                    as_of=as_of,
+                    tags=[opp, "연속"],
+                    priority=87,
+                )
+            )
+
+    return out
+
+
 def build(seed: int | None = None) -> dict:
     hist = load_history()
     rows = finished(hist.get("matches") or [])
@@ -489,6 +918,7 @@ def build(seed: int | None = None) -> dict:
     facts = []
     facts.extend(curated_facts(as_of))
     facts.extend(streak_facts(rows))
+    facts.extend(quirk_facts(rows))
     facts.extend(venue_h2h_facts(rows))
     facts.extend(scoreline_facts(rows))
     facts.extend(goal_player_facts(rows))
