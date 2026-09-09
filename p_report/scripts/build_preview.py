@@ -757,14 +757,543 @@ def build_matchup(team_a: dict, team_b: dict, name_a: str, name_b: str) -> dict:
     }
 
 
+def match_raw_path(year: str, gid: str) -> Path:
+    y = str(year or YEAR)
+    g = str(gid or "")
+    if y == LEGACY_FLAT_YEAR:
+        return C_DATA / f"{g}.json"
+    return C_DATA / y / f"{g}.json"
+
+
+def blank_player_row() -> dict:
+    return {
+        "player_id": "",
+        "name": "",
+        "back_no": "",
+        "pos": "",
+        "team_id": "",
+        "games": 0,
+        "minutes": 0,
+        "touches": 0,
+        "passes": 0,
+        "pass_ok": 0,
+        "keypass": 0,
+        "shots": 0,
+        "sot": 0,
+        "goals": 0,
+        "xg": 0.0,
+        "press": 0,
+        "intercept": 0,
+        "tackle": 0,
+        "dribble": 0,
+    }
+
+
+def _yn(v) -> bool:
+    return str(v or "").upper() in ("Y", "T", "1", "TRUE")
+
+
+def _ensure_player(bucket: dict[str, dict], pid: str) -> dict:
+    row = bucket.get(pid)
+    if row is None:
+        row = blank_player_row()
+        row["player_id"] = pid
+        bucket[pid] = row
+    return row
+
+
+def ingest_players_from_match(bucket: dict[str, dict], data: dict, team_id: str) -> bool:
+    """Fold one chalkboard match into per-player totals for team_id."""
+    tid = str(team_id or "")
+    if not tid or not isinstance(data, dict):
+        return False
+    lineup = data.get("lineup") if isinstance(data.get("lineup"), dict) else {}
+    saw = False
+    for side in ("home", "away"):
+        for pl in lineup.get(side) or []:
+            if not isinstance(pl, dict):
+                continue
+            if str(pl.get("team_id") or "") != tid:
+                continue
+            pid = str(pl.get("player_id") or "").strip()
+            if not pid:
+                continue
+            row = _ensure_player(bucket, pid)
+            saw = True
+            if pl.get("name"):
+                row["name"] = str(pl.get("name") or row["name"])
+            if pl.get("back_no") not in (None, ""):
+                row["back_no"] = pl.get("back_no")
+            if pl.get("position"):
+                row["pos"] = str(pl.get("position") or row["pos"])
+            row["team_id"] = tid
+            try:
+                mins = int(pl.get("minutes") or 0)
+            except (TypeError, ValueError):
+                mins = 0
+            row["minutes"] += max(mins, 0)
+            if pl.get("starter") or mins > 0:
+                row["games"] += 1
+
+    name_by_id = {
+        str(p.get("player_id") or ""): str(p.get("NAME") or p.get("name") or "")
+        for p in (data.get("players") or [])
+        if isinstance(p, dict)
+    }
+    back_by_id = {
+        str(p.get("player_id") or ""): p.get("back_no")
+        for p in (data.get("players") or [])
+        if isinstance(p, dict)
+    }
+    pos_by_id = {
+        str(p.get("player_id") or ""): str(p.get("Position_Name") or "")
+        for p in (data.get("players") or [])
+        if isinstance(p, dict)
+    }
+
+    for e in data.get("events") or []:
+        if not isinstance(e, dict):
+            continue
+        if str(e.get("TEAM_ID") or "") != tid:
+            continue
+        pid = str(e.get("PLAYER_ID") or "").strip()
+        if not pid:
+            continue
+        row = _ensure_player(bucket, pid)
+        saw = True
+        row["team_id"] = tid
+        if not row["name"] and name_by_id.get(pid):
+            row["name"] = name_by_id[pid]
+        if row["back_no"] in (None, "") and back_by_id.get(pid) not in (None, ""):
+            row["back_no"] = back_by_id[pid]
+        if not row["pos"] and pos_by_id.get(pid):
+            row["pos"] = pos_by_id[pid]
+        typ = str(e.get("TYPE_CD") or "")
+        det = str(e.get("TYPE_DETAIL_CD") or "")
+        if not (typ == "GK" and not det):
+            row["touches"] += 1
+        if typ == "PS":
+            row["passes"] += 1
+            if det == "PSS":
+                row["pass_ok"] += 1
+            if _yn(e.get("KEYPASS_YN_CD")):
+                row["keypass"] += 1
+        if typ == "ST":
+            row["shots"] += 1
+            try:
+                row["xg"] += float(e.get("EXPECTED_GOAL") or 0)
+            except (TypeError, ValueError):
+                pass
+            if det == "GL":
+                row["goals"] += 1
+                row["sot"] += 1
+            elif det == "AST":
+                row["sot"] += 1
+        if det == "DS":
+            row["dribble"] += 1
+        elif det == "DU" and typ == "DU":
+            row["dribble"] += 1
+        if det in ("OPCS", "OPCU"):
+            row["press"] += 1
+        if det in ("INT", "CUT"):
+            row["intercept"] += 1
+        if det in ("TKS", "TKU"):
+            row["tackle"] += 1
+    return saw
+
+
+def recent_chalkboard_refs(
+    catalog: dict[str, dict],
+    team: str,
+    limit: int = 5,
+) -> list[tuple[str, str]]:
+    """Most recent finished matches for team that have chalkboard JSON on disk."""
+    rows: list[tuple[str, int, str, str]] = []
+    for m in catalog.values():
+        home, away = m.get("home") or "", m.get("away") or ""
+        if team not in home and team not in away:
+            continue
+        year = str(m.get("year") or YEAR)
+        gid = str(m.get("game_id") or "")
+        if not gid or not match_raw_path(year, gid).exists():
+            continue
+        rows.append((str(m.get("date") or ""), int(m.get("round") or 0), year, gid))
+    rows.sort(key=lambda x: (x[0], x[1]))
+    return [(y, g) for _d, _r, y, g in rows[-limit:]]
+
+
+def finalize_player_rows(bucket: dict[str, dict]) -> list[dict]:
+    out = []
+    for row in bucket.values():
+        if not row.get("name") and row.get("touches", 0) <= 0:
+            continue
+        if int(row.get("games") or 0) <= 0 and int(row.get("touches") or 0) <= 0:
+            continue
+        if int(row.get("games") or 0) <= 0 and int(row.get("touches") or 0) > 0:
+            row["games"] = 1
+        rec = dict(row)
+        rec["xg"] = round(float(rec.get("xg") or 0), 2)
+        out.append(rec)
+    return out
+
+
+def aggregate_team_players(
+    catalog: dict[str, dict],
+    team: str,
+    team_id: str,
+    limit: int = 5,
+) -> tuple[list[dict], dict]:
+    refs = recent_chalkboard_refs(catalog, team, limit)
+    bucket: dict[str, dict] = {}
+    used_ids: list[str] = []
+    for year, gid in refs:
+        data = load_json(match_raw_path(year, gid))
+        if not isinstance(data, dict):
+            continue
+        if ingest_players_from_match(bucket, data, team_id):
+            used_ids.append(gid)
+    players = finalize_player_rows(bucket)
+    used = len(used_ids)
+    meta = {
+        "games": used,
+        "sample_note": f"최근 가용 칠판 데이터 {used}경기 기준" if used else "선수 칠판 데이터 부족",
+        "game_ids": used_ids,
+    }
+    return players, meta
+
+
+def player_tag(p: dict) -> str:
+    name = str(p.get("name") or "?")
+    back = p.get("back_no")
+    if back not in (None, ""):
+        return f"#{back} {name}"
+    return name
+
+
+def attack_score(p: dict) -> float:
+    return (
+        float(p.get("xg") or 0) * 3.0
+        + float(p.get("goals") or 0) * 2.2
+        + float(p.get("keypass") or 0) * 1.1
+        + float(p.get("shots") or 0) * 0.2
+        + float(p.get("sot") or 0) * 0.35
+    )
+
+
+def hub_score(p: dict) -> float:
+    return (
+        float(p.get("keypass") or 0) * 3.0
+        + float(p.get("passes") or 0) * 0.025
+        + float(p.get("touches") or 0) * 0.012
+        + float(p.get("xg") or 0) * 0.8
+        + float(p.get("goals") or 0) * 0.5
+    )
+
+
+def danger_score(p: dict) -> float:
+    return attack_score(p) + float(p.get("press") or 0) * 0.12 + float(p.get("dribble") or 0) * 0.25
+
+
+def player_stat_line(p: dict) -> str:
+    parts = [
+        f"최근 {int(p.get('games') or 0)}경기",
+        f"xG {p.get('xg')}",
+        f"골 {int(p.get('goals') or 0)}",
+        f"슈팅 {int(p.get('shots') or 0)}",
+        f"키패스 {int(p.get('keypass') or 0)}",
+    ]
+    if int(p.get("press") or 0) >= 6:
+        parts.append(f"압박 {int(p.get('press') or 0)}")
+    if int(p.get("touches") or 0) >= 120:
+        parts.append(f"터치 {int(p.get('touches') or 0)}")
+    return " · ".join(parts)
+
+
+def serialize_player_focus(p: dict, note: str) -> dict:
+    return {
+        "player_id": p.get("player_id") or "",
+        "name": p.get("name") or "",
+        "back_no": p.get("back_no"),
+        "pos": p.get("pos") or "",
+        "games": int(p.get("games") or 0),
+        "xg": p.get("xg"),
+        "goals": int(p.get("goals") or 0),
+        "shots": int(p.get("shots") or 0),
+        "keypass": int(p.get("keypass") or 0),
+        "touches": int(p.get("touches") or 0),
+        "press": int(p.get("press") or 0),
+        "minutes": int(p.get("minutes") or 0),
+        "note": note,
+        "stat_line": player_stat_line(p),
+    }
+
+
+def pick_unique(players: list[dict], scorers, limit: int, exclude: set[str] | None = None) -> list[dict]:
+    exclude = exclude or set()
+    ranked = sorted(players, key=scorers, reverse=True)
+    out = []
+    for p in ranked:
+        pid = str(p.get("player_id") or "")
+        if not pid or pid in exclude:
+            continue
+        if not p.get("name"):
+            continue
+        out.append(p)
+        exclude.add(pid)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def build_prep_items(
+    focus_side: dict,
+    opp: dict,
+    opponent: str,
+    ha: str,
+    focus_name: str = "전북",
+) -> list[str]:
+    """Actionable prep notes from opponent style — not a copy of scout bullets."""
+    items: list[str] = []
+
+    def push(text: str) -> None:
+        if text and text not in items:
+            items.append(text)
+
+    tags = opp.get("tags") or []
+    if "적극 압박" in tags:
+        push(
+            f"{opponent} 최근 압박 시도가 많습니다(경기당 {opp.get('avg_presses')}). "
+            "빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다."
+        )
+    if "낮은 블록형" in tags:
+        push(
+            f"{opponent}은(는) 낮은 블록·후방 점유 비중이 큽니다. "
+            "중앙 고집보다 측면 오버랩 후 컷백·하프스페이스 침투로 박스를 열어야 합니다."
+        )
+    if "전진 점유" in tags or float(opp.get("avg_final_third_pct") or 0) >= 26:
+        push(
+            f"{opponent} 파이널 서드 터치 {opp.get('avg_final_third_pct')}%. "
+            "볼 손실 순간 뒷공간을 내주지 않게 미드필더의 즉시 커버가 필요합니다."
+        )
+    if "슈팅 많음" in tags or float(opp.get("avg_shots") or 0) >= 12:
+        push(
+            f"{opponent} 경기당 슈팅 {opp.get('avg_shots')}·유효슈팅 {opp.get('avg_sot')}. "
+            "박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요."
+        )
+    if "수비 기회 허용" in tags or float(opp.get("avg_xga") or 0) >= 1.25:
+        push(
+            f"{opponent} 허용 xG {opp.get('avg_xga')}로 수비 구멍이 있습니다. "
+            "초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다."
+        )
+    if "기회 창출↑" in tags or float(opp.get("avg_xg") or 0) >= 1.35:
+        push(
+            f"{opponent} 최근 xG {opp.get('avg_xg')}로 기회 질이 좋습니다. "
+            "라인 간격을 좁히고, 역습 첫 패스 각을 막는 것이 실점 방지의 핵심입니다."
+        )
+    if "비기는 흐름" in tags:
+        push(
+            f"{opponent} 최근 비기는 흐름입니다. 선제골 이후 템포를 죽이지 말고 "
+            "두 번째 슈팅 루트까지 밀어붙여야 승점 3이 열립니다."
+        )
+    if "상승세" in tags:
+        push(
+            f"{opponent}이(가) 상승세입니다. 한 골 차 리드에도 역습·세트피스 한 장면을 끝까지 경계하세요."
+        )
+    if ha == "A":
+        push(
+            "원정 초반 20분: 실점 없이 버티며 상대 압박 높이를 파악한 뒤, "
+            "측면 전환으로 템포를 가져오는 순서가 안전합니다."
+        )
+    else:
+        push(
+            "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, "
+            "관중 앞에서 전환 속도를 유지하세요."
+        )
+    if float(focus_side.get("avg_pass_pct") or 0) >= float(opp.get("avg_pass_pct") or 0) + 3:
+        push(
+            f"{focus_name} 패스 성공률 {focus_side.get('avg_pass_pct')}%가 "
+            f"{opponent}({opp.get('avg_pass_pct')}%)보다 높습니다. "
+            "점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
+        )
+    if not items:
+        push(
+            f"{opponent} 최근 지표가 비슷합니다. 중원 밀도·측면 1대1·세트피스 세 구간에서 "
+            "먼저 우위를 가져가는 쪽이 경기를 가져갑니다."
+        )
+    return items[:5]
+
+
+def build_player_focus(
+    jb_players: list[dict],
+    opp_players: list[dict],
+    jb_meta: dict,
+    opp_meta: dict,
+    jb_style: dict,
+    opp_style: dict,
+    opponent: str,
+    ha: str,
+) -> dict:
+    jb_key_raw = pick_unique(jb_players, attack_score, 4)
+    opp_danger_raw = pick_unique(opp_players, danger_score, 4)
+    used = {str(p.get("player_id")) for p in opp_danger_raw}
+    opp_hub_raw = pick_unique(opp_players, hub_score, 4, exclude=used)
+    if len(opp_hub_raw) < 2:
+        opp_hub_raw = pick_unique(opp_players, hub_score, 4)
+
+    def jb_note(p: dict) -> str:
+        if float(p.get("xg") or 0) >= 0.7 or int(p.get("goals") or 0) >= 1:
+            return "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요."
+        if int(p.get("keypass") or 0) >= 4:
+            return "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다."
+        if str(p.get("pos") or "").upper() in ("DF", "WB") and int(p.get("touches") or 0) >= 200:
+            return "빌드업·오버랩 참여도가 높은 수비 자원. 전진 패스 성공이 템포를 가릅니다."
+        return "최근 폼에서 영향력이 큰 자원. 선발·교체 모두 관전 포인트입니다."
+
+    def danger_note(p: dict) -> str:
+        if int(p.get("goals") or 0) >= 1 or float(p.get("xg") or 0) >= 0.4:
+            return "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요."
+        if int(p.get("keypass") or 0) >= 3:
+            return "키패스 각을 막는 것이 실점 예방. 받는 발·턴 방향을 먼저 차단하세요."
+        if int(p.get("press") or 0) >= 8:
+            return "전방 압박으로 빌드업을 흔드는 타입. 첫 패스 실수를 유도당하지 마세요."
+        return "터치·슈팅 관여가 잦아 놓치면 위험. 사이드 전환 후 2선 슈팅을 경계하세요."
+
+    def hub_note(p: dict) -> str:
+        if int(p.get("keypass") or 0) >= 3:
+            return f"{opponent} 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요."
+        if int(p.get("touches") or 0) >= 150:
+            return "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다."
+        return "전개 1옵션으로 자주 관여합니다. 받을 공간을 좁히면 측면으로 몰아갈 수 있습니다."
+
+    jb_key = [serialize_player_focus(p, jb_note(p)) for p in jb_key_raw]
+    opp_danger = [serialize_player_focus(p, danger_note(p)) for p in opp_danger_raw]
+    opp_hub = [serialize_player_focus(p, hub_note(p)) for p in opp_hub_raw]
+    prep = build_prep_items(jb_style, opp_style, opponent, ha, focus_name="전북")
+
+    if not jb_key:
+        jb_key = []
+        prep = prep  # keep
+    if not opp_danger:
+        opp_danger = []
+    if not opp_hub:
+        opp_hub = []
+
+    return {
+        "jeonbuk_key": jb_key,
+        "opponent_danger": opp_danger,
+        "opponent_hub": opp_hub,
+        "prep": prep,
+        "meta": {
+            "jeonbuk": jb_meta,
+            "opponent": opp_meta,
+        },
+    }
+
+
+def build_focus_cards(focus: dict, opponent: str, home_name: str = "", away_name: str = "", jeonbuk: bool = True) -> list[dict]:
+    """Preview cards focused on players + prep — intentionally different from scout."""
+    if jeonbuk:
+        key_label = "이번 경기 전북 핵심 선수"
+        danger_label = "조심해야 할 상대 선수"
+        hub_label = f"최근 {opponent} 전개·공격 중심"
+        prep_label = f"{opponent} 스타일 대비법"
+        jb_items = [
+            f"{player_tag({'name': p.get('name'), 'back_no': p.get('back_no')})} — {p.get('stat_line')}. {p.get('note')}"
+            for p in focus.get("jeonbuk_key") or []
+        ]
+        if not jb_items:
+            jb_items = ["최근 칠판 선수 데이터가 부족합니다. 팀 지표·라인업 공개 후 갱신됩니다."]
+        danger_items = [
+            f"{player_tag({'name': p.get('name'), 'back_no': p.get('back_no')})} — {p.get('stat_line')}. {p.get('note')}"
+            for p in focus.get("opponent_danger") or []
+        ]
+        if not danger_items:
+            danger_items = [f"{opponent} 최근 선수 단위 데이터가 부족합니다. 세트피스·역습 1옵션을 우선 경계하세요."]
+        hub_items = [
+            f"{player_tag({'name': p.get('name'), 'back_no': p.get('back_no')})} — {p.get('stat_line')}. {p.get('note')}"
+            for p in focus.get("opponent_hub") or []
+        ]
+        if not hub_items:
+            hub_items = [f"{opponent} 볼 순환 허브 데이터가 부족합니다. 중원 키패스·측면 전환 각을 먼저 보세요."]
+        prep_items = list(focus.get("prep") or [])
+        return [
+            {
+                "key": "jb_key",
+                "label": key_label,
+                "items": jb_items[:4],
+                "players": focus.get("jeonbuk_key") or [],
+            },
+            {
+                "key": "opp_watch",
+                "label": danger_label,
+                "items": danger_items[:4],
+                "players": focus.get("opponent_danger") or [],
+            },
+            {
+                "key": "opp_hub",
+                "label": hub_label,
+                "items": hub_items[:4],
+                "players": focus.get("opponent_hub") or [],
+            },
+            {
+                "key": "prep",
+                "label": prep_label,
+                "items": prep_items[:5],
+                "players": [],
+            },
+        ]
+
+    # Neutral (other-team) preview: home key / away danger / hubs / prep
+    home_key = focus.get("jeonbuk_key") or []
+    away_danger = focus.get("opponent_danger") or []
+    away_hub = focus.get("opponent_hub") or []
+
+    def item_lines(rows: list[dict], empty: str) -> list[str]:
+        lines = [
+            f"{player_tag({'name': p.get('name'), 'back_no': p.get('back_no')})} — {p.get('stat_line')}. {p.get('note')}"
+            for p in rows
+        ]
+        return lines[:4] or [empty]
+
+    return [
+        {
+            "key": "jb_key",
+            "label": f"{home_name} 핵심 선수",
+            "items": item_lines(home_key, f"{home_name} 최근 선수 데이터가 부족합니다."),
+            "players": home_key,
+        },
+        {
+            "key": "opp_watch",
+            "label": f"조심할 {away_name} 선수",
+            "items": item_lines(away_danger, f"{away_name} 선수 단위 데이터가 부족합니다."),
+            "players": away_danger,
+        },
+        {
+            "key": "opp_hub",
+            "label": f"최근 {away_name} 전개 중심",
+            "items": item_lines(away_hub, f"{away_name} 전개 허브 데이터가 부족합니다."),
+            "players": away_hub,
+        },
+        {
+            "key": "prep",
+            "label": "매치업 대비 포인트",
+            "items": (focus.get("prep") or [])[:5],
+            "players": [],
+        },
+    ]
+
+
 def build_scout(jb: dict, opp: dict, opponent: str, ha: str) -> dict:
     contrast = (
         f"전북은 {', '.join(jb['tags'][:3])} 흐름이고, "
         f"{opponent}은(는) {', '.join(opp['tags'][:3])} 그림입니다. "
         f"최근 xG {jb.get('avg_xg')} vs {opp.get('avg_xg')}, "
         f"슈팅 {jb.get('avg_shots')} vs {opp.get('avg_shots')}, "
+        f"유효슈팅 {jb.get('avg_sot')} vs {opp.get('avg_sot')}, "
+        f"패스 성공률 {jb.get('avg_pass_pct')}% vs {opp.get('avg_pass_pct')}%, "
         f"파이널 서드 터치 {jb.get('avg_final_third_pct')}% vs {opp.get('avg_final_third_pct')}%, "
-        f"평균 터치 높이 {jb.get('avg_x')} vs {opp.get('avg_x')}입니다."
+        f"평균 터치 높이 {jb.get('avg_x')} vs {opp.get('avg_x')}, "
+        f"압박 {jb.get('avg_presses')} vs {opp.get('avg_presses')}입니다."
     )
 
     edges, risks, targets, cautions = [], [], [], []
@@ -783,6 +1312,18 @@ def build_scout(jb: dict, opp: dict, opponent: str, ha: str) -> dict:
         push(
             edges,
             f"전북이 허용 xG {jb.get('avg_xga')}로 수비 기회 관리가 {opponent}({opp.get('avg_xga')})보다 낫습니다.",
+        )
+    if float(jb.get("avg_pass_pct") or 0) >= float(opp.get("avg_pass_pct") or 0) + 4:
+        push(
+            edges,
+            f"패스 성공률 {jb.get('avg_pass_pct')}% vs {opp.get('avg_pass_pct')}%. "
+            "점유를 지키며 템포를 조절할 여지가 있습니다.",
+        )
+    if float(jb.get("avg_sot") or 0) >= float(opp.get("avg_sot") or 0) + 0.8:
+        push(
+            edges,
+            f"유효슈팅 {jb.get('avg_sot')} vs {opp.get('avg_sot')}. "
+            "박스 안 마무리 빈도가 앞서면 한 방이 더 자주 옵니다.",
         )
     if "상승세" in jb["tags"]:
         push(edges, "전북 최근 승점 흐름이 좋습니다. 템포를 먼저 가져가면 상대가 쫓아오는 그림이 됩니다.")
@@ -803,6 +1344,12 @@ def build_scout(jb: dict, opp: dict, opponent: str, ha: str) -> dict:
             risks,
             f"전북이 경기당 xGA {jb.get('avg_xga')}를 허용 중입니다. 한 번의 정리 실패가 곧바로 실점으로 이어질 수 있습니다.",
         )
+    if float(opp.get("avg_xg") or 0) >= float(jb.get("avg_xg") or 0) + 0.2:
+        push(
+            risks,
+            f"{opponent} xG {opp.get('avg_xg')}가 전북({jb.get('avg_xg')})보다 높습니다. "
+            "기회 질 격차를 전환 수비로 메워야 합니다.",
+        )
     if "상승세" in opp["tags"]:
         push(
             risks,
@@ -811,7 +1358,8 @@ def build_scout(jb: dict, opp: dict, opponent: str, ha: str) -> dict:
     if "적극 압박" in opp["tags"]:
         push(
             cautions,
-            f"{opponent}의 압박 시도가 많습니다. 빌드업 첫 패스 실패를 줄이지 않으면 박스 위기가 바로 옵니다.",
+            f"{opponent}의 압박 시도가 많습니다(경기당 {opp.get('avg_presses')}). "
+            "빌드업 첫 패스 실패를 줄이지 않으면 박스 위기가 바로 옵니다.",
         )
     if "낮은 블록형" in opp["tags"]:
         push(
@@ -822,9 +1370,19 @@ def build_scout(jb: dict, opp: dict, opponent: str, ha: str) -> dict:
             targets,
             "박스 밖 남발보다 오버랩·하프스페이스 침투 후 컷백을 노리는 편이 맞습니다.",
         )
+    if float(opp.get("avg_shots") or 0) >= 12:
+        push(
+            cautions,
+            f"{opponent} 경기당 슈팅 {opp.get('avg_shots')}. 박스 주변 2선 슈팅과 세트피스 동선을 우선 차단하세요.",
+        )
 
     push(targets, "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.")
     push(targets, f"{opponent}의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.")
+    push(
+        targets,
+        f"필드 틸트 지표: 파이널 서드 {jb.get('avg_final_third_pct')}% vs {opp.get('avg_final_third_pct')}%, "
+        f"터치 높이 {jb.get('avg_x')} vs {opp.get('avg_x')}.",
+    )
     push(targets, "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다.")
     push(cautions, f"{opponent} 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다.")
 
@@ -835,20 +1393,11 @@ def build_scout(jb: dict, opp: dict, opponent: str, ha: str) -> dict:
 
     return {
         "contrast": contrast,
-        "edge": edges[:4],
-        "risk": risks[:4],
-        "target": targets[:4],
-        "caution": cautions[:4],
+        "edge": edges[:5],
+        "risk": risks[:5],
+        "target": targets[:5],
+        "caution": cautions[:5],
     }
-
-
-def build_cards(scout: dict, opponent: str) -> list[dict]:
-    return [
-        {"key": "edge", "label": "전북이 유리한 점", "items": scout["edge"][:4]},
-        {"key": "risk", "label": "전북이 불리한·조심할 점", "items": scout["risk"][:4]},
-        {"key": "key", "label": "관전 포인트", "items": scout["target"][:4]},
-        {"key": "watch", "label": f"{opponent} 경계 포인트", "items": scout["caution"][:4]},
-    ]
 
 
 def h2h_summary(h2h: list[dict]) -> dict:
@@ -997,6 +1546,7 @@ def build_neutral_scout(home: dict, away: dict, home_name: str, away_name: str) 
 
 
 def build_neutral_cards(scout: dict, home_name: str, away_name: str) -> list[dict]:
+    # Kept for backward compatibility; prefer build_focus_cards.
     return [
         {"key": "edge", "label": f"{home_name}이 유리한 점", "items": scout["edge"][:4]},
         {"key": "risk", "label": f"{home_name}이 불리한·조심할 점", "items": scout["risk"][:4]},
@@ -1104,7 +1654,23 @@ def _build_jeonbuk_preview(
     jb_style = style_blob(jb_form, jb_samples, JEONBUK)
     opp_style = style_blob(opp_form, opp_samples, opponent)
     scout = build_scout(jb_style, opp_style, opponent, ha)
-    cards = build_cards(scout, opponent)
+    jb_players, jb_pmeta = aggregate_team_players(
+        catalog, JEONBUK, team_id_for(JEONBUK), 5
+    )
+    opp_players, opp_pmeta = aggregate_team_players(
+        catalog, opponent, team_id_for(opponent), 5
+    )
+    focus = build_player_focus(
+        jb_players,
+        opp_players,
+        jb_pmeta,
+        opp_pmeta,
+        jb_style,
+        opp_style,
+        opponent,
+        ha,
+    )
+    cards = build_focus_cards(focus, opponent, jeonbuk=True)
     matchup = build_matchup(jb_style, opp_style, JEONBUK, opponent)
     venue = lookup_venue(home, index_matches, game_id) or VENUE_BY_HOME.get(home, "")
     attendance = lookup_attendance(home)
@@ -1119,6 +1685,11 @@ def _build_jeonbuk_preview(
     briefing = build_briefing(
         home, away, opponent, ha, jb_style, opp_style, jb_form, opp_form, h2h_sum, venue
     )
+    if jb_pmeta.get("sample_note") or opp_pmeta.get("sample_note"):
+        briefing.append(
+            f"선수 포커스 — 전북: {jb_pmeta.get('sample_note')}, "
+            f"{opponent}: {opp_pmeta.get('sample_note')}."
+        )
 
     headline = f"{int(row.get('round') or 0)}R PREVIEW · {home} vs {away}"
     return {
@@ -1153,6 +1724,12 @@ def _build_jeonbuk_preview(
         "form": {"jeonbuk": jb_form, "opponent": opp_form},
         "h2h": h2h,
         "style": {"jeonbuk": jb_style, "opponent": opp_style},
+        "players": {
+            "jeonbuk": focus.get("jeonbuk_key") or [],
+            "opponent_danger": focus.get("opponent_danger") or [],
+            "opponent_hub": focus.get("opponent_hub") or [],
+            "meta": focus.get("meta") or {},
+        },
         "cards": cards,
         "sources": [
             "c_report/data/schedule.json",
@@ -1160,7 +1737,7 @@ def _build_jeonbuk_preview(
             "c_report chalk board match files",
             "c_report/data/club-attendance.json",
         ],
-        "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다.",
+        "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다. 선수 포커스는 가용 칠판 경기 기준입니다.",
     }
 
 
@@ -1188,7 +1765,27 @@ def _build_neutral_preview(
     home_style = style_blob(home_form, home_samples, home)
     away_style = style_blob(away_form, away_samples, away)
     scout = build_neutral_scout(home_style, away_style, home, away)
-    cards = build_neutral_cards(scout, home, away)
+    home_players, home_pmeta = aggregate_team_players(
+        catalog, home, team_id_for(home), 5
+    )
+    away_players, away_pmeta = aggregate_team_players(
+        catalog, away, team_id_for(away), 5
+    )
+    focus = build_player_focus(
+        home_players,
+        away_players,
+        home_pmeta,
+        away_pmeta,
+        home_style,
+        away_style,
+        away,
+        "H",
+    )
+    # Rephrase prep for neutral home perspective
+    focus["prep"] = build_prep_items(home_style, away_style, away, "H", focus_name=home)
+    cards = build_focus_cards(
+        focus, away, home_name=home, away_name=away, jeonbuk=False
+    )
     matchup = build_matchup(home_style, away_style, home, away)
     venue = lookup_venue(home, index_matches, game_id) or VENUE_BY_HOME.get(home, "")
     attendance = lookup_attendance(home)
@@ -1200,6 +1797,10 @@ def _build_neutral_preview(
     )
     briefing = build_neutral_briefing(
         home, away, home_style, away_style, home_form, away_form, h2h_sum, venue
+    )
+    briefing.append(
+        f"선수 포커스 — {home}: {home_pmeta.get('sample_note')}, "
+        f"{away}: {away_pmeta.get('sample_note')}."
     )
     headline = f"{int(row.get('round') or 0)}R PREVIEW · {home} vs {away}"
     return {
@@ -1234,6 +1835,12 @@ def _build_neutral_preview(
         "form": {"jeonbuk": home_form, "opponent": away_form},
         "h2h": h2h,
         "style": {"jeonbuk": home_style, "opponent": away_style},
+        "players": {
+            "jeonbuk": focus.get("jeonbuk_key") or [],
+            "opponent_danger": focus.get("opponent_danger") or [],
+            "opponent_hub": focus.get("opponent_hub") or [],
+            "meta": focus.get("meta") or {},
+        },
         "cards": cards,
         "sources": [
             "c_report/data/schedule.json",
@@ -1241,7 +1848,7 @@ def _build_neutral_preview(
             "c_report chalk board match files",
             "c_report/data/club-attendance.json",
         ],
-        "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다.",
+        "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다. 선수 포커스는 가용 칠판 경기 기준입니다.",
     }
 
 

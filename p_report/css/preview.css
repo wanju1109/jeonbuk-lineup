@@ -664,6 +664,68 @@ select {
 .preview-card.risk h3 { color: #a13a2c; }
 .preview-card.key h3 { color: #1f5f9a; }
 .preview-card.watch h3 { color: #9a6b12; }
+.preview-card.jb_key h3 { color: #1a7a4c; }
+.preview-card.opp_watch h3 { color: #a13a2c; }
+.preview-card.opp_hub h3 { color: #1f5f9a; }
+.preview-card.prep h3 { color: #9a6b12; }
+
+.player-sample-note {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.player-focus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.player-focus-row {
+  padding: 10px 0 0;
+  border-top: 1px solid rgba(16, 35, 28, 0.07);
+}
+
+.player-focus-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.player-focus-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.player-focus-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--preview-ink);
+}
+
+.player-focus-pos {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.player-focus-stats {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #3d5c4f;
+}
+
+.player-focus-note {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #274439;
+}
 
 .preview-card ul,
 .form-list {

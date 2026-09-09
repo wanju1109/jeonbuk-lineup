@@ -25,25 +25,25 @@
     "kickoff_label": "2026-09-13 19:00 KST",
     "date_md": "09/13",
     "label": "광주 VS 안양 (174, 09/13)",
-    "hours_to_kickoff": 106.5,
+    "hours_to_kickoff": 105.9,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-09T08:32:37.222652+09:00",
+    "generated_at": "2026-09-09T09:03:46.759078+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 광주 vs 안양",
-  "thesis": "광주 vs 안양. 광주 최근 L L D L D, 안양 최근 L L W D L. 홈 광주이(가) 템포를 가져가며 xG 1.41 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "광주 vs 안양. 광주 최근 L L ? ? ?, 안양 최근 L L ? ? ?. 홈 광주이(가) 템포를 가져가며 xG 1.45 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "광주 vs 안양. 광주 최근 L L D L D (0승 2무 3패 / 최근 5경기). 안양 최근 L L W D L (1승 1무 3패 / 최근 5경기).",
-    "최근 5경기 평균 — 광주 xG 1.41·슈팅 11.0, 안양 xG 0.59·슈팅 7.6. 패스 성공률 77.0% vs 75.3%.",
+    "광주 vs 안양. 광주 최근 L L ? ? ? (0승 0무 2패 / 최근 2경기). 안양 최근 L L ? ? ? (0승 0무 2패 / 최근 2경기).",
+    "최근 5경기 평균 — 광주 xG 1.45·슈팅 14.5, 안양 xG 0.41·슈팅 6.5. 패스 성공률 81.5% vs 72.9%.",
     "올 시즌 맞대결 2경기 — 광주 기준 0승 1무 1패.",
-    "경기장 광주 월드컵 · 광주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다."
+    "경기장 광주 월드컵 · 광주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
+    "선수 포커스 — 광주: 최근 가용 칠판 데이터 5경기 기준, 안양: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "광주은 부진, 비기는 흐름, 기회 창출↑ 흐름이고, 안양은(는) 부진, 기회 부족, 수비 기회 허용 그림입니다. 최근 xG 1.41 vs 0.59, 슈팅 11.0 vs 7.6, 파이널 서드 터치 15.5% vs 21.5%입니다.",
+    "contrast": "광주은 기회 창출↑, 슈팅 많음, 낮은 블록형 흐름이고, 안양은(는) 기회 부족, 수비 기회 허용, 적극 압박 그림입니다. 최근 xG 1.45 vs 0.41, 슈팅 14.5 vs 6.5, 파이널 서드 터치 20.1% vs 24.2%입니다.",
     "edge": [
-      "광주이(가) 최근 xG 1.41로 안양(0.59)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
-      "안양 최근 흐름이 좋지 않습니다. 광주이 실수를 유도할 여지가 있습니다.",
+      "광주이(가) 최근 xG 1.45로 안양(0.41)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "홈 이점(광주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
@@ -55,6 +55,7 @@
       "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
     ],
     "caution": [
+      "안양 압박 시도가 많습니다. 광주 빌드업 첫 패스 실수를 줄여야 합니다.",
       "안양 역습 첫 패스와 광주의 앞공간 커버."
     ]
   },
@@ -62,50 +63,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.41,
-        "opponent": 0.59,
+        "jeonbuk": 1.45,
+        "opponent": 0.41,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 2.17,
-        "opponent": 1.5,
-        "better": "opponent"
+        "jeonbuk": 1.13,
+        "opponent": 1.99,
+        "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 11.0,
-        "opponent": 7.6,
+        "jeonbuk": 14.5,
+        "opponent": 6.5,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 6.4,
-        "opponent": 2.4,
+        "jeonbuk": 7.0,
+        "opponent": 2.5,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 77.0,
-        "opponent": 75.3,
+        "jeonbuk": 81.5,
+        "opponent": 72.9,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 15.5,
-        "opponent": 21.5,
+        "jeonbuk": 20.1,
+        "opponent": 24.2,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 12.4,
-        "opponent": 15.6,
+        "jeonbuk": 18.5,
+        "opponent": 19.5,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 광주 xG 1.41 / xGA 2.17, 안양 xG 0.59 / xGA 1.5."
+    "summary": "최근 2경기 기준 — 광주 xG 1.45 / xGA 1.13, 안양 xG 0.41 / xGA 1.99."
   },
   "h2h_summary": {
     "wins": 0,
@@ -158,22 +159,17 @@
         "date": "2026-08-26",
         "home": "강원",
         "away": "광주",
-        "score": "2:2",
-        "result": "D",
+        "score": "-",
+        "result": "?",
         "opponent": "강원",
         "ha": "A",
-        "xg": 1.87,
-        "xga": 2.32,
-        "shots": 9,
-        "sot": 6,
-        "goals_for": 2,
-        "goals_against": 2,
-        "stats_limited": false,
-        "score_source": "official",
-        "pass_pct": 69.7,
-        "final_third_pct": 12.3,
-        "presses": 8,
-        "stats_source": "portal"
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": null,
+        "goals_against": null,
+        "stats_limited": true
       },
       {
         "game_id": "153",
@@ -182,22 +178,17 @@
         "date": "2026-08-30",
         "home": "광주",
         "away": "서울",
-        "score": "2:5",
-        "result": "L",
+        "score": "-",
+        "result": "?",
         "opponent": "서울",
         "ha": "H",
-        "xg": 0.47,
-        "xga": 3.85,
-        "shots": 8,
-        "sot": 6,
-        "goals_for": 2,
-        "goals_against": 5,
-        "stats_limited": false,
-        "score_source": "official",
-        "pass_pct": 74.6,
-        "final_third_pct": 15.7,
-        "presses": 11,
-        "stats_source": "portal"
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": null,
+        "goals_against": null,
+        "stats_limited": true
       },
       {
         "game_id": "162",
@@ -206,22 +197,17 @@
         "date": "2026-09-06",
         "home": "김천",
         "away": "광주",
-        "score": "2:2",
-        "result": "D",
+        "score": "-",
+        "result": "?",
         "opponent": "김천",
         "ha": "A",
-        "xg": 1.81,
-        "xga": 2.4,
-        "shots": 9,
-        "sot": 6,
-        "goals_for": 2,
-        "goals_against": 2,
-        "stats_limited": false,
-        "score_source": "official",
-        "pass_pct": 77.9,
-        "final_third_pct": 9.3,
-        "presses": 6,
-        "stats_source": "portal"
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": null,
+        "goals_against": null,
+        "stats_limited": true
       }
     ],
     "opponent": [
@@ -268,22 +254,17 @@
         "date": "2026-08-26",
         "home": "안양",
         "away": "인천",
-        "score": "2:1",
-        "result": "W",
+        "score": "-",
+        "result": "?",
         "opponent": "인천",
         "ha": "H",
-        "xg": 1.26,
-        "xga": 1.09,
-        "shots": 6,
-        "sot": 3,
-        "goals_for": 2,
-        "goals_against": 1,
-        "stats_limited": false,
-        "score_source": "official",
-        "pass_pct": 76.0,
-        "final_third_pct": 13.1,
-        "presses": 8,
-        "stats_source": "portal"
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": null,
+        "goals_against": null,
+        "stats_limited": true
       },
       {
         "game_id": "152",
@@ -292,22 +273,17 @@
         "date": "2026-08-29",
         "home": "부천",
         "away": "안양",
-        "score": "1:1",
-        "result": "D",
+        "score": "-",
+        "result": "?",
         "opponent": "부천",
         "ha": "A",
-        "xg": 0.58,
-        "xga": 1.09,
-        "shots": 12,
-        "sot": 4,
-        "goals_for": 1,
-        "goals_against": 1,
-        "stats_limited": false,
-        "score_source": "official",
-        "pass_pct": 76.9,
-        "final_third_pct": 23.7,
-        "presses": 9,
-        "stats_source": "portal"
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": null,
+        "goals_against": null,
+        "stats_limited": true
       },
       {
         "game_id": "161",
@@ -316,22 +292,17 @@
         "date": "2026-09-06",
         "home": "안양",
         "away": "강원",
-        "score": "0:3",
-        "result": "L",
+        "score": "-",
+        "result": "?",
         "opponent": "강원",
         "ha": "H",
-        "xg": 0.28,
-        "xga": 1.37,
-        "shots": 7,
-        "sot": 0,
-        "goals_for": 0,
-        "goals_against": 3,
-        "stats_limited": false,
-        "score_source": "official",
-        "pass_pct": 78.0,
-        "final_third_pct": 22.0,
-        "presses": 22,
-        "stats_source": "portal"
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": null,
+        "goals_against": null,
+        "stats_limited": true
       }
     ]
   },
@@ -362,82 +333,511 @@
       "name": "광주",
       "team_id": "K22",
       "tags": [
-        "부진",
-        "비기는 흐름",
         "기회 창출↑",
-        "수비 기회 허용",
-        "낮은 블록형"
+        "슈팅 많음",
+        "낮은 블록형",
+        "적극 압박"
       ],
-      "record": "0승 2무 3패 / 최근 5경기",
-      "goals_for": 7,
-      "goals_against": 12,
-      "goal_diff": -5,
-      "avg_xg": 1.41,
-      "avg_xga": 2.17,
-      "avg_shots": 11.0,
-      "avg_sot": 6.4,
-      "avg_pass_pct": 77.0,
-      "avg_final_third_pct": 15.5,
-      "avg_presses": 12.4,
-      "avg_x": 48.7,
-      "samples": 5
+      "record": "0승 0무 2패 / 최근 2경기",
+      "goals_for": 1,
+      "goals_against": 3,
+      "goal_diff": -2,
+      "avg_xg": 1.45,
+      "avg_xga": 1.13,
+      "avg_shots": 14.5,
+      "avg_sot": 7.0,
+      "avg_pass_pct": 81.5,
+      "avg_final_third_pct": 20.1,
+      "avg_presses": 18.5,
+      "avg_x": 46.8,
+      "samples": 2
     },
     "opponent": {
       "name": "안양",
       "team_id": "K27",
       "tags": [
-        "부진",
         "기회 부족",
         "수비 기회 허용",
-        "낮은 블록형"
+        "적극 압박"
       ],
-      "record": "1승 1무 3패 / 최근 5경기",
-      "goals_for": 3,
-      "goals_against": 12,
-      "goal_diff": -9,
-      "avg_xg": 0.59,
-      "avg_xga": 1.5,
-      "avg_shots": 7.6,
-      "avg_sot": 2.4,
-      "avg_pass_pct": 75.3,
-      "avg_final_third_pct": 21.5,
-      "avg_presses": 15.6,
-      "avg_x": 48.6,
-      "samples": 5
+      "record": "0승 0무 2패 / 최근 2경기",
+      "goals_for": 0,
+      "goals_against": 7,
+      "goal_diff": -7,
+      "avg_xg": 0.41,
+      "avg_xga": 1.99,
+      "avg_shots": 6.5,
+      "avg_sot": 2.5,
+      "avg_pass_pct": 72.9,
+      "avg_final_third_pct": 24.2,
+      "avg_presses": 19.5,
+      "avg_x": 46.5,
+      "samples": 2
+    }
+  },
+  "players": {
+    "jeonbuk": [
+      {
+        "player_id": "20250193",
+        "name": "아이데일",
+        "back_no": 18,
+        "pos": "FW",
+        "games": 5,
+        "xg": 2.26,
+        "goals": 1,
+        "shots": 16,
+        "keypass": 3,
+        "touches": 157,
+        "press": 3,
+        "minutes": 455,
+        "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "stat_line": "최근 5경기 · xG 2.26 · 골 1 · 슈팅 16 · 키패스 3 · 터치 157"
+      },
+      {
+        "player_id": "20240210",
+        "name": "문민서",
+        "back_no": 88,
+        "pos": "MF",
+        "games": 5,
+        "xg": 1.16,
+        "goals": 0,
+        "shots": 9,
+        "keypass": 4,
+        "touches": 155,
+        "press": 8,
+        "minutes": 377,
+        "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "stat_line": "최근 5경기 · xG 1.16 · 골 0 · 슈팅 9 · 키패스 4 · 압박 8 · 터치 155"
+      },
+      {
+        "player_id": "20250366",
+        "name": "프리드욘슨",
+        "back_no": 11,
+        "pos": "FW",
+        "games": 4,
+        "xg": 0.82,
+        "goals": 0,
+        "shots": 9,
+        "keypass": 2,
+        "touches": 82,
+        "press": 3,
+        "minutes": 282,
+        "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "stat_line": "최근 4경기 · xG 0.82 · 골 0 · 슈팅 9 · 키패스 2"
+      },
+      {
+        "player_id": "20240224",
+        "name": "최경록",
+        "back_no": 10,
+        "pos": "MF",
+        "games": 3,
+        "xg": 0.18,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 6,
+        "touches": 142,
+        "press": 8,
+        "minutes": 250,
+        "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "stat_line": "최근 3경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 6 · 압박 8 · 터치 142"
+      }
+    ],
+    "opponent_danger": [
+      {
+        "player_id": "20240078",
+        "name": "마테우스",
+        "back_no": 7,
+        "pos": "MF",
+        "games": 5,
+        "xg": 1.74,
+        "goals": 1,
+        "shots": 18,
+        "keypass": 6,
+        "touches": 225,
+        "press": 10,
+        "minutes": 446,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 1.74 · 골 1 · 슈팅 18 · 키패스 6 · 압박 10 · 터치 225"
+      },
+      {
+        "player_id": "20200170",
+        "name": "최건주",
+        "back_no": 27,
+        "pos": "대기",
+        "games": 5,
+        "xg": 0.6,
+        "goals": 1,
+        "shots": 2,
+        "keypass": 4,
+        "touches": 121,
+        "press": 1,
+        "minutes": 331,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 0.6 · 골 1 · 슈팅 2 · 키패스 4 · 터치 121"
+      },
+      {
+        "player_id": "20250365",
+        "name": "유키치",
+        "back_no": 10,
+        "pos": "FW",
+        "games": 4,
+        "xg": 0.31,
+        "goals": 0,
+        "shots": 5,
+        "keypass": 5,
+        "touches": 128,
+        "press": 18,
+        "minutes": 306,
+        "note": "키패스 각을 막는 것이 실점 예방. 받는 발·턴 방향을 먼저 차단하세요.",
+        "stat_line": "최근 4경기 · xG 0.31 · 골 0 · 슈팅 5 · 키패스 5 · 압박 18 · 터치 128"
+      },
+      {
+        "player_id": "20140135",
+        "name": "김동진",
+        "back_no": 22,
+        "pos": "DF",
+        "games": 4,
+        "xg": 0.18,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 2,
+        "touches": 226,
+        "press": 14,
+        "minutes": 403,
+        "note": "전방 압박으로 빌드업을 흔드는 타입. 첫 패스 실수를 유도당하지 마세요.",
+        "stat_line": "최근 4경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 2 · 압박 14 · 터치 226"
+      }
+    ],
+    "opponent_hub": [
+      {
+        "player_id": "20180108",
+        "name": "강지훈",
+        "back_no": 17,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.04,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 2,
+        "touches": 351,
+        "press": 4,
+        "minutes": 521,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 2 · 터치 351"
+      },
+      {
+        "player_id": "20260346",
+        "name": "크네제비치",
+        "back_no": 18,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.17,
+        "goals": 0,
+        "shots": 3,
+        "keypass": 2,
+        "touches": 223,
+        "press": 0,
+        "minutes": 451,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.17 · 골 0 · 슈팅 3 · 키패스 2 · 터치 223"
+      },
+      {
+        "player_id": "20130191",
+        "name": "이창용",
+        "back_no": 4,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.43,
+        "goals": 1,
+        "shots": 3,
+        "keypass": 0,
+        "touches": 372,
+        "press": 1,
+        "minutes": 521,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.43 · 골 1 · 슈팅 3 · 키패스 0 · 터치 372"
+      },
+      {
+        "player_id": "20130102",
+        "name": "권경원",
+        "back_no": 21,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.04,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 0,
+        "touches": 318,
+        "press": 0,
+        "minutes": 472,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 0 · 터치 318"
+      }
+    ],
+    "meta": {
+      "jeonbuk": {
+        "games": 5,
+        "sample_note": "최근 가용 칠판 데이터 5경기 기준",
+        "game_ids": [
+          "118",
+          "125",
+          "128",
+          "133",
+          "144"
+        ]
+      },
+      "opponent": {
+        "games": 5,
+        "sample_note": "최근 가용 칠판 데이터 5경기 기준",
+        "game_ids": [
+          "117",
+          "124",
+          "127",
+          "134",
+          "139"
+        ]
+      }
     }
   },
   "cards": [
     {
-      "key": "edge",
-      "label": "광주이 유리한 점",
+      "key": "jb_key",
+      "label": "광주 핵심 선수",
       "items": [
-        "광주이(가) 최근 xG 1.41로 안양(0.59)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
-        "안양 최근 흐름이 좋지 않습니다. 광주이 실수를 유도할 여지가 있습니다.",
-        "홈 이점(광주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+        "#18 아이데일 — 최근 5경기 · xG 2.26 · 골 1 · 슈팅 16 · 키패스 3 · 터치 157. 마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "#88 문민서 — 최근 5경기 · xG 1.16 · 골 0 · 슈팅 9 · 키패스 4 · 압박 8 · 터치 155. 마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "#11 프리드욘슨 — 최근 4경기 · xG 0.82 · 골 0 · 슈팅 9 · 키패스 2. 마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "#10 최경록 — 최근 3경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 6 · 압박 8 · 터치 142. 키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다."
+      ],
+      "players": [
+        {
+          "player_id": "20250193",
+          "name": "아이데일",
+          "back_no": 18,
+          "pos": "FW",
+          "games": 5,
+          "xg": 2.26,
+          "goals": 1,
+          "shots": 16,
+          "keypass": 3,
+          "touches": 157,
+          "press": 3,
+          "minutes": 455,
+          "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+          "stat_line": "최근 5경기 · xG 2.26 · 골 1 · 슈팅 16 · 키패스 3 · 터치 157"
+        },
+        {
+          "player_id": "20240210",
+          "name": "문민서",
+          "back_no": 88,
+          "pos": "MF",
+          "games": 5,
+          "xg": 1.16,
+          "goals": 0,
+          "shots": 9,
+          "keypass": 4,
+          "touches": 155,
+          "press": 8,
+          "minutes": 377,
+          "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+          "stat_line": "최근 5경기 · xG 1.16 · 골 0 · 슈팅 9 · 키패스 4 · 압박 8 · 터치 155"
+        },
+        {
+          "player_id": "20250366",
+          "name": "프리드욘슨",
+          "back_no": 11,
+          "pos": "FW",
+          "games": 4,
+          "xg": 0.82,
+          "goals": 0,
+          "shots": 9,
+          "keypass": 2,
+          "touches": 82,
+          "press": 3,
+          "minutes": 282,
+          "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+          "stat_line": "최근 4경기 · xG 0.82 · 골 0 · 슈팅 9 · 키패스 2"
+        },
+        {
+          "player_id": "20240224",
+          "name": "최경록",
+          "back_no": 10,
+          "pos": "MF",
+          "games": 3,
+          "xg": 0.18,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 6,
+          "touches": 142,
+          "press": 8,
+          "minutes": 250,
+          "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+          "stat_line": "최근 3경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 6 · 압박 8 · 터치 142"
+        }
       ]
     },
     {
-      "key": "risk",
-      "label": "광주이 불리한·조심할 점",
+      "key": "opp_watch",
+      "label": "조심할 안양 선수",
       "items": [
-        "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+        "#7 마테우스 — 최근 5경기 · xG 1.74 · 골 1 · 슈팅 18 · 키패스 6 · 압박 10 · 터치 225. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "#27 최건주 — 최근 5경기 · xG 0.6 · 골 1 · 슈팅 2 · 키패스 4 · 터치 121. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "#10 유키치 — 최근 4경기 · xG 0.31 · 골 0 · 슈팅 5 · 키패스 5 · 압박 18 · 터치 128. 키패스 각을 막는 것이 실점 예방. 받는 발·턴 방향을 먼저 차단하세요.",
+        "#22 김동진 — 최근 4경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 2 · 압박 14 · 터치 226. 전방 압박으로 빌드업을 흔드는 타입. 첫 패스 실수를 유도당하지 마세요."
+      ],
+      "players": [
+        {
+          "player_id": "20240078",
+          "name": "마테우스",
+          "back_no": 7,
+          "pos": "MF",
+          "games": 5,
+          "xg": 1.74,
+          "goals": 1,
+          "shots": 18,
+          "keypass": 6,
+          "touches": 225,
+          "press": 10,
+          "minutes": 446,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 1.74 · 골 1 · 슈팅 18 · 키패스 6 · 압박 10 · 터치 225"
+        },
+        {
+          "player_id": "20200170",
+          "name": "최건주",
+          "back_no": 27,
+          "pos": "대기",
+          "games": 5,
+          "xg": 0.6,
+          "goals": 1,
+          "shots": 2,
+          "keypass": 4,
+          "touches": 121,
+          "press": 1,
+          "minutes": 331,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 0.6 · 골 1 · 슈팅 2 · 키패스 4 · 터치 121"
+        },
+        {
+          "player_id": "20250365",
+          "name": "유키치",
+          "back_no": 10,
+          "pos": "FW",
+          "games": 4,
+          "xg": 0.31,
+          "goals": 0,
+          "shots": 5,
+          "keypass": 5,
+          "touches": 128,
+          "press": 18,
+          "minutes": 306,
+          "note": "키패스 각을 막는 것이 실점 예방. 받는 발·턴 방향을 먼저 차단하세요.",
+          "stat_line": "최근 4경기 · xG 0.31 · 골 0 · 슈팅 5 · 키패스 5 · 압박 18 · 터치 128"
+        },
+        {
+          "player_id": "20140135",
+          "name": "김동진",
+          "back_no": 22,
+          "pos": "DF",
+          "games": 4,
+          "xg": 0.18,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 2,
+          "touches": 226,
+          "press": 14,
+          "minutes": 403,
+          "note": "전방 압박으로 빌드업을 흔드는 타입. 첫 패스 실수를 유도당하지 마세요.",
+          "stat_line": "최근 4경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 2 · 압박 14 · 터치 226"
+        }
       ]
     },
     {
-      "key": "key",
-      "label": "관전 포인트",
+      "key": "opp_hub",
+      "label": "최근 안양 전개 중심",
       "items": [
-        "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
-        "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
-        "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+        "#17 강지훈 — 최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 2 · 터치 351. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "#18 크네제비치 — 최근 5경기 · xG 0.17 · 골 0 · 슈팅 3 · 키패스 2 · 터치 223. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "#4 이창용 — 최근 5경기 · xG 0.43 · 골 1 · 슈팅 3 · 키패스 0 · 터치 372. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "#21 권경원 — 최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 0 · 터치 318. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다."
+      ],
+      "players": [
+        {
+          "player_id": "20180108",
+          "name": "강지훈",
+          "back_no": 17,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.04,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 2,
+          "touches": 351,
+          "press": 4,
+          "minutes": 521,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 2 · 터치 351"
+        },
+        {
+          "player_id": "20260346",
+          "name": "크네제비치",
+          "back_no": 18,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.17,
+          "goals": 0,
+          "shots": 3,
+          "keypass": 2,
+          "touches": 223,
+          "press": 0,
+          "minutes": 451,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.17 · 골 0 · 슈팅 3 · 키패스 2 · 터치 223"
+        },
+        {
+          "player_id": "20130191",
+          "name": "이창용",
+          "back_no": 4,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.43,
+          "goals": 1,
+          "shots": 3,
+          "keypass": 0,
+          "touches": 372,
+          "press": 1,
+          "minutes": 521,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.43 · 골 1 · 슈팅 3 · 키패스 0 · 터치 372"
+        },
+        {
+          "player_id": "20130102",
+          "name": "권경원",
+          "back_no": 21,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.04,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 0,
+          "touches": 318,
+          "press": 0,
+          "minutes": 472,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 0 · 터치 318"
+        }
       ]
     },
     {
-      "key": "watch",
-      "label": "안양 경계 포인트",
+      "key": "prep",
+      "label": "매치업 대비 포인트",
       "items": [
-        "안양 역습 첫 패스와 광주의 앞공간 커버."
-      ]
+        "안양 최근 압박 시도가 많습니다(경기당 19.5). 빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다.",
+        "안양 허용 xG 1.99로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
+        "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요.",
+        "광주 패스 성공률 81.5%가 안양(72.9%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
+      ],
+      "players": []
     }
   ],
   "sources": [
@@ -446,5 +846,5 @@
     "c_report chalk board match files",
     "c_report/data/club-attendance.json"
   ],
-  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다."
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다. 선수 포커스는 가용 칠판 경기 기준입니다."
 }

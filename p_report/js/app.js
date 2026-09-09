@@ -364,6 +364,69 @@
       .join("");
   }
 
+  function playerChipHtml(p) {
+    if (!p) return "";
+    const back = p.back_no != null && p.back_no !== "" ? `#${escapeHtml(String(p.back_no))} ` : "";
+    const name = escapeHtml(p.name || "?");
+    const pos = escapeHtml(p.pos || "");
+    const stats = escapeHtml(
+      p.stat_line ||
+        [
+          p.games != null ? `최근 ${p.games}경기` : "",
+          p.xg != null ? `xG ${p.xg}` : "",
+          p.goals != null ? `골 ${p.goals}` : "",
+          p.keypass != null ? `키패스 ${p.keypass}` : "",
+        ]
+          .filter(Boolean)
+          .join(" · ")
+    );
+    const note = escapeHtml(p.note || "");
+    return (
+      `<li class="player-focus-row">` +
+      `<div class="player-focus-head">` +
+      `<span class="player-focus-name">${back}${name}</span>` +
+      (pos ? `<span class="player-focus-pos">${pos}</span>` : "") +
+      `</div>` +
+      (stats ? `<p class="player-focus-stats">${stats}</p>` : "") +
+      (note ? `<p class="player-focus-note">${note}</p>` : "") +
+      `</li>`
+    );
+  }
+
+  function renderPlayerCards(preview) {
+    const noteEl = $("playerSampleNote");
+    const pmeta = preview?.players?.meta || {};
+    if (noteEl) {
+      const jbNote = pmeta.jeonbuk?.sample_note || "";
+      const oppNote = pmeta.opponent?.sample_note || "";
+      const bits = [jbNote, oppNote].filter(Boolean);
+      noteEl.textContent = bits.length
+        ? bits.join(" · ")
+        : "최근 가용 칠판 데이터 기준으로 선수 포커스를 구성합니다.";
+    }
+
+    const box = $("cardsBox");
+    if (!box) return;
+    box.innerHTML = (preview.cards || [])
+      .map((card) => {
+        const players = card.players || [];
+        let body = "";
+        if (players.length) {
+          body = `<ul class="player-focus-list">${players.map(playerChipHtml).join("")}</ul>`;
+        } else {
+          const items = (card.items || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
+          body = `<ul>${items || "<li>데이터 축적 중</li>"}</ul>`;
+        }
+        return (
+          `<article class="preview-card ${escapeHtml(card.key || "")}">` +
+          `<h3>${escapeHtml(card.label || "")}</h3>` +
+          body +
+          `</article>`
+        );
+      })
+      .join("");
+  }
+
   function renderBriefing(lines) {
     const box = $("briefingBox");
     if (!box) return;
@@ -427,18 +490,7 @@
 
     renderMatchup(preview.matchup, meta);
     renderScout(preview.scout);
-
-    $("cardsBox").innerHTML = (preview.cards || [])
-      .map((card) => {
-        const items = (card.items || []).map((t) => `<li>${escapeHtml(t)}</li>`).join("");
-        return (
-          `<article class="preview-card ${escapeHtml(card.key || "")}">` +
-          `<h3>${escapeHtml(card.label || "")}</h3>` +
-          `<ul>${items}</ul>` +
-          `</article>`
-        );
-      })
-      .join("");
+    renderPlayerCards(preview);
 
     const homeStyle = styleForSide(preview, "home");
     const awayStyle = styleForSide(preview, "away");
