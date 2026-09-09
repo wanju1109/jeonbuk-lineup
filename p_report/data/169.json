@@ -25,40 +25,40 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "전북 VS 서울 (169, 09/12)",
-    "hours_to_kickoff": 61.0,
+    "hours_to_kickoff": 58.6,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-10T06:01:14.460562+09:00",
+    "generated_at": "2026-09-10T08:21:52.057978+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 전북 vs 서울",
   "thesis": "전북 vs 서울. 전북 최근 W D D W W, 서울 최근 W W W W L. 홈에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
   "briefing": [
     "전북 vs 서울. 전북 최근 W D D W W (3승 2무 0패 / 최근 5경기, 5득 0실). 서울은 W W W W L (4승 0무 1패 / 최근 5경기, 13득 3실).",
-    "최근 5경기 평균 — 전북 xG 0.71·슈팅 9.0·유효슈팅 4.2, 서울 xG 2.34·슈팅 17.2·유효슈팅 8.0. 패스 성공률 77.6% vs 77.8%.",
+    "최근 5경기 평균 — 전북 xG 0.71·슈팅 9.0·유효슈팅 4.2, 서울 xG 2.65·슈팅 19.7·유효슈팅 9.7. 패스 성공률 77.6% vs 77.1%.",
     "올 시즌 맞대결 2경기 — 전북 0승 1무 1패.",
     "경기장 전주 월드컵 · 전북 홈. 전주 홈에서 템포와 라인 높이를 올리는 쪽이 유리합니다.",
     "선수 포커스 — 전북: 최근 가용 칠판 데이터 5경기 기준, 서울: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "전북은 상승세, 기회 부족, 수비 단단 흐름이고, 서울은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 0.71 vs 2.34, 슈팅 9.0 vs 17.2, 유효슈팅 4.2 vs 8.0, 패스 성공률 77.6% vs 77.8%, 파이널 서드 터치 17.9% vs 31.5%, 평균 터치 높이 42.3 vs 48.5, 압박 11.4 vs 26.6입니다.",
+    "contrast": "전북은 상승세, 기회 부족, 수비 단단 흐름이고, 서울은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 0.71 vs 2.65, 슈팅 9.0 vs 19.7, 유효슈팅 4.2 vs 9.7, 패스 성공률 77.6% vs 77.1%, 파이널 서드 터치 17.9% vs 32.9%, 평균 터치 높이 42.3 vs 47.5, 압박 11.4 vs 27.3입니다.",
     "edge": [
       "전북 최근 승점 흐름이 좋습니다. 템포를 먼저 가져가면 상대가 쫓아오는 그림이 됩니다.",
       "홈 이점. 전주에서 라인 높이를 올려도 관중·익숙한 공간이 받쳐 줍니다."
     ],
     "risk": [
       "전북 최근 기회 질이 낮습니다. 점유만 하고 슈팅 질이 떨어지면 역습에 취약합니다.",
-      "서울 xG 2.34가 전북(0.71)보다 높습니다. 기회 질 격차를 전환 수비로 메워야 합니다.",
+      "서울 xG 2.65가 전북(0.71)보다 높습니다. 기회 질 격차를 전환 수비로 메워야 합니다.",
       "서울이(가) 상승세입니다. 한 방에 무너지지 않게 세트피스·역습 첫 패스를 막아야 합니다."
     ],
     "target": [
       "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
       "서울의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
-      "필드 틸트 지표: 파이널 서드 17.9% vs 31.5%, 터치 높이 42.3 vs 48.5.",
+      "필드 틸트 지표: 파이널 서드 17.9% vs 32.9%, 터치 높이 42.3 vs 47.5.",
       "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
     ],
     "caution": [
-      "서울 경기당 슈팅 17.2. 박스 주변 2선 슈팅과 세트피스 동선을 우선 차단하세요.",
+      "서울 경기당 슈팅 19.7. 박스 주변 2선 슈팅과 세트피스 동선을 우선 차단하세요.",
       "서울 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
     ]
   },
@@ -67,49 +67,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 0.71,
-        "opponent": 2.34,
+        "opponent": 2.65,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 0.69,
-        "opponent": 0.47,
+        "opponent": 0.37,
         "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 9.0,
-        "opponent": 17.2,
+        "opponent": 19.7,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.2,
-        "opponent": 8.0,
+        "opponent": 9.7,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 77.6,
-        "opponent": 77.8,
+        "opponent": 77.1,
         "suffix": "%",
-        "better": "opponent"
+        "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 17.9,
-        "opponent": 31.5,
+        "opponent": 32.9,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 11.4,
-        "opponent": 26.6,
+        "opponent": 27.3,
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 전북 xG 0.71 / xGA 0.69, 서울 xG 2.34 / xGA 0.47."
+    "summary": "최근 5경기 기준 — 전북 xG 0.71 / xGA 0.69, 서울 xG 2.65 / xGA 0.37."
   },
   "pulse": {
     "home": {
@@ -130,8 +130,8 @@
       "ppg": 2.4,
       "goals_pg": 2.6,
       "conceded_pg": 0.6,
-      "xg_delta": 1.28,
-      "xg_sample": 5,
+      "xg_delta": 5.05,
+      "xg_sample": 3,
       "clean_sheets": 3
     },
     "verdict": "최근 승점 흐름은 팽팽합니다. 한 번의 전환·세트피스가 결과를 바꿀 수 있는 매치업입니다.",
@@ -658,18 +658,15 @@
         "result": "W",
         "opponent": "인천",
         "ha": "H",
-        "xg": 2.5,
-        "xga": 0.23,
-        "shots": 16,
-        "sot": 7,
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
         "goals_for": 1,
         "goals_against": 0,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 82.5,
-        "final_third_pct": 32.6,
-        "presses": 25,
-        "stats_source": "portal"
+        "stats_source": "portal_score_only"
       },
       {
         "game_id": "163",
@@ -682,18 +679,15 @@
         "result": "L",
         "opponent": "울산",
         "ha": "A",
-        "xg": 1.27,
-        "xga": 0.99,
-        "shots": 11,
-        "sot": 4,
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
         "goals_for": 0,
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 75.3,
-        "final_third_pct": 26.1,
-        "presses": 26,
-        "stats_source": "portal"
+        "stats_source": "portal_score_only"
       }
     ]
   },
@@ -757,15 +751,15 @@
       "goals_for": 13,
       "goals_against": 3,
       "goal_diff": 10,
-      "avg_xg": 2.34,
-      "avg_xga": 0.47,
-      "avg_shots": 17.2,
-      "avg_sot": 8.0,
-      "avg_pass_pct": 77.8,
-      "avg_final_third_pct": 31.5,
-      "avg_presses": 26.6,
-      "avg_x": 48.5,
-      "samples": 5
+      "avg_xg": 2.65,
+      "avg_xga": 0.37,
+      "avg_shots": 19.7,
+      "avg_sot": 9.7,
+      "avg_pass_pct": 77.1,
+      "avg_final_third_pct": 32.9,
+      "avg_presses": 27.3,
+      "avg_x": 47.5,
+      "samples": 3
     }
   },
   "players": {
@@ -1225,9 +1219,9 @@
       "key": "prep",
       "label": "서울 스타일 대비법",
       "items": [
-        "서울 파이널 서드 터치 31.5%. 볼 손실 순간 뒷공간을 내주지 않게 미드필더의 즉시 커버가 필요합니다.",
-        "서울 경기당 슈팅 17.2·유효슈팅 8.0. 박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요.",
-        "서울 최근 xG 2.34로 기회 질이 좋습니다. 라인 간격을 좁히고, 역습 첫 패스 각을 막는 것이 실점 방지의 핵심입니다.",
+        "서울 파이널 서드 터치 32.9%. 볼 손실 순간 뒷공간을 내주지 않게 미드필더의 즉시 커버가 필요합니다.",
+        "서울 경기당 슈팅 19.7·유효슈팅 9.7. 박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요.",
+        "서울 최근 xG 2.65로 기회 질이 좋습니다. 라인 간격을 좁히고, 역습 첫 패스 각을 막는 것이 실점 방지의 핵심입니다.",
         "서울이(가) 상승세입니다. 한 골 차 리드에도 역습·세트피스 한 장면을 끝까지 경계하세요.",
         "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요."
       ],
