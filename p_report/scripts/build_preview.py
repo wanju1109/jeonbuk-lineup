@@ -478,6 +478,7 @@ def fetch_scores_for_form(
             MAIN_FRAME,
             PortalClient,
             extract_js_array,
+            parse_official_score,
             resolve_match_score,
         )
     except Exception as exc:
@@ -499,10 +500,12 @@ def fetch_scores_for_form(
     for r in pending:
         gid = str(r.get("game_id") or "")
         sched = sched_by_id.get(match_catalog_key(str(r.get("year") or YEAR), gid)) or {}
-        year = str(sched.get("year") or YEAR)
+        year = str(sched.get("year") or r.get("year") or YEAR)
         round_id = str(sched.get("round") or r.get("round") or "")
         if not round_id:
             continue
+        home = r.get("home") or sched.get("home") or ""
+        away = r.get("away") or sched.get("away") or ""
         try:
             html = client.request(
                 MAIN_FRAME,
@@ -515,15 +518,34 @@ def fetch_scores_for_form(
                 },
             )
             events = extract_js_array(html, "jsonResultData") or []
-            if not events:
-                continue
             home_id = next((e.get("TEAM_ID") for e in events if e.get("HA_CODE") == "H"), None)
             away_id = next((e.get("TEAM_ID") for e in events if e.get("HA_CODE") == "A"), None)
-            if not home_id or not away_id:
+            if not home_id:
+                home_id = team_id_for(home) or None
+            if not away_id:
+                away_id = team_id_for(away) or None
+
+            hs = aws = None
+            score_source = ""
+            if home_id and away_id and events:
+                hs, aws, score_source = resolve_match_score(
+                    html, events, str(home_id), str(away_id)
+                )
+            else:
+                official = parse_official_score(html)
+                if official is not None:
+                    hs, aws = official
+                    score_source = "official"
+                elif events and home_id and away_id:
+                    from collect_chalkboard import parse_score_from_goals  # noqa: WPS433
+
+                    hs, aws = parse_score_from_goals(events, str(home_id), str(away_id))
+                    score_source = "events"
+
+            if hs is None or aws is None:
+                print(f"[WARN] portal form fetch no score game_id={gid}")
                 continue
-            home = r.get("home") or sched.get("home") or ""
-            away = r.get("away") or sched.get("away") or ""
-            hs, aws, score_source = resolve_match_score(html, events, str(home_id), str(away_id))
+
             score = f"{hs}:{aws}"
             r["score"] = score
             r["result"] = result_for(team, home, away, score)
@@ -531,19 +553,24 @@ def fetch_scores_for_form(
             r["goals_against"] = aws if team in home else hs
             r["score_source"] = score_source
 
-            tid = home_id if team in home else away_id
-            oid = away_id if team in home else home_id
-            st = team_row_from_events(events, str(tid), str(home_id))
-            ost = team_row_from_events(events, str(oid), str(home_id))
-            r["xg"] = st.get("xg", 0)
-            r["xga"] = ost.get("xg", 0)
-            r["shots"] = st.get("shots", 0)
-            r["sot"] = st.get("sot", 0)
-            r["pass_pct"] = st.get("pass_pct", 0)
-            r["final_third_pct"] = st.get("final_third_pct", 0)
-            r["presses"] = st.get("presses", 0)
+            if events and home_id and away_id:
+                tid = home_id if team in home else away_id
+                oid = away_id if team in home else home_id
+                st = team_row_from_events(events, str(tid), str(home_id))
+                ost = team_row_from_events(events, str(oid), str(home_id))
+                r["xg"] = st.get("xg", 0)
+                r["xga"] = ost.get("xg", 0)
+                r["shots"] = st.get("shots", 0)
+                r["sot"] = st.get("sot", 0)
+                r["pass_pct"] = st.get("pass_pct", 0)
+                r["final_third_pct"] = st.get("final_third_pct", 0)
+                r["presses"] = st.get("presses", 0)
+                r["stats_source"] = "portal"
+            else:
+                # Score filled; chalkboard events missing — keep limited stats flag off for result.
+                r["stats_source"] = "portal_score_only"
             r["stats_limited"] = False
-            r["stats_source"] = "portal"
+            print(f"[OK] form score {home} {score} {away} (game_id={gid}, {score_source})")
         except Exception as exc:
             print(f"[WARN] portal form fetch game_id={gid}: {exc}")
 

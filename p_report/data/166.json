@@ -25,41 +25,39 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "강원 VS 전북 (166, 09/09)",
-    "hours_to_kickoff": 9.9,
+    "hours_to_kickoff": 9.8,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-09-09T09:03:45.842307+09:00",
+    "generated_at": "2026-09-09T09:11:40.325381+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 강원 vs 전북",
-  "thesis": "강원 vs 전북. 전북 최근 L W D D W, 강원 최근 D L ? ? ?. 원정에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
+  "thesis": "강원 vs 전북. 전북 최근 L W D D W, 강원 최근 D L D D W. 원정에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
   "briefing": [
-    "강원 vs 전북. 전북 최근 L W D D W (2승 2무 1패 / 최근 5경기, 6득 3실). 강원은 D L ? ? ? (0승 1무 1패 / 최근 2경기, 2득 5실).",
-    "최근 5경기 평균 — 전북 xG 1.17·슈팅 12.8·유효슈팅 4.4, 강원 xG 0.73·슈팅 7.5·유효슈팅 3.0. 패스 성공률 77.7% vs 70.1%.",
+    "강원 vs 전북. 전북 최근 L W D D W (2승 2무 1패 / 최근 5경기, 6득 3실). 강원은 D L D D W (1승 3무 1패 / 최근 5경기, 7득 7실).",
+    "최근 5경기 평균 — 전북 xG 1.17·슈팅 12.8·유효슈팅 4.4, 강원 xG 1.23·슈팅 13.0·유효슈팅 5.0. 패스 성공률 77.7% vs 72.3%.",
     "올 시즌 맞대결 2경기 — 전북 0승 1무 1패.",
     "경기장 강릉하이원아레나 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다.",
     "선수 포커스 — 전북: 최근 가용 칠판 데이터 5경기 기준, 강원: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "전북은 슈팅 많음, 낮은 블록형, 적극 압박 흐름이고, 강원은(는) 기회 부족, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.17 vs 0.73, 슈팅 12.8 vs 7.5, 유효슈팅 4.4 vs 3.0, 패스 성공률 77.7% vs 70.1%, 파이널 서드 터치 21.0% vs 17.6%, 평균 터치 높이 45.0 vs 43.9, 압박 20.2 vs 13.0입니다.",
+    "contrast": "전북은 슈팅 많음, 낮은 블록형, 적극 압박 흐름이고, 강원은(는) 비기는 흐름, 슈팅 많음, 수비 기회 허용 그림입니다. 최근 xG 1.17 vs 1.23, 슈팅 12.8 vs 13.0, 유효슈팅 4.4 vs 5.0, 패스 성공률 77.7% vs 72.3%, 파이널 서드 터치 21.0% vs 25.1%, 평균 터치 높이 45.0 vs 47.5, 압박 20.2 vs 20.0입니다.",
     "edge": [
-      "전북이 최근 기회 질(xG 1.17)에서 강원(0.73)보다 앞서 있습니다. 박스 진입만 유지하면 득점 루트가 더 많습니다.",
-      "전북이 허용 xG 0.98로 수비 기회 관리가 강원(2.34)보다 낫습니다.",
-      "패스 성공률 77.7% vs 70.1%. 점유를 지키며 템포를 조절할 여지가 있습니다.",
-      "유효슈팅 4.4 vs 3.0. 박스 안 마무리 빈도가 앞서면 한 방이 더 자주 옵니다."
+      "전북이 허용 xG 0.98로 수비 기회 관리가 강원(1.43)보다 낫습니다.",
+      "패스 성공률 77.7% vs 72.3%. 점유를 지키며 템포를 조절할 여지가 있습니다."
     ],
     "risk": [
-      "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다.",
-      "강원형 낮은 블록은 전북 템포를 죽입니다. 점유만 높고 마무리가 약하면 역습 한 방에 끌려갈 수 있습니다."
+      "원정입니다. 초반 실점하면 추격 템포가 무거워지니 첫 20분 전환 수비가 핵심입니다."
     ],
     "target": [
-      "박스 밖 남발보다 오버랩·하프스페이스 침투 후 컷백을 노리는 편이 맞습니다.",
       "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
       "강원의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
-      "필드 틸트 지표: 파이널 서드 21.0% vs 17.6%, 터치 높이 45.0 vs 43.9.",
+      "필드 틸트 지표: 파이널 서드 21.0% vs 25.1%, 터치 높이 45.0 vs 47.5.",
       "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
     ],
     "caution": [
+      "강원의 압박 시도가 많습니다(경기당 20.0). 빌드업 첫 패스 실패를 줄이지 않으면 박스 위기가 바로 옵니다.",
+      "강원 경기당 슈팅 13.0. 박스 주변 2선 슈팅과 세트피스 동선을 우선 차단하세요.",
       "강원 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
     ]
   },
@@ -68,49 +66,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.17,
-        "opponent": 0.73,
-        "better": "jeonbuk"
+        "opponent": 1.23,
+        "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 0.98,
-        "opponent": 2.34,
+        "opponent": 1.43,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
         "jeonbuk": 12.8,
-        "opponent": 7.5,
-        "better": "jeonbuk"
+        "opponent": 13.0,
+        "better": "opponent"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 4.4,
-        "opponent": 3.0,
-        "better": "jeonbuk"
+        "opponent": 5.0,
+        "better": "opponent"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 77.7,
-        "opponent": 70.1,
+        "opponent": 72.3,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 21.0,
-        "opponent": 17.6,
+        "opponent": 25.1,
         "suffix": "%",
-        "better": "jeonbuk"
+        "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 20.2,
-        "opponent": 13.0,
+        "opponent": 20.0,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 전북 xG 1.17 / xGA 0.98, 강원 xG 0.73 / xGA 2.34."
+    "summary": "최근 5경기 기준 — 전북 xG 1.17 / xGA 0.98, 강원 xG 1.23 / xGA 1.43."
   },
   "h2h_summary": {
     "wins": 0,
@@ -255,17 +253,22 @@
         "date": "2026-08-26",
         "home": "강원",
         "away": "광주",
-        "score": "-",
-        "result": "?",
+        "score": "2:2",
+        "result": "D",
         "opponent": "광주",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 2.32,
+        "xga": 1.87,
+        "shots": 28,
+        "sot": 12,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 78.4,
+        "final_third_pct": 38.3,
+        "presses": 33,
+        "stats_source": "portal"
       },
       {
         "game_id": "156",
@@ -274,17 +277,22 @@
         "date": "2026-08-30",
         "home": "강원",
         "away": "포항",
-        "score": "-",
-        "result": "?",
+        "score": "0:0",
+        "result": "D",
         "opponent": "포항",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 1.01,
+        "xga": 0.31,
+        "shots": 10,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 0,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 73.8,
+        "final_third_pct": 27.4,
+        "presses": 22,
+        "stats_source": "portal"
       },
       {
         "game_id": "161",
@@ -293,17 +301,22 @@
         "date": "2026-09-06",
         "home": "안양",
         "away": "강원",
-        "score": "-",
-        "result": "?",
+        "score": "0:3",
+        "result": "W",
         "opponent": "안양",
         "ha": "A",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 1.37,
+        "xga": 0.28,
+        "shots": 12,
+        "sot": 5,
+        "goals_for": 3,
+        "goals_against": 0,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 68.9,
+        "final_third_pct": 24.6,
+        "presses": 19,
+        "stats_source": "portal"
       }
     ]
   },
@@ -356,23 +369,24 @@
       "name": "강원",
       "team_id": "K21",
       "tags": [
-        "기회 부족",
+        "비기는 흐름",
+        "슈팅 많음",
         "수비 기회 허용",
-        "낮은 블록형"
+        "적극 압박"
       ],
-      "record": "0승 1무 1패 / 최근 2경기",
-      "goals_for": 2,
-      "goals_against": 5,
-      "goal_diff": -3,
-      "avg_xg": 0.73,
-      "avg_xga": 2.34,
-      "avg_shots": 7.5,
-      "avg_sot": 3.0,
-      "avg_pass_pct": 70.1,
-      "avg_final_third_pct": 17.6,
-      "avg_presses": 13.0,
-      "avg_x": 43.9,
-      "samples": 2
+      "record": "1승 3무 1패 / 최근 5경기",
+      "goals_for": 7,
+      "goals_against": 7,
+      "goal_diff": 0,
+      "avg_xg": 1.23,
+      "avg_xga": 1.43,
+      "avg_shots": 13.0,
+      "avg_sot": 5.0,
+      "avg_pass_pct": 72.3,
+      "avg_final_third_pct": 25.1,
+      "avg_presses": 20.0,
+      "avg_x": 47.5,
+      "samples": 5
     }
   },
   "players": {
@@ -832,10 +846,11 @@
       "key": "prep",
       "label": "강원 스타일 대비법",
       "items": [
-        "강원은(는) 낮은 블록·후방 점유 비중이 큽니다. 중앙 고집보다 측면 오버랩 후 컷백·하프스페이스 침투로 박스를 열어야 합니다.",
-        "강원 허용 xG 2.34로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
-        "원정 초반 20분: 실점 없이 버티며 상대 압박 높이를 파악한 뒤, 측면 전환으로 템포를 가져오는 순서가 안전합니다.",
-        "전북 패스 성공률 77.7%가 강원(70.1%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
+        "강원 최근 압박 시도가 많습니다(경기당 20.0). 빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다.",
+        "강원 경기당 슈팅 13.0·유효슈팅 5.0. 박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요.",
+        "강원 허용 xG 1.43로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
+        "강원 최근 비기는 흐름입니다. 선제골 이후 템포를 죽이지 말고 두 번째 슈팅 루트까지 밀어붙여야 승점 3이 열립니다.",
+        "원정 초반 20분: 실점 없이 버티며 상대 압박 높이를 파악한 뒤, 측면 전환으로 템포를 가져오는 순서가 안전합니다."
       ],
       "players": []
     }

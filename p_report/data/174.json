@@ -25,25 +25,26 @@
     "kickoff_label": "2026-09-13 19:00 KST",
     "date_md": "09/13",
     "label": "광주 VS 안양 (174, 09/13)",
-    "hours_to_kickoff": 105.9,
+    "hours_to_kickoff": 105.8,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-09T09:03:46.759078+09:00",
+    "generated_at": "2026-09-09T09:13:37.165415+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 광주 vs 안양",
-  "thesis": "광주 vs 안양. 광주 최근 L L ? ? ?, 안양 최근 L L ? ? ?. 홈 광주이(가) 템포를 가져가며 xG 1.45 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "광주 vs 안양. 광주 최근 L L D L D, 안양 최근 L L W D L. 홈 광주이(가) 템포를 가져가며 xG 1.41 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "광주 vs 안양. 광주 최근 L L ? ? ? (0승 0무 2패 / 최근 2경기). 안양 최근 L L ? ? ? (0승 0무 2패 / 최근 2경기).",
-    "최근 5경기 평균 — 광주 xG 1.45·슈팅 14.5, 안양 xG 0.41·슈팅 6.5. 패스 성공률 81.5% vs 72.9%.",
+    "광주 vs 안양. 광주 최근 L L D L D (0승 2무 3패 / 최근 5경기). 안양 최근 L L W D L (1승 1무 3패 / 최근 5경기).",
+    "최근 5경기 평균 — 광주 xG 1.41·슈팅 11.0, 안양 xG 0.59·슈팅 7.6. 패스 성공률 77.0% vs 75.3%.",
     "올 시즌 맞대결 2경기 — 광주 기준 0승 1무 1패.",
     "경기장 광주 월드컵 · 광주 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 광주: 최근 가용 칠판 데이터 5경기 기준, 안양: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "광주은 기회 창출↑, 슈팅 많음, 낮은 블록형 흐름이고, 안양은(는) 기회 부족, 수비 기회 허용, 적극 압박 그림입니다. 최근 xG 1.45 vs 0.41, 슈팅 14.5 vs 6.5, 파이널 서드 터치 20.1% vs 24.2%입니다.",
+    "contrast": "광주은 부진, 비기는 흐름, 기회 창출↑ 흐름이고, 안양은(는) 부진, 기회 부족, 수비 기회 허용 그림입니다. 최근 xG 1.41 vs 0.59, 슈팅 11.0 vs 7.6, 파이널 서드 터치 15.5% vs 21.5%입니다.",
     "edge": [
-      "광주이(가) 최근 xG 1.45로 안양(0.41)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "광주이(가) 최근 xG 1.41로 안양(0.59)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "안양 최근 흐름이 좋지 않습니다. 광주이 실수를 유도할 여지가 있습니다.",
       "홈 이점(광주). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
@@ -55,7 +56,6 @@
       "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
     ],
     "caution": [
-      "안양 압박 시도가 많습니다. 광주 빌드업 첫 패스 실수를 줄여야 합니다.",
       "안양 역습 첫 패스와 광주의 앞공간 커버."
     ]
   },
@@ -63,50 +63,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.45,
-        "opponent": 0.41,
+        "jeonbuk": 1.41,
+        "opponent": 0.59,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.13,
-        "opponent": 1.99,
-        "better": "jeonbuk"
+        "jeonbuk": 2.17,
+        "opponent": 1.5,
+        "better": "opponent"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 14.5,
-        "opponent": 6.5,
+        "jeonbuk": 11.0,
+        "opponent": 7.6,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 7.0,
-        "opponent": 2.5,
+        "jeonbuk": 6.4,
+        "opponent": 2.4,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 81.5,
-        "opponent": 72.9,
+        "jeonbuk": 77.0,
+        "opponent": 75.3,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 20.1,
-        "opponent": 24.2,
+        "jeonbuk": 15.5,
+        "opponent": 21.5,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 18.5,
-        "opponent": 19.5,
+        "jeonbuk": 12.4,
+        "opponent": 15.6,
         "better": "opponent"
       }
     ],
-    "summary": "최근 2경기 기준 — 광주 xG 1.45 / xGA 1.13, 안양 xG 0.41 / xGA 1.99."
+    "summary": "최근 5경기 기준 — 광주 xG 1.41 / xGA 2.17, 안양 xG 0.59 / xGA 1.5."
   },
   "h2h_summary": {
     "wins": 0,
@@ -159,17 +159,22 @@
         "date": "2026-08-26",
         "home": "강원",
         "away": "광주",
-        "score": "-",
-        "result": "?",
+        "score": "2:2",
+        "result": "D",
         "opponent": "강원",
         "ha": "A",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 1.87,
+        "xga": 2.32,
+        "shots": 9,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 69.7,
+        "final_third_pct": 12.3,
+        "presses": 8,
+        "stats_source": "portal"
       },
       {
         "game_id": "153",
@@ -178,17 +183,22 @@
         "date": "2026-08-30",
         "home": "광주",
         "away": "서울",
-        "score": "-",
-        "result": "?",
+        "score": "2:5",
+        "result": "L",
         "opponent": "서울",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 0.47,
+        "xga": 3.85,
+        "shots": 8,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 5,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 74.6,
+        "final_third_pct": 15.7,
+        "presses": 11,
+        "stats_source": "portal"
       },
       {
         "game_id": "162",
@@ -197,17 +207,22 @@
         "date": "2026-09-06",
         "home": "김천",
         "away": "광주",
-        "score": "-",
-        "result": "?",
+        "score": "2:2",
+        "result": "D",
         "opponent": "김천",
         "ha": "A",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 1.81,
+        "xga": 2.4,
+        "shots": 9,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 77.9,
+        "final_third_pct": 9.3,
+        "presses": 6,
+        "stats_source": "portal"
       }
     ],
     "opponent": [
@@ -254,17 +269,22 @@
         "date": "2026-08-26",
         "home": "안양",
         "away": "인천",
-        "score": "-",
-        "result": "?",
+        "score": "2:1",
+        "result": "W",
         "opponent": "인천",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 1.26,
+        "xga": 1.09,
+        "shots": 6,
+        "sot": 3,
+        "goals_for": 2,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 76.0,
+        "final_third_pct": 13.1,
+        "presses": 8,
+        "stats_source": "portal"
       },
       {
         "game_id": "152",
@@ -273,17 +293,22 @@
         "date": "2026-08-29",
         "home": "부천",
         "away": "안양",
-        "score": "-",
-        "result": "?",
+        "score": "1:1",
+        "result": "D",
         "opponent": "부천",
         "ha": "A",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 0.58,
+        "xga": 1.09,
+        "shots": 12,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 76.9,
+        "final_third_pct": 23.7,
+        "presses": 9,
+        "stats_source": "portal"
       },
       {
         "game_id": "161",
@@ -292,17 +317,22 @@
         "date": "2026-09-06",
         "home": "안양",
         "away": "강원",
-        "score": "-",
-        "result": "?",
+        "score": "0:3",
+        "result": "L",
         "opponent": "강원",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
-        "goals_for": null,
-        "goals_against": null,
-        "stats_limited": true
+        "xg": 0.28,
+        "xga": 1.37,
+        "shots": 7,
+        "sot": 0,
+        "goals_for": 0,
+        "goals_against": 3,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 78.0,
+        "final_third_pct": 22.0,
+        "presses": 22,
+        "stats_source": "portal"
       }
     ]
   },
@@ -333,46 +363,48 @@
       "name": "광주",
       "team_id": "K22",
       "tags": [
+        "부진",
+        "비기는 흐름",
         "기회 창출↑",
-        "슈팅 많음",
-        "낮은 블록형",
-        "적극 압박"
+        "수비 기회 허용",
+        "낮은 블록형"
       ],
-      "record": "0승 0무 2패 / 최근 2경기",
-      "goals_for": 1,
-      "goals_against": 3,
-      "goal_diff": -2,
-      "avg_xg": 1.45,
-      "avg_xga": 1.13,
-      "avg_shots": 14.5,
-      "avg_sot": 7.0,
-      "avg_pass_pct": 81.5,
-      "avg_final_third_pct": 20.1,
-      "avg_presses": 18.5,
-      "avg_x": 46.8,
-      "samples": 2
+      "record": "0승 2무 3패 / 최근 5경기",
+      "goals_for": 7,
+      "goals_against": 12,
+      "goal_diff": -5,
+      "avg_xg": 1.41,
+      "avg_xga": 2.17,
+      "avg_shots": 11.0,
+      "avg_sot": 6.4,
+      "avg_pass_pct": 77.0,
+      "avg_final_third_pct": 15.5,
+      "avg_presses": 12.4,
+      "avg_x": 48.7,
+      "samples": 5
     },
     "opponent": {
       "name": "안양",
       "team_id": "K27",
       "tags": [
+        "부진",
         "기회 부족",
         "수비 기회 허용",
-        "적극 압박"
+        "낮은 블록형"
       ],
-      "record": "0승 0무 2패 / 최근 2경기",
-      "goals_for": 0,
-      "goals_against": 7,
-      "goal_diff": -7,
-      "avg_xg": 0.41,
-      "avg_xga": 1.99,
-      "avg_shots": 6.5,
-      "avg_sot": 2.5,
-      "avg_pass_pct": 72.9,
-      "avg_final_third_pct": 24.2,
-      "avg_presses": 19.5,
-      "avg_x": 46.5,
-      "samples": 2
+      "record": "1승 1무 3패 / 최근 5경기",
+      "goals_for": 3,
+      "goals_against": 12,
+      "goal_diff": -9,
+      "avg_xg": 0.59,
+      "avg_xga": 1.5,
+      "avg_shots": 7.6,
+      "avg_sot": 2.4,
+      "avg_pass_pct": 75.3,
+      "avg_final_third_pct": 21.5,
+      "avg_presses": 15.6,
+      "avg_x": 48.6,
+      "samples": 5
     }
   },
   "players": {
@@ -832,10 +864,9 @@
       "key": "prep",
       "label": "매치업 대비 포인트",
       "items": [
-        "안양 최근 압박 시도가 많습니다(경기당 19.5). 빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다.",
-        "안양 허용 xG 1.99로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
-        "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요.",
-        "광주 패스 성공률 81.5%가 안양(72.9%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
+        "안양은(는) 낮은 블록·후방 점유 비중이 큽니다. 중앙 고집보다 측면 오버랩 후 컷백·하프스페이스 침투로 박스를 열어야 합니다.",
+        "안양 허용 xG 1.5로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
+        "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요."
       ],
       "players": []
     }
