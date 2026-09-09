@@ -1434,6 +1434,74 @@ def h2h_summary(h2h: list[dict]) -> dict:
     return {"wins": w, "draws": d, "losses": l, "games": len(h2h)}
 
 
+def build_match_pulse(team_a: str, team_b: str, form_a: list[dict], form_b: list[dict]) -> dict:
+    """Expose the useful trends behind the preview without claiming a result prediction."""
+    def summary(name: str, rows: list[dict]) -> dict:
+        played = len(rows)
+        wins = sum(r.get("result") == "W" for r in rows)
+        draws = sum(r.get("result") == "D" for r in rows)
+        goals_for = sum(int(r.get("goals_for") or 0) for r in rows)
+        goals_against = sum(int(r.get("goals_against") or 0) for r in rows)
+        xg_rows = [r for r in rows if r.get("xg") is not None and not r.get("stats_limited")]
+        xg = sum(float(r.get("xg") or 0) for r in xg_rows)
+        return {"name": name, "sample": played, "points": wins * 3 + draws,
+                "ppg": round((wins * 3 + draws) / played, 2) if played else None,
+                "goals_pg": round(goals_for / played, 2) if played else None,
+                "conceded_pg": round(goals_against / played, 2) if played else None,
+                "xg_delta": round(goals_for - xg, 2) if xg_rows else None,
+                "xg_sample": len(xg_rows),
+                "clean_sheets": sum(int(r.get("goals_against") or 0) == 0 for r in rows)}
+    a, b = summary(team_a, form_a), summary(team_b, form_b)
+    if a["ppg"] is not None and b["ppg"] is not None and abs(a["ppg"] - b["ppg"]) >= 0.4:
+        lead = team_a if a["ppg"] > b["ppg"] else team_b
+        verdict = f"최근 승점 흐름은 {lead} 쪽이 더 좋습니다. 다만 최근 5경기 표본으로 보는 프리뷰입니다."
+    else:
+        verdict = "최근 승점 흐름은 팽팽합니다. 한 번의 전환·세트피스가 결과를 바꿀 수 있는 매치업입니다."
+    return {"home": a, "away": b, "verdict": verdict,
+            "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"}
+
+
+def build_lineup_projection(catalog: dict[str, dict], team: str, team_id: str, limit: int = 5) -> dict:
+    """Create a transparent expected XI from recent official starting XIs."""
+    refs = recent_chalkboard_refs(catalog, team, limit)
+    bucket: dict[str, dict] = {}
+    used = 0
+    for order, (year, gid) in enumerate(refs, start=1):
+        data = load_json(match_raw_path(year, gid))
+        lineup = data.get("lineup") if isinstance(data, dict) and isinstance(data.get("lineup"), dict) else {}
+        matched = False
+        for side in ("home", "away"):
+            for pl in lineup.get(side) or []:
+                if not isinstance(pl, dict) or str(pl.get("team_id") or "") != str(team_id):
+                    continue
+                matched = True
+                pid = str(pl.get("player_id") or "")
+                if not pid:
+                    continue
+                row = bucket.setdefault(pid, {"player_id": pid, "name": "", "back_no": "", "pos": "", "starts": 0, "apps": 0, "minutes": 0, "score": 0.0})
+                row["name"] = str(pl.get("name") or row["name"])
+                row["back_no"] = pl.get("back_no", row["back_no"])
+                position = str(pl.get("position") or "")
+                if position and position != "대기":
+                    row["pos"] = position
+                starter, mins = bool(pl.get("starter")), int(pl.get("minutes") or 0)
+                row["apps"] += 1; row["minutes"] += max(mins, 0); row["starts"] += int(starter)
+                row["score"] += (4.0 if starter else 0.6) * order + min(max(mins, 0), 100) / 100
+        if matched:
+            used += 1
+    rows = sorted(bucket.values(), key=lambda r: (r["score"], r["starts"], r["minutes"]), reverse=True)
+    gks = [r for r in rows if r.get("pos") == "GK"]
+    xi = (gks[:1] + [r for r in rows if r.get("pos") != "GK"])[:11]
+    picked = {r["player_id"] for r in xi}
+    bench = [r for r in rows if r["player_id"] not in picked][:5]
+    for row in xi + bench:
+        row["score"] = round(row["score"], 2)
+    confidence = "높음" if used >= 5 and sum(r["starts"] >= 3 for r in xi) >= 8 else "보통" if used >= 3 else "낮음"
+    return {"team": team, "xi": xi, "bench": bench, "sample_games": used, "confidence": confidence,
+            "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
+            "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."}
+
+
 def form_line(form: list[dict]) -> str:
     if not form:
         return "데이터 없음"
@@ -1699,6 +1767,12 @@ def _build_jeonbuk_preview(
     )
     cards = build_focus_cards(focus, opponent, jeonbuk=True)
     matchup = build_matchup(jb_style, opp_style, JEONBUK, opponent)
+    pulse = build_match_pulse(
+        home, away,
+        jb_form if ha == "H" else opp_form,
+        opp_form if ha == "H" else jb_form,
+    )
+    lineups = {"home": build_lineup_projection(catalog, home, team_id_for(home)), "away": build_lineup_projection(catalog, away, team_id_for(away))}
     venue = lookup_venue(home, index_matches, game_id) or VENUE_BY_HOME.get(home, "")
     attendance = lookup_attendance(home)
 
@@ -1747,6 +1821,8 @@ def _build_jeonbuk_preview(
         "briefing": briefing,
         "scout": scout,
         "matchup": matchup,
+        "pulse": pulse,
+        "lineups": lineups,
         "h2h_summary": h2h_sum,
         "form": {"jeonbuk": jb_form, "opponent": opp_form},
         "h2h": h2h,
@@ -1814,6 +1890,8 @@ def _build_neutral_preview(
         focus, away, home_name=home, away_name=away, jeonbuk=False
     )
     matchup = build_matchup(home_style, away_style, home, away)
+    pulse = build_match_pulse(home, away, home_form, away_form)
+    lineups = {"home": build_lineup_projection(catalog, home, team_id_for(home)), "away": build_lineup_projection(catalog, away, team_id_for(away))}
     venue = lookup_venue(home, index_matches, game_id) or VENUE_BY_HOME.get(home, "")
     attendance = lookup_attendance(home)
 
@@ -1858,6 +1936,8 @@ def _build_neutral_preview(
         "briefing": briefing,
         "scout": scout,
         "matchup": matchup,
+        "pulse": pulse,
+        "lineups": lineups,
         "h2h_summary": h2h_sum,
         "form": {"jeonbuk": home_form, "opponent": away_form},
         "h2h": h2h,

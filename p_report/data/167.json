@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-09 19:00 KST",
     "date_md": "09/09",
     "label": "광주 VS 제주 (167, 09/09)",
-    "hours_to_kickoff": 9.8,
+    "hours_to_kickoff": 9.1,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-09-09T09:12:12.202719+09:00",
+    "generated_at": "2026-09-09T09:54:26.389326+09:00",
     "preview_hours": 48.0
   },
   "headline": "28R PREVIEW · 광주 vs 제주",
@@ -107,6 +107,376 @@
       }
     ],
     "summary": "최근 5경기 기준 — 광주 xG 1.41 / xGA 2.17, 제주 xG 1.12 / xGA 1.08."
+  },
+  "pulse": {
+    "home": {
+      "name": "광주",
+      "sample": 5,
+      "points": 2,
+      "ppg": 0.4,
+      "goals_pg": 1.4,
+      "conceded_pg": 2.4,
+      "xg_delta": -0.05,
+      "xg_sample": 5,
+      "clean_sheets": 0
+    },
+    "away": {
+      "name": "제주",
+      "sample": 5,
+      "points": 8,
+      "ppg": 1.6,
+      "goals_pg": 1.0,
+      "conceded_pg": 0.6,
+      "xg_delta": -0.59,
+      "xg_sample": 5,
+      "clean_sheets": 3
+    },
+    "verdict": "최근 승점 흐름은 제주 쪽이 더 좋습니다. 다만 최근 5경기 표본으로 보는 프리뷰입니다.",
+    "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"
+  },
+  "lineups": {
+    "home": {
+      "team": "광주",
+      "xi": [
+        {
+          "player_id": "20140102",
+          "name": "김경민",
+          "back_no": 1,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 512,
+          "score": 64.99
+        },
+        {
+          "player_id": "20260352",
+          "name": "주앙 페드로",
+          "back_no": 17,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 492,
+          "score": 64.83
+        },
+        {
+          "player_id": "20260350",
+          "name": "반 흐룬스벤",
+          "back_no": 4,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 465,
+          "score": 64.56
+        },
+        {
+          "player_id": "20250193",
+          "name": "아이데일",
+          "back_no": 18,
+          "pos": "FW",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 455,
+          "score": 64.47
+        },
+        {
+          "player_id": "20200029",
+          "name": "권성윤",
+          "back_no": 22,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 329,
+          "score": 59.24
+        },
+        {
+          "player_id": "20240210",
+          "name": "문민서",
+          "back_no": 88,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 377,
+          "score": 53.56
+        },
+        {
+          "player_id": "20240236",
+          "name": "리영직",
+          "back_no": 37,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 5,
+          "minutes": 343,
+          "score": 53.18
+        },
+        {
+          "player_id": "20250366",
+          "name": "프리드욘슨",
+          "back_no": 11,
+          "pos": "FW",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 282,
+          "score": 52.02
+        },
+        {
+          "player_id": "20140134",
+          "name": "신창무",
+          "back_no": 40,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 306,
+          "score": 51.62
+        },
+        {
+          "player_id": "20120116",
+          "name": "안영규",
+          "back_no": 6,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 295,
+          "score": 50.91
+        },
+        {
+          "player_id": "20240224",
+          "name": "최경록",
+          "back_no": 10,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 250,
+          "score": 42.46
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20220186",
+          "name": "유제호",
+          "back_no": 14,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 180,
+          "score": 24.8
+        },
+        {
+          "player_id": "20260347",
+          "name": "바 루아 ",
+          "back_no": 50,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 5,
+          "minutes": 208,
+          "score": 21.28
+        },
+        {
+          "player_id": "20260343",
+          "name": "김우진",
+          "back_no": 70,
+          "pos": "MF",
+          "starts": 1,
+          "apps": 3,
+          "minutes": 127,
+          "score": 18.67
+        },
+        {
+          "player_id": "20230080",
+          "name": "정지훈",
+          "back_no": 16,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 186,
+          "score": 16.85
+        },
+        {
+          "player_id": "20120151",
+          "name": "주세종",
+          "back_no": 8,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 2,
+          "minutes": 185,
+          "score": 13.84
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+    },
+    "away": {
+      "team": "제주",
+      "xi": [
+        {
+          "player_id": "20160156",
+          "name": "김동준",
+          "back_no": 1,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 519,
+          "score": 64.99
+        },
+        {
+          "player_id": "20240126",
+          "name": "이탈로",
+          "back_no": 5,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 519,
+          "score": 64.99
+        },
+        {
+          "player_id": "20260228",
+          "name": "네게바",
+          "back_no": 94,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 463,
+          "score": 64.45
+        },
+        {
+          "player_id": "20260221",
+          "name": "세레스틴",
+          "back_no": 3,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 388,
+          "score": 59.75
+        },
+        {
+          "player_id": "20250093",
+          "name": "장민규",
+          "back_no": 20,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 5,
+          "minutes": 306,
+          "score": 52.78
+        },
+        {
+          "player_id": "20140115",
+          "name": "이창민",
+          "back_no": 8,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 233,
+          "score": 50.93
+        },
+        {
+          "player_id": "20200103",
+          "name": "유인수",
+          "back_no": 17,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 394,
+          "score": 43.87
+        },
+        {
+          "player_id": "20260294",
+          "name": "토비아스",
+          "back_no": 2,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 313,
+          "score": 43.0
+        },
+        {
+          "player_id": "20260359",
+          "name": "아이아스",
+          "back_no": 9,
+          "pos": "FW",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 289,
+          "score": 41.89
+        },
+        {
+          "player_id": "20120108",
+          "name": "정운",
+          "back_no": 13,
+          "pos": "DF",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 234,
+          "score": 40.12
+        },
+        {
+          "player_id": "20210123",
+          "name": "신상은",
+          "back_no": 11,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 152,
+          "score": 38.12
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20220166",
+          "name": "김신진",
+          "back_no": 18,
+          "pos": "FW",
+          "starts": 3,
+          "apps": 5,
+          "minutes": 241,
+          "score": 31.81
+        },
+        {
+          "player_id": "20260223",
+          "name": "권기민",
+          "back_no": 6,
+          "pos": "DF",
+          "starts": 2,
+          "apps": 5,
+          "minutes": 278,
+          "score": 28.75
+        },
+        {
+          "player_id": "20260226",
+          "name": "박민재",
+          "back_no": 47,
+          "pos": "DF",
+          "starts": 1,
+          "apps": 4,
+          "minutes": 157,
+          "score": 26.95
+        },
+        {
+          "player_id": "20180104",
+          "name": "박창준",
+          "back_no": 7,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 5,
+          "minutes": 245,
+          "score": 21.65
+        },
+        {
+          "player_id": "20250094",
+          "name": "최병욱",
+          "back_no": 24,
+          "pos": "MF",
+          "starts": 1,
+          "apps": 5,
+          "minutes": 185,
+          "score": 21.05
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+    }
   },
   "h2h_summary": {
     "wins": 0,

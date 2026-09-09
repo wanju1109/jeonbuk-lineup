@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "대전 VS 포항 (172, 09/12)",
-    "hours_to_kickoff": 81.8,
+    "hours_to_kickoff": 81.1,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-09T09:13:10.753771+09:00",
+    "generated_at": "2026-09-09T09:55:28.254615+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 대전 vs 포항",
@@ -107,6 +107,376 @@
       }
     ],
     "summary": "최근 5경기 기준 — 대전 xG 1.8 / xGA 1.12, 포항 xG 0.98 / xGA 1.17."
+  },
+  "pulse": {
+    "home": {
+      "name": "대전",
+      "sample": 5,
+      "points": 9,
+      "ppg": 1.8,
+      "goals_pg": 2.4,
+      "conceded_pg": 1.6,
+      "xg_delta": 2.98,
+      "xg_sample": 5,
+      "clean_sheets": 2
+    },
+    "away": {
+      "name": "포항",
+      "sample": 5,
+      "points": 7,
+      "ppg": 1.4,
+      "goals_pg": 0.8,
+      "conceded_pg": 1.4,
+      "xg_delta": -0.9,
+      "xg_sample": 5,
+      "clean_sheets": 1
+    },
+    "verdict": "최근 승점 흐름은 대전 쪽이 더 좋습니다. 다만 최근 5경기 표본으로 보는 프리뷰입니다.",
+    "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"
+  },
+  "lineups": {
+    "home": {
+      "team": "대전",
+      "xi": [
+        {
+          "player_id": "20120148",
+          "name": "이창근",
+          "back_no": 1,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 521,
+          "score": 65.0
+        },
+        {
+          "player_id": "20230239",
+          "name": "조성권",
+          "back_no": 4,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 521,
+          "score": 65.0
+        },
+        {
+          "player_id": "20210176",
+          "name": "김봉수",
+          "back_no": 30,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 502,
+          "score": 64.87
+        },
+        {
+          "player_id": "20170122",
+          "name": "김문환",
+          "back_no": 33,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 460,
+          "score": 61.1
+        },
+        {
+          "player_id": "20230048",
+          "name": "안톤",
+          "back_no": 98,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 438,
+          "score": 60.85
+        },
+        {
+          "player_id": "20130248",
+          "name": "주민규",
+          "back_no": 10,
+          "pos": "FW",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 371,
+          "score": 60.28
+        },
+        {
+          "player_id": "20190172",
+          "name": "엄원상",
+          "back_no": 11,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 354,
+          "score": 60.13
+        },
+        {
+          "player_id": "20140041",
+          "name": "이명재",
+          "back_no": 16,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 459,
+          "score": 57.59
+        },
+        {
+          "player_id": "20230105",
+          "name": "루빅손",
+          "back_no": 17,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 343,
+          "score": 56.63
+        },
+        {
+          "player_id": "20190209",
+          "name": "마사",
+          "back_no": 7,
+          "pos": "FW",
+          "starts": 3,
+          "apps": 5,
+          "minutes": 290,
+          "score": 42.5
+        },
+        {
+          "player_id": "20160037",
+          "name": "강윤성",
+          "back_no": 6,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 305,
+          "score": 38.93
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20170097",
+          "name": "이순민",
+          "back_no": 44,
+          "pos": "MF",
+          "starts": 1,
+          "apps": 3,
+          "minutes": 110,
+          "score": 24.1
+        },
+        {
+          "player_id": "20180135",
+          "name": "김준범",
+          "back_no": 14,
+          "pos": "MF",
+          "starts": 1,
+          "apps": 1,
+          "minutes": 54,
+          "score": 20.54
+        },
+        {
+          "player_id": "20190130",
+          "name": "서진수",
+          "back_no": 19,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 203,
+          "score": 19.38
+        },
+        {
+          "player_id": "20170166",
+          "name": "김진야",
+          "back_no": 13,
+          "pos": "DF",
+          "starts": 2,
+          "apps": 2,
+          "minutes": 111,
+          "score": 13.11
+        },
+        {
+          "player_id": "20160178",
+          "name": "정재희",
+          "back_no": 27,
+          "pos": "MF",
+          "starts": 1,
+          "apps": 4,
+          "minutes": 174,
+          "score": 12.94
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+    },
+    "away": {
+      "team": "포항",
+      "xi": [
+        {
+          "player_id": "20240277",
+          "name": "홍성민",
+          "back_no": 29,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 497,
+          "score": 64.94
+        },
+        {
+          "player_id": "20200146",
+          "name": "박찬용",
+          "back_no": 20,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 497,
+          "score": 64.94
+        },
+        {
+          "player_id": "20240063",
+          "name": "김동진",
+          "back_no": 16,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 451,
+          "score": 64.48
+        },
+        {
+          "player_id": "20240062",
+          "name": "황서웅",
+          "back_no": 70,
+          "pos": "FW",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 309,
+          "score": 59.69
+        },
+        {
+          "player_id": "20210182",
+          "name": "어정원",
+          "back_no": 2,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 395,
+          "score": 57.12
+        },
+        {
+          "player_id": "20150067",
+          "name": "전민광",
+          "back_no": 4,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 286,
+          "score": 50.86
+        },
+        {
+          "player_id": "20150253",
+          "name": "완델손",
+          "back_no": 77,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 447,
+          "score": 50.84
+        },
+        {
+          "player_id": "20260021",
+          "name": "트란지스카",
+          "back_no": 10,
+          "pos": "FW",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 311,
+          "score": 43.08
+        },
+        {
+          "player_id": "20060073",
+          "name": "기성용",
+          "back_no": 40,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 5,
+          "minutes": 281,
+          "score": 42.41
+        },
+        {
+          "player_id": "20260024",
+          "name": "니시야 켄토",
+          "back_no": 31,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 190,
+          "score": 38.5
+        },
+        {
+          "player_id": "20180204",
+          "name": "원기종",
+          "back_no": 7,
+          "pos": "FW",
+          "starts": 2,
+          "apps": 5,
+          "minutes": 281,
+          "score": 35.61
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20200030",
+          "name": "정한민",
+          "back_no": 37,
+          "pos": "FW",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 143,
+          "score": 32.43
+        },
+        {
+          "player_id": "20230159",
+          "name": "김승호",
+          "back_no": 8,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 235,
+          "score": 29.95
+        },
+        {
+          "player_id": "20250015",
+          "name": "강민준",
+          "back_no": 13,
+          "pos": "DF",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 248,
+          "score": 28.28
+        },
+        {
+          "player_id": "20250022",
+          "name": "조상혁",
+          "back_no": 18,
+          "pos": "FW",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 133,
+          "score": 26.53
+        },
+        {
+          "player_id": "20260026",
+          "name": "김호진",
+          "back_no": 36,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 221,
+          "score": 26.21
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+    }
   },
   "h2h_summary": {
     "wins": 0,

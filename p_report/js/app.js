@@ -364,6 +364,19 @@
       .join("");
   }
 
+  function formatSigned(value) { return value == null ? "-" : `${Number(value) > 0 ? "+" : ""}${value}`; }
+  function renderPulse(pulse) {
+    const box = $("pulseBox"); if (!box) return;
+    $("pulseVerdict").textContent = pulse?.verdict || "최근 흐름 데이터를 준비 중입니다.";
+    $("pulseNote").textContent = pulse?.sample_note || "";
+    box.innerHTML = [pulse?.home, pulse?.away].filter(Boolean).map((t) => `<article class="pulse-team"><h3>${escapeHtml(t.name || "팀")}</h3><dl><div><dt>최근 승점</dt><dd>${escapeHtml(String(t.points ?? "-"))} <small>(${escapeHtml(String(t.ppg ?? "-"))}/경기)</small></dd></div><div><dt>득점 / 실점</dt><dd>${escapeHtml(String(t.goals_pg ?? "-"))} / ${escapeHtml(String(t.conceded_pg ?? "-"))}</dd></div><div><dt>xG 대비 득점</dt><dd>${escapeHtml(formatSigned(t.xg_delta))} <small>(${escapeHtml(String(t.xg_sample ?? 0))}경기)</small></dd></div><div><dt>클린시트</dt><dd>${escapeHtml(String(t.clean_sheets ?? 0))}</dd></div></dl></article>`).join("");
+  }
+  function lineupPlayerHtml(p) { const no = p.back_no != null && p.back_no !== "" ? `#${escapeHtml(String(p.back_no))} ` : ""; return `<li><span>${no}${escapeHtml(p.name || "미정")}</span><small>${escapeHtml(p.pos || "")}${p.starts != null ? ` · ${escapeHtml(String(p.starts))}회 선발` : ""}</small></li>`; }
+  function renderLineups(lineups) {
+    const box = $("lineupBox"); if (!box) return;
+    box.innerHTML = [lineups?.home, lineups?.away].filter(Boolean).map((l) => `<article class="lineup-card"><div class="lineup-title"><h3>${escapeHtml(l.team || "팀")} 예상 XI</h3><span class="lineup-confidence ${escapeHtml(l.confidence || "")}">신뢰도 ${escapeHtml(l.confidence || "-")}</span></div><p class="lineup-meta">${escapeHtml(l.method || "")} · 표본 ${escapeHtml(String(l.sample_games ?? 0))}경기</p><ol class="lineup-xi">${(l.xi || []).map(lineupPlayerHtml).join("") || "<li>라인업 데이터가 부족합니다.</li>"}</ol>${(l.bench || []).length ? `<p class="bench-label">후보군</p><ul class="lineup-bench">${l.bench.map(lineupPlayerHtml).join("")}</ul>` : ""}<p class="lineup-disclaimer">${escapeHtml(l.disclaimer || "")}</p></article>`).join("");
+  }
+
   function playerChipHtml(p) {
     if (!p) return "";
     const back = p.back_no != null && p.back_no !== "" ? `#${escapeHtml(String(p.back_no))} ` : "";
@@ -489,8 +502,10 @@
       .join("");
 
     renderMatchup(preview.matchup, meta);
+    renderPulse(preview.pulse);
     renderScout(preview.scout);
     renderPlayerCards(preview);
+    renderLineups(preview.lineups);
 
     const homeStyle = styleForSide(preview, "home");
     const awayStyle = styleForSide(preview, "away");
