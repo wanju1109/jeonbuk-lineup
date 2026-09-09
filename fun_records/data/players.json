@@ -1,0 +1,9010 @@
+{
+  "20040081": {
+    "id": "20040081",
+    "name": "이청용",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20060066": {
+    "id": "20060066",
+    "name": "신광훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20060073": {
+    "id": "20060073",
+    "name": "기성용",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20080010": {
+    "id": "20080010",
+    "name": "정준연",
+    "nation": "한국",
+    "position": "-",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20090025": {
+    "id": "20090025",
+    "name": "임종은",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20090093": {
+    "id": "20090093",
+    "name": "윤석영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20090095": {
+    "id": "20090095",
+    "name": "류원우",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20090125": {
+    "id": "20090125",
+    "name": "김성준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100011": {
+    "id": "20100011",
+    "name": "이범수",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100014": {
+    "id": "20100014",
+    "name": "홍철",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100031": {
+    "id": "20100031",
+    "name": "김다솔",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100052": {
+    "id": "20100052",
+    "name": "김태환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100058": {
+    "id": "20100058",
+    "name": "정승용",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100079": {
+    "id": "20100079",
+    "name": "윤빛가람",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100096": {
+    "id": "20100096",
+    "name": "이용",
+    "nation": "한국",
+    "position": "-",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100101": {
+    "id": "20100101",
+    "name": "임창우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100126": {
+    "id": "20100126",
+    "name": "오재석",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100131": {
+    "id": "20100131",
+    "name": "민상기",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100134": {
+    "id": "20100134",
+    "name": "한지호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100156": {
+    "id": "20100156",
+    "name": "양한빈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20100163": {
+    "id": "20100163",
+    "name": "홍정호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110015": {
+    "id": "20110015",
+    "name": "최보경",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110029": {
+    "id": "20110029",
+    "name": "조지훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110032": {
+    "id": "20110032",
+    "name": "이종성",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110043": {
+    "id": "20110043",
+    "name": "신진호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110138": {
+    "id": "20110138",
+    "name": "한교원",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110157": {
+    "id": "20110157",
+    "name": "윤일록",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110158": {
+    "id": "20110158",
+    "name": "최영준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110166": {
+    "id": "20110166",
+    "name": "김오규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20110247": {
+    "id": "20110247",
+    "name": "이승빈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120009": {
+    "id": "20120009",
+    "name": "박세직",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120011": {
+    "id": "20120011",
+    "name": "김현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120029": {
+    "id": "20120029",
+    "name": "이슬찬",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120046": {
+    "id": "20120046",
+    "name": "김영남",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120049": {
+    "id": "20120049",
+    "name": "이승규",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120108": {
+    "id": "20120108",
+    "name": "정운",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120116": {
+    "id": "20120116",
+    "name": "안영규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120127": {
+    "id": "20120127",
+    "name": "이명주",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120148": {
+    "id": "20120148",
+    "name": "이창근",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120149": {
+    "id": "20120149",
+    "name": "구현준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20120151": {
+    "id": "20120151",
+    "name": "주세종",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130031": {
+    "id": "20130031",
+    "name": "김주원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130101": {
+    "id": "20130101",
+    "name": "김영찬",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130102": {
+    "id": "20130102",
+    "name": "권경원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130112": {
+    "id": "20130112",
+    "name": "연제민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130134": {
+    "id": "20130134",
+    "name": "박청효",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130142": {
+    "id": "20130142",
+    "name": "박지수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130151": {
+    "id": "20130151",
+    "name": "윤평국",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130156": {
+    "id": "20130156",
+    "name": "조현우",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130165": {
+    "id": "20130165",
+    "name": "임채민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130172": {
+    "id": "20130172",
+    "name": "박주원",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130191": {
+    "id": "20130191",
+    "name": "이창용",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130248": {
+    "id": "20130248",
+    "name": "주민규",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130332": {
+    "id": "20130332",
+    "name": "김병오",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130340": {
+    "id": "20130340",
+    "name": "조성준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130349": {
+    "id": "20130349",
+    "name": "황성민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20130410": {
+    "id": "20130410",
+    "name": "김인성",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140032": {
+    "id": "20140032",
+    "name": "손준호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140033": {
+    "id": "20140033",
+    "name": "강상우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140035": {
+    "id": "20140035",
+    "name": "이광혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140037": {
+    "id": "20140037",
+    "name": "김진영",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140038": {
+    "id": "20140038",
+    "name": "강현무",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140040": {
+    "id": "20140040",
+    "name": "김선민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140041": {
+    "id": "20140041",
+    "name": "이명재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140059": {
+    "id": "20140059",
+    "name": "이주용",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140066": {
+    "id": "20140066",
+    "name": "심상민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140067": {
+    "id": "20140067",
+    "name": "오스마르",
+    "nation": "스페인",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20140078": {
+    "id": "20140078",
+    "name": "노동건",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140081": {
+    "id": "20140081",
+    "name": "양형모",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140095": {
+    "id": "20140095",
+    "name": "김도혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140096": {
+    "id": "20140096",
+    "name": "김용환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140100": {
+    "id": "20140100",
+    "name": "이태희",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140102": {
+    "id": "20140102",
+    "name": "김경민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140112": {
+    "id": "20140112",
+    "name": "이학민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140113": {
+    "id": "20140113",
+    "name": "우주성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140115": {
+    "id": "20140115",
+    "name": "이창민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140122": {
+    "id": "20140122",
+    "name": "손정현",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140134": {
+    "id": "20140134",
+    "name": "신창무",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140135": {
+    "id": "20140135",
+    "name": "김동진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140143": {
+    "id": "20140143",
+    "name": "김영빈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140147": {
+    "id": "20140147",
+    "name": "이찬동",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140201": {
+    "id": "20140201",
+    "name": "최필수",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140203": {
+    "id": "20140203",
+    "name": "백동규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20140209": {
+    "id": "20140209",
+    "name": "정우재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150015": {
+    "id": "20150015",
+    "name": "최봉진",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150026": {
+    "id": "20150026",
+    "name": "주현우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150030": {
+    "id": "20150030",
+    "name": "김진혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150035": {
+    "id": "20150035",
+    "name": "류재문",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150050": {
+    "id": "20150050",
+    "name": "이규성",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150052": {
+    "id": "20150052",
+    "name": "김진규",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150056": {
+    "id": "20150056",
+    "name": "이기현",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150067": {
+    "id": "20150067",
+    "name": "전민광",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150080": {
+    "id": "20150080",
+    "name": "이태희",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150086": {
+    "id": "20150086",
+    "name": "장현수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150097": {
+    "id": "20150097",
+    "name": "김종우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150101": {
+    "id": "20150101",
+    "name": "안현범",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150104": {
+    "id": "20150104",
+    "name": "이영재",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150109": {
+    "id": "20150109",
+    "name": "정승현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150124": {
+    "id": "20150124",
+    "name": "최치원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150126": {
+    "id": "20150126",
+    "name": "장윤호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150130": {
+    "id": "20150130",
+    "name": "황병근",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150149": {
+    "id": "20150149",
+    "name": "이준희",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150151": {
+    "id": "20150151",
+    "name": "유강현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150157": {
+    "id": "20150157",
+    "name": "김민혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150159": {
+    "id": "20150159",
+    "name": "박용우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20150253": {
+    "id": "20150253",
+    "name": "완델손",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20160004": {
+    "id": "20160004",
+    "name": "김보경",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160005": {
+    "id": "20160005",
+    "name": "박병현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160006": {
+    "id": "20160006",
+    "name": "구상민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160010": {
+    "id": "20160010",
+    "name": "김형근",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160011": {
+    "id": "20160011",
+    "name": "박경록",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160031": {
+    "id": "20160031",
+    "name": "이동수",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160032": {
+    "id": "20160032",
+    "name": "박대훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160033": {
+    "id": "20160033",
+    "name": "장준영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160037": {
+    "id": "20160037",
+    "name": "강윤성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160040": {
+    "id": "20160040",
+    "name": "김형진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160048": {
+    "id": "20160048",
+    "name": "장순혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160059": {
+    "id": "20160059",
+    "name": "곽성욱",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160065": {
+    "id": "20160065",
+    "name": "한찬희",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160068": {
+    "id": "20160068",
+    "name": "김경재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160070": {
+    "id": "20160070",
+    "name": "고태원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160072": {
+    "id": "20160072",
+    "name": "이민기",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160073": {
+    "id": "20160073",
+    "name": "김정현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160074": {
+    "id": "20160074",
+    "name": "윤보상",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160075": {
+    "id": "20160075",
+    "name": "조주영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160076": {
+    "id": "20160076",
+    "name": "홍준호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160079": {
+    "id": "20160079",
+    "name": "황인재",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160082": {
+    "id": "20160082",
+    "name": "박동진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160089": {
+    "id": "20160089",
+    "name": "박세진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160094": {
+    "id": "20160094",
+    "name": "정치인",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160096": {
+    "id": "20160096",
+    "name": "서재민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160098": {
+    "id": "20160098",
+    "name": "김대원",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160099": {
+    "id": "20160099",
+    "name": "정승원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160103": {
+    "id": "20160103",
+    "name": "최규백",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160107": {
+    "id": "20160107",
+    "name": "이한도",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160113": {
+    "id": "20160113",
+    "name": "김건희",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160114": {
+    "id": "20160114",
+    "name": "김종민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160115": {
+    "id": "20160115",
+    "name": "고승범",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160122": {
+    "id": "20160122",
+    "name": "장호익",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160123": {
+    "id": "20160123",
+    "name": "홍정운",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160125": {
+    "id": "20160125",
+    "name": "정원진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160126": {
+    "id": "20160126",
+    "name": "김종석",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160128": {
+    "id": "20160128",
+    "name": "이래준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160130": {
+    "id": "20160130",
+    "name": "안태현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160151": {
+    "id": "20160151",
+    "name": "김정환",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160156": {
+    "id": "20160156",
+    "name": "김동준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160157": {
+    "id": "20160157",
+    "name": "연제운",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160178": {
+    "id": "20160178",
+    "name": "정재희",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160183": {
+    "id": "20160183",
+    "name": "박요한",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160236": {
+    "id": "20160236",
+    "name": "정동윤",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20160237": {
+    "id": "20160237",
+    "name": "세징야",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20170013": {
+    "id": "20170013",
+    "name": "유주안",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170022": {
+    "id": "20170022",
+    "name": "이상헌",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170026": {
+    "id": "20170026",
+    "name": "이지훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170029": {
+    "id": "20170029",
+    "name": "문정인",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170036": {
+    "id": "20170036",
+    "name": "박원재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170040": {
+    "id": "20170040",
+    "name": "김현욱",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170048": {
+    "id": "20170048",
+    "name": "김한길",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170051": {
+    "id": "20170051",
+    "name": "윤종규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170052": {
+    "id": "20170052",
+    "name": "이승모",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170095": {
+    "id": "20170095",
+    "name": "말컹",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20170097": {
+    "id": "20170097",
+    "name": "이순민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170105": {
+    "id": "20170105",
+    "name": "김경준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170121": {
+    "id": "20170121",
+    "name": "이동준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170122": {
+    "id": "20170122",
+    "name": "김문환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170147": {
+    "id": "20170147",
+    "name": "문지환",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170153": {
+    "id": "20170153",
+    "name": "김민규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170162": {
+    "id": "20170162",
+    "name": "최원철",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170164": {
+    "id": "20170164",
+    "name": "모재현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170166": {
+    "id": "20170166",
+    "name": "김진야",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170168": {
+    "id": "20170168",
+    "name": "이정빈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170170": {
+    "id": "20170170",
+    "name": "김동민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170171": {
+    "id": "20170171",
+    "name": "김보섭",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170173": {
+    "id": "20170173",
+    "name": "하창래",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170175": {
+    "id": "20170175",
+    "name": "채프먼",
+    "nation": "호주",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20170178": {
+    "id": "20170178",
+    "name": "김현태",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170179": {
+    "id": "20170179",
+    "name": "박대한",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170182": {
+    "id": "20170182",
+    "name": "이유현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170185": {
+    "id": "20170185",
+    "name": "김진수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170188": {
+    "id": "20170188",
+    "name": "이상기",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170190": {
+    "id": "20170190",
+    "name": "이상용",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170200": {
+    "id": "20170200",
+    "name": "여봉훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170208": {
+    "id": "20170208",
+    "name": "이인재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170229": {
+    "id": "20170229",
+    "name": "문선민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170244": {
+    "id": "20170244",
+    "name": "백성동",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170245": {
+    "id": "20170245",
+    "name": "김연수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170283": {
+    "id": "20170283",
+    "name": "한국영",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20170297": {
+    "id": "20170297",
+    "name": "류승우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180005": {
+    "id": "20180005",
+    "name": "김민호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180008": {
+    "id": "20180008",
+    "name": "이상민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180017": {
+    "id": "20180017",
+    "name": "이창훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180025": {
+    "id": "20180025",
+    "name": "송범근",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180027": {
+    "id": "20180027",
+    "name": "이광준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180031": {
+    "id": "20180031",
+    "name": "유지하",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180034": {
+    "id": "20180034",
+    "name": "송민규",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180038": {
+    "id": "20180038",
+    "name": "권기표",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180056": {
+    "id": "20180056",
+    "name": "조성욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180057": {
+    "id": "20180057",
+    "name": "최병찬",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180072": {
+    "id": "20180072",
+    "name": "정진욱",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180073": {
+    "id": "20180073",
+    "name": "조영욱",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180077": {
+    "id": "20180077",
+    "name": "김경민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180088": {
+    "id": "20180088",
+    "name": "이동경",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180092": {
+    "id": "20180092",
+    "name": "민준영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180093": {
+    "id": "20180093",
+    "name": "이시영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180096": {
+    "id": "20180096",
+    "name": "박태준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180104": {
+    "id": "20180104",
+    "name": "박창준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180105": {
+    "id": "20180105",
+    "name": "이재익",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180106": {
+    "id": "20180106",
+    "name": "최준혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180108": {
+    "id": "20180108",
+    "name": "강지훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180109": {
+    "id": "20180109",
+    "name": "윤민호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180110": {
+    "id": "20180110",
+    "name": "이현식",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180111": {
+    "id": "20180111",
+    "name": "이호인",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180118": {
+    "id": "20180118",
+    "name": "김지현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180123": {
+    "id": "20180123",
+    "name": "고재현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180125": {
+    "id": "20180125",
+    "name": "김태한",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180127": {
+    "id": "20180127",
+    "name": "오후성",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180128": {
+    "id": "20180128",
+    "name": "장성원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180135": {
+    "id": "20180135",
+    "name": "김준범",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180151": {
+    "id": "20180151",
+    "name": "김혜성",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180155": {
+    "id": "20180155",
+    "name": "이상준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180156": {
+    "id": "20180156",
+    "name": "박경민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180157": {
+    "id": "20180157",
+    "name": "박호영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180166": {
+    "id": "20180166",
+    "name": "김재우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180181": {
+    "id": "20180181",
+    "name": "최명희",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180185": {
+    "id": "20180185",
+    "name": "김태현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180193": {
+    "id": "20180193",
+    "name": "임은수",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180194": {
+    "id": "20180194",
+    "name": "최범경",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180196": {
+    "id": "20180196",
+    "name": "무고사",
+    "nation": "몬테네그로",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20180199": {
+    "id": "20180199",
+    "name": "정민기",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180203": {
+    "id": "20180203",
+    "name": "최한솔",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180204": {
+    "id": "20180204",
+    "name": "원기종",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180208": {
+    "id": "20180208",
+    "name": "박성우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180212": {
+    "id": "20180212",
+    "name": "김승섭",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180215": {
+    "id": "20180215",
+    "name": "김예성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180220": {
+    "id": "20180220",
+    "name": "이지솔",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180233": {
+    "id": "20180233",
+    "name": "박수일",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180235": {
+    "id": "20180235",
+    "name": "김동현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180259": {
+    "id": "20180259",
+    "name": "박인혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180266": {
+    "id": "20180266",
+    "name": "강윤구",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180280": {
+    "id": "20180280",
+    "name": "박지민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180294": {
+    "id": "20180294",
+    "name": "에드가",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20180296": {
+    "id": "20180296",
+    "name": "이진현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20180324": {
+    "id": "20180324",
+    "name": "김태환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190015": {
+    "id": "20190015",
+    "name": "이시헌",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190022": {
+    "id": "20190022",
+    "name": "박민서",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190040": {
+    "id": "20190040",
+    "name": "이지승",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190041": {
+    "id": "20190041",
+    "name": "김민덕",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190048": {
+    "id": "20190048",
+    "name": "박정인",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190049": {
+    "id": "20190049",
+    "name": "송주훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190057": {
+    "id": "20190057",
+    "name": "이주현",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190058": {
+    "id": "20190058",
+    "name": "이광연",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190059": {
+    "id": "20190059",
+    "name": "정지용",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190064": {
+    "id": "20190064",
+    "name": "김동헌",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190065": {
+    "id": "20190065",
+    "name": "이준석",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190084": {
+    "id": "20190084",
+    "name": "맹성웅",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190085": {
+    "id": "20190085",
+    "name": "김태훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190114": {
+    "id": "20190114",
+    "name": "하승운",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190115": {
+    "id": "20190115",
+    "name": "김찬",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190118": {
+    "id": "20190118",
+    "name": "최재영",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190122": {
+    "id": "20190122",
+    "name": "조성훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190124": {
+    "id": "20190124",
+    "name": "이수빈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190127": {
+    "id": "20190127",
+    "name": "임덕근",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190130": {
+    "id": "20190130",
+    "name": "서진수",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190131": {
+    "id": "20190131",
+    "name": "이동률",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190139": {
+    "id": "20190139",
+    "name": "이재원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190142": {
+    "id": "20190142",
+    "name": "박대원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190146": {
+    "id": "20190146",
+    "name": "이제호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190152": {
+    "id": "20190152",
+    "name": "박상혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190153": {
+    "id": "20190153",
+    "name": "이승재",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190154": {
+    "id": "20190154",
+    "name": "백종범",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190161": {
+    "id": "20190161",
+    "name": "신재원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190171": {
+    "id": "20190171",
+    "name": "이희균",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190172": {
+    "id": "20190172",
+    "name": "엄원상",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190173": {
+    "id": "20190173",
+    "name": "정현우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190174": {
+    "id": "20190174",
+    "name": "김주공",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190178": {
+    "id": "20190178",
+    "name": "김도담",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190187": {
+    "id": "20190187",
+    "name": "김주엽",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190194": {
+    "id": "20190194",
+    "name": "김상준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190197": {
+    "id": "20190197",
+    "name": "김지훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190209": {
+    "id": "20190209",
+    "name": "마사",
+    "nation": "일본",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20190213": {
+    "id": "20190213",
+    "name": "임승겸",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190291": {
+    "id": "20190291",
+    "name": "윌리안",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20190347": {
+    "id": "20190347",
+    "name": "일류첸코",
+    "nation": "독일",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": true
+  },
+  "20190357": {
+    "id": "20190357",
+    "name": "박규현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20190375": {
+    "id": "20190375",
+    "name": "김정훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200017": {
+    "id": "20200017",
+    "name": "최희원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200018": {
+    "id": "20200018",
+    "name": "명세진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200019": {
+    "id": "20200019",
+    "name": "민성준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200029": {
+    "id": "20200029",
+    "name": "권성윤",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200030": {
+    "id": "20200030",
+    "name": "정한민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200032": {
+    "id": "20200032",
+    "name": "이용혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200035": {
+    "id": "20200035",
+    "name": "강현묵",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200040": {
+    "id": "20200040",
+    "name": "서주환",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200041": {
+    "id": "20200041",
+    "name": "최준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200043": {
+    "id": "20200043",
+    "name": "안재준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200048": {
+    "id": "20200048",
+    "name": "김민준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200055": {
+    "id": "20200055",
+    "name": "조현택",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200056": {
+    "id": "20200056",
+    "name": "이상민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200062": {
+    "id": "20200062",
+    "name": "김주환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200066": {
+    "id": "20200066",
+    "name": "고영준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200070": {
+    "id": "20200070",
+    "name": "안찬기",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200076": {
+    "id": "20200076",
+    "name": "조윤성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200077": {
+    "id": "20200077",
+    "name": "서민우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200078": {
+    "id": "20200078",
+    "name": "이연규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200079": {
+    "id": "20200079",
+    "name": "홍원진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200080": {
+    "id": "20200080",
+    "name": "이강한",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200084": {
+    "id": "20200084",
+    "name": "이진용",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200087": {
+    "id": "20200087",
+    "name": "신한결",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200088": {
+    "id": "20200088",
+    "name": "안창민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200089": {
+    "id": "20200089",
+    "name": "조진우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200091": {
+    "id": "20200091",
+    "name": "표건희",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200099": {
+    "id": "20200099",
+    "name": "허율",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200103": {
+    "id": "20200103",
+    "name": "유인수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200104": {
+    "id": "20200104",
+    "name": "허자웅",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200105": {
+    "id": "20200105",
+    "name": "홍시후",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200107": {
+    "id": "20200107",
+    "name": "김형원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200110": {
+    "id": "20200110",
+    "name": "심민용",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200111": {
+    "id": "20200111",
+    "name": "강의빈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200127": {
+    "id": "20200127",
+    "name": "김선호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200134": {
+    "id": "20200134",
+    "name": "하남",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200136": {
+    "id": "20200136",
+    "name": "김강산",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200138": {
+    "id": "20200138",
+    "name": "구본철",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200142": {
+    "id": "20200142",
+    "name": "정호진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200146": {
+    "id": "20200146",
+    "name": "박찬용",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200151": {
+    "id": "20200151",
+    "name": "레안드로",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20200157": {
+    "id": "20200157",
+    "name": "김민식",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200162": {
+    "id": "20200162",
+    "name": "최지묵",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200163": {
+    "id": "20200163",
+    "name": "이중민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200164": {
+    "id": "20200164",
+    "name": "이건희",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200170": {
+    "id": "20200170",
+    "name": "최건주",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200174": {
+    "id": "20200174",
+    "name": "김인균",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200176": {
+    "id": "20200176",
+    "name": "김이안",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200181": {
+    "id": "20200181",
+    "name": "성호영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200211": {
+    "id": "20200211",
+    "name": "강신명",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200301": {
+    "id": "20200301",
+    "name": "구성윤",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200310": {
+    "id": "20200310",
+    "name": "서영재1",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200315": {
+    "id": "20200315",
+    "name": "손호준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20200317": {
+    "id": "20200317",
+    "name": "변준수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210079": {
+    "id": "20210079",
+    "name": "강성진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210084": {
+    "id": "20210084",
+    "name": "허승찬",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210098": {
+    "id": "20210098",
+    "name": "홍창범",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210104": {
+    "id": "20210104",
+    "name": "이기혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210105": {
+    "id": "20210105",
+    "name": "조상준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210106": {
+    "id": "20210106",
+    "name": "곽윤호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210108": {
+    "id": "20210108",
+    "name": "오재혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210111": {
+    "id": "20210111",
+    "name": "허강준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210112": {
+    "id": "20210112",
+    "name": "송준석",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210115": {
+    "id": "20210115",
+    "name": "김대우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210116": {
+    "id": "20210116",
+    "name": "박상혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210118": {
+    "id": "20210118",
+    "name": "이지훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210119": {
+    "id": "20210119",
+    "name": "박진성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210123": {
+    "id": "20210123",
+    "name": "신상은",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210124": {
+    "id": "20210124",
+    "name": "전병관",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210125": {
+    "id": "20210125",
+    "name": "이준서",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210126": {
+    "id": "20210126",
+    "name": "박성수",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210130": {
+    "id": "20210130",
+    "name": "이윤오",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210131": {
+    "id": "20210131",
+    "name": "제갈재민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210133": {
+    "id": "20210133",
+    "name": "김희승",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210135": {
+    "id": "20210135",
+    "name": "유동규",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210136": {
+    "id": "20210136",
+    "name": "이강현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210137": {
+    "id": "20210137",
+    "name": "김민석",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210138": {
+    "id": "20210138",
+    "name": "박창환",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210152": {
+    "id": "20210152",
+    "name": "신송훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210155": {
+    "id": "20210155",
+    "name": "김민준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210157": {
+    "id": "20210157",
+    "name": "장민준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210159": {
+    "id": "20210159",
+    "name": "이의형",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210162": {
+    "id": "20210162",
+    "name": "노경호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210164": {
+    "id": "20210164",
+    "name": "윤석주",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210165": {
+    "id": "20210165",
+    "name": "김륜성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210167": {
+    "id": "20210167",
+    "name": "김준호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210174": {
+    "id": "20210174",
+    "name": "홍성욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210175": {
+    "id": "20210175",
+    "name": "변경준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210176": {
+    "id": "20210176",
+    "name": "김봉수",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210178": {
+    "id": "20210178",
+    "name": "안준수",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210182": {
+    "id": "20210182",
+    "name": "어정원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210184": {
+    "id": "20210184",
+    "name": "강재우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210186": {
+    "id": "20210186",
+    "name": "정명제",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210189": {
+    "id": "20210189",
+    "name": "최정원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210192": {
+    "id": "20210192",
+    "name": "강윤구",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210223": {
+    "id": "20210223",
+    "name": "제르소",
+    "nation": "포르투갈",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20210227": {
+    "id": "20210227",
+    "name": "김이석",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210252": {
+    "id": "20210252",
+    "name": "이진섭",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210260": {
+    "id": "20210260",
+    "name": "김정민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210261": {
+    "id": "20210261",
+    "name": "헤이스",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20210273": {
+    "id": "20210273",
+    "name": "이찬욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210289": {
+    "id": "20210289",
+    "name": "설현진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210290": {
+    "id": "20210290",
+    "name": "이민기",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210291": {
+    "id": "20210291",
+    "name": "김준홍",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210305": {
+    "id": "20210305",
+    "name": "김명순",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210306": {
+    "id": "20210306",
+    "name": "추상훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210307": {
+    "id": "20210307",
+    "name": "박채준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210309": {
+    "id": "20210309",
+    "name": "조재훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20210314": {
+    "id": "20210314",
+    "name": "라마스",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20220035": {
+    "id": "20220035",
+    "name": "박재용",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220038": {
+    "id": "20220038",
+    "name": "박종현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220042": {
+    "id": "20220042",
+    "name": "이승우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220050": {
+    "id": "20220050",
+    "name": "김규민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220051": {
+    "id": "20220051",
+    "name": "유승현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220053": {
+    "id": "20220053",
+    "name": "김진호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220055": {
+    "id": "20220055",
+    "name": "김주성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220063": {
+    "id": "20220063",
+    "name": "김해승",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220064": {
+    "id": "20220064",
+    "name": "홍성무",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220065": {
+    "id": "20220065",
+    "name": "권석주",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220076": {
+    "id": "20220076",
+    "name": "박준범",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220077": {
+    "id": "20220077",
+    "name": "이우연",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220080": {
+    "id": "20220080",
+    "name": "최현웅",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220081": {
+    "id": "20220081",
+    "name": "박창우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220083": {
+    "id": "20220083",
+    "name": "박규민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220085": {
+    "id": "20220085",
+    "name": "조성빈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220086": {
+    "id": "20220086",
+    "name": "플라나",
+    "nation": "코소보",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20220087": {
+    "id": "20220087",
+    "name": "여승원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220088": {
+    "id": "20220088",
+    "name": "홍석현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220094": {
+    "id": "20220094",
+    "name": "배서준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220096": {
+    "id": "20220096",
+    "name": "김태현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220098": {
+    "id": "20220098",
+    "name": "이선호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220100": {
+    "id": "20220100",
+    "name": "양지산",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220102": {
+    "id": "20220102",
+    "name": "송창석",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220103": {
+    "id": "20220103",
+    "name": "이원우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220106": {
+    "id": "20220106",
+    "name": "황재원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220107": {
+    "id": "20220107",
+    "name": "박재현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220110": {
+    "id": "20220110",
+    "name": "한지율",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220112": {
+    "id": "20220112",
+    "name": "민경현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220113": {
+    "id": "20220113",
+    "name": "김성민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220114": {
+    "id": "20220114",
+    "name": "박현빈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220118": {
+    "id": "20220118",
+    "name": "조동재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220119": {
+    "id": "20220119",
+    "name": "김정현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220138": {
+    "id": "20220138",
+    "name": "강민규",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220139": {
+    "id": "20220139",
+    "name": "박철우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220142": {
+    "id": "20220142",
+    "name": "문현호",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220145": {
+    "id": "20220145",
+    "name": "정호연",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220148": {
+    "id": "20220148",
+    "name": "노희동",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220151": {
+    "id": "20220151",
+    "name": "서재원",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220152": {
+    "id": "20220152",
+    "name": "이준재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220154": {
+    "id": "20220154",
+    "name": "박재환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220155": {
+    "id": "20220155",
+    "name": "안호진",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220156": {
+    "id": "20220156",
+    "name": "고동민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220158": {
+    "id": "20220158",
+    "name": "박건우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220159": {
+    "id": "20220159",
+    "name": "윤민호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220160": {
+    "id": "20220160",
+    "name": "이승환",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220163": {
+    "id": "20220163",
+    "name": "박성훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220164": {
+    "id": "20220164",
+    "name": "박장한결",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220166": {
+    "id": "20220166",
+    "name": "김신진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220169": {
+    "id": "20220169",
+    "name": "임준섭",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220170": {
+    "id": "20220170",
+    "name": "한종무",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220173": {
+    "id": "20220173",
+    "name": "김동국",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220174": {
+    "id": "20220174",
+    "name": "조위제",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220175": {
+    "id": "20220175",
+    "name": "최예훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220176": {
+    "id": "20220176",
+    "name": "홍욱현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220177": {
+    "id": "20220177",
+    "name": "엄승민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220178": {
+    "id": "20220178",
+    "name": "양시후",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220180": {
+    "id": "20220180",
+    "name": "박지원",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220184": {
+    "id": "20220184",
+    "name": "황인택",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220186": {
+    "id": "20220186",
+    "name": "유제호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220187": {
+    "id": "20220187",
+    "name": "구민서",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220188": {
+    "id": "20220188",
+    "name": "김영권",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220189": {
+    "id": "20220189",
+    "name": "오인표",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220191": {
+    "id": "20220191",
+    "name": "최기윤",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220193": {
+    "id": "20220193",
+    "name": "이규백",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220240": {
+    "id": "20220240",
+    "name": "강영석",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220242": {
+    "id": "20220242",
+    "name": "김종민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220244": {
+    "id": "20220244",
+    "name": "티아고",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": true
+  },
+  "20220246": {
+    "id": "20220246",
+    "name": "이준호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220248": {
+    "id": "20220248",
+    "name": "김현우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220254": {
+    "id": "20220254",
+    "name": "김대환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220270": {
+    "id": "20220270",
+    "name": "박용희",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220276": {
+    "id": "20220276",
+    "name": "강상윤",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220279": {
+    "id": "20220279",
+    "name": "서재민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220300": {
+    "id": "20220300",
+    "name": "전지완",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220324": {
+    "id": "20220324",
+    "name": "김범수",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220334": {
+    "id": "20220334",
+    "name": "황재환",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220336": {
+    "id": "20220336",
+    "name": "김건오",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220340": {
+    "id": "20220340",
+    "name": "이상민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220341": {
+    "id": "20220341",
+    "name": "조현태",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220342": {
+    "id": "20220342",
+    "name": "박기현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220347": {
+    "id": "20220347",
+    "name": "강준모",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20220353": {
+    "id": "20220353",
+    "name": "갈레고",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230014": {
+    "id": "20230014",
+    "name": "김경환",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230015": {
+    "id": "20230015",
+    "name": "김도윤",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230017": {
+    "id": "20230017",
+    "name": "정강민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230018": {
+    "id": "20230018",
+    "name": "정진우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230020": {
+    "id": "20230020",
+    "name": "이동원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230024": {
+    "id": "20230024",
+    "name": "윤태민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230025": {
+    "id": "20230025",
+    "name": "유지운",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230028": {
+    "id": "20230028",
+    "name": "임형진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230029": {
+    "id": "20230029",
+    "name": "최우진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230033": {
+    "id": "20230033",
+    "name": "김세훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230034": {
+    "id": "20230034",
+    "name": "천성훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230039": {
+    "id": "20230039",
+    "name": "강현제",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230040": {
+    "id": "20230040",
+    "name": "김정현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230042": {
+    "id": "20230042",
+    "name": "윤재운",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230044": {
+    "id": "20230044",
+    "name": "장시영",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230045": {
+    "id": "20230045",
+    "name": "이상혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230046": {
+    "id": "20230046",
+    "name": "이재원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230048": {
+    "id": "20230048",
+    "name": "안톤",
+    "nation": "우크라이나",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230049": {
+    "id": "20230049",
+    "name": "박세진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230051": {
+    "id": "20230051",
+    "name": "한태희",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230052": {
+    "id": "20230052",
+    "name": "정윤서",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230053": {
+    "id": "20230053",
+    "name": "김건희",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230054": {
+    "id": "20230054",
+    "name": "박승호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230063": {
+    "id": "20230063",
+    "name": "이대광",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230064": {
+    "id": "20230064",
+    "name": "조진혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230065": {
+    "id": "20230065",
+    "name": "이동진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230067": {
+    "id": "20230067",
+    "name": "이승원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230068": {
+    "id": "20230068",
+    "name": "조민규",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230069": {
+    "id": "20230069",
+    "name": "전현병",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230071": {
+    "id": "20230071",
+    "name": "이민혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230076": {
+    "id": "20230076",
+    "name": "이규동",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230077": {
+    "id": "20230077",
+    "name": "김창훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230080": {
+    "id": "20230080",
+    "name": "정지훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230083": {
+    "id": "20230083",
+    "name": "김태준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230085": {
+    "id": "20230085",
+    "name": "김현덕",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230087": {
+    "id": "20230087",
+    "name": "조영광",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230088": {
+    "id": "20230088",
+    "name": "안재민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230089": {
+    "id": "20230089",
+    "name": "손승범",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230093": {
+    "id": "20230093",
+    "name": "황도윤",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230094": {
+    "id": "20230094",
+    "name": "전성진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230099": {
+    "id": "20230099",
+    "name": "장석환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230102": {
+    "id": "20230102",
+    "name": "서동한",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230103": {
+    "id": "20230103",
+    "name": "김주찬",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230104": {
+    "id": "20230104",
+    "name": "바사니",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230105": {
+    "id": "20230105",
+    "name": "루빅손",
+    "nation": "스웨덴",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230107": {
+    "id": "20230107",
+    "name": "이재욱",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230108": {
+    "id": "20230108",
+    "name": "보야니치",
+    "nation": "스웨덴",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230119": {
+    "id": "20230119",
+    "name": "발디비아",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230121": {
+    "id": "20230121",
+    "name": "박태용",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230124": {
+    "id": "20230124",
+    "name": "손휘",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230136": {
+    "id": "20230136",
+    "name": "최치웅",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230137": {
+    "id": "20230137",
+    "name": "최성범",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230138": {
+    "id": "20230138",
+    "name": "문성우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230139": {
+    "id": "20230139",
+    "name": "김현엽",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230140": {
+    "id": "20230140",
+    "name": "서명관",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230141": {
+    "id": "20230141",
+    "name": "카즈",
+    "nation": "일본",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230147": {
+    "id": "20230147",
+    "name": "루이스",
+    "nation": "콜롬비아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230148": {
+    "id": "20230148",
+    "name": "주닝요",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230150": {
+    "id": "20230150",
+    "name": "정용희",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230155": {
+    "id": "20230155",
+    "name": "이택근",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230157": {
+    "id": "20230157",
+    "name": "정재민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230158": {
+    "id": "20230158",
+    "name": "가브리엘",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230159": {
+    "id": "20230159",
+    "name": "김승호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230161": {
+    "id": "20230161",
+    "name": "정현욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230162": {
+    "id": "20230162",
+    "name": "이종언",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230163": {
+    "id": "20230163",
+    "name": "페신",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230165": {
+    "id": "20230165",
+    "name": "박현빈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230166": {
+    "id": "20230166",
+    "name": "이준상",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230167": {
+    "id": "20230167",
+    "name": "양태양",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230169": {
+    "id": "20230169",
+    "name": "유선",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230180": {
+    "id": "20230180",
+    "name": "김성동",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230182": {
+    "id": "20230182",
+    "name": "김주헌",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230185": {
+    "id": "20230185",
+    "name": "문건호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230190": {
+    "id": "20230190",
+    "name": "김성주",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230193": {
+    "id": "20230193",
+    "name": "차승현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230194": {
+    "id": "20230194",
+    "name": "호난",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230198": {
+    "id": "20230198",
+    "name": "이정택",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230203": {
+    "id": "20230203",
+    "name": "김도현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230224": {
+    "id": "20230224",
+    "name": "모따",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": true
+  },
+  "20230225": {
+    "id": "20230225",
+    "name": "조르지",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230239": {
+    "id": "20230239",
+    "name": "조성권",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230241": {
+    "id": "20230241",
+    "name": "류지민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230250": {
+    "id": "20230250",
+    "name": "김하준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230255": {
+    "id": "20230255",
+    "name": "김민승",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230256": {
+    "id": "20230256",
+    "name": "공시현",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230258": {
+    "id": "20230258",
+    "name": "박건희",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230270": {
+    "id": "20230270",
+    "name": "강준혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230271": {
+    "id": "20230271",
+    "name": "미란징야",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230305": {
+    "id": "20230305",
+    "name": "베카",
+    "nation": "조지아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230308": {
+    "id": "20230308",
+    "name": "강투지",
+    "nation": "몬테네그로",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230315": {
+    "id": "20230315",
+    "name": "야고",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230316": {
+    "id": "20230316",
+    "name": "파울리뇨",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230326": {
+    "id": "20230326",
+    "name": "밥신",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230332": {
+    "id": "20230332",
+    "name": "홍윤상",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230333": {
+    "id": "20230333",
+    "name": "가브리엘",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20230335": {
+    "id": "20230335",
+    "name": "류광현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230338": {
+    "id": "20230338",
+    "name": "최동렬",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230340": {
+    "id": "20230340",
+    "name": "고종현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230342": {
+    "id": "20230342",
+    "name": "김성주",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230343": {
+    "id": "20230343",
+    "name": "임현섭",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230346": {
+    "id": "20230346",
+    "name": "김도윤",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20230348": {
+    "id": "20230348",
+    "name": "이재훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240042": {
+    "id": "20240042",
+    "name": "장남웅",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240046": {
+    "id": "20240046",
+    "name": "김동욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240047": {
+    "id": "20240047",
+    "name": "김한서",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240049": {
+    "id": "20240049",
+    "name": "이준규",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240050": {
+    "id": "20240050",
+    "name": "박준서",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240051": {
+    "id": "20240051",
+    "name": "정재상",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240053": {
+    "id": "20240053",
+    "name": "권광덕",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240054": {
+    "id": "20240054",
+    "name": "박진영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240055": {
+    "id": "20240055",
+    "name": "김민영",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240056": {
+    "id": "20240056",
+    "name": "김현준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240057": {
+    "id": "20240057",
+    "name": "김민섭",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240059": {
+    "id": "20240059",
+    "name": "이규민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240060": {
+    "id": "20240060",
+    "name": "이동협",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240061": {
+    "id": "20240061",
+    "name": "강성혁",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240062": {
+    "id": "20240062",
+    "name": "황서웅",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240063": {
+    "id": "20240063",
+    "name": "김동진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240064": {
+    "id": "20240064",
+    "name": "김동민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240066": {
+    "id": "20240066",
+    "name": "홍재석",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240068": {
+    "id": "20240068",
+    "name": "박상준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240069": {
+    "id": "20240069",
+    "name": "최강민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240077": {
+    "id": "20240077",
+    "name": "김민호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240078": {
+    "id": "20240078",
+    "name": "마테우스",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240079": {
+    "id": "20240079",
+    "name": "단레이",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240080": {
+    "id": "20240080",
+    "name": "한가람",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240081": {
+    "id": "20240081",
+    "name": "박정훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240084": {
+    "id": "20240084",
+    "name": "김운",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240090": {
+    "id": "20240090",
+    "name": "손승민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240091": {
+    "id": "20240091",
+    "name": "정헌택",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240094": {
+    "id": "20240094",
+    "name": "박상영",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240095": {
+    "id": "20240095",
+    "name": "임지민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240097": {
+    "id": "20240097",
+    "name": "신민하",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240098": {
+    "id": "20240098",
+    "name": "박상현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240099": {
+    "id": "20240099",
+    "name": "김유성",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240100": {
+    "id": "20240100",
+    "name": "박태랑",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240102": {
+    "id": "20240102",
+    "name": "백민규",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240103": {
+    "id": "20240103",
+    "name": "김훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240105": {
+    "id": "20240105",
+    "name": "강도욱",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240106": {
+    "id": "20240106",
+    "name": "조영광",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240107": {
+    "id": "20240107",
+    "name": "최석현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240108": {
+    "id": "20240108",
+    "name": "김영환",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240109": {
+    "id": "20240109",
+    "name": "임준영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240113": {
+    "id": "20240113",
+    "name": "노동건",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240115": {
+    "id": "20240115",
+    "name": "강성윤",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240116": {
+    "id": "20240116",
+    "name": "김민수",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240117": {
+    "id": "20240117",
+    "name": "장영우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240118": {
+    "id": "20240118",
+    "name": "강교훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240119": {
+    "id": "20240119",
+    "name": "이요셉",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240120": {
+    "id": "20240120",
+    "name": "신일연",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240124": {
+    "id": "20240124",
+    "name": "성제민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240126": {
+    "id": "20240126",
+    "name": "이탈로",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": true
+  },
+  "20240128": {
+    "id": "20240128",
+    "name": "원희도",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240129": {
+    "id": "20240129",
+    "name": "조인정",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240132": {
+    "id": "20240132",
+    "name": "류준선",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240138": {
+    "id": "20240138",
+    "name": "전유상",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240140": {
+    "id": "20240140",
+    "name": "이지성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240141": {
+    "id": "20240141",
+    "name": "김민성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240148": {
+    "id": "20240148",
+    "name": "허동민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240149": {
+    "id": "20240149",
+    "name": "민지훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240150": {
+    "id": "20240150",
+    "name": "최준영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240151": {
+    "id": "20240151",
+    "name": "임지훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240152": {
+    "id": "20240152",
+    "name": "이건희",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240171": {
+    "id": "20240171",
+    "name": "김대현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240172": {
+    "id": "20240172",
+    "name": "조준현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240173": {
+    "id": "20240173",
+    "name": "이현용",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240174": {
+    "id": "20240174",
+    "name": "한상규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240175": {
+    "id": "20240175",
+    "name": "김현민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240176": {
+    "id": "20240176",
+    "name": "이경민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240177": {
+    "id": "20240177",
+    "name": "박진우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240178": {
+    "id": "20240178",
+    "name": "정승배",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240179": {
+    "id": "20240179",
+    "name": "안데르손",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240180": {
+    "id": "20240180",
+    "name": "김동현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240183": {
+    "id": "20240183",
+    "name": "윤재석",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240184": {
+    "id": "20240184",
+    "name": "성진영",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240185": {
+    "id": "20240185",
+    "name": "황재윤",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240187": {
+    "id": "20240187",
+    "name": "최승구",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240188": {
+    "id": "20240188",
+    "name": "엄예훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240190": {
+    "id": "20240190",
+    "name": "브루노 실바",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240191": {
+    "id": "20240191",
+    "name": "김결",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240196": {
+    "id": "20240196",
+    "name": "베니시오",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240201": {
+    "id": "20240201",
+    "name": "정이서",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240202": {
+    "id": "20240202",
+    "name": "정세준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240203": {
+    "id": "20240203",
+    "name": "문성민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240204": {
+    "id": "20240204",
+    "name": "정마호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240205": {
+    "id": "20240205",
+    "name": "이유민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240208": {
+    "id": "20240208",
+    "name": "가브리엘",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240209": {
+    "id": "20240209",
+    "name": "안혁주",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240210": {
+    "id": "20240210",
+    "name": "문민서",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240215": {
+    "id": "20240215",
+    "name": "배현서",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240216": {
+    "id": "20240216",
+    "name": "함선우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240217": {
+    "id": "20240217",
+    "name": "김재민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240222": {
+    "id": "20240222",
+    "name": "정성민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240224": {
+    "id": "20240224",
+    "name": "최경록",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240226": {
+    "id": "20240226",
+    "name": "이윤건",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240227": {
+    "id": "20240227",
+    "name": "하정우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240228": {
+    "id": "20240228",
+    "name": "김원형",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240233": {
+    "id": "20240233",
+    "name": "진시우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240236": {
+    "id": "20240236",
+    "name": "리영직",
+    "nation": "북한",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240239": {
+    "id": "20240239",
+    "name": "마지강",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240240": {
+    "id": "20240240",
+    "name": "박시화",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240241": {
+    "id": "20240241",
+    "name": "박주영",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240243": {
+    "id": "20240243",
+    "name": "채현우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240245": {
+    "id": "20240245",
+    "name": "툰가라",
+    "nation": "말리",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240251": {
+    "id": "20240251",
+    "name": "박종민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240254": {
+    "id": "20240254",
+    "name": "후이즈",
+    "nation": "콜롬비아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240269": {
+    "id": "20240269",
+    "name": "손건호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240273": {
+    "id": "20240273",
+    "name": "진태호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240274": {
+    "id": "20240274",
+    "name": "서정혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240275": {
+    "id": "20240275",
+    "name": "한석진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240277": {
+    "id": "20240277",
+    "name": "홍성민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240278": {
+    "id": "20240278",
+    "name": "강주혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240286": {
+    "id": "20240286",
+    "name": "강영훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240287": {
+    "id": "20240287",
+    "name": "박수빈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240294": {
+    "id": "20240294",
+    "name": "진준서",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240297": {
+    "id": "20240297",
+    "name": "김민우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240298": {
+    "id": "20240298",
+    "name": "권능",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240299": {
+    "id": "20240299",
+    "name": "데니손",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240301": {
+    "id": "20240301",
+    "name": "백지웅",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240302": {
+    "id": "20240302",
+    "name": "펠리페",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240304": {
+    "id": "20240304",
+    "name": "유승주",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240305": {
+    "id": "20240305",
+    "name": "카이오",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240309": {
+    "id": "20240309",
+    "name": "김지호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240315": {
+    "id": "20240315",
+    "name": "김서진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240316": {
+    "id": "20240316",
+    "name": "유민준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240321": {
+    "id": "20240321",
+    "name": "류승완",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240322": {
+    "id": "20240322",
+    "name": "이경준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240324": {
+    "id": "20240324",
+    "name": "야잔",
+    "nation": "요르단",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20240326": {
+    "id": "20240326",
+    "name": "변준영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240328": {
+    "id": "20240328",
+    "name": "김우빈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240330": {
+    "id": "20240330",
+    "name": "박우진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20240332": {
+    "id": "20240332",
+    "name": "김윤호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250014": {
+    "id": "20250014",
+    "name": "신준서",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250015": {
+    "id": "20250015",
+    "name": "강민준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250017": {
+    "id": "20250017",
+    "name": "한현서",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250018": {
+    "id": "20250018",
+    "name": "차준영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250019": {
+    "id": "20250019",
+    "name": "백승원",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250020": {
+    "id": "20250020",
+    "name": "이헌재",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250021": {
+    "id": "20250021",
+    "name": "이창우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250022": {
+    "id": "20250022",
+    "name": "조상혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250023": {
+    "id": "20250023",
+    "name": "류성민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250026": {
+    "id": "20250026",
+    "name": "문형진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250042": {
+    "id": "20250042",
+    "name": "정성빈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250044": {
+    "id": "20250044",
+    "name": "백인우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250045": {
+    "id": "20250045",
+    "name": "박재성",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250046": {
+    "id": "20250046",
+    "name": "이재환",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250047": {
+    "id": "20250047",
+    "name": "강희수",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250048": {
+    "id": "20250048",
+    "name": "김동화",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250049": {
+    "id": "20250049",
+    "name": "홍용준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250050": {
+    "id": "20250050",
+    "name": "김준영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250051": {
+    "id": "20250051",
+    "name": "윤현석",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250060": {
+    "id": "20250060",
+    "name": "김지원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250061": {
+    "id": "20250061",
+    "name": "콤파뇨",
+    "nation": "이탈리아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": true
+  },
+  "20250062": {
+    "id": "20250062",
+    "name": "조현우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250064": {
+    "id": "20250064",
+    "name": "김민준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250065": {
+    "id": "20250065",
+    "name": "이제욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250066": {
+    "id": "20250066",
+    "name": "이림",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250067": {
+    "id": "20250067",
+    "name": "성권석",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250068": {
+    "id": "20250068",
+    "name": "박만호",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250070": {
+    "id": "20250070",
+    "name": "유병헌",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250071": {
+    "id": "20250071",
+    "name": "김태환",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250072": {
+    "id": "20250072",
+    "name": "황은총",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250073": {
+    "id": "20250073",
+    "name": "정승빈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250074": {
+    "id": "20250074",
+    "name": "박수환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250075": {
+    "id": "20250075",
+    "name": "이지호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250077": {
+    "id": "20250077",
+    "name": "강현종",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250078": {
+    "id": "20250078",
+    "name": "김민재",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250079": {
+    "id": "20250079",
+    "name": "황승준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250080": {
+    "id": "20250080",
+    "name": "오세이",
+    "nation": "가나",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250081": {
+    "id": "20250081",
+    "name": "바또",
+    "nation": "코트디부아르",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250082": {
+    "id": "20250082",
+    "name": "윤기욱",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250083": {
+    "id": "20250083",
+    "name": "정상운",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250084": {
+    "id": "20250084",
+    "name": "김지훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250086": {
+    "id": "20250086",
+    "name": "장정우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250087": {
+    "id": "20250087",
+    "name": "토마스",
+    "nation": "네덜란드",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250091": {
+    "id": "20250091",
+    "name": "성기완",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250092": {
+    "id": "20250092",
+    "name": "이재준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250093": {
+    "id": "20250093",
+    "name": "장민규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250094": {
+    "id": "20250094",
+    "name": "최병욱",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250095": {
+    "id": "20250095",
+    "name": "김준하",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250097": {
+    "id": "20250097",
+    "name": "김진호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250098": {
+    "id": "20250098",
+    "name": "김지운",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250099": {
+    "id": "20250099",
+    "name": "주승민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250100": {
+    "id": "20250100",
+    "name": "강효온",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250101": {
+    "id": "20250101",
+    "name": "김은겸",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250108": {
+    "id": "20250108",
+    "name": "김현오",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250125": {
+    "id": "20250125",
+    "name": "박영재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250131": {
+    "id": "20250131",
+    "name": "이동현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250132": {
+    "id": "20250132",
+    "name": "안재민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250133": {
+    "id": "20250133",
+    "name": "박병규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250134": {
+    "id": "20250134",
+    "name": "박수빈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250135": {
+    "id": "20250135",
+    "name": "김민재",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250137": {
+    "id": "20250137",
+    "name": "양승욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250139": {
+    "id": "20250139",
+    "name": "멘데스",
+    "nation": "이탈리아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250147": {
+    "id": "20250147",
+    "name": "박준혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250148": {
+    "id": "20250148",
+    "name": "이태응",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250150": {
+    "id": "20250150",
+    "name": "티아깅요",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250152": {
+    "id": "20250152",
+    "name": "성신",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250154": {
+    "id": "20250154",
+    "name": "최진웅",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250155": {
+    "id": "20250155",
+    "name": "구종욱",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250156": {
+    "id": "20250156",
+    "name": "진의준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250157": {
+    "id": "20250157",
+    "name": "하재민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250159": {
+    "id": "20250159",
+    "name": "이상명",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250164": {
+    "id": "20250164",
+    "name": "어은결",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250166": {
+    "id": "20250166",
+    "name": "김승건",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250167": {
+    "id": "20250167",
+    "name": "우제욱",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250169": {
+    "id": "20250169",
+    "name": "전성진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250171": {
+    "id": "20250171",
+    "name": "임창석",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250172": {
+    "id": "20250172",
+    "name": "김기훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250173": {
+    "id": "20250173",
+    "name": "강성국",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250174": {
+    "id": "20250174",
+    "name": "정병희",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250180": {
+    "id": "20250180",
+    "name": "이지한",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250182": {
+    "id": "20250182",
+    "name": "이찬형",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250183": {
+    "id": "20250183",
+    "name": "디자우마",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250184": {
+    "id": "20250184",
+    "name": "최선규",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250185": {
+    "id": "20250185",
+    "name": "장부성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250186": {
+    "id": "20250186",
+    "name": "연응빈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250187": {
+    "id": "20250187",
+    "name": "정태인",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250189": {
+    "id": "20250189",
+    "name": "박경섭",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250190": {
+    "id": "20250190",
+    "name": "강민성",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250191": {
+    "id": "20250191",
+    "name": "이상현",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250192": {
+    "id": "20250192",
+    "name": "에울레르",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250193": {
+    "id": "20250193",
+    "name": "아이데일",
+    "nation": "호주",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250194": {
+    "id": "20250194",
+    "name": "페드링요",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250198": {
+    "id": "20250198",
+    "name": "김현우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250199": {
+    "id": "20250199",
+    "name": "손혁찬",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250200": {
+    "id": "20250200",
+    "name": "배진우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250201": {
+    "id": "20250201",
+    "name": "서진석",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250202": {
+    "id": "20250202",
+    "name": "손준석",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250203": {
+    "id": "20250203",
+    "name": "김요셉",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250204": {
+    "id": "20250204",
+    "name": "이서진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250207": {
+    "id": "20250207",
+    "name": "가브리엘",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250211": {
+    "id": "20250211",
+    "name": "양영빈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250215": {
+    "id": "20250215",
+    "name": "김현민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250216": {
+    "id": "20250216",
+    "name": "김유래",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250217": {
+    "id": "20250217",
+    "name": "백가온",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250220": {
+    "id": "20250220",
+    "name": "김정훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250221": {
+    "id": "20250221",
+    "name": "이흔렬",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250222": {
+    "id": "20250222",
+    "name": "세라핌",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250223": {
+    "id": "20250223",
+    "name": "권기현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250224": {
+    "id": "20250224",
+    "name": "양우진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250227": {
+    "id": "20250227",
+    "name": "김영재",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250228": {
+    "id": "20250228",
+    "name": "최병욱",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250230": {
+    "id": "20250230",
+    "name": "사비에르",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250232": {
+    "id": "20250232",
+    "name": "빌레로",
+    "nation": "콜롬비아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250249": {
+    "id": "20250249",
+    "name": "백경",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250278": {
+    "id": "20250278",
+    "name": "이시명",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250279": {
+    "id": "20250279",
+    "name": "염도현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250281": {
+    "id": "20250281",
+    "name": "윤주영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250282": {
+    "id": "20250282",
+    "name": "이한결",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250283": {
+    "id": "20250283",
+    "name": "루안",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250291": {
+    "id": "20250291",
+    "name": "김수형",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250292": {
+    "id": "20250292",
+    "name": "에릭",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250294": {
+    "id": "20250294",
+    "name": "보이노비치",
+    "nation": "보스니아 헤르체고비나",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250295": {
+    "id": "20250295",
+    "name": "조웅기",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250296": {
+    "id": "20250296",
+    "name": "조관우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250305": {
+    "id": "20250305",
+    "name": "홍진혁",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250307": {
+    "id": "20250307",
+    "name": "정인증",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250308": {
+    "id": "20250308",
+    "name": "문승민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250309": {
+    "id": "20250309",
+    "name": "이수아",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250310": {
+    "id": "20250310",
+    "name": "이예찬",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250317": {
+    "id": "20250317",
+    "name": "아나스모",
+    "nation": "호주",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250322": {
+    "id": "20250322",
+    "name": "이경태",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250323": {
+    "id": "20250323",
+    "name": "우정연",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250324": {
+    "id": "20250324",
+    "name": "최서준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250326": {
+    "id": "20250326",
+    "name": "트로야크",
+    "nation": "폴란드",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250327": {
+    "id": "20250327",
+    "name": "홍석준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250330": {
+    "id": "20250330",
+    "name": "임준휘",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250331": {
+    "id": "20250331",
+    "name": "클리말라",
+    "nation": "폴란드",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250332": {
+    "id": "20250332",
+    "name": "강민재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250334": {
+    "id": "20250334",
+    "name": "김하민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250335": {
+    "id": "20250335",
+    "name": "츄마시",
+    "nation": "가나",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250337": {
+    "id": "20250337",
+    "name": "전민수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250341": {
+    "id": "20250341",
+    "name": "이주혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250343": {
+    "id": "20250343",
+    "name": "르본",
+    "nation": "프랑스",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250344": {
+    "id": "20250344",
+    "name": "까리우스",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250346": {
+    "id": "20250346",
+    "name": "프레이타스",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250350": {
+    "id": "20250350",
+    "name": "후벵 마세도",
+    "nation": "포르투갈",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250351": {
+    "id": "20250351",
+    "name": "황석기",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250353": {
+    "id": "20250353",
+    "name": "감보아",
+    "nation": "포르투갈",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250356": {
+    "id": "20250356",
+    "name": "은고이",
+    "nation": "호주",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250358": {
+    "id": "20250358",
+    "name": "데메트리우스",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250359": {
+    "id": "20250359",
+    "name": "윤영석",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250360": {
+    "id": "20250360",
+    "name": "주앙 빅토르",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250361": {
+    "id": "20250361",
+    "name": "문정우",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250362": {
+    "id": "20250362",
+    "name": "김세형",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20250365": {
+    "id": "20250365",
+    "name": "유키치",
+    "nation": "크로아티아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20250366": {
+    "id": "20250366",
+    "name": "프리드욘슨",
+    "nation": "아이슬란드",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260012": {
+    "id": "20260012",
+    "name": "여재율",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260013": {
+    "id": "20260013",
+    "name": "이유찬",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260014": {
+    "id": "20260014",
+    "name": "한준성",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260015": {
+    "id": "20260015",
+    "name": "윤병권",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260019": {
+    "id": "20260019",
+    "name": "홍태형",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260020": {
+    "id": "20260020",
+    "name": "우현수",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260021": {
+    "id": "20260021",
+    "name": "트란지스카",
+    "nation": "독일",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260022": {
+    "id": "20260022",
+    "name": "김범준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260023": {
+    "id": "20260023",
+    "name": "김용학",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260024": {
+    "id": "20260024",
+    "name": "니시야 켄토",
+    "nation": "일본",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260025": {
+    "id": "20260025",
+    "name": "조영준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260026": {
+    "id": "20260026",
+    "name": "김호진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260027": {
+    "id": "20260027",
+    "name": "윤대근",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260028": {
+    "id": "20260028",
+    "name": "최주호",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260029": {
+    "id": "20260029",
+    "name": "에릭",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260030": {
+    "id": "20260030",
+    "name": "조민서",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260035": {
+    "id": "20260035",
+    "name": "박형빈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260036": {
+    "id": "20260036",
+    "name": "이은호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260037": {
+    "id": "20260037",
+    "name": "조원우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260038": {
+    "id": "20260038",
+    "name": "이효빈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260039": {
+    "id": "20260039",
+    "name": "여준엽",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260040": {
+    "id": "20260040",
+    "name": "이정현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260041": {
+    "id": "20260041",
+    "name": "김어진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260042": {
+    "id": "20260042",
+    "name": "최지남",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260043": {
+    "id": "20260043",
+    "name": "아부달라",
+    "nation": "이스라엘",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260044": {
+    "id": "20260044",
+    "name": "송호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260045": {
+    "id": "20260045",
+    "name": "바베츠",
+    "nation": "크로아티아",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260047": {
+    "id": "20260047",
+    "name": "고필관",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260048": {
+    "id": "20260048",
+    "name": "로스",
+    "nation": "스페인",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260049": {
+    "id": "20260049",
+    "name": "손정범",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260051": {
+    "id": "20260051",
+    "name": "이재형",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260052": {
+    "id": "20260052",
+    "name": "김범환",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260056": {
+    "id": "20260056",
+    "name": "문준혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260057": {
+    "id": "20260057",
+    "name": "안태훈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260058": {
+    "id": "20260058",
+    "name": "김주형",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260059": {
+    "id": "20260059",
+    "name": "이건희",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260060": {
+    "id": "20260060",
+    "name": "정대영",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260061": {
+    "id": "20260061",
+    "name": "김두현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260062": {
+    "id": "20260062",
+    "name": "디오고",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260064": {
+    "id": "20260064",
+    "name": "곽희벽",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260066": {
+    "id": "20260066",
+    "name": "최랑",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260067": {
+    "id": "20260067",
+    "name": "박선우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260068": {
+    "id": "20260068",
+    "name": "정연원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260089": {
+    "id": "20260089",
+    "name": "강지완",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260090": {
+    "id": "20260090",
+    "name": "엘쿠라노",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260091": {
+    "id": "20260091",
+    "name": "아일톤",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260092": {
+    "id": "20260092",
+    "name": "김재현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260093": {
+    "id": "20260093",
+    "name": "김강",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260094": {
+    "id": "20260094",
+    "name": "오형준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260095": {
+    "id": "20260095",
+    "name": "김정완",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260096": {
+    "id": "20260096",
+    "name": "델란",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260097": {
+    "id": "20260097",
+    "name": "마테우스 바비",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260098": {
+    "id": "20260098",
+    "name": "프리조",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260100": {
+    "id": "20260100",
+    "name": "안준규",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260101": {
+    "id": "20260101",
+    "name": "백승환",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260102": {
+    "id": "20260102",
+    "name": "김민호",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260103": {
+    "id": "20260103",
+    "name": "장연우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260104": {
+    "id": "20260104",
+    "name": "최륜성",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260105": {
+    "id": "20260105",
+    "name": "박재훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260106": {
+    "id": "20260106",
+    "name": "이강욱",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260108": {
+    "id": "20260108",
+    "name": "미겔 바지오",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260109": {
+    "id": "20260109",
+    "name": "패트릭",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260110": {
+    "id": "20260110",
+    "name": "어담",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260112": {
+    "id": "20260112",
+    "name": "김승빈",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260113": {
+    "id": "20260113",
+    "name": "바우텔손",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260114": {
+    "id": "20260114",
+    "name": "아리아스",
+    "nation": "네덜란드",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260115": {
+    "id": "20260115",
+    "name": "유재준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260116": {
+    "id": "20260116",
+    "name": "황준모",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260117": {
+    "id": "20260117",
+    "name": "바에즈",
+    "nation": "파라과이",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260118": {
+    "id": "20260118",
+    "name": "보닐라",
+    "nation": "콜롬비아",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260119": {
+    "id": "20260119",
+    "name": "노승익",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260120": {
+    "id": "20260120",
+    "name": "루크",
+    "nation": "영국",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260121": {
+    "id": "20260121",
+    "name": "서정현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260122": {
+    "id": "20260122",
+    "name": "최상윤",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260123": {
+    "id": "20260123",
+    "name": "이찬호",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260124": {
+    "id": "20260124",
+    "name": "염경민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260125": {
+    "id": "20260125",
+    "name": "이동열",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260130": {
+    "id": "20260130",
+    "name": "이용재",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260131": {
+    "id": "20260131",
+    "name": "장현도",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260132": {
+    "id": "20260132",
+    "name": "권용승",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260134": {
+    "id": "20260134",
+    "name": "정지황",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260135": {
+    "id": "20260135",
+    "name": "임찬열",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260136": {
+    "id": "20260136",
+    "name": "페트로프",
+    "nation": "세르비아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260137": {
+    "id": "20260137",
+    "name": "김제율",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260138": {
+    "id": "20260138",
+    "name": "김우진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260139": {
+    "id": "20260139",
+    "name": "김성진",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260140": {
+    "id": "20260140",
+    "name": "박의정",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260141": {
+    "id": "20260141",
+    "name": "황군성",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260142": {
+    "id": "20260142",
+    "name": "오창환",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260143": {
+    "id": "20260143",
+    "name": "임병훈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260144": {
+    "id": "20260144",
+    "name": "이상민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260145": {
+    "id": "20260145",
+    "name": "최종운",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260146": {
+    "id": "20260146",
+    "name": "무신",
+    "nation": "스웨덴",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260147": {
+    "id": "20260147",
+    "name": "남현우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260148": {
+    "id": "20260148",
+    "name": "박현민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260149": {
+    "id": "20260149",
+    "name": "김민석",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260150": {
+    "id": "20260150",
+    "name": "조민협",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260153": {
+    "id": "20260153",
+    "name": "지오바니",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260154": {
+    "id": "20260154",
+    "name": "에드가",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260156": {
+    "id": "20260156",
+    "name": "문정원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260157": {
+    "id": "20260157",
+    "name": "변정우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260158": {
+    "id": "20260158",
+    "name": "이예준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260159": {
+    "id": "20260159",
+    "name": "카를로스",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260160": {
+    "id": "20260160",
+    "name": "후안 이비자",
+    "nation": "스페인",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260161": {
+    "id": "20260161",
+    "name": "이케르",
+    "nation": "스페인",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260162": {
+    "id": "20260162",
+    "name": "무고사",
+    "nation": "몬테네그로",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260164": {
+    "id": "20260164",
+    "name": "고정민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260165": {
+    "id": "20260165",
+    "name": "이준섭",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260166": {
+    "id": "20260166",
+    "name": "오준엽",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260167": {
+    "id": "20260167",
+    "name": "왕민준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260168": {
+    "id": "20260168",
+    "name": "페리어",
+    "nation": "영국",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260169": {
+    "id": "20260169",
+    "name": "강동현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260170": {
+    "id": "20260170",
+    "name": "마촙",
+    "nation": "미국",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260171": {
+    "id": "20260171",
+    "name": "리마",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260172": {
+    "id": "20260172",
+    "name": "정건욱",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260173": {
+    "id": "20260173",
+    "name": "오브라도비치",
+    "nation": "세르비아",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260175": {
+    "id": "20260175",
+    "name": "송범",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260176": {
+    "id": "20260176",
+    "name": "진호진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260177": {
+    "id": "20260177",
+    "name": "김태백",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260178": {
+    "id": "20260178",
+    "name": "김준형",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260179": {
+    "id": "20260179",
+    "name": "이준한",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260180": {
+    "id": "20260180",
+    "name": "김민재",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260181": {
+    "id": "20260181",
+    "name": "김승현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260182": {
+    "id": "20260182",
+    "name": "최단",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260183": {
+    "id": "20260183",
+    "name": "하츠젤",
+    "nation": "스웨덴",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260185": {
+    "id": "20260185",
+    "name": "이효준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260186": {
+    "id": "20260186",
+    "name": "김백민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260187": {
+    "id": "20260187",
+    "name": "말론",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260188": {
+    "id": "20260188",
+    "name": "도승우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260191": {
+    "id": "20260191",
+    "name": "이라클리",
+    "nation": "조지아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260192": {
+    "id": "20260192",
+    "name": "엔조",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260194": {
+    "id": "20260194",
+    "name": "가르시아",
+    "nation": "콜롬비아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260195": {
+    "id": "20260195",
+    "name": "반데이라",
+    "nation": "포르투갈",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260196": {
+    "id": "20260196",
+    "name": "이윤환",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260197": {
+    "id": "20260197",
+    "name": "주나무",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260202": {
+    "id": "20260202",
+    "name": "막스",
+    "nation": "크로아티아",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260203": {
+    "id": "20260203",
+    "name": "정예준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260205": {
+    "id": "20260205",
+    "name": "윤제희",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260206": {
+    "id": "20260206",
+    "name": "은고이",
+    "nation": "호주",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260207": {
+    "id": "20260207",
+    "name": "정택현",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260208": {
+    "id": "20260208",
+    "name": "프리드욘슨",
+    "nation": "아이슬란드",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260209": {
+    "id": "20260209",
+    "name": "김용혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260210": {
+    "id": "20260210",
+    "name": "공배현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260211": {
+    "id": "20260211",
+    "name": "정규민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260212": {
+    "id": "20260212",
+    "name": "조우영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260213": {
+    "id": "20260213",
+    "name": "최성훈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260214": {
+    "id": "20260214",
+    "name": "치기",
+    "nation": "나이지리아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260215": {
+    "id": "20260215",
+    "name": "김규민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260216": {
+    "id": "20260216",
+    "name": "알렉스",
+    "nation": "몬테네그로",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260217": {
+    "id": "20260217",
+    "name": "김연수",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260218": {
+    "id": "20260218",
+    "name": "루컹",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260219": {
+    "id": "20260219",
+    "name": "장승우",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260220": {
+    "id": "20260220",
+    "name": "마르쿠스",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260221": {
+    "id": "20260221",
+    "name": "세레스틴",
+    "nation": "프랑스",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260223": {
+    "id": "20260223",
+    "name": "권기민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260224": {
+    "id": "20260224",
+    "name": "기티스",
+    "nation": "리투아니아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260226": {
+    "id": "20260226",
+    "name": "박민재",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260227": {
+    "id": "20260227",
+    "name": "강동휘",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260228": {
+    "id": "20260228",
+    "name": "네게바",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260229": {
+    "id": "20260229",
+    "name": "이호진",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260230": {
+    "id": "20260230",
+    "name": "권준성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260231": {
+    "id": "20260231",
+    "name": "송안톤",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260232": {
+    "id": "20260232",
+    "name": "김동윤",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260233": {
+    "id": "20260233",
+    "name": "박혜성",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260234": {
+    "id": "20260234",
+    "name": "안젤로티",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260235": {
+    "id": "20260235",
+    "name": "홍석현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260236": {
+    "id": "20260236",
+    "name": "슌",
+    "nation": "일본",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260237": {
+    "id": "20260237",
+    "name": "권병준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260238": {
+    "id": "20260238",
+    "name": "료지",
+    "nation": "일본",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260239": {
+    "id": "20260239",
+    "name": "김영한",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260240": {
+    "id": "20260240",
+    "name": "모경빈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260241": {
+    "id": "20260241",
+    "name": "여민준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260242": {
+    "id": "20260242",
+    "name": "윤근영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260243": {
+    "id": "20260243",
+    "name": "김도연",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260244": {
+    "id": "20260244",
+    "name": "벤지",
+    "nation": "미국",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260245": {
+    "id": "20260245",
+    "name": "노보",
+    "nation": "포르투갈",
+    "position": "GK",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260246": {
+    "id": "20260246",
+    "name": "석현준",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260247": {
+    "id": "20260247",
+    "name": "자르델",
+    "nation": "포르투갈",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260248": {
+    "id": "20260248",
+    "name": "김민준",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260269": {
+    "id": "20260269",
+    "name": "유승재",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260270": {
+    "id": "20260270",
+    "name": "크리스찬",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260271": {
+    "id": "20260271",
+    "name": "이준우",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260272": {
+    "id": "20260272",
+    "name": "김지성",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260273": {
+    "id": "20260273",
+    "name": "마이사 폴",
+    "nation": "세네갈",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260282": {
+    "id": "20260282",
+    "name": "나임",
+    "nation": "가나",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260283": {
+    "id": "20260283",
+    "name": "최원록",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260284": {
+    "id": "20260284",
+    "name": "사르자니",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260285": {
+    "id": "20260285",
+    "name": "이바닐도",
+    "nation": "포르투갈",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260287": {
+    "id": "20260287",
+    "name": "데커스",
+    "nation": "영국",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260288": {
+    "id": "20260288",
+    "name": "보르하 바스톤",
+    "nation": "스페인",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260290": {
+    "id": "20260290",
+    "name": "안주완",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260291": {
+    "id": "20260291",
+    "name": "최준영",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260293": {
+    "id": "20260293",
+    "name": "김예건",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260294": {
+    "id": "20260294",
+    "name": "토비아스",
+    "nation": "포르투갈",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260295": {
+    "id": "20260295",
+    "name": "시암",
+    "nation": "태국",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260300": {
+    "id": "20260300",
+    "name": "고은석",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260301": {
+    "id": "20260301",
+    "name": "김태혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260302": {
+    "id": "20260302",
+    "name": "김태산",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260308": {
+    "id": "20260308",
+    "name": "양승민",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260309": {
+    "id": "20260309",
+    "name": "박성현",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260312": {
+    "id": "20260312",
+    "name": "김지호",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260313": {
+    "id": "20260313",
+    "name": "김도연",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260314": {
+    "id": "20260314",
+    "name": "구훈민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260315": {
+    "id": "20260315",
+    "name": "박병찬",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260317": {
+    "id": "20260317",
+    "name": "최재혁",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260318": {
+    "id": "20260318",
+    "name": "구템베르그",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260323": {
+    "id": "20260323",
+    "name": "제랄데스",
+    "nation": "포르투갈",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260332": {
+    "id": "20260332",
+    "name": "공태윤",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260338": {
+    "id": "20260338",
+    "name": "김준서",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260340": {
+    "id": "20260340",
+    "name": "코키",
+    "nation": "일본",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260341": {
+    "id": "20260341",
+    "name": "성예건",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260342": {
+    "id": "20260342",
+    "name": "박주영",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260343": {
+    "id": "20260343",
+    "name": "김우진",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260344": {
+    "id": "20260344",
+    "name": "오하종",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260345": {
+    "id": "20260345",
+    "name": "비티뉴",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260346": {
+    "id": "20260346",
+    "name": "크네제비치",
+    "nation": "세르비아",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260347": {
+    "id": "20260347",
+    "name": "바 루아",
+    "nation": "코트디부아르",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260348": {
+    "id": "20260348",
+    "name": "제시",
+    "nation": "나이지리아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260349": {
+    "id": "20260349",
+    "name": "정현우",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260350": {
+    "id": "20260350",
+    "name": "반 흐룬스벤",
+    "nation": "네덜란드",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260351": {
+    "id": "20260351",
+    "name": "사이토스키",
+    "nation": "슬로베니아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260352": {
+    "id": "20260352",
+    "name": "주앙 페드로",
+    "nation": "브라질",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260353": {
+    "id": "20260353",
+    "name": "이윤성",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260354": {
+    "id": "20260354",
+    "name": "두두 나르디니",
+    "nation": "브라질",
+    "position": "MF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260355": {
+    "id": "20260355",
+    "name": "비티뇨",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260356": {
+    "id": "20260356",
+    "name": "카림",
+    "nation": "스웨덴",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260357": {
+    "id": "20260357",
+    "name": "블레이즈",
+    "nation": "카메룬",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260358": {
+    "id": "20260358",
+    "name": "대니 바커",
+    "nation": "네덜란드",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260359": {
+    "id": "20260359",
+    "name": "아이아스",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260361": {
+    "id": "20260361",
+    "name": "안준혁",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260363": {
+    "id": "20260363",
+    "name": "아하도프",
+    "nation": "우즈베키스탄",
+    "position": "DF",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260364": {
+    "id": "20260364",
+    "name": "두비츠카스",
+    "nation": "리투아니아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260365": {
+    "id": "20260365",
+    "name": "이탈로",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": true
+  },
+  "20260366": {
+    "id": "20260366",
+    "name": "김광원",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260367": {
+    "id": "20260367",
+    "name": "김동하",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260368": {
+    "id": "20260368",
+    "name": "오성민",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260369": {
+    "id": "20260369",
+    "name": "안광문",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260370": {
+    "id": "20260370",
+    "name": "박도훈",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260371": {
+    "id": "20260371",
+    "name": "성문경",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260372": {
+    "id": "20260372",
+    "name": "치나리",
+    "nation": "알바니아",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260373": {
+    "id": "20260373",
+    "name": "김슬기",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260374": {
+    "id": "20260374",
+    "name": "도도",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260375": {
+    "id": "20260375",
+    "name": "김수민",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260376": {
+    "id": "20260376",
+    "name": "정하원",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260377": {
+    "id": "20260377",
+    "name": "김민준",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260378": {
+    "id": "20260378",
+    "name": "정현웅",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260379": {
+    "id": "20260379",
+    "name": "이서현",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260380": {
+    "id": "20260380",
+    "name": "신지섭",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260381": {
+    "id": "20260381",
+    "name": "김강준",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260382": {
+    "id": "20260382",
+    "name": "정민재",
+    "nation": "한국",
+    "position": "GK",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260383": {
+    "id": "20260383",
+    "name": "구스타보",
+    "nation": "브라질",
+    "position": "FW",
+    "foreign": true,
+    "winger_hint": false
+  },
+  "20260384": {
+    "id": "20260384",
+    "name": "장하윤",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260385": {
+    "id": "20260385",
+    "name": "한재빈",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260387": {
+    "id": "20260387",
+    "name": "구교빈",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260388": {
+    "id": "20260388",
+    "name": "김태영",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260389": {
+    "id": "20260389",
+    "name": "한승민",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260390": {
+    "id": "20260390",
+    "name": "구본서",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260391": {
+    "id": "20260391",
+    "name": "김찬일",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260392": {
+    "id": "20260392",
+    "name": "이수윤",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260393": {
+    "id": "20260393",
+    "name": "김지혁",
+    "nation": "한국",
+    "position": "MF",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260394": {
+    "id": "20260394",
+    "name": "전민규",
+    "nation": "한국",
+    "position": "FW",
+    "foreign": false,
+    "winger_hint": false
+  },
+  "20260395": {
+    "id": "20260395",
+    "name": "홍상원",
+    "nation": "한국",
+    "position": "DF",
+    "foreign": false,
+    "winger_hint": false
+  }
+}

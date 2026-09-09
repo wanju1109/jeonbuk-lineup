@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>재미로 보는 전북현대 기록</title>
+  <meta name="description" content="K리그1 전북현대 2020~현재, 연승·원정 무패·외국인 득점 같은 재미있는 기록 모음." />
+  <link rel="stylesheet" href="./css/fun.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <p class="eyebrow">FUN FACTS · K LEAGUE 1</p>
+      <h1>재미로 보는 전북현대 기록</h1>
+      <p>
+        2020시즌부터 현재까지 전북 리그 결과를 모아, 연승·원정 무패 기간·스코어·외국인 득점 같은
+        잡학 기록을 자동으로 뽑아 둡니다. 공식 발표가 아니라 재미로 보는 카드입니다.
+      </p>
+      <div class="toolbar">
+        <button class="btn btn-primary" id="refreshBtn" type="button">새로고침 · 기록 다시 찾기</button>
+        <a class="btn btn-ghost" href="../p_report/">프리뷰</a>
+        <a class="btn btn-ghost" href="../c_report/">경기 리포트</a>
+        <a class="btn btn-ghost" href="../player_report/">선수 리포트</a>
+      </div>
+      <p class="meta" id="meta">로딩 중…</p>
+    </header>
+
+    <div id="status" class="status" hidden></div>
+    <div class="filters" id="filters" aria-label="카테고리 필터"></div>
+    <section class="grid" id="grid" aria-live="polite"></section>
+
+    <footer class="footer">
+      <p>
+        출처: K리그 데이터포털 일정·공식 스코어 + 가용 칠판 이벤트.
+        외국인 윙어 등 일부 시드 기록은 편집 보정이 포함될 수 있습니다.
+        제작 전주월드컵경기장(에버그린).
+      </p>
+    </footer>
+  </div>
+  <script src="./js/engine.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
