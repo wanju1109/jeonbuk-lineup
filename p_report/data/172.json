@@ -25,25 +25,25 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "대전 VS 포항 (172, 09/12)",
-    "hours_to_kickoff": 37.0,
+    "hours_to_kickoff": 34.7,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-09-11T06:00:22.936086+09:00",
+    "generated_at": "2026-09-11T08:18:17.069897+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 대전 vs 포항",
-  "thesis": "대전 vs 포항. 대전 최근 W W L W W, 포항 최근 L W D L D. 홈 대전이(가) 템포를 가져가며 xG 2.05 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "대전 vs 포항. 대전 최근 W W L W W, 포항 최근 L W D L D. 홈 대전이(가) 템포를 가져가며 xG 1.98 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "대전 vs 포항. 대전 최근 W W L W W (4승 0무 1패 / 최근 5경기). 포항 최근 L W D L D (1승 2무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 대전 xG 2.05·슈팅 12.7, 포항 xG 0.94·슈팅 12.5. 패스 성공률 78.1% vs 78.7%.",
+    "최근 5경기 평균 — 대전 xG 1.98·슈팅 12.5, 포항 xG 1.04·슈팅 13.2. 패스 성공률 77.1% vs 77.4%.",
     "올 시즌 맞대결 2경기 — 대전 기준 0승 0무 2패.",
     "경기장 대전 월드컵 · 대전 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 대전: 최근 가용 칠판 데이터 5경기 기준, 포항: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "대전은 상승세, 기회 창출↑, 슈팅 많음 흐름이고, 포항은(는) 비기는 흐름, 슈팅 많음, 적극 압박 그림입니다. 최근 xG 2.05 vs 0.94, 슈팅 12.7 vs 12.5, 파이널 서드 터치 31.1% vs 23.4%입니다.",
+    "contrast": "대전은 상승세, 기회 창출↑, 슈팅 많음 흐름이고, 포항은(는) 비기는 흐름, 슈팅 많음, 적극 압박 그림입니다. 최근 xG 1.98 vs 1.04, 슈팅 12.5 vs 13.2, 파이널 서드 터치 30.5% vs 24.5%입니다.",
     "edge": [
-      "대전이(가) 최근 xG 2.05로 포항(0.94)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "대전이(가) 최근 xG 1.98로 포항(1.04)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "대전 최근 승점 흐름이 좋습니다. 초반 압박이 통하면 주도권을 잡기 쉽습니다.",
       "홈 이점(대전). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -64,50 +64,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 2.05,
-        "opponent": 0.94,
+        "jeonbuk": 1.98,
+        "opponent": 1.04,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 0.57,
-        "opponent": 1.03,
+        "jeonbuk": 0.74,
+        "opponent": 0.98,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 12.7,
-        "opponent": 12.5,
-        "better": "jeonbuk"
+        "jeonbuk": 12.5,
+        "opponent": 13.2,
+        "better": "opponent"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 4.7,
+        "jeonbuk": 4.8,
         "opponent": 4.2,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 78.1,
-        "opponent": 78.7,
+        "jeonbuk": 77.1,
+        "opponent": 77.4,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 31.1,
-        "opponent": 23.4,
+        "jeonbuk": 30.5,
+        "opponent": 24.5,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 35.0,
-        "opponent": 18.2,
+        "jeonbuk": 32.8,
+        "opponent": 21.4,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 3경기 기준 — 대전 xG 2.05 / xGA 0.57, 포항 xG 0.94 / xGA 1.03."
+    "summary": "최근 4경기 기준 — 대전 xG 1.98 / xGA 0.74, 포항 xG 1.04 / xGA 0.98."
   },
   "pulse": {
     "home": {
@@ -117,8 +117,8 @@
       "ppg": 2.4,
       "goals_pg": 2.8,
       "conceded_pg": 1.2,
-      "xg_delta": 7.85,
-      "xg_sample": 3,
+      "xg_delta": 6.06,
+      "xg_sample": 4,
       "clean_sheets": 2
     },
     "away": {
@@ -128,8 +128,8 @@
       "ppg": 1.0,
       "goals_pg": 0.4,
       "conceded_pg": 1.2,
-      "xg_delta": -1.74,
-      "xg_sample": 4,
+      "xg_delta": -3.2,
+      "xg_sample": 5,
       "clean_sheets": 2
     },
     "verdict": "최근 승점 흐름은 대전 쪽이 더 좋습니다. 다만 최근 5경기 표본으로 보는 프리뷰입니다.",
@@ -585,15 +585,18 @@
         "result": "W",
         "opponent": "안양",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 1.79,
+        "xga": 1.24,
+        "shots": 12,
+        "sot": 5,
         "goals_for": 3,
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 73.9,
+        "final_third_pct": 28.7,
+        "presses": 26,
+        "stats_source": "portal"
       }
     ],
     "opponent": [
@@ -692,15 +695,18 @@
         "result": "D",
         "opponent": "김천",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 1.46,
+        "xga": 0.79,
+        "shots": 16,
+        "sot": 4,
         "goals_for": 0,
         "goals_against": 0,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 72.3,
+        "final_third_pct": 29.1,
+        "presses": 34,
+        "stats_source": "portal"
       }
     ]
   },
@@ -741,15 +747,15 @@
       "goals_for": 14,
       "goals_against": 6,
       "goal_diff": 8,
-      "avg_xg": 2.05,
-      "avg_xga": 0.57,
-      "avg_shots": 12.7,
-      "avg_sot": 4.7,
-      "avg_pass_pct": 78.1,
-      "avg_final_third_pct": 31.1,
-      "avg_presses": 35.0,
-      "avg_x": 51.4,
-      "samples": 3
+      "avg_xg": 1.98,
+      "avg_xga": 0.74,
+      "avg_shots": 12.5,
+      "avg_sot": 4.8,
+      "avg_pass_pct": 77.1,
+      "avg_final_third_pct": 30.5,
+      "avg_presses": 32.8,
+      "avg_x": 51.0,
+      "samples": 4
     },
     "opponent": {
       "name": "포항",
@@ -763,15 +769,15 @@
       "goals_for": 2,
       "goals_against": 6,
       "goal_diff": -4,
-      "avg_xg": 0.94,
-      "avg_xga": 1.03,
-      "avg_shots": 12.5,
+      "avg_xg": 1.04,
+      "avg_xga": 0.98,
+      "avg_shots": 13.2,
       "avg_sot": 4.2,
-      "avg_pass_pct": 78.7,
-      "avg_final_third_pct": 23.4,
-      "avg_presses": 18.2,
-      "avg_x": 51.0,
-      "samples": 4
+      "avg_pass_pct": 77.4,
+      "avg_final_third_pct": 24.5,
+      "avg_presses": 21.4,
+      "avg_x": 50.8,
+      "samples": 5
     }
   },
   "players": {
@@ -1231,8 +1237,8 @@
       "key": "prep",
       "label": "매치업 대비 포인트",
       "items": [
-        "포항 최근 압박 시도가 많습니다(경기당 18.2). 빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다.",
-        "포항 경기당 슈팅 12.5·유효슈팅 4.2. 박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요.",
+        "포항 최근 압박 시도가 많습니다(경기당 21.4). 빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다.",
+        "포항 경기당 슈팅 13.2·유효슈팅 4.2. 박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요.",
         "포항 최근 비기는 흐름입니다. 선제골 이후 템포를 죽이지 말고 두 번째 슈팅 루트까지 밀어붙여야 승점 3이 열립니다.",
         "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요."
       ],

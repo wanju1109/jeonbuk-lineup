@@ -25,25 +25,25 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "울산 VS 인천 (170, 09/12)",
-    "hours_to_kickoff": 37.0,
+    "hours_to_kickoff": 34.7,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-09-11T05:59:10.517384+09:00",
+    "generated_at": "2026-09-11T08:16:53.683417+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 울산 vs 인천",
-  "thesis": "울산 vs 인천. 울산 최근 L L W D W, 인천 최근 W L D L W. 홈 울산이(가) 템포를 가져가며 xG 1.59 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "울산 vs 인천. 울산 최근 L L W D W, 인천 최근 W L D L W. 홈 울산이(가) 템포를 가져가며 xG 1.44 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "울산 vs 인천. 울산 최근 L L W D W (2승 1무 2패 / 최근 5경기). 인천 최근 W L D L W (2승 1무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 울산 xG 1.59·슈팅 9.0, 인천 xG 0.89·슈팅 9.0. 패스 성공률 66.4% vs 77.4%.",
+    "최근 5경기 평균 — 울산 xG 1.44·슈팅 10.0, 인천 xG 0.85·슈팅 8.8. 패스 성공률 64.8% vs 77.3%.",
     "올 시즌 맞대결 2경기 — 울산 기준 1승 0무 1패.",
     "경기장 울산 문수 · 울산 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 울산: 최근 가용 칠판 데이터 5경기 기준, 인천: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "울산은 기회 창출↑, 수비 기회 허용, 낮은 블록형 흐름이고, 인천은(는) 기회 부족, 적극 압박 그림입니다. 최근 xG 1.59 vs 0.89, 슈팅 9.0 vs 9.0, 파이널 서드 터치 20.9% vs 24.5%입니다.",
+    "contrast": "울산은 기회 창출↑, 수비 기회 허용 흐름이고, 인천은(는) 기회 부족, 적극 압박 그림입니다. 최근 xG 1.44 vs 0.85, 슈팅 10.0 vs 8.8, 파이널 서드 터치 22.6% vs 24.0%입니다.",
     "edge": [
-      "울산이(가) 최근 xG 1.59로 인천(0.89)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "울산이(가) 최근 xG 1.44로 인천(0.85)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "홈 이점(울산). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
     "risk": [
@@ -63,21 +63,21 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.59,
-        "opponent": 0.89,
+        "jeonbuk": 1.44,
+        "opponent": 0.85,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.33,
-        "opponent": 1.09,
+        "jeonbuk": 1.31,
+        "opponent": 1.06,
         "better": "opponent"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 9.0,
-        "opponent": 9.0,
-        "better": "even"
+        "jeonbuk": 10.0,
+        "opponent": 8.8,
+        "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
@@ -87,26 +87,26 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 66.4,
-        "opponent": 77.4,
+        "jeonbuk": 64.8,
+        "opponent": 77.3,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 20.9,
-        "opponent": 24.5,
+        "jeonbuk": 22.6,
+        "opponent": 24.0,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 13.0,
-        "opponent": 19.3,
+        "jeonbuk": 14.5,
+        "opponent": 20.8,
         "better": "opponent"
       }
     ],
-    "summary": "최근 3경기 기준 — 울산 xG 1.59 / xGA 1.33, 인천 xG 0.89 / xGA 1.09."
+    "summary": "최근 4경기 기준 — 울산 xG 1.44 / xGA 1.31, 인천 xG 0.85 / xGA 1.06."
   },
   "pulse": {
     "home": {
@@ -116,8 +116,8 @@
       "ppg": 1.4,
       "goals_pg": 1.0,
       "conceded_pg": 0.8,
-      "xg_delta": 0.22,
-      "xg_sample": 3,
+      "xg_delta": -0.77,
+      "xg_sample": 4,
       "clean_sheets": 2
     },
     "away": {
@@ -127,8 +127,8 @@
       "ppg": 1.4,
       "goals_pg": 0.8,
       "conceded_pg": 1.0,
-      "xg_delta": 1.33,
-      "xg_sample": 3,
+      "xg_delta": 0.6,
+      "xg_sample": 4,
       "clean_sheets": 1
     },
     "verdict": "최근 승점 흐름은 팽팽합니다. 한 번의 전환·세트피스가 결과를 바꿀 수 있는 매치업입니다.",
@@ -584,15 +584,18 @@
         "result": "W",
         "opponent": "서울",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 0.99,
+        "xga": 1.27,
+        "shots": 13,
+        "sot": 4,
         "goals_for": 1,
         "goals_against": 0,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 60.1,
+        "final_third_pct": 27.8,
+        "presses": 19,
+        "stats_source": "portal"
       }
     ],
     "opponent": [
@@ -688,15 +691,18 @@
         "result": "W",
         "opponent": "부천",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 0.73,
+        "xga": 0.98,
+        "shots": 8,
+        "sot": 2,
         "goals_for": 2,
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 77.0,
+        "final_third_pct": 22.4,
+        "presses": 25,
+        "stats_source": "portal"
       }
     ]
   },
@@ -728,22 +734,21 @@
       "team_id": "K01",
       "tags": [
         "기회 창출↑",
-        "수비 기회 허용",
-        "낮은 블록형"
+        "수비 기회 허용"
       ],
       "record": "2승 1무 2패 / 최근 5경기",
       "goals_for": 5,
       "goals_against": 4,
       "goal_diff": 1,
-      "avg_xg": 1.59,
-      "avg_xga": 1.33,
-      "avg_shots": 9.0,
+      "avg_xg": 1.44,
+      "avg_xga": 1.31,
+      "avg_shots": 10.0,
       "avg_sot": 4.0,
-      "avg_pass_pct": 66.4,
-      "avg_final_third_pct": 20.9,
-      "avg_presses": 13.0,
-      "avg_x": 49.7,
-      "samples": 3
+      "avg_pass_pct": 64.8,
+      "avg_final_third_pct": 22.6,
+      "avg_presses": 14.5,
+      "avg_x": 49.8,
+      "samples": 4
     },
     "opponent": {
       "name": "인천",
@@ -756,15 +761,15 @@
       "goals_for": 4,
       "goals_against": 5,
       "goal_diff": -1,
-      "avg_xg": 0.89,
-      "avg_xga": 1.09,
-      "avg_shots": 9.0,
+      "avg_xg": 0.85,
+      "avg_xga": 1.06,
+      "avg_shots": 8.8,
       "avg_sot": 2.0,
-      "avg_pass_pct": 77.4,
-      "avg_final_third_pct": 24.5,
-      "avg_presses": 19.3,
-      "avg_x": 46.2,
-      "samples": 3
+      "avg_pass_pct": 77.3,
+      "avg_final_third_pct": 24.0,
+      "avg_presses": 20.8,
+      "avg_x": 47.2,
+      "samples": 4
     }
   },
   "players": {
@@ -1224,7 +1229,7 @@
       "key": "prep",
       "label": "매치업 대비 포인트",
       "items": [
-        "인천 최근 압박 시도가 많습니다(경기당 19.3). 빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다.",
+        "인천 최근 압박 시도가 많습니다(경기당 20.8). 빌드업은 짧은 3패스·서드맨으로 첫 압박을 통과해야 합니다.",
         "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요."
       ],
       "players": []
