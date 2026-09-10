@@ -1,9 +1,6 @@
 name: c_report chalk board collect
 
 on:
-  schedule:
-    # GitHub cron is UTC. 15:00 UTC = 00:00 KST (matches are finished by then).
-    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       year:
@@ -22,6 +19,10 @@ on:
         description: "Team filter (default 전북; leave blank with game_id to collect any club)"
         required: false
         default: "전북"
+      force:
+        description: "Force re-fetch even if file exists (1/0)"
+        required: false
+        default: "1"
 
 permissions:
   contents: write
@@ -45,22 +46,25 @@ jobs:
           KLEAGUE_GAME_ID: ${{ github.event.inputs.game_id }}
           KLEAGUE_MEET_SEQ: "1"
           KLEAGUE_TEAM: ${{ github.event.inputs.team }}
+          KLEAGUE_FORCE: ${{ github.event.inputs.force }}
+          KLEAGUE_SKIP_EXISTING: ${{ github.event.inputs.force == '1' && '0' || '1' }}
+          KLEAGUE_SCORE_REFRESH: "1"
         run: |
           set -e
           if [ -z "$KLEAGUE_YEAR" ]; then
             export KLEAGUE_YEAR="$(TZ=Asia/Seoul date +%Y)"
           fi
-          # Cron / empty team without game_id → Jeonbuk chalk + full schedule.
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            export KLEAGUE_TEAM="전북"
-          elif [ -z "${{ github.event.inputs.game_id }}" ] && [ -z "$KLEAGUE_TEAM" ]; then
+          if [ -z "${{ github.event.inputs.game_id }}" ] && [ -z "$KLEAGUE_TEAM" ]; then
             export KLEAGUE_TEAM="전북"
           fi
           # Blank team + game_id → collect that match for any club.
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] \
-            && [ -n "${{ github.event.inputs.game_id }}" ] \
+          if [ -n "${{ github.event.inputs.game_id }}" ] \
             && [ "${{ github.event.inputs.team }}" = "" ]; then
             export KLEAGUE_TEAM="*"
+          fi
+          if [ "${{ github.event.inputs.force }}" = "1" ]; then
+            export KLEAGUE_FORCE="1"
+            export KLEAGUE_SKIP_EXISTING="0"
           fi
           python c_report/scripts/collect_chalkboard.py
 
@@ -76,5 +80,5 @@ jobs:
             echo "No data changes"
             exit 0
           fi
-          git commit -m "chore(c_report): update chalk board and player event totals"
+          git commit -m "chore(c_report): refresh chalk board on demand"
           git push

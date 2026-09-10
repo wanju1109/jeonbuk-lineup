@@ -57,13 +57,14 @@ python -m http.server 8080
 ## 다른 라운드 보기
 
 1. 상단에서 **연도 / 라운드** 선택
-2. **데이터 가져오기** 클릭
-3. 전북 경기가 자동으로 열립니다
+2. **전북 데이터 가져오기** 클릭 → GitHub Actions로 해당 경기를 **실시간 재수집**한 뒤 엽니다
+3. 처음 한 번 GitHub PAT(Actions 실행 권한)를 묻습니다. 브라우저에만 저장됩니다
 
-이미 **2026시즌 1~22R 전북 경기 22개**가 수집되어 있습니다.
+이미 수집된 전북 경기 JSON은 `c_report/data/` 에 있습니다.
 
-자동 갱신:
-- GitHub Actions `c_report chalk board collect` (매일 자정 KST)
+갱신 방식:
+- **온디맨드만**: 주기 cron 없음. 가져오기 버튼 또는 Actions `workflow_dispatch`
+- 칠판이 포털에서 비워진 뒤에는 기존 이벤트를 유지하고 **공식 스코어만** 고칩니다 (`KLEAGUE_SCORE_REFRESH`)
 - 로컬: `python c_report/scripts/collect_chalkboard.py`
 
 워크플로 파일은 저장소 루트 `.github/workflows/c-report-collect.yml` 에 두세요.

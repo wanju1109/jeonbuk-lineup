@@ -51,6 +51,8 @@ TEAM_FILTER = "" if str(_raw_team).strip() in ("", "*", "ALL", "any") else str(_
 # Skip games that already have a JSON file (set FORCE=1 to re-fetch).
 SKIP_EXISTING = os.environ.get("KLEAGUE_SKIP_EXISTING", "1").lower() not in ("0", "false", "no")
 FORCE = os.environ.get("KLEAGUE_FORCE", "").lower() in ("1", "true", "yes")
+# Prefer official portal score over empty/partial chalk when refreshing finished matches.
+SCORE_REFRESH = os.environ.get("KLEAGUE_SCORE_REFRESH", "1").lower() not in ("0", "false", "no")
 # Full chalk boards are large; early/kickoff snapshots stay tiny.
 INCOMPLETE_EVENT_MIN = int(os.environ.get("KLEAGUE_INCOMPLETE_EVENT_MIN", "100"))
 
@@ -644,9 +646,11 @@ def fetch_chalkboard(client: PortalClient, year: str, meet_seq: str, round_id: s
         },
     )
     events = extract_js_array(html, "jsonResultData")
+    if events is None:
+        events = []
+    if not isinstance(events, list):
+        events = []
     players_raw = extract_js_array(html, "chalkPlayerListJson")
-    if not events:
-        raise RuntimeError(f"jsonResultData missing for game_id={game_id}")
     players = flatten_players(players_raw or [])
 
     lineup_html = ""
@@ -971,12 +975,73 @@ def main() -> None:
             try:
                 print(f"[FETCH] R{rid} {label}")
                 packed = fetch_chalkboard(client, YEAR, MEET_SEQ, rid, gid)
+                new_events = packed.get("events") or []
+                existing = None
+                if out_path.exists():
+                    try:
+                        existing = json.loads(out_path.read_text(encoding="utf-8"))
+                    except (OSError, json.JSONDecodeError):
+                        existing = None
+
+                # Portal sometimes clears chalk after kickoff window; keep local events
+                # and refresh official score / meta only.
+                if (
+                    SCORE_REFRESH
+                    and existing
+                    and isinstance(existing.get("events"), list)
+                    and len(existing["events"]) > 0
+                    and len(new_events) == 0
+                ):
+                    official = parse_official_score(packed.get("html") or "")
+                    if official is None:
+                        print(f"[WARN] game_id={gid}: empty chalk and no official score")
+                        continue
+                    hs, aws = official
+                    meta = existing.get("meta") if isinstance(existing.get("meta"), dict) else {}
+                    meta["score"] = {"home": hs, "away": aws}
+                    meta["score_source"] = "official"
+                    meta["fetched_at"] = datetime.now(timezone.utc).isoformat()
+                    meta["note"] = (
+                        "보도/커뮤니티 재가공용. 부가기록(Bepro11) 기준. "
+                        "칠판 이벤트가 포털에서 비워져 기존 이벤트를 유지하고 공식 스코어만 갱신."
+                    )
+                    existing["meta"] = meta
+                    out_path.write_text(
+                        json.dumps(existing, ensure_ascii=False), encoding="utf-8"
+                    )
+                    entry = {
+                        "game_id": gid,
+                        "year": YEAR,
+                        "round": int(rid),
+                        "home": (meta.get("home") or {}).get("name") or home,
+                        "away": (meta.get("away") or {}).get("name") or away,
+                        "score": f"{hs}:{aws}",
+                        "date": meta.get("date") or "",
+                        "venue": meta.get("venue") or "",
+                        "attendance": meta.get("attendance"),
+                        "file": match_rel_url(YEAR, gid),
+                        "label": label,
+                    }
+                    if JEONBUK_KEY in f"{entry['home']}{entry['away']}{label}":
+                        by_id[match_key(YEAR, gid)] = entry
+                    collected += 1
+                    print(
+                        f"[OK] game_id={gid} score-only {hs}:{aws} "
+                        f"(kept {len(existing['events'])} events)"
+                    )
+                    time.sleep(0.4)
+                    continue
+
+                if not new_events:
+                    print(f"[WARN] game_id={gid}: empty chalk, nothing to save")
+                    continue
+
                 payload = build_payload(
                     YEAR,
                     MEET_SEQ,
                     rid,
                     match,
-                    packed["events"],
+                    new_events,
                     packed["players"],
                     packed["html"],
                     packed.get("lineup"),
