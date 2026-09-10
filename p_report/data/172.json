@@ -17,18 +17,18 @@
     "jeonbuk_match": false,
     "venue": "대전 월드컵",
     "attendance_hint": {
-      "avg": 8586,
-      "games": 11,
-      "total": 94446
+      "avg": 7587,
+      "games": 14,
+      "total": 106214
     },
     "kickoff": "2026-09-12T19:00:00+09:00",
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "대전 VS 포항 (172, 09/12)",
-    "hours_to_kickoff": 58.6,
+    "hours_to_kickoff": 53.1,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-10T08:23:47.956537+09:00",
+    "generated_at": "2026-09-10T13:56:51.740868+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 대전 vs 포항",

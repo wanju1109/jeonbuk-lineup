@@ -17,18 +17,18 @@
     "jeonbuk_match": false,
     "venue": "광주 월드컵",
     "attendance_hint": {
-      "avg": 3685,
-      "games": 12,
-      "total": 44215
+      "avg": 3263,
+      "games": 15,
+      "total": 48951
     },
     "kickoff": "2026-09-13T19:00:00+09:00",
     "kickoff_label": "2026-09-13 19:00 KST",
     "date_md": "09/13",
     "label": "광주 VS 안양 (174, 09/13)",
-    "hours_to_kickoff": 82.6,
+    "hours_to_kickoff": 77.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-10T08:24:59.099607+09:00",
+    "generated_at": "2026-09-10T13:57:56.049751+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 광주 vs 안양",
