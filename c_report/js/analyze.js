@@ -61,20 +61,26 @@ const Analyze = (() => {
   }
 
   function absSeconds(e) {
+    const period = Number(e.PERIOD_ID || 1);
     const min = Number(e.MIN_TIME || 0);
     const sec = Number(e.SEC_TIME || 0);
-    return min * 60 + sec;
+    /*
+     * Chalk 2nd-half clocks are usually absolute (45+). Match-sheet backfill
+     * stores period-relative minutes (0-45). Normalize both to match seconds.
+     */
+    if (period <= 1) return min * 60 + sec;
+    const absMin = min >= 45 ? min : 45 + min;
+    return absMin * 60 + sec;
   }
 
   function formatClock(e) {
     const period = Number(e.PERIOD_ID || 1);
     const min = Number(e.MIN_TIME || 0);
-    const sec = Number(e.SEC_TIME || 0);
-    if (period === 1) {
+    if (period <= 1) {
       if (min <= 45) return `전반 ${min}'`;
       return `전반 45+${min - 45}'`;
     }
-    const second = min - 45;
+    const second = min >= 45 ? min - 45 : min;
     if (second <= 45) return `후반 ${Math.max(second, 0)}'`;
     return `후반 45+${second - 45}'`;
   }
@@ -704,8 +710,14 @@ const Analyze = (() => {
   function sequenceBeforeGoal(events, goal, windowSec = 25) {
     const t = absSeconds(goal);
     const team = goal.TEAM_ID;
+    const period = Number(goal.PERIOD_ID || 1);
     const prior = events
-      .filter((e) => e.TEAM_ID === team && absSeconds(e) <= t && absSeconds(e) >= t - windowSec)
+      .filter((e) => {
+        if (e.TEAM_ID !== team) return false;
+        if (Number(e.PERIOD_ID || 1) !== period) return false;
+        const te = absSeconds(e);
+        return te <= t && te >= t - windowSec;
+      })
       .sort((a, b) => absSeconds(a) - absSeconds(b));
 
     // Keep pass-like and the goal itself

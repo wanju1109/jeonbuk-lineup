@@ -1253,20 +1253,41 @@
     /* Drives the colour of the sequence numbers and pitch arrows below. */
     section?.setAttribute("data-side", goalSide);
     const seq = Analyze.sequenceBeforeGoal(state.data.events, goal, 28);
-    const points = seq.map((e) => Pitch.normalizePoint(e, meta.home.team_id));
+    const points = seq
+      .map((e) => Pitch.normalizePoint(e, meta.home.team_id))
+      .filter((p) => p && p.valid);
+
+    const sheetOnly =
+      goal.source === "match_sheet" ||
+      (goal.START_POINT_X == null && goal.START_POINT_Y == null);
+    const assist =
+      goal.assist_name ||
+      (goal.assist_player_id ? Analyze.nameOf(pmap, goal.assist_player_id, "") : "");
 
     if (seqBox) {
-      seqBox.innerHTML = seq
-        .map((e, i) => {
-          const label = Analyze.actionLabel(e);
-          const nm = Analyze.nameOf(pmap, e.PLAYER_ID);
-          return `<div class="seq-step"><div class="n">${i + 1}</div><div class="body"><strong>${escapeHtml(
-            nm
-          )}</strong> · ${escapeHtml(label)}<br><span style="color:#5d7268;font-size:12px">${escapeHtml(
-            Analyze.formatClock(e)
-          )}</span></div></div>`;
-        })
-        .join("");
+      if (!seq.length || (sheetOnly && points.length === 0)) {
+        seqBox.innerHTML =
+          `<div class="seq-step"><div class="n">!</div><div class="body">` +
+          `<strong>패스 시퀀스 없음</strong><br>` +
+          `<span style="color:#5d7268;font-size:12px">` +
+          (sheetOnly
+            ? `이 골은 공식 기록 시트로만 보강됐습니다. 칠판(좌표·패스) 데이터가 포털에서 사라져 골 스토리 경로를 그릴 수 없습니다.` +
+              (assist ? ` 도움: ${escapeHtml(assist)}.` : "")
+            : `골 직전 패스/슈팅 이벤트가 없어 피치에 경로를 그리지 않습니다.`) +
+          `</span></div></div>`;
+      } else {
+        seqBox.innerHTML = seq
+          .map((e, i) => {
+            const label = Analyze.actionLabel(e);
+            const nm = Analyze.nameOf(pmap, e.PLAYER_ID);
+            return `<div class="seq-step"><div class="n">${i + 1}</div><div class="body"><strong>${escapeHtml(
+              nm
+            )}</strong> · ${escapeHtml(label)}<br><span style="color:#5d7268;font-size:12px">${escapeHtml(
+              Analyze.formatClock(e)
+            )}</span></div></div>`;
+          })
+          .join("");
+      }
     }
 
     if (canvas) {

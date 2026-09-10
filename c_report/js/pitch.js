@@ -2,8 +2,13 @@
 
 const Pitch = (() => {
   function normalizePoint(event, homeTeamId) {
-    const x0 = Number(event.START_POINT_X);
-    const y0 = Number(event.START_POINT_Y);
+    const hasStart =
+      event.START_POINT_X != null &&
+      event.START_POINT_X !== "" &&
+      event.START_POINT_Y != null &&
+      event.START_POINT_Y !== "";
+    const x0 = hasStart ? Number(event.START_POINT_X) : NaN;
+    const y0 = hasStart ? Number(event.START_POINT_Y) : NaN;
     const x1 = Number(event.END_POINT_X);
     const y1 = Number(event.END_POINT_Y);
     const period = Number(event.PERIOD_ID || 1);
@@ -18,10 +23,11 @@ const Pitch = (() => {
     const mapY = (y) => (flip ? 100 - y : y);
 
     return {
-      x: mapX(x0),
-      y: mapY(y0),
+      x: Number.isFinite(x0) ? mapX(x0) : NaN,
+      y: Number.isFinite(y0) ? mapY(y0) : NaN,
       ex: Number.isFinite(x1) ? mapX(x1) : null,
       ey: Number.isFinite(y1) ? mapY(y1) : null,
+      valid: Number.isFinite(x0) && Number.isFinite(y0),
       isHome,
       period,
       event,
@@ -458,8 +464,9 @@ const Pitch = (() => {
 
     if (opts.mode === "sequence" && opts.points?.length) {
       const accent = opts.accent || "#d6f56a";
-      drawArrows(ctx, opts.points, geom, cssW, cssH, accent, "#fff");
-      opts.points.forEach((p, i) => {
+      const drawable = opts.points.filter((p) => p && p.valid !== false && Number.isFinite(p.x) && Number.isFinite(p.y));
+      drawArrows(ctx, drawable, geom, cssW, cssH, accent, "#fff");
+      drawable.forEach((p, i) => {
         const c = toCanvas(p.x, p.y, geom, cssW, cssH);
         ctx.fillStyle = "#10231c";
         ctx.beginPath();
@@ -471,7 +478,7 @@ const Pitch = (() => {
         ctx.textBaseline = "middle";
         ctx.fillText(String(i + 1), c.x, c.y);
       });
-      hits = buildHits(opts.points, geom, cssW, cssH);
+      hits = buildHits(drawable, geom, cssW, cssH);
       if (opts.hover) bindHover(canvas, hits);
     }
 

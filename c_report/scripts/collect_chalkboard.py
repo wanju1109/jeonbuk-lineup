@@ -120,8 +120,10 @@ def sheet_goal_rows(chart) -> list[dict]:
 def goal_event_from_sheet(row: dict, year: str, meet_seq: str, game_id: str, seq: int) -> dict:
     """Minimal chalk-compatible GL event when Bepro chalk is gone/incomplete."""
     period = int(row.get("halfType") or 1)
-    minute = int(row.get("timeMin") or 0)
+    sheet_min = int(row.get("timeMin") or 0)
     sec = int(row.get("timeSec") or 0)
+    # Chalk 2nd-half clocks are absolute (45+); sheet times are half-relative.
+    minute = sheet_min + 45 if period >= 2 else sheet_min
     assist_id = str(row.get("inPlayerId") or "").strip()
     return {
         "MEET_YEAR": str(year),
@@ -152,6 +154,7 @@ def goal_event_from_sheet(row: dict, year: str, meet_seq: str, game_id: str, seq
         "assist_player_id": assist_id or None,
         "assist_name": row.get("inPlayerName") or None,
         "sheet_label": row.get("dispEventName") or row.get("actName") or "",
+        "sheet_minute": sheet_min,
     }
 
 
@@ -171,17 +174,34 @@ def merge_sheet_goals_into_events(
         if not pid:
             continue
         period = int(row.get("halfType") or 1)
-        minute = int(row.get("timeMin") or 0)
-        matched = False
+        sheet_min = int(row.get("timeMin") or 0)
+        abs_min = sheet_min + 45 if period >= 2 else sheet_min
+        matched = None
         for e in existing:
             if str(e.get("PLAYER_ID") or "") != pid:
                 continue
             if int(e.get("PERIOD_ID") or 1) != period:
                 continue
-            if abs(int(e.get("MIN_TIME") or 0) - minute) <= 2:
-                matched = True
+            chalk_min = int(e.get("MIN_TIME") or 0)
+            if abs(chalk_min - sheet_min) <= 2 or abs(chalk_min - abs_min) <= 2:
+                matched = e
                 break
-        if matched:
+        if matched is not None:
+            # Normalize older sheet-backfill that stored half-relative 2nd-half minutes.
+            if (
+                matched.get("source") == "match_sheet"
+                and period >= 2
+                and int(matched.get("MIN_TIME") or 0) < 45
+            ):
+                matched["MIN_TIME"] = abs_min
+                matched["sheet_minute"] = sheet_min
+            assist_id = str(row.get("inPlayerId") or "").strip()
+            if assist_id and not matched.get("assist_player_id"):
+                matched["assist_player_id"] = assist_id
+            if row.get("inPlayerName") and not matched.get("assist_name"):
+                matched["assist_name"] = row.get("inPlayerName")
+            if row.get("playerBackNo") and not matched.get("back_no"):
+                matched["back_no"] = row.get("playerBackNo")
             continue
         out.append(goal_event_from_sheet(row, year, meet_seq, game_id, i + 1))
         added += 1
