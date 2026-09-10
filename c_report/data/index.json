@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T16:32:21.744136+00:00",
+  "updated_at": "2026-09-10T17:57:45.061018+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -387,7 +387,9 @@
       "venue": "인천 전용",
       "attendance": 11056,
       "file": "./data/154.json",
-      "label": "인천 VS 전북 (154, 08/30)"
+      "label": "인천 VS 전북 (154, 08/30)",
+      "attendance_home": 9197,
+      "attendance_away": 1859
     },
     {
       "game_id": "159",
@@ -415,7 +417,9 @@
       "venue": "강릉하이원아레나",
       "attendance": 5066,
       "file": "./data/166.json",
-      "label": "강원 VS 전북 (166, 09/09)"
+      "label": "강원 VS 전북 (166, 09/09)",
+      "attendance_home": 4872,
+      "attendance_away": 194
     }
   ]
 }
