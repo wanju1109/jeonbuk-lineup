@@ -984,7 +984,7 @@ def main() -> None:
                         existing = None
 
                 # Portal sometimes clears chalk after kickoff window; keep local events
-                # and refresh official score / meta only.
+                # and refresh official score / frame meta (attendance, weather, …).
                 if (
                     SCORE_REFRESH
                     and existing
@@ -992,19 +992,48 @@ def main() -> None:
                     and len(existing["events"]) > 0
                     and len(new_events) == 0
                 ):
-                    official = parse_official_score(packed.get("html") or "")
+                    html = packed.get("html") or ""
+                    official = parse_official_score(html)
                     if official is None:
                         print(f"[WARN] game_id={gid}: empty chalk and no official score")
                         continue
                     hs, aws = official
+                    frame = parse_match_frame_meta(html)
                     meta = existing.get("meta") if isinstance(existing.get("meta"), dict) else {}
                     meta["score"] = {"home": hs, "away": aws}
                     meta["score_source"] = "official"
                     meta["fetched_at"] = datetime.now(timezone.utc).isoformat()
                     meta["note"] = (
                         "보도/커뮤니티 재가공용. 부가기록(Bepro11) 기준. "
-                        "칠판 이벤트가 포털에서 비워져 기존 이벤트를 유지하고 공식 스코어만 갱신."
+                        "칠판 이벤트가 포털에서 비워져 기존 이벤트를 유지하고 "
+                        "공식 스코어·경기 메타만 갱신."
                     )
+                    if frame.get("venue"):
+                        meta["venue"] = frame["venue"]
+                    if frame.get("date"):
+                        meta["date"] = frame["date"]
+                    if frame.get("kickoff"):
+                        meta["kickoff"] = frame["kickoff"]
+                    if frame.get("attendance") not in (None, 0, "0"):
+                        meta["attendance"] = frame["attendance"]
+                    weather_disp = frame.get("weather") or ""
+                    if frame.get("temperature_c") is not None:
+                        weather_disp = f"{weather_disp} {frame['temperature_c']:g}℃".strip()
+                        meta["temperature_c"] = frame["temperature_c"]
+                    if weather_disp and not re.search(r"\b0\s*℃\b", weather_disp):
+                        meta["weather"] = weather_disp
+                    if frame.get("referee"):
+                        meta["referee"] = frame["referee"]
+                    if frame.get("officials"):
+                        meta["officials"] = frame["officials"]
+                    home_meta = meta.get("home") if isinstance(meta.get("home"), dict) else {}
+                    away_meta = meta.get("away") if isinstance(meta.get("away"), dict) else {}
+                    if frame.get("home_manager"):
+                        home_meta["manager"] = frame["home_manager"]
+                        meta["home"] = home_meta
+                    if frame.get("away_manager"):
+                        away_meta["manager"] = frame["away_manager"]
+                        meta["away"] = away_meta
                     existing["meta"] = meta
                     out_path.write_text(
                         json.dumps(existing, ensure_ascii=False), encoding="utf-8"
@@ -1027,6 +1056,7 @@ def main() -> None:
                     collected += 1
                     print(
                         f"[OK] game_id={gid} score-only {hs}:{aws} "
+                        f"att={meta.get('attendance')} "
                         f"(kept {len(existing['events'])} events)"
                     )
                     time.sleep(0.4)
