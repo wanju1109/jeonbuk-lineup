@@ -64,8 +64,10 @@ python -m http.server 8080
 
 자동 갱신:
 - GitHub Actions `c_report chalk board collect` (매일 자정 KST)
-- 칠판이 포털에서 비워진 뒤에는 기존 이벤트를 유지하고 공식 스코어만 고칠 수 있습니다
+- 관중 분리(총/홈/원정)는 `kleague.com` 관중정보 API (`collect_audience.py`)로 함께 갱신
+- 칠판이 포털에서 비워진 뒤에는 기존 이벤트를 유지하고 공식 스코어·라인업·누락 골을 시트로 보강
 - 로컬: `python c_report/scripts/collect_chalkboard.py`
+- 로컬 관중: `python c_report/scripts/collect_audience.py`
 
 워크플로 파일은 저장소 루트 `.github/workflows/c-report-collect.yml` 에 두세요.
 

@@ -447,6 +447,7 @@
     const periods = Analyze.periodStats(events, meta.home.team_id, meta.away.team_id);
     const flow = Analyze.flowAfterFirstGoal(events, meta.home.team_id, meta.away.team_id, meta);
     const att = Analyze.attendanceCompare(meta, state.index, state.clubAttendance);
+    const attBreak = Analyze.attendanceBreakdown(meta, state.index, state.clubAttendance);
 
     const homeName = meta.home.name || "홈";
     const awayName = meta.away.name || "원정";
@@ -530,7 +531,35 @@
         text: `선제골은 ${flow.clock}, ${scorer}입니다. 이후 xG(골이 될 확률 합)은 ${flow.after[meta.home.team_id].xg} 대 ${flow.after[meta.away.team_id].xg}, 슈팅은 ${flow.after[meta.home.team_id].shots} 대 ${flow.after[meta.away.team_id].shots}입니다.`,
       });
     }
-    if (att.available) {
+    if (attBreak.available) {
+      const bits = [`총 ${attBreak.total.toLocaleString("ko-KR")}명`];
+      if (attBreak.hasSplit) {
+        bits.push(`홈 ${attBreak.home.toLocaleString("ko-KR")}명`);
+        bits.push(`원정 ${attBreak.away.toLocaleString("ko-KR")}명`);
+      }
+      const cmp = [];
+      if (attBreak.homeVsAvg) {
+        const s = attBreak.homeVsAvg.diff > 0 ? "+" : "";
+        cmp.push(
+          `홈은 ${attBreak.homeVsAvg.baselineLabel} ${attBreak.homeVsAvg.baseline.toLocaleString("ko-KR")}명 대비 ${s}${attBreak.homeVsAvg.diff.toLocaleString("ko-KR")}(${s}${attBreak.homeVsAvg.pct}%)`
+        );
+      } else if (attBreak.totalVsHomeAvg) {
+        const s = attBreak.totalVsHomeAvg.diff > 0 ? "+" : "";
+        cmp.push(
+          `${attBreak.totalVsHomeAvg.baselineLabel} ${attBreak.totalVsHomeAvg.baseline.toLocaleString("ko-KR")}명 대비 ${s}${attBreak.totalVsHomeAvg.diff.toLocaleString("ko-KR")}(${s}${attBreak.totalVsHomeAvg.pct}%)`
+        );
+      }
+      if (attBreak.awayVsAvg) {
+        const s = attBreak.awayVsAvg.diff > 0 ? "+" : "";
+        cmp.push(
+          `원정은 ${attBreak.awayVsAvg.baselineLabel} ${attBreak.awayVsAvg.baseline.toLocaleString("ko-KR")}명 대비 ${s}${attBreak.awayVsAvg.diff.toLocaleString("ko-KR")}(${s}${attBreak.awayVsAvg.pct}%)`
+        );
+      }
+      story.push({
+        label: "관중",
+        text: `${bits.join(" · ")}${cmp.length ? `. ${cmp.join(". ")}.` : "."}`,
+      });
+    } else if (att.available) {
       const sign = att.diff > 0 ? "+" : "";
       story.push({
         label: "관중",
@@ -703,23 +732,59 @@
     ]);
 
     const crowdItems = [];
-    if (meta.attendance != null && meta.attendance !== "") {
+    const attBreak = Analyze.attendanceBreakdown(meta, index || state.index, state.clubAttendance);
+    const fmtCmp = (cmp) => {
+      if (!cmp) return "";
+      const sign = cmp.diff > 0 ? "+" : "";
+      return `${cmp.baseline.toLocaleString("ko-KR")}명 (${sign}${cmp.diff.toLocaleString("ko-KR")} / ${sign}${cmp.pct}%)`;
+    };
+    if (attBreak.available) {
+      crowdItems.push(
+        makeFact("총 관중", escapeHtml(`${attBreak.total.toLocaleString("ko-KR")}명`), attBreak.total)
+      );
+      if (attBreak.hasSplit) {
+        crowdItems.push(
+          makeFact("홈 관중", escapeHtml(`${attBreak.home.toLocaleString("ko-KR")}명`), attBreak.home)
+        );
+        crowdItems.push(
+          makeFact("원정 관중", escapeHtml(`${attBreak.away.toLocaleString("ko-KR")}명`), attBreak.away)
+        );
+      }
+      if (attBreak.homeVsAvg) {
+        crowdItems.push(
+          makeFact(attBreak.homeVsAvg.baselineLabel, escapeHtml(fmtCmp(attBreak.homeVsAvg)), attBreak.homeVsAvg.baseline)
+        );
+      } else if (attBreak.totalVsHomeAvg) {
+        crowdItems.push(
+          makeFact(
+            attBreak.totalVsHomeAvg.baselineLabel,
+            escapeHtml(fmtCmp(attBreak.totalVsHomeAvg)),
+            attBreak.totalVsHomeAvg.baseline
+          )
+        );
+      }
+      if (attBreak.awayVsAvg) {
+        crowdItems.push(
+          makeFact(attBreak.awayVsAvg.baselineLabel, escapeHtml(fmtCmp(attBreak.awayVsAvg)), attBreak.awayVsAvg.baseline)
+        );
+      }
+    } else if (meta.attendance != null && meta.attendance !== "") {
       crowdItems.push(
         makeFact("관중", escapeHtml(`${Number(meta.attendance).toLocaleString("ko-KR")}명`), meta.attendance)
       );
-    }
-    const att = Analyze.attendanceCompare(meta, index || state.index, state.clubAttendance);
-    if (att.available) {
-      const sign = att.diff > 0 ? "+" : "";
-      crowdItems.push(
-        makeFact(
-          att.baselineLabel,
-          escapeHtml(
-            `${att.baseline.toLocaleString("ko-KR")}명 (${sign}${att.diff.toLocaleString("ko-KR")} / ${sign}${att.pct}%)`
-          ),
-          att.baseline
-        )
-      );
+      const att = Analyze.attendanceCompare(meta, index || state.index, state.clubAttendance);
+      if (att.available) {
+        const sign = att.diff > 0 ? "+" : "";
+        crowdItems.push(
+          makeFact(
+            att.baselineLabel,
+            escapeHtml(
+              `${att.baseline.toLocaleString("ko-KR")}명 (${sign}${att.diff.toLocaleString("ko-KR")} / ${sign}${att.pct}%)`
+            ),
+            att.baseline
+          )
+        );
+      }
     }
     pushGroup("관중", crowdItems);
 

@@ -65,6 +65,16 @@ jobs:
           fi
           python c_report/scripts/collect_chalkboard.py
 
+      - name: Collect official attendance split
+        env:
+          KLEAGUE_YEAR: ${{ github.event.inputs.year }}
+        run: |
+          set -e
+          if [ -z "$KLEAGUE_YEAR" ]; then
+            export KLEAGUE_YEAR="$(TZ=Asia/Seoul date +%Y)"
+          fi
+          python c_report/scripts/collect_audience.py
+
       - name: Fold chalk events into player index
         run: python player_report/scripts/aggregate_events.py
 

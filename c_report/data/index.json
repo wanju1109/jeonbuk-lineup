@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T00:58:10.667521+00:00",
+  "updated_at": "2026-09-10T01:23:44.734799+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -12,7 +12,9 @@
       "venue": "전주 월드컵",
       "attendance": 20681,
       "file": "./data/4.json",
-      "label": "전북 VS 부천 (4, 03/01)"
+      "label": "전북 VS 부천 (4, 03/01)",
+      "attendance_home": 19538,
+      "attendance_away": 1143
     },
     {
       "game_id": "11",
@@ -25,7 +27,9 @@
       "venue": "김천 종합",
       "attendance": 3323,
       "file": "./data/11.json",
-      "label": "김천 VS 전북 (11, 03/08)"
+      "label": "김천 VS 전북 (11, 03/08)",
+      "attendance_home": 1646,
+      "attendance_away": 1677
     },
     {
       "game_id": "13",
@@ -38,7 +42,9 @@
       "venue": "광주 월드컵",
       "attendance": 7006,
       "file": "./data/13.json",
-      "label": "광주 VS 전북 (13, 03/14)"
+      "label": "광주 VS 전북 (13, 03/14)",
+      "attendance_home": 4456,
+      "attendance_away": 2550
     },
     {
       "game_id": "23",
@@ -51,7 +57,9 @@
       "venue": "전주 월드컵",
       "attendance": 6650,
       "file": "./data/23.json",
-      "label": "전북 VS 안양 (23, 03/18)"
+      "label": "전북 VS 안양 (23, 03/18)",
+      "attendance_home": 6355,
+      "attendance_away": 295
     },
     {
       "game_id": "25",
@@ -64,7 +72,9 @@
       "venue": "대전 월드컵",
       "attendance": 12550,
       "file": "./data/25.json",
-      "label": "대전 VS 전북 (25, 03/21)"
+      "label": "대전 VS 전북 (25, 03/21)",
+      "attendance_home": 8550,
+      "attendance_away": 4000
     },
     {
       "game_id": "32",
@@ -77,7 +87,9 @@
       "venue": "전주 월드컵",
       "attendance": 20532,
       "file": "./data/32.json",
-      "label": "전북 VS 울산 (32, 04/04)"
+      "label": "전북 VS 울산 (32, 04/04)",
+      "attendance_home": 18045,
+      "attendance_away": 2487
     },
     {
       "game_id": "38",
@@ -90,7 +102,9 @@
       "venue": "서울 월드컵",
       "attendance": 34068,
       "file": "./data/38.json",
-      "label": "서울 VS 전북 (38, 04/11)"
+      "label": "서울 VS 전북 (38, 04/11)",
+      "attendance_home": 28533,
+      "attendance_away": 5535
     },
     {
       "game_id": "43",
@@ -103,7 +117,9 @@
       "venue": "강릉하이원아레나",
       "attendance": 7725,
       "file": "./data/43.json",
-      "label": "강원 VS 전북 (43, 04/18)"
+      "label": "강원 VS 전북 (43, 04/18)",
+      "attendance_home": 6939,
+      "attendance_away": 786
     },
     {
       "game_id": "51",
@@ -116,7 +132,9 @@
       "venue": "전주 월드컵",
       "attendance": 8074,
       "file": "./data/51.json",
-      "label": "전북 VS 인천 (51, 04/21)"
+      "label": "전북 VS 인천 (51, 04/21)",
+      "attendance_home": 7613,
+      "attendance_away": 461
     },
     {
       "game_id": "58",
@@ -129,7 +147,9 @@
       "venue": "전주 월드컵",
       "attendance": 14501,
       "file": "./data/58.json",
-      "label": "전북 VS 포항 (58, 04/26)"
+      "label": "전북 VS 포항 (58, 04/26)",
+      "attendance_home": 13763,
+      "attendance_away": 738
     },
     {
       "game_id": "64",
@@ -142,7 +162,9 @@
       "venue": "제주 월드컵",
       "attendance": 8568,
       "file": "./data/64.json",
-      "label": "제주 VS 전북 (64, 05/02)"
+      "label": "제주 VS 전북 (64, 05/02)",
+      "attendance_home": 7194,
+      "attendance_away": 1374
     },
     {
       "game_id": "67",
@@ -155,7 +177,9 @@
       "venue": "전주 월드컵",
       "attendance": 20364,
       "file": "./data/67.json",
-      "label": "전북 VS 광주 (67, 05/05)"
+      "label": "전북 VS 광주 (67, 05/05)",
+      "attendance_home": 19694,
+      "attendance_away": 670
     },
     {
       "game_id": "78",
@@ -168,7 +192,9 @@
       "venue": "안양 종합",
       "attendance": 10026,
       "file": "./data/78.json",
-      "label": "안양 VS 전북 (78, 05/10)"
+      "label": "안양 VS 전북 (78, 05/10)",
+      "attendance_home": 8313,
+      "attendance_away": 1713
     },
     {
       "game_id": "84",
@@ -181,7 +207,9 @@
       "venue": "부천 종합",
       "attendance": 6066,
       "file": "./data/84.json",
-      "label": "부천 VS 전북 (84, 05/13)"
+      "label": "부천 VS 전북 (84, 05/13)",
+      "attendance_home": 4656,
+      "attendance_away": 1410
     },
     {
       "game_id": "87",
@@ -194,7 +222,9 @@
       "venue": "전주 월드컵",
       "attendance": 31447,
       "file": "./data/87.json",
-      "label": "전북 VS 김천 (87, 05/17)"
+      "label": "전북 VS 김천 (87, 05/17)",
+      "attendance_home": 29741,
+      "attendance_away": 1706
     },
     {
       "game_id": "91",
@@ -207,7 +237,9 @@
       "venue": "전주 월드컵",
       "attendance": 15551,
       "file": "./data/91.json",
-      "label": "전북 VS 강원 (91, 07/04)"
+      "label": "전북 VS 강원 (91, 07/04)",
+      "attendance_home": 14760,
+      "attendance_away": 791
     },
     {
       "game_id": "97",
@@ -220,7 +252,9 @@
       "venue": "울산 문수",
       "attendance": 20173,
       "file": "./data/97.json",
-      "label": "울산 VS 전북 (97, 07/11)"
+      "label": "울산 VS 전북 (97, 07/11)",
+      "attendance_home": 17879,
+      "attendance_away": 2294
     },
     {
       "game_id": "105",
@@ -233,7 +267,9 @@
       "venue": "인천 전용",
       "attendance": 12984,
       "file": "./data/105.json",
-      "label": "인천 VS 전북 (105, 07/18)"
+      "label": "인천 VS 전북 (105, 07/18)",
+      "attendance_home": 10513,
+      "attendance_away": 2471
     },
     {
       "game_id": "111",
@@ -246,7 +282,9 @@
       "venue": "전주 월드컵",
       "attendance": 10258,
       "file": "./data/111.json",
-      "label": "전북 VS 대전 (111, 07/21)"
+      "label": "전북 VS 대전 (111, 07/21)",
+      "attendance_home": 9720,
+      "attendance_away": 538
     },
     {
       "game_id": "115",
@@ -259,7 +297,9 @@
       "venue": "포항 스틸야드",
       "attendance": 13147,
       "file": "./data/115.json",
-      "label": "포항 VS 전북 (115, 07/25)"
+      "label": "포항 VS 전북 (115, 07/25)",
+      "attendance_home": 11554,
+      "attendance_away": 1593
     },
     {
       "game_id": "122",
@@ -272,7 +312,9 @@
       "venue": "전주 월드컵",
       "attendance": 23081,
       "file": "./data/122.json",
-      "label": "전북 VS 서울 (122, 08/01)"
+      "label": "전북 VS 서울 (122, 08/01)",
+      "attendance_home": 20486,
+      "attendance_away": 2595
     },
     {
       "game_id": "131",
@@ -285,7 +327,9 @@
       "venue": "전주 월드컵",
       "attendance": 10246,
       "file": "./data/131.json",
-      "label": "전북 VS 제주 (131, 08/08)"
+      "label": "전북 VS 제주 (131, 08/08)",
+      "attendance_home": 9983,
+      "attendance_away": 263
     },
     {
       "game_id": "137",
@@ -298,7 +342,9 @@
       "venue": "부천 종합",
       "attendance": 9268,
       "file": "./data/137.json",
-      "label": "부천 VS 전북 (137, 08/16)"
+      "label": "부천 VS 전북 (137, 08/16)",
+      "attendance_home": 6869,
+      "attendance_away": 2399
     },
     {
       "game_id": "140",
@@ -311,7 +357,9 @@
       "venue": "전주 월드컵",
       "attendance": 18841,
       "file": "./data/140.json",
-      "label": "전북 VS 울산 (140, 08/22)"
+      "label": "전북 VS 울산 (140, 08/22)",
+      "attendance_home": 16751,
+      "attendance_away": 2090
     },
     {
       "game_id": "146",
@@ -324,7 +372,9 @@
       "venue": "김천 종합",
       "attendance": 2684,
       "file": "./data/146.json",
-      "label": "김천 VS 전북 (146, 08/25)"
+      "label": "김천 VS 전북 (146, 08/25)",
+      "attendance_home": 2168,
+      "attendance_away": 516
     },
     {
       "game_id": "154",
@@ -337,7 +387,9 @@
       "venue": "인천 전용",
       "attendance": 11056,
       "file": "./data/154.json",
-      "label": "인천 VS 전북 (154, 08/30)"
+      "label": "인천 VS 전북 (154, 08/30)",
+      "attendance_home": 9197,
+      "attendance_away": 1859
     },
     {
       "game_id": "159",
@@ -350,7 +402,9 @@
       "venue": "전주 월드컵",
       "attendance": 11716,
       "file": "./data/159.json",
-      "label": "전북 VS 포항 (159, 09/05)"
+      "label": "전북 VS 포항 (159, 09/05)",
+      "attendance_home": 11023,
+      "attendance_away": 693
     },
     {
       "game_id": "166",
@@ -363,7 +417,9 @@
       "venue": "강릉하이원아레나",
       "attendance": 5066,
       "file": "./data/166.json",
-      "label": "강원 VS 전북 (166, 09/09)"
+      "label": "강원 VS 전북 (166, 09/09)",
+      "attendance_home": 4872,
+      "attendance_away": 194
     }
   ]
 }

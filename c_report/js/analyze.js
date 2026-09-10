@@ -266,6 +266,23 @@ const Analyze = (() => {
     const avg = hit != null ? Number(hit.avg) : NaN;
     if (!hit || !Number.isFinite(avg) || avg <= 0) return null;
     const games = Number(hit.games);
+    const homeFansAvg = Number(hit.home_fans_avg);
+    return {
+      avg,
+      homeFansAvg: Number.isFinite(homeFansAvg) && homeFansAvg > 0 ? homeFansAvg : null,
+      games: Number.isFinite(games) && games > 0 ? games : 0,
+      asOf: clubAttendance.as_of || "",
+    };
+  }
+
+  function officialAwayFansAvg(clubAttendance, awayName) {
+    const key = clubNameKey(awayName);
+    const clubs = clubAttendance && Array.isArray(clubAttendance.clubs) ? clubAttendance.clubs : [];
+    if (!key || !clubs.length) return null;
+    const hit = clubs.find((c) => clubNameKey(c.name) === key);
+    const avg = hit != null ? Number(hit.away_fans_avg) : NaN;
+    if (!hit || !Number.isFinite(avg) || avg <= 0) return null;
+    const games = Number(hit.away_games);
     return {
       avg,
       games: Number.isFinite(games) && games > 0 ? games : 0,
@@ -283,6 +300,35 @@ const Analyze = (() => {
     if (!nums.length) return null;
     const sum = nums.reduce((s, n) => s + n, 0);
     return { avg: sum / nums.length, games: nums.length };
+  }
+
+  function collectedAwayFansAvg(index, awayName) {
+    const key = clubNameKey(awayName);
+    if (!key) return null;
+    const nums = (index?.matches || [])
+      .filter((m) => clubNameKey(m.away) === key)
+      .map((m) => Number(m.attendance_away))
+      .filter((n) => Number.isFinite(n) && n >= 0);
+    if (!nums.length) return null;
+    const sum = nums.reduce((s, n) => s + n, 0);
+    return { avg: sum / nums.length, games: nums.length };
+  }
+
+  function compareAgainst(value, baseline, label, sampleSize, source, asOf) {
+    if (!Number.isFinite(value) || value < 0) return null;
+    if (!Number.isFinite(baseline) || baseline <= 0) return null;
+    const diff = value - baseline;
+    const pct = (diff / baseline) * 100;
+    return {
+      value: Math.round(value),
+      baseline: Math.round(baseline),
+      baselineLabel: label,
+      diff: Math.round(diff),
+      pct: Math.round(pct * 10) / 10,
+      sampleSize: sampleSize || 0,
+      source: source || "",
+      asOf: asOf || "",
+    };
   }
 
   function attendanceCompare(meta, index, clubAttendance) {
@@ -323,6 +369,84 @@ const Analyze = (() => {
       isHome,
       source,
       asOf: official ? official.asOf : "",
+    };
+  }
+
+  function attendanceBreakdown(meta, index, clubAttendance) {
+    const total = Number(meta?.attendance);
+    if (!Number.isFinite(total) || total <= 0) {
+      return { available: false };
+    }
+    let away = Number(meta?.attendance_away);
+    let home = Number(meta?.attendance_home);
+    if (!Number.isFinite(away) || away < 0) away = NaN;
+    if (!Number.isFinite(home) || home < 0) {
+      home = Number.isFinite(away) ? Math.max(total - away, 0) : NaN;
+    }
+    if (Number.isFinite(home) && Number.isFinite(away) && home + away !== total) {
+      /* Prefer explicit split fields; keep total authoritative for display. */
+      home = Math.max(total - away, 0);
+    }
+
+    const homeName = String(meta.home?.name || "").trim();
+    const awayName = String(meta.away?.name || "").trim();
+    const homeOfficial = officialHomeAvg(clubAttendance, homeName);
+    const homeCollected = collectedHomeAvg(index, homeName);
+    const awayOfficial = officialAwayFansAvg(clubAttendance, awayName);
+    const awayCollected = collectedAwayFansAvg(index, awayName);
+
+    const totalVsHomeAvg = compareAgainst(
+      total,
+      (homeOfficial || homeCollected)?.avg,
+      homeOfficial
+        ? `${homeName} 시즌 홈 평균(총관중)`
+        : `${homeName} 홈 평균(총관중·수집분)`,
+      (homeOfficial || homeCollected)?.games,
+      homeOfficial ? "official" : "collected",
+      homeOfficial?.asOf || ""
+    );
+
+    const homeBaseline =
+      homeOfficial?.homeFansAvg ||
+      (homeOfficial ? homeOfficial.avg : null) ||
+      homeCollected?.avg;
+    const homeVsAvg = Number.isFinite(home)
+      ? compareAgainst(
+          home,
+          homeBaseline,
+          homeOfficial?.homeFansAvg
+            ? `${homeName} 시즌 홈팬 평균`
+            : homeOfficial
+              ? `${homeName} 시즌 홈 평균`
+              : `${homeName} 홈 평균(수집분)`,
+          (homeOfficial || homeCollected)?.games,
+          homeOfficial ? "official" : "collected",
+          homeOfficial?.asOf || ""
+        )
+      : null;
+
+    const awayVsAvg = Number.isFinite(away)
+      ? compareAgainst(
+          away,
+          (awayOfficial || awayCollected)?.avg,
+          awayOfficial
+            ? `${awayName} 시즌 원정팬 평균`
+            : `${awayName} 원정팬 평균(수집분)`,
+          (awayOfficial || awayCollected)?.games,
+          awayOfficial ? "official" : "collected",
+          awayOfficial?.asOf || ""
+        )
+      : null;
+
+    return {
+      available: true,
+      total,
+      home: Number.isFinite(home) ? home : null,
+      away: Number.isFinite(away) ? away : null,
+      hasSplit: Number.isFinite(home) && Number.isFinite(away),
+      totalVsHomeAvg,
+      homeVsAvg,
+      awayVsAvg,
     };
   }
 
@@ -1537,6 +1661,7 @@ const Analyze = (() => {
     periodStats,
     flowAfterFirstGoal,
     attendanceCompare,
+    attendanceBreakdown,
     lineupSides,
     sequenceBeforeGoal,
     playerEvents,
