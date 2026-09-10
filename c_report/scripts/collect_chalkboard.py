@@ -76,7 +76,168 @@ def is_incomplete_match_json(path: Path) -> bool:
     attendance = meta.get("attendance")
     if attendance in (None, 0, "0"):
         return True
+    score = meta.get("score") if isinstance(meta.get("score"), dict) else {}
+    try:
+        need_goals = int(score.get("home") or 0) + int(score.get("away") or 0)
+    except (TypeError, ValueError):
+        need_goals = 0
+    if need_goals > 0:
+        gl_n = sum(1 for e in events if isinstance(e, dict) and e.get("TYPE_DETAIL_CD") == "GL")
+        if gl_n < need_goals:
+            return True
+    lineup = data.get("lineup") if isinstance(data.get("lineup"), dict) else {}
+    home_n = len(lineup.get("home") or [])
+    away_n = len(lineup.get("away") or [])
+    if home_n < 11 or away_n < 11:
+        return True
     return False
+
+
+def sheet_goal_rows(chart) -> list[dict]:
+    """Official match-sheet goal rows from lineup menu chartDataSet."""
+    rows: list[dict] = []
+    if not isinstance(chart, list):
+        return rows
+    for block in chart:
+        if not isinstance(block, list):
+            continue
+        for row in block:
+            if not isinstance(row, dict):
+                continue
+            if str(row.get("actGubun") or "").upper() != "GL":
+                continue
+            rows.append(row)
+    rows.sort(
+        key=lambda r: (
+            int(r.get("halfType") or 1),
+            int(r.get("timeMin") or 0),
+            int(r.get("timeSec") or 0),
+        )
+    )
+    return rows
+
+
+def goal_event_from_sheet(row: dict, year: str, meet_seq: str, game_id: str, seq: int) -> dict:
+    """Minimal chalk-compatible GL event when Bepro chalk is gone/incomplete."""
+    period = int(row.get("halfType") or 1)
+    minute = int(row.get("timeMin") or 0)
+    sec = int(row.get("timeSec") or 0)
+    assist_id = str(row.get("inPlayerId") or "").strip()
+    return {
+        "MEET_YEAR": str(year),
+        "MEET_SEQ": int(meet_seq) if str(meet_seq).isdigit() else meet_seq,
+        "GAME_ID": int(game_id) if str(game_id).isdigit() else game_id,
+        "PERIOD_ID": period,
+        "MIN_TIME": minute,
+        "SEC_TIME": sec,
+        "TEAM_ID": row.get("teamId") or "",
+        "PLAYER_ID": str(row.get("playerId") or ""),
+        "HA_CODE": row.get("ha") or "",
+        "TYPE_CD": "ST",
+        "TYPE_DETAIL_CD": "GL",
+        "TYPE_DETAIL_CD2": "",
+        "EXPECTED_GOAL": None,
+        "START_POINT_X": None,
+        "START_POINT_Y": None,
+        "END_POINT_X": None,
+        "END_POINT_Y": None,
+        "OWN_GOAL_CODE": "N",
+        "PA_AREA_YN_CD": "",
+        "SHOT_GOALPOST_SITE": "",
+        "EVENT_ID": 800000 + seq,
+        "SEQ": 800000000 + seq,
+        "EVENT_BEPRO": None,
+        "back_no": row.get("playerBackNo"),
+        "source": "match_sheet",
+        "assist_player_id": assist_id or None,
+        "assist_name": row.get("inPlayerName") or None,
+        "sheet_label": row.get("dispEventName") or row.get("actName") or "",
+    }
+
+
+def merge_sheet_goals_into_events(
+    events: list,
+    sheet_rows: list[dict],
+    year: str,
+    meet_seq: str,
+    game_id: str,
+) -> tuple[list, int]:
+    """Append missing official goals; keep richer chalk GL rows when present."""
+    out = list(events) if isinstance(events, list) else []
+    existing = [e for e in out if isinstance(e, dict) and e.get("TYPE_DETAIL_CD") == "GL"]
+    added = 0
+    for i, row in enumerate(sheet_rows):
+        pid = str(row.get("playerId") or "")
+        if not pid:
+            continue
+        period = int(row.get("halfType") or 1)
+        minute = int(row.get("timeMin") or 0)
+        matched = False
+        for e in existing:
+            if str(e.get("PLAYER_ID") or "") != pid:
+                continue
+            if int(e.get("PERIOD_ID") or 1) != period:
+                continue
+            if abs(int(e.get("MIN_TIME") or 0) - minute) <= 2:
+                matched = True
+                break
+        if matched:
+            continue
+        out.append(goal_event_from_sheet(row, year, meet_seq, game_id, i + 1))
+        added += 1
+    return out, added
+
+
+def players_from_lineup(lineup: dict) -> list[dict]:
+    """Build player stubs from official sheet so name lookups still work."""
+    rows: list[dict] = []
+    seen = set()
+    if not isinstance(lineup, dict):
+        return rows
+    for side in ("home", "away"):
+        for p in lineup.get(side) or []:
+            if not isinstance(p, dict):
+                continue
+            pid = str(p.get("player_id") or "")
+            tid = str(p.get("team_id") or "")
+            if not pid or f"{tid}|{pid}" in seen:
+                continue
+            seen.add(f"{tid}|{pid}")
+            rows.append(
+                {
+                    "player_id": pid,
+                    "NAME": p.get("name") or "",
+                    "name": p.get("name") or "",
+                    "team_id": tid,
+                    "back_no": p.get("back_no"),
+                    "Position_Name": p.get("position") or "",
+                    "Position_Code": p.get("position_code"),
+                    "player_seq": p.get("seq"),
+                    "captain_yn": "Y" if p.get("captain") else "N",
+                }
+            )
+    return rows
+
+
+def merge_player_lists(*groups: list) -> list[dict]:
+    merged: list[dict] = []
+    seen = set()
+    for group in groups:
+        if not isinstance(group, list):
+            continue
+        for p in group:
+            if not isinstance(p, dict):
+                continue
+            pid = str(p.get("player_id") or p.get("PLAYER_ID") or "")
+            tid = str(p.get("team_id") or p.get("TEAM_ID") or "")
+            if not pid:
+                continue
+            key = f"{tid}|{pid}"
+            if key in seen:
+                continue
+            seen.add(key)
+            merged.append(p)
+    return merged
 
 
 def match_json_path(year: str, gid: str) -> Path:
@@ -984,7 +1145,7 @@ def main() -> None:
                         existing = None
 
                 # Portal sometimes clears chalk after kickoff window; keep local events
-                # and refresh official score / frame meta (attendance, weather, …).
+                # and refresh official score / frame meta / lineup / missing goals.
                 if (
                     SCORE_REFRESH
                     and existing
@@ -1006,7 +1167,7 @@ def main() -> None:
                     meta["note"] = (
                         "보도/커뮤니티 재가공용. 부가기록(Bepro11) 기준. "
                         "칠판 이벤트가 포털에서 비워져 기존 이벤트를 유지하고 "
-                        "공식 스코어·경기 메타만 갱신."
+                        "공식 스코어·라인업·누락 골을 시트로 보강."
                     )
                     if frame.get("venue"):
                         meta["venue"] = frame["venue"]
@@ -1034,7 +1195,32 @@ def main() -> None:
                     if frame.get("away_manager"):
                         away_meta["manager"] = frame["away_manager"]
                         meta["away"] = away_meta
+
+                    fresh_lineup = packed.get("lineup")
+                    if isinstance(fresh_lineup, dict) and (
+                        (fresh_lineup.get("home") or []) or (fresh_lineup.get("away") or [])
+                    ):
+                        existing["lineup"] = fresh_lineup
+
+                    chart = extract_js_array(packed.get("lineup_html") or "", "chartDataSet")
+                    sheet_gl = sheet_goal_rows(chart)
+                    merged_events, added_gl = merge_sheet_goals_into_events(
+                        existing.get("events") or [],
+                        sheet_gl,
+                        YEAR,
+                        MEET_SEQ,
+                        gid,
+                    )
+                    existing["events"] = merged_events
+                    existing["players"] = merge_player_lists(
+                        existing.get("players") or [],
+                        packed.get("players") or [],
+                        players_from_lineup(existing.get("lineup") or {}),
+                    )
                     existing["meta"] = meta
+                    if isinstance(packed.get("pass_matrix"), dict):
+                        existing["pass_matrix"] = packed["pass_matrix"]
+
                     out_path.write_text(
                         json.dumps(existing, ensure_ascii=False), encoding="utf-8"
                     )
@@ -1054,10 +1240,16 @@ def main() -> None:
                     if JEONBUK_KEY in f"{entry['home']}{entry['away']}{label}":
                         by_id[match_key(YEAR, gid)] = entry
                     collected += 1
+                    sub_n = len((existing.get("lineup") or {}).get("subs") or [])
+                    gl_n = sum(
+                        1
+                        for e in merged_events
+                        if isinstance(e, dict) and e.get("TYPE_DETAIL_CD") == "GL"
+                    )
                     print(
                         f"[OK] game_id={gid} score-only {hs}:{aws} "
-                        f"att={meta.get('attendance')} "
-                        f"(kept {len(existing['events'])} events)"
+                        f"att={meta.get('attendance')} goals={gl_n}(+{added_gl}) "
+                        f"subs={sub_n} (kept {len(existing['events'])} events)"
                     )
                     time.sleep(0.4)
                     continue

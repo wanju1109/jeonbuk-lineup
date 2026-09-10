@@ -1156,13 +1156,22 @@
         const side = isHome ? "home" : "away";
         const team = isHome ? meta.home.name : meta.away.name;
         const pk = g.TYPE_DETAIL_CD2 === "PK" ? " · PK" : "";
+        const assist =
+          g.assist_name ||
+          (g.assist_player_id ? Analyze.nameOf(pmap, g.assist_player_id, "") : "");
+        const assistBit = assist ? ` · 도움 ${assist}` : "";
+        const xgRaw = g.EXPECTED_GOAL;
+        const xgLabel =
+          xgRaw == null || xgRaw === ""
+            ? "xG —"
+            : `xG ${Number(xgRaw).toFixed(2)}`;
         return `<button class="goal-card side-${side} ${
           i === state.selectedGoalIdx ? "active" : ""
         }" data-idx="${i}" type="button">
           <div class="top"><span class="goal-team">${escapeHtml(
             Analyze.formatClock(g)
-          )} ${escapeHtml(team)}</span><span>xG ${Number(g.EXPECTED_GOAL || 0).toFixed(2)}</span></div>
-          <div class="meta">${escapeHtml(nm)}${pk} · #${escapeHtml(String(g.back_no || ""))}</div>
+          )} ${escapeHtml(team)}</span><span>${escapeHtml(xgLabel)}</span></div>
+          <div class="meta">${escapeHtml(nm)}${pk}${escapeHtml(assistBit)} · #${escapeHtml(String(g.back_no || ""))}</div>
         </button>`;
       })
       .join("");
