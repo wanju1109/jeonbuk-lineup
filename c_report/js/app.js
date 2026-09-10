@@ -241,176 +241,11 @@
     const readyCount = state.index.matches.filter((m) => String(m.year) === String(year)).length;
     if (match) {
       help.textContent =
-        `${year}시즌 전북 데이터 ${readyCount}경기 · ${round}R 준비됨 → 가져오기를 누르면 포털에서 실시간 재수집합니다.`;
+        `${year}시즌 전북 데이터 ${readyCount}경기 · ${round}R 준비됨 → 전북 데이터 가져오기를 누르세요.`;
     } else {
       help.textContent =
-        `${round}R은 아직 없습니다. 경기가 끝난 뒤 가져오기를 누르면 실시간으로 수집합니다.`;
+        `${round}R은 아직 없습니다. 경기가 끝난 뒤 자동 수집되면 전북 데이터 가져오기로 불러올 수 있습니다.`;
     }
-  }
-
-  const GH_COLLECT = {
-    owner: "wanju1109",
-    repo: "jeonbuk-lineup",
-    workflow: "c-report-collect.yml",
-    branch: "main",
-  };
-  const GH_PAT_KEY = "c_report_gh_pat";
-
-  function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  function jeonbukScheduleMatch(year, round) {
-    return (
-      (state.schedule?.matches || []).find(
-        (m) =>
-          String(m.year) === String(year) &&
-          Number(m.round) === Number(round) &&
-          isJeonbukMatch(m)
-      ) || null
-    );
-  }
-
-  async function ensureGhPat() {
-    let token = "";
-    try {
-      token = String(localStorage.getItem(GH_PAT_KEY) || "").trim();
-    } catch (err) {
-      token = "";
-    }
-    if (token) return token;
-    const entered = window.prompt(
-      "실시간 갱신용 GitHub Personal Access Token을 입력하세요.\n" +
-        "필요 권한: Actions(워크플로 실행) + Contents(읽기).\n" +
-        "이 브라우저 localStorage에만 저장됩니다."
-    );
-    token = String(entered || "").trim();
-    if (!token) {
-      throw new Error("GitHub 토큰이 없어 실시간 갱신을 시작할 수 없습니다.");
-    }
-    try {
-      localStorage.setItem(GH_PAT_KEY, token);
-    } catch (err) {
-      console.warn(err);
-    }
-    return token;
-  }
-
-  async function dispatchCollectWorkflow(inputs) {
-    const token = await ensureGhPat();
-    const url =
-      `https://api.github.com/repos/${GH_COLLECT.owner}/${GH_COLLECT.repo}` +
-      `/actions/workflows/${GH_COLLECT.workflow}/dispatches`;
-    const payload = {
-      ref: GH_COLLECT.branch,
-      inputs: {
-        year: String(inputs.year || ""),
-        round: String(inputs.round || ""),
-        game_id: String(inputs.gameId || ""),
-        team: inputs.team != null ? String(inputs.team) : "전북",
-        force: "1",
-      },
-    };
-    let res;
-    try {
-      res = await fetch(url, {
-        method: "POST",
-        headers: {
-          Accept: "application/vnd.github+json",
-          Authorization: `Bearer ${token}`,
-          "X-GitHub-Api-Version": "2022-11-28",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-    } catch (err) {
-      throw new Error(`워크플로 요청 네트워크 오류: ${err.message || err}`);
-    }
-    if (res.status === 401 || res.status === 403) {
-      try {
-        localStorage.removeItem(GH_PAT_KEY);
-      } catch (err) {
-        /* ignore */
-      }
-      throw new Error(
-        "GitHub 토큰이 거부되었습니다. 다시 누르면 토큰을 다시 묻습니다."
-      );
-    }
-    if (res.status !== 204 && !res.ok) {
-      let detail = "";
-      try {
-        detail = (await res.text()).slice(0, 240);
-      } catch (err) {
-        detail = "";
-      }
-      throw new Error(
-        `워크플로 실행 실패 HTTP ${res.status}` + (detail ? `: ${detail}` : "")
-      );
-    }
-  }
-
-  function rawMatchUrl(gameId) {
-    return (
-      `https://raw.githubusercontent.com/${GH_COLLECT.owner}/` +
-      `${GH_COLLECT.repo}/${GH_COLLECT.branch}/c_report/data/${gameId}.json`
-    );
-  }
-
-  async function readRawMatchMeta(gameId) {
-    try {
-      const res = await fetch(`${rawMatchUrl(gameId)}?t=${Date.now()}`, {
-        cache: "no-store",
-      });
-      if (!res.ok) return null;
-      return await res.json();
-    } catch (err) {
-      console.warn(err);
-      return null;
-    }
-  }
-
-  async function peekLocalFetchedAt(gameId) {
-    try {
-      const res = await fetch(`./data/${gameId}.json?t=${Date.now()}`, {
-        cache: "no-store",
-      });
-      if (!res.ok) return "";
-      const data = await res.json();
-      return data?.meta?.fetched_at || "";
-    } catch (err) {
-      return "";
-    }
-  }
-
-  async function pollUntilMatchRefreshed(gameId, prevFetchedAt, onTick) {
-    const deadline = Date.now() + 8 * 60 * 1000;
-    let attempt = 0;
-    while (Date.now() < deadline) {
-      attempt += 1;
-      if (typeof onTick === "function") onTick(attempt);
-      await sleep(attempt === 1 ? 12000 : 10000);
-      const data = await readRawMatchMeta(gameId);
-      const next = data?.meta?.fetched_at || "";
-      if (next && next !== prevFetchedAt) return data;
-      /* First collect: accept any non-empty events payload. */
-      if (!prevFetchedAt && data?.events?.length) return data;
-    }
-    throw new Error(
-      "갱신 대기 시간이 초과되었습니다. GitHub Actions에서 수집 상태를 확인한 뒤 다시 눌러 주세요."
-    );
-  }
-
-  async function liveRefreshMatch({ year, round, gameId, team }) {
-    const prevFetchedAt =
-      (await peekLocalFetchedAt(gameId)) ||
-      ((await readRawMatchMeta(gameId))?.meta?.fetched_at || "");
-    setStatus("포털 실시간 재수집을 GitHub Actions에 요청하는 중…");
-    await dispatchCollectWorkflow({ year, round, gameId, team });
-    setStatus("수집 중… 완료되면 자동으로 엽니다 (최대 약 8분).");
-    const fresh = await pollUntilMatchRefreshed(gameId, prevFetchedAt, (n) => {
-      setStatus(`수집 대기 중 (${n})… 스코어·이벤트가 갱신되면 자동으로 엽니다.`);
-    });
-    return fresh;
   }
 
   async function fetchAndLoad() {
@@ -419,42 +254,24 @@
       btn.disabled = true;
       btn.textContent = "가져오는 중…";
     }
-    setStatus("경기 목록을 확인한 뒤 실시간 재수집을 시작합니다…");
+    setStatus("경기 목록을 새로고침하고 데이터를 불러오는 중…");
     try {
       const year = $("yearSelect")?.value;
       const round = $("roundSelect")?.value;
-      await Promise.all([loadIndex(true).catch(() => null), loadSchedule(true)]);
+      await loadIndex(true);
       if (year) $("yearSelect").value = year;
       rebuildRounds(round);
 
-      const match =
-        matchForRound($("yearSelect")?.value, $("roundSelect")?.value) ||
-        jeonbukScheduleMatch($("yearSelect")?.value, $("roundSelect")?.value);
-      if (!match?.game_id) {
+      const match = matchForRound($("yearSelect")?.value, $("roundSelect")?.value);
+      if (!match) {
         setStatus(
-          `${$("roundSelect")?.value || ""}R 전북 경기 정보를 찾지 못했습니다. 일정(schedule)을 확인하세요.`,
+          `${$("roundSelect")?.value || ""}R 전북 경기가 아직 없습니다. 종료 후 자동 수집되면 다시 눌러 주세요.`,
           true
         );
         return;
       }
-
-      const fresh = await liveRefreshMatch({
-        year: match.year || $("yearSelect")?.value,
-        round: match.round || $("roundSelect")?.value,
-        gameId: match.game_id,
-        team: "전북",
-      });
-      applyMatchFromData(fresh, `./data/${match.game_id}.json`);
-      try {
-        await loadIndex(true);
-        if (year) $("yearSelect").value = year;
-        rebuildRounds(String(match.round || round || ""));
-      } catch (err) {
-        console.warn(err);
-      }
-      setStatus(
-        `실시간 갱신 완료 · ${fresh?.meta?.score?.home ?? "?"}:${fresh?.meta?.score?.away ?? "?"} · ${fresh?.meta?.fetched_at || ""}`
-      );
+      await loadMatch(match.file || `./data/${match.game_id}.json`);
+      setStatus("");
     } catch (err) {
       console.error(err);
       setStatus(String(err.message || err), true);
@@ -1929,22 +1746,21 @@
         );
         return;
       }
-
-      const fresh = await liveRefreshMatch({
-        year: schedRow?.year || $("otherYearSelect")?.value,
-        round: schedRow?.round || $("otherRoundSelect")?.value,
-        gameId: selected,
-        team: "",
-      });
-      applyMatchFromData(fresh, `./data/${selected}.json`);
-      try {
-        await loadCollectedIds();
-      } catch (err) {
-        console.warn(err);
+      const file = `./data/${selected}.json`;
+      setStatus("타팀 CHALK BOARD 데이터를 불러오는 중…");
+      const res = await fetch(`${file}?t=${Date.now()}`, { cache: "no-store" });
+      if (!res.ok) {
+        setStatus(
+          `아직 이 경기 CHALK BOARD 데이터가 수집되지 않았습니다.\n` +
+            `PowerShell: $env:KLEAGUE_TEAM='*'; $env:KLEAGUE_GAME_ID='${selected}'; $env:KLEAGUE_ROUND='${$("otherRoundSelect")?.value || ""}'; python c_report/scripts/collect_chalkboard.py\n` +
+            `또는 GitHub Actions에서 team을 비우고 game_id=${selected} 로 실행한 뒤 다시 눌러 주세요.`,
+          true
+        );
+        return;
       }
-      setStatus(
-        `타팀 실시간 갱신 완료 · ${fresh?.meta?.score?.home ?? "?"}:${fresh?.meta?.score?.away ?? "?"}`
-      );
+      const data = await res.json();
+      applyMatchFromData(data, file);
+      setStatus("");
     } catch (err) {
       console.error(err);
       setStatus(String(err.message || err), true);

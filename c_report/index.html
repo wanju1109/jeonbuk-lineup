@@ -32,7 +32,7 @@
           </label>
           <button class="btn btn-primary" id="fetchBtn" type="button">전북 데이터 가져오기</button>
         </div>
-        <p class="match-picker-help" id="matchHelp">연도·라운드를 고른 뒤 가져오기를 누르면 포털에서 실시간 재수집합니다.</p>
+        <p class="match-picker-help" id="matchHelp">연도·라운드를 고른 뒤 전북 데이터 가져오기를 누르세요.</p>
       </div>
       <div class="match-picker panel editor-only other-picker" id="otherLeague">
         <p class="other-picker-title">다른 팀 경기 리뷰</p>
@@ -341,14 +341,13 @@
     <section class="section editor-only" id="howto">
       <div class="section-head">
         <h2>데이터는 어떻게 갱신되나</h2>
-        <p>상단 <strong>전북 데이터 가져오기</strong>·<strong>타팀 리뷰 가져오기</strong>를 누르면 GitHub Actions로 해당 경기를 포털에서 <strong>실시간 재수집</strong>한 뒤 엽니다. (처음 한 번 PAT 입력)</p>
+        <p>상단 <strong>전북 데이터 가져오기</strong>로 전북 경기를, 바로 아래 <strong>타팀 리뷰 가져오기</strong>로 같은 라운드 다른 경기를 불러옵니다.</p>
       </div>
       <div class="panel howto">
         <p style="margin:0;line-height:1.7;font-size:14px;color:var(--muted)">
-          주기 자동 수집은 없습니다. 가져오기 버튼 또는 Actions 수동 실행만 사용합니다.<br />
           로컬 전북 수집: <code>python c_report/scripts/collect_chalkboard.py</code><br />
           로컬 타팀 1경기 (PowerShell): <code>$env:KLEAGUE_TEAM='*'; $env:KLEAGUE_GAME_ID='123'; $env:KLEAGUE_ROUND='12'; python c_report/scripts/collect_chalkboard.py</code><br />
-          Actions에서 타팀은 <code>team</code> 비우고 <code>game_id</code>·<code>force=1</code> 로 실행하면 됩니다.<br />
+          GitHub Actions <code>c_report chalk board collect</code> 는 매일 자정(KST)에 전북 경기와 라운드 일정을 갱신합니다. 타팀은 <code>team</code> 비우고 <code>game_id</code>만 넣으면 됩니다.<br />
           작성자 전용 화면: 주소에 <code>&amp;x=jb7k</code> 를 붙이세요. (예: <code>?q=hwa&amp;x=jb7k</code>)
         </p>
       </div>
