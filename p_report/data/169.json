@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "전북 VS 서울 (169, 09/12)",
-    "hours_to_kickoff": 33.4,
+    "hours_to_kickoff": 32.7,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-09-11T09:33:58.710042+09:00",
+    "generated_at": "2026-09-11T10:15:12.132611+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 전북 vs 서울",
@@ -328,6 +328,16 @@
           "score": 64.99
         },
         {
+          "player_id": "20170185",
+          "name": "김진수",
+          "back_no": 22,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 517,
+          "score": 64.99
+        },
+        {
           "player_id": "20260048",
           "name": "로스",
           "back_no": 37,
@@ -416,7 +426,9 @@
           "apps": 5,
           "minutes": 302,
           "score": 42.57
-        },
+        }
+      ],
+      "bench": [
         {
           "player_id": "20170229",
           "name": "문선민",
@@ -426,9 +438,7 @@
           "apps": 5,
           "minutes": 265,
           "score": 28.65
-        }
-      ],
-      "bench": [
+        },
         {
           "player_id": "20200041",
           "name": "최준",
@@ -468,32 +478,18 @@
           "apps": 1,
           "minutes": 24,
           "score": 3.24
-        },
-        {
-          "player_id": "20220163",
-          "name": "박성훈",
-          "back_no": 40,
-          "pos": "",
-          "starts": 0,
-          "apps": 1,
-          "minutes": 56,
-          "score": 1.16
         }
       ],
       "sample_games": 5,
       "confidence": "높음",
       "excluded": [
         {
-          "name": "김진수",
-          "reason": "경고 누적 출전정지(자동)"
-        },
-        {
           "name": "송민규",
           "reason": "해외 이적"
         }
       ],
       "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
-      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다. 제외: 김진수 · 경고 누적 출전정지(자동); 송민규 · 해외 이적."
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다. 제외: 송민규 · 해외 이적."
     }
   },
   "h2h_summary": {

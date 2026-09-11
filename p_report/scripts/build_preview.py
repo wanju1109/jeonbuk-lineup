@@ -36,7 +36,9 @@ PREVIEW_HOURS = float(os.environ.get("PREVIEW_HOURS") or "48")
 OTHER_PREVIEW_DAYS = float(os.environ.get("OTHER_PREVIEW_DAYS") or "7")
 LEGACY_FLAT_YEAR = "2026"
 META_JSON = ("index.json", "schedule.json", "club-attendance.json", "collected.json")
-YELLOW_BAN_EVERY = 5
+YELLOW_BAN_EVERY = 5  # legacy; real thresholds are 5 then +3 then +2
+_YELLOW_LEDGER_CACHE: dict[str, dict[str, list[dict]]] = {}
+_TEAM_FINISHED_GAMES_CACHE: dict[str, list[str]] = {}
 
 
 def kleague_year() -> str:
@@ -48,7 +50,6 @@ def kleague_year() -> str:
 
 YEAR = kleague_year()
 JEONBUK = "전북"
-_YELLOW_LEDGER_CACHE: dict[str, dict[str, list[dict]]] = {}
 KST = timezone(timedelta(hours=9))
 
 TEAM_IDS = {
@@ -1516,10 +1517,9 @@ def team_yellow_ledger(catalog: dict[str, dict], team_id: str) -> dict[str, list
             if not pid:
                 continue
             code = e.get("TYPE_DETAIL_CD")
+            # Only single yellows count toward accumulation (not Y2C pair / straight red).
             if code == "YLC":
                 event_yellow[pid] = event_yellow.get(pid, 0) + 1
-            elif code in ("Y2C", "RC"):
-                event_yellow[pid] = event_yellow.get(pid, 0) + 2
         for side in ("home", "away"):
             for pl in lineup.get(side) or []:
                 if not isinstance(pl, dict):
@@ -1545,29 +1545,88 @@ def team_yellow_ledger(catalog: dict[str, dict], team_id: str) -> dict[str, list
     return by_pid
 
 
-def yellow_ban_pending(apps: list[dict], every: int = YELLOW_BAN_EVERY) -> bool:
-    """True when the next league match should be a yellow-accumulation ban."""
-    if every <= 0 or not apps:
+def finished_team_game_ids(team: str) -> list[str]:
+    """Chronological finished league game_ids for a club (from schedule)."""
+    name = str(team or "").strip()
+    if not name:
+        return []
+    cached = _TEAM_FINISHED_GAMES_CACHE.get(name)
+    if cached is not None:
+        return cached
+    schedule = load_json(C_DATA / "schedule.json")
+    matches = schedule.get("matches") if isinstance(schedule, dict) else []
+    rows: list[tuple[tuple, str]] = []
+    if isinstance(matches, list):
+        for m in matches:
+            if not isinstance(m, dict):
+                continue
+            if m.get("home") != name and m.get("away") != name:
+                continue
+            if str(m.get("end_yn") or "").upper() != "Y":
+                continue
+            md = str(m.get("date_md") or "00/00")
+            try:
+                mm_s, dd_s = md.split("/", 1)
+                key = (int(mm_s), int(dd_s), int(m.get("round") or 0), str(m.get("game_id") or ""))
+            except (TypeError, ValueError):
+                key = (0, 0, int(m.get("round") or 0), str(m.get("game_id") or ""))
+            gid = str(m.get("game_id") or "").strip()
+            if gid:
+                rows.append((key, gid))
+    rows.sort(key=lambda r: r[0])
+    out = [gid for _, gid in rows]
+    _TEAM_FINISHED_GAMES_CACHE[name] = out
+    return out
+
+
+def yellow_ban_thresholds(limit: int = 400) -> list[int]:
+    """K League player yellow-accumulation ban thresholds: 5, then +3, then +2 forever."""
+    out = [5, 8]
+    n = 10
+    while n <= limit:
+        out.append(n)
+        n += 2
+    return out
+
+
+def yellow_ban_pending(
+    apps: list[dict],
+    team_finished_gids: list[str] | None = None,
+    every: int = YELLOW_BAN_EVERY,
+) -> bool:
+    """True when the next league match should be a yellow-accumulation ban.
+
+    Ban is consumed by the next finished team match after a threshold, even if
+    chalkboard lineup for that match is missing (player sat out).
+    """
+    if not apps:
         return False
+    by_gid = {str(a.get("game_id") or ""): a for a in apps if a.get("game_id")}
+    thresholds = yellow_ban_thresholds() if every == YELLOW_BAN_EVERY else list(range(every, 400, every))
     total = 0
-    pending = False
-    for row in apps:
-        if pending:
-            pending = False
-        y = int(row.get("yellow") or 0)
+    ban_left = 0
+    thr_i = 0
+    # Prefer schedule order; fall back to appearance order only.
+    sequence = list(team_finished_gids or [])
+    if not sequence:
+        sequence = [str(a.get("game_id") or "") for a in apps if a.get("game_id")]
+    for gid in sequence:
+        if ban_left > 0:
+            ban_left -= 1
+            continue
+        app = by_gid.get(str(gid))
+        if not app:
+            continue
+        y = int(app.get("yellow") or 0)
         if y <= 0:
             continue
         before = total
         total += y
-        crossed = False
-        threshold = every
-        while threshold <= total:
-            if before < threshold <= total:
-                crossed = True
-            threshold += every
-        if crossed:
-            pending = True
-    return pending
+        while thr_i < len(thresholds) and thresholds[thr_i] <= total:
+            if before < thresholds[thr_i] <= total:
+                ban_left += 1
+            thr_i += 1
+    return ban_left > 0
 
 
 def unavailable_player_ids(
@@ -1576,13 +1635,13 @@ def unavailable_player_ids(
     team_id: str,
 ) -> dict[str, str]:
     """player_id -> reason for XI/bench exclusion."""
-    del team  # team name unused; catalog scan keys off team_id
     blocked = load_lineup_exclusions(team_id)
     ledger = team_yellow_ledger(catalog, team_id)
+    finished = finished_team_game_ids(team)
     for pid, apps in ledger.items():
         if pid in blocked:
             continue
-        if yellow_ban_pending(apps):
+        if yellow_ban_pending(apps, finished):
             blocked[pid] = "경고 누적 출전정지(자동)"
     return blocked
 
