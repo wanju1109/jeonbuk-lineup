@@ -30,11 +30,13 @@ REPO = ROOT.parent
 C_DATA = REPO / "c_report" / "data"
 OUT_DIR = ROOT / "data"
 INDEX_OUT = OUT_DIR / "index.json"
+EXCLUSIONS_PATH = OUT_DIR / "lineup_exclusions.json"
 
 PREVIEW_HOURS = float(os.environ.get("PREVIEW_HOURS") or "48")
 OTHER_PREVIEW_DAYS = float(os.environ.get("OTHER_PREVIEW_DAYS") or "7")
 LEGACY_FLAT_YEAR = "2026"
 META_JSON = ("index.json", "schedule.json", "club-attendance.json", "collected.json")
+YELLOW_BAN_EVERY = 5
 
 
 def kleague_year() -> str:
@@ -46,6 +48,7 @@ def kleague_year() -> str:
 
 YEAR = kleague_year()
 JEONBUK = "전북"
+_YELLOW_LEDGER_CACHE: dict[str, dict[str, list[dict]]] = {}
 KST = timezone(timedelta(hours=9))
 
 TEAM_IDS = {
@@ -1461,11 +1464,136 @@ def build_match_pulse(team_a: str, team_b: str, form_a: list[dict], form_b: list
             "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"}
 
 
+def load_lineup_exclusions(team_id: str | None = None) -> dict[str, str]:
+    """player_id -> reason from manual override file."""
+    data = load_json(EXCLUSIONS_PATH)
+    out: dict[str, str] = {}
+    if not isinstance(data, dict):
+        return out
+    want = str(team_id or "").upper()
+    for row in data.get("players") or []:
+        if not isinstance(row, dict):
+            continue
+        pid = str(row.get("player_id") or "").strip()
+        if not pid:
+            continue
+        team_ids = [str(t).upper() for t in (row.get("team_ids") or []) if t]
+        if want and team_ids and want not in team_ids:
+            continue
+        reason = str(row.get("reason") or "제외").strip() or "제외"
+        out[pid] = reason
+    return out
+
+
+def team_yellow_ledger(catalog: dict[str, dict], team_id: str) -> dict[str, list[dict]]:
+    """One-pass chronological yellow apps per player for a club."""
+    tid = str(team_id)
+    cached = _YELLOW_LEDGER_CACHE.get(tid)
+    if cached is not None:
+        return cached
+    by_pid: dict[str, list[dict]] = {}
+    matches = sorted(
+        catalog.values(),
+        key=lambda m: (str(m.get("date") or ""), int(m.get("round") or 0), str(m.get("game_id") or "")),
+    )
+    for m in matches:
+        if not isinstance(m, dict):
+            continue
+        year = str(m.get("year") or YEAR)
+        gid = str(m.get("game_id") or "")
+        path = match_raw_path(year, gid)
+        if not path.exists():
+            continue
+        data = load_json(path)
+        if not isinstance(data, dict):
+            continue
+        lineup = data.get("lineup") if isinstance(data.get("lineup"), dict) else {}
+        event_yellow: dict[str, int] = {}
+        for e in data.get("events") or []:
+            if not isinstance(e, dict):
+                continue
+            pid = str(e.get("PLAYER_ID") or "")
+            if not pid:
+                continue
+            code = e.get("TYPE_DETAIL_CD")
+            if code == "YLC":
+                event_yellow[pid] = event_yellow.get(pid, 0) + 1
+            elif code in ("Y2C", "RC"):
+                event_yellow[pid] = event_yellow.get(pid, 0) + 2
+        for side in ("home", "away"):
+            for pl in lineup.get(side) or []:
+                if not isinstance(pl, dict):
+                    continue
+                if str(pl.get("team_id") or "") != tid:
+                    continue
+                pid = str(pl.get("player_id") or "")
+                if not pid:
+                    continue
+                yellow = int(pl.get("yellow") or 0)
+                if yellow <= 0:
+                    yellow = event_yellow.get(pid, 0)
+                by_pid.setdefault(pid, []).append(
+                    {
+                        "date": str(m.get("date") or ""),
+                        "round": int(m.get("round") or 0),
+                        "game_id": gid,
+                        "yellow": max(yellow, 0),
+                        "minutes": int(pl.get("minutes") or 0),
+                    }
+                )
+    _YELLOW_LEDGER_CACHE[tid] = by_pid
+    return by_pid
+
+
+def yellow_ban_pending(apps: list[dict], every: int = YELLOW_BAN_EVERY) -> bool:
+    """True when the next league match should be a yellow-accumulation ban."""
+    if every <= 0 or not apps:
+        return False
+    total = 0
+    pending = False
+    for row in apps:
+        if pending:
+            pending = False
+        y = int(row.get("yellow") or 0)
+        if y <= 0:
+            continue
+        before = total
+        total += y
+        crossed = False
+        threshold = every
+        while threshold <= total:
+            if before < threshold <= total:
+                crossed = True
+            threshold += every
+        if crossed:
+            pending = True
+    return pending
+
+
+def unavailable_player_ids(
+    catalog: dict[str, dict],
+    team: str,
+    team_id: str,
+) -> dict[str, str]:
+    """player_id -> reason for XI/bench exclusion."""
+    del team  # team name unused; catalog scan keys off team_id
+    blocked = load_lineup_exclusions(team_id)
+    ledger = team_yellow_ledger(catalog, team_id)
+    for pid, apps in ledger.items():
+        if pid in blocked:
+            continue
+        if yellow_ban_pending(apps):
+            blocked[pid] = "경고 누적 출전정지(자동)"
+    return blocked
+
+
 def build_lineup_projection(catalog: dict[str, dict], team: str, team_id: str, limit: int = 5) -> dict:
     """Create a transparent expected XI from recent official starting XIs."""
     refs = recent_chalkboard_refs(catalog, team, limit)
     bucket: dict[str, dict] = {}
     used = 0
+    blocked = unavailable_player_ids(catalog, team, team_id)
+    excluded_notes: list[str] = []
     for order, (year, gid) in enumerate(refs, start=1):
         data = load_json(match_raw_path(year, gid))
         lineup = data.get("lineup") if isinstance(data, dict) and isinstance(data.get("lineup"), dict) else {}
@@ -1478,14 +1606,34 @@ def build_lineup_projection(catalog: dict[str, dict], team: str, team_id: str, l
                 pid = str(pl.get("player_id") or "")
                 if not pid:
                     continue
-                row = bucket.setdefault(pid, {"player_id": pid, "name": "", "back_no": "", "pos": "", "starts": 0, "apps": 0, "minutes": 0, "score": 0.0})
+                if pid in blocked:
+                    name = str(pl.get("name") or pid)
+                    note = f"{name} · {blocked[pid]}"
+                    if note not in excluded_notes:
+                        excluded_notes.append(note)
+                    continue
+                row = bucket.setdefault(
+                    pid,
+                    {
+                        "player_id": pid,
+                        "name": "",
+                        "back_no": "",
+                        "pos": "",
+                        "starts": 0,
+                        "apps": 0,
+                        "minutes": 0,
+                        "score": 0.0,
+                    },
+                )
                 row["name"] = str(pl.get("name") or row["name"])
                 row["back_no"] = pl.get("back_no", row["back_no"])
                 position = str(pl.get("position") or "")
                 if position and position != "대기":
                     row["pos"] = position
                 starter, mins = bool(pl.get("starter")), int(pl.get("minutes") or 0)
-                row["apps"] += 1; row["minutes"] += max(mins, 0); row["starts"] += int(starter)
+                row["apps"] += 1
+                row["minutes"] += max(mins, 0)
+                row["starts"] += int(starter)
                 row["score"] += (4.0 if starter else 0.6) * order + min(max(mins, 0), 100) / 100
         if matched:
             used += 1
@@ -1496,10 +1644,31 @@ def build_lineup_projection(catalog: dict[str, dict], team: str, team_id: str, l
     bench = [r for r in rows if r["player_id"] not in picked][:5]
     for row in xi + bench:
         row["score"] = round(row["score"], 2)
-    confidence = "높음" if used >= 5 and sum(r["starts"] >= 3 for r in xi) >= 8 else "보통" if used >= 3 else "낮음"
-    return {"team": team, "xi": xi, "bench": bench, "sample_games": used, "confidence": confidence,
-            "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
-            "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."}
+    confidence = (
+        "높음"
+        if used >= 5 and sum(r["starts"] >= 3 for r in xi) >= 8
+        else "보통"
+        if used >= 3
+        else "낮음"
+    )
+    disclaimer = (
+        "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. "
+        "공식 선발 명단과 다를 수 있습니다."
+    )
+    if excluded_notes:
+        disclaimer += " 제외: " + "; ".join(excluded_notes[:6]) + "."
+    return {
+        "team": team,
+        "xi": xi,
+        "bench": bench,
+        "sample_games": used,
+        "confidence": confidence,
+        "excluded": [
+            {"name": n.split(" · ")[0], "reason": n.split(" · ", 1)[-1]} for n in excluded_notes
+        ],
+        "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+        "disclaimer": disclaimer,
+    }
 
 
 def form_line(form: list[dict]) -> str:

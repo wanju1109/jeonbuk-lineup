@@ -374,7 +374,13 @@
   function lineupPlayerHtml(p) { const no = p.back_no != null && p.back_no !== "" ? `#${escapeHtml(String(p.back_no))} ` : ""; return `<li><span>${no}${escapeHtml(p.name || "미정")}</span><small>${escapeHtml(p.pos || "")}${p.starts != null ? ` · ${escapeHtml(String(p.starts))}회 선발` : ""}</small></li>`; }
   function renderLineups(lineups) {
     const box = $("lineupBox"); if (!box) return;
-    box.innerHTML = [lineups?.home, lineups?.away].filter(Boolean).map((l) => `<article class="lineup-card"><div class="lineup-title"><h3>${escapeHtml(l.team || "팀")} 예상 XI</h3><span class="lineup-confidence ${escapeHtml(l.confidence || "")}">신뢰도 ${escapeHtml(l.confidence || "-")}</span></div><p class="lineup-meta">${escapeHtml(l.method || "")} · 표본 ${escapeHtml(String(l.sample_games ?? 0))}경기</p><ol class="lineup-xi">${(l.xi || []).map(lineupPlayerHtml).join("") || "<li>라인업 데이터가 부족합니다.</li>"}</ol>${(l.bench || []).length ? `<p class="bench-label">후보군</p><ul class="lineup-bench">${l.bench.map(lineupPlayerHtml).join("")}</ul>` : ""}<p class="lineup-disclaimer">${escapeHtml(l.disclaimer || "")}</p></article>`).join("");
+    box.innerHTML = [lineups?.home, lineups?.away].filter(Boolean).map((l) => {
+      const excluded = (l.excluded || []).map((e) => `${e.name || ""}(${e.reason || "제외"})`).filter(Boolean);
+      const excludedHtml = excluded.length
+        ? `<p class="lineup-excluded">제외 · ${escapeHtml(excluded.join(" · "))}</p>`
+        : "";
+      return `<article class="lineup-card"><div class="lineup-title"><h3>${escapeHtml(l.team || "팀")} 예상 XI</h3><span class="lineup-confidence ${escapeHtml(l.confidence || "")}">신뢰도 ${escapeHtml(l.confidence || "-")}</span></div><p class="lineup-meta">${escapeHtml(l.method || "")} · 표본 ${escapeHtml(String(l.sample_games ?? 0))}경기</p><ol class="lineup-xi">${(l.xi || []).map(lineupPlayerHtml).join("") || "<li>라인업 데이터가 부족합니다.</li>"}</ol>${(l.bench || []).length ? `<p class="bench-label">후보군</p><ul class="lineup-bench">${l.bench.map(lineupPlayerHtml).join("")}</ul>` : ""}${excludedHtml}<p class="lineup-disclaimer">${escapeHtml(l.disclaimer || "")}</p></article>`;
+    }).join("");
   }
 
   function playerChipHtml(p) {

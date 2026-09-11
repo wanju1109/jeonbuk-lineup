@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-12 19:00 KST",
     "date_md": "09/12",
     "label": "전북 VS 서울 (169, 09/12)",
-    "hours_to_kickoff": 34.7,
+    "hours_to_kickoff": 33.4,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-09-11T08:16:12.243242+09:00",
+    "generated_at": "2026-09-11T09:33:58.710042+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 전북 vs 서울",
@@ -181,16 +181,6 @@
           "score": 52.87
         },
         {
-          "player_id": "20220174",
-          "name": "조위제",
-          "back_no": 4,
-          "pos": "DF",
-          "starts": 4,
-          "apps": 4,
-          "minutes": 403,
-          "score": 51.89
-        },
-        {
           "player_id": "20250353",
           "name": "감보아",
           "back_no": 16,
@@ -249,9 +239,7 @@
           "apps": 4,
           "minutes": 327,
           "score": 40.38
-        }
-      ],
-      "bench": [
+        },
         {
           "player_id": "20230029",
           "name": "최우진",
@@ -261,7 +249,9 @@
           "apps": 4,
           "minutes": 251,
           "score": 28.87
-        },
+        }
+      ],
+      "bench": [
         {
           "player_id": "20180212",
           "name": "김승섭",
@@ -301,12 +291,28 @@
           "apps": 2,
           "minutes": 208,
           "score": 22.0
+        },
+        {
+          "player_id": "20190084",
+          "name": "맹성웅",
+          "back_no": 6,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 5,
+          "minutes": 216,
+          "score": 21.36
         }
       ],
       "sample_games": 5,
       "confidence": "높음",
-      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
-      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+      "excluded": [
+        {
+          "name": "조위제",
+          "reason": "경고 누적 출전정지"
+        }
+      ],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다. 제외: 조위제 · 경고 누적 출전정지."
     },
     "away": {
       "team": "서울",
@@ -316,16 +322,6 @@
           "name": "구성윤",
           "back_no": 25,
           "pos": "GK",
-          "starts": 5,
-          "apps": 5,
-          "minutes": 517,
-          "score": 64.99
-        },
-        {
-          "player_id": "20170185",
-          "name": "김진수",
-          "back_no": 22,
-          "pos": "DF",
           "starts": 5,
           "apps": 5,
           "minutes": 517,
@@ -420,18 +416,6 @@
           "apps": 5,
           "minutes": 302,
           "score": 42.57
-        }
-      ],
-      "bench": [
-        {
-          "player_id": "20180034",
-          "name": "송민규",
-          "back_no": 34,
-          "pos": "MF",
-          "starts": 3,
-          "apps": 5,
-          "minutes": 297,
-          "score": 32.31
         },
         {
           "player_id": "20170229",
@@ -442,7 +426,9 @@
           "apps": 5,
           "minutes": 265,
           "score": 28.65
-        },
+        }
+      ],
+      "bench": [
         {
           "player_id": "20200041",
           "name": "최준",
@@ -472,12 +458,42 @@
           "apps": 2,
           "minutes": 23,
           "score": 5.63
+        },
+        {
+          "player_id": "20230034",
+          "name": "천성훈",
+          "back_no": 19,
+          "pos": "",
+          "starts": 0,
+          "apps": 1,
+          "minutes": 24,
+          "score": 3.24
+        },
+        {
+          "player_id": "20220163",
+          "name": "박성훈",
+          "back_no": 40,
+          "pos": "",
+          "starts": 0,
+          "apps": 1,
+          "minutes": 56,
+          "score": 1.16
         }
       ],
       "sample_games": 5,
       "confidence": "높음",
-      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
-      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+      "excluded": [
+        {
+          "name": "김진수",
+          "reason": "경고 누적 출전정지(자동)"
+        },
+        {
+          "name": "송민규",
+          "reason": "해외 이적"
+        }
+      ],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다. 제외: 김진수 · 경고 누적 출전정지(자동); 송민규 · 해외 이적."
     }
   },
   "h2h_summary": {

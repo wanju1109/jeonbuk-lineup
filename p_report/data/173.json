@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-13 19:00 KST",
     "date_md": "09/13",
     "label": "김천 VS 강원 (173, 09/13)",
-    "hours_to_kickoff": 58.7,
+    "hours_to_kickoff": 57.4,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-11T08:18:54.673189+09:00",
+    "generated_at": "2026-09-11T09:35:41.803822+09:00",
     "preview_hours": 48.0
   },
   "headline": "29R PREVIEW · 김천 vs 강원",
@@ -228,16 +228,6 @@
           "score": 46.96
         },
         {
-          "player_id": "20220139",
-          "name": "박철우",
-          "back_no": 3,
-          "pos": "DF",
-          "starts": 4,
-          "apps": 4,
-          "minutes": 409,
-          "score": 43.99
-        },
-        {
           "player_id": "20230157",
           "name": "정재민",
           "back_no": 57,
@@ -246,9 +236,7 @@
           "apps": 4,
           "minutes": 260,
           "score": 39.73
-        }
-      ],
-      "bench": [
+        },
         {
           "player_id": "20200164",
           "name": "이건희",
@@ -258,7 +246,9 @@
           "apps": 3,
           "minutes": 243,
           "score": 28.23
-        },
+        }
+      ],
+      "bench": [
         {
           "player_id": "20200105",
           "name": "홍시후",
@@ -298,12 +288,28 @@
           "apps": 4,
           "minutes": 129,
           "score": 19.29
+        },
+        {
+          "player_id": "20200174",
+          "name": "김인균",
+          "back_no": 21,
+          "pos": "",
+          "starts": 0,
+          "apps": 4,
+          "minutes": 89,
+          "score": 9.29
         }
       ],
       "sample_games": 5,
       "confidence": "높음",
-      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
-      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+      "excluded": [
+        {
+          "name": "박철우",
+          "reason": "경고 누적 출전정지(자동)"
+        }
+      ],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다. 제외: 박철우 · 경고 누적 출전정지(자동)."
     },
     "away": {
       "team": "강원",
@@ -473,8 +479,9 @@
       ],
       "sample_games": 5,
       "confidence": "높음",
-      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출",
-      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 반영되지 않습니다. 공식 선발 명단과 다를 수 있습니다."
+      "excluded": [],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다."
     }
   },
   "h2h_summary": {
