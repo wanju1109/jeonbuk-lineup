@@ -1,18 +1,20 @@
 {
   "as_of": "2026-09-11",
-  "note": "Manual overrides for expected XI / bench. Auto yellow-ban still applies on top.",
+  "note": "Manual overrides for expected XI / bench. Auto yellow-ban still applies on top. announce=false still drops the player from XI/bench but hides the UI note.",
   "players": [
     {
       "player_id": "20220174",
       "name": "조위제",
       "reason": "경고 누적 출전정지",
-      "team_ids": ["K05"]
+      "team_ids": ["K05"],
+      "announce": true
     },
     {
       "player_id": "20180034",
       "name": "송민규",
       "reason": "해외 이적",
-      "team_ids": ["K09", "K05"]
+      "team_ids": ["K09", "K05"],
+      "announce": false
     }
   ]
 }

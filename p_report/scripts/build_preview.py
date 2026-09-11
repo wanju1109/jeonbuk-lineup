@@ -1465,10 +1465,10 @@ def build_match_pulse(team_a: str, team_b: str, form_a: list[dict], form_b: list
             "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"}
 
 
-def load_lineup_exclusions(team_id: str | None = None) -> dict[str, str]:
-    """player_id -> reason from manual override file."""
+def load_lineup_exclusions(team_id: str | None = None) -> dict[str, dict]:
+    """player_id -> {reason, announce} from manual override file."""
     data = load_json(EXCLUSIONS_PATH)
-    out: dict[str, str] = {}
+    out: dict[str, dict] = {}
     if not isinstance(data, dict):
         return out
     want = str(team_id or "").upper()
@@ -1482,7 +1482,11 @@ def load_lineup_exclusions(team_id: str | None = None) -> dict[str, str]:
         if want and team_ids and want not in team_ids:
             continue
         reason = str(row.get("reason") or "제외").strip() or "제외"
-        out[pid] = reason
+        announce = row.get("announce")
+        if announce is None:
+            # Transfers/releases stay silent; discipline notes stay visible.
+            announce = not any(k in reason for k in ("이적", "방출", "계약해지", "은퇴"))
+        out[pid] = {"reason": reason, "announce": bool(announce)}
     return out
 
 
@@ -1633,9 +1637,11 @@ def unavailable_player_ids(
     catalog: dict[str, dict],
     team: str,
     team_id: str,
-) -> dict[str, str]:
-    """player_id -> reason for XI/bench exclusion."""
-    blocked = load_lineup_exclusions(team_id)
+) -> tuple[dict[str, str], dict[str, bool]]:
+    """Return (player_id -> reason, player_id -> announce_in_ui)."""
+    manual = load_lineup_exclusions(team_id)
+    blocked: dict[str, str] = {pid: str(meta.get("reason") or "제외") for pid, meta in manual.items()}
+    announce: dict[str, bool] = {pid: bool(meta.get("announce", True)) for pid, meta in manual.items()}
     ledger = team_yellow_ledger(catalog, team_id)
     finished = finished_team_game_ids(team)
     for pid, apps in ledger.items():
@@ -1643,7 +1649,8 @@ def unavailable_player_ids(
             continue
         if yellow_ban_pending(apps, finished):
             blocked[pid] = "경고 누적 출전정지(자동)"
-    return blocked
+            announce[pid] = True
+    return blocked, announce
 
 
 def build_lineup_projection(catalog: dict[str, dict], team: str, team_id: str, limit: int = 5) -> dict:
@@ -1651,7 +1658,7 @@ def build_lineup_projection(catalog: dict[str, dict], team: str, team_id: str, l
     refs = recent_chalkboard_refs(catalog, team, limit)
     bucket: dict[str, dict] = {}
     used = 0
-    blocked = unavailable_player_ids(catalog, team, team_id)
+    blocked, announce = unavailable_player_ids(catalog, team, team_id)
     excluded_notes: list[str] = []
     for order, (year, gid) in enumerate(refs, start=1):
         data = load_json(match_raw_path(year, gid))
@@ -1666,10 +1673,11 @@ def build_lineup_projection(catalog: dict[str, dict], team: str, team_id: str, l
                 if not pid:
                     continue
                 if pid in blocked:
-                    name = str(pl.get("name") or pid)
-                    note = f"{name} · {blocked[pid]}"
-                    if note not in excluded_notes:
-                        excluded_notes.append(note)
+                    if announce.get(pid, True):
+                        name = str(pl.get("name") or pid)
+                        note = f"{name} · {blocked[pid]}"
+                        if note not in excluded_notes:
+                            excluded_notes.append(note)
                     continue
                 row = bucket.setdefault(
                     pid,
