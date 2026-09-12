@@ -17,18 +17,18 @@
     "jeonbuk_match": false,
     "venue": "부천 종합",
     "attendance_hint": {
-      "avg": 6746,
-      "games": 15,
-      "total": 101193
+      "avg": 6716,
+      "games": 16,
+      "total": 107462
     },
     "kickoff": "2026-09-19T19:00:00+09:00",
     "kickoff_label": "2026-09-19 19:00 KST",
     "date_md": "09/19",
     "label": "부천 VS 김천 (175, 09/19)",
-    "hours_to_kickoff": 162.3,
+    "hours_to_kickoff": 157.3,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-13T00:40:14.765826+09:00",
+    "generated_at": "2026-09-13T05:41:58.256608+09:00",
     "preview_hours": 48.0
   },
   "headline": "30R PREVIEW · 부천 vs 김천",

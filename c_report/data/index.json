@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T17:32:13.977197+00:00",
+  "updated_at": "2026-09-12T20:40:08.069416+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -387,9 +387,7 @@
       "venue": "인천 전용",
       "attendance": 11056,
       "file": "./data/154.json",
-      "label": "인천 VS 전북 (154, 08/30)",
-      "attendance_home": 9197,
-      "attendance_away": 1859
+      "label": "인천 VS 전북 (154, 08/30)"
     },
     {
       "game_id": "159",
