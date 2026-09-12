@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T15:38:24.413247+00:00",
+  "updated_at": "2026-09-12T17:32:13.977197+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -387,7 +387,9 @@
       "venue": "인천 전용",
       "attendance": 11056,
       "file": "./data/154.json",
-      "label": "인천 VS 전북 (154, 08/30)"
+      "label": "인천 VS 전북 (154, 08/30)",
+      "attendance_home": 9197,
+      "attendance_away": 1859
     },
     {
       "game_id": "159",
@@ -430,7 +432,9 @@
       "venue": "전주 월드컵",
       "attendance": 18821,
       "file": "./data/169.json",
-      "label": "전북 VS 서울 (169, 09/12)"
+      "label": "전북 VS 서울 (169, 09/12)",
+      "attendance_home": 18821,
+      "attendance_away": 0
     }
   ]
 }

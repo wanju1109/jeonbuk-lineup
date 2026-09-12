@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-09-11T17:59:33.198780+00:00",
+  "updated_at": "2026-09-12T17:32:12.712690+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
-  "count": 167,
+  "count": 171,
   "games": {
     "72": {
       "game_id": "72",
@@ -226,6 +226,20 @@
       "attendance": 18841,
       "attendance_home": 16751,
       "attendance_away": 2090,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
+    "169": {
+      "game_id": "169",
+      "year": "2026",
+      "date": "2026-09-12",
+      "home": "전북",
+      "away": "서울",
+      "score": "1:2",
+      "venue": "전주 월드컵 경기장",
+      "attendance": 18821,
+      "attendance_home": 18821,
+      "attendance_away": 0,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -521,6 +535,20 @@
       "attendance_home": 10738,
       "attendance_away": 596,
       "weekday": "-",
+      "meet_seq": 1
+    },
+    "170": {
+      "game_id": "170",
+      "year": "2026",
+      "date": "2026-09-12",
+      "home": "울산",
+      "away": "인천",
+      "score": "2:1",
+      "venue": "울산 문수 축구경기장",
+      "attendance": 11167,
+      "attendance_home": 10373,
+      "attendance_away": 794,
+      "weekday": "주말",
       "meet_seq": 1
     },
     "114": {
@@ -1083,6 +1111,20 @@
       "weekday": "주말",
       "meet_seq": 1
     },
+    "172": {
+      "game_id": "172",
+      "year": "2026",
+      "date": "2026-09-12",
+      "home": "대전",
+      "away": "포항",
+      "score": "2:2",
+      "venue": "대전 월드컵 경기장",
+      "attendance": 7686,
+      "attendance_home": 6920,
+      "attendance_away": 766,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
     "65": {
       "game_id": "65",
       "year": "2026",
@@ -1318,6 +1360,20 @@
       "attendance": 6311,
       "attendance_home": 5964,
       "attendance_away": 347,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
+    "171": {
+      "game_id": "171",
+      "year": "2026",
+      "date": "2026-09-12",
+      "home": "부천",
+      "away": "제주",
+      "score": "2:2",
+      "venue": "부천 종합 운동장",
+      "attendance": 6269,
+      "attendance_home": 5774,
+      "attendance_away": 495,
       "weekday": "주말",
       "meet_seq": 1
     },
