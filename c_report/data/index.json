@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T04:44:33.069806+00:00",
+  "updated_at": "2026-09-12T10:58:17.520771+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -418,6 +418,19 @@
       "label": "강원 VS 전북 (166, 09/09)",
       "attendance_home": 4872,
       "attendance_away": 194
+    },
+    {
+      "game_id": "169",
+      "year": "2026",
+      "round": 29,
+      "home": "전북",
+      "away": "서울",
+      "score": "1:2",
+      "date": "2026-09-12",
+      "venue": "전주 월드컵",
+      "attendance": 18821,
+      "file": "./data/169.json",
+      "label": "전북 VS 서울 (169, 09/12)"
     }
   ]
 }
