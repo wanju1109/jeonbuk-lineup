@@ -25,38 +25,37 @@
     "kickoff_label": "2026-09-20 19:00 KST",
     "date_md": "09/20",
     "label": "전북 VS 광주 (178, 09/20)",
-    "hours_to_kickoff": 173.0,
+    "hours_to_kickoff": 165.9,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-13T14:02:30.335231+09:00",
+    "generated_at": "2026-09-13T21:06:55.477529+09:00",
     "preview_hours": 48.0
   },
   "headline": "30R PREVIEW · 전북 vs 광주",
-  "thesis": "전북 vs 광주. 전북 최근 D D W D L, 광주 최근 L D L D L. 홈에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
+  "thesis": "전북 vs 광주. 전북 최근 D D W D L, 광주 최근 D L D L D. 홈에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
   "briefing": [
-    "전북 vs 광주. 전북 최근 D D W D L (1승 3무 1패 / 최근 5경기, 5득 3실). 광주은 L D L D L (0승 2무 3패 / 최근 5경기, 6득 11실).",
-    "최근 5경기 평균 — 전북 xG 0.67·슈팅 8.6·유효슈팅 3.6, 광주 xG 1.18·슈팅 9.0·유효슈팅 5.2. 패스 성공률 77.4% vs 75.2%.",
+    "전북 vs 광주. 전북 최근 D D W D L (1승 3무 1패 / 최근 5경기, 5득 3실). 광주은 D L D L D (0승 3무 2패 / 최근 5경기, 7득 11실).",
+    "최근 5경기 평균 — 전북 xG 0.67·슈팅 8.6·유효슈팅 3.6, 광주 xG 1.25·슈팅 10.2·유효슈팅 5.0. 패스 성공률 77.4% vs 75.7%.",
     "올 시즌 맞대결 2경기 — 전북 1승 1무 0패.",
     "경기장 전주 월드컵 · 전북 홈. 전주 홈에서 템포와 라인 높이를 올리는 쪽이 유리합니다.",
     "선수 포커스 — 전북: 최근 가용 칠판 데이터 5경기 기준, 광주: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "전북은 비기는 흐름, 기회 부족, 낮은 블록형 흐름이고, 광주은(는) 부진, 비기는 흐름, 수비 기회 허용 그림입니다. 최근 xG 0.67 vs 1.18, 슈팅 8.6 vs 9.0, 유효슈팅 3.6 vs 5.2, 패스 성공률 77.4% vs 75.2%, 파이널 서드 터치 18.3% vs 15.1%, 평균 터치 높이 42.2 vs 48.6, 압박 12.6 vs 12.0입니다.",
+    "contrast": "전북은 비기는 흐름, 기회 부족, 낮은 블록형 흐름이고, 광주은(는) 비기는 흐름, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 0.67 vs 1.25, 슈팅 8.6 vs 10.2, 유효슈팅 3.6 vs 5.0, 패스 성공률 77.4% vs 75.7%, 파이널 서드 터치 18.3% vs 15.3%, 평균 터치 높이 42.2 vs 50.0, 압박 12.6 vs 13.0입니다.",
     "edge": [
       "전북이 허용 xG 1.09로 수비 기회 관리가 광주(2.13)보다 낫습니다.",
-      "광주 최근 흐름이 좋지 않습니다. 초반 압박으로 실수를 유도할 만합니다.",
       "홈 이점. 전주에서 라인 높이를 올려도 관중·익숙한 공간이 받쳐 줍니다."
     ],
     "risk": [
       "전북 최근 기회 질이 낮습니다. 점유만 하고 슈팅 질이 떨어지면 역습에 취약합니다.",
-      "광주 xG 1.18가 전북(0.67)보다 높습니다. 기회 질 격차를 전환 수비로 메워야 합니다.",
+      "광주 xG 1.25가 전북(0.67)보다 높습니다. 기회 질 격차를 전환 수비로 메워야 합니다.",
       "광주형 낮은 블록은 전북 템포를 죽입니다. 점유만 높고 마무리가 약하면 역습 한 방에 끌려갈 수 있습니다."
     ],
     "target": [
       "박스 밖 남발보다 오버랩·하프스페이스 침투 후 컷백을 노리는 편이 맞습니다.",
       "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
       "광주의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
-      "필드 틸트 지표: 파이널 서드 18.3% vs 15.1%, 터치 높이 42.2 vs 48.6.",
+      "필드 틸트 지표: 파이널 서드 18.3% vs 15.3%, 터치 높이 42.2 vs 50.0.",
       "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
     ],
     "caution": [
@@ -68,7 +67,7 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 0.67,
-        "opponent": 1.18,
+        "opponent": 1.25,
         "better": "opponent"
       },
       {
@@ -80,37 +79,37 @@
       {
         "label": "슈팅",
         "jeonbuk": 8.6,
-        "opponent": 9.0,
+        "opponent": 10.2,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 3.6,
-        "opponent": 5.2,
+        "opponent": 5.0,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 77.4,
-        "opponent": 75.2,
+        "opponent": 75.7,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 18.3,
-        "opponent": 15.1,
+        "opponent": 15.3,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 12.6,
-        "opponent": 12.0,
-        "better": "jeonbuk"
+        "opponent": 13.0,
+        "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 전북 xG 0.67 / xGA 1.09, 광주 xG 1.18 / xGA 2.13."
+    "summary": "최근 5경기 기준 — 전북 xG 0.67 / xGA 1.09, 광주 xG 1.25 / xGA 2.13."
   },
   "pulse": {
     "home": {
@@ -127,11 +126,11 @@
     "away": {
       "name": "광주",
       "sample": 5,
-      "points": 2,
-      "ppg": 0.4,
-      "goals_pg": 1.2,
+      "points": 3,
+      "ppg": 0.6,
+      "goals_pg": 1.4,
       "conceded_pg": 2.2,
-      "xg_delta": 0.11,
+      "xg_delta": 0.74,
       "xg_sample": 5,
       "clean_sheets": 0
     },
@@ -590,24 +589,6 @@
     ],
     "opponent": [
       {
-        "game_id": "144",
-        "year": "2026",
-        "round": 24,
-        "date": "2026-08-23",
-        "home": "광주",
-        "away": "인천",
-        "score": "0:1",
-        "result": "L",
-        "opponent": "인천",
-        "ha": "H",
-        "xg": 1.18,
-        "xga": 1.1,
-        "shots": 8,
-        "sot": 4,
-        "goals_for": 0,
-        "goals_against": 1
-      },
-      {
         "game_id": "150",
         "year": "2026",
         "round": 25,
@@ -702,6 +683,30 @@
         "final_third_pct": 21.8,
         "presses": 26,
         "stats_source": "portal"
+      },
+      {
+        "game_id": "174",
+        "year": "2026",
+        "round": 29,
+        "date": "2026-09-13",
+        "home": "광주",
+        "away": "안양",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "안양",
+        "ha": "H",
+        "xg": 1.55,
+        "xga": 1.1,
+        "shots": 14,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 79.2,
+        "final_third_pct": 17.5,
+        "presses": 14,
+        "stats_source": "portal"
       }
     ]
   },
@@ -754,23 +759,22 @@
       "name": "광주",
       "team_id": "K22",
       "tags": [
-        "부진",
         "비기는 흐름",
         "수비 기회 허용",
         "낮은 블록형"
       ],
-      "record": "0승 2무 3패 / 최근 5경기",
-      "goals_for": 6,
+      "record": "0승 3무 2패 / 최근 5경기",
+      "goals_for": 7,
       "goals_against": 11,
-      "goal_diff": -5,
-      "avg_xg": 1.18,
+      "goal_diff": -4,
+      "avg_xg": 1.25,
       "avg_xga": 2.13,
-      "avg_shots": 9.0,
-      "avg_sot": 5.2,
-      "avg_pass_pct": 75.2,
-      "avg_final_third_pct": 15.1,
-      "avg_presses": 12.0,
-      "avg_x": 48.6,
+      "avg_shots": 10.2,
+      "avg_sot": 5.0,
+      "avg_pass_pct": 75.7,
+      "avg_final_third_pct": 15.3,
+      "avg_presses": 13.0,
+      "avg_x": 50.0,
       "samples": 5
     }
   },

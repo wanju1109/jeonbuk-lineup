@@ -25,23 +25,23 @@
     "kickoff_label": "2026-09-19 19:00 KST",
     "date_md": "09/19",
     "label": "안양 VS 울산 (176, 09/19)",
-    "hours_to_kickoff": 149.0,
+    "hours_to_kickoff": 141.9,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-13T14:02:06.029876+09:00",
+    "generated_at": "2026-09-13T21:06:23.619182+09:00",
     "preview_hours": 48.0
   },
   "headline": "30R PREVIEW · 안양 vs 울산",
-  "thesis": "안양 vs 울산. 안양 최근 L W D L L, 울산 최근 L W D W W. 홈 안양이(가) 템포를 가져가며 xG 0.73 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "안양 vs 울산. 안양 최근 W D L L D, 울산 최근 L W D W W. 홈 안양이(가) 템포를 가져가며 xG 0.89 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
-    "안양 vs 울산. 안양 최근 L W D L L (1승 1무 3패 / 최근 5경기). 울산 최근 L W D W W (3승 1무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 안양 xG 0.73·슈팅 7.2, 울산 xG 1.68·슈팅 11.2. 패스 성공률 73.5% vs 62.1%.",
+    "안양 vs 울산. 안양 최근 W D L L D (1승 2무 2패 / 최근 5경기). 울산 최근 L W D W W (3승 1무 1패 / 최근 5경기).",
+    "최근 5경기 평균 — 안양 xG 0.89·슈팅 9.2, 울산 xG 1.68·슈팅 11.2. 패스 성공률 75.0% vs 62.1%.",
     "올 시즌 맞대결 2경기 — 안양 기준 0승 1무 1패.",
     "경기장 안양 종합 · 안양 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 안양: 최근 가용 칠판 데이터 5경기 기준, 울산: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "안양은 부진, 기회 부족, 수비 기회 허용 흐름이고, 울산은(는) 상승세, 기회 창출↑, 수비 기회 허용 그림입니다. 최근 xG 0.73 vs 1.68, 슈팅 7.2 vs 11.2, 파이널 서드 터치 19.1% vs 22.8%입니다.",
+    "contrast": "안양은 비기는 흐름, 기회 부족, 수비 기회 허용 흐름이고, 울산은(는) 상승세, 기회 창출↑, 수비 기회 허용 그림입니다. 최근 xG 0.89 vs 1.68, 슈팅 9.2 vs 11.2, 파이널 서드 터치 18.7% vs 22.8%입니다.",
     "edge": [
       "홈 이점(안양). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -62,38 +62,38 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 0.73,
+        "jeonbuk": 0.89,
         "opponent": 1.68,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.59,
+        "jeonbuk": 1.38,
         "opponent": 1.59,
-        "better": "even"
+        "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 7.2,
+        "jeonbuk": 9.2,
         "opponent": 11.2,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 2.0,
+        "jeonbuk": 2.4,
         "opponent": 4.5,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 73.5,
+        "jeonbuk": 75.0,
         "opponent": 62.1,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 19.1,
+        "jeonbuk": 18.7,
         "opponent": 22.8,
         "suffix": "%",
         "better": "opponent"
@@ -105,17 +105,17 @@
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 안양 xG 0.73 / xGA 1.59, 울산 xG 1.68 / xGA 1.59."
+    "summary": "최근 5경기 기준 — 안양 xG 0.89 / xGA 1.38, 울산 xG 1.68 / xGA 1.59."
   },
   "pulse": {
     "home": {
       "name": "안양",
       "sample": 5,
-      "points": 4,
-      "ppg": 0.8,
-      "goals_pg": 1.0,
-      "conceded_pg": 2.8,
-      "xg_delta": 1.36,
+      "points": 5,
+      "ppg": 1.0,
+      "goals_pg": 1.2,
+      "conceded_pg": 1.8,
+      "xg_delta": 1.54,
       "xg_sample": 5,
       "clean_sheets": 0
     },
@@ -488,24 +488,6 @@
   "form": {
     "jeonbuk": [
       {
-        "game_id": "139",
-        "year": "2026",
-        "round": 24,
-        "date": "2026-08-22",
-        "home": "안양",
-        "away": "서울",
-        "score": "0:7",
-        "result": "L",
-        "opponent": "서울",
-        "ha": "H",
-        "xg": 0.28,
-        "xga": 2.62,
-        "shots": 4,
-        "sot": 1,
-        "goals_for": 0,
-        "goals_against": 6
-      },
-      {
         "game_id": "148",
         "year": "2026",
         "round": 25,
@@ -599,6 +581,30 @@
         "pass_pct": 64.4,
         "final_third_pct": 15.0,
         "presses": 12,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "174",
+        "year": "2026",
+        "round": 29,
+        "date": "2026-09-13",
+        "home": "광주",
+        "away": "안양",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "광주",
+        "ha": "A",
+        "xg": 1.1,
+        "xga": 1.55,
+        "shots": 14,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 79.7,
+        "final_third_pct": 19.9,
+        "presses": 14,
         "stats_source": "portal"
       }
     ],
@@ -749,23 +755,23 @@
       "name": "안양",
       "team_id": "K27",
       "tags": [
-        "부진",
+        "비기는 흐름",
         "기회 부족",
         "수비 기회 허용",
         "낮은 블록형"
       ],
-      "record": "1승 1무 3패 / 최근 5경기",
-      "goals_for": 5,
-      "goals_against": 14,
-      "goal_diff": -9,
-      "avg_xg": 0.73,
-      "avg_xga": 1.59,
-      "avg_shots": 7.2,
-      "avg_sot": 2.0,
-      "avg_pass_pct": 73.5,
-      "avg_final_third_pct": 19.1,
+      "record": "1승 2무 2패 / 최근 5경기",
+      "goals_for": 6,
+      "goals_against": 9,
+      "goal_diff": -3,
+      "avg_xg": 0.89,
+      "avg_xga": 1.38,
+      "avg_shots": 9.2,
+      "avg_sot": 2.4,
+      "avg_pass_pct": 75.0,
+      "avg_final_third_pct": 18.7,
       "avg_presses": 13.0,
-      "avg_x": 49.1,
+      "avg_x": 50.0,
       "samples": 5
     },
     "opponent": {
@@ -1252,7 +1258,7 @@
         "울산 최근 xG 1.68로 기회 질이 좋습니다. 라인 간격을 좁히고, 역습 첫 패스 각을 막는 것이 실점 방지의 핵심입니다.",
         "울산이(가) 상승세입니다. 한 골 차 리드에도 역습·세트피스 한 장면을 끝까지 경계하세요.",
         "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요.",
-        "안양 패스 성공률 73.5%가 울산(62.1%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
+        "안양 패스 성공률 75.0%가 울산(62.1%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
       ],
       "players": []
     }
