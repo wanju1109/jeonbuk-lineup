@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k27-sm.png",
   "home_url": "https://www.fc-anyang.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:58:32+09:00",
+  "generated_at": "2026-09-15T05:53:45+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -167,14 +167,14 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 6,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 4,
+        "rank": 3,
         "points": 4,
         "played": 2,
         "gd": 1
@@ -188,7 +188,7 @@
       },
       {
         "round": 4,
-        "rank": 7,
+        "rank": 5,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -216,7 +216,7 @@
       },
       {
         "round": 8,
-        "rank": 6,
+        "rank": 5,
         "points": 10,
         "played": 8,
         "gd": 0
@@ -821,7 +821,7 @@
     "total": 103372,
     "games": 14,
     "home_fans_avg": 6499,
-    "away_fans_avg": 1051
+    "away_fans_avg": 999
   },
   "context": {
     "band": "파이널A 추격",

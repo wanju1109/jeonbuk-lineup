@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:58:32+09:00",
+  "generated_at": "2026-09-15T05:53:44+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -216,7 +216,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
