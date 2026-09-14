@@ -122,7 +122,11 @@
             )}</span>`;
         return `<button class="coach-chip${active}" type="button" data-coach="${escapeHtml(c.id)}">${face}${escapeHtml(
           c.name
-        )}</button>`;
+        )}${
+          Number.isFinite(Number(c.rating))
+            ? `<span class="chip-score">${escapeHtml(String(Math.round(Number(c.rating))))}</span>`
+            : ""
+        }</button>`;
       })
       .join("");
   }
@@ -147,6 +151,63 @@
       `<p class="standfirst">${escapeHtml(c.standfirst || "")}</p>` +
       (c.photo_credit ? `<p class="photo-credit">${escapeHtml(c.photo_credit)}</p>` : "") +
       `</div>`;
+  }
+
+  function clamp(n, lo, hi) {
+    const v = Number(n);
+    if (!Number.isFinite(v)) return lo;
+    return Math.min(hi, Math.max(lo, Math.round(v)));
+  }
+
+  function tone20(value) {
+    if (value >= 15) return "is-high";
+    if (value >= 12) return "is-mid";
+    return "is-low";
+  }
+
+  function renderScout() {
+    const box = $("scoutCard");
+    const c = state.coach;
+    if (!box || !c) return;
+    const score = clamp(c.rating, 0, 100);
+    const tactics = c.tactics || {};
+    const pills = [
+      ["전술 유형", tactics.kind],
+      ["경기 스타일", tactics.style],
+      ["선호 포메이션", tactics.shape],
+      ["보조 포메이션", tactics.alt],
+    ]
+      .filter((row) => row[1])
+      .map(
+        ([label, value]) =>
+          `<div class="tactic-pill"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`
+      )
+      .join("");
+    const attrs = (c.abilities || [])
+      .map((row) => {
+        const value = clamp(row.value, 1, 20);
+        const tone = tone20(value);
+        return (
+          `<div class="ability-row"><label>${escapeHtml(row.label || "")}</label>` +
+          `<b class="${tone}">${value}</b>` +
+          `<div class="ability-track"><div class="ability-fill ${tone}" style="width:${(value / 20) * 100}%"></div></div></div>`
+        );
+      })
+      .join("");
+    box.innerHTML =
+      `<div class="scout-gauge">` +
+      `<svg class="gauge" viewBox="0 0 168 168" role="img" aria-label="추천도 ${score}점">` +
+      `<circle class="gauge-ring gauge-track" cx="84" cy="84" r="70"></circle>` +
+      `<circle class="gauge-ring gauge-value" cx="84" cy="84" r="70" pathLength="100" ` +
+      `stroke-dasharray="${score} 100"></circle>` +
+      `<text class="gauge-score" x="84" y="86" text-anchor="middle">${score}</text>` +
+      `<text class="gauge-label" x="84" y="110" text-anchor="middle">추천도</text>` +
+      `<text class="gauge-max" x="84" y="126" text-anchor="middle">100점</text>` +
+      `</svg>` +
+      (c.rating_note ? `<p class="scout-note">${escapeHtml(c.rating_note)}</p>` : "") +
+      `</div>` +
+      `<div class="scout-body"><div class="tactic-pills">${pills}</div><div class="ability-grid">${attrs}</div>` +
+      `<p class="ability-caption">능력치 20점 만점 · 추천도 100점 만점 · 편집부 해석</p></div>`;
   }
 
   function renderTraits() {
@@ -206,7 +267,7 @@
       photo,
       `<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">${escapeHtml(c.name)} · ${escapeHtml(
         c.club
-      )}</p>`,
+      )}${Number.isFinite(Number(c.rating)) ? ` · 추천도 ${escapeHtml(String(Math.round(Number(c.rating))))}` : ""}</p>`,
       `<p style="margin:0 0 12px;font-size:14px;line-height:1.5;color:#ddd4c4;">${escapeHtml(c.headline || "")}</p>`,
       `<p style="margin:0 0 14px;font-size:13px;line-height:1.6;color:#ddd4c4;">${escapeHtml(
         (c.sections?.[0]?.paragraphs || [])[0] || c.standfirst || ""
@@ -240,6 +301,7 @@
     });
     renderChips();
     renderPortrait();
+    renderScout();
     renderTraits();
     renderColumn();
     renderTimeline();
