@@ -196,13 +196,34 @@
     return "is-low";
   }
 
+  function abilityOf(c, label) {
+    const row = (c.abilities || []).find((item) => item.label === label);
+    return clamp(row ? row.value : 1, 1, 20);
+  }
+
+  function tendencyOf(c) {
+    if (c.tendency) return c.tendency;
+    const att = abilityOf(c, "공격");
+    const def = abilityOf(c, "수비");
+    if (att - def >= 3) return "공격형";
+    if (def - att >= 3) return "수비형";
+    return "밸런스";
+  }
+
+  function isAxisLabel(label) {
+    return label === "공격" || label === "수비";
+  }
+
   function renderScout() {
     const box = $("scoutCard");
     const c = state.coach;
     if (!box || !c) return;
     const score = clamp(c.rating, 0, 100);
+    const att = abilityOf(c, "공격");
+    const def = abilityOf(c, "수비");
     const tactics = c.tactics || {};
     const pills = [
+      ["성향", tendencyOf(c)],
       ["전술 유형", tactics.kind],
       ["경기 스타일", tactics.style],
       ["선호 포메이션", tactics.shape],
@@ -214,7 +235,16 @@
           `<div class="tactic-pill"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`
       )
       .join("");
+    const axis =
+      `<div class="axis-board">` +
+      `<div class="axis-col is-att"><span>공격</span><b>${att}</b>` +
+      `<div class="ability-track"><div class="ability-fill is-high" style="width:${(att / 20) * 100}%"></div></div></div>` +
+      `<div class="axis-mid">${escapeHtml(tendencyOf(c))}</div>` +
+      `<div class="axis-col is-def"><span>수비</span><b>${def}</b>` +
+      `<div class="ability-track"><div class="ability-fill is-mid" style="width:${(def / 20) * 100}%"></div></div></div>` +
+      `</div>`;
     const attrs = (c.abilities || [])
+      .filter((row) => !isAxisLabel(row.label))
       .map((row) => {
         const value = clamp(row.value, 1, 20);
         const tone = tone20(value);
@@ -237,8 +267,8 @@
       `</svg>` +
       (c.rating_note ? `<p class="scout-note">${escapeHtml(c.rating_note)}</p>` : "") +
       `</div>` +
-      `<div class="scout-body"><div class="tactic-pills">${pills}</div><div class="ability-grid">${attrs}</div>` +
-      `<p class="ability-caption">능력치 20점 만점 · 추천도 100점 만점 · 편집부 해석</p></div>`;
+      `<div class="scout-body"><div class="tactic-pills">${pills}</div>${axis}<div class="ability-grid">${attrs}</div>` +
+      `<p class="ability-caption">공격·수비와 능력치 20점 만점 · 추천도 100점 만점 · 편집부 해석</p></div>`;
   }
 
   function renderTraits() {
@@ -331,8 +361,9 @@
       .map((label) => {
         const va = mapA[label] || 1;
         const vb = mapB[label] || 1;
+        const axis = isAxisLabel(label) ? " is-axis" : "";
         return (
-          `<div class="cmp-row">` +
+          `<div class="cmp-row${axis}">` +
           `<div class="cmp-track is-left"><i style="width:${(va / 20) * 100}%"></i></div>` +
           `<span class="cmp-val${va > vb ? " is-win" : ""}">${va}</span>` +
           `<span class="cmp-label">${escapeHtml(label)}</span>` +
@@ -348,6 +379,9 @@
       `<h3>${escapeHtml(c.name)}</h3>` +
       `<p class="club-line">${escapeHtml(c.league_name)} · ${escapeHtml(c.club)}</p>` +
       `<p class="club-line">${escapeHtml(c.tactics?.kind || "")} · ${escapeHtml(c.tactics?.shape || "")}</p>` +
+      `<p class="club-line">공격 ${abilityOf(c, "공격")} · 수비 ${abilityOf(c, "수비")} · ${escapeHtml(
+        tendencyOf(c)
+      )}</p>` +
       `</div><div class="compare-score">${score}</div></header>` +
       `<p>${escapeHtml(c.headline || "")}</p>` +
       `</article>`;

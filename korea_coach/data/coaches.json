@@ -90,6 +90,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 17
+        },
+        {
           "label": "기강 유지",
           "value": 17
         },
@@ -121,7 +129,12 @@
           "label": "육성 안목",
           "value": 18
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 17
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c02",
@@ -204,6 +217,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 17
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -235,7 +256,12 @@
           "label": "육성 안목",
           "value": 15
         }
-      ]
+      ],
+      "axis": {
+        "attack": 17,
+        "defense": 15
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c03",
@@ -312,6 +338,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -343,7 +377,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c04",
@@ -425,6 +464,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 14
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -456,7 +503,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 14,
+        "defense": 15
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c05",
@@ -538,6 +590,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 18
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -569,7 +629,12 @@
           "label": "육성 안목",
           "value": 16
         }
-      ]
+      ],
+      "axis": {
+        "attack": 18,
+        "defense": 13
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c06",
@@ -650,6 +715,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -681,7 +754,12 @@
           "label": "육성 안목",
           "value": 15
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 15
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c07",
@@ -757,6 +835,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -788,7 +874,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c08",
@@ -864,6 +955,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 14
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -895,7 +994,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 14,
+        "defense": 16
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c09",
@@ -971,6 +1075,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -1002,7 +1114,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 15
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c10",
@@ -1078,6 +1195,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -1109,7 +1234,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c11",
@@ -1191,6 +1321,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 14
+        },
+        {
+          "label": "수비",
+          "value": 12
+        },
+        {
           "label": "기강 유지",
           "value": 13
         },
@@ -1222,7 +1360,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 14,
+        "defense": 12
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c12",
@@ -1304,6 +1447,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 17
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 19
         },
@@ -1335,7 +1486,12 @@
           "label": "육성 안목",
           "value": 16
         }
-      ]
+      ],
+      "axis": {
+        "attack": 17,
+        "defense": 16
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c13",
@@ -1411,6 +1567,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -1442,7 +1606,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c14",
@@ -1518,6 +1687,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 14
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -1549,7 +1726,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 14
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c15",
@@ -1625,6 +1807,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 17
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -1656,7 +1846,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 17
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c16",
@@ -1732,6 +1927,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -1763,7 +1966,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 13
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c17",
@@ -1839,6 +2047,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 18
+        },
+        {
           "label": "기강 유지",
           "value": 18
         },
@@ -1870,7 +2086,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 18
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c18",
@@ -1941,6 +2162,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 13
         },
@@ -1972,7 +2201,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 13
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c19",
@@ -2043,6 +2277,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -2074,7 +2316,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c20",
@@ -2150,6 +2397,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 11
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -2181,7 +2436,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 11,
+        "defense": 15
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c21",
@@ -2257,6 +2517,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 11
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 17
         },
@@ -2288,7 +2556,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 11,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c22",
@@ -2364,6 +2637,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -2395,7 +2676,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 15
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c23",
@@ -2471,6 +2757,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 12
+        },
+        {
           "label": "기강 유지",
           "value": 12
         },
@@ -2502,7 +2796,12 @@
           "label": "육성 안목",
           "value": 15
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 12
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c24",
@@ -2578,6 +2877,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 14
+        },
+        {
           "label": "기강 유지",
           "value": 13
         },
@@ -2609,7 +2916,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 14
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c25",
@@ -2680,6 +2992,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -2711,7 +3031,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 13
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c26",
@@ -2781,6 +3106,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 14
+        },
+        {
+          "label": "수비",
+          "value": 17
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -2812,7 +3145,12 @@
           "label": "육성 안목",
           "value": 15
         }
-      ]
+      ],
+      "axis": {
+        "attack": 14,
+        "defense": 17
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c27",
@@ -2877,6 +3215,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -2908,7 +3254,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c28",
@@ -2973,6 +3324,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -3004,7 +3363,12 @@
           "label": "육성 안목",
           "value": 18
         }
-      ]
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 13
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c29",
@@ -3069,6 +3433,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 17
+        },
+        {
           "label": "기강 유지",
           "value": 17
         },
@@ -3100,7 +3472,12 @@
           "label": "육성 안목",
           "value": 16
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 17
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c30",
@@ -3165,6 +3542,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 18
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -3196,7 +3581,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 18,
+        "defense": 13
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c31",
@@ -3261,6 +3651,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 14
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -3292,7 +3690,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 14,
+        "defense": 15
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c32",
@@ -3357,6 +3760,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 17
+        },
+        {
+          "label": "수비",
+          "value": 14
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -3388,7 +3799,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 17,
+        "defense": 14
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c33",
@@ -3458,6 +3874,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -3489,7 +3913,12 @@
           "label": "육성 안목",
           "value": 16
         }
-      ]
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 15
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c34",
@@ -3554,6 +3983,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 14
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -3585,7 +4022,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 14
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c35",
@@ -3650,6 +4092,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 13
         },
@@ -3681,7 +4131,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 13
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c36",
@@ -3746,6 +4201,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -3777,7 +4240,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c37",
@@ -3842,6 +4310,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 17
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -3873,7 +4349,12 @@
           "label": "육성 안목",
           "value": 15
         }
-      ]
+      ],
+      "axis": {
+        "attack": 17,
+        "defense": 16
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c38",
@@ -3938,6 +4419,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 11
+        },
+        {
           "label": "기강 유지",
           "value": 12
         },
@@ -3969,7 +4458,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 11
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c39",
@@ -4034,6 +4528,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -4065,7 +4567,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 15
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c40",
@@ -4130,6 +4637,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 14
+        },
+        {
+          "label": "수비",
+          "value": 17
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -4161,7 +4676,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 14,
+        "defense": 17
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c41",
@@ -4226,6 +4746,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 18
+        },
+        {
           "label": "기강 유지",
           "value": 17
         },
@@ -4257,7 +4785,12 @@
           "label": "육성 안목",
           "value": 15
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 18
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c42",
@@ -4322,6 +4855,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -4353,7 +4894,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 13
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c43",
@@ -4418,6 +4964,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 11
+        },
+        {
+          "label": "수비",
+          "value": 18
+        },
+        {
           "label": "기강 유지",
           "value": 17
         },
@@ -4449,7 +5003,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 11,
+        "defense": 18
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c44",
@@ -4514,6 +5073,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -4545,7 +5112,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 15
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c45",
@@ -4610,6 +5182,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 14
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -4641,7 +5221,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 14,
+        "defense": 16
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c46",
@@ -4711,6 +5296,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 13
         },
@@ -4742,7 +5335,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 13
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c47",
@@ -4807,6 +5405,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 13
+        },
+        {
+          "label": "수비",
+          "value": 17
+        },
+        {
           "label": "기강 유지",
           "value": 17
         },
@@ -4838,7 +5444,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 13,
+        "defense": 17
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c48",
@@ -4903,6 +5514,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 14
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -4934,7 +5553,12 @@
           "label": "육성 안목",
           "value": 15
         }
-      ]
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 14
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c49",
@@ -4999,6 +5623,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 11
+        },
+        {
+          "label": "수비",
+          "value": 17
+        },
+        {
           "label": "기강 유지",
           "value": 17
         },
@@ -5030,7 +5662,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 11,
+        "defense": 17
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c50",
@@ -5095,6 +5732,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 16
         },
@@ -5126,7 +5771,12 @@
           "label": "육성 안목",
           "value": 14
         }
-      ]
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 16
+      },
+      "tendency": "밸런스"
     },
     {
       "id": "c51",
@@ -5191,6 +5841,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 16
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -5222,7 +5880,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 16
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c52",
@@ -5287,6 +5950,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 12
+        },
+        {
           "label": "기강 유지",
           "value": 13
         },
@@ -5318,7 +5989,12 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 12
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c53",
@@ -5388,6 +6064,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 17
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 15
         },
@@ -5419,7 +6103,12 @@
           "label": "육성 안목",
           "value": 16
         }
-      ]
+      ],
+      "axis": {
+        "attack": 17,
+        "defense": 13
+      },
+      "tendency": "공격형"
     },
     {
       "id": "c54",
@@ -5484,6 +6173,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 12
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -5515,7 +6212,12 @@
           "label": "육성 안목",
           "value": 12
         }
-      ]
+      ],
+      "axis": {
+        "attack": 12,
+        "defense": 15
+      },
+      "tendency": "수비형"
     },
     {
       "id": "c55",
@@ -5580,6 +6282,14 @@
       },
       "abilities": [
         {
+          "label": "공격",
+          "value": 16
+        },
+        {
+          "label": "수비",
+          "value": 13
+        },
+        {
           "label": "기강 유지",
           "value": 14
         },
@@ -5611,7 +6321,354 @@
           "label": "육성 안목",
           "value": 13
         }
-      ]
+      ],
+      "axis": {
+        "attack": 16,
+        "defense": 13
+      },
+      "tendency": "공격형"
+    },
+    {
+      "id": "c56",
+      "name": "김두현",
+      "club": "베트남 수석",
+      "club_id": "",
+      "league": "ETC",
+      "league_name": "기타",
+      "color": "#037340",
+      "emblem": "",
+      "born": "1982.07.14",
+      "player_pos": "미드필더",
+      "nickname": "테크니션",
+      "appointed": "2026.06 수석",
+      "photo": "",
+      "photo_credit": "",
+      "headline": "전북 벤치를 앉았다가, 김상식의 옆자리에서 동남아를 다시 배우는 사람",
+      "standfirst": "전북 감독 이후 K리그 TSG를 거쳐 2026년 6월 베트남 대표팀 수석코치로 김상식과 다시 붙었다.",
+      "strengths": [
+        "중원의 볼 이해",
+        "빅클럽 라커룸 경험",
+        "김상식과의 호흡"
+      ],
+      "weaknesses": [
+        "전북 사령탑 성적이 짧았음",
+        "지금은 감독이 아니라 수석",
+        "다음 벤치가 성적표보다 먼저 평가됨"
+      ],
+      "timeline": [
+        {
+          "year": "선수",
+          "title": "성남·수원·대표",
+          "text": "테크니션 미드필더. 2006 월드컵."
+        },
+        {
+          "year": "전북",
+          "title": "감독",
+          "text": "코치에서 사령탑. 성적 부진 뒤 이별."
+        },
+        {
+          "year": "2026",
+          "title": "베트남 수석",
+          "text": "김상식 보좌. 아세안컵 준비. 계약은 10월까지."
+        }
+      ],
+      "sections": [
+        {
+          "title": "이 사람",
+          "paragraphs": [
+            "김두현은 이미 전북이라는 큰 벤치를 한 번 앉았다. 그 성적표가 이력의 전부가 되느냐, 수석으로 다시 쌓느냐가 2026의 질문이다."
+          ]
+        },
+        {
+          "title": "그 축구",
+          "paragraphs": [
+            "중원에서 볼을 돌리고 타이밍을 고른다. 전북에서는 그 타이밍이 늦게 보인다는 말이 나왔다. 베트남에서는 김상식의 수비 블록 위에 그 볼을 얹는 자리다."
+          ]
+        }
+      ],
+      "rating": 71,
+      "rating_note": "전북 벤치와 테크니션 이력이 남는다. 지금은 김상식의 옆자리다.",
+      "tactics": {
+        "kind": "점유 지향",
+        "style": "중원 조작 · 전환",
+        "shape": "4-2-3-1",
+        "alt": "4-3-3"
+      },
+      "abilities": [
+        {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 14
+        },
+        {
+          "label": "기강 유지",
+          "value": 13
+        },
+        {
+          "label": "선수 관리",
+          "value": 15
+        },
+        {
+          "label": "승부욕",
+          "value": 15
+        },
+        {
+          "label": "동기부여",
+          "value": 15
+        },
+        {
+          "label": "적응력",
+          "value": 15
+        },
+        {
+          "label": "전술 이해",
+          "value": 16
+        },
+        {
+          "label": "경기 관리",
+          "value": 14
+        },
+        {
+          "label": "육성 안목",
+          "value": 13
+        }
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 14
+      },
+      "tendency": "밸런스"
+    },
+    {
+      "id": "c57",
+      "name": "설기현",
+      "club": "무직",
+      "club_id": "",
+      "league": "ETC",
+      "league_name": "기타",
+      "color": "#C41E3A",
+      "emblem": "",
+      "born": "1979.01.08",
+      "player_pos": "공격수",
+      "nickname": "도르트문트의 골",
+      "appointed": "무직",
+      "photo": "./img/c57.jpg",
+      "photo_credit": "위키미디어 공용 · 풀럼 선수 시절",
+      "headline": "유럽에서 골을 넣던 윙이, 지금은 해설석과 유스 사이에서 다음 벤치를 고른다",
+      "standfirst": "성남·경남 사령탑을 거친 P급. 2026년은 프로 벤치 대신 방송과 유소년 멘토로 현장을 지킨다.",
+      "strengths": [
+        "측면 돌파와 공격 감각",
+        "유럽 무대 경험",
+        "선수에게 전달되는 권위"
+      ],
+      "weaknesses": [
+        "경남 사령탑 성적이 갈림",
+        "최근 일선 공백",
+        "수비 설계보다 공격 이미지가 앞선다"
+      ],
+      "timeline": [
+        {
+          "year": "2002",
+          "title": "월드컵 골",
+          "text": "이탈리아전. 한국 축구의 장면이 됐다."
+        },
+        {
+          "year": "경남",
+          "title": "감독",
+          "text": "프로 사령탑. 성적과 기대의 낙차."
+        },
+        {
+          "year": "2026",
+          "title": "공백",
+          "text": "해설·유스 멘토. U-23 감독 후보군에도 이름이 올랐다."
+        }
+      ],
+      "sections": [
+        {
+          "title": "이 사람",
+          "paragraphs": [
+            "설기현을 빼면 2002의 문장이 비고, P급 명단도 한 칸 빈다. 지금은 90분을 지휘하지 않아도, 공격수 감독을 고를 때 한 번은 호출된다."
+          ]
+        },
+        {
+          "title": "그 축구",
+          "paragraphs": [
+            "측면에서 상대를 깨고 박스에 공을 넣는다. 수비를 먼저 짜는 감독과는 결이 다르다. 그 결이 매력이자 허점이다."
+          ]
+        }
+      ],
+      "rating": 69,
+      "rating_note": "유럽파 윙의 공격 감각은 분명하다. 프로 사령탑 성적은 경남에서 갈렸다.",
+      "tactics": {
+        "kind": "유연한 역습",
+        "style": "측면 공격 · 돌파",
+        "shape": "4-3-3",
+        "alt": "4-2-3-1"
+      },
+      "abilities": [
+        {
+          "label": "공격",
+          "value": 17
+        },
+        {
+          "label": "수비",
+          "value": 12
+        },
+        {
+          "label": "기강 유지",
+          "value": 12
+        },
+        {
+          "label": "선수 관리",
+          "value": 14
+        },
+        {
+          "label": "승부욕",
+          "value": 16
+        },
+        {
+          "label": "동기부여",
+          "value": 16
+        },
+        {
+          "label": "적응력",
+          "value": 14
+        },
+        {
+          "label": "전술 이해",
+          "value": 13
+        },
+        {
+          "label": "경기 관리",
+          "value": 13
+        },
+        {
+          "label": "육성 안목",
+          "value": 14
+        }
+      ],
+      "axis": {
+        "attack": 17,
+        "defense": 12
+      },
+      "tendency": "공격형"
+    },
+    {
+      "id": "c58",
+      "name": "이민성",
+      "club": "U-23 대표팀",
+      "club_id": "",
+      "league": "ETC",
+      "league_name": "기타",
+      "color": "#C8102E",
+      "emblem": "",
+      "born": "1973.06.23",
+      "player_pos": "수비수",
+      "nickname": "도쿄 대첩",
+      "appointed": "U-23",
+      "photo": "",
+      "photo_credit": "",
+      "headline": "선수 때 일본을 꺾은 사람이, 감독으로 나고야에서 4연패를 노린다",
+      "standfirst": "대전 승격 감독. 2018 아시안게임 수석을 거쳐 2026 아이치·나고야 아시안게임 U-23 사령탑이다.",
+      "strengths": [
+        "기동력 있는 선수 선발",
+        "승격 경험",
+        "유스 대표 운영"
+      ],
+      "weaknesses": [
+        "성인 A대표 사령탑은 아직",
+        "짧은 소집으로 조직을 만들어야 함",
+        "금메달 기대가 성적표보다 먼저다"
+      ],
+      "timeline": [
+        {
+          "year": "2000",
+          "title": "도쿄 대첩",
+          "text": "올림픽 축구. 일본을 꺾은 수비수."
+        },
+        {
+          "year": "대전",
+          "title": "승격",
+          "text": "시민구단을 1부로 올렸다."
+        },
+        {
+          "year": "2025-",
+          "title": "U-23",
+          "text": "아시안게임·올림픽 사이클. 2026 나고야가 첫 큰 시험."
+        }
+      ],
+      "sections": [
+        {
+          "title": "이 사람",
+          "paragraphs": [
+            "이민성의 2026은 클럽이 아니라 금메달이다. 대전에서 보여 준 승격의 문법을, 짧은 소집의 대표팀에 이식해야 한다."
+          ]
+        },
+        {
+          "title": "그 축구",
+          "paragraphs": [
+            "활동량과 기동력을 먼저 고른다. 이름값보다 팀 컬러. 잘되면 압박이 되고, 안 되면 유럽파 로테이션이 숙제가 된다."
+          ]
+        }
+      ],
+      "rating": 78,
+      "rating_note": "대전 승격과 유스 대표를 잇는 육성형. 아시안게임 4연패가 시험대다.",
+      "tactics": {
+        "kind": "전방 압박",
+        "style": "기동력 · 활동량",
+        "shape": "4-4-2",
+        "alt": "4-2-3-1"
+      },
+      "abilities": [
+        {
+          "label": "공격",
+          "value": 15
+        },
+        {
+          "label": "수비",
+          "value": 15
+        },
+        {
+          "label": "기강 유지",
+          "value": 15
+        },
+        {
+          "label": "선수 관리",
+          "value": 16
+        },
+        {
+          "label": "승부욕",
+          "value": 16
+        },
+        {
+          "label": "동기부여",
+          "value": 17
+        },
+        {
+          "label": "적응력",
+          "value": 15
+        },
+        {
+          "label": "전술 이해",
+          "value": 15
+        },
+        {
+          "label": "경기 관리",
+          "value": 15
+        },
+        {
+          "label": "육성 안목",
+          "value": 16
+        }
+      ],
+      "axis": {
+        "attack": 15,
+        "defense": 15
+      },
+      "tendency": "밸런스"
     }
   ]
 }

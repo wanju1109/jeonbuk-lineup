@@ -196,7 +196,29 @@ body.compare-mode .coach-chips { display: none; }
 }
 .ability-fill.is-mid { background: linear-gradient(90deg, #6e8798, #b7c9d4); }
 .ability-fill.is-low { background: linear-gradient(90deg, #8a4a38, #d9896a); }
-.ability-caption { margin: 2px 0 0; font-size: 0.72rem; color: #c9c0b0; }
+.axis-board {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: end;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+}
+.axis-col { display: grid; gap: 6px; min-width: 0; }
+.axis-col span { font-size: 0.72rem; letter-spacing: 0.08em; color: #c9c0b0; }
+.axis-col b { font-family: var(--font-display); font-size: 1.4rem; line-height: 1; color: #f7f1e4; }
+.axis-col.is-att b { color: #e6c15a; }
+.axis-col.is-def b { color: #9ec9dc; }
+.axis-mid {
+  padding: 0 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--gold);
+  white-space: nowrap;
+}
+.cmp-row.is-axis .cmp-label { color: #e6c15a; font-weight: 800; }
 
 .column-body { margin-top: 8px; }
 .column-section {
@@ -311,6 +333,8 @@ body.compare-mode .coach-chips { display: none; }
 @media (max-width: 960px) {
   .scout-card, .ability-grid, .compare-grid, .compare-traits { grid-template-columns: 1fr; }
   .cmp-row { grid-template-columns: 1fr 2em auto 2em 1fr; }
+  .axis-board { grid-template-columns: 1fr; }
+  .axis-mid { padding: 0; }
 }
 @media (max-width: 760px) {
   .hero-top, .portrait-card, .trait-grid, .timeline li, .ability-grid { grid-template-columns: 1fr; display: grid; }
