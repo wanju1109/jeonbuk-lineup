@@ -1,7 +1,7 @@
 {
   "season": "2026",
   "as_of": "2026-09-14",
-  "note": "Korean P-license managers: current K League Korean head coaches plus notable non-K-League names. KFA does not publish the full P-license roll. Photos from Wikimedia Commons only.",
+  "note": "Recommendation is hire-now, not hall of fame: last 24 months 40, career 25, tactics 20, current head-coach role 15. Editorial, not game data. Photos from Wikimedia Commons only.",
   "sources": [
     "ko.wikipedia 감독 항목",
     "2026 K리그1/2 개막 미디어데이 보도",
@@ -80,8 +80,8 @@
           ]
         }
       ],
-      "rating": 78,
-      "rating_note": "육성과 조직은 이미 검증됐다. 전북 성적표가 추천을 조금 깎는다.",
+      "rating": 80,
+      "rating_note": "전북 3위. 우승 기대에는 못 미치지만, 지금 벤치로는 상위권이다.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "수비 블록 · 세트피스",
@@ -580,8 +580,8 @@
           ]
         }
       ],
-      "rating": 85,
-      "rating_note": "공격 철학과 우승 이력이 추천을 끌어올린다. 뒷공간은 늘 따라온다.",
+      "rating": 81,
+      "rating_note": "대전 6위·화력은 있다. 뒷공간과 기대치가 추천을 황선홍 쪽으로 깎는다.",
       "tactics": {
         "kind": "전방 압박",
         "style": "다이렉트 공격",
@@ -623,7 +623,7 @@
         },
         {
           "label": "경기 관리",
-          "value": 16
+          "value": 15
         },
         {
           "label": "육성 안목",
@@ -705,8 +705,8 @@
           ]
         }
       ],
-      "rating": 84,
-      "rating_note": "중원을 짜는 속도가 리그에서 손꼽힌다. 승격 스쿼드와의 낙차가 변수다.",
+      "rating": 80,
+      "rating_note": "중원을 짜는 속도는 상위권. 승격 스쿼드 1년차라 서울·전북보다는 한 칸 아래다.",
       "tactics": {
         "kind": "점유 빌드업",
         "style": "중원 조작",
@@ -1437,8 +1437,8 @@
           ]
         }
       ],
-      "rating": 91,
-      "rating_note": "약팀에서 증명한 전방 압박이 명가 재건으로 번역되는 중이다.",
+      "rating": 87,
+      "rating_note": "약팀에서 증명한 전방 압박. 지금은 2부 명가 재건이라 서울 선두보다는 한 칸 아래다.",
       "tactics": {
         "kind": "전방 압박",
         "style": "높은 라인 · 압박",
@@ -3096,8 +3096,8 @@
           ]
         }
       ],
-      "rating": 82,
-      "rating_note": "울산 2연패의 이력은 남는다. 월드컵 조별 탈락이 추천을 깎았다.",
+      "rating": 76,
+      "rating_note": "울산 2연패의 이력은 남는다. 월드컵 조별 탈락과 현재 공백이 추천을 깎았다.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "라인 관리 · 빌드업",
@@ -3423,8 +3423,8 @@
           ]
         }
       ],
-      "rating": 80,
-      "rating_note": "올림픽 동메달의 조직력은 검증됐다. 클럽 성적은 기복이 있었다.",
+      "rating": 70,
+      "rating_note": "올림픽 조직력은 남는다. 제주를 승강PO 문턱까지 밀어 넣은 최근 성적이 추천을 가른다.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "수비 블록 · 세트피스",
@@ -3442,35 +3442,35 @@
         },
         {
           "label": "기강 유지",
-          "value": 17
+          "value": 16
         },
         {
           "label": "선수 관리",
-          "value": 16
-        },
-        {
-          "label": "승부욕",
-          "value": 16
-        },
-        {
-          "label": "동기부여",
-          "value": 16
-        },
-        {
-          "label": "적응력",
-          "value": 14
-        },
-        {
-          "label": "전술 이해",
           "value": 15
         },
         {
+          "label": "승부욕",
+          "value": 15
+        },
+        {
+          "label": "동기부여",
+          "value": 15
+        },
+        {
+          "label": "적응력",
+          "value": 13
+        },
+        {
+          "label": "전술 이해",
+          "value": 14
+        },
+        {
           "label": "경기 관리",
-          "value": 17
+          "value": 13
         },
         {
           "label": "육성 안목",
-          "value": 16
+          "value": 15
         }
       ],
       "axis": {
@@ -3532,8 +3532,8 @@
           ]
         }
       ],
-      "rating": 79,
-      "rating_note": "서울에서 선수·감독 우승을 한 이름값. 최근 벤치는 공백이다.",
+      "rating": 74,
+      "rating_note": "서울에서 선수·감독 우승을 한 이름값. 최근 일선이 비어 추천은 이력보다 낮다.",
       "tactics": {
         "kind": "전방 압박",
         "style": "다이렉트 공격",
@@ -4300,8 +4300,8 @@
           ]
         }
       ],
-      "rating": 83,
-      "rating_note": "전북 왕조의 설계자. 최근 해외·공백이 현재형을 흐리게 한다.",
+      "rating": 79,
+      "rating_note": "전북 왕조의 설계자. 지금은 일선이 아니라서 현재형 추천은 우승 횟수보다 낮다.",
       "tactics": {
         "kind": "유연한 역습",
         "style": "측면 공격 · 경기 관리",
@@ -4736,8 +4736,8 @@
           ]
         }
       ],
-      "rating": 84,
-      "rating_note": "베트남 신화의 상징. 태국 2부에서 다시 승격을 설계 중이다.",
+      "rating": 76,
+      "rating_note": "베트남 신화는 분명하다. 지금은 태국 2부라 현재형 추천은 그보다 낮다.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "수비 블록 · 역습",
@@ -5395,8 +5395,8 @@
           ]
         }
       ],
-      "rating": 81,
-      "rating_note": "2010 원정 16강의 상징. 현재형은 행정·원로이지, 주중 90분이 아니다.",
+      "rating": 73,
+      "rating_note": "2010 원정 16강의 상징. 현재형은 행정·원로이지, 지금 90분을 맡길 점수는 아니다.",
       "tactics": {
         "kind": "관리형",
         "style": "수비 조직 · 경기 관리",
@@ -5504,8 +5504,8 @@
           ]
         }
       ],
-      "rating": 78,
-      "rating_note": "패스 축구의 한국적 번역자. 단장석에 앉아 있어도 P급의 이력이 먼저 읽힌다.",
+      "rating": 72,
+      "rating_note": "패스 축구의 한국적 번역자. 단장석을 떠난 뒤라 현재형 추천은 이력보다 낮다.",
       "tactics": {
         "kind": "점유 빌드업",
         "style": "짧은 패스 · 중원 조작",
@@ -5722,8 +5722,8 @@
           ]
         }
       ],
-      "rating": 80,
-      "rating_note": "중국 슈퍼리그를 한국 감독이 뚫은 선례. 국내 벤치와는 세대와 무대가 다르다.",
+      "rating": 74,
+      "rating_note": "중국 슈퍼리그를 한국 감독이 뚫은 선례. 국내 최근 벤치가 없어 현재형은 낮다.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "선수 장악 · 역습",
@@ -6054,8 +6054,8 @@
           ]
         }
       ],
-      "rating": 77,
-      "rating_note": "포항 왕조의 이름. 지금은 단장이지만, P급 원로의 축구관은 남아 있다.",
+      "rating": 71,
+      "rating_note": "포항 왕조의 이름. 지금은 단장이라 현재형 추천은 이력보다 낮다.",
       "tactics": {
         "kind": "유연한 역습",
         "style": "측면 공격 · 육성",
@@ -7640,8 +7640,8 @@
           ]
         }
       ],
-      "rating": 80,
-      "rating_note": "수원을 창단과 함께 왕조로 만든 원로. 현재형은 90분이 아니라 명예의 전당이다.",
+      "rating": 72,
+      "rating_note": "수원을 창단과 함께 왕조로 만든 원로. 명예의 전당이지, 지금 벤치 추천은 아니다.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "선수 장악 · 육성",

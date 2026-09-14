@@ -309,7 +309,7 @@
       (c.rating_note ? `<p class="scout-note">${escapeHtml(c.rating_note)}</p>` : "") +
       `</div>` +
       `<div class="scout-body"><div class="tactic-pills">${pills}</div>${axis}<div class="ability-grid">${attrs}</div>` +
-      `<p class="ability-caption">공격·수비와 능력치 20점 만점 · 추천도 100점 만점 · 편집부 해석</p></div>`;
+      `<p class="ability-caption">추천도는 지금 벤치를 맡기는 정도(최근 성적 40 · 커리어 25 · 전술 20 · 일선 여부 15). 능력치 20점 · 추천도 100점 · 편집부 해석</p></div>`;
   }
 
   function renderTraits() {
