@@ -12,6 +12,7 @@ https://wanju1109.github.io/jeonbuk-lineup/korea_coach/
 ```
 
 - 에버그린 공유: 메인 화면 (`/korea_coach/`). 받은 사람이 K리그1·K리그2·기타에서 감독을 고릅니다.
+- iframe: `?f=y` (운영진이 `wanju1109.github.io/` 를 허용해야 글 안에 보입니다)
 - 특정 감독 북마크: `?q=<opaque>`
 - 두 사람 비교 북마크: `?q=<A>&v=<B>`
 - 작성자 화면: `?x=jb7k`

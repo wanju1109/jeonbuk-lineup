@@ -94,6 +94,12 @@
     return normalizeBase(base);
   }
 
+  function publicEmbedUrl() {
+    const home = publicHomeUrl();
+    const join = home.includes("?") ? "&" : "?";
+    return `${home}${join}${URL_Q.embed}=${encodeURIComponent(EMBED_TOKEN)}`;
+  }
+
   function syncUrl() {
     const next = new URLSearchParams();
     if (state.view === "compare") {
@@ -446,6 +452,16 @@
       `<div class="compare-traits">${traitCol(a)}${traitCol(b)}</div>`;
   }
 
+  function buildEmbedHtml(src) {
+    return [
+      '<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
+      `<iframe src="${escapeHtml(
+        src
+      )}" title="한국 감독" width="100%" height="1200" style="width:100%;max-width:1100px;height:1200px;border:0;border-radius:12px;overflow:hidden;background:#f4efe6;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>`,
+      "</div>",
+    ].join("");
+  }
+
   function buildShareHtml(url) {
     const safeUrl = escapeHtml(url || publicHomeUrl());
     return [
@@ -464,13 +480,21 @@
   function setupShare() {
     if (!document.body.classList.contains("edit-mode") || isEmbedQuery()) return;
     const url = publicHomeUrl();
+    const embedSrc = publicEmbedUrl();
     if ($("shareTargetMeta")) {
       $("shareTargetMeta").textContent = "공유 대상: 한국 감독 메인 · 받은 사람이 탭에서 감독을 고릅니다.";
     }
     if ($("shareCode")) $("shareCode").textContent = buildShareHtml(url);
+    if ($("embedCode")) $("embedCode").textContent = buildEmbedHtml(embedSrc);
     if ($("reportUrl")) {
       $("reportUrl").textContent = url;
       $("reportUrl").href = url;
+    }
+    const frame = $("embedPreview");
+    if (frame) {
+      const localSrc = `./?${URL_Q.embed}=${encodeURIComponent(EMBED_TOKEN)}`;
+      const nextSrc = /localhost|127\.0\.0\.1/i.test(window.location.hostname) ? localSrc : embedSrc;
+      if (frame.getAttribute("src") !== nextSrc) frame.src = nextSrc;
     }
   }
 
@@ -629,6 +653,12 @@
       copyText(buildShareHtml(publicHomeUrl()), "에버그린 링크 카드 HTML을 복사했습니다.")
     );
     $("copyUrl")?.addEventListener("click", () => copyText(publicHomeUrl(), "공유 URL을 복사했습니다."));
+    $("copyEmbed")?.addEventListener("click", () =>
+      copyText(
+        $("embedCode")?.textContent || buildEmbedHtml(publicEmbedUrl()),
+        "iframe HTML을 복사했습니다. 운영진이 wanju1109.github.io/ 를 허용해야 글 안에 보입니다."
+      )
+    );
   }
 
   async function boot() {
