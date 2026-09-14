@@ -57,6 +57,15 @@ body.compare-mode .coach-chips { display: none; }
 .league-tab.is-active { background: var(--gold); color: #1b1404; border-color: var(--gold); }
 
 .coach-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-group { flex: 1 1 100%; margin: 0 0 10px; }
+.chip-index {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .coach-chip {
   display: inline-flex; align-items: center; gap: 8px;
   border: 0; border-radius: 999px; padding: 6px 12px 6px 6px;

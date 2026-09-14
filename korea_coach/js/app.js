@@ -126,8 +126,33 @@
     return res.json();
   }
 
+  function sortByName(list) {
+    return list.slice().sort((a, b) => String(a.name || "").localeCompare(String(b.name || ""), "ko"));
+  }
+
+  function choseong(name) {
+    const ch = String(name || "").charAt(0);
+    const code = ch.charCodeAt(0) - 0xac00;
+    if (code < 0 || code > 11171) return "#";
+    const raw = ["ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"][
+      Math.floor(code / 588)
+    ];
+    return { ㄲ: "ㄱ", ㄸ: "ㄷ", ㅃ: "ㅂ", ㅆ: "ㅅ", ㅉ: "ㅈ" }[raw] || raw;
+  }
+
+  const CHOSEONG_ORDER = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ", "#"];
+
+  function groupedByChoseong(list) {
+    const groups = {};
+    sortByName(list).forEach((c) => {
+      const key = choseong(c.name);
+      (groups[key] || (groups[key] = [])).push(c);
+    });
+    return CHOSEONG_ORDER.filter((key) => groups[key]).map((key) => ({ key, coaches: groups[key] }));
+  }
+
   function coachesInLeague(league) {
-    return allCoaches().filter((c) => c.league === league);
+    return sortByName(allCoaches().filter((c) => c.league === league));
   }
 
   function findCoach(id) {
@@ -140,26 +165,37 @@
     return list.find((c) => c.id !== id) || null;
   }
 
+  function chipHtml(c) {
+    const active = c.id === state.coachId ? " is-active" : "";
+    const face = c.photo
+      ? `<img src="${escapeHtml(c.photo)}" alt="" width="28" height="28" />`
+      : `<span class="chip-fallback" style="--club:${escapeHtml(c.color || "#333")}">${escapeHtml(
+          (c.name || "?").slice(0, 1)
+        )}</span>`;
+    return `<button class="coach-chip${active}" type="button" data-coach="${escapeHtml(c.id)}">${face}${escapeHtml(
+      c.name
+    )}${
+      Number.isFinite(Number(c.rating))
+        ? `<span class="chip-score">${escapeHtml(String(Math.round(Number(c.rating))))}</span>`
+        : ""
+    }</button>`;
+  }
+
   function renderChips() {
     const box = $("coachChips");
     if (!box) return;
-    box.innerHTML = coachesInLeague(state.league)
-      .map((c) => {
-        const active = c.id === state.coachId ? " is-active" : "";
-        const face = c.photo
-          ? `<img src="${escapeHtml(c.photo)}" alt="" width="28" height="28" />`
-          : `<span class="chip-fallback" style="--club:${escapeHtml(c.color || "#333")}">${escapeHtml(
-              (c.name || "?").slice(0, 1)
-            )}</span>`;
-        return `<button class="coach-chip${active}" type="button" data-coach="${escapeHtml(c.id)}">${face}${escapeHtml(
-          c.name
-        )}${
-          Number.isFinite(Number(c.rating))
-            ? `<span class="chip-score">${escapeHtml(String(Math.round(Number(c.rating))))}</span>`
-            : ""
-        }</button>`;
-      })
-      .join("");
+    const list = coachesInLeague(state.league);
+    if (state.league === "ETC") {
+      box.innerHTML = groupedByChoseong(list)
+        .map(
+          (group) =>
+            `<div class="chip-group"><p class="chip-index">${escapeHtml(group.key)}</p>` +
+            `<div class="chip-row">${group.coaches.map(chipHtml).join("")}</div></div>`
+        )
+        .join("");
+      return;
+    }
+    box.innerHTML = list.map(chipHtml).join("");
   }
 
   function renderPortrait() {
@@ -323,11 +359,20 @@
     const a = $("compareA");
     const b = $("compareB");
     if (!a || !b) return;
+    const option = (c) =>
+      `<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)} · ${escapeHtml(c.club)}</option>`;
     const groups = LEAGUE_ORDER.map((league) => {
-      const rows = coachesInLeague(league)
-        .map((c) => `<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)} · ${escapeHtml(c.club)}</option>`)
-        .join("");
-      return `<optgroup label="${escapeHtml(LEAGUE_LABEL[league] || league)}">${rows}</optgroup>`;
+      if (league === "ETC") {
+        return groupedByChoseong(coachesInLeague("ETC"))
+          .map(
+            (group) =>
+              `<optgroup label="기타 · ${escapeHtml(group.key)}">${group.coaches.map(option).join("")}</optgroup>`
+          )
+          .join("");
+      }
+      return `<optgroup label="${escapeHtml(LEAGUE_LABEL[league] || league)}">${coachesInLeague(league)
+        .map(option)
+        .join("")}</optgroup>`;
     }).join("");
     a.innerHTML = groups;
     b.innerHTML = groups;
