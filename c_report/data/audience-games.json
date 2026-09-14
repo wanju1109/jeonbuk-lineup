@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T17:47:31.938206+00:00",
+  "updated_at": "2026-09-14T19:41:39.598723+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -2240,8 +2240,8 @@
       "score": "1:1",
       "venue": "광주 월드컵 경기장",
       "attendance": 2011,
-      "attendance_home": 2011,
-      "attendance_away": 0,
+      "attendance_home": 1731,
+      "attendance_away": 280,
       "weekday": "주말",
       "meet_seq": 1
     },
