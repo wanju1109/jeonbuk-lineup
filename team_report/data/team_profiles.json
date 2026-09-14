@@ -1,0 +1,41 @@
+{
+  "note": "Hand-written context the season data cannot know. Every field is optional; filled fields appear in the column as a '벤치와 방향성' section. Leave a field as an empty string to skip it.",
+  "fields": {
+    "manager": "감독 이름 (예: 홍길동)",
+    "manager_style": "감독의 성향을 한두 문장으로",
+    "identity": "팀이 추구하는 축구 스타일",
+    "objective": "구단이 내건 시즌 목표",
+    "note": "이적·부상·재정 등 시즌을 설명하는 기타 맥락"
+  },
+  "teams": {
+    "K01": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K02": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K03": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K04": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K05": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K06": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K07": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K08": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K09": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K10": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K17": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K18": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K20": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K21": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K22": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K26": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K27": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K29": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K31": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K32": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K34": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K35": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K36": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K37": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K38": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K39": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K40": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K41": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" },
+    "K42": { "manager": "", "manager_style": "", "identity": "", "objective": "", "note": "" }
+  }
+}

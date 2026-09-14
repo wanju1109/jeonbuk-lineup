@@ -1,0 +1,752 @@
+{
+  "team_id": "K36",
+  "name": "김포",
+  "full": "김포FC",
+  "league": "K2",
+  "league_name": "K리그2",
+  "color": "#1B4F72",
+  "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
+  "home_url": "https://www.gimpofc.com",
+  "season": "2026",
+  "generated_at": "2026-09-14T11:35:02+09:00",
+  "table": {
+    "rank": 8,
+    "teams": 17,
+    "played": 24,
+    "win": 7,
+    "draw": 11,
+    "loss": 6,
+    "gf": 30,
+    "ga": 30,
+    "gd": 0,
+    "points": 32,
+    "ppg": 1.33,
+    "remaining": 8,
+    "scheduled": 32,
+    "gap_to_leader": 21,
+    "gap_to_cut": 11,
+    "cut_rank": 5,
+    "gap_above": 1,
+    "gap_below": 1,
+    "above": "경남",
+    "below": "충남아산"
+  },
+  "splits": {
+    "home": {
+      "played": 9,
+      "win": 1,
+      "draw": 5,
+      "loss": 3,
+      "gf": 11,
+      "ga": 14,
+      "gd": -3,
+      "points": 8,
+      "ppg": 0.89
+    },
+    "away": {
+      "played": 15,
+      "win": 6,
+      "draw": 6,
+      "loss": 3,
+      "gf": 19,
+      "ga": 16,
+      "gd": 3,
+      "points": 24,
+      "ppg": 1.6
+    }
+  },
+  "form": {
+    "results": [
+      "W",
+      "W",
+      "L",
+      "D",
+      "D",
+      "W",
+      "D",
+      "D",
+      "L",
+      "D",
+      "W",
+      "W",
+      "W",
+      "D",
+      "L",
+      "L",
+      "D",
+      "D",
+      "D",
+      "W",
+      "D",
+      "L",
+      "L",
+      "D"
+    ],
+    "last5": [
+      "W",
+      "D",
+      "L",
+      "L",
+      "D"
+    ],
+    "last10": [
+      "L",
+      "L",
+      "D",
+      "D",
+      "D",
+      "W",
+      "D",
+      "L",
+      "L",
+      "D"
+    ],
+    "last5_record": {
+      "played": 5,
+      "win": 1,
+      "draw": 2,
+      "loss": 2,
+      "gf": 8,
+      "ga": 9,
+      "gd": -1,
+      "points": 5
+    },
+    "last10_record": {
+      "played": 10,
+      "win": 1,
+      "draw": 5,
+      "loss": 4,
+      "gf": 11,
+      "ga": 16,
+      "gd": -5,
+      "points": 8
+    },
+    "streaks": {
+      "current_type": "D",
+      "current_len": 1,
+      "longest_win": 3,
+      "longest_unbeaten": 5,
+      "longest_winless": 6,
+      "longest_loss": 2
+    }
+  },
+  "scoring": {
+    "gf_per_game": 1.25,
+    "ga_per_game": 1.25,
+    "clean_sheets": 6,
+    "failed_to_score": 4,
+    "both_scored": 15,
+    "one_goal_games": 8,
+    "biggest_win": {
+      "round": 21,
+      "date": "2026-08-07",
+      "venue": "H",
+      "opponent_id": "K37",
+      "opponent": "충북 청주",
+      "gf": 3,
+      "ga": 0,
+      "result": "W"
+    },
+    "biggest_loss": {
+      "round": 24,
+      "date": "2026-08-29",
+      "venue": "H",
+      "opponent_id": "K02",
+      "opponent": "수원 삼성",
+      "gf": 1,
+      "ga": 4,
+      "result": "L"
+    }
+  },
+  "trend": {
+    "history": [
+      {
+        "round": 2,
+        "rank": 10,
+        "points": 3,
+        "played": 1,
+        "gd": 1
+      },
+      {
+        "round": 3,
+        "rank": 5,
+        "points": 6,
+        "played": 2,
+        "gd": 3
+      },
+      {
+        "round": 4,
+        "rank": 6,
+        "points": 6,
+        "played": 3,
+        "gd": 2
+      },
+      {
+        "round": 5,
+        "rank": 6,
+        "points": 7,
+        "played": 4,
+        "gd": 2
+      },
+      {
+        "round": 6,
+        "rank": 9,
+        "points": 8,
+        "played": 5,
+        "gd": 2
+      },
+      {
+        "round": 7,
+        "rank": 6,
+        "points": 11,
+        "played": 6,
+        "gd": 3
+      },
+      {
+        "round": 8,
+        "rank": 6,
+        "points": 12,
+        "played": 7,
+        "gd": 3
+      },
+      {
+        "round": 9,
+        "rank": 5,
+        "points": 13,
+        "played": 8,
+        "gd": 3
+      },
+      {
+        "round": 10,
+        "rank": 9,
+        "points": 13,
+        "played": 9,
+        "gd": 2
+      },
+      {
+        "round": 11,
+        "rank": 8,
+        "points": 14,
+        "played": 10,
+        "gd": 2
+      },
+      {
+        "round": 12,
+        "rank": 7,
+        "points": 17,
+        "played": 11,
+        "gd": 3
+      },
+      {
+        "round": 13,
+        "rank": 7,
+        "points": 20,
+        "played": 12,
+        "gd": 4
+      },
+      {
+        "round": 14,
+        "rank": 5,
+        "points": 23,
+        "played": 13,
+        "gd": 5
+      },
+      {
+        "round": 15,
+        "rank": 6,
+        "points": 24,
+        "played": 14,
+        "gd": 5
+      },
+      {
+        "round": 16,
+        "rank": 7,
+        "points": 24,
+        "played": 15,
+        "gd": 3
+      },
+      {
+        "round": 17,
+        "rank": 8,
+        "points": 24,
+        "played": 16,
+        "gd": 1
+      },
+      {
+        "round": 18,
+        "rank": 7,
+        "points": 25,
+        "played": 17,
+        "gd": 1
+      },
+      {
+        "round": 19,
+        "rank": 7,
+        "points": 26,
+        "played": 18,
+        "gd": 1
+      },
+      {
+        "round": 20,
+        "rank": 8,
+        "points": 27,
+        "played": 19,
+        "gd": 1
+      },
+      {
+        "round": 21,
+        "rank": 7,
+        "points": 30,
+        "played": 20,
+        "gd": 4
+      },
+      {
+        "round": 22,
+        "rank": 7,
+        "points": 31,
+        "played": 21,
+        "gd": 4
+      },
+      {
+        "round": 23,
+        "rank": 8,
+        "points": 31,
+        "played": 21,
+        "gd": 4
+      },
+      {
+        "round": 24,
+        "rank": 8,
+        "points": 31,
+        "played": 22,
+        "gd": 1
+      },
+      {
+        "round": 25,
+        "rank": 8,
+        "points": 31,
+        "played": 23,
+        "gd": 0
+      },
+      {
+        "round": 26,
+        "rank": 8,
+        "points": 32,
+        "played": 24,
+        "gd": 0
+      }
+    ],
+    "best_rank": 5,
+    "worst_rank": 10,
+    "first_half": {
+      "played": 16,
+      "win": 6,
+      "draw": 6,
+      "loss": 4,
+      "gf": 19,
+      "ga": 18,
+      "gd": 1,
+      "points": 24,
+      "ppg": 1.5
+    },
+    "second_half": {
+      "played": 8,
+      "win": 1,
+      "draw": 5,
+      "loss": 2,
+      "gf": 11,
+      "ga": 12,
+      "gd": -1,
+      "points": 8,
+      "ppg": 1.0
+    }
+  },
+  "fixtures": [
+    {
+      "round": 2,
+      "date": "2026-03-08",
+      "venue": "A",
+      "opponent_id": "K38",
+      "opponent": "천안 시티",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
+    },
+    {
+      "round": 3,
+      "date": "2026-03-14",
+      "venue": "A",
+      "opponent_id": "K42",
+      "opponent": "용인 FC",
+      "gf": 3,
+      "ga": 1,
+      "result": "W"
+    },
+    {
+      "round": 4,
+      "date": "2026-03-22",
+      "venue": "A",
+      "opponent_id": "K20",
+      "opponent": "경남 FC",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
+    },
+    {
+      "round": 5,
+      "date": "2026-03-28",
+      "venue": "A",
+      "opponent_id": "K08",
+      "opponent": "성남 FC",
+      "gf": 0,
+      "ga": 0,
+      "result": "D"
+    },
+    {
+      "round": 6,
+      "date": "2026-04-05",
+      "venue": "A",
+      "opponent_id": "K17",
+      "opponent": "대구 FC",
+      "gf": 3,
+      "ga": 3,
+      "result": "D"
+    },
+    {
+      "round": 7,
+      "date": "2026-04-12",
+      "venue": "A",
+      "opponent_id": "K02",
+      "opponent": "수원 삼성",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
+    },
+    {
+      "round": 8,
+      "date": "2026-04-19",
+      "venue": "A",
+      "opponent_id": "K39",
+      "opponent": "화성 FC",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
+    },
+    {
+      "round": 9,
+      "date": "2026-04-26",
+      "venue": "A",
+      "opponent_id": "K29",
+      "opponent": "수원 FC",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
+    },
+    {
+      "round": 10,
+      "date": "2026-05-03",
+      "venue": "A",
+      "opponent_id": "K31",
+      "opponent": "서울 이랜드",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
+    },
+    {
+      "round": 11,
+      "date": "2026-05-09",
+      "venue": "A",
+      "opponent_id": "K37",
+      "opponent": "충북 청주",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
+    },
+    {
+      "round": 12,
+      "date": "2026-05-16",
+      "venue": "A",
+      "opponent_id": "K32",
+      "opponent": "안산 그리너스",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
+    },
+    {
+      "round": 13,
+      "date": "2026-05-25",
+      "venue": "A",
+      "opponent_id": "K40",
+      "opponent": "파주 프런티어",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
+    },
+    {
+      "round": 14,
+      "date": "2026-05-30",
+      "venue": "A",
+      "opponent_id": "K41",
+      "opponent": "김해 FC",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
+    },
+    {
+      "round": 15,
+      "date": "2026-06-07",
+      "venue": "H",
+      "opponent_id": "K07",
+      "opponent": "전남 드래곤즈",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
+    },
+    {
+      "round": 16,
+      "date": "2026-07-05",
+      "venue": "H",
+      "opponent_id": "K34",
+      "opponent": "충남 아산",
+      "gf": 0,
+      "ga": 2,
+      "result": "L"
+    },
+    {
+      "round": 17,
+      "date": "2026-07-12",
+      "venue": "A",
+      "opponent_id": "K06",
+      "opponent": "부산 아이파크",
+      "gf": 0,
+      "ga": 2,
+      "result": "L"
+    },
+    {
+      "round": 18,
+      "date": "2026-07-18",
+      "venue": "H",
+      "opponent_id": "K17",
+      "opponent": "대구 FC",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
+    },
+    {
+      "round": 19,
+      "date": "2026-07-26",
+      "venue": "H",
+      "opponent_id": "K42",
+      "opponent": "용인 FC",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
+    },
+    {
+      "round": 20,
+      "date": "2026-08-02",
+      "venue": "H",
+      "opponent_id": "K20",
+      "opponent": "경남 FC",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
+    },
+    {
+      "round": 21,
+      "date": "2026-08-07",
+      "venue": "H",
+      "opponent_id": "K37",
+      "opponent": "충북 청주",
+      "gf": 3,
+      "ga": 0,
+      "result": "W"
+    },
+    {
+      "round": 22,
+      "date": "2026-08-16",
+      "venue": "H",
+      "opponent_id": "K38",
+      "opponent": "천안 시티",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
+    },
+    {
+      "round": 24,
+      "date": "2026-08-29",
+      "venue": "H",
+      "opponent_id": "K02",
+      "opponent": "수원 삼성",
+      "gf": 1,
+      "ga": 4,
+      "result": "L"
+    },
+    {
+      "round": 25,
+      "date": "2026-09-06",
+      "venue": "H",
+      "opponent_id": "K08",
+      "opponent": "성남 FC",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
+    },
+    {
+      "round": 26,
+      "date": "2026-09-13",
+      "venue": "A",
+      "opponent_id": "K07",
+      "opponent": "전남 드래곤즈",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
+    }
+  ],
+  "squad": {
+    "size": 35,
+    "avg_age": 27.5,
+    "foreign": 5,
+    "top_scorers": [
+      {
+        "player_id": "20250283",
+        "departed": false,
+        "name": "루안",
+        "position": "MF",
+        "back_no": 10,
+        "age": 29,
+        "apps": 15,
+        "goals": 5,
+        "assists": 2,
+        "points": 7
+      },
+      {
+        "player_id": "20230316",
+        "departed": false,
+        "name": "파울리뇨",
+        "position": "FW",
+        "back_no": 96,
+        "age": 30,
+        "apps": 11,
+        "goals": 3,
+        "assists": 2,
+        "points": 5
+      },
+      {
+        "player_id": "20250183",
+        "departed": false,
+        "name": "디자우마",
+        "position": "MF",
+        "back_no": 8,
+        "age": 26,
+        "apps": 16,
+        "goals": 3,
+        "assists": 1,
+        "points": 4
+      },
+      {
+        "player_id": "20160082",
+        "departed": false,
+        "name": "박동진",
+        "position": "FW",
+        "back_no": 50,
+        "age": 31,
+        "apps": 23,
+        "goals": 2,
+        "assists": 1,
+        "points": 3
+      },
+      {
+        "player_id": "20090125",
+        "departed": false,
+        "name": "김성준",
+        "position": "MF",
+        "back_no": 16,
+        "age": 38,
+        "apps": 19,
+        "goals": 2,
+        "assists": 0,
+        "points": 2
+      }
+    ],
+    "top_assists": [
+      {
+        "player_id": "20250171",
+        "departed": false,
+        "name": "임창석",
+        "position": "DF",
+        "back_no": 17,
+        "age": 26,
+        "apps": 18,
+        "goals": 0,
+        "assists": 3,
+        "points": 3
+      },
+      {
+        "player_id": "20250283",
+        "departed": false,
+        "name": "루안",
+        "position": "MF",
+        "back_no": 10,
+        "age": 29,
+        "apps": 15,
+        "goals": 5,
+        "assists": 2,
+        "points": 7
+      },
+      {
+        "player_id": "20230316",
+        "departed": false,
+        "name": "파울리뇨",
+        "position": "FW",
+        "back_no": 96,
+        "age": 30,
+        "apps": 11,
+        "goals": 3,
+        "assists": 2,
+        "points": 5
+      },
+      {
+        "player_id": "20250185",
+        "departed": false,
+        "name": "장부성",
+        "position": "DF",
+        "back_no": 32,
+        "age": 22,
+        "apps": 15,
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      },
+      {
+        "player_id": "20250183",
+        "departed": false,
+        "name": "디자우마",
+        "position": "MF",
+        "back_no": 8,
+        "age": 26,
+        "apps": 16,
+        "goals": 3,
+        "assists": 1,
+        "points": 4
+      }
+    ],
+    "goal_share": 0.167
+  },
+  "attendance": null,
+  "context": {
+    "band": "PO 추격권",
+    "detail": "플레이오프 컷과 11점 차. 남은 8경기면 아직 늦지 않았습니다.",
+    "tags": [
+      "원정에 강한 팀",
+      "무승부 체질"
+    ]
+  },
+  "profile": {
+    "manager": "",
+    "manager_style": "",
+    "identity": "",
+    "objective": "",
+    "note": ""
+  }
+}

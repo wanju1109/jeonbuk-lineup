@@ -5,6 +5,7 @@
 Thumbs.db
 c_report/data/_menu_*.html
 c_report/data/_collect_log.txt
+team_report/scripts/columns.out.txt
 *.log
 .env
 .env.*

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>K리그 팀분석 — 2026시즌 구단별 심층 리포트</title>
+    <meta
+      name="description"
+      content="K리그1·K리그2 전 구단의 2026시즌 현황을 순위·공격·수비·흐름·스쿼드까지 데이터로 뜯어보는 칼럼형 팀 분석."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="K리그 팀분석 — 2026시즌 구단별 심층 리포트" />
+    <meta
+      property="og:description"
+      content="K리그1·K리그2 29개 구단, 지금 이 순간의 순위와 성적으로 쓰는 팀별 시즌 칼럼."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/team.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <div class="wrap">
+      <header class="hero">
+        <div class="hero-top">
+          <div>
+            <p class="kicker">K LEAGUE CLUB ANALYSIS</p>
+            <h1 class="hero-title">K리그 팀분석</h1>
+            <p class="hero-sub" id="heroSub">
+              K리그1·K리그2 전 구단의 이번 시즌을, 순위표 뒤에 숨은 숫자까지 함께 읽습니다.
+            </p>
+          </div>
+          <div class="hero-side">
+            <p class="as-of" id="asOf">데이터 로딩 중…</p>
+            <div class="editor-only hero-actions">
+              <button class="btn btn-primary" id="regenBtn" type="button">
+                지금 성적으로 다시 쓰기
+              </button>
+              <p class="hero-hint">최신 데이터를 다시 읽어 칼럼을 처음부터 새로 씁니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="league-tabs" role="tablist" aria-label="리그 선택">
+          <button class="league-tab is-active" id="tabK1" type="button" role="tab" data-league="K1">
+            K리그1
+          </button>
+          <button class="league-tab" id="tabK2" type="button" role="tab" data-league="K2">
+            K리그2
+          </button>
+        </div>
+
+        <div class="team-chips" id="teamChips"></div>
+      </header>
+
+      <p class="status hidden" id="status"></p>
+
+      <main class="page">
+        <section class="section" id="standings">
+          <div class="section-head">
+            <h2>순위표</h2>
+            <p>구단을 누르면 그 팀의 시즌 칼럼으로 이동합니다.</p>
+          </div>
+          <div class="panel table-panel">
+            <div class="table-scroll">
+              <table class="standings" id="standingsTable">
+                <thead>
+                  <tr>
+                    <th class="col-rank">순위</th>
+                    <th class="col-team">구단</th>
+                    <th>경기</th>
+                    <th>승</th>
+                    <th>무</th>
+                    <th>패</th>
+                    <th>득점</th>
+                    <th>실점</th>
+                    <th>득실</th>
+                    <th>승점</th>
+                    <th class="col-form">최근 5경기</th>
+                    <th class="col-band">현재 위치</th>
+                  </tr>
+                </thead>
+                <tbody id="standingsBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <article class="section" id="column">
+          <div class="club-head" id="clubHead"></div>
+          <div class="metric-grid" id="metricGrid"></div>
+          <div class="column-body" id="columnBody"></div>
+        </article>
+
+        <section class="section" id="trend">
+          <div class="section-head">
+            <h2>순위 추이</h2>
+            <p>라운드가 끝날 때마다의 순위입니다. 위로 갈수록 좋은 자리입니다.</p>
+          </div>
+          <div class="panel">
+            <div class="chart-wrap" id="chartWrap"></div>
+          </div>
+        </section>
+
+        <section class="section" id="matches">
+          <div class="section-head">
+            <h2>최근 경기</h2>
+            <p>가장 최근 10경기입니다.</p>
+          </div>
+          <div class="panel">
+            <ul class="match-list" id="matchList"></ul>
+          </div>
+        </section>
+
+        <section class="section editor-only" id="community">
+          <div class="section-head">
+            <h2>에버그린 링크 만들기 (작성자 전용)</h2>
+            <p>주소에 <code>?x=jb7k</code> 가 있을 때만 보입니다. 공유 URL에는 작성자 키를 넣지 마세요.</p>
+          </div>
+          <div class="panel community">
+            <h3>0) 공유할 구단 선택</h3>
+            <p class="help" id="shareTargetMeta">아직 선택된 구단이 없습니다.</p>
+
+            <h3>1) 추천: 에버그린 링크 카드 HTML 복사</h3>
+            <p class="help">
+              evergreenjb 글쓰기 → <strong>HTML/소스</strong> 모드 → 아래 <strong>링크 카드 복사</strong> 내용을
+              붙여넣기. 클릭하면 해당 구단 분석이 새 창으로 열립니다.
+            </p>
+            <pre id="shareCode" class="embed-code"></pre>
+            <div class="btn-row">
+              <button class="btn btn-primary" id="copyShare" type="button">에버그린 링크 카드 복사</button>
+              <button class="btn btn-ghost" id="copyUrl" type="button">URL만 복사</button>
+            </div>
+
+            <h3>2) (선택) iframe — 운영진 허용 후에만</h3>
+            <p class="help">
+              운영진이 외부 멀티미디어 허용에 <code>wanju1109.github.io/</code> 를 추가해야 게시글 안에 화면이
+              보입니다.
+            </p>
+            <pre id="embedCode" class="embed-code"></pre>
+            <div class="btn-row">
+              <button class="btn btn-ghost" id="copyEmbed" type="button">iframe HTML 복사</button>
+            </div>
+
+            <h3>3) 미리보기</h3>
+            <div class="embed-preview-wrap">
+              <iframe
+                id="embedPreview"
+                title="K리그 팀분석 미리보기"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <p class="help">공유용 URL (작성자 키 없음): <a id="reportUrl" href="./">로딩 중…</a></p>
+          </div>
+        </section>
+
+        <section class="section editor-only" id="howto">
+          <div class="section-head">
+            <h2>운영 메모</h2>
+            <p>작성자에게만 보입니다.</p>
+          </div>
+          <div class="panel">
+            <ul class="howto-list">
+              <li>
+                데이터 갱신은 <code>python team_report/scripts/build_team_report.py</code> 또는 GitHub Actions의
+                <strong>team report build</strong> 워크플로가 담당합니다.
+              </li>
+              <li>
+                <strong>지금 성적으로 다시 쓰기</strong> 버튼은 캐시를 건너뛰고 최신 JSON을 다시 읽어 칼럼을 새로
+                씁니다. 공유 링크를 받은 독자에게는 이 버튼이 보이지 않습니다.
+              </li>
+              <li>
+                감독·팀 방향성처럼 데이터로 알 수 없는 내용은
+                <code>team_report/data/team_profiles.json</code> 에 적어두면 칼럼에 자동으로 들어갑니다.
+              </li>
+              <li>순위·득실·폼은 <code>proto/data/league.json</code>, 선수 기록은 <code>player_report</code> 데이터를 씁니다.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>K LEAGUE CLUB ANALYSIS · 공식 기록 기반 자동 생성 · 전북 경기 리포트는 c_report, 프리뷰는 p_report</p>
+      </footer>
+    </div>
+
+    <script src="./js/column.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
