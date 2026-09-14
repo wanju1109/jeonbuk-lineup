@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-20 19:00 KST",
     "date_md": "09/20",
     "label": "포항 VS 서울 (180, 09/20)",
-    "hours_to_kickoff": 134.1,
+    "hours_to_kickoff": 130.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-15T04:56:42.238040+09:00",
+    "generated_at": "2026-09-15T08:59:27.774600+09:00",
     "preview_hours": 48.0
   },
   "headline": "30R PREVIEW · 포항 vs 서울",
@@ -68,7 +68,7 @@
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 0.97,
+        "jeonbuk": 0.96,
         "opponent": 0.69,
         "better": "opponent"
       },
@@ -105,7 +105,7 @@
         "better": "opponent"
       }
     ],
-    "summary": "최근 5경기 기준 — 포항 xG 1.07 / xGA 0.97, 서울 xG 2.3 / xGA 0.69."
+    "summary": "최근 5경기 기준 — 포항 xG 1.07 / xGA 0.96, 서울 xG 2.3 / xGA 0.69."
   },
   "pulse": {
     "home": {
@@ -589,7 +589,7 @@
         "opponent": "대전",
         "ha": "A",
         "xg": 1.26,
-        "xga": 1.46,
+        "xga": 1.41,
         "shots": 6,
         "sot": 4,
         "goals_for": 2,
@@ -750,7 +750,7 @@
       "goals_against": 5,
       "goal_diff": -1,
       "avg_xg": 1.07,
-      "avg_xga": 0.97,
+      "avg_xga": 0.96,
       "avg_shots": 11.4,
       "avg_sot": 4.4,
       "avg_pass_pct": 74.4,
