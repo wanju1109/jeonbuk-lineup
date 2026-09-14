@@ -1,0 +1,133 @@
+:root {
+  --ink: #14110c;
+  --paper: #f4efe6;
+  --panel: rgba(255, 252, 246, 0.9);
+  --muted: #6b6256;
+  --line: rgba(20, 17, 12, 0.12);
+  --navy: #1b2430;
+  --navy-2: #2c3a4d;
+  --gold: #d4a017;
+  --club: #1b2430;
+  --shadow: 0 18px 50px rgba(20, 17, 12, 0.16);
+  --font-display: "Archivo Black", "IBM Plex Sans KR", sans-serif;
+  --font-body: "IBM Plex Sans KR", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background:
+    radial-gradient(900px 520px at 8% -8%, rgba(212, 160, 23, 0.16), transparent 58%),
+    radial-gradient(800px 480px at 100% 0%, rgba(27, 36, 48, 0.1), transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+.noise {
+  position: fixed; inset: 0; pointer-events: none; opacity: 0.04; z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 26px 18px 60px; }
+body:not(.edit-mode) .editor-only { display: none !important; }
+body.embed-mode .footer, body.embed-mode #community { display: none !important; }
+
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 72%, #3d4f66 100%);
+  color: #f7f1e4;
+  border-radius: 24px;
+  padding: 28px 26px 22px;
+  box-shadow: var(--shadow);
+  margin-bottom: 22px;
+}
+.hero-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.kicker { margin: 0 0 8px; letter-spacing: 0.14em; font-size: 0.72rem; color: var(--gold); font-weight: 700; }
+.hero-title { margin: 0; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -0.03em; }
+.hero-sub { margin: 10px 0 0; max-width: 42rem; color: #ddd4c4; }
+.as-of { margin: 0; font-size: 0.82rem; color: #c9c0b0; max-width: 16rem; text-align: right; }
+
+.league-tabs { display: flex; gap: 8px; margin: 22px 0 14px; }
+.league-tab {
+  border: 1px solid rgba(255,255,255,.18); background: transparent; color: #f7f1e4;
+  border-radius: 999px; padding: 7px 14px; cursor: pointer; font-weight: 700;
+}
+.league-tab.is-active { background: var(--gold); color: #1b1404; border-color: var(--gold); }
+
+.coach-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.coach-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 0; border-radius: 999px; padding: 6px 12px 6px 6px;
+  background: rgba(255,255,255,.1); color: #f7f1e4; cursor: pointer; font-weight: 600;
+}
+.coach-chip img, .chip-fallback {
+  width: 28px; height: 28px; border-radius: 50%; object-fit: cover; object-position: top;
+}
+.chip-fallback { display: grid; place-items: center; background: var(--club, #444); font-size: 0.72rem; }
+.coach-chip.is-active { background: #f7f1e4; color: var(--navy); }
+
+.status { padding: 10px 14px; border-radius: 10px; background: #fff; margin-bottom: 16px; }
+.status.error { background: #fde8e4; color: #8a2a16; }
+.hidden { display: none; }
+
+.portrait-card {
+  display: grid; grid-template-columns: 280px 1fr; gap: 22px;
+  background: var(--panel); border-radius: 20px; padding: 18px; box-shadow: var(--shadow);
+}
+.portrait-photo {
+  width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top;
+  border-radius: 16px; background: var(--club);
+}
+.portrait-fallback {
+  width: 100%; aspect-ratio: 4/5; border-radius: 16px;
+  display: grid; place-items: center; color: #fff; font-size: 4rem; font-weight: 800;
+  background: linear-gradient(160deg, var(--club), #111);
+}
+.portrait-meta h2 { margin: 0 0 6px; font-size: 2rem; letter-spacing: -0.03em; }
+.portrait-meta .club-line { margin: 0 0 10px; color: var(--muted); font-weight: 600; }
+.headline { margin: 0 0 8px; font-size: 1.25rem; font-weight: 700; }
+.standfirst { margin: 0; color: var(--muted); }
+.photo-credit { margin: 10px 0 0; font-size: 0.75rem; color: var(--muted); }
+
+.trait-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0;
+}
+.trait-box {
+  background: var(--panel); border-radius: 16px; padding: 16px 18px; box-shadow: var(--shadow);
+}
+.trait-box h3 { margin: 0 0 8px; font-size: 0.95rem; }
+.trait-box ul { margin: 0; padding-left: 18px; }
+.trait-box.weak h3 { color: #8a2a16; }
+
+.column-body { margin-top: 8px; }
+.column-section {
+  background: var(--panel); border-radius: 16px; padding: 20px 22px; margin-bottom: 12px; box-shadow: var(--shadow);
+}
+.column-section h3 { margin: 0 0 10px; }
+.column-section p { margin: 0 0 10px; }
+.column-section p:last-child { margin-bottom: 0; }
+
+.section-head h2 { margin: 0 0 4px; }
+.section-head p { margin: 0 0 12px; color: var(--muted); }
+.timeline { list-style: none; padding: 0; margin: 0; }
+.timeline li {
+  display: grid; grid-template-columns: 92px 1fr; gap: 14px;
+  padding: 12px 0; border-top: 1px solid var(--line);
+}
+.timeline .year { font-weight: 800; color: var(--club); }
+.timeline strong { display: block; }
+.timeline span { color: var(--muted); font-size: 0.92rem; }
+
+.panel { background: var(--panel); border-radius: 16px; padding: 18px; box-shadow: var(--shadow); }
+.help { color: var(--muted); font-size: 0.9rem; }
+.embed-code { white-space: pre-wrap; font-size: 0.75rem; background: #1b2430; color: #f7f1e4; padding: 12px; border-radius: 10px; overflow: auto; max-height: 180px; }
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 16px; }
+.btn { border: 0; border-radius: 10px; padding: 9px 14px; font-weight: 700; cursor: pointer; }
+.btn-primary { background: var(--gold); color: #1b1404; }
+.btn-ghost { background: #ece4d6; color: var(--ink); }
+.footer { margin-top: 28px; color: var(--muted); font-size: 0.82rem; }
+
+@media (max-width: 760px) {
+  .hero-top, .portrait-card, .trait-grid, .timeline li { grid-template-columns: 1fr; display: grid; }
+  .hero-top { display: flex; flex-direction: column; }
+  .portrait-photo, .portrait-fallback { aspect-ratio: 3/4; max-height: 420px; }
+}
