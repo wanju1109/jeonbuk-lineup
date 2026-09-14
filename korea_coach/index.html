@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>K리그 한국 감독 — 연대기와 축구</title>
+    <title>한국 감독 — 연대기와 축구</title>
     <meta
       name="description"
-      content="2026시즌 K리그1·K리그2를 지휘하는 한국인 감독들의 이력, 축구, 장점과 허점을 칼럼으로 읽습니다."
+      content="K리그1·K리그2와 리그 밖 P급 한국 감독의 이력, 축구, 장점과 허점을 칼럼으로 읽고 비교합니다."
     />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="K리그 한국 감독 — 연대기와 축구" />
+    <meta property="og:title" content="한국 감독 — 연대기와 축구" />
     <meta
       property="og:description"
-      content="지금 벤치에 앉은 한국인 사령탑들의 선수 시절부터 현재 전술까지."
+      content="K리그 벤치와 리그 밖 한국 사령탑. 연대기, 능력치, 두 사람 비교."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/coach.css?v=20260914c" />
+    <link rel="stylesheet" href="./css/coach.css?v=20260914d" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -31,7 +31,7 @@
             <p class="kicker">KOREAN K LEAGUE MANAGERS</p>
             <h1 class="hero-title">한국 감독</h1>
             <p class="hero-sub">
-              2026시즌 K리그1·K리그2 벤치의 한국인 사령탑. 연대기, 축구의 버릇, 잘되는 날과 무너지는 날을 한자리에 모았습니다.
+              2026시즌 한국인 사령탑. K리그1·K리그2와, 리그 밖에 있는 P급 감독을 한자리에 모았습니다.
             </p>
           </div>
           <p class="as-of" id="asOf">자료 로딩 중…</p>
@@ -39,6 +39,8 @@
         <div class="league-tabs" role="tablist" aria-label="리그 선택">
           <button class="league-tab is-active" type="button" data-league="K1">K리그1</button>
           <button class="league-tab" type="button" data-league="K2">K리그2</button>
+          <button class="league-tab" type="button" data-league="ETC">기타</button>
+          <button class="league-tab" type="button" data-view="compare">비교</button>
         </div>
         <div class="coach-chips" id="coachChips"></div>
       </header>
@@ -61,6 +63,23 @@
           <ol class="timeline" id="timelineList"></ol>
         </section>
 
+        <section class="section" id="compareBoard">
+          <div class="section-head">
+            <h2>감독 비교</h2>
+            <p>두 사람을 고르면 추천도와 능력치가 나란히 놓입니다.</p>
+          </div>
+          <div class="compare-picks">
+            <label>왼쪽
+              <select id="compareA"></select>
+            </label>
+            <button class="btn btn-ghost" id="compareSwap" type="button">맞바꾸기</button>
+            <label>오른쪽
+              <select id="compareB"></select>
+            </label>
+          </div>
+          <div id="compareBody"></div>
+        </section>
+
         <section class="section editor-only" id="community">
           <div class="section-head">
             <h2>링크 공유 (작성자 전용)</h2>
@@ -80,11 +99,12 @@
 
       <footer class="footer">
         <p>
-          초상은 위키미디어 공용 자료를 로컬에 저장해 씁니다. 공용 초상이 없는 감독은 이니셜 초상으로 대체합니다.
+          초상은 위키미디어 공용 자료를 로컬에 저장해 씁니다. 자유 이용 초상이 없는 감독은 이니셜로 대체합니다.
+          대한축구협회 P급 전체 명단은 공개되지 않아, 현역 K리그 사령탑과 주요 P급 한국 감독을 수록했습니다.
           추천도와 능력치는 공개 기록·보도를 바탕으로 한 편집부 해석이며, 게임 데이터가 아닙니다.
         </p>
       </footer>
     </div>
-    <script src="./js/app.js?v=20260914c"></script>
+    <script src="./js/app.js?v=20260914d"></script>
   </body>
 </html>

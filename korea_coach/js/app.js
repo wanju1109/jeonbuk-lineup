@@ -1,17 +1,27 @@
-/* Korean K League manager dossiers.
+/* Korean manager dossiers.
  * Author mode (?x=jb7k) shows the Evergreen share builder.
- * Shared links (?q=) are read-only. */
+ * Shared links (?q=) are read-only. Compare uses ?q=<A>&v=<B>. */
 (function () {
   "use strict";
 
   const CANONICAL = "https://wanju1109.github.io/jeonbuk-lineup/korea_coach/";
-  const URL_Q = { coach: "q", edit: "x", embed: "f" };
+  const URL_Q = { coach: "q", versus: "v", edit: "x", embed: "f" };
   const EDIT_TOKEN = "jb7k";
   const EMBED_TOKEN = "y";
   const COACH_XOR = 0x4a21;
   const DEFAULT_ID = "c01";
+  const LEAGUE_ORDER = ["K1", "K2", "ETC"];
+  const LEAGUE_LABEL = { K1: "K리그1", K2: "K리그2", ETC: "기타" };
 
-  const state = { index: null, league: "K1", coachId: "", coach: null };
+  const state = {
+    index: null,
+    view: "profile",
+    league: "K1",
+    coachId: "",
+    coach: null,
+    compareA: "",
+    compareB: "",
+  };
 
   function $(id) {
     return document.getElementById(id);
@@ -56,27 +66,42 @@
   }
 
   function applyViewMode() {
-    document.body.classList.remove("edit-mode", "embed-mode");
-    if (isEmbedQuery()) {
-      document.body.classList.add("embed-mode");
-      return;
-    }
-    if (isEditQuery()) document.body.classList.add("edit-mode");
+    document.body.classList.remove("edit-mode", "embed-mode", "compare-mode");
+    if (isEmbedQuery()) document.body.classList.add("embed-mode");
+    else if (isEditQuery()) document.body.classList.add("edit-mode");
+    if (state.view === "compare") document.body.classList.add("compare-mode");
   }
 
-  function publicUrl(coachId) {
-    const ref = encodeRef(coachId || state.coachId);
+  function allCoaches() {
+    return state.index?.coaches || [];
+  }
+
+  function publicUrl(coachId, versusId) {
     const current = window.location.href.split("#")[0].split("?")[0];
     const base = /wanju1109\.github\.io/i.test(current) ? current : CANONICAL;
-    if (!ref) return base;
-    return `${base}?${URL_Q.coach}=${encodeURIComponent(ref)}`;
+    const compare = state.view === "compare" || versusId;
+    const a = encodeRef(coachId || (compare ? state.compareA : state.coachId));
+    if (!a) return base;
+    if (compare) {
+      const b = encodeRef(versusId || state.compareB);
+      if (b) return `${base}?${URL_Q.coach}=${encodeURIComponent(a)}&${URL_Q.versus}=${encodeURIComponent(b)}`;
+    }
+    return `${base}?${URL_Q.coach}=${encodeURIComponent(a)}`;
   }
 
   function syncUrl() {
-    const ref = encodeRef(state.coachId);
-    if (!ref) return;
     const next = new URLSearchParams();
-    next.set(URL_Q.coach, ref);
+    if (state.view === "compare") {
+      const a = encodeRef(state.compareA);
+      const b = encodeRef(state.compareB);
+      if (!a || !b) return;
+      next.set(URL_Q.coach, a);
+      next.set(URL_Q.versus, b);
+    } else {
+      const ref = encodeRef(state.coachId);
+      if (!ref) return;
+      next.set(URL_Q.coach, ref);
+    }
     if (isEditQuery()) next.set(URL_Q.edit, EDIT_TOKEN);
     if (isEmbedQuery()) next.set(URL_Q.embed, EMBED_TOKEN);
     window.history.replaceState({}, "", `${location.pathname}?${next.toString()}`);
@@ -102,11 +127,17 @@
   }
 
   function coachesInLeague(league) {
-    return (state.index?.coaches || []).filter((c) => c.league === league);
+    return allCoaches().filter((c) => c.league === league);
   }
 
   function findCoach(id) {
-    return (state.index?.coaches || []).find((c) => c.id === id) || null;
+    return allCoaches().find((c) => c.id === id) || null;
+  }
+
+  function otherCoach(id) {
+    const list = allCoaches();
+    if (list.length < 2) return null;
+    return list.find((c) => c.id !== id) || null;
   }
 
   function renderChips() {
@@ -249,7 +280,110 @@
       .join("");
   }
 
+  function faceHtml(c, imgClass, fallbackClass) {
+    if (c.photo) {
+      return `<img class="${imgClass}" src="${escapeHtml(c.photo)}" alt="${escapeHtml(c.name)}" />`;
+    }
+    return `<div class="${fallbackClass}" style="--club:${escapeHtml(c.color || "#1b2430")}">${escapeHtml(
+      (c.name || "?").slice(0, 1)
+    )}</div>`;
+  }
+
+  function fillCompareSelects() {
+    const a = $("compareA");
+    const b = $("compareB");
+    if (!a || !b) return;
+    const groups = LEAGUE_ORDER.map((league) => {
+      const rows = coachesInLeague(league)
+        .map((c) => `<option value="${escapeHtml(c.id)}">${escapeHtml(c.name)} · ${escapeHtml(c.club)}</option>`)
+        .join("");
+      return `<optgroup label="${escapeHtml(LEAGUE_LABEL[league] || league)}">${rows}</optgroup>`;
+    }).join("");
+    a.innerHTML = groups;
+    b.innerHTML = groups;
+    a.value = state.compareA;
+    b.value = state.compareB;
+  }
+
+  function abilityMap(c) {
+    const map = {};
+    (c.abilities || []).forEach((row) => {
+      map[row.label] = clamp(row.value, 1, 20);
+    });
+    return map;
+  }
+
+  function renderCompare() {
+    const box = $("compareBody");
+    const a = findCoach(state.compareA);
+    const b = findCoach(state.compareB);
+    if (!box) return;
+    if (!a || !b) {
+      box.innerHTML = "<p class=\"help\">비교할 감독을 두 명 고르세요.</p>";
+      return;
+    }
+    const labels = (a.abilities || []).map((row) => row.label);
+    const mapA = abilityMap(a);
+    const mapB = abilityMap(b);
+    const scoreA = clamp(a.rating, 0, 100);
+    const scoreB = clamp(b.rating, 0, 100);
+    const rows = labels
+      .map((label) => {
+        const va = mapA[label] || 1;
+        const vb = mapB[label] || 1;
+        return (
+          `<div class="cmp-row">` +
+          `<div class="cmp-track is-left"><i style="width:${(va / 20) * 100}%"></i></div>` +
+          `<span class="cmp-val${va > vb ? " is-win" : ""}">${va}</span>` +
+          `<span class="cmp-label">${escapeHtml(label)}</span>` +
+          `<span class="cmp-val${vb > va ? " is-win" : ""}">${vb}</span>` +
+          `<div class="cmp-track"><i style="width:${(vb / 20) * 100}%"></i></div>` +
+          `</div>`
+        );
+      })
+      .join("");
+    const card = (c, score) =>
+      `<article class="compare-card">` +
+      `<header>${faceHtml(c, "", "compare-fallback")}<div>` +
+      `<h3>${escapeHtml(c.name)}</h3>` +
+      `<p class="club-line">${escapeHtml(c.league_name)} · ${escapeHtml(c.club)}</p>` +
+      `<p class="club-line">${escapeHtml(c.tactics?.kind || "")} · ${escapeHtml(c.tactics?.shape || "")}</p>` +
+      `</div><div class="compare-score">${score}</div></header>` +
+      `<p>${escapeHtml(c.headline || "")}</p>` +
+      `</article>`;
+    const traitCol = (c) =>
+      `<div><h4>${escapeHtml(c.name)}</h4>` +
+      `<p><strong>장점</strong> ${(c.strengths || []).map((t) => escapeHtml(t)).join(" · ") || "기록 없음"}</p>` +
+      `<p><strong>허점</strong> ${(c.weaknesses || []).map((t) => escapeHtml(t)).join(" · ") || "기록 없음"}</p>` +
+      `</div>`;
+    box.innerHTML =
+      `<div class="compare-grid">${card(a, scoreA)}${card(b, scoreB)}</div>` +
+      `<div class="cmp-rows" style="margin-top:14px">${rows}</div>` +
+      `<div class="compare-traits">${traitCol(a)}${traitCol(b)}</div>`;
+  }
+
   function buildShareHtml(url) {
+    if (state.view === "compare") {
+      const a = findCoach(state.compareA);
+      const b = findCoach(state.compareB);
+      if (!a || !b) return "";
+      const safeUrl = escapeHtml(url);
+      return [
+        '<div style="display:block;width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
+        '<table cellpadding="0" cellspacing="0" border="0" bgcolor="#1b2430" width="1100" style="width:100% !important;max-width:1100px;border-collapse:collapse;background-color:#1b2430;color:#f7f1e4;font-family:Arial,Helvetica,sans-serif;">',
+        '<tr><td bgcolor="#1b2430" style="padding:16px 18px;background-color:#1b2430;color:#f7f1e4;">',
+        '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 한국 감독 비교입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
+        '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:#d4a017;">KOREAN MANAGERS · COMPARE</p>',
+        `<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">${escapeHtml(a.name)} vs ${escapeHtml(
+          b.name
+        )}</p>`,
+        `<p style="margin:0 0 12px;font-size:14px;line-height:1.5;color:#ddd4c4;">추천도 ${escapeHtml(
+          String(clamp(a.rating, 0, 100))
+        )} · ${escapeHtml(a.club)}  /  ${escapeHtml(String(clamp(b.rating, 0, 100)))} · ${escapeHtml(b.club)}</p>`,
+        `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#d4a017;color:#1b1404;font-weight:700;text-decoration:none;">감독 비교 새 창에서 보기 →</a>`,
+        "</td></tr></table></div>",
+      ].join("");
+    }
     const c = state.coach;
     if (!c) return "";
     const safeUrl = escapeHtml(url);
@@ -262,8 +396,8 @@
       '<div style="display:block;width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
       '<table cellpadding="0" cellspacing="0" border="0" bgcolor="#1b2430" width="1100" style="width:100% !important;max-width:1100px;border-collapse:collapse;background-color:#1b2430;color:#f7f1e4;font-family:Arial,Helvetica,sans-serif;">',
       '<tr><td bgcolor="#1b2430" style="padding:16px 18px;background-color:#1b2430;color:#f7f1e4;">',
-      '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 K리그 한국 감독 노트입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
-      '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:#d4a017;">KOREAN K LEAGUE MANAGERS</p>',
+      '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 한국 감독 노트입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
+      '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:#d4a017;">KOREAN MANAGERS</p>',
       photo,
       `<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">${escapeHtml(c.name)} · ${escapeHtml(
         c.club
@@ -279,10 +413,18 @@
 
   function setupShare() {
     if (!document.body.classList.contains("edit-mode") || isEmbedQuery()) return;
-    const c = state.coach;
-    if (!c) return;
     const url = publicUrl();
-    if ($("shareTargetMeta")) $("shareTargetMeta").textContent = `${c.league_name} ${c.club} · ${c.name}`;
+    if (state.view === "compare") {
+      const a = findCoach(state.compareA);
+      const b = findCoach(state.compareB);
+      if ($("shareTargetMeta")) {
+        $("shareTargetMeta").textContent = a && b ? `비교 · ${a.name} vs ${b.name}` : "비교 대상을 고르세요.";
+      }
+    } else {
+      const c = state.coach;
+      if (!c) return;
+      if ($("shareTargetMeta")) $("shareTargetMeta").textContent = `${c.league_name} ${c.club} · ${c.name}`;
+    }
     if ($("shareCode")) $("shareCode").textContent = buildShareHtml(url);
     if ($("reportUrl")) {
       $("reportUrl").textContent = url;
@@ -290,22 +432,62 @@
     }
   }
 
+  function syncTabs() {
+    document.querySelectorAll(".league-tab").forEach((btn) => {
+      const isCompare = btn.getAttribute("data-view") === "compare";
+      if (state.view === "compare") {
+        btn.classList.toggle("is-active", isCompare);
+      } else {
+        btn.classList.toggle("is-active", !isCompare && btn.getAttribute("data-league") === state.league);
+      }
+    });
+  }
+
   function renderAll() {
     const k1 = coachesInLeague("K1").length;
     const k2 = coachesInLeague("K2").length;
+    const etc = coachesInLeague("ETC").length;
     if ($("asOf") && state.index) {
-      $("asOf").textContent = `${state.index.season}시즌 · 한국인 감독 ${k1 + k2}명 (K1 ${k1} · K2 ${k2})`;
+      $("asOf").textContent = `${state.index.season}시즌 · ${k1 + k2 + etc}명 (K1 ${k1} · K2 ${k2} · 기타 ${etc})`;
     }
-    document.querySelectorAll(".league-tab").forEach((btn) => {
-      btn.classList.toggle("is-active", btn.getAttribute("data-league") === state.league);
-    });
+    applyViewMode();
+    syncTabs();
     renderChips();
-    renderPortrait();
-    renderScout();
-    renderTraits();
-    renderColumn();
-    renderTimeline();
+    if (state.view === "compare") {
+      fillCompareSelects();
+      renderCompare();
+    } else {
+      renderPortrait();
+      renderScout();
+      renderTraits();
+      renderColumn();
+      renderTimeline();
+    }
     setupShare();
+  }
+
+  function enterCompare(leftId, rightId) {
+    const left = findCoach(leftId) || findCoach(state.coachId) || findCoach(DEFAULT_ID);
+    if (!left) {
+      setStatus("비교할 감독을 찾지 못했습니다.", true);
+      return;
+    }
+    let right = findCoach(rightId);
+    if (!right || right.id === left.id) right = otherCoach(left.id);
+    if (!right) {
+      setStatus("비교할 상대가 부족합니다.", true);
+      return;
+    }
+    state.view = "compare";
+    state.compareA = left.id;
+    state.compareB = right.id;
+    state.coachId = left.id;
+    state.coach = left;
+    renderAll();
+    syncUrl();
+    document.title = `${left.name} vs ${right.name} — 한국 감독 비교`;
+    $("compareBoard")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setStatus("");
   }
 
   async function selectCoach(id, options) {
@@ -314,12 +496,13 @@
       setStatus("감독 데이터를 찾지 못했습니다.", true);
       return;
     }
+    state.view = "profile";
     state.league = row.league;
     state.coachId = id;
     state.coach = row;
     renderAll();
     syncUrl();
-    document.title = `${row.name} — K리그 한국 감독`;
+    document.title = `${row.name} — 한국 감독`;
     if (options && options.scroll) $("profile")?.scrollIntoView({ behavior: "smooth", block: "start" });
     if (!options || !options.silent) setStatus("");
   }
@@ -338,16 +521,67 @@
   function bindUi() {
     document.querySelectorAll(".league-tab").forEach((btn) => {
       btn.addEventListener("click", () => {
+        if (btn.getAttribute("data-view") === "compare") {
+          enterCompare(state.coachId, state.compareB && state.compareB !== state.coachId ? state.compareB : "");
+          return;
+        }
+        const row = findCoach(state.coachId) || findCoach(DEFAULT_ID);
+        state.view = "profile";
         state.league = btn.getAttribute("data-league") || "K1";
-        renderChips();
-        document.querySelectorAll(".league-tab").forEach((b) => {
-          b.classList.toggle("is-active", b.getAttribute("data-league") === state.league);
-        });
+        if (row) {
+          state.coachId = row.id;
+          state.coach = row;
+        }
+        renderAll();
+        syncUrl();
+        if (row) document.title = `${row.name} — 한국 감독`;
       });
     });
     $("coachChips")?.addEventListener("click", (event) => {
       const btn = event.target.closest("[data-coach]");
       if (btn) selectCoach(btn.getAttribute("data-coach"), { scroll: true });
+    });
+    $("compareA")?.addEventListener("change", () => {
+      if ($("compareA").value === state.compareB) {
+        const swap = state.compareA;
+        state.compareA = $("compareA").value;
+        state.compareB = swap;
+      } else {
+        state.compareA = $("compareA").value;
+      }
+      state.coachId = state.compareA;
+      state.coach = findCoach(state.compareA);
+      renderAll();
+      syncUrl();
+      const a = findCoach(state.compareA);
+      const b = findCoach(state.compareB);
+      if (a && b) document.title = `${a.name} vs ${b.name} — 한국 감독 비교`;
+    });
+    $("compareB")?.addEventListener("change", () => {
+      if ($("compareB").value === state.compareA) {
+        const swap = state.compareB;
+        state.compareB = $("compareB").value;
+        state.compareA = swap;
+      } else {
+        state.compareB = $("compareB").value;
+      }
+      renderAll();
+      syncUrl();
+      const a = findCoach(state.compareA);
+      const b = findCoach(state.compareB);
+      if (a && b) document.title = `${a.name} vs ${b.name} — 한국 감독 비교`;
+    });
+    $("compareSwap")?.addEventListener("click", () => {
+      const tmp = state.compareA;
+      state.compareA = state.compareB;
+      state.compareB = tmp;
+      state.coachId = state.compareA;
+      state.coach = findCoach(state.compareA);
+      renderAll();
+      syncUrl();
+      const a = findCoach(state.compareA);
+      const b = findCoach(state.compareB);
+      if (a && b) document.title = `${a.name} vs ${b.name} — 한국 감독 비교`;
     });
     $("copyShare")?.addEventListener("click", () =>
       copyText(buildShareHtml(publicUrl()), "에버그린 링크 카드 HTML을 복사했습니다.")
@@ -366,9 +600,15 @@
       setStatus(`데이터를 불러오지 못했습니다.\n${err.message || err}`, true);
       return;
     }
-    const requested = decodeRef(queryParams().get(URL_Q.coach));
+    const params = queryParams();
+    const requested = decodeRef(params.get(URL_Q.coach));
+    const versus = decodeRef(params.get(URL_Q.versus));
     const exists = findCoach(requested);
     const target = exists ? requested : DEFAULT_ID;
+    if (versus && findCoach(versus) && exists) {
+      enterCompare(requested, versus);
+      return;
+    }
     await selectCoach(target);
   }
 
