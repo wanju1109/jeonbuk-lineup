@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:00+09:00",
+  "generated_at": "2026-09-14T11:58:32+09:00",
   "table": {
     "rank": 8,
     "teams": 12,
@@ -832,10 +832,9 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "박태하",
+    "manager_style": "조직적인 수비와 경기 관리에 강점이 있는 지도자입니다.",
+    "identity": "스틸러스라는 이름처럼 단단하게 버티고, 세트피스와 역습으로 한 골을 노리는 축구입니다.",
+    "objective": "키워드는 'Steel Strong'. 지난 시즌 4위에서 더 올라서는 것이 목표였습니다."
   }
 }

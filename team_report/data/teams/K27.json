@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k27-sm.png",
   "home_url": "https://www.fc-anyang.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:00+09:00",
+  "generated_at": "2026-09-14T11:58:32+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -167,14 +167,14 @@
     "history": [
       {
         "round": 1,
-        "rank": 5,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 3,
+        "rank": 4,
         "points": 4,
         "played": 2,
         "gd": 1
@@ -188,7 +188,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -216,7 +216,7 @@
       },
       {
         "round": 8,
-        "rank": 5,
+        "rank": 6,
         "points": 10,
         "played": 8,
         "gd": 0
@@ -832,10 +832,9 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "유병훈",
+    "manager_style": "안양의 창단 첫 승격을 이끈 뒤 1부에서도 지휘봉을 이어가고 있습니다.",
+    "identity": "\"기존이 버티는 좀비였다면 올해는 물어뜯는 좀비가 되겠다\"는 말로 더 공격적인 전환을 예고했습니다.",
+    "objective": "승격 2년차, 6위권 진입. 주장 이창용의 제안으로 달성 시 구단 엠블럼 문신을 공약했습니다."
   }
 }

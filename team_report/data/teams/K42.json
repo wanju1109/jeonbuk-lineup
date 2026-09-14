@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k42-sm.png",
   "home_url": "https://www.yonginfc.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:02+09:00",
+  "generated_at": "2026-09-14T11:58:34+09:00",
   "table": {
     "rank": 11,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 8,
     "scheduled": 32,
     "gap_to_leader": 27,
-    "gap_to_cut": 17,
-    "cut_rank": 5,
+    "gap_to_cut": 15,
+    "cut_rank": 6,
     "gap_above": 4,
     "gap_below": 0,
     "above": "성남",
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -343,7 +343,7 @@
         "gd": -4
       }
     ],
-    "best_rank": 8,
+    "best_rank": 7,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -749,10 +749,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "최윤겸",
+    "manager_style": "충북청주 등 여러 시민구단을 이끌어온 베테랑입니다.",
+    "identity": "신생팀에게 화려한 축구를 요구하지 않습니다. 세트피스와 수비 블록으로 한 경기를 버티는 법을 먼저 가르칩니다.",
+    "objective": "창단 첫 시즌, 프로 무대 적응과 기반 구축.",
+    "note": "2026년 K리그2에 새로 창단해 합류했습니다."
   }
 }

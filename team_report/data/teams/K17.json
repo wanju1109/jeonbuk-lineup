@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:01+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 2,
     "teams": 17,
@@ -25,7 +25,7 @@
     "scheduled": 32,
     "gap_to_leader": 7,
     "gap_to_cut": 0,
-    "cut_rank": 5,
+    "cut_rank": 6,
     "gap_above": 7,
     "gap_below": 1,
     "above": "수원",
@@ -753,17 +753,17 @@
   },
   "attendance": null,
   "context": {
-    "band": "자동 승격 도전",
-    "detail": "선두와 7점 차. 플레이오프를 건너뛸 수 있는 사정권입니다.",
+    "band": "자동 승격권",
+    "detail": "올해는 2위까지 곧바로 올라갑니다. 플레이오프를 건너뛸 수 있는 자리에 서 있습니다.",
     "tags": [
       "리그 최상급 화력"
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "최성용",
+    "manager_style": "수원 삼성 레전드 출신으로, 수비 안정과 선수 장악을 앞세우는 지도자입니다. 시즌 중반 소방수로 들어왔습니다.",
+    "identity": "무너진 팀을 다시 세울 때는 득점보다 실점부터 줄입니다. 승격은 화려한 축구가 아니라 지지 않는 경기에서 온다고 보는 쪽입니다.",
+    "objective": "강등 첫해 곧바로 승격.",
+    "note": "4월 20일 김병수 감독이 경질된 뒤 같은 날 지휘봉을 넘겨받았습니다. 지난 시즌 K리그1 12위로 내려온 팀입니다."
   }
 }

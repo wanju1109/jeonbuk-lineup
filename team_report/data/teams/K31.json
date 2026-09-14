@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:01+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
@@ -25,7 +25,7 @@
     "scheduled": 32,
     "gap_to_leader": 8,
     "gap_to_cut": 0,
-    "cut_rank": 5,
+    "cut_rank": 6,
     "gap_above": 0,
     "gap_below": 2,
     "above": "수원FC",
@@ -177,7 +177,7 @@
       },
       {
         "round": 3,
-        "rank": 10,
+        "rank": 11,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -759,18 +759,17 @@
     "away_fans_avg": 1391
   },
   "context": {
-    "band": "승격 플레이오프권",
-    "detail": "플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
+    "band": "자동 승격 도전",
+    "detail": "2위와 1점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "화력 우위",
       "수비 안정"
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "김도균",
+    "manager_style": "수원FC의 승격을 이끈 경험이 있는 지도자. 서울 이랜드에서는 3년차입니다.",
+    "identity": "안정감을 앞에 두는 축구입니다. 무리한 리드보다 실점 관리로 승격 레이스에 붙어 있으려 합니다.",
+    "objective": "\"안정감을 바탕으로 올 시즌 반드시 승격하겠다.\" 지난 시즌 4위에서 한 걸음 더 나아가는 것이 과제입니다."
   }
 }

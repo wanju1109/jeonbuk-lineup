@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:02+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 8,
     "scheduled": 32,
     "gap_to_leader": 20,
-    "gap_to_cut": 10,
-    "cut_rank": 5,
+    "gap_to_cut": 8,
+    "cut_rank": 6,
     "gap_above": 8,
     "gap_below": 1,
     "above": "부산",
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 13,
+        "rank": 15,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -743,7 +743,7 @@
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷과 10점 차. 남은 8경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 8점 차. 남은 8경기면 아직 늦지 않았습니다.",
     "tags": [
       "홈 강세",
       "무승부 체질",
@@ -751,10 +751,9 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "배성재",
+    "manager_style": "K리그2에서 감독 경험을 쌓은 뒤 지난해 12월 8일 경남 지휘봉을 잡았습니다.",
+    "identity": "시민구단의 현실에 맞춰, 점유보다 전환과 세트피스로 경기를 가져오려 합니다.",
+    "objective": "지난 시즌 11위에서 벗어나 승격 플레이오프권 진입."
   }
 }

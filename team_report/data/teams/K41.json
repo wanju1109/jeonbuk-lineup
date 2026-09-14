@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k41-sm.png",
   "home_url": "https://gimhaefc2008.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:04+09:00",
+  "generated_at": "2026-09-14T11:58:34+09:00",
   "table": {
     "rank": 17,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 8,
     "scheduled": 32,
     "gap_to_leader": 40,
-    "gap_to_cut": 30,
-    "cut_rank": 5,
+    "gap_to_cut": 28,
+    "cut_rank": 6,
     "gap_above": 8,
     "gap_below": null,
     "above": "전남",
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 14,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -343,7 +343,7 @@
         "gd": -28
       }
     ],
-    "best_rank": 14,
+    "best_rank": 13,
     "worst_rank": 17,
     "first_half": {
       "played": 16,
@@ -750,10 +750,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "손현준",
+    "manager_style": "K3 김해를 우승으로 프로에 올려낸 지도자입니다. 선수들과의 거리보다 훈련 강도를 먼저 올립니다.",
+    "identity": "승격팀의 전형적인 싸움 축구입니다. 볼 점유보다 세컨드볼과 세트피스가 생존 수단입니다.",
+    "objective": "창단 후 첫 프로 시즌, 경험 축적과 생존.",
+    "note": "지난해 K3리그 우승으로 K리그2 가입이 승인돼 올해 합류했습니다."
   }
 }

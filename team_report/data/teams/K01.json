@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:34:58+09:00",
+  "generated_at": "2026-09-14T11:58:32+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -832,10 +832,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "김현석",
+    "manager_style": "울산에서만 뛴 원클럽맨 출신으로, 올해가 K리그1 사령탑 첫 시즌입니다. 지난해까지 전남을 지휘했습니다.",
+    "identity": "클럽의 무게를 아는 감독답게, 화려한 실험보다 경기 관리와 세트피스를 앞에 둡니다.",
+    "objective": "\"모든 걸 빨아들이는 블랙홀이 되겠다\"며 팬에게 자부심을 돌려주겠다고 약속했습니다.",
+    "note": "지난 시즌 9위로 마친 구단 정체성 회복이 과제입니다. 주장 정승현도 \"엠블럼의 가치를 떨어뜨렸다\"며 반등을 다짐했습니다."
   }
 }

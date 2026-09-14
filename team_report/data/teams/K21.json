@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:34:59+09:00",
+  "generated_at": "2026-09-14T11:58:32+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
@@ -823,10 +823,9 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "정경호",
+    "manager_style": "지난 시즌 강원의 5위 돌풍을 지휘하며 지도력을 인정받았습니다.",
+    "identity": "개인기보다 거리와 타이밍으로 상대를 지치게 하는 축구입니다. 강원 특유의 조직력이 그대로입니다.",
+    "objective": "키워드는 '하나를 위한 모두, 모두를 위한 하나'. \"지난해 이 슬로건으로 뭉쳐 좋은 결과를 냈다\"며 파이널A를 목표로 꼽았습니다."
   }
 }

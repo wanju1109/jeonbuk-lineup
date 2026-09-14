@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:01+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 3,
     "teams": 17,
@@ -25,7 +25,7 @@
     "scheduled": 32,
     "gap_to_leader": 8,
     "gap_to_cut": 0,
-    "cut_rank": 5,
+    "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 0,
     "above": "대구",
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -743,17 +743,16 @@
   "attendance": null,
   "context": {
     "band": "자동 승격 도전",
-    "detail": "선두와 8점 차. 플레이오프를 건너뛸 수 있는 사정권입니다.",
+    "detail": "2위와 1점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "리그 최상급 화력",
       "무승부 체질"
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "박건하",
+    "manager_style": "수원 삼성 레전드 출신으로 여러 구단을 거친 베테랑입니다. 지난해 12월 24일 김은중 감독의 뒤를 이어 부임했습니다.",
+    "identity": "개막을 앞두고 '유기적이고 주도하는 축구'를 예고했습니다.",
+    "objective": "승강 플레이오프 패배로 내려온 첫해, 곧바로 1부 복귀."
   }
 }

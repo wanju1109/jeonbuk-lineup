@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-09-14T11:34:59+09:00",
+  "generated_at": "2026-09-14T11:58:32+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -167,7 +167,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 5,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -216,7 +216,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -831,10 +831,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "황선홍",
+    "manager_style": "대표팀과 올림픽팀을 두루 거친 베테랑으로, 공격적인 축구를 고수합니다.",
+    "identity": "앞줄을 두껍게 두고 상대 진영에서 경기를 풀려 합니다. 화력은 리그에서도 손꼽히지만, 그 반대급부로 뒷공간이 열릴 때가 있습니다.",
+    "objective": "\"K리그 중심의 팀으로서 타이틀에 도전하겠습니다.\" 우승하면 팀 색인 초록으로 염색하겠다고 공약했습니다.",
+    "note": "지난 시즌 구단 최고 성적인 준우승. 미디어데이 우승 후보 투표에서 7표를 받아 기대가 가장 컸던 팀 중 하나입니다."
   }
 }

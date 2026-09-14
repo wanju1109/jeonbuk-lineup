@@ -477,9 +477,21 @@
 
     if (team.league === "K1") {
       const gapLeader = num(t.gap_to_leader);
-      if (num(t.rank) >= 11) {
+      const band = (team.context && team.context.band) || "";
+      if (band === "강등 확정") {
         paragraphs.push(
-          "이제부터는 순위표를 올려다볼 때가 아닙니다. 승강 플레이오프를 피하는 것, 그 한 가지가 남은 시즌의 전부입니다."
+          "순위를 끌어올려도 목적지는 바뀌지 않습니다. 남은 경기에서 다투는 것은 승점이 아니라, " +
+            "다음 소속팀에서 뛸 자리와 이 팀에서 보낸 시간의 값입니다."
+        );
+      } else if (num(t.rank) === 12) {
+        paragraphs.push(
+          "순위표의 맨 아래입니다. 다만 올해는 이 자리의 운명이 스스로에게만 달려 있지 않습니다. " +
+            "김천이 11위 안에 들면 K리그2 승격 플레이오프 준우승팀과 승강 플레이오프를 치러야 하고, " +
+            "김천이 12위로 내려앉으면 승강 플레이오프는 아예 열리지 않습니다."
+        );
+      } else if (num(t.rank) === 11) {
+        paragraphs.push(
+          "위를 올려다보기보다 아래를 확인해야 하는 자리입니다. 한 칸만 더 내려가면 승강 플레이오프 사정권에 들어갑니다."
         );
       } else if (num(t.rank) > 6 && num(t.gap_to_cut) > 0) {
         paragraphs.push(
@@ -495,15 +507,20 @@
         );
       }
     } else {
-      if (num(t.rank) === 1) {
-        paragraphs.push("다이렉트 승격은 2위와의 간격을 유지하는 싸움입니다. 화려할 필요 없이, 지지 않는 경기를 반복하면 됩니다.");
-      } else if (num(t.rank) <= 5) {
+      /* 2027 expands K League 1 to 14 clubs, so 2026 hands out two direct
+         tickets and sends 3rd through 6th to the playoff. */
+      if (num(t.rank) <= 2) {
         paragraphs.push(
-          "플레이오프 대진은 순위 한 칸으로 완전히 달라집니다. 남은 경기는 승격 경쟁이자 대진 확보 싸움입니다."
+          "올해는 2위까지 곧바로 올라갑니다. 화려할 필요 없이, 지지 않는 경기를 반복하며 이 자리를 지키면 되는 시즌입니다."
+        );
+      } else if (num(t.rank) <= 6) {
+        paragraphs.push(
+          "자동 승격 두 자리를 놓치면 3위부터 6위가 겨루는 플레이오프로 향합니다. " +
+            "남은 경기는 승격 경쟁인 동시에, 한 경기라도 덜 치르기 위한 대진 확보 싸움입니다."
         );
       } else if (num(t.gap_to_cut) > 0) {
         paragraphs.push(
-          `플레이오프 컷과 ${num(t.gap_to_cut)}점 차. 최소 ${Math.ceil(num(t.gap_to_cut) / 3)}승 이상을 앞선 팀보다 더 쌓아야 하는 상황입니다.`
+          `플레이오프 컷인 6위와 ${num(t.gap_to_cut)}점 차. 최소 ${Math.ceil(num(t.gap_to_cut) / 3)}승 이상을 앞선 팀보다 더 쌓아야 하는 상황입니다.`
         );
       }
     }
@@ -511,18 +528,162 @@
     return { id: "outlook", title: "남은 시즌, 무엇이 남았나", paragraphs };
   }
 
-  function profileSection(team) {
+  function benchSection(team) {
     const p = team.profile || {};
     const paragraphs = [];
     if (p.manager) {
       paragraphs.push(
-        `${p.manager} 감독 체제입니다.` + (p.manager_style ? ` ${p.manager_style}` : "")
+        `벤치를 맡은 사람은 ${p.manager} 감독입니다.` + (p.manager_style ? ` ${p.manager_style}` : "")
       );
     }
-    if (p.identity) paragraphs.push(p.identity);
-    if (p.objective) paragraphs.push(p.objective);
+    if (p.identity) {
+      paragraphs.push(p.identity);
+    }
     if (p.note) paragraphs.push(p.note);
-    return paragraphs.length ? { id: "profile", title: "벤치와 방향성", paragraphs } : null;
+    return paragraphs.length ? { id: "bench", title: "감독과 그 축구", paragraphs } : null;
+  }
+
+  function wantsTitle(text) {
+    return /우승|2연패|타이틀|새로운 별/.test(text);
+  }
+
+  function wantsAsia(text) {
+    return /ACLE|아시아/.test(text);
+  }
+
+  function wantsStay(text) {
+    return /잔류/.test(text);
+  }
+
+  function wantsPromo(text) {
+    return /승격/.test(text);
+  }
+
+  function wantsTopSix(text) {
+    return /6위|파이널A|파이널 A/.test(text);
+  }
+
+  function realitySection(team) {
+    const p = team.profile || {};
+    const t = team.table;
+    const band = (team.context && team.context.band) || "";
+    const rank = num(t.rank);
+    const remaining = num(t.remaining);
+    const gapLeader = num(t.gap_to_leader);
+    const objective = String(p.objective || "");
+    const paragraphs = [];
+
+    if (objective) {
+      paragraphs.push(`시즌을 열며 구단이 내건 말은 이랬습니다. ${objective}`);
+    } else {
+      paragraphs.push(
+        `지금 ${topic(team.name)} ${team.league_name} ${placeWord(rank, num(t.teams))} · ${band}에 서 있습니다.`
+      );
+    }
+
+    if (band === "강등 확정") {
+      paragraphs.push(
+        "목표를 수정할 시간도 지나갔습니다. 남은 일정은 순위표가 아니라, 이 유니폼을 입은 선수 개개인의 다음을 위한 시간입니다."
+      );
+    } else if (wantsTitle(objective)) {
+      if (rank === 1 && gapLeader === 0) {
+        paragraphs.push(
+          `그 공언이 허세가 아니었음이, 지금 순위표가 말하고 있습니다. 승점 ${num(t.points)}점의 선두. 남은 ${remaining}경기를 관리하면 트로피가 손에 들어옵니다.`
+        );
+      } else if (gapLeader > remaining) {
+        paragraphs.push(
+          `현실은 ${rank}위, 선두와 ${gapLeader}점 차입니다. 남은 ${remaining}경기로 따라잡기에는 산술이 먼저 고개를 젓습니다. 봄에 내건 우승은 슬로건으로 남고, 시즌의 진짜 과제는 이 자리를 어떻게 지키느냐로 옮겨갔습니다.`
+        );
+      } else if (rank <= 3) {
+        paragraphs.push(
+          `선두와 ${gapLeader}점. 아직 공언을 철회할 타이밍은 아닙니다. 다만 한 번의 미끄러짐이 계절을 바꿀 거리이기도 합니다.`
+        );
+      } else {
+        paragraphs.push(
+          `우승을 입에 올렸던 팀의 현재는 ${rank}위입니다. 팬이 기다리는 것은 변명이 아니라, 남은 ${remaining}경기에서 그 말을 얼마나 책임지느냐입니다.`
+        );
+      }
+    } else if (wantsAsia(objective)) {
+      if (rank === 1) {
+        paragraphs.push(
+          `봄에 내건 것은 아시아 티켓이었습니다. 현실은 그 위를 지나 선두입니다. 공약의 단위가 4위에서 우승으로 바뀐 시즌입니다.`
+        );
+      } else if (rank <= 3) {
+        paragraphs.push(
+          `ACLE를 말했던 팀이 ${rank}위에 있습니다. 공언은 이미 사정권이고, 남은 것은 그 자리를 가을까지 붙드는 일입니다.`
+        );
+      } else if (rank <= 6) {
+        paragraphs.push(
+          `아시아를 말했고, 지금은 ${rank}위입니다. 티켓은 아직 산술 안에 있지만, 한 칸만 밀려도 봄의 공언이 슬로건으로 남습니다.`
+        );
+      } else {
+        paragraphs.push(
+          `아시아를 말했던 팀의 현재는 ${rank}위입니다. 남은 ${remaining}경기가 그 말을 책임질 마지막 구간입니다.`
+        );
+      }
+    } else if (wantsStay(objective)) {
+      if (rank <= 6) {
+        paragraphs.push(
+          `잔류가 목표였던 팀이 ${rank}위에 있습니다. 생존을 말하던 봄과, 위를 올려다보는 가을이 같은 시즌 안에 있습니다.`
+        );
+      } else if (/잔류 경쟁|승강/.test(band)) {
+        paragraphs.push(
+          "공언 그대로, 시즌은 생존으로 수렴하고 있습니다. 남은 경기의 값은 승점이 아니라 내년의 1부 티켓입니다."
+        );
+      } else {
+        paragraphs.push(
+          `잔류를 목표로 올린 팀은 지금 ${rank}위입니다. 목표는 아직 유효하고, 방심하면 그 목표조차 멀어집니다.`
+        );
+      }
+    } else if (wantsPromo(objective)) {
+      if (band === "자동 승격권") {
+        paragraphs.push(
+          `승격을 말했던 팀이 지금 그 자리 위에 서 있습니다. 남은 ${remaining}경기는 꿈을 이루는 과정이 아니라, 꿈을 지키며 끝내는 과정입니다.`
+        );
+      } else if (/승격 플레이오프|PO/.test(band)) {
+        paragraphs.push(
+          "직행 티켓은 놓쳤더라도 플레이오프는 살아 있습니다. 봄의 공언을 가을의 토너먼트로 미룬 시즌입니다."
+        );
+      } else if (rank >= num(t.teams) - 3) {
+        paragraphs.push(
+          `승격을 말했던 팀이 ${rank}위에 있습니다. 공언과 현실의 간격이 이렇게 벌어지면, 시즌의 과제는 올라가는 것이 아니라 무너지지 않는 것이 됩니다.`
+        );
+      } else {
+        paragraphs.push(
+          `승격은 아직 산술 안에 있습니다. 다만 ${rank}위에서 그 말을 다시 꺼내려면, 남은 ${remaining}경기가 봄보다 더 정확해야 합니다.`
+        );
+      }
+    } else if (wantsTopSix(objective)) {
+      if (rank <= 6) {
+        paragraphs.push(
+          `6위 안을 목표로 시즌을 연 팀이 그 선 위에 있습니다. 공언을 지킨 셈이지만, 스플릿 전까지는 지킨 것이 아닙니다.`
+        );
+      } else {
+        paragraphs.push(
+          `6위 안을 말했는데 지금은 ${rank}위입니다. 컷과의 점수 차가 남은 일정의 성격 전부를 바꿉니다.`
+        );
+      }
+    } else if (band) {
+      paragraphs.push(
+        `숫자는 이렇게 답합니다. ${team.league_name} ${rank}위, ${band}. ` +
+          (team.context.detail || "남은 일정이 이 판정을 확정하거나 뒤집습니다.")
+      );
+    }
+
+    if (
+      p.objective &&
+      team.context &&
+      team.context.detail &&
+      !wantsTitle(objective) &&
+      !wantsStay(objective) &&
+      !wantsPromo(objective) &&
+      !wantsAsia(objective) &&
+      !wantsTopSix(objective)
+    ) {
+      paragraphs.push(team.context.detail);
+    }
+
+    return paragraphs.length ? { id: "reality", title: "목표, 그리고 현실", paragraphs } : null;
   }
 
   function headlineFor(team) {
@@ -537,16 +698,21 @@
     if (num(streaks.current_len) >= 4 && streaks.current_type === "L") {
       return `${num(t.rank)}위 ${name}, 멈추지 않는 ${num(streaks.current_len)}연패`;
     }
-    if (num(streaks.longest_winless) >= 12 && band === "강등권") {
+    if (num(streaks.longest_winless) >= 12) {
       return `${name}, ${num(streaks.longest_winless)}경기의 긴 겨울`;
+    }
+    if (band === "강등 확정") {
+      return `${name}, 순위표 밖에서 치르는 마지막 ${num(t.remaining)}경기`;
     }
     if (band === "우승 경쟁" && num(t.rank) === 1) {
       return `${name}, 승점 ${num(t.points)}점의 선두에서 내려다보는 풍경`;
     }
     if (band === "자동 승격권") {
-      return `${name}, 승격이 목표가 아니라 일정이 된 시즌`;
+      return num(t.rank) === 1
+        ? `${name}, 승격이 목표가 아니라 일정이 된 시즌`
+        : `${name}, 두 장뿐인 직행 티켓 위에 서다`;
     }
-    if (band === "강등권") {
+    if (band === "승강 플레이오프권") {
       return `${name}, 남은 ${num(t.remaining)}경기가 전부 결승전`;
     }
     return `${num(t.rank)}위 ${name} — ${band}의 한가운데서`;
@@ -577,7 +743,8 @@
 
     const sections = [
       leadSection(team, ctx),
-      profileSection(team),
+      benchSection(team),
+      realitySection(team),
       identitySection(team, ctx),
       attackSection(team, ctx),
       defenseSection(team, ctx),

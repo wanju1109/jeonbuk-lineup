@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:00+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
@@ -25,7 +25,7 @@
     "scheduled": 32,
     "gap_to_leader": 0,
     "gap_to_cut": 0,
-    "cut_rank": 5,
+    "cut_rank": 6,
     "gap_above": null,
     "gap_below": 7,
     "above": "",
@@ -762,10 +762,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "이정효",
+    "manager_style": "2022년 광주 부임 첫해 K리그2 우승과 승격, 이듬해 K리그1 3위, 이어 구단 최초 ACLE 8강을 만든 지도자입니다. 거침없는 화법과 높은 요구로 유명합니다.",
+    "identity": "전방에서부터 상대를 물어뜯는 축구입니다. 라인은 높고, 실수는 즉시 압박으로 되갚습니다. 선수들이 그 강도에 적응하면 리그를 집어삼킵니다.",
+    "objective": "키워드는 '일관성'. \"어떤 어려움이 와도 준비한 축구를 이어가면 좋은 결과가 나온다\"고 했습니다.",
+    "note": "여러 팀의 제안 속에 수원이 내건 '명가 재건'을 택했습니다. 지난 시즌 2위로 승격 문턱에서 좌절한 팀입니다."
   }
 }

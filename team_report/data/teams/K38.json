@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k38-sm.png",
   "home_url": "https://cheonancityfc.kr",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:03+09:00",
+  "generated_at": "2026-09-14T11:58:34+09:00",
   "table": {
     "rank": 14,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 7,
     "scheduled": 32,
     "gap_to_leader": 30,
-    "gap_to_cut": 20,
-    "cut_rank": 5,
+    "gap_to_cut": 18,
+    "cut_rank": 6,
     "gap_above": 3,
     "gap_below": 1,
     "above": "파주",
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -247,7 +247,7 @@
       },
       {
         "round": 13,
-        "rank": 11,
+        "rank": 10,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -761,10 +761,9 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "박진섭",
+    "manager_style": "전북을 지휘했던 베테랑입니다. 수비 블록을 먼저 만들고 역습으로 경기를 가져오려 합니다.",
+    "identity": "내려서서 버티는 축구입니다. 한 골을 지키면 이기는 날을 늘리는 것이 반등의 공식입니다.",
+    "objective": "지난 시즌 13위에서의 순위 반등."
   }
 }

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:02+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 8,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 8,
     "scheduled": 32,
     "gap_to_leader": 21,
-    "gap_to_cut": 11,
-    "cut_rank": 5,
+    "gap_to_cut": 9,
+    "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 1,
     "above": "경남",
@@ -736,17 +736,16 @@
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷과 11점 차. 남은 8경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 9점 차. 남은 8경기면 아직 늦지 않았습니다.",
     "tags": [
       "원정에 강한 팀",
       "무승부 체질"
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "고정운",
+    "manager_style": "김포를 K리그2에 안착시킨 지도자입니다.",
+    "identity": "예산이 적은 시민구단답게 조직으로 메우는 축구입니다. 한 골을 지키면 이기는 날을 늘리는 것이 목표입니다.",
+    "objective": "지난 시즌 7위, 시민구단의 승격 플레이오프권 진입."
   }
 }

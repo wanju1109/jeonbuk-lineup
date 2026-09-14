@@ -47,15 +47,19 @@ LEAGUE_META = {
         "extra_games": 5,
         "acl_two": 3,
         "final_a": 6,
-        "relegation_playoff": 11,
+        # 2026 has no automatic relegation: the bottom club plays a promotion
+        # /relegation playoff against the K League 2 playoff runner-up.
+        "relegation_playoff": 12,
     },
     "K2": {
         "id": "K2",
         "name": "K리그2",
         "league_id": "2",
         "extra_games": 0,
-        "promotion_auto": 1,
-        "promotion_playoff": 5,
+        # K League 1 grows to 14 clubs in 2027, so the top two go up directly
+        # and 3rd through 6th contest the promotion playoff.
+        "promotion_auto": 2,
+        "promotion_playoff": 6,
     },
 }
 
@@ -432,6 +436,8 @@ def objective_for(
     remaining: int,
     gap_to_leader: int,
     gap_to_cut: int,
+    gap_below: int | None,
+    gap_to_auto: int,
 ) -> dict:
     """Where the club realistically stands with the run-in left.
 
@@ -464,45 +470,55 @@ def objective_for(
                 "band": "파이널A 경쟁",
                 "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
             }
-        if rank < meta["relegation_playoff"]:
-            if gap_to_cut <= catch_cut:
-                return {
-                    "band": "파이널A 추격",
-                    "detail": f"6위와 {gap_to_cut}점 차. 상위 스플릿이 아직 사정권입니다.",
-                }
-            return {
-                "band": "중위권",
-                "detail": "위도 아래도 멀어진 자리. 시즌의 방향을 스스로 정해야 합니다.",
-            }
-        if rank == meta["relegation_playoff"]:
+        if rank >= meta["relegation_playoff"]:
             return {
                 "band": "승강 플레이오프권",
-                "detail": "한 계단만 밀려도 플레이오프. 이제 잔류가 시즌의 전부입니다.",
+                "detail": (
+                    "순위표의 맨 아래입니다. 다만 올해 강등은 김천 상무의 최종 순위에 달려 있습니다. "
+                    "김천이 11위 안에 들면 이 자리의 팀이 K리그2 승격 PO 준우승팀과 승강 플레이오프를 치르고, "
+                    "김천이 12위로 마치면 승강 플레이오프 자체가 열리지 않습니다."
+                ),
+            }
+        if rank == meta["relegation_playoff"] - 1 and gap_below is not None and gap_below <= 6:
+            return {
+                "band": "잔류 경쟁",
+                "detail": f"바로 아래와 {gap_below}점 차. 한 번만 미끄러져도 최하위 자리가 눈앞입니다.",
+            }
+        if gap_to_cut <= catch_cut:
+            return {
+                "band": "파이널A 추격",
+                "detail": f"6위와 {gap_to_cut}점 차. 상위 스플릿이 아직 사정권입니다.",
             }
         return {
-            "band": "강등권",
-            "detail": "순위표의 맨 아래입니다. 남은 일정이 전부 생존 경기로 바뀌었습니다.",
+            "band": "중위권",
+            "detail": "위도 아래도 멀어진 자리. 시즌의 방향을 스스로 정해야 합니다.",
         }
 
-    if rank == meta["promotion_auto"]:
-        return {
-            "band": "자동 승격권",
-            "detail": f"리그 선두에서 남은 {remaining}경기를 버티면 다이렉트 승격입니다.",
-        }
+    # 2026 is the one season with two direct tickets, because K League 1 goes
+    # to 14 clubs in 2027. Missing the top two is a real cost, not a nuance.
+    if rank <= meta["promotion_auto"]:
+        detail = (
+            f"리그 선두에서 남은 {remaining}경기를 버티면 다이렉트 승격입니다."
+            if rank == 1
+            else "올해는 2위까지 곧바로 올라갑니다. 플레이오프를 건너뛸 수 있는 자리에 서 있습니다."
+        )
+        return {"band": "자동 승격권", "detail": detail}
     if rank <= meta["promotion_playoff"]:
-        if gap_to_leader <= catch_leader:
+        # Being mathematically within reach of second is not the same as
+        # contending for it; only a genuinely tight gap earns the label.
+        if gap_to_auto <= catch_leader * 0.6:
             return {
                 "band": "자동 승격 도전",
-                "detail": f"선두와 {gap_to_leader}점 차. 플레이오프를 건너뛸 수 있는 사정권입니다.",
+                "detail": f"2위와 {gap_to_auto}점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
             }
         return {
             "band": "승격 플레이오프권",
-            "detail": "플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
+            "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
         }
     if gap_to_cut <= catch_cut:
         return {
             "band": "PO 추격권",
-            "detail": f"플레이오프 컷과 {gap_to_cut}점 차. 남은 {remaining}경기면 아직 늦지 않았습니다.",
+            "detail": f"플레이오프 컷인 6위와 {gap_to_cut}점 차. 남은 {remaining}경기면 아직 늦지 않았습니다.",
         }
     if rank >= total - 2:
         return {
@@ -623,6 +639,15 @@ def build_team_payload(
     cut_index = min(cut_rank, total_teams) - 1
     gap_to_cut = max(records[table_rows[cut_index]]["points"] - rec["points"], 0)
 
+    # K League 2 hands out two direct tickets in 2026, so the second spot is a
+    # line worth measuring on its own.
+    auto_index = min(LEAGUE_META["K2"]["promotion_auto"], total_teams) - 1
+    gap_to_auto = (
+        max(records[table_rows[auto_index]]["points"] - rec["points"], 0)
+        if league == "K2"
+        else 0
+    )
+
     scoring = {
         "gf_per_game": round(rec["gf"] / rec["played"], 2) if rec["played"] else 0.0,
         "ga_per_game": round(rec["ga"] / rec["played"], 2) if rec["played"] else 0.0,
@@ -640,6 +665,36 @@ def build_team_payload(
         round(top_scorer["goals"] / rec["gf"], 3)
         if top_scorer and rec["gf"] > 0 and top_scorer["goals"] > 0
         else 0.0
+    )
+
+    gap_below = (rec["points"] - records[below]["points"]) if below else None
+    context = objective_for(
+        league,
+        rank,
+        total_teams,
+        remaining,
+        leader_points - rec["points"],
+        gap_to_cut,
+        gap_below,
+        gap_to_auto,
+    )
+    # A club's situation can be settled off the pitch (relocation, licence,
+    # points deduction). team_profiles.json may override the verdict.
+    if profile.get("band_override"):
+        context = {
+            "band": str(profile["band_override"]),
+            "detail": str(profile.get("band_detail") or context["detail"]),
+        }
+
+    tags = style_tags(
+        rec,
+        home,
+        away,
+        scoring,
+        league_avg,
+        metric_ranks["gf"].get(team_id, total_teams),
+        metric_ranks["ga"].get(team_id, total_teams),
+        total_teams,
     )
 
     ranks_seen = [h["rank"] for h in history]
@@ -672,7 +727,7 @@ def build_team_payload(
             "gap_to_cut": gap_to_cut,
             "cut_rank": cut_rank,
             "gap_above": (records[above]["points"] - rec["points"]) if above else None,
-            "gap_below": (rec["points"] - records[below]["points"]) if below else None,
+            "gap_below": gap_below,
             "above": directory.get(above, {}).get("name", "") if above else "",
             "below": directory.get(below, {}).get("name", "") if below else "",
         },
@@ -708,26 +763,7 @@ def build_team_payload(
             "goal_share": goal_share,
         },
         "attendance": attendance_for(meta["name"]),
-        "context": {
-            **objective_for(
-                league,
-                rank,
-                total_teams,
-                remaining,
-                leader_points - rec["points"],
-                gap_to_cut,
-            ),
-            "tags": style_tags(
-                rec,
-                home,
-                away,
-                scoring,
-                league_avg,
-                metric_ranks["gf"].get(team_id, total_teams),
-                metric_ranks["ga"].get(team_id, total_teams),
-                total_teams,
-            ),
-        },
+        "context": {**context, "tags": tags},
         "profile": profile,
     }
     return payload

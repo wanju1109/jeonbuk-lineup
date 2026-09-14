@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:34:59+09:00",
+  "generated_at": "2026-09-14T11:58:32+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -167,7 +167,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -216,7 +216,7 @@
       },
       {
         "round": 8,
-        "rank": 7,
+        "rank": 8,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -833,10 +833,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "세르지우 코스타",
+    "manager_style": "2022 카타르 월드컵에서 파울루 벤투 감독을 보좌한 수석코치 출신 포르투갈 지도자입니다. 지난해 12월 부임했습니다.",
+    "identity": "짧은 패스로 후방에서부터 경기를 쌓는 축구입니다. 한 번에 뒤집기보다 과정을 반복하는 쪽입니다.",
+    "objective": "키워드는 '프로세스'. \"어려운 상황이 와도 과정을 믿어야 한다\"며 6위 안을 목표로 제시했습니다.",
+    "note": "지난 시즌 11위로 승강 플레이오프까지 갔던 팀을 물려받았습니다."
   }
 }

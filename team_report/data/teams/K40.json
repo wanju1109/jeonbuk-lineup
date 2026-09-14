@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:03+09:00",
+  "generated_at": "2026-09-14T11:58:34+09:00",
   "table": {
     "rank": 13,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 8,
     "scheduled": 32,
     "gap_to_leader": 27,
-    "gap_to_cut": 17,
-    "cut_rank": 5,
+    "gap_to_cut": 15,
+    "cut_rank": 6,
     "gap_above": 0,
     "gap_below": 3,
     "above": "충북청주",
@@ -176,7 +176,7 @@
       },
       {
         "round": 3,
-        "rank": 11,
+        "rank": 10,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -752,10 +752,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "제라드 누스",
+    "manager_style": "호주 출신 지도자로 K3 파주를 프로 무대로 올려낸 인물입니다. 강도 높은 훈련과 전방 압박을 내세웁니다.",
+    "identity": "신생팀답게 공을 오래 잡기보다 빠르게 앞으로 보내는 축구입니다. 체력이 되는 날과 안 되는 날의 낙차가 큽니다.",
+    "objective": "창단 첫 시즌 연착륙.",
+    "note": "K3리그에서 올라와 2026년 K리그2에 새로 합류했습니다."
   }
 }

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:34:58+09:00",
+  "generated_at": "2026-09-14T11:58:31+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
@@ -834,10 +834,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "김기동",
+    "manager_style": "포항에서 적은 자원으로 꾸준히 상위권을 만들어낸 지도자입니다. 선수 장점을 살리는 유연한 기용과 경기 중 수정이 강점입니다.",
+    "identity": "상대를 보고 무게 중심을 옮기는 축구입니다. 측면 공격과 세트피스로 골을 만들고, 리드하면 경기를 닫는 쪽을 택합니다.",
+    "objective": "키워드는 '완연한 서울의 봄'. 주장 김진수가 ACLE 진출권인 4위를 목표로 내걸자 김 감독은 염색을 공약했습니다.",
+    "note": "지난 시즌 6위에 그친 뒤 \"기대에 부응하지 못해 죄송하다. 올해는 다를 것\"이라며 시즌을 열었습니다."
   }
 }

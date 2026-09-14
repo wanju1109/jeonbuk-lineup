@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:03+09:00",
+  "generated_at": "2026-09-14T11:58:34+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 7,
     "scheduled": 32,
     "gap_to_leader": 31,
-    "gap_to_cut": 21,
-    "cut_rank": 5,
+    "gap_to_cut": 19,
+    "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 1,
     "above": "천안",
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 1,
+        "rank": 3,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -344,7 +344,7 @@
         "gd": -21
       }
     ],
-    "best_rank": 1,
+    "best_rank": 3,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -762,10 +762,9 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "최문식",
+    "manager_style": "대전 등에서 지휘봉을 잡았던 공격수 출신 지도자입니다.",
+    "identity": "공격수 출신답게 앞줄을 살리고 싶어 하지만, 지금 스쿼드는 먼저 실점부터 막아야 하는 처지입니다.",
+    "objective": "지난 시즌 14위, 하위권 탈출과 리빌딩."
   }
 }

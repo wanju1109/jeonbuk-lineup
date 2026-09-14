@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:02+09:00",
+  "generated_at": "2026-09-14T11:58:34+09:00",
   "table": {
     "rank": 10,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 8,
     "scheduled": 32,
     "gap_to_leader": 23,
-    "gap_to_cut": 13,
-    "cut_rank": 5,
+    "gap_to_cut": 11,
+    "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 4,
     "above": "충남아산",
@@ -246,7 +246,7 @@
       },
       {
         "round": 13,
-        "rank": 10,
+        "rank": 11,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -742,8 +742,8 @@
   },
   "attendance": null,
   "context": {
-    "band": "중위권",
-    "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
+    "band": "PO 추격권",
+    "detail": "플레이오프 컷인 6위와 11점 차. 남은 8경기면 아직 늦지 않았습니다.",
     "tags": [
       "수비 안정",
       "실리 축구",
@@ -752,10 +752,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "김해운",
+    "manager_style": "1996년 천안 일화 시절부터 2008년까지 성남에서만 뛴 원클럽맨 골키퍼 출신입니다. 단장으로 팀을 운영하다 현장으로 내려왔습니다.",
+    "identity": "골키퍼 출신답게 실점부터 막으려 합니다. 중반 감독 교체 이후의 과제는 철학의 완성보다 추락을 멈추는 일입니다.",
+    "objective": "체질 개선과 잔여 시즌 반등.",
+    "note": "8월 4일 12위에서 전경준 감독이 경질됐고, 단장이던 김해운이 8월 11일 사령탑에 올랐습니다. 지난 시즌 5위로 마친 팀의 중반 추락이 감독 교체로 이어졌습니다."
   }
 }

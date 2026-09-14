@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:02+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 6,
     "teams": 17,
@@ -24,8 +24,8 @@
     "remaining": 7,
     "scheduled": 32,
     "gap_to_leader": 12,
-    "gap_to_cut": 2,
-    "cut_rank": 5,
+    "gap_to_cut": 0,
+    "cut_rank": 6,
     "gap_above": 2,
     "gap_below": 8,
     "above": "화성",
@@ -753,18 +753,17 @@
   },
   "attendance": null,
   "context": {
-    "band": "PO 추격권",
-    "detail": "플레이오프 컷과 2점 차. 남은 7경기면 아직 늦지 않았습니다.",
+    "band": "승격 플레이오프권",
+    "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
     "tags": [
       "화력 우위",
       "한 골 승부사"
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "조성환",
+    "manager_style": "인천에서 여러 차례 잔류 싸움을 이겨낸 수비 조직의 전문가입니다.",
+    "identity": "내려서서 상대를 지치게 한 뒤 역습으로 한 골을 노리는 축구입니다. 승격은 화력이 아니라 실점 관리에서 온다고 보는 지도자입니다.",
+    "objective": "김진혁·김민혁 등 베테랑을 영입하며 승격 의지를 분명히 했습니다."
   }
 }

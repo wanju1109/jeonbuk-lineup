@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:35:01+09:00",
+  "generated_at": "2026-09-14T11:58:33+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
@@ -25,7 +25,7 @@
     "scheduled": 32,
     "gap_to_leader": 10,
     "gap_to_cut": 0,
-    "cut_rank": 5,
+    "cut_rank": 6,
     "gap_above": 2,
     "gap_below": 2,
     "above": "서울E",
@@ -753,18 +753,17 @@
   },
   "attendance": null,
   "context": {
-    "band": "승격 플레이오프권",
-    "detail": "플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
+    "band": "자동 승격 도전",
+    "detail": "2위와 3점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "리그 최고 수비",
       "클린시트 다수"
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "차두리",
+    "manager_style": "국가대표 풀백 출신으로, 선수 지도자로서 프로 사령탑은 화성에서 이어가고 있습니다. 투지와 수비 집중을 먼저 요구합니다.",
+    "identity": "측면을 두껍게 쓰고 싸움을 피하지 않는 축구입니다. 아직 승격권의 세밀함보다는 경기의 강도가 먼저 보입니다.",
+    "objective": "K리그2 참가 2년차, 승격권 경쟁."
   }
 }

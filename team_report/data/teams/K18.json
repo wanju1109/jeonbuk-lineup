@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-09-14T11:34:59+09:00",
+  "generated_at": "2026-09-14T11:58:32+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -820,10 +820,10 @@
     ]
   },
   "profile": {
-    "manager": "",
-    "manager_style": "",
-    "identity": "",
-    "objective": "",
-    "note": ""
+    "manager": "윤정환",
+    "manager_style": "선수 시절 플레이메이커답게 중원 구성과 빌드업을 중시합니다.",
+    "identity": "중원을 통해 경기를 가져오려 합니다. 승격팀답지 않게 볼을 잡고, 상대가 달려들면 그 공간을 씁니다.",
+    "objective": "키워드는 '변화, 도전, 성장'. \"인천의 가치를 걸고 큰 목표에 도전하겠다\"고 했습니다.",
+    "note": "지난 시즌 K리그2 우승으로 올라온 승격 첫해입니다."
   }
 }
