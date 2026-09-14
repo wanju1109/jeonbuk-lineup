@@ -33,7 +33,6 @@ body:not(.edit-mode) .editor-only { display: none !important; }
 body.embed-mode .footer, body.embed-mode #community { display: none !important; }
 body.compare-mode #profile, body.compare-mode #timeline { display: none !important; }
 body:not(.compare-mode) #compareBoard { display: none !important; }
-body.compare-mode .coach-chips { display: none; }
 
 .hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 72%, #3d4f66 100%);

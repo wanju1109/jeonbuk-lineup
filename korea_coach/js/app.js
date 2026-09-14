@@ -1,6 +1,7 @@
 /* Korean manager dossiers.
  * Author mode (?x=jb7k) shows the Evergreen share builder.
- * Shared links (?q=) are read-only. Compare uses ?q=<A>&v=<B>. */
+ * Shared links open the main page. Readers pick coaches from the tabs.
+ * Deep links ?q= / ?q=&v= still work as bookmarks. */
 (function () {
   "use strict";
 
@@ -76,17 +77,21 @@
     return state.index?.coaches || [];
   }
 
-  function publicUrl(coachId, versusId) {
-    const current = window.location.href.split("#")[0].split("?")[0];
+  function pageBaseNoQuery() {
+    return String(window.location.href.split("#")[0].split("?")[0] || "");
+  }
+
+  function normalizeBase(base) {
+    let b = String(base || "").trim();
+    if (!b) return CANONICAL;
+    if (!/\.html$/i.test(b) && !/\/$/.test(b)) b += "/";
+    return b;
+  }
+
+  function publicHomeUrl() {
+    const current = pageBaseNoQuery();
     const base = /wanju1109\.github\.io/i.test(current) ? current : CANONICAL;
-    const compare = state.view === "compare" || versusId;
-    const a = encodeRef(coachId || (compare ? state.compareA : state.coachId));
-    if (!a) return base;
-    if (compare) {
-      const b = encodeRef(versusId || state.compareB);
-      if (b) return `${base}?${URL_Q.coach}=${encodeURIComponent(a)}&${URL_Q.versus}=${encodeURIComponent(b)}`;
-    }
-    return `${base}?${URL_Q.coach}=${encodeURIComponent(a)}`;
+    return normalizeBase(base);
   }
 
   function syncUrl() {
@@ -442,67 +447,25 @@
   }
 
   function buildShareHtml(url) {
-    if (state.view === "compare") {
-      const a = findCoach(state.compareA);
-      const b = findCoach(state.compareB);
-      if (!a || !b) return "";
-      const safeUrl = escapeHtml(url);
-      return [
-        '<div style="display:block;width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
-        '<table cellpadding="0" cellspacing="0" border="0" bgcolor="#1b2430" width="1100" style="width:100% !important;max-width:1100px;border-collapse:collapse;background-color:#1b2430;color:#f7f1e4;font-family:Arial,Helvetica,sans-serif;">',
-        '<tr><td bgcolor="#1b2430" style="padding:16px 18px;background-color:#1b2430;color:#f7f1e4;">',
-        '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 한국 감독 비교입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
-        '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:#d4a017;">KOREAN MANAGERS · COMPARE</p>',
-        `<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">${escapeHtml(a.name)} vs ${escapeHtml(
-          b.name
-        )}</p>`,
-        `<p style="margin:0 0 12px;font-size:14px;line-height:1.5;color:#ddd4c4;">추천도 ${escapeHtml(
-          String(clamp(a.rating, 0, 100))
-        )} · ${escapeHtml(a.club)}  /  ${escapeHtml(String(clamp(b.rating, 0, 100)))} · ${escapeHtml(b.club)}</p>`,
-        `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#d4a017;color:#1b1404;font-weight:700;text-decoration:none;">감독 비교 새 창에서 보기 →</a>`,
-        "</td></tr></table></div>",
-      ].join("");
-    }
-    const c = state.coach;
-    if (!c) return "";
-    const safeUrl = escapeHtml(url);
-    const photo = c.photo
-      ? `<img src="${escapeHtml(new URL(c.photo, CANONICAL).href)}" alt="${escapeHtml(
-          c.name
-        )}" width="72" height="90" style="float:left;margin:0 12px 8px 0;border-radius:8px;object-fit:cover;" />`
-      : "";
+    const safeUrl = escapeHtml(url || publicHomeUrl());
     return [
       '<div style="display:block;width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
       '<table cellpadding="0" cellspacing="0" border="0" bgcolor="#1b2430" width="1100" style="width:100% !important;max-width:1100px;border-collapse:collapse;background-color:#1b2430;color:#f7f1e4;font-family:Arial,Helvetica,sans-serif;">',
       '<tr><td bgcolor="#1b2430" style="padding:16px 18px;background-color:#1b2430;color:#f7f1e4;">',
-      '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 한국 감독 노트입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
+      '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 한국 감독 페이지입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
       '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:#d4a017;">KOREAN MANAGERS</p>',
-      photo,
-      `<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">${escapeHtml(c.name)} · ${escapeHtml(
-        c.club
-      )}${Number.isFinite(Number(c.rating)) ? ` · 추천도 ${escapeHtml(String(Math.round(Number(c.rating))))}` : ""}</p>`,
-      `<p style="margin:0 0 12px;font-size:14px;line-height:1.5;color:#ddd4c4;">${escapeHtml(c.headline || "")}</p>`,
-      `<p style="margin:0 0 14px;font-size:13px;line-height:1.6;color:#ddd4c4;">${escapeHtml(
-        (c.sections?.[0]?.paragraphs || [])[0] || c.standfirst || ""
-      )}</p>`,
-      `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#d4a017;color:#1b1404;font-weight:700;text-decoration:none;">감독 노트 새 창에서 보기 →</a>`,
+      '<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">한국 감독</p>',
+      '<p style="margin:0 0 14px;font-size:14px;line-height:1.5;color:#ddd4c4;">K리그1 · K리그2 · 기타에서 감독을 고르면 연대기, 능력치, 두 사람 비교를 볼 수 있습니다.</p>',
+      `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#d4a017;color:#1b1404;font-weight:700;text-decoration:none;">한국 감독 새 창에서 보기 →</a>`,
       "</td></tr></table></div>",
     ].join("");
   }
 
   function setupShare() {
     if (!document.body.classList.contains("edit-mode") || isEmbedQuery()) return;
-    const url = publicUrl();
-    if (state.view === "compare") {
-      const a = findCoach(state.compareA);
-      const b = findCoach(state.compareB);
-      if ($("shareTargetMeta")) {
-        $("shareTargetMeta").textContent = a && b ? `비교 · ${a.name} vs ${b.name}` : "비교 대상을 고르세요.";
-      }
-    } else {
-      const c = state.coach;
-      if (!c) return;
-      if ($("shareTargetMeta")) $("shareTargetMeta").textContent = `${c.league_name} ${c.club} · ${c.name}`;
+    const url = publicHomeUrl();
+    if ($("shareTargetMeta")) {
+      $("shareTargetMeta").textContent = "공유 대상: 한국 감독 메인 · 받은 사람이 탭에서 감독을 고릅니다.";
     }
     if ($("shareCode")) $("shareCode").textContent = buildShareHtml(url);
     if ($("reportUrl")) {
@@ -663,9 +626,9 @@
       if (a && b) document.title = `${a.name} vs ${b.name} — 한국 감독 비교`;
     });
     $("copyShare")?.addEventListener("click", () =>
-      copyText(buildShareHtml(publicUrl()), "에버그린 링크 카드 HTML을 복사했습니다.")
+      copyText(buildShareHtml(publicHomeUrl()), "에버그린 링크 카드 HTML을 복사했습니다.")
     );
-    $("copyUrl")?.addEventListener("click", () => copyText(publicUrl(), "공유 URL을 복사했습니다."));
+    $("copyUrl")?.addEventListener("click", () => copyText(publicHomeUrl(), "공유 URL을 복사했습니다."));
   }
 
   async function boot() {
