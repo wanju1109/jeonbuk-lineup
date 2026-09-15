@@ -1,0 +1,18 @@
+{
+  "version": "chronological-v2",
+  "selected": "poisson",
+  "accepted": true,
+  "trained_through": "2025-12-31",
+  "features": [
+    "bias",
+    "k2",
+    "elo_difference",
+    "goal_difference",
+    "points_difference",
+    "recent_points_difference",
+    "draw_tendency",
+    "absolute_elo_difference"
+  ],
+  "weights": null,
+  "history_sha256": "e8edf3474377fbfc80b00c4f9368a763c15da2603599a323bf24589fc61883eb"
+}

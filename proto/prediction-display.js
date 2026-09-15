@@ -15,7 +15,14 @@
     if (p.dist[p.pick] < p.dist[top]) text += ' 모델 최다 확률은 ' + top + '입니다. 기존 판단으로 선택한 픽을 보존하며, 최다 확률을 이 픽의 확률로 표시하지 않습니다.';
     return text;
   }
-  var api = { probability: probability, explanation: explanation };
+  function researchForecast(match, record) {
+    if (!record || record.version !== 'chronological-v2' || probability(record, record.pick) === null) return null;
+    var generated = Date.parse(record.generated_at);
+    var kickoff = Date.parse(match.date + 'T' + (match.time || '00:00') + ':00+09:00');
+    if (!Number.isFinite(generated) || !Number.isFinite(kickoff) || generated >= kickoff) return null;
+    return record;
+  }
+  var api = { probability: probability, explanation: explanation, researchForecast: researchForecast };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.PredictionDisplay = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

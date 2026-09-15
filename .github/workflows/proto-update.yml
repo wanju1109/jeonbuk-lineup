@@ -41,6 +41,11 @@ jobs:
           fi
           python proto/scripts/update_results.py
 
+      - name: Refresh official history and save prospective research forecasts
+        run: |
+          python proto/scripts/collect_prediction_history.py --to-year "$(TZ=Asia/Seoul date +%Y)"
+          python proto/scripts/publish_model_predictions.py
+
       - name: Commit proto data
         run: |
           git config user.name "github-actions[bot]"

@@ -274,10 +274,8 @@ def slim_league_data(data: dict) -> None:
     method = data.get("method")
     if isinstance(method, dict):
         method["markets"] = ["승무패", "언더오버 2.5"]
-        method["model"] = (
-            "WDL=walk-forward best of 10000 on 2024-2026 "
-            "(GD+PPG+form+H2H/nemesis); U/O 2.5=Poisson"
-        )
+        method["model"] = "Archived WDL picks + legacy Poisson for new fixtures; research v2 tracked separately"
+        method["notes"] = "기존 픽 보존. 신규 기본 픽은 날짜 이전 결과 기반 포아송. 연구 모델은 model_predictions.json에서 별도 검증하며 실시간 배당으로 픽을 바꾸지 않음."
         notes = str(method.get("notes") or "")
         method["notes"] = notes.replace("핸디캡·언더오버는 포아송", "U/O 2.5는 포아송")
     for match in data.get("matches") or []:
