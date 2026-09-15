@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-15 05:24:49",
+  "generated_at": "2026-09-16 04:47:59",
   "season": 2026,
   "current_round": {
     "K1": 30,
     "K2": 27
   },
   "method": {
-    "model": "WDL=walk-forward best of 10000 on 2024-2026 (GD+PPG+form+H2H/nemesis); U/O 2.5=Poisson",
+    "model": "Archived WDL picks + legacy Poisson for new fixtures; research v2 tracked separately",
     "markets": [
       "승무패",
       "언더오버 2.5"
@@ -16,7 +16,7 @@
       "kleague.com getScheduleList.do (2024-2026)",
       "wikipedia 2026 K리그1/2 경기 결과"
     ],
-    "notes": "승무패는 2024·2025·2026 1274경기를 1만 개 규칙으로 워크포워드 비교해 최고 적중(42.94%)을 채택. U/O 2.5는 포아송 + 리그별 언더 가중(K1/K2 +0.12, HOME_ADV 0.12) 워크포워드 튜닝. 승무패는 GD 규칙(1만 규칙 워크포워드 최적)을 기본으로 하고, 예정 경기는 Pinnacle+라이브스코어 해외배당 평균(암시확률)으로 보정한다. 배당 최저 1.80 이하 강한 우세이거나 모델 신뢰가 낮을 때 시장 픽을 따른다. 감독 맞대결은 근거에 표시하되, 가중 시 적중이 내려가 픽은 바꾸지 않는다. 결과는 예측 후 반영."
+    "notes": "기존 픽 보존. 신규 기본 픽은 날짜 이전 결과 기반 포아송. 연구 모델은 model_predictions.json에서 별도 검증하며 실시간 배당으로 픽을 바꾸지 않음."
   },
   "summary": {
     "K1": {
