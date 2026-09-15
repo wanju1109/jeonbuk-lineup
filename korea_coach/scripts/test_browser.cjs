@@ -1,0 +1,37 @@
+// Optional visual/integration check: install Playwright, serve repository on port 8765.
+const { chromium } = require('playwright');
+const assert = require('node:assert/strict');
+const path = require('node:path');
+const os = require('node:os');
+(async () => {
+  const browser = await chromium.launch({headless:true,channel:'msedge'});
+  const page = await browser.newPage({viewport:{width:1280,height:900}});
+  const errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto('http://127.0.0.1:8765/korea_coach/?q=en4');
+  await page.locator('.gauge-score').filter({hasText:'51.1'}).waitFor();
+  await page.screenshot({path:path.join(os.tmpdir(),'coach-score-desktop.png')});
+  await page.getByRole('button',{name:'정경호',exact:false}).click();
+  await page.locator('.gauge-score').filter({hasText:'68.7'}).waitFor();
+  await page.getByRole('button',{name:'비교',exact:true}).click();
+  await page.locator('#compareA').selectOption('c01');
+  await page.locator('#compareB').selectOption('c04');
+  assert.match(await page.locator('#compareBody').innerText(),/51.1/);
+  assert.match(await page.locator('#compareBody').innerText(),/68.7/);
+  await page.setViewportSize({width:390,height:844});
+  await page.screenshot({path:path.join(os.tmpdir(),'coach-score-mobile.png')});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  await page.locator('#compareB').selectOption('c26');
+  assert.match(await page.locator('#compareBody').innerText(),/자료 없음/);
+  await page.goto('http://127.0.0.1:8765/proto/view.html');
+  await page.getByRole('button',{name:'새 모델 비교 · 검증 중'}).click();
+  await page.getByRole('button',{name:'이 라운드 전부 분석'}).click();
+  await page.getByText('예측 확률과 검증 결과 읽는 법').click();
+  await page.getByText(/41.99%/).waitFor();
+  await page.screenshot({path:path.join(os.tmpdir(),'prediction-mobile.png')});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  assert.deepEqual(errors,[]);
+  console.log('Browser PASS: coach profile, comparison, unavailable score, prediction comparison, mobile overflow');
+  console.log('Screenshots:',os.tmpdir());
+  await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

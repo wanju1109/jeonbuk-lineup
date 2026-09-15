@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from score_coaches import apply_scores
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "coaches.json"
 CREDIT = "위키미디어 공용"
@@ -186,11 +188,9 @@ def attach_axis(cid, pack):
     }
 
 
-# Recommendation = "would you hire this person as head coach now?"
-# Weights: last 24 months 40, career proof 25, tactics/adaptability 20,
-# current head-coach role 15 (bench gap / elder / advisor cuts the score).
-# Not a hall-of-fame ranking. Editorial, not game data.
-# Abilities use a 1-20 scale.
+# Archived editorial scores are retained for the migration audit only.
+# Published rating is computed by score_coaches.apply_scores in main().
+# Tactics and 1-20 abilities remain separate editorial notes.
 RATINGS = {
     "c01": pack_rating(
         80, "전북 3위. 우승 기대에는 못 미치지만, 지금 벤치로는 상위권이다.",
@@ -2082,11 +2082,14 @@ COACHES.extend(ETC_COACHES)
 
 def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    scoring = apply_scores(COACHES)
     payload = {
         "season": "2026",
-        "as_of": "2026-09-14",
-        "note": "Recommendation is hire-now, not hall of fame: last 24 months 40, career 25, tactics 20, current head-coach role 15. Editorial, not game data. Photos from Wikimedia Commons only.",
+        "as_of": scoring["as_of"],
+        "scoring_version": scoring["version"],
+        "note": "Current league performance: results 50%, relative change 30%, recent 8 matches 20%. Editorial abilities are separate.",
         "sources": [
+            "https://www.kleague.com/getScheduleList.do (리그 성과 계산)",
             "ko.wikipedia 감독 항목",
             "2026 K리그1/2 개막 미디어데이 보도",
             "team_report/data/team_profiles.json",

@@ -186,8 +186,8 @@
     return `<button class="coach-chip${active}" type="button" data-coach="${escapeHtml(c.id)}">${face}${escapeHtml(
       c.name
     )}${
-      Number.isFinite(Number(c.rating))
-        ? `<span class="chip-score">${escapeHtml(String(Math.round(Number(c.rating))))}</span>`
+      c.rating != null && Number.isFinite(Number(c.rating))
+        ? `<span class="chip-score">${escapeHtml(Number(c.rating).toFixed(1))}</span>`
         : ""
     }</button>`;
   }
@@ -261,11 +261,23 @@
     return label === "공격" || label === "수비";
   }
 
+  function performanceHtml(c) {
+    const p = c.performance;
+    if (!p || p.status !== "scored") return `<p>${escapeHtml(p?.reason || "평가 자료 없음")}</p><p class="help">자료가 없다는 뜻이며 0점이나 낮은 능력 평가가 아닙니다.</p>`;
+    const i = p.inputs;
+    const rows = p.components.map(x => `<tr><th>${escapeHtml(x.label)}</th><td>${x.score.toFixed(1)}</td><td>${Math.round(x.weight*100)}%</td><td>${x.contribution.toFixed(2)}</td></tr>`).join("");
+    return `<p class="help">${p.season}년 현 소속팀 재임 리그 경기 · ${escapeHtml(p.start)}~${escapeHtml(p.through)} · ${p.n}경기</p>` +
+      `<div class="score-table-wrap"><table class="score-table"><thead><tr><th>평가 항목</th><th>항목 점수</th><th>비중</th><th>반영점</th></tr></thead><tbody>${rows}</tbody></table></div>` +
+      `<p>승점 ${i.points} / ${p.n}경기 = 경기당 ${i.ppg.toFixed(2)}점 · 최근 ${i.recent_n}경기 ${i.recent_points}점</p>` +
+      `<p>비교 기준: ${escapeHtml(i.comparison)}${i.previous_ppg == null ? "" : ` (${i.previous_n}경기, 경기당 ${i.previous_ppg.toFixed(2)}점)`}</p>` +
+      `<p class="help">같은 리그 내 상대 성과입니다. 이름값·과거 우승·주관적 전술 점수는 합산하지 않습니다. 팀 예산·부상·일정 난도까지 보정한 감독 개인 능력 점수는 아닙니다.</p>`;
+  }
+
   function renderScout() {
     const box = $("scoutCard");
     const c = state.coach;
     if (!box || !c) return;
-    const score = clamp(c.rating, 0, 100);
+    const score = c.rating == null ? null : Math.min(100, Math.max(0, Number(c.rating)));
     const att = abilityOf(c, "공격");
     const def = abilityOf(c, "수비");
     const tactics = c.tactics || {};
@@ -304,18 +316,18 @@
       .join("");
     box.innerHTML =
       `<div class="scout-gauge">` +
-      `<svg class="gauge" viewBox="0 0 168 168" role="img" aria-label="추천도 ${score}점">` +
+      `<svg class="gauge" viewBox="0 0 168 168" role="img" aria-label="리그 성과 ${score == null ? '평가 보류' : score + '점'}">` +
       `<circle class="gauge-ring gauge-track" cx="84" cy="84" r="70"></circle>` +
       `<circle class="gauge-ring gauge-value" cx="84" cy="84" r="70" pathLength="100" ` +
-      `stroke-dasharray="${score} 100"></circle>` +
-      `<text class="gauge-score" x="84" y="86" text-anchor="middle">${score}</text>` +
-      `<text class="gauge-label" x="84" y="110" text-anchor="middle">추천도</text>` +
+      `stroke-dasharray="${score || 0} 100"></circle>` +
+      `<text class="gauge-score" x="84" y="86" text-anchor="middle">${score == null ? "—" : score.toFixed(1)}</text>` +
+      `<text class="gauge-label" x="84" y="110" text-anchor="middle">리그 성과</text>` +
       `<text class="gauge-max" x="84" y="126" text-anchor="middle">100점</text>` +
       `</svg>` +
       (c.rating_note ? `<p class="scout-note">${escapeHtml(c.rating_note)}</p>` : "") +
       `</div>` +
-      `<div class="scout-body"><div class="tactic-pills">${pills}</div>${axis}<div class="ability-grid">${attrs}</div>` +
-      `<p class="ability-caption">추천도는 지금 벤치를 맡기는 정도(최근 성적 40 · 커리어 25 · 전술 20 · 일선 여부 15). 능력치 20점 · 추천도 100점 · 편집부 해석</p></div>`;
+      `<div class="scout-body">${performanceHtml(c)}<details class="editorial-notes"><summary>전술 성향·능력치 · 편집 메모</summary><div class="tactic-pills">${pills}</div>${axis}<div class="ability-grid">${attrs}</div>` +
+      `<p class="ability-caption">전술·능력치는 기존 편집 해석이며 성과 점수 계산에 사용하지 않습니다.</p></details></div>`;
   }
 
   function renderTraits() {
@@ -408,38 +420,16 @@
       box.innerHTML = "<p class=\"help\">비교할 감독을 두 명 고르세요.</p>";
       return;
     }
-    const labels = (a.abilities || []).map((row) => row.label);
-    const mapA = abilityMap(a);
-    const mapB = abilityMap(b);
-    const scoreA = clamp(a.rating, 0, 100);
-    const scoreB = clamp(b.rating, 0, 100);
-    const rows = labels
-      .map((label) => {
-        const va = mapA[label] || 1;
-        const vb = mapB[label] || 1;
-        const axis = isAxisLabel(label) ? " is-axis" : "";
-        return (
-          `<div class="cmp-row${axis}">` +
-          `<div class="cmp-track is-left"><i style="width:${(va / 20) * 100}%"></i></div>` +
-          `<span class="cmp-val${va > vb ? " is-win" : ""}">${va}</span>` +
-          `<span class="cmp-label">${escapeHtml(label)}</span>` +
-          `<span class="cmp-val${vb > va ? " is-win" : ""}">${vb}</span>` +
-          `<div class="cmp-track"><i style="width:${(vb / 20) * 100}%"></i></div>` +
-          `</div>`
-        );
-      })
-      .join("");
+    const scoreA = a.rating == null ? "—" : a.rating.toFixed(1);
+    const scoreB = b.rating == null ? "—" : b.rating.toFixed(1);
     const card = (c, score) =>
       `<article class="compare-card">` +
       `<header>${faceHtml(c, "", "compare-fallback")}<div>` +
       `<h3>${escapeHtml(c.name)}</h3>` +
       `<p class="club-line">${escapeHtml(c.league_name)} · ${escapeHtml(c.club)}</p>` +
       `<p class="club-line">${escapeHtml(c.tactics?.kind || "")} · ${escapeHtml(c.tactics?.shape || "")}</p>` +
-      `<p class="club-line">공격 ${abilityOf(c, "공격")} · 수비 ${abilityOf(c, "수비")} · ${escapeHtml(
-        tendencyOf(c)
-      )}</p>` +
       `</div><div class="compare-score">${score}</div></header>` +
-      `<p>${escapeHtml(c.headline || "")}</p>` +
+      performanceHtml(c) +
       `</article>`;
     const traitCol = (c) =>
       `<div><h4>${escapeHtml(c.name)}</h4>` +
@@ -448,7 +438,7 @@
       `</div>`;
     box.innerHTML =
       `<div class="compare-grid">${card(a, scoreA)}${card(b, scoreB)}</div>` +
-      `<div class="cmp-rows" style="margin-top:14px">${rows}</div>` +
+      `<p class="help">${a.league !== b.league ? "서로 다른 리그의 상대 성과이므로 점수만으로 절대 우열을 판단하지 마세요." : "동일 리그 기준. 재임 기간과 표본 수를 함께 확인하세요."}</p>` +
       `<div class="compare-traits">${traitCol(a)}${traitCol(b)}</div>`;
   }
 
@@ -471,7 +461,7 @@
       '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 한국 감독 페이지입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
       '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:#d4a017;">KOREAN MANAGERS</p>',
       '<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">한국 감독</p>',
-      '<p style="margin:0 0 14px;font-size:14px;line-height:1.5;color:#ddd4c4;">K리그1 · K리그2 · 기타에서 감독을 고르면 연대기, 능력치, 두 사람 비교를 볼 수 있습니다.</p>',
+      '<p style="margin:0 0 14px;font-size:14px;line-height:1.5;color:#ddd4c4;">K리그1 · K리그2 · 기타에서 감독을 고르면 연대기, 성과 근거, 두 사람 비교를 볼 수 있습니다.</p>',
       `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 14px;border-radius:8px;background-color:#d4a017;color:#1b1404;font-weight:700;text-decoration:none;">한국 감독 새 창에서 보기 →</a>`,
       "</td></tr></table></div>",
     ].join("");

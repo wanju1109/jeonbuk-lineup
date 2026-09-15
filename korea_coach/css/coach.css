@@ -367,3 +367,14 @@ body:not(.compare-mode) #compareBoard { display: none !important; }
   .gauge { width: 148px; height: 148px; }
   .tactic-pills { grid-template-columns: 1fr; }
 }
+
+/* Public, reproducible score breakdown. */
+.scoring-guide { padding:18px; margin:20px 0; border:1px solid #b9ad97; border-radius:12px; background:#f7f1e4; color:#1b2430; }
+.scoring-guide summary, .editorial-notes summary { cursor:pointer; font-weight:700; }
+.scoring-guide p { line-height:1.7; }
+.score-table-wrap { overflow-x:auto; }
+.score-table { width:100%; border-collapse:collapse; font-size:.86rem; }
+.score-table th,.score-table td { padding:9px 6px; border-bottom:1px solid #a99c85; text-align:right; }
+.score-table th:first-child { text-align:left; }
+.editorial-notes { margin-top:20px; }
+.editorial-notes .tactic-pills { margin-top:12px; }
