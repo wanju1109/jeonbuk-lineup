@@ -1,20 +1,3 @@
-const {chromium}=require('playwright');
-const assert=require('node:assert/strict');
-const fs=require('node:fs');const Quiz=require('../engine.js');
-(async()=>{const browser=await chromium.launch({headless:true,channel:'msedge'});try{
- const page=await browser.newPage({viewport:{width:390,height:844}});
- const version=JSON.parse(fs.readFileSync('player_quiz/data/manifest.json','utf8')).version,data=JSON.parse(fs.readFileSync(`player_quiz/data/${version}.json`,'utf8'));
- const c={v:1,data:version,scope:'jb',level:'hard',count:5,seed:7},deck=Quiz.questions(data,c);
- await page.goto('http://127.0.0.1:8765/player_quiz/#q='+Quiz.encode(c));await page.click('#start');
- const scale=()=>page.locator('#time-fill').evaluate(el=>Number(getComputedStyle(el).transform.split('(')[1].split(',')[0]));
- assert(await scale()>.8);await page.waitForTimeout(3000);const reduced=await scale();assert(reduced<.8&&reduced>.4);
- await page.click('#hint');assert(await scale()<=reduced);await page.screenshot({path:'player_quiz/timer-mobile.png',fullPage:true});
- await page.getByRole('heading',{name:'시간 초과! 아쉽지만, 정답은…'}).waitFor({timeout:11000});assert.equal(await scale(),0);
- await page.waitForTimeout(800);assert((await page.locator('.question-top').innerText()).includes('1 / 5'));
- await page.waitForFunction(()=>document.querySelector('.question-top')?.innerText.includes('2 / 5'));assert(await scale()>.8);
- await page.evaluate(id=>{const until=performance.now()+10100;while(performance.now()<until){}document.querySelector(`[data-id="${id}"]`).click();},deck[1].answer.id);
- assert((await page.locator('#feedback').innerText()).includes('시간 초과'));
- page.once('dialog',d=>d.accept());await page.click('#quit');await page.waitForTimeout(2300);
- assert(await page.locator('#start').isVisible());assert.equal(await page.locator('#feedback').count(),0);
- console.log('PASS: shrinking bar; no hint reset; 10-second deadline; 2-second reveal; late click rejected; next timer resets; quitting cancels automatic advance');
- }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
+const {chromium}=require('playwright');const assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true});try{const p=await b.newPage({viewport:{width:320,height:568}});await p.goto('http://127.0.0.1:8765/player_quiz/',{waitUntil:'domcontentloaded'});await p.locator('[data-choice]').first().waitFor();for(const [k,v] of [['scope','history'],['level','easy'],['count','5']])await p.locator(`[data-choice="${k}"][data-value="${v}"]`).click();await p.click('#start');assert.equal(await p.locator('#time-fill').count(),0);await p.waitForTimeout(10500);assert.equal(await p.locator('.option:disabled').count(),0);assert((await p.locator('.question-top').innerText()).includes('1 / 5'));
+const initial=await p.locator('#hints').evaluate(h=>h.clientHeight);let reveals=0;while(await p.locator('#hint').isEnabled()){await p.click('#hint');reveals++;assert.equal(await p.locator('#hints .hint').count(),5+reveals);assert(await p.locator('#hints').evaluate(h=>h.scrollHeight<=h.clientHeight+1&&h.scrollWidth<=h.clientWidth+1));}assert(reveals>0);assert(await p.locator('#hints').evaluate(h=>h.clientHeight)>initial);assert(await p.locator('#hint').isDisabled());await p.click('#skip');await p.waitForTimeout(2300);assert((await p.locator('.question-top').innerText()).includes('1 / 5'));assert((await p.locator('#feedback').innerText()).includes('아쉽지만'));await p.click('#next');await p.waitForFunction(()=>document.querySelector('.question-top')?.innerText.includes('2 / 5'),{},{timeout:1000});assert.equal(await p.locator('#hints .hint').count(),5);console.log('PASS: untimed after 10.5 seconds; all hints grow vertically without internal scroll; feedback stays until next clicked; hint count reset');}finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1});
