@@ -41,6 +41,22 @@ def stat_hints(player, year):
         if jb: add(jb, '전북 소속 통산', 'career')
     return hints
 
+def highlight_hints(player):
+    """Milestones are lower bounds supported by recorded league values, not rankings."""
+    hints = []
+    teams = player.get('teams') or []
+    for selected, prefix in [(teams, 'K리그1·2'), ([t for t in teams if '전북' in t.get('team','')], '전북 소속 K리그1·2')]:
+        blocks = [t.get(comp) or {} for t in selected for comp in ('k1','k2')]
+        for key, unit, thresholds in [('apps','경기',[500,400,300,200,100]),('goals','골',[200,150,100,50]),('assists','도움',[100,80,50])]:
+            values = [b.get(key) for b in blocks if isinstance(b.get(key), int) and b[key]>=0]
+            total = sum(values)
+            threshold = next((n for n in thresholds if total>=n), None)
+            if threshold: hints.append([f'{prefix} 이정표', f'통산 {threshold}{unit} 이상을 기록한 선수', 'highlight'])
+    years = {str(s.get('season')) for s in player.get('seasons', []) if '전북' in s.get('team','')}
+    threshold = next((n for n in [15,10,5] if len(years)>=n),None)
+    if threshold: hints.append(['전북과 함께한 시즌',f'전북 소속으로 기록을 남긴 시즌이 {threshold}시즌 이상', 'highlight'])
+    return hints
+
 def build():
     index = json.loads((ROOT / 'player_report/data/index.json').read_text(encoding='utf-8'))
     history = json.loads((OUT / 'history.json').read_text(encoding='utf-8-sig'))
@@ -73,12 +89,13 @@ def build():
             apps = sum((t.get('k1') or {}).get('apps') or 0 for t in jb_records)
             if apps: hints.append(['전북 K리그1 통산 출장', f'{apps}경기'])
         hints.extend(stat_hints(p, index['year']))
+        hints.extend(highlight_hints(p))
         if len(hints) < 5: continue
         records[pid] = {'id':pid, 'name':p['name'], 'position':p.get('position',''),
             'current':bool(entry), 'team':team.get('id'), 'league':str(league.get('id','')), 'jeonbuk':jb,
             'statsAsOf':(p.get('fetched_at') or '')[:10], 'hints':hints, 'photo':card.get('photo') or p.get('photo') or (p.get('photos') or {}).get('kleague',''),
             'source':f'https://www.kleague.com/record/playerDetail.do?playerId={pid}'}
-    data = {'schema':1, 'hintPolicy':3, 'season':index['year'], 'asOf':index['updated_at'][:10],
+    data = {'schema':1, 'hintPolicy':4, 'season':index['year'], 'asOf':index['updated_at'][:10],
             'historyAsOf':history['collected_at'][:10], 'historyListed':len(history['official_ids']),
             'players':list(records.values())}
     raw = json.dumps(data,ensure_ascii=False,separators=(',',':')).encode()

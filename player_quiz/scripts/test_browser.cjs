@@ -2,56 +2,42 @@ const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const Quiz=require('../engine.js');
-const version=JSON.parse(fs.readFileSync('player_quiz/data/manifest.json','utf8')).version;
-const data=JSON.parse(fs.readFileSync(`player_quiz/data/${version}.json`,'utf8'));
 (async()=>{const browser=await chromium.launch({headless:true,channel:'msedge'});try{
  const context=await browser.newContext({viewport:{width:390,height:844},permissions:['clipboard-read','clipboard-write']});
  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
  const origin='http://127.0.0.1:8765/player_quiz/';
- await page.goto(origin+'admin.html',{waitUntil:'domcontentloaded'});await page.locator('#generate').waitFor({state:'visible'});await page.waitForFunction(()=>!document.querySelector('#generate').disabled);
+ const version=JSON.parse(fs.readFileSync('player_quiz/data/manifest.json','utf8')).version;
+ const data=JSON.parse(fs.readFileSync(`player_quiz/data/${version}.json`,'utf8'));
+ await page.goto(origin+'admin.html');await page.waitForFunction(()=>!document.querySelector('#generate').disabled);
  await page.selectOption('#scope','history');await page.selectOption('#level','hard');await page.selectOption('#count','5');await page.click('#generate');
- const url=await page.inputValue('#share-url');assert(!url.includes('admin'));const config=Quiz.decode(new URLSearchParams(new URL(url).hash.slice(1)).get('q'));const deck=Quiz.questions(data,config);
- await page.goto(url);await page.click('#start');assert.equal(await page.locator('#hints .hint').count(),1);
- let expected=0;
- for(let i=0;i<5;i++){
-   if(i===1){await page.click('#hint');assert.equal(await page.locator('#hints .hint').count(),2);}
-   if(i===2)await page.click('#skip');
-   else {await page.click(`[data-id="${deck[i].answer.id}"]`);expected+=i===1?80:100;}
-   assert.equal(await page.locator('.option:disabled').count(),4);
-   await page.click('#next');
- }
- assert((await page.locator('.score').innerText()).includes(String(expected)));
- await page.click('#copy-result');const copied=await page.evaluate(()=>navigator.clipboard.readText());assert(copied.includes('380 / 500'));assert(copied.includes('4/5'));assert(copied.includes(url));assert(!copied.includes('admin.html'));
- assert.equal(await page.locator('#creator').count(),0);
- assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
- await page.screenshot({path:'player_quiz/result-mobile.png',fullPage:true});
- await page.click('#retry');await page.click('[data-id]');await page.click('#next');
- await page.goto(origin+'#q=broken');await page.getByText('게임을 열 수 없어요').waitFor();
- // Clipboard rejection must expose a manual-copy fallback.
- await page.goto(url);await page.click('#start');for(let i=0;i<5;i++){await page.click('#skip');await page.click('#next');}
- await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(Error('denied'))},configurable:true}));
- await page.click('#copy-result');assert(await page.locator('#copy-fallback').isVisible());
- await page.setViewportSize({width:1440,height:1000});await page.goto(origin);await page.locator('#start').waitFor();await page.screenshot({path:'player_quiz/landing-desktop.png',fullPage:true});
- // Public setup, quit cancel/confirm, fresh score, and shared challenge integrity.
- await page.setViewportSize({width:390,height:844});await page.goto(origin);await page.locator('#play-scope').waitFor();
- assert.equal(await page.locator('#play-scope option').count(),4);
+ const url=await page.inputValue('#share-url'),embed=await page.inputValue('#embed-code');
+ assert(embed.includes(url)&&!embed.includes('admin.html'));await page.click('#copy-embed');assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),embed);
+ await page.click('#copy');assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),url);
+ const config=Quiz.decode(new URLSearchParams(new URL(url).hash.slice(1)).get('q')),deck=Quiz.questions(data,config);
+ await page.goto(url);assert.equal(await page.locator('#copy,#copy-embed,#embed-code').count(),0);await page.click('#start');
+ const question=n=>page.waitForFunction(n=>document.querySelector('.question-top')?.innerText.includes(`${n} / 5`),n);
+ await page.click(`[data-id="${deck[0].answer.id}"]`);assert((await page.locator('#feedback').innerText()).includes('정답입니다!'));await page.waitForTimeout(800);assert((await page.locator('.question-top').innerText()).includes('1 / 5'));await question(2);assert.equal(await page.locator('#next').count(),0);
+ await page.click('#hint');await page.click(`[data-id="${deck[1].answer.id}"]`);await question(3);
+ const wrong=deck[2].options.find(p=>p.id!==deck[2].answer.id);await page.click(`[data-id="${wrong.id}"]`);
+ assert((await page.locator('#feedback').innerText()).includes(deck[2].answer.name));assert.equal(await page.locator('.option:disabled').count(),4);
+ await page.waitForTimeout(800);assert((await page.locator('.question-top').innerText()).includes('3 / 5'));await question(4);
+ await page.getByRole('heading',{name:'시간 초과! 아쉽지만, 정답은…'}).waitFor({timeout:6500});
+ assert((await page.locator('#feedback').innerText()).includes(deck[3].answer.name));await question(5);
+ await page.click(`[data-id="${deck[4].answer.id}"]`);await page.locator('.score').waitFor();assert((await page.locator('.score').innerText()).includes('280 / 500'));
+ await page.click('#copy-result');const result=await page.evaluate(()=>navigator.clipboard.readText());assert(result.includes('3/5')&&result.includes(url)&&result.includes('5초'));
+ await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(Error('denied'))},configurable:true}));await page.click('#copy-result');assert(await page.locator('#copy-fallback').isVisible());
+ await page.click('#home');assert(await page.locator('#start').isVisible());await page.click('#customize');assert(await page.locator('#start').isHidden());
+ const choose=async(key,value)=>page.locator(`[data-choice="${key}"][data-value="${value}"]`).click();
+ await choose('scope','jb');assert(await page.locator('#start').isHidden());await choose('level','normal');assert(await page.locator('#start').isHidden());await choose('count',5);assert(await page.locator('#start').isVisible());
+ assert.equal(await page.locator('select').count(),0);
  for(const [scope,level,hints] of [['jb','easy',5],['history','normal',3],['k1','hard',1],['all','easy',5]]){
-  await page.selectOption('#play-scope',scope);await page.selectOption('#play-level',level);await page.selectOption('#play-count','5');
-  await page.click('#start');assert.equal(await page.locator('#hints .hint').count(),hints);
-  assert((await page.locator('.question-top').innerText()).includes(Quiz.scopes[scope]));
-  if(await page.locator('#hint').isEnabled())await page.click('#hint');await page.click('#skip');
-  page.once('dialog',d=>d.dismiss());await page.click('#quit');assert(await page.locator('#next').isVisible());
-  page.once('dialog',d=>d.accept());await page.click('#quit');await page.locator('#play-scope').waitFor();
-  assert.equal(await page.inputValue('#play-scope'),scope);assert.equal(await page.locator('#feedback').count(),0);
+  await choose('scope',scope);await choose('level',level);await page.click('#start');assert.equal(await page.locator('#hints .hint').count(),hints);
+  page.once('dialog',d=>d.dismiss());await page.click('#quit');assert(await page.locator('#quit').isVisible());
+  page.once('dialog',d=>d.accept());await page.click('#quit');assert(await page.locator('#start').isVisible());
  }
- await page.screenshot({path:'player_quiz/setup-mobile.png',fullPage:true});
- await page.click('#start');for(let i=0;i<5;i++){await page.click('#skip');await page.click('#next');}
- assert((await page.locator('.score').innerText()).includes('0 / 500'));await page.click('#home');await page.locator('#play-scope').waitFor();
- await page.goto(url);await page.locator('#customize').waitFor();assert(await page.locator('#play-scope').isDisabled());
- await page.click('#customize');assert(await page.locator('#play-scope').isEnabled());assert.equal(new URL(page.url()).hash,'');
- await page.selectOption('#play-scope','k1');await page.selectOption('#play-level','easy');await page.click('#start');
- assert.equal(await page.locator('#hints .hint').count(),5);assert((await page.locator('.question-top').innerText()).includes('K리그1'));
- page.once('dialog',d=>d.accept());await page.click('#quit');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
- console.log('PASS: public settings in all four scopes, all difficulties, quit cancel/confirm, score reset, result home, shared customization');
- assert.deepEqual(errors,[]);console.log('PASS: mobile creator → fixed link → hints → 5 answers → 380/500 → clipboard; retry, errors, fallback, desktop');
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'player_quiz/setup-mobile.png',fullPage:true});
+ await page.goto(origin+'#q=broken');await page.getByText('게임을 열 수 없어요').waitFor();
+ await page.setViewportSize({width:1440,height:1000});await page.goto(origin);await page.locator('[data-choice]').first().waitFor();await page.screenshot({path:'player_quiz/landing-desktop.png',fullPage:true});
+ const embedded=await context.newPage();await embedded.setContent(embed);await embedded.frameLocator('iframe').locator('#start').waitFor();assert.equal(await embedded.frameLocator('iframe').locator('#copy-embed,#copy').count(),0);
+ assert.deepEqual(errors,[]);console.log('PASS: admin link/iframe clipboard and embed; button setup gate; all scopes/levels; quit; correct reveal then auto; wrong/timeout reveal then auto; final 280/500; result copy/fallback; desktop/mobile');
  }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
