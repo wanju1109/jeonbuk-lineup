@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-16T05:10:38+09:00",
+  "generated_at": "2026-09-17T05:02:19+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 1,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -343,7 +343,7 @@
         "gd": -12
       }
     ],
-    "best_rank": 1,
+    "best_rank": 2,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
