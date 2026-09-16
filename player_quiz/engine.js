@@ -18,6 +18,17 @@ function questions(data,c){validate(c);const candidates=pool(data,c.scope),r=rng
  const unique=hints.findIndex(([label,value])=>distractors.every(p=>!p.hints.some(h=>h[0]===label&&h[1]===value)));
  if(unique>=0){const [h]=hints.splice(unique,1);hints.unshift(h);}
  else hints.unshift(['이름 초성',initials(answer.name)]);
+ if(data.hintPolicy>=2){
+  const category=h=>h[2]||(/팀|시즌|통산/.test(h[0])?'career':'profile');
+  const distinguishes=h=>distractors.every(p=>!p.hints.some(x=>x[0]===h[0]&&x[1]===h[1]));
+  const jbFirst=data.hintPolicy>=3&&['jb','history'].includes(c.scope)?hints.findIndex(h=>h[0].includes('전북')&&distinguishes(h)):-1;
+  const preferred=jbFirst>=0?jbFirst:hints.findIndex(h=>category(h)==='season'&&distinguishes(h));
+  const record=preferred>=0?preferred:hints.findIndex(h=>category(h)==='career'&&distinguishes(h));
+  if(record>=0){const [h]=hints.splice(record,1);hints.unshift(h);}
+  const mixed=[hints.shift()];
+  while(hints.length){const next=hints.findIndex(h=>category(h)!==category(mixed[mixed.length-1]));mixed.push(hints.splice(next<0?0:next,1)[0]);}
+  hints=mixed;
+ }
  return {answer,options,hints};
 });}
 function initials(s){return [...s].map(c=>{const n=c.charCodeAt(0)-44032;return n>=0&&n<11172?'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ'[Math.floor(n/588)]:c;}).join('');}

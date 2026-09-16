@@ -32,5 +32,26 @@ const data=JSON.parse(fs.readFileSync(`player_quiz/data/${version}.json`,'utf8')
  await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(Error('denied'))},configurable:true}));
  await page.click('#copy-result');assert(await page.locator('#copy-fallback').isVisible());
  await page.setViewportSize({width:1440,height:1000});await page.goto(origin);await page.locator('#start').waitFor();await page.screenshot({path:'player_quiz/landing-desktop.png',fullPage:true});
+ // Public setup, quit cancel/confirm, fresh score, and shared challenge integrity.
+ await page.setViewportSize({width:390,height:844});await page.goto(origin);await page.locator('#play-scope').waitFor();
+ assert.equal(await page.locator('#play-scope option').count(),4);
+ for(const [scope,level,hints] of [['jb','easy',5],['history','normal',3],['k1','hard',1],['all','easy',5]]){
+  await page.selectOption('#play-scope',scope);await page.selectOption('#play-level',level);await page.selectOption('#play-count','5');
+  await page.click('#start');assert.equal(await page.locator('#hints .hint').count(),hints);
+  assert((await page.locator('.question-top').innerText()).includes(Quiz.scopes[scope]));
+  if(await page.locator('#hint').isEnabled())await page.click('#hint');await page.click('#skip');
+  page.once('dialog',d=>d.dismiss());await page.click('#quit');assert(await page.locator('#next').isVisible());
+  page.once('dialog',d=>d.accept());await page.click('#quit');await page.locator('#play-scope').waitFor();
+  assert.equal(await page.inputValue('#play-scope'),scope);assert.equal(await page.locator('#feedback').count(),0);
+ }
+ await page.screenshot({path:'player_quiz/setup-mobile.png',fullPage:true});
+ await page.click('#start');for(let i=0;i<5;i++){await page.click('#skip');await page.click('#next');}
+ assert((await page.locator('.score').innerText()).includes('0 / 500'));await page.click('#home');await page.locator('#play-scope').waitFor();
+ await page.goto(url);await page.locator('#customize').waitFor();assert(await page.locator('#play-scope').isDisabled());
+ await page.click('#customize');assert(await page.locator('#play-scope').isEnabled());assert.equal(new URL(page.url()).hash,'');
+ await page.selectOption('#play-scope','k1');await page.selectOption('#play-level','easy');await page.click('#start');
+ assert.equal(await page.locator('#hints .hint').count(),5);assert((await page.locator('.question-top').innerText()).includes('K리그1'));
+ page.once('dialog',d=>d.accept());await page.click('#quit');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ console.log('PASS: public settings in all four scopes, all difficulties, quit cancel/confirm, score reset, result home, shared customization');
  assert.deepEqual(errors,[]);console.log('PASS: mobile creator → fixed link → hints → 5 answers → 380/500 → clipboard; retry, errors, fallback, desktop');
  }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
