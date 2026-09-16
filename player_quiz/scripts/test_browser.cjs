@@ -34,4 +34,3 @@ const data=JSON.parse(fs.readFileSync(`player_quiz/data/${version}.json`,'utf8')
  await page.setViewportSize({width:1440,height:1000});await page.goto(origin);await page.locator('#start').waitFor();await page.screenshot({path:'player_quiz/landing-desktop.png',fullPage:true});
  assert.deepEqual(errors,[]);console.log('PASS: mobile creator → fixed link → hints → 5 answers → 380/500 → clipboard; retry, errors, fallback, desktop');
  }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});
-

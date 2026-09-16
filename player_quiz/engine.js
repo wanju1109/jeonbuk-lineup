@@ -25,4 +25,3 @@ function points(extra,correct){return correct?Math.max(20,100-20*extra):0;}
 const api={scopes,levels,pool,validate,encode,decode,questions,points};
 if(typeof module!=='undefined')module.exports=api;else root.Quiz=api;
 })(globalThis);
-

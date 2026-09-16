@@ -50,4 +50,3 @@ def build():
     (OUT / 'manifest.json').write_text(json.dumps({'version':version}),encoding='utf-8')
     print(version, len(records), 'players;', sum(p['jeonbuk'] for p in records.values()), 'Jeonbuk past/present')
 if __name__ == '__main__': build()
-
