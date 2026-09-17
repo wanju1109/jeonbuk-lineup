@@ -32,3 +32,6 @@ assert.throws(()=>Quiz.points(-1,true,'hard'));assert.throws(()=>Quiz.points(0,t
 
 const familiar=new Set([...Quiz.pool(data,'jb')].sort((a,b)=>(parseInt(b.hints.find(h=>h[0]==='전북 K리그1 통산 출장')?.[1],10)||0)-(parseInt(a.hints.find(h=>h[0]==='전북 K리그1 통산 출장')?.[1],10)||0)).slice(0,8).map(p=>p.id));
 const openers=new Set();for(let seed=0;seed<40;seed++){const c={...base,level:'easy',count:5,seed},qs=Quiz.questions(data,c,true);assert(familiar.has(qs[0].answer.id));assert.equal(new Set(qs.map(q=>q.answer.id)).size,5);assert.deepEqual(qs,Quiz.questions(data,c,true));openers.add(qs[0].answer.id);}assert(openers.size>1);console.log('PASS: quick entry varies familiar opening players without duplicate questions');
+
+for(const level of Object.keys(Quiz.levels))for(const count of [5,10,20]){const max=count*Quiz.levels[level].points;assert.equal(Quiz.score100(max,count,level),100);assert.equal(Quiz.score100(0,count,level),0);assert.equal(Quiz.score100(max*0.8,count,level),80);assert(Quiz.score100(max-25,count,level)<100);}
+assert.equal(Quiz.score100(575,5,'hard'),57.5);assert.equal(Quiz.score100(725,5,'normal'),96.7);assert.throws(()=>Quiz.score100(501,5,'easy'));console.log('PASS: 100-point maximum across all nine difficulty/count combinations');

@@ -34,7 +34,8 @@ function questions(data,c,quick=false){validate(c);const candidates=pool(data,c.
 });}
 function initials(s){return [...s].map(c=>{const n=c.charCodeAt(0)-44032;return n>=0&&n<11172?'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ'[Math.floor(n/588)]:c;}).join('');}
 function points(extra,correct,level='easy'){if(!Object.hasOwn(levels,level)||!Number.isInteger(extra)||extra<0)throw Error('잘못된 배점 조건');return correct?Math.max(25,levels[level].points-25*extra):0;}
+function score100(raw,count,level){if(!Object.hasOwn(levels,level)||![5,10,20].includes(count)||!Number.isFinite(raw)||raw<0||raw>count*levels[level].points)throw Error('잘못된 점수');return Math.round(raw/(count*levels[level].points)*1000)/10;}
 function nickname(value){const name=String(value??'').normalize('NFC').trim();if(!/^[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9 _-]{2,20}$/.test(name))throw Error('닉네임은 한글·영문·숫자·공백·밑줄·하이픈으로 2~20자 입력해 주세요.');return name;}
-const api={scopes,levels,pool,validate,encode,decode,questions,points,nickname};
+const api={scopes,levels,pool,validate,encode,decode,questions,points,nickname,score100};
 if(typeof module!=='undefined')module.exports=api;else root.Quiz=api;
 })(globalThis);
