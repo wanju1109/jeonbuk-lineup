@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k38-sm.png",
   "home_url": "https://cheonancityfc.kr",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:19+09:00",
+  "generated_at": "2026-09-18T05:13:02+09:00",
   "table": {
     "rank": 14,
     "teams": 17,
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -247,7 +247,7 @@
       },
       {
         "round": 13,
-        "rank": 11,
+        "rank": 10,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -633,7 +633,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 32,
-        "apps": 23,
+        "apps": 24,
         "goals": 7,
         "assists": 1,
         "points": 8
@@ -645,7 +645,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 31,
-        "apps": 19,
+        "apps": 20,
         "goals": 6,
         "assists": 0,
         "points": 6
@@ -669,7 +669,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 23,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
         "assists": 3,
         "points": 6
@@ -681,10 +681,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 26,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
-        "assists": 0,
-        "points": 3
+        "assists": 1,
+        "points": 4
       }
     ],
     "top_assists": [
@@ -695,7 +695,7 @@
         "position": "DF",
         "back_no": 27,
         "age": 23,
-        "apps": 23,
+        "apps": 24,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -707,7 +707,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 23,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
         "assists": 3,
         "points": 6
@@ -719,7 +719,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 32,
-        "apps": 23,
+        "apps": 24,
         "goals": 7,
         "assists": 1,
         "points": 8
@@ -731,22 +731,22 @@
         "position": "FW",
         "back_no": 70,
         "age": 22,
-        "apps": 10,
-        "goals": 2,
+        "apps": 11,
+        "goals": 3,
         "assists": 1,
-        "points": 3
+        "points": 4
       },
       {
-        "player_id": "20240060",
+        "player_id": "20180155",
         "departed": false,
-        "name": "이동협",
-        "position": "DF",
-        "back_no": 23,
-        "age": 23,
-        "apps": 19,
-        "goals": 1,
+        "name": "이상준",
+        "position": "FW",
+        "back_no": 7,
+        "age": 26,
+        "apps": 24,
+        "goals": 3,
         "assists": 1,
-        "points": 2
+        "points": 4
       }
     ],
     "goal_share": 0.241

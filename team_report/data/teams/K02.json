@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:17+09:00",
+  "generated_at": "2026-09-18T05:13:00+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
@@ -633,7 +633,7 @@
         "position": "FW",
         "back_no": 70,
         "age": 33,
-        "apps": 23,
+        "apps": 24,
         "goals": 12,
         "assists": 1,
         "points": 13
@@ -657,7 +657,7 @@
         "position": "MF",
         "back_no": 17,
         "age": 25,
-        "apps": 21,
+        "apps": 22,
         "goals": 5,
         "assists": 3,
         "points": 8
@@ -669,7 +669,7 @@
         "position": "FW",
         "back_no": 22,
         "age": 23,
-        "apps": 13,
+        "apps": 14,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -681,7 +681,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 23,
-        "apps": 17,
+        "apps": 18,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -695,7 +695,7 @@
         "position": "DF",
         "back_no": 27,
         "age": 21,
-        "apps": 22,
+        "apps": 23,
         "goals": 0,
         "assists": 5,
         "points": 5
@@ -719,7 +719,7 @@
         "position": "MF",
         "back_no": 17,
         "age": 25,
-        "apps": 21,
+        "apps": 22,
         "goals": 5,
         "assists": 3,
         "points": 8
@@ -737,16 +737,16 @@
         "points": 4
       },
       {
-        "player_id": "20210079",
+        "player_id": "20240297",
         "departed": false,
-        "name": "강성진",
-        "position": "FW",
-        "back_no": 22,
-        "age": 23,
-        "apps": 13,
-        "goals": 3,
-        "assists": 2,
-        "points": 5
+        "name": "김민우",
+        "position": "MF",
+        "back_no": 23,
+        "age": 24,
+        "apps": 21,
+        "goals": 0,
+        "assists": 3,
+        "points": 3
       }
     ],
     "goal_share": 0.308

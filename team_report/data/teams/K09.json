@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:16+09:00",
+  "generated_at": "2026-09-18T05:12:59+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
@@ -698,10 +698,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 25,
-        "goals": 10,
+        "apps": 26,
+        "goals": 12,
         "assists": 1,
-        "points": 11
+        "points": 13
       },
       {
         "player_id": "20160099",
@@ -710,10 +710,10 @@
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 28,
+        "apps": 29,
         "goals": 8,
-        "assists": 5,
-        "points": 13
+        "assists": 6,
+        "points": 14
       },
       {
         "player_id": "20170052",
@@ -746,10 +746,10 @@
         "position": "FW",
         "back_no": 27,
         "age": 34,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
-        "assists": 5,
-        "points": 8
+        "assists": 6,
+        "points": 9
       }
     ],
     "top_assists": [
@@ -760,10 +760,10 @@
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 28,
+        "apps": 29,
         "goals": 8,
-        "assists": 5,
-        "points": 13
+        "assists": 6,
+        "points": 14
       },
       {
         "player_id": "20170229",
@@ -772,10 +772,10 @@
         "position": "FW",
         "back_no": 27,
         "age": 34,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
-        "assists": 5,
-        "points": 8
+        "assists": 6,
+        "points": 9
       },
       {
         "player_id": "20240179",
@@ -784,7 +784,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
         "assists": 5,
         "points": 8
@@ -808,13 +808,13 @@
         "position": "MF",
         "back_no": 6,
         "age": 27,
-        "apps": 27,
+        "apps": 28,
         "goals": 3,
         "assists": 3,
         "points": 6
       }
     ],
-    "goal_share": 0.182
+    "goal_share": 0.218
   },
   "attendance": {
     "avg": 21993,

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:17+09:00",
+  "generated_at": "2026-09-18T05:13:00+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -688,7 +688,7 @@
   ],
   "squad": {
     "size": 36,
-    "avg_age": 26.8,
+    "avg_age": 26.9,
     "foreign": 7,
     "top_scorers": [
       {
@@ -698,10 +698,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 27,
-        "goals": 9,
+        "apps": 28,
+        "goals": 10,
         "assists": 4,
-        "points": 13
+        "points": 14
       },
       {
         "player_id": "20230333",
@@ -722,7 +722,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 24,
-        "apps": 27,
+        "apps": 28,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -734,7 +734,7 @@
         "position": "MF",
         "back_no": 14,
         "age": 32,
-        "apps": 18,
+        "apps": 19,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -746,7 +746,7 @@
         "position": "MF",
         "back_no": 4,
         "age": 20,
-        "apps": 11,
+        "apps": 12,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -760,7 +760,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 19,
+        "apps": 20,
         "goals": 0,
         "assists": 5,
         "points": 5
@@ -772,10 +772,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 27,
-        "goals": 9,
+        "apps": 28,
+        "goals": 10,
         "assists": 4,
-        "points": 13
+        "points": 14
       },
       {
         "player_id": "20250150",
@@ -784,10 +784,10 @@
         "position": "DF",
         "back_no": 7,
         "age": 26,
-        "apps": 22,
+        "apps": 23,
         "goals": 1,
-        "assists": 3,
-        "points": 4
+        "assists": 4,
+        "points": 5
       },
       {
         "player_id": "20230333",
@@ -808,13 +808,13 @@
         "position": "DF",
         "back_no": 26,
         "age": 33,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
         "assists": 1,
         "points": 2
       }
     ],
-    "goal_share": 0.29
+    "goal_share": 0.323
   },
   "attendance": {
     "avg": 6716,

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:19+09:00",
+  "generated_at": "2026-09-18T05:13:02+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 1,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -343,7 +343,7 @@
         "gd": -12
       }
     ],
-    "best_rank": 2,
+    "best_rank": 1,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -622,7 +622,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 31,
-        "apps": 23,
+        "apps": 24,
         "goals": 6,
         "assists": 6,
         "points": 12
@@ -634,10 +634,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 16,
-        "goals": 4,
+        "apps": 17,
+        "goals": 5,
         "assists": 2,
-        "points": 6
+        "points": 7
       },
       {
         "player_id": "20220159",
@@ -646,31 +646,31 @@
         "position": "MF",
         "back_no": 14,
         "age": 26,
-        "apps": 18,
+        "apps": 19,
         "goals": 3,
         "assists": 1,
         "points": 4
       },
       {
-        "player_id": "20230194",
+        "player_id": "20210306",
         "departed": false,
-        "name": "호난",
+        "name": "추상훈",
         "position": "FW",
-        "back_no": 19,
-        "age": 31,
-        "apps": 13,
-        "goals": 2,
-        "assists": 1,
+        "back_no": 32,
+        "age": 26,
+        "apps": 5,
+        "goals": 3,
+        "assists": 0,
         "points": 3
       },
       {
-        "player_id": "20260191",
+        "player_id": "20190059",
         "departed": false,
-        "name": "이라클리",
+        "name": "정지용",
         "position": "FW",
-        "back_no": 27,
-        "age": 28,
-        "apps": 12,
+        "back_no": 11,
+        "age": 27,
+        "apps": 22,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -684,7 +684,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 31,
-        "apps": 23,
+        "apps": 24,
         "goals": 6,
         "assists": 6,
         "points": 12
@@ -696,7 +696,7 @@
         "position": "FW",
         "back_no": 17,
         "age": 26,
-        "apps": 21,
+        "apps": 22,
         "goals": 1,
         "assists": 5,
         "points": 6
@@ -708,10 +708,22 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 16,
-        "goals": 4,
+        "apps": 17,
+        "goals": 5,
         "assists": 2,
-        "points": 6
+        "points": 7
+      },
+      {
+        "player_id": "20230271",
+        "departed": false,
+        "name": "미란징야",
+        "position": "FW",
+        "back_no": 79,
+        "age": 26,
+        "apps": 6,
+        "goals": 0,
+        "assists": 2,
+        "points": 2
       },
       {
         "player_id": "20220159",
@@ -720,22 +732,10 @@
         "position": "MF",
         "back_no": 14,
         "age": 26,
-        "apps": 18,
+        "apps": 19,
         "goals": 3,
         "assists": 1,
         "points": 4
-      },
-      {
-        "player_id": "20260191",
-        "departed": false,
-        "name": "이라클리",
-        "position": "FW",
-        "back_no": 27,
-        "age": 28,
-        "apps": 12,
-        "goals": 2,
-        "assists": 1,
-        "points": 3
       }
     ],
     "goal_share": 0.214

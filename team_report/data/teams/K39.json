@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:18+09:00",
+  "generated_at": "2026-09-18T05:13:01+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
@@ -633,10 +633,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 30,
-        "apps": 24,
-        "goals": 10,
-        "assists": 8,
-        "points": 18
+        "apps": 25,
+        "goals": 11,
+        "assists": 9,
+        "points": 20
       },
       {
         "player_id": "20260136",
@@ -645,7 +645,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 19,
+        "apps": 20,
         "goals": 8,
         "assists": 1,
         "points": 9
@@ -657,7 +657,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 26,
-        "apps": 23,
+        "apps": 24,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -669,10 +669,10 @@
         "position": "FW",
         "back_no": 90,
         "age": 36,
-        "apps": 21,
-        "goals": 3,
+        "apps": 22,
+        "goals": 4,
         "assists": 4,
-        "points": 7
+        "points": 8
       },
       {
         "player_id": "20250045",
@@ -695,22 +695,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 30,
-        "apps": 24,
-        "goals": 10,
-        "assists": 8,
-        "points": 18
-      },
-      {
-        "player_id": "20210131",
-        "departed": false,
-        "name": "제갈재민",
-        "position": "FW",
-        "back_no": 7,
-        "age": 26,
-        "apps": 23,
-        "goals": 4,
-        "assists": 4,
-        "points": 8
+        "apps": 25,
+        "goals": 11,
+        "assists": 9,
+        "points": 20
       },
       {
         "player_id": "20190347",
@@ -719,10 +707,22 @@
         "position": "FW",
         "back_no": 90,
         "age": 36,
-        "apps": 21,
-        "goals": 3,
+        "apps": 22,
+        "goals": 4,
         "assists": 4,
-        "points": 7
+        "points": 8
+      },
+      {
+        "player_id": "20210131",
+        "departed": false,
+        "name": "제갈재민",
+        "position": "FW",
+        "back_no": 7,
+        "age": 26,
+        "apps": 24,
+        "goals": 4,
+        "assists": 4,
+        "points": 8
       },
       {
         "player_id": "20220254",
@@ -731,7 +731,7 @@
         "position": "DF",
         "back_no": 22,
         "age": 21,
-        "apps": 23,
+        "apps": 24,
         "goals": 2,
         "assists": 4,
         "points": 6
@@ -749,7 +749,7 @@
         "points": 6
       }
     ],
-    "goal_share": 0.256
+    "goal_share": 0.282
   },
   "attendance": null,
   "context": {

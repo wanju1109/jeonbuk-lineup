@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k27-sm.png",
   "home_url": "https://www.fc-anyang.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:17+09:00",
+  "generated_at": "2026-09-18T05:13:00+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -174,7 +174,7 @@
       },
       {
         "round": 2,
-        "rank": 3,
+        "rank": 4,
         "points": 4,
         "played": 2,
         "gd": 1
@@ -688,7 +688,7 @@
   ],
   "squad": {
     "size": 35,
-    "avg_age": 27.4,
+    "avg_age": 27.5,
     "foreign": 7,
     "top_scorers": [
       {
@@ -698,7 +698,7 @@
         "position": "MF",
         "back_no": 7,
         "age": 28,
-        "apps": 26,
+        "apps": 27,
         "goals": 11,
         "assists": 5,
         "points": 16
@@ -710,7 +710,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 27,
-        "apps": 19,
+        "apps": 20,
         "goals": 7,
         "assists": 0,
         "points": 7
@@ -722,7 +722,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 27,
-        "apps": 27,
+        "apps": 28,
         "goals": 5,
         "assists": 0,
         "points": 5
@@ -734,10 +734,10 @@
         "position": "FW",
         "back_no": 19,
         "age": 31,
-        "apps": 22,
+        "apps": 23,
         "goals": 2,
-        "assists": 3,
-        "points": 5
+        "assists": 4,
+        "points": 6
       },
       {
         "player_id": "20260090",
@@ -760,10 +760,22 @@
         "position": "MF",
         "back_no": 7,
         "age": 28,
-        "apps": 26,
+        "apps": 27,
         "goals": 11,
         "assists": 5,
         "points": 16
+      },
+      {
+        "player_id": "20240084",
+        "departed": false,
+        "name": "김운",
+        "position": "FW",
+        "back_no": 19,
+        "age": 31,
+        "apps": 23,
+        "goals": 2,
+        "assists": 4,
+        "points": 6
       },
       {
         "player_id": "20250365",
@@ -776,18 +788,6 @@
         "goals": 0,
         "assists": 4,
         "points": 4
-      },
-      {
-        "player_id": "20240084",
-        "departed": false,
-        "name": "김운",
-        "position": "FW",
-        "back_no": 19,
-        "age": 31,
-        "apps": 22,
-        "goals": 2,
-        "assists": 3,
-        "points": 5
       },
       {
         "player_id": "20260090",
@@ -808,7 +808,7 @@
         "position": "MF",
         "back_no": 17,
         "age": 29,
-        "apps": 20,
+        "apps": 21,
         "goals": 1,
         "assists": 1,
         "points": 2

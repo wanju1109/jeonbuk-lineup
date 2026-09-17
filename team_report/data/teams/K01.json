@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:16+09:00",
+  "generated_at": "2026-09-18T05:12:59+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -710,10 +710,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 28,
-        "apps": 27,
-        "goals": 9,
-        "assists": 9,
-        "points": 18
+        "apps": 28,
+        "goals": 10,
+        "assists": 10,
+        "points": 20
       },
       {
         "player_id": "20170095",
@@ -734,10 +734,10 @@
         "position": "DF",
         "back_no": 15,
         "age": 32,
-        "apps": 25,
-        "goals": 3,
+        "apps": 26,
+        "goals": 4,
         "assists": 0,
-        "points": 3
+        "points": 4
       },
       {
         "player_id": "20240107",
@@ -760,10 +760,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 28,
-        "apps": 27,
-        "goals": 9,
-        "assists": 9,
-        "points": 18
+        "apps": 28,
+        "goals": 10,
+        "assists": 10,
+        "points": 20
       },
       {
         "player_id": "20150050",
@@ -772,7 +772,7 @@
         "position": "MF",
         "back_no": 24,
         "age": 32,
-        "apps": 28,
+        "apps": 29,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -796,7 +796,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 9,
+        "apps": 10,
         "goals": 1,
         "assists": 2,
         "points": 3

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:16+09:00",
+  "generated_at": "2026-09-18T05:12:59+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -167,7 +167,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -216,7 +216,7 @@
       },
       {
         "round": 8,
-        "rank": 7,
+        "rank": 8,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -710,10 +710,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 29,
-        "apps": 8,
-        "goals": 3,
-        "assists": 3,
-        "points": 6
+        "apps": 9,
+        "goals": 4,
+        "assists": 4,
+        "points": 8
       },
       {
         "player_id": "20220166",
@@ -722,10 +722,22 @@
         "position": "FW",
         "back_no": 18,
         "age": 25,
-        "apps": 19,
+        "apps": 20,
         "goals": 3,
         "assists": 0,
         "points": 3
+      },
+      {
+        "player_id": "20240126",
+        "departed": false,
+        "name": "이탈로",
+        "position": "MF",
+        "back_no": 5,
+        "age": 29,
+        "apps": 21,
+        "goals": 2,
+        "assists": 3,
+        "points": 5
       },
       {
         "player_id": "20210108",
@@ -738,21 +750,21 @@
         "goals": 2,
         "assists": 2,
         "points": 4
-      },
-      {
-        "player_id": "20260221",
-        "departed": false,
-        "name": "세레스틴",
-        "position": "DF",
-        "back_no": 3,
-        "age": 29,
-        "apps": 25,
-        "goals": 2,
-        "assists": 1,
-        "points": 3
       }
     ],
     "top_assists": [
+      {
+        "player_id": "20260359",
+        "departed": false,
+        "name": "아이아스",
+        "position": "FW",
+        "back_no": 9,
+        "age": 29,
+        "apps": 9,
+        "goals": 4,
+        "assists": 4,
+        "points": 8
+      },
       {
         "player_id": "20260228",
         "departed": false,
@@ -766,16 +778,16 @@
         "points": 9
       },
       {
-        "player_id": "20260359",
+        "player_id": "20240126",
         "departed": false,
-        "name": "아이아스",
-        "position": "FW",
-        "back_no": 9,
+        "name": "이탈로",
+        "position": "MF",
+        "back_no": 5,
         "age": 29,
-        "apps": 8,
-        "goals": 3,
+        "apps": 21,
+        "goals": 2,
         "assists": 3,
-        "points": 6
+        "points": 5
       },
       {
         "player_id": "20210108",
@@ -797,18 +809,6 @@
         "back_no": 27,
         "age": 20,
         "apps": 21,
-        "goals": 1,
-        "assists": 2,
-        "points": 3
-      },
-      {
-        "player_id": "20240126",
-        "departed": false,
-        "name": "이탈로",
-        "position": "MF",
-        "back_no": 5,
-        "age": 29,
-        "apps": 20,
         "goals": 1,
         "assists": 2,
         "points": 3

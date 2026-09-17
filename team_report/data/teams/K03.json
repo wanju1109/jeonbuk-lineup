@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:17+09:00",
+  "generated_at": "2026-09-18T05:13:00+09:00",
   "table": {
     "rank": 8,
     "teams": 12,
@@ -181,7 +181,7 @@
       },
       {
         "round": 3,
-        "rank": 4,
+        "rank": 5,
         "points": 5,
         "played": 3,
         "gd": 1
@@ -698,10 +698,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 30,
-        "apps": 20,
+        "apps": 21,
         "goals": 4,
-        "assists": 3,
-        "points": 7
+        "assists": 4,
+        "points": 8
       },
       {
         "player_id": "20260021",
@@ -710,7 +710,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 20,
+        "apps": 21,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -722,10 +722,10 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 22,
+        "apps": 23,
         "goals": 3,
-        "assists": 2,
-        "points": 5
+        "assists": 3,
+        "points": 6
       },
       {
         "player_id": "20230148",
@@ -734,10 +734,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 19,
-        "goals": 2,
+        "apps": 20,
+        "goals": 3,
         "assists": 1,
-        "points": 3
+        "points": 4
       },
       {
         "player_id": "20250022",
@@ -746,7 +746,7 @@
         "position": "FW",
         "back_no": 18,
         "age": 22,
-        "apps": 17,
+        "apps": 18,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -760,10 +760,22 @@
         "position": "FW",
         "back_no": 7,
         "age": 30,
-        "apps": 20,
+        "apps": 21,
         "goals": 4,
+        "assists": 4,
+        "points": 8
+      },
+      {
+        "player_id": "20150253",
+        "departed": false,
+        "name": "완델손",
+        "position": "DF",
+        "back_no": 77,
+        "age": 37,
+        "apps": 23,
+        "goals": 3,
         "assists": 3,
-        "points": 7
+        "points": 6
       },
       {
         "player_id": "20240063",
@@ -772,7 +784,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 23,
-        "apps": 27,
+        "apps": 28,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -784,22 +796,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 20,
+        "apps": 21,
         "goals": 4,
         "assists": 2,
         "points": 6
-      },
-      {
-        "player_id": "20150253",
-        "departed": false,
-        "name": "완델손",
-        "position": "DF",
-        "back_no": 77,
-        "age": 37,
-        "apps": 22,
-        "goals": 3,
-        "assists": 2,
-        "points": 5
       },
       {
         "player_id": "20210182",
@@ -808,7 +808,7 @@
         "position": "DF",
         "back_no": 2,
         "age": 27,
-        "apps": 27,
+        "apps": 28,
         "goals": 0,
         "assists": 2,
         "points": 2

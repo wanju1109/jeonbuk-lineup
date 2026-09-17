@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:17+09:00",
+  "generated_at": "2026-09-18T05:13:00+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -687,10 +687,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 24,
-        "goals": 11,
+        "apps": 25,
+        "goals": 12,
         "assists": 1,
-        "points": 12
+        "points": 13
       },
       {
         "player_id": "20260168",
@@ -699,7 +699,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 31,
-        "apps": 24,
+        "apps": 25,
         "goals": 6,
         "assists": 1,
         "points": 7
@@ -711,7 +711,7 @@
         "position": "MF",
         "back_no": 11,
         "age": 35,
-        "apps": 27,
+        "apps": 28,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -723,7 +723,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -735,7 +735,7 @@
         "position": "DF",
         "back_no": 2,
         "age": 31,
-        "apps": 25,
+        "apps": 26,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -749,7 +749,7 @@
         "position": "DF",
         "back_no": 32,
         "age": 33,
-        "apps": 26,
+        "apps": 27,
         "goals": 1,
         "assists": 4,
         "points": 5
@@ -761,7 +761,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 36,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
         "assists": 3,
         "points": 4
@@ -773,7 +773,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -785,7 +785,7 @@
         "position": "MF",
         "back_no": 72,
         "age": 38,
-        "apps": 27,
+        "apps": 28,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -797,13 +797,13 @@
         "position": "DF",
         "back_no": 39,
         "age": 26,
-        "apps": 24,
+        "apps": 25,
         "goals": 0,
         "assists": 2,
         "points": 2
       }
     ],
-    "goal_share": 0.314
+    "goal_share": 0.343
   },
   "attendance": {
     "avg": 9905,

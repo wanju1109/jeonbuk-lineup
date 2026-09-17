@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:18+09:00",
+  "generated_at": "2026-09-18T05:13:01+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 15,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -621,11 +621,11 @@
         "name": "김현오",
         "position": "FW",
         "back_no": 90,
-        "age": 18,
-        "apps": 20,
-        "goals": 7,
+        "age": 19,
+        "apps": 21,
+        "goals": 8,
         "assists": 1,
-        "points": 8
+        "points": 9
       },
       {
         "player_id": "20210105",
@@ -634,7 +634,7 @@
         "position": "FW",
         "back_no": 66,
         "age": 27,
-        "apps": 17,
+        "apps": 18,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -658,7 +658,7 @@
         "position": "MF",
         "back_no": 44,
         "age": 26,
-        "apps": 20,
+        "apps": 21,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -670,7 +670,7 @@
         "position": "FW",
         "back_no": 24,
         "age": 34,
-        "apps": 16,
+        "apps": 17,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -696,7 +696,7 @@
         "position": "FW",
         "back_no": 66,
         "age": 27,
-        "apps": 17,
+        "apps": 18,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -708,7 +708,7 @@
         "position": "MF",
         "back_no": 44,
         "age": 26,
-        "apps": 20,
+        "apps": 21,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -720,7 +720,7 @@
         "position": "FW",
         "back_no": 24,
         "age": 34,
-        "apps": 16,
+        "apps": 17,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -732,13 +732,13 @@
         "position": "MF",
         "back_no": 8,
         "age": 33,
-        "apps": 13,
+        "apps": 14,
         "goals": 0,
         "assists": 2,
         "points": 2
       }
     ],
-    "goal_share": 0.226
+    "goal_share": 0.258
   },
   "attendance": null,
   "context": {

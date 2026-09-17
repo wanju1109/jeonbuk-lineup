@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k37-sm.png",
   "home_url": "https://chfc.kr",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:19+09:00",
+  "generated_at": "2026-09-18T05:13:01+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 13,
+        "rank": 14,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -633,10 +633,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 24,
-        "goals": 12,
+        "apps": 25,
+        "goals": 13,
         "assists": 0,
-        "points": 12
+        "points": 13
       },
       {
         "player_id": "20230162",
@@ -645,7 +645,7 @@
         "position": "FW",
         "back_no": 13,
         "age": 25,
-        "apps": 23,
+        "apps": 24,
         "goals": 5,
         "assists": 1,
         "points": 6
@@ -657,7 +657,7 @@
         "position": "MF",
         "back_no": 42,
         "age": 21,
-        "apps": 22,
+        "apps": 23,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -669,7 +669,7 @@
         "position": "FW",
         "back_no": 14,
         "age": 23,
-        "apps": 21,
+        "apps": 22,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -681,7 +681,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 34,
-        "apps": 24,
+        "apps": 25,
         "goals": 1,
         "assists": 1,
         "points": 2
@@ -695,7 +695,7 @@
         "position": "DF",
         "back_no": 25,
         "age": 25,
-        "apps": 18,
+        "apps": 19,
         "goals": 0,
         "assists": 7,
         "points": 7
@@ -707,7 +707,7 @@
         "position": "FW",
         "back_no": 14,
         "age": 23,
-        "apps": 21,
+        "apps": 22,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -719,7 +719,7 @@
         "position": "FW",
         "back_no": 13,
         "age": 25,
-        "apps": 23,
+        "apps": 24,
         "goals": 5,
         "assists": 1,
         "points": 6
@@ -731,7 +731,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 34,
-        "apps": 24,
+        "apps": 25,
         "goals": 1,
         "assists": 1,
         "points": 2
@@ -743,13 +743,13 @@
         "position": "MF",
         "back_no": 27,
         "age": 21,
-        "apps": 21,
+        "apps": 22,
         "goals": 1,
         "assists": 1,
         "points": 2
       }
     ],
-    "goal_share": 0.429
+    "goal_share": 0.464
   },
   "attendance": null,
   "context": {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k41-sm.png",
   "home_url": "https://gimhaefc2008.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:19+09:00",
+  "generated_at": "2026-09-18T05:13:02+09:00",
   "table": {
     "rank": 17,
     "teams": 17,
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 14,
+        "rank": 15,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -343,7 +343,7 @@
         "gd": -28
       }
     ],
-    "best_rank": 14,
+    "best_rank": 15,
     "worst_rank": 17,
     "first_half": {
       "played": 16,
@@ -622,7 +622,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 28,
-        "apps": 23,
+        "apps": 24,
         "goals": 4,
         "assists": 1,
         "points": 5
@@ -634,7 +634,7 @@
         "position": "FW",
         "back_no": 94,
         "age": 32,
-        "apps": 8,
+        "apps": 9,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -646,7 +646,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 21,
+        "apps": 22,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -670,7 +670,7 @@
         "position": "DF",
         "back_no": 23,
         "age": 27,
-        "apps": 12,
+        "apps": 13,
         "goals": 1,
         "assists": 1,
         "points": 2
@@ -684,7 +684,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 28,
-        "apps": 23,
+        "apps": 24,
         "goals": 4,
         "assists": 1,
         "points": 5
@@ -696,7 +696,7 @@
         "position": "DF",
         "back_no": 23,
         "age": 27,
-        "apps": 12,
+        "apps": 13,
         "goals": 1,
         "assists": 1,
         "points": 2
@@ -708,7 +708,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 32,
-        "apps": 10,
+        "apps": 11,
         "goals": 1,
         "assists": 1,
         "points": 2
@@ -720,7 +720,7 @@
         "position": "MF",
         "back_no": 34,
         "age": 33,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 1,
         "points": 1
@@ -732,7 +732,7 @@
         "position": "MF",
         "back_no": 41,
         "age": 31,
-        "apps": 3,
+        "apps": 4,
         "goals": 0,
         "assists": 1,
         "points": 1

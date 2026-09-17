@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:17+09:00",
+  "generated_at": "2026-09-18T05:13:00+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
@@ -167,21 +167,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 4,
+        "rank": 3,
         "points": 4,
         "played": 2,
         "gd": 1
       },
       {
         "round": 3,
-        "rank": 5,
+        "rank": 4,
         "points": 5,
         "played": 3,
         "gd": 1
@@ -369,7 +369,7 @@
         "gd": -42
       }
     ],
-    "best_rank": 4,
+    "best_rank": 3,
     "worst_rank": 12,
     "first_half": {
       "played": 16,
@@ -692,6 +692,18 @@
     "foreign": 8,
     "top_scorers": [
       {
+        "player_id": "20250193",
+        "departed": false,
+        "name": "아이데일",
+        "position": "FW",
+        "back_no": 18,
+        "age": 27,
+        "apps": 17,
+        "goals": 6,
+        "assists": 2,
+        "points": 8
+      },
+      {
         "player_id": "20240210",
         "departed": false,
         "name": "문민서",
@@ -704,25 +716,13 @@
         "points": 7
       },
       {
-        "player_id": "20250193",
-        "departed": false,
-        "name": "아이데일",
-        "position": "FW",
-        "back_no": 18,
-        "age": 27,
-        "apps": 16,
-        "goals": 5,
-        "assists": 2,
-        "points": 7
-      },
-      {
         "player_id": "20140134",
         "departed": false,
         "name": "신창무",
         "position": "FW",
         "back_no": 40,
-        "age": 33,
-        "apps": 15,
+        "age": 34,
+        "apps": 16,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -734,7 +734,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 33,
-        "apps": 22,
+        "apps": 23,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -746,7 +746,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 31,
-        "apps": 13,
+        "apps": 14,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -760,10 +760,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 27,
-        "apps": 16,
-        "goals": 5,
+        "apps": 17,
+        "goals": 6,
         "assists": 2,
-        "points": 7
+        "points": 8
       },
       {
         "player_id": "20250366",
@@ -772,7 +772,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 33,
-        "apps": 22,
+        "apps": 23,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -808,7 +808,7 @@
         "position": "FW",
         "back_no": 22,
         "age": 25,
-        "apps": 25,
+        "apps": 26,
         "goals": 0,
         "assists": 1,
         "points": 1

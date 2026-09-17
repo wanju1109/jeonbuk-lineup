@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:18+09:00",
+  "generated_at": "2026-09-18T05:13:01+09:00",
   "table": {
     "rank": 10,
     "teams": 17,
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 10,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -246,7 +246,7 @@
       },
       {
         "round": 13,
-        "rank": 10,
+        "rank": 11,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -634,7 +634,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 19,
+        "apps": 20,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -646,7 +646,7 @@
         "position": "FW",
         "back_no": 8,
         "age": 31,
-        "apps": 16,
+        "apps": 17,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -658,7 +658,7 @@
         "position": "FW",
         "back_no": 90,
         "age": 20,
-        "apps": 3,
+        "apps": 4,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -720,7 +720,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 19,
+        "apps": 20,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -732,7 +732,7 @@
         "position": "DF",
         "back_no": 4,
         "age": 32,
-        "apps": 21,
+        "apps": 22,
         "goals": 1,
         "assists": 1,
         "points": 2

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-09-17T05:02:18+09:00",
+  "generated_at": "2026-09-18T05:13:01+09:00",
   "table": {
     "rank": 8,
     "teams": 17,
@@ -627,10 +627,22 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 11,
+        "apps": 12,
         "goals": 3,
         "assists": 2,
         "points": 5
+      },
+      {
+        "player_id": "20160082",
+        "departed": false,
+        "name": "박동진",
+        "position": "FW",
+        "back_no": 50,
+        "age": 31,
+        "apps": 24,
+        "goals": 3,
+        "assists": 1,
+        "points": 4
       },
       {
         "player_id": "20250183",
@@ -645,25 +657,13 @@
         "points": 4
       },
       {
-        "player_id": "20160082",
-        "departed": false,
-        "name": "박동진",
-        "position": "FW",
-        "back_no": 50,
-        "age": 31,
-        "apps": 23,
-        "goals": 2,
-        "assists": 1,
-        "points": 3
-      },
-      {
         "player_id": "20090125",
         "departed": false,
         "name": "김성준",
         "position": "MF",
         "back_no": 16,
         "age": 38,
-        "apps": 19,
+        "apps": 20,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -677,7 +677,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 26,
-        "apps": 18,
+        "apps": 19,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -701,7 +701,7 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 11,
+        "apps": 12,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -713,7 +713,7 @@
         "position": "DF",
         "back_no": 32,
         "age": 22,
-        "apps": 15,
+        "apps": 16,
         "goals": 0,
         "assists": 2,
         "points": 2
