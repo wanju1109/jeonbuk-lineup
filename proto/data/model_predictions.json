@@ -3,7 +3,7 @@
     "K1-22-강원 FC-인천 유나이티드-2026-09-27": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-18T04:49:09.401845+09:00",
+      "generated_at": "2026-09-19T04:07:36.285054+09:00",
       "data_through": "2026-09-13",
       "kickoff": "2026-09-27T00:00:00+09:00",
       "pick": "승",
@@ -73,6 +73,29 @@
           "version": "chronological-v2",
           "model": "poisson",
           "generated_at": "2026-09-17T04:39:11.030501+09:00",
+          "data_through": "2026-09-13",
+          "kickoff": "2026-09-27T00:00:00+09:00",
+          "pick": "승",
+          "prob": 0.38091538254230956,
+          "dist": {
+            "승": 0.38091538254230956,
+            "무": 0.2890906918357766,
+            "패": 0.32999392562191393
+          },
+          "evidence": {
+            "home_games": 144,
+            "away_games": 102,
+            "home_ppg": 1.447,
+            "away_ppg": 1.299,
+            "home_form": 1.371,
+            "away_form": 0.943,
+            "elo_difference": 72.9
+          }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-18T04:49:09.401845+09:00",
           "data_through": "2026-09-13",
           "kickoff": "2026-09-27T00:00:00+09:00",
           "pick": "승",
@@ -1275,6 +1298,6 @@
   },
   "version": "chronological-v2",
   "mode": "shadow",
-  "updated_at": "2026-09-18T04:49:09.401845+09:00",
+  "updated_at": "2026-09-19T04:07:36.285054+09:00",
   "explanation": "Research forecasts, separate from saved picks. Daily refresh up to 24h before kickoff; past forecasts preserved."
 }
