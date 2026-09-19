@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-09-18T17:57:33.642193+00:00",
+  "updated_at": "2026-09-19T17:35:08.491706+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
-  "count": 173,
+  "count": 175,
   "games": {
     "72": {
       "game_id": "72",
@@ -1195,6 +1195,20 @@
       "weekday": "주말",
       "meet_seq": 1
     },
+    "176": {
+      "game_id": "176",
+      "year": "2026",
+      "date": "2026-09-19",
+      "home": "안양",
+      "away": "울산",
+      "score": "2:1",
+      "venue": "안양 종합 운동장",
+      "attendance": 7477,
+      "attendance_home": 7477,
+      "attendance_away": 0,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
     "7": {
       "game_id": "7",
       "year": "2026",
@@ -1725,6 +1739,20 @@
       "attendance_home": 4460,
       "attendance_away": 158,
       "weekday": "-",
+      "meet_seq": 1
+    },
+    "175": {
+      "game_id": "175",
+      "year": "2026",
+      "date": "2026-09-19",
+      "home": "부천",
+      "away": "김천",
+      "score": "0:2",
+      "venue": "부천 종합 운동장",
+      "attendance": 4602,
+      "attendance_home": 4602,
+      "attendance_away": 0,
+      "weekday": "주말",
       "meet_seq": 1
     },
     "148": {
