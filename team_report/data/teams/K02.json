@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:23+09:00",
+  "generated_at": "2026-09-20T04:17:15+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
@@ -27,9 +27,9 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": null,
-    "gap_below": 7,
+    "gap_below": 5,
     "above": "",
-    "below": "대구"
+    "below": "수원FC"
   },
   "splits": {
     "home": {
@@ -338,6 +338,13 @@
       },
       {
         "round": 26,
+        "rank": 1,
+        "points": 53,
+        "played": 25,
+        "gd": 19
+      },
+      {
+        "round": 27,
         "rank": 1,
         "points": 53,
         "played": 25,

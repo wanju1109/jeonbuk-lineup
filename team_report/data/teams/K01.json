@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:22+09:00",
+  "generated_at": "2026-09-20T04:17:14+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
-    "played": 29,
+    "played": 30,
     "win": 14,
     "draw": 5,
-    "loss": 10,
-    "gf": 44,
-    "ga": 38,
-    "gd": 6,
+    "loss": 11,
+    "gf": 45,
+    "ga": 40,
+    "gd": 5,
     "points": 47,
-    "ppg": 1.62,
-    "remaining": 9,
+    "ppg": 1.57,
+    "remaining": 8,
     "scheduled": 38,
     "gap_to_leader": 15,
     "gap_to_cut": 0,
@@ -44,15 +44,15 @@
       "ppg": 1.67
     },
     "away": {
-      "played": 14,
+      "played": 15,
       "win": 6,
       "draw": 4,
-      "loss": 4,
-      "gf": 18,
-      "ga": 15,
-      "gd": 3,
+      "loss": 5,
+      "gf": 19,
+      "ga": 17,
+      "gd": 2,
       "points": 22,
-      "ppg": 1.57
+      "ppg": 1.47
     }
   },
   "form": {
@@ -85,26 +85,27 @@
       "W",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "L",
       "W",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
       "W",
       "W",
-      "W",
       "L",
       "L",
       "L",
       "W",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
@@ -118,17 +119,17 @@
     },
     "last10_record": {
       "played": 10,
-      "win": 6,
+      "win": 5,
       "draw": 1,
-      "loss": 3,
-      "gf": 17,
-      "ga": 10,
-      "gd": 7,
-      "points": 19
+      "loss": 4,
+      "gf": 15,
+      "ga": 11,
+      "gd": 4,
+      "points": 16
     },
     "streaks": {
-      "current_type": "W",
-      "current_len": 2,
+      "current_type": "L",
+      "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 4,
       "longest_winless": 5,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.52,
-    "ga_per_game": 1.31,
+    "gf_per_game": 1.5,
+    "ga_per_game": 1.33,
     "clean_sheets": 6,
     "failed_to_score": 6,
-    "both_scored": 19,
-    "one_goal_games": 12,
+    "both_scored": 20,
+    "one_goal_games": 13,
     "biggest_win": {
       "round": 8,
       "date": "2026-04-19",
@@ -367,6 +368,13 @@
         "points": 47,
         "played": 29,
         "gd": 6
+      },
+      {
+        "round": 30,
+        "rank": 2,
+        "points": 47,
+        "played": 30,
+        "gd": 5
       }
     ],
     "best_rank": 1,
@@ -383,15 +391,15 @@
       "ppg": 1.69
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 6,
       "draw": 2,
-      "loss": 5,
-      "gf": 21,
-      "ga": 17,
-      "gd": 4,
+      "loss": 6,
+      "gf": 22,
+      "ga": 19,
+      "gd": 3,
       "points": 20,
-      "ppg": 1.54
+      "ppg": 1.43
     }
   },
   "fixtures": [
@@ -684,6 +692,16 @@
       "gf": 2,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 30,
+      "date": "2026-09-19",
+      "venue": "A",
+      "opponent_id": "K27",
+      "opponent": "FC 안양",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -698,10 +716,10 @@
         "position": "FW",
         "back_no": 99,
         "age": 27,
-        "apps": 22,
+        "apps": 23,
         "goals": 13,
-        "assists": 0,
-        "points": 13
+        "assists": 1,
+        "points": 14
       },
       {
         "player_id": "20180088",
@@ -710,10 +728,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
-        "goals": 10,
+        "apps": 29,
+        "goals": 11,
         "assists": 10,
-        "points": 20
+        "points": 21
       },
       {
         "player_id": "20170095",
@@ -734,7 +752,7 @@
         "position": "DF",
         "back_no": 15,
         "age": 32,
-        "apps": 26,
+        "apps": 27,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -760,10 +778,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
-        "goals": 10,
+        "apps": 29,
+        "goals": 11,
         "assists": 10,
-        "points": 20
+        "points": 21
       },
       {
         "player_id": "20150050",
@@ -772,7 +790,7 @@
         "position": "MF",
         "back_no": 24,
         "age": 32,
-        "apps": 29,
+        "apps": 30,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -796,25 +814,25 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 10,
+        "apps": 11,
         "goals": 1,
         "assists": 2,
         "points": 3
       },
       {
-        "player_id": "20240107",
+        "player_id": "20230315",
         "departed": false,
-        "name": "최석현",
-        "position": "DF",
-        "back_no": 96,
-        "age": 23,
-        "apps": 16,
-        "goals": 2,
+        "name": "야고",
+        "position": "FW",
+        "back_no": 99,
+        "age": 27,
+        "apps": 23,
+        "goals": 13,
         "assists": 1,
-        "points": 3
+        "points": 14
       }
     ],
-    "goal_share": 0.295
+    "goal_share": 0.289
   },
   "attendance": {
     "avg": 10628,

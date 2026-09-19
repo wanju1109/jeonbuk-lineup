@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:24+09:00",
+  "generated_at": "2026-09-20T04:17:16+09:00",
   "table": {
     "rank": 10,
     "teams": 17,
@@ -26,9 +26,9 @@
     "gap_to_leader": 23,
     "gap_to_cut": 11,
     "cut_rank": 6,
-    "gap_above": 1,
+    "gap_above": 3,
     "gap_below": 4,
-    "above": "충남아산",
+    "above": "경남",
     "below": "용인"
   },
   "splits": {
@@ -162,7 +162,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 10,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -337,6 +337,13 @@
       },
       {
         "round": 26,
+        "rank": 10,
+        "points": 30,
+        "played": 24,
+        "gd": -2
+      },
+      {
+        "round": 27,
         "rank": 10,
         "points": 30,
         "played": 24,
@@ -745,7 +752,6 @@
     "band": "PO 추격권",
     "detail": "플레이오프 컷인 6위와 11점 차. 남은 8경기면 아직 늦지 않았습니다.",
     "tags": [
-      "수비 안정",
       "실리 축구",
       "무승부 체질",
       "한 골 승부사"

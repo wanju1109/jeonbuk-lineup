@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:23+09:00",
+  "generated_at": "2026-09-20T04:17:14+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
@@ -201,7 +201,7 @@
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -362,6 +362,13 @@
       },
       {
         "round": 29,
+        "rank": 5,
+        "points": 42,
+        "played": 28,
+        "gd": 9
+      },
+      {
+        "round": 30,
         "rank": 5,
         "points": 42,
         "played": 28,

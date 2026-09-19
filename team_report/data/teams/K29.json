@@ -8,27 +8,27 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:23+09:00",
+  "generated_at": "2026-09-20T04:17:15+09:00",
   "table": {
-    "rank": 3,
+    "rank": 2,
     "teams": 17,
-    "played": 24,
-    "win": 12,
+    "played": 25,
+    "win": 13,
     "draw": 9,
     "loss": 3,
-    "gf": 47,
+    "gf": 50,
     "ga": 29,
-    "gd": 18,
-    "points": 45,
-    "ppg": 1.88,
-    "remaining": 8,
+    "gd": 21,
+    "points": 48,
+    "ppg": 1.92,
+    "remaining": 7,
     "scheduled": 32,
-    "gap_to_leader": 8,
+    "gap_to_leader": 5,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 1,
+    "gap_above": 5,
     "gap_below": 0,
-    "above": "대구",
+    "above": "수원",
     "below": "서울E"
   },
   "splits": {
@@ -44,15 +44,15 @@
       "ppg": 2.09
     },
     "away": {
-      "played": 13,
-      "win": 6,
+      "played": 14,
+      "win": 7,
       "draw": 4,
       "loss": 3,
-      "gf": 24,
+      "gf": 27,
       "ga": 19,
-      "gd": 5,
-      "points": 22,
-      "ppg": 1.69
+      "gd": 8,
+      "points": 25,
+      "ppg": 1.79
     }
   },
   "form": {
@@ -80,18 +80,18 @@
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "D",
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
       "W",
-      "W",
       "D",
       "W",
       "W",
@@ -99,17 +99,18 @@
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
-      "draw": 3,
+      "win": 3,
+      "draw": 2,
       "loss": 0,
-      "gf": 8,
-      "ga": 5,
-      "gd": 3,
-      "points": 9
+      "gf": 9,
+      "ga": 3,
+      "gd": 6,
+      "points": 11
     },
     "last10_record": {
       "played": 10,
@@ -117,23 +118,23 @@
       "draw": 4,
       "loss": 0,
       "gf": 21,
-      "ga": 9,
-      "gd": 12,
+      "ga": 8,
+      "gd": 13,
       "points": 22
     },
     "streaks": {
-      "current_type": "D",
-      "current_len": 2,
+      "current_type": "W",
+      "current_len": 1,
       "longest_win": 4,
-      "longest_unbeaten": 12,
+      "longest_unbeaten": 13,
       "longest_winless": 4,
       "longest_loss": 1
     }
   },
   "scoring": {
-    "gf_per_game": 1.96,
-    "ga_per_game": 1.21,
-    "clean_sheets": 4,
+    "gf_per_game": 2.0,
+    "ga_per_game": 1.16,
+    "clean_sheets": 5,
     "failed_to_score": 2,
     "both_scored": 19,
     "one_goal_games": 7,
@@ -162,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -341,6 +342,13 @@
         "points": 45,
         "played": 24,
         "gd": 18
+      },
+      {
+        "round": 27,
+        "rank": 2,
+        "points": 48,
+        "played": 25,
+        "gd": 21
       }
     ],
     "best_rank": 1,
@@ -357,15 +365,15 @@
       "ppg": 1.81
     },
     "second_half": {
-      "played": 8,
-      "win": 4,
+      "played": 9,
+      "win": 5,
       "draw": 4,
       "loss": 0,
-      "gf": 13,
+      "gf": 16,
       "ga": 8,
-      "gd": 5,
-      "points": 16,
-      "ppg": 2.0
+      "gd": 8,
+      "points": 19,
+      "ppg": 2.11
     }
   },
   "fixtures": [
@@ -608,6 +616,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-19",
+      "venue": "A",
+      "opponent_id": "K07",
+      "opponent": "전남 드래곤즈",
+      "gf": 3,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -634,7 +652,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 20,
-        "apps": 23,
+        "apps": 24,
         "goals": 8,
         "assists": 1,
         "points": 9
@@ -646,7 +664,7 @@
         "position": "FW",
         "back_no": 70,
         "age": 22,
-        "apps": 17,
+        "apps": 18,
         "goals": 4,
         "assists": 3,
         "points": 7
@@ -658,22 +676,22 @@
         "position": "FW",
         "back_no": 9,
         "age": 29,
-        "apps": 18,
+        "apps": 19,
         "goals": 4,
         "assists": 2,
         "points": 6
       },
       {
-        "player_id": "20160151",
+        "player_id": "20220191",
         "departed": false,
-        "name": "김정환",
-        "position": "MF",
-        "back_no": 11,
-        "age": 29,
+        "name": "최기윤",
+        "position": "FW",
+        "back_no": 29,
+        "age": 24,
         "apps": 23,
-        "goals": 2,
+        "goals": 3,
         "assists": 1,
-        "points": 3
+        "points": 4
       }
     ],
     "top_assists": [
@@ -696,10 +714,10 @@
         "position": "DF",
         "back_no": 27,
         "age": 29,
-        "apps": 22,
+        "apps": 23,
         "goals": 0,
-        "assists": 4,
-        "points": 4
+        "assists": 5,
+        "points": 5
       },
       {
         "player_id": "20240178",
@@ -708,10 +726,22 @@
         "position": "FW",
         "back_no": 70,
         "age": 22,
-        "apps": 17,
+        "apps": 18,
         "goals": 4,
         "assists": 3,
         "points": 7
+      },
+      {
+        "player_id": "20200138",
+        "departed": false,
+        "name": "구본철",
+        "position": "MF",
+        "back_no": 14,
+        "age": 26,
+        "apps": 24,
+        "goals": 2,
+        "assists": 3,
+        "points": 5
       },
       {
         "player_id": "20160096",
@@ -720,32 +750,21 @@
         "position": "MF",
         "back_no": 22,
         "age": 28,
-        "apps": 22,
+        "apps": 23,
         "goals": 1,
         "assists": 3,
         "points": 4
-      },
-      {
-        "player_id": "20260097",
-        "departed": false,
-        "name": "마테우스 바비",
-        "position": "FW",
-        "back_no": 9,
-        "age": 29,
-        "apps": 18,
-        "goals": 4,
-        "assists": 2,
-        "points": 6
       }
     ],
-    "goal_share": 0.277
+    "goal_share": 0.26
   },
   "attendance": null,
   "context": {
-    "band": "자동 승격 도전",
-    "detail": "2위와 1점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
+    "band": "자동 승격권",
+    "detail": "올해는 2위까지 곧바로 올라갑니다. 플레이오프를 건너뛸 수 있는 자리에 서 있습니다.",
     "tags": [
       "리그 최상급 화력",
+      "수비 안정",
       "무승부 체질"
     ]
   },

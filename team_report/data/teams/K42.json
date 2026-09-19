@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k42-sm.png",
   "home_url": "https://www.yonginfc.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:24+09:00",
+  "generated_at": "2026-09-20T04:17:16+09:00",
   "table": {
     "rank": 11,
     "teams": 17,
@@ -337,6 +337,13 @@
       },
       {
         "round": 26,
+        "rank": 11,
+        "points": 26,
+        "played": 24,
+        "gd": -4
+      },
+      {
+        "round": 27,
         "rank": 11,
         "points": 26,
         "played": 24,

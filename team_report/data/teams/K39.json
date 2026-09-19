@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:24+09:00",
+  "generated_at": "2026-09-20T04:17:16+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
@@ -26,9 +26,9 @@
     "gap_to_leader": 10,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 2,
+    "gap_above": 3,
     "gap_below": 2,
-    "above": "서울E",
+    "above": "대구",
     "below": "부산"
   },
   "splits": {
@@ -338,6 +338,13 @@
       },
       {
         "round": 26,
+        "rank": 5,
+        "points": 43,
+        "played": 25,
+        "gd": 14
+      },
+      {
+        "round": 27,
         "rank": 5,
         "points": 43,
         "played": 25,
@@ -753,8 +760,8 @@
   },
   "attendance": null,
   "context": {
-    "band": "자동 승격 도전",
-    "detail": "2위와 3점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
+    "band": "승격 플레이오프권",
+    "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
     "tags": [
       "리그 최고 수비",
       "클린시트 다수"

@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:24+09:00",
+  "generated_at": "2026-09-20T04:17:16+09:00",
   "table": {
-    "rank": 8,
+    "rank": 7,
     "teams": 17,
-    "played": 24,
-    "win": 7,
+    "played": 25,
+    "win": 8,
     "draw": 11,
     "loss": 6,
-    "gf": 30,
+    "gf": 31,
     "ga": 30,
-    "gd": 0,
-    "points": 32,
-    "ppg": 1.33,
-    "remaining": 8,
+    "gd": 1,
+    "points": 35,
+    "ppg": 1.4,
+    "remaining": 7,
     "scheduled": 32,
-    "gap_to_leader": 21,
-    "gap_to_cut": 9,
+    "gap_to_leader": 18,
+    "gap_to_cut": 6,
     "cut_rank": 6,
-    "gap_above": 1,
+    "gap_above": 6,
     "gap_below": 1,
-    "above": "경남",
+    "above": "부산",
     "below": "충남아산"
   },
   "splits": {
     "home": {
-      "played": 9,
-      "win": 1,
+      "played": 10,
+      "win": 2,
       "draw": 5,
       "loss": 3,
-      "gf": 11,
+      "gf": 12,
       "ga": 14,
-      "gd": -3,
-      "points": 8,
-      "ppg": 0.89
+      "gd": -2,
+      "points": 11,
+      "ppg": 1.1
     },
     "away": {
       "played": 15,
@@ -80,18 +80,18 @@
       "D",
       "L",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "W",
       "D",
       "L",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
       "L",
-      "L",
       "D",
       "D",
       "D",
@@ -99,30 +99,31 @@
       "D",
       "L",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
       "draw": 2,
       "loss": 2,
-      "gf": 8,
+      "gf": 6,
       "ga": 9,
-      "gd": -1,
+      "gd": -3,
       "points": 5
     },
     "last10_record": {
       "played": 10,
-      "win": 1,
+      "win": 2,
       "draw": 5,
-      "loss": 4,
-      "gf": 11,
-      "ga": 16,
-      "gd": -5,
-      "points": 8
+      "loss": 3,
+      "gf": 12,
+      "ga": 14,
+      "gd": -2,
+      "points": 11
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 5,
@@ -131,12 +132,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.25,
-    "ga_per_game": 1.25,
-    "clean_sheets": 6,
+    "gf_per_game": 1.24,
+    "ga_per_game": 1.2,
+    "clean_sheets": 7,
     "failed_to_score": 4,
     "both_scored": 15,
-    "one_goal_games": 8,
+    "one_goal_games": 9,
     "biggest_win": {
       "round": 21,
       "date": "2026-08-07",
@@ -334,6 +335,13 @@
         "points": 32,
         "played": 24,
         "gd": 0
+      },
+      {
+        "round": 27,
+        "rank": 7,
+        "points": 35,
+        "played": 25,
+        "gd": 1
       }
     ],
     "best_rank": 5,
@@ -350,15 +358,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 8,
-      "win": 1,
+      "played": 9,
+      "win": 2,
       "draw": 5,
       "loss": 2,
-      "gf": 11,
+      "gf": 12,
       "ga": 12,
-      "gd": -1,
-      "points": 8,
-      "ppg": 1.0
+      "gd": 0,
+      "points": 11,
+      "ppg": 1.22
     }
   },
   "fixtures": [
@@ -601,6 +609,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-19",
+      "venue": "H",
+      "opponent_id": "K06",
+      "opponent": "부산 아이파크",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -627,7 +645,7 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 12,
+        "apps": 13,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -639,7 +657,7 @@
         "position": "FW",
         "back_no": 50,
         "age": 31,
-        "apps": 24,
+        "apps": 25,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -651,22 +669,22 @@
         "position": "MF",
         "back_no": 8,
         "age": 26,
-        "apps": 16,
+        "apps": 17,
         "goals": 3,
         "assists": 1,
         "points": 4
       },
       {
-        "player_id": "20090125",
+        "player_id": "20190015",
         "departed": false,
-        "name": "김성준",
+        "name": "이시헌",
         "position": "MF",
-        "back_no": 16,
-        "age": 38,
-        "apps": 20,
+        "back_no": 11,
+        "age": 28,
+        "apps": 23,
         "goals": 2,
-        "assists": 0,
-        "points": 2
+        "assists": 1,
+        "points": 3
       }
     ],
     "top_assists": [
@@ -701,7 +719,7 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 12,
+        "apps": 13,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -713,7 +731,7 @@
         "position": "DF",
         "back_no": 32,
         "age": 22,
-        "apps": 16,
+        "apps": 17,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -725,19 +743,20 @@
         "position": "MF",
         "back_no": 8,
         "age": 26,
-        "apps": 16,
+        "apps": 17,
         "goals": 3,
         "assists": 1,
         "points": 4
       }
     ],
-    "goal_share": 0.167
+    "goal_share": 0.161
   },
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 9점 차. 남은 8경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 6점 차. 남은 7경기면 아직 늦지 않았습니다.",
     "tags": [
+      "실리 축구",
       "원정에 강한 팀",
       "무승부 체질"
     ]

@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:23+09:00",
+  "generated_at": "2026-09-20T04:17:15+09:00",
   "table": {
-    "rank": 2,
+    "rank": 4,
     "teams": 17,
-    "played": 25,
+    "played": 26,
     "win": 13,
     "draw": 7,
-    "loss": 5,
-    "gf": 47,
-    "ga": 33,
-    "gd": 14,
+    "loss": 6,
+    "gf": 48,
+    "ga": 35,
+    "gd": 13,
     "points": 46,
-    "ppg": 1.84,
-    "remaining": 7,
+    "ppg": 1.77,
+    "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 7,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 7,
-    "gap_below": 1,
-    "above": "수원",
-    "below": "수원FC"
+    "gap_above": 2,
+    "gap_below": 3,
+    "above": "서울E",
+    "below": "화성"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 2.0
     },
     "away": {
-      "played": 12,
+      "played": 13,
       "win": 5,
       "draw": 5,
-      "loss": 2,
-      "gf": 21,
-      "ga": 17,
-      "gd": 4,
+      "loss": 3,
+      "gf": 22,
+      "ga": 19,
+      "gd": 3,
       "points": 20,
-      "ppg": 1.67
+      "ppg": 1.54
     }
   },
   "form": {
@@ -81,17 +81,17 @@
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "W",
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "L",
@@ -100,30 +100,31 @@
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
+      "win": 2,
       "draw": 2,
-      "loss": 0,
-      "gf": 8,
-      "ga": 3,
-      "gd": 5,
-      "points": 11
+      "loss": 1,
+      "gf": 7,
+      "ga": 5,
+      "gd": 2,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
-      "win": 5,
+      "win": 4,
       "draw": 3,
-      "loss": 2,
-      "gf": 15,
+      "loss": 3,
+      "gf": 13,
       "ga": 13,
-      "gd": 2,
-      "points": 18
+      "gd": 0,
+      "points": 15
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 9,
@@ -132,12 +133,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.88,
-    "ga_per_game": 1.32,
+    "gf_per_game": 1.85,
+    "ga_per_game": 1.35,
     "clean_sheets": 8,
     "failed_to_score": 2,
-    "both_scored": 17,
-    "one_goal_games": 8,
+    "both_scored": 18,
+    "one_goal_games": 9,
     "biggest_win": {
       "round": 16,
       "date": "2026-07-04",
@@ -342,6 +343,13 @@
         "points": 46,
         "played": 25,
         "gd": 14
+      },
+      {
+        "round": 27,
+        "rank": 4,
+        "points": 46,
+        "played": 26,
+        "gd": 13
       }
     ],
     "best_rank": 2,
@@ -358,15 +366,15 @@
       "ppg": 1.94
     },
     "second_half": {
-      "played": 9,
+      "played": 10,
       "win": 4,
       "draw": 3,
-      "loss": 2,
-      "gf": 12,
-      "ga": 11,
-      "gd": 1,
+      "loss": 3,
+      "gf": 13,
+      "ga": 13,
+      "gd": 0,
       "points": 15,
-      "ppg": 1.67
+      "ppg": 1.5
     }
   },
   "fixtures": [
@@ -619,6 +627,16 @@
       "gf": 3,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-19",
+      "venue": "A",
+      "opponent_id": "K31",
+      "opponent": "서울 이랜드",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -633,7 +651,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 25,
+        "apps": 26,
         "goals": 8,
         "assists": 10,
         "points": 18
@@ -649,6 +667,18 @@
         "goals": 8,
         "assists": 0,
         "points": 8
+      },
+      {
+        "player_id": "20260287",
+        "departed": false,
+        "name": "데커스",
+        "position": "FW",
+        "back_no": 16,
+        "age": 23,
+        "apps": 20,
+        "goals": 6,
+        "assists": 1,
+        "points": 7
       },
       {
         "player_id": "20240079",
@@ -669,22 +699,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 36,
-        "apps": 14,
+        "apps": 15,
         "goals": 5,
-        "assists": 5,
-        "points": 10
-      },
-      {
-        "player_id": "20260287",
-        "departed": false,
-        "name": "데커스",
-        "position": "FW",
-        "back_no": 16,
-        "age": 23,
-        "apps": 19,
-        "goals": 5,
-        "assists": 1,
-        "points": 6
+        "assists": 6,
+        "points": 11
       }
     ],
     "top_assists": [
@@ -695,7 +713,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 25,
+        "apps": 26,
         "goals": 8,
         "assists": 10,
         "points": 18
@@ -707,10 +725,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 36,
-        "apps": 14,
+        "apps": 15,
         "goals": 5,
-        "assists": 5,
-        "points": 10
+        "assists": 6,
+        "points": 11
       },
       {
         "player_id": "20190174",
@@ -719,7 +737,7 @@
         "position": "FW",
         "back_no": 77,
         "age": 30,
-        "apps": 22,
+        "apps": 23,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -731,7 +749,7 @@
         "position": "MF",
         "back_no": 25,
         "age": 25,
-        "apps": 22,
+        "apps": 23,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -743,18 +761,18 @@
         "position": "FW",
         "back_no": 99,
         "age": 30,
-        "apps": 15,
+        "apps": 16,
         "goals": 2,
         "assists": 2,
         "points": 4
       }
     ],
-    "goal_share": 0.17
+    "goal_share": 0.167
   },
   "attendance": null,
   "context": {
-    "band": "자동 승격권",
-    "detail": "올해는 2위까지 곧바로 올라갑니다. 플레이오프를 건너뛸 수 있는 자리에 서 있습니다.",
+    "band": "자동 승격 도전",
+    "detail": "2위와 2점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "리그 최상급 화력"
     ]

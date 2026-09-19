@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:25+09:00",
+  "generated_at": "2026-09-20T04:17:17+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
-    "played": 24,
+    "played": 25,
     "win": 4,
     "draw": 9,
-    "loss": 11,
+    "loss": 12,
     "gf": 28,
-    "ga": 40,
-    "gd": -12,
+    "ga": 43,
+    "gd": -15,
     "points": 21,
-    "ppg": 0.88,
-    "remaining": 8,
+    "ppg": 0.84,
+    "remaining": 7,
     "scheduled": 32,
     "gap_to_leader": 32,
     "gap_to_cut": 20,
@@ -33,15 +33,15 @@
   },
   "splits": {
     "home": {
-      "played": 10,
+      "played": 11,
       "win": 3,
       "draw": 4,
-      "loss": 3,
+      "loss": 4,
       "gf": 12,
-      "ga": 12,
-      "gd": 0,
+      "ga": 15,
+      "gd": -3,
       "points": 13,
-      "ppg": 1.3
+      "ppg": 1.18
     },
     "away": {
       "played": 14,
@@ -80,17 +80,17 @@
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "last5": [
-      "L",
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "last10": [
-      "D",
       "L",
       "W",
       "D",
@@ -99,31 +99,32 @@
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 2,
       "draw": 2,
       "loss": 1,
-      "gf": 7,
-      "ga": 6,
-      "gd": 1,
+      "gf": 6,
+      "ga": 7,
+      "gd": -1,
       "points": 8
     },
     "last10_record": {
       "played": 10,
       "win": 3,
-      "draw": 4,
-      "loss": 3,
-      "gf": 13,
+      "draw": 3,
+      "loss": 4,
+      "gf": 10,
       "ga": 17,
-      "gd": -4,
-      "points": 13
+      "gd": -7,
+      "points": 12
     },
     "streaks": {
-      "current_type": "D",
-      "current_len": 2,
+      "current_type": "L",
+      "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 4,
       "longest_winless": 15,
@@ -131,10 +132,10 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.17,
-    "ga_per_game": 1.67,
+    "gf_per_game": 1.12,
+    "ga_per_game": 1.72,
     "clean_sheets": 4,
-    "failed_to_score": 8,
+    "failed_to_score": 9,
     "both_scored": 13,
     "one_goal_games": 10,
     "biggest_win": {
@@ -162,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 3,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -341,9 +342,16 @@
         "points": 21,
         "played": 24,
         "gd": -12
+      },
+      {
+        "round": 27,
+        "rank": 16,
+        "points": 21,
+        "played": 25,
+        "gd": -15
       }
     ],
-    "best_rank": 2,
+    "best_rank": 3,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -357,15 +365,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 8,
+      "played": 9,
       "win": 3,
       "draw": 3,
-      "loss": 2,
+      "loss": 3,
       "gf": 10,
-      "ga": 9,
-      "gd": 1,
+      "ga": 12,
+      "gd": -2,
       "points": 12,
-      "ppg": 1.5
+      "ppg": 1.33
     }
   },
   "fixtures": [
@@ -608,6 +616,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-19",
+      "venue": "H",
+      "opponent_id": "K29",
+      "opponent": "수원 FC",
+      "gf": 0,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -622,7 +640,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 31,
-        "apps": 24,
+        "apps": 25,
         "goals": 6,
         "assists": 6,
         "points": 12
@@ -634,7 +652,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 17,
+        "apps": 18,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -646,7 +664,7 @@
         "position": "MF",
         "back_no": 14,
         "age": 26,
-        "apps": 19,
+        "apps": 20,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -658,7 +676,7 @@
         "position": "FW",
         "back_no": 32,
         "age": 26,
-        "apps": 5,
+        "apps": 6,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -670,7 +688,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 27,
-        "apps": 22,
+        "apps": 23,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -684,7 +702,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 31,
-        "apps": 24,
+        "apps": 25,
         "goals": 6,
         "assists": 6,
         "points": 12
@@ -696,7 +714,7 @@
         "position": "FW",
         "back_no": 17,
         "age": 26,
-        "apps": 22,
+        "apps": 23,
         "goals": 1,
         "assists": 5,
         "points": 6
@@ -708,7 +726,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 17,
+        "apps": 18,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -720,7 +738,7 @@
         "position": "FW",
         "back_no": 79,
         "age": 26,
-        "apps": 6,
+        "apps": 7,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -732,7 +750,7 @@
         "position": "MF",
         "back_no": 14,
         "age": 26,
-        "apps": 19,
+        "apps": 20,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -746,6 +764,7 @@
     "detail": "순위표 바닥. 내년을 위한 재건이 먼저 보이는 자리입니다.",
     "tags": [
       "수비 불안",
+      "침묵하는 공격",
       "무승부 체질"
     ]
   },

@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:24+09:00",
+  "generated_at": "2026-09-20T04:17:15+09:00",
   "table": {
-    "rank": 4,
+    "rank": 3,
     "teams": 17,
-    "played": 25,
-    "win": 13,
+    "played": 26,
+    "win": 14,
     "draw": 6,
     "loss": 6,
-    "gf": 43,
-    "ga": 29,
-    "gd": 14,
-    "points": 45,
-    "ppg": 1.8,
-    "remaining": 7,
+    "gf": 45,
+    "ga": 30,
+    "gd": 15,
+    "points": 48,
+    "ppg": 1.85,
+    "remaining": 6,
     "scheduled": 32,
-    "gap_to_leader": 8,
+    "gap_to_leader": 5,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 0,
     "gap_below": 2,
     "above": "수원FC",
-    "below": "화성"
+    "below": "대구"
   },
   "splits": {
     "home": {
-      "played": 12,
-      "win": 6,
+      "played": 13,
+      "win": 7,
       "draw": 2,
       "loss": 4,
-      "gf": 23,
-      "ga": 17,
-      "gd": 6,
-      "points": 20,
-      "ppg": 1.67
+      "gf": 25,
+      "ga": 18,
+      "gd": 7,
+      "points": 23,
+      "ppg": 1.77
     },
     "away": {
       "played": 13,
@@ -81,17 +81,17 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
-      "W",
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
-      "W",
       "D",
       "W",
       "W",
@@ -100,16 +100,17 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
       "win": 2,
       "draw": 2,
       "loss": 1,
-      "gf": 7,
+      "gf": 6,
       "ga": 4,
-      "gd": 3,
+      "gd": 2,
       "points": 8
     },
     "last10_record": {
@@ -117,13 +118,13 @@
       "win": 5,
       "draw": 4,
       "loss": 1,
-      "gf": 18,
+      "gf": 17,
       "ga": 11,
-      "gd": 7,
+      "gd": 6,
       "points": 19
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 4,
       "longest_unbeaten": 9,
@@ -132,12 +133,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.72,
-    "ga_per_game": 1.16,
+    "gf_per_game": 1.73,
+    "ga_per_game": 1.15,
     "clean_sheets": 7,
     "failed_to_score": 4,
-    "both_scored": 16,
-    "one_goal_games": 10,
+    "both_scored": 17,
+    "one_goal_games": 11,
     "biggest_win": {
       "round": 6,
       "date": "2026-04-04",
@@ -342,6 +343,13 @@
         "points": 45,
         "played": 25,
         "gd": 14
+      },
+      {
+        "round": 27,
+        "rank": 3,
+        "points": 48,
+        "played": 26,
+        "gd": 15
       }
     ],
     "best_rank": 2,
@@ -358,15 +366,15 @@
       "ppg": 1.81
     },
     "second_half": {
-      "played": 9,
-      "win": 4,
+      "played": 10,
+      "win": 5,
       "draw": 4,
       "loss": 1,
-      "gf": 15,
-      "ga": 10,
-      "gd": 5,
-      "points": 16,
-      "ppg": 1.78
+      "gf": 17,
+      "ga": 11,
+      "gd": 6,
+      "points": 19,
+      "ppg": 1.9
     }
   },
   "fixtures": [
@@ -619,6 +627,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-19",
+      "venue": "H",
+      "opponent_id": "K17",
+      "opponent": "대구 FC",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -633,10 +651,10 @@
         "position": "FW",
         "back_no": 16,
         "age": 26,
-        "apps": 24,
-        "goals": 9,
+        "apps": 25,
+        "goals": 10,
         "assists": 4,
-        "points": 13
+        "points": 14
       },
       {
         "player_id": "20250192",
@@ -645,7 +663,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 31,
-        "apps": 24,
+        "apps": 25,
         "goals": 8,
         "assists": 5,
         "points": 13
@@ -657,10 +675,10 @@
         "position": "MF",
         "back_no": 6,
         "age": 22,
-        "apps": 24,
+        "apps": 25,
         "goals": 4,
-        "assists": 0,
-        "points": 4
+        "assists": 1,
+        "points": 5
       },
       {
         "player_id": "20210175",
@@ -681,7 +699,7 @@
         "position": "FW",
         "back_no": 70,
         "age": 17,
-        "apps": 13,
+        "apps": 14,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -695,7 +713,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 31,
-        "apps": 24,
+        "apps": 25,
         "goals": 8,
         "assists": 5,
         "points": 13
@@ -707,10 +725,10 @@
         "position": "FW",
         "back_no": 16,
         "age": 26,
-        "apps": 24,
-        "goals": 9,
+        "apps": 25,
+        "goals": 10,
         "assists": 4,
-        "points": 13
+        "points": 14
       },
       {
         "player_id": "20220189",
@@ -719,7 +737,7 @@
         "position": "DF",
         "back_no": 13,
         "age": 29,
-        "apps": 22,
+        "apps": 23,
         "goals": 2,
         "assists": 4,
         "points": 6
@@ -749,7 +767,7 @@
         "points": 5
       }
     ],
-    "goal_share": 0.209
+    "goal_share": 0.222
   },
   "attendance": {
     "avg": 21993,
@@ -760,7 +778,7 @@
   },
   "context": {
     "band": "자동 승격 도전",
-    "detail": "2위와 1점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
+    "detail": "2위와 0점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "화력 우위",
       "수비 안정"

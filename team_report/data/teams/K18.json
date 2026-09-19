@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:23+09:00",
+  "generated_at": "2026-09-20T04:17:15+09:00",
   "table": {
-    "rank": 7,
+    "rank": 8,
     "teams": 12,
     "played": 28,
     "win": 10,
@@ -26,9 +26,9 @@
     "gap_to_leader": 25,
     "gap_to_cut": 2,
     "cut_rank": 6,
-    "gap_above": 2,
+    "gap_above": 1,
     "gap_below": 0,
-    "above": "대전",
+    "above": "안양",
     "below": "포항"
   },
   "splits": {
@@ -363,6 +363,13 @@
       {
         "round": 29,
         "rank": 7,
+        "points": 37,
+        "played": 28,
+        "gd": 3
+      },
+      {
+        "round": 30,
+        "rank": 8,
         "points": 37,
         "played": 28,
         "gd": 3

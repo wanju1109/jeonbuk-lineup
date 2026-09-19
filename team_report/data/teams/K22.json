@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:23+09:00",
+  "generated_at": "2026-09-20T04:17:15+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
@@ -26,9 +26,9 @@
     "gap_to_leader": 48,
     "gap_to_cut": 25,
     "cut_rank": 6,
-    "gap_above": 16,
+    "gap_above": 18,
     "gap_below": null,
-    "above": "김천",
+    "above": "부천",
     "below": ""
   },
   "splits": {
@@ -174,14 +174,14 @@
       },
       {
         "round": 2,
-        "rank": 3,
+        "rank": 4,
         "points": 4,
         "played": 2,
         "gd": 1
       },
       {
         "round": 3,
-        "rank": 4,
+        "rank": 5,
         "points": 5,
         "played": 3,
         "gd": 1
@@ -367,9 +367,16 @@
         "points": 14,
         "played": 29,
         "gd": -42
+      },
+      {
+        "round": 30,
+        "rank": 12,
+        "points": 14,
+        "played": 29,
+        "gd": -42
       }
     ],
-    "best_rank": 3,
+    "best_rank": 4,
     "worst_rank": 12,
     "first_half": {
       "played": 16,

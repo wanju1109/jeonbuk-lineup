@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-09-19T04:32:24+09:00",
+  "generated_at": "2026-09-20T04:17:16+09:00",
   "table": {
-    "rank": 9,
+    "rank": 8,
     "teams": 17,
-    "played": 24,
-    "win": 8,
+    "played": 25,
+    "win": 9,
     "draw": 7,
     "loss": 9,
-    "gf": 31,
-    "ga": 30,
-    "gd": 1,
-    "points": 31,
-    "ppg": 1.29,
-    "remaining": 8,
+    "gf": 34,
+    "ga": 31,
+    "gd": 3,
+    "points": 34,
+    "ppg": 1.36,
+    "remaining": 7,
     "scheduled": 32,
-    "gap_to_leader": 22,
-    "gap_to_cut": 10,
+    "gap_to_leader": 19,
+    "gap_to_cut": 7,
     "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 1,
     "above": "김포",
-    "below": "성남"
+    "below": "경남"
   },
   "splits": {
     "home": {
-      "played": 13,
-      "win": 6,
+      "played": 14,
+      "win": 7,
       "draw": 4,
       "loss": 3,
-      "gf": 21,
-      "ga": 16,
-      "gd": 5,
-      "points": 22,
-      "ppg": 1.69
+      "gf": 24,
+      "ga": 17,
+      "gd": 7,
+      "points": 25,
+      "ppg": 1.79
     },
     "away": {
       "played": 11,
@@ -80,17 +80,17 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
-      "D",
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "L",
@@ -99,31 +99,32 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
-      "draw": 1,
+      "win": 2,
+      "draw": 0,
       "loss": 3,
-      "gf": 3,
+      "gf": 5,
       "ga": 7,
-      "gd": -4,
-      "points": 4
+      "gd": -2,
+      "points": 6
     },
     "last10_record": {
       "played": 10,
       "win": 3,
       "draw": 2,
       "loss": 5,
-      "gf": 10,
-      "ga": 12,
+      "gf": 11,
+      "ga": 13,
       "gd": -2,
       "points": 11
     },
     "streaks": {
-      "current_type": "L",
-      "current_len": 2,
+      "current_type": "W",
+      "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 5,
       "longest_winless": 4,
@@ -131,11 +132,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.29,
-    "ga_per_game": 1.25,
+    "gf_per_game": 1.36,
+    "ga_per_game": 1.24,
     "clean_sheets": 6,
     "failed_to_score": 7,
-    "both_scored": 13,
+    "both_scored": 14,
     "one_goal_games": 10,
     "biggest_win": {
       "round": 11,
@@ -341,6 +342,13 @@
         "points": 31,
         "played": 24,
         "gd": 1
+      },
+      {
+        "round": 27,
+        "rank": 8,
+        "points": 34,
+        "played": 25,
+        "gd": 3
       }
     ],
     "best_rank": 4,
@@ -357,15 +365,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 8,
-      "win": 2,
+      "played": 9,
+      "win": 3,
       "draw": 1,
       "loss": 5,
-      "gf": 7,
-      "ga": 11,
-      "gd": -4,
-      "points": 7,
-      "ppg": 0.88
+      "gf": 10,
+      "ga": 12,
+      "gd": -2,
+      "points": 10,
+      "ppg": 1.11
     }
   },
   "fixtures": [
@@ -608,6 +616,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-19",
+      "venue": "H",
+      "opponent_id": "K38",
+      "opponent": "천안 시티",
+      "gf": 3,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -616,28 +634,28 @@
     "foreign": 8,
     "top_scorers": [
       {
-        "player_id": "20240299",
-        "departed": false,
-        "name": "데니손",
-        "position": "FW",
-        "back_no": 11,
-        "age": 28,
-        "apps": 21,
-        "goals": 6,
-        "assists": 2,
-        "points": 8
-      },
-      {
         "player_id": "20160114",
         "departed": false,
         "name": "김종민",
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 23,
-        "goals": 6,
-        "assists": 1,
-        "points": 7
+        "apps": 24,
+        "goals": 7,
+        "assists": 2,
+        "points": 9
+      },
+      {
+        "player_id": "20240299",
+        "departed": false,
+        "name": "데니손",
+        "position": "FW",
+        "back_no": 11,
+        "age": 28,
+        "apps": 22,
+        "goals": 7,
+        "assists": 2,
+        "points": 9
       },
       {
         "player_id": "20250356",
@@ -658,7 +676,7 @@
         "position": "MF",
         "back_no": 33,
         "age": 30,
-        "apps": 23,
+        "apps": 24,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -684,7 +702,19 @@
         "position": "MF",
         "back_no": 10,
         "age": 34,
-        "apps": 23,
+        "apps": 24,
+        "goals": 1,
+        "assists": 6,
+        "points": 7
+      },
+      {
+        "player_id": "20110138",
+        "departed": false,
+        "name": "한교원",
+        "position": "FW",
+        "back_no": 7,
+        "age": 36,
+        "apps": 20,
         "goals": 1,
         "assists": 5,
         "points": 6
@@ -696,22 +726,22 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 21,
+        "apps": 22,
         "goals": 1,
         "assists": 4,
         "points": 5
       },
       {
-        "player_id": "20110138",
+        "player_id": "20160114",
         "departed": false,
-        "name": "한교원",
+        "name": "김종민",
         "position": "FW",
-        "back_no": 7,
-        "age": 36,
-        "apps": 19,
-        "goals": 1,
-        "assists": 4,
-        "points": 5
+        "back_no": 9,
+        "age": 34,
+        "apps": 24,
+        "goals": 7,
+        "assists": 2,
+        "points": 9
       },
       {
         "player_id": "20240299",
@@ -720,30 +750,18 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 21,
-        "goals": 6,
+        "apps": 22,
+        "goals": 7,
         "assists": 2,
-        "points": 8
-      },
-      {
-        "player_id": "20250356",
-        "departed": false,
-        "name": "은고이",
-        "position": "FW",
-        "back_no": 97,
-        "age": 29,
-        "apps": 24,
-        "goals": 5,
-        "assists": 2,
-        "points": 7
+        "points": 9
       }
     ],
-    "goal_share": 0.194
+    "goal_share": 0.206
   },
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 10점 차. 남은 8경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 7점 차. 남은 7경기면 아직 늦지 않았습니다.",
     "tags": [
       "홈 강세"
     ]
