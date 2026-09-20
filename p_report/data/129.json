@@ -25,17 +25,17 @@
     "kickoff_label": "2026-09-27 19:00 KST",
     "date_md": "09/27",
     "label": "강원 VS 인천 (129, 09/27)",
-    "hours_to_kickoff": 157.0,
+    "hours_to_kickoff": 154.7,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-21T05:57:04.011949+09:00",
+    "generated_at": "2026-09-21T08:19:38.398888+09:00",
     "preview_hours": 48.0
   },
   "headline": "22R PREVIEW · 강원 vs 인천",
   "thesis": "강원 vs 인천. 강원 최근 D W D D L, 인천 최근 D L W L D. 홈 강원이(가) 템포를 가져가며 xG 1.06 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "강원 vs 인천. 강원 최근 D W D D L (1승 3무 1패 / 최근 5경기). 인천 최근 D L W L D (1승 2무 2패 / 최근 5경기).",
-    "최근 5경기 평균 — 강원 xG 1.06·슈팅 11.2, 인천 xG 1.18·슈팅 10.5. 패스 성공률 69.5% vs 75.8%.",
+    "최근 5경기 평균 — 강원 xG 1.06·슈팅 11.2, 인천 xG 1.18·슈팅 10.5. 패스 성공률 69.4% vs 75.8%.",
     "올 시즌 맞대결 1경기 — 강원 기준 1승 0무 0패.",
     "경기장 강릉하이원아레나 · 강원 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 강원: 최근 가용 칠판 데이터 5경기 기준, 인천: 최근 가용 칠판 데이터 5경기 기준."
@@ -86,7 +86,7 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 69.5,
+        "jeonbuk": 69.4,
         "opponent": 75.8,
         "suffix": "%",
         "better": "opponent"
@@ -596,7 +596,7 @@
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 64.4,
+        "pass_pct": 64.0,
         "final_third_pct": 33.3,
         "presses": 35,
         "stats_source": "portal"
@@ -709,7 +709,7 @@
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 77.3,
+        "pass_pct": 76.9,
         "final_third_pct": 19.3,
         "presses": 13,
         "stats_source": "portal"
@@ -745,7 +745,7 @@
       "avg_xga": 0.65,
       "avg_shots": 11.2,
       "avg_sot": 3.8,
-      "avg_pass_pct": 69.5,
+      "avg_pass_pct": 69.4,
       "avg_final_third_pct": 27.8,
       "avg_presses": 21.2,
       "avg_x": 50.0,
