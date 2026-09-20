@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:16+09:00",
+  "generated_at": "2026-09-21T04:22:21+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
-    "played": 25,
+    "played": 26,
     "win": 12,
-    "draw": 7,
+    "draw": 8,
     "loss": 6,
-    "gf": 39,
-    "ga": 25,
+    "gf": 41,
+    "ga": 27,
     "gd": 14,
-    "points": 43,
-    "ppg": 1.72,
-    "remaining": 7,
+    "points": 44,
+    "ppg": 1.69,
+    "remaining": 6,
     "scheduled": 32,
-    "gap_to_leader": 10,
+    "gap_to_leader": 9,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 3,
-    "gap_below": 2,
+    "gap_above": 2,
+    "gap_below": 3,
     "above": "대구",
     "below": "부산"
   },
@@ -44,15 +44,15 @@
       "ppg": 1.81
     },
     "away": {
-      "played": 9,
+      "played": 10,
       "win": 4,
-      "draw": 2,
+      "draw": 3,
       "loss": 3,
-      "gf": 11,
-      "ga": 7,
+      "gf": 13,
+      "ga": 9,
       "gd": 4,
-      "points": 14,
-      "ppg": 1.56
+      "points": 15,
+      "ppg": 1.5
     }
   },
   "form": {
@@ -81,17 +81,17 @@
       "L",
       "W",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
-      "D",
       "L",
       "W",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "last10": [
-      "L",
       "W",
       "W",
       "W",
@@ -100,30 +100,31 @@
       "L",
       "W",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 2,
       "draw": 2,
       "loss": 1,
-      "gf": 5,
-      "ga": 3,
+      "gf": 7,
+      "ga": 5,
       "gd": 2,
       "points": 8
     },
     "last10_record": {
       "played": 10,
       "win": 5,
-      "draw": 3,
-      "loss": 2,
-      "gf": 17,
+      "draw": 4,
+      "loss": 1,
+      "gf": 18,
       "ga": 8,
-      "gd": 9,
-      "points": 18
+      "gd": 10,
+      "points": 19
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 8,
@@ -132,11 +133,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.56,
-    "ga_per_game": 1.0,
+    "gf_per_game": 1.58,
+    "ga_per_game": 1.04,
     "clean_sheets": 9,
     "failed_to_score": 6,
-    "both_scored": 13,
+    "both_scored": 14,
     "one_goal_games": 11,
     "biggest_win": {
       "round": 20,
@@ -346,8 +347,8 @@
       {
         "round": 27,
         "rank": 5,
-        "points": 43,
-        "played": 25,
+        "points": 44,
+        "played": 26,
         "gd": 14
       }
     ],
@@ -365,15 +366,15 @@
       "ppg": 1.56
     },
     "second_half": {
-      "played": 9,
+      "played": 10,
       "win": 5,
-      "draw": 3,
+      "draw": 4,
       "loss": 1,
-      "gf": 16,
-      "ga": 6,
+      "gf": 18,
+      "ga": 8,
       "gd": 10,
-      "points": 18,
-      "ppg": 2.0
+      "points": 19,
+      "ppg": 1.9
     }
   },
   "fixtures": [
@@ -626,6 +627,16 @@
       "gf": 2,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-20",
+      "venue": "A",
+      "opponent_id": "K08",
+      "opponent": "성남 FC",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -756,15 +767,14 @@
         "points": 6
       }
     ],
-    "goal_share": 0.282
+    "goal_share": 0.268
   },
   "attendance": null,
   "context": {
     "band": "승격 플레이오프권",
     "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
     "tags": [
-      "리그 최고 수비",
-      "클린시트 다수"
+      "리그 최고 수비"
     ]
   },
   "profile": {

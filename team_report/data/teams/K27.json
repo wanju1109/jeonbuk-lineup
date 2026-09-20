@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k27-sm.png",
   "home_url": "https://www.fc-anyang.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:15+09:00",
+  "generated_at": "2026-09-21T04:22:20+09:00",
   "table": {
-    "rank": 7,
+    "rank": 8,
     "teams": 12,
     "played": 30,
     "win": 9,
@@ -24,11 +24,11 @@
     "remaining": 8,
     "scheduled": 38,
     "gap_to_leader": 24,
-    "gap_to_cut": 1,
+    "gap_to_cut": 2,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 1,
-    "above": "대전",
+    "gap_above": 2,
+    "gap_below": 0,
+    "above": "포항",
     "below": "인천"
   },
   "splits": {
@@ -168,14 +168,14 @@
     "history": [
       {
         "round": 1,
-        "rank": 6,
+        "rank": 5,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 3,
+        "rank": 4,
         "points": 4,
         "played": 2,
         "gd": 1
@@ -189,7 +189,7 @@
       },
       {
         "round": 4,
-        "rank": 6,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -371,7 +371,7 @@
       },
       {
         "round": 30,
-        "rank": 7,
+        "rank": 8,
         "points": 38,
         "played": 30,
         "gd": -9
@@ -838,12 +838,12 @@
     "avg": 7390,
     "total": 110849,
     "games": 15,
-    "home_fans_avg": 6564,
+    "home_fans_avg": 6486,
     "away_fans_avg": 999
   },
   "context": {
     "band": "파이널A 추격",
-    "detail": "6위와 1점 차. 상위 스플릿이 아직 사정권입니다.",
+    "detail": "6위와 2점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "수비 불안",
       "무승부 체질",

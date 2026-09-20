@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:14+09:00",
+  "generated_at": "2026-09-21T04:22:19+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -27,9 +27,9 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 15,
-    "gap_below": 4,
+    "gap_below": 1,
     "above": "서울",
-    "below": "전북"
+    "below": "제주"
   },
   "splits": {
     "home": {
@@ -839,7 +839,7 @@
     "total": 159413,
     "games": 15,
     "home_fans_avg": 9922,
-    "away_fans_avg": 1453
+    "away_fans_avg": 1434
   },
   "context": {
     "band": "ACL 진출권",

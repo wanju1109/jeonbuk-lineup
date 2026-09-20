@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:15+09:00",
+  "generated_at": "2026-09-21T04:22:20+09:00",
   "table": {
-    "rank": 8,
+    "rank": 9,
     "teams": 12,
-    "played": 28,
+    "played": 29,
     "win": 10,
-    "draw": 7,
+    "draw": 8,
     "loss": 11,
-    "gf": 35,
-    "ga": 32,
+    "gf": 36,
+    "ga": 33,
     "gd": 3,
-    "points": 37,
-    "ppg": 1.32,
-    "remaining": 10,
+    "points": 38,
+    "ppg": 1.31,
+    "remaining": 9,
     "scheduled": 38,
-    "gap_to_leader": 25,
+    "gap_to_leader": 24,
     "gap_to_cut": 2,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 0,
+    "gap_above": 0,
+    "gap_below": 5,
     "above": "안양",
-    "below": "포항"
+    "below": "김천"
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 5,
-      "draw": 3,
+      "draw": 4,
       "loss": 6,
-      "gf": 16,
-      "ga": 15,
+      "gf": 17,
+      "ga": 16,
       "gd": 1,
-      "points": 18,
-      "ppg": 1.29
+      "points": 19,
+      "ppg": 1.27
     },
     "away": {
       "played": 14,
@@ -84,17 +84,17 @@
       "D",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "L",
       "D",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
-      "W",
       "D",
       "D",
       "D",
@@ -103,30 +103,31 @@
       "D",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 1,
-      "loss": 3,
+      "draw": 2,
+      "loss": 2,
       "gf": 5,
-      "ga": 7,
-      "gd": -2,
-      "points": 4
+      "ga": 6,
+      "gd": -1,
+      "points": 5
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
-      "draw": 4,
+      "win": 2,
+      "draw": 5,
       "loss": 3,
-      "gf": 13,
+      "gf": 12,
       "ga": 13,
-      "gd": 0,
-      "points": 13
+      "gd": -1,
+      "points": 11
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 6,
@@ -135,11 +136,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.25,
+    "gf_per_game": 1.24,
     "ga_per_game": 1.14,
     "clean_sheets": 7,
     "failed_to_score": 6,
-    "both_scored": 16,
+    "both_scored": 17,
     "one_goal_games": 18,
     "biggest_win": {
       "round": 15,
@@ -369,9 +370,9 @@
       },
       {
         "round": 30,
-        "rank": 8,
-        "points": 37,
-        "played": 28,
+        "rank": 9,
+        "points": 38,
+        "played": 29,
         "gd": 3
       }
     ],
@@ -389,15 +390,15 @@
       "ppg": 1.31
     },
     "second_half": {
-      "played": 12,
+      "played": 13,
       "win": 4,
-      "draw": 4,
+      "draw": 5,
       "loss": 4,
-      "gf": 14,
-      "ga": 14,
+      "gf": 15,
+      "ga": 15,
       "gd": 0,
-      "points": 16,
-      "ppg": 1.33
+      "points": 17,
+      "ppg": 1.31
     }
   },
   "fixtures": [
@@ -680,6 +681,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 30,
+      "date": "2026-09-20",
+      "venue": "H",
+      "opponent_id": "K10",
+      "opponent": "대전 하나",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -810,13 +821,13 @@
         "points": 2
       }
     ],
-    "goal_share": 0.343
+    "goal_share": 0.333
   },
   "attendance": {
-    "avg": 9905,
-    "total": 138674,
-    "games": 14,
-    "home_fans_avg": 8715,
+    "avg": 9852,
+    "total": 147786,
+    "games": 15,
+    "home_fans_avg": 8679,
     "away_fans_avg": 1447
   },
   "context": {

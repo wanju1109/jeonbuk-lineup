@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:14+09:00",
+  "generated_at": "2026-09-21T04:22:19+09:00",
   "table": {
-    "rank": 4,
+    "rank": 3,
     "teams": 12,
-    "played": 29,
-    "win": 11,
+    "played": 30,
+    "win": 12,
     "draw": 10,
     "loss": 8,
-    "gf": 34,
+    "gf": 35,
     "ga": 29,
-    "gd": 5,
-    "points": 43,
-    "ppg": 1.48,
-    "remaining": 9,
+    "gd": 6,
+    "points": 46,
+    "ppg": 1.53,
+    "remaining": 8,
     "scheduled": 38,
-    "gap_to_leader": 19,
+    "gap_to_leader": 16,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 0,
-    "gap_below": 1,
-    "above": "전북",
-    "below": "강원"
+    "gap_above": 1,
+    "gap_below": 2,
+    "above": "울산",
+    "below": "전북"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.29
     },
     "away": {
-      "played": 12,
-      "win": 6,
+      "played": 13,
+      "win": 7,
       "draw": 3,
       "loss": 3,
-      "gf": 16,
+      "gf": 17,
       "ga": 11,
-      "gd": 5,
-      "points": 21,
-      "ppg": 1.75
+      "gd": 6,
+      "points": 24,
+      "ppg": 1.85
     }
   },
   "form": {
@@ -85,17 +85,17 @@
       "W",
       "D",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "L",
       "W",
       "D",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "W",
       "D",
       "W",
       "W",
@@ -104,30 +104,31 @@
       "W",
       "D",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
+      "win": 3,
       "draw": 2,
-      "loss": 1,
+      "loss": 0,
       "gf": 7,
-      "ga": 5,
-      "gd": 2,
-      "points": 8
+      "ga": 3,
+      "gd": 4,
+      "points": 11
     },
     "last10_record": {
       "played": 10,
       "win": 5,
       "draw": 4,
       "loss": 1,
-      "gf": 17,
-      "ga": 10,
+      "gf": 16,
+      "ga": 9,
       "gd": 7,
       "points": 19
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 9,
@@ -137,11 +138,11 @@
   },
   "scoring": {
     "gf_per_game": 1.17,
-    "ga_per_game": 1.0,
-    "clean_sheets": 10,
+    "ga_per_game": 0.97,
+    "clean_sheets": 11,
     "failed_to_score": 7,
     "both_scored": 16,
-    "one_goal_games": 13,
+    "one_goal_games": 14,
     "biggest_win": {
       "round": 26,
       "date": "2026-08-30",
@@ -216,7 +217,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -370,13 +371,13 @@
       },
       {
         "round": 30,
-        "rank": 4,
-        "points": 43,
-        "played": 29,
-        "gd": 5
+        "rank": 3,
+        "points": 46,
+        "played": 30,
+        "gd": 6
       }
     ],
-    "best_rank": 4,
+    "best_rank": 3,
     "worst_rank": 12,
     "first_half": {
       "played": 16,
@@ -390,15 +391,15 @@
       "ppg": 1.19
     },
     "second_half": {
-      "played": 13,
-      "win": 6,
+      "played": 14,
+      "win": 7,
       "draw": 6,
       "loss": 1,
-      "gf": 20,
+      "gf": 21,
       "ga": 12,
-      "gd": 8,
-      "points": 24,
-      "ppg": 1.85
+      "gd": 9,
+      "points": 27,
+      "ppg": 1.93
     }
   },
   "fixtures": [
@@ -691,6 +692,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 30,
+      "date": "2026-09-20",
+      "venue": "A",
+      "opponent_id": "K21",
+      "opponent": "강원 FC",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -821,22 +832,25 @@
         "points": 3
       }
     ],
-    "goal_share": 0.176
+    "goal_share": 0.171
   },
   "attendance": {
     "avg": 5177,
     "total": 88010,
     "games": 17,
     "home_fans_avg": 4626,
-    "away_fans_avg": 248
+    "away_fans_avg": 237
   },
   "context": {
-    "band": "파이널A 경쟁",
-    "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
+    "band": "ACL 진출권",
+    "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
     "tags": [
       "수비 안정",
       "실리 축구",
-      "무승부 체질"
+      "원정에 강한 팀",
+      "클린시트 다수",
+      "무승부 체질",
+      "한 골 승부사"
     ]
   },
   "profile": {

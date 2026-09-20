@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k41-sm.png",
   "home_url": "https://gimhaefc2008.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:17+09:00",
+  "generated_at": "2026-09-21T04:22:22+09:00",
   "table": {
     "rank": 17,
     "teams": 17,
-    "played": 24,
+    "played": 25,
     "win": 2,
     "draw": 7,
-    "loss": 15,
+    "loss": 16,
     "gf": 19,
-    "ga": 47,
-    "gd": -28,
+    "ga": 49,
+    "gd": -30,
     "points": 13,
-    "ppg": 0.54,
-    "remaining": 8,
+    "ppg": 0.52,
+    "remaining": 7,
     "scheduled": 32,
     "gap_to_leader": 40,
     "gap_to_cut": 28,
@@ -33,15 +33,15 @@
   },
   "splits": {
     "home": {
-      "played": 11,
+      "played": 12,
       "win": 0,
       "draw": 3,
-      "loss": 8,
+      "loss": 9,
       "gf": 9,
-      "ga": 26,
-      "gd": -17,
+      "ga": 28,
+      "gd": -19,
       "points": 3,
-      "ppg": 0.27
+      "ppg": 0.25
     },
     "away": {
       "played": 13,
@@ -80,17 +80,17 @@
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "last5": [
-      "D",
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "last10": [
-      "L",
       "W",
       "D",
       "D",
@@ -99,31 +99,32 @@
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 0,
-      "draw": 2,
-      "loss": 3,
-      "gf": 3,
-      "ga": 10,
-      "gd": -7,
-      "points": 2
+      "draw": 1,
+      "loss": 4,
+      "gf": 2,
+      "ga": 11,
+      "gd": -9,
+      "points": 1
     },
     "last10_record": {
       "played": 10,
       "win": 1,
       "draw": 4,
       "loss": 5,
-      "gf": 8,
-      "ga": 17,
+      "gf": 7,
+      "ga": 16,
       "gd": -9,
       "points": 7
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 1,
       "longest_unbeaten": 3,
       "longest_winless": 11,
@@ -131,10 +132,10 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.79,
+    "gf_per_game": 0.76,
     "ga_per_game": 1.96,
     "clean_sheets": 2,
-    "failed_to_score": 7,
+    "failed_to_score": 8,
     "both_scored": 15,
     "one_goal_games": 7,
     "biggest_win": {
@@ -162,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 15,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -346,11 +347,11 @@
         "round": 27,
         "rank": 17,
         "points": 13,
-        "played": 24,
-        "gd": -28
+        "played": 25,
+        "gd": -30
       }
     ],
-    "best_rank": 15,
+    "best_rank": 13,
     "worst_rank": 17,
     "first_half": {
       "played": 16,
@@ -364,15 +365,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 8,
+      "played": 9,
       "win": 0,
       "draw": 4,
-      "loss": 4,
+      "loss": 5,
       "gf": 6,
-      "ga": 14,
-      "gd": -8,
+      "ga": 16,
+      "gd": -10,
       "points": 4,
-      "ppg": 0.5
+      "ppg": 0.44
     }
   },
   "fixtures": [
@@ -615,6 +616,16 @@
       "gf": 0,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-20",
+      "venue": "H",
+      "opponent_id": "K40",
+      "opponent": "파주 프런티어",
+      "gf": 0,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -753,7 +764,8 @@
     "detail": "순위표 바닥. 내년을 위한 재건이 먼저 보이는 자리입니다.",
     "tags": [
       "득점 빈곤",
-      "수비 불안"
+      "수비 불안",
+      "원정에 강한 팀"
     ]
   },
   "profile": {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:15+09:00",
+  "generated_at": "2026-09-21T04:22:20+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -24,11 +24,11 @@
     "remaining": 8,
     "scheduled": 38,
     "gap_to_leader": 29,
-    "gap_to_cut": 6,
+    "gap_to_cut": 7,
     "cut_rank": 6,
-    "gap_above": 4,
+    "gap_above": 5,
     "gap_below": 1,
-    "above": "포항",
+    "above": "인천",
     "below": "부천"
   },
   "splits": {
@@ -168,21 +168,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 4,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 8,
+        "rank": 7,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 8,
+        "rank": 7,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -377,7 +377,7 @@
         "gd": -6
       }
     ],
-    "best_rank": 7,
+    "best_rank": 4,
     "worst_rank": 11,
     "first_half": {
       "played": 16,
@@ -839,7 +839,7 @@
     "total": 30692,
     "games": 14,
     "home_fans_avg": 1527,
-    "away_fans_avg": 228
+    "away_fans_avg": 219
   },
   "context": {
     "band": "강등 확정",

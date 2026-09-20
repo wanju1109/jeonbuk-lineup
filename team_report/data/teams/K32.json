@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:17+09:00",
+  "generated_at": "2026-09-21T04:22:22+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
-    "played": 25,
+    "played": 26,
     "win": 6,
     "draw": 4,
-    "loss": 15,
-    "gf": 25,
-    "ga": 46,
-    "gd": -21,
+    "loss": 16,
+    "gf": 27,
+    "ga": 49,
+    "gd": -22,
     "points": 22,
-    "ppg": 0.88,
-    "remaining": 7,
+    "ppg": 0.85,
+    "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 31,
     "gap_to_cut": 19,
@@ -33,15 +33,15 @@
   },
   "splits": {
     "home": {
-      "played": 15,
+      "played": 16,
       "win": 2,
       "draw": 2,
-      "loss": 11,
-      "gf": 15,
-      "ga": 30,
-      "gd": -15,
+      "loss": 12,
+      "gf": 17,
+      "ga": 33,
+      "gd": -16,
       "points": 8,
-      "ppg": 0.53
+      "ppg": 0.5
     },
     "away": {
       "played": 10,
@@ -81,17 +81,17 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "last5": [
       "L",
       "L",
-      "L",
       "W",
+      "L",
       "L"
     ],
     "last10": [
-      "W",
       "L",
       "W",
       "D",
@@ -100,6 +100,7 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "last5_record": {
@@ -107,24 +108,24 @@
       "win": 1,
       "draw": 0,
       "loss": 4,
-      "gf": 4,
+      "gf": 5,
       "ga": 9,
-      "gd": -5,
+      "gd": -4,
       "points": 3
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
+      "win": 2,
       "draw": 2,
-      "loss": 5,
+      "loss": 6,
       "gf": 10,
-      "ga": 18,
-      "gd": -8,
-      "points": 11
+      "ga": 20,
+      "gd": -10,
+      "points": 8
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 1,
       "longest_unbeaten": 3,
       "longest_winless": 6,
@@ -132,12 +133,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.0,
-    "ga_per_game": 1.84,
+    "gf_per_game": 1.04,
+    "ga_per_game": 1.88,
     "clean_sheets": 3,
     "failed_to_score": 6,
-    "both_scored": 16,
-    "one_goal_games": 10,
+    "both_scored": 17,
+    "one_goal_games": 11,
     "biggest_win": {
       "round": 1,
       "date": "2026-02-28",
@@ -347,8 +348,8 @@
         "round": 27,
         "rank": 15,
         "points": 22,
-        "played": 25,
-        "gd": -21
+        "played": 26,
+        "gd": -22
       }
     ],
     "best_rank": 1,
@@ -365,15 +366,15 @@
       "ppg": 0.88
     },
     "second_half": {
-      "played": 9,
+      "played": 10,
       "win": 2,
       "draw": 2,
-      "loss": 5,
-      "gf": 8,
-      "ga": 17,
-      "gd": -9,
+      "loss": 6,
+      "gf": 10,
+      "ga": 20,
+      "gd": -10,
       "points": 8,
-      "ppg": 0.89
+      "ppg": 0.8
     }
   },
   "fixtures": [
@@ -626,6 +627,16 @@
       "gf": 0,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-20",
+      "venue": "H",
+      "opponent_id": "K37",
+      "opponent": "충북 청주",
+      "gf": 2,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -756,7 +767,7 @@
         "points": 3
       }
     ],
-    "goal_share": 0.2
+    "goal_share": 0.185
   },
   "attendance": null,
   "context": {

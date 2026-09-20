@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:15+09:00",
+  "generated_at": "2026-09-21T04:22:20+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
@@ -24,10 +24,10 @@
     "remaining": 8,
     "scheduled": 38,
     "gap_to_leader": 30,
-    "gap_to_cut": 7,
+    "gap_to_cut": 8,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 18,
+    "gap_below": 17,
     "above": "김천",
     "below": "광주"
   },
@@ -835,15 +835,15 @@
     "goal_share": 0.323
   },
   "attendance": {
-    "avg": 6592,
-    "total": 112064,
+    "avg": 6611,
+    "total": 112388,
     "games": 17,
-    "home_fans_avg": 5520,
+    "home_fans_avg": 5534,
     "away_fans_avg": 569
   },
   "context": {
     "band": "파이널A 추격",
-    "detail": "6위와 7점 차. 상위 스플릿이 아직 사정권입니다.",
+    "detail": "6위와 8점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "침묵하는 공격",
       "무승부 체질"

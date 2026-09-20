@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:14+09:00",
+  "generated_at": "2026-09-21T04:22:19+09:00",
   "table": {
-    "rank": 3,
+    "rank": 4,
     "teams": 12,
-    "played": 29,
+    "played": 30,
     "win": 11,
-    "draw": 10,
+    "draw": 11,
     "loss": 8,
-    "gf": 36,
-    "ga": 26,
+    "gf": 38,
+    "ga": 28,
     "gd": 10,
-    "points": 43,
-    "ppg": 1.48,
-    "remaining": 9,
+    "points": 44,
+    "ppg": 1.47,
+    "remaining": 8,
     "scheduled": 38,
-    "gap_to_leader": 19,
+    "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 4,
-    "gap_below": 0,
-    "above": "울산",
-    "below": "제주"
+    "gap_above": 2,
+    "gap_below": 2,
+    "above": "제주",
+    "below": "강원"
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 7,
-      "draw": 2,
+      "draw": 3,
       "loss": 5,
-      "gf": 21,
-      "ga": 15,
+      "gf": 23,
+      "ga": 17,
       "gd": 6,
-      "points": 23,
-      "ppg": 1.64
+      "points": 24,
+      "ppg": 1.6
     },
     "away": {
       "played": 15,
@@ -85,17 +85,17 @@
       "D",
       "W",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
       "D",
-      "D",
       "W",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "L",
@@ -104,30 +104,31 @@
       "D",
       "W",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
       "draw": 3,
       "loss": 1,
-      "gf": 5,
-      "ga": 4,
+      "gf": 7,
+      "ga": 6,
       "gd": 1,
       "points": 6
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
-      "draw": 4,
+      "win": 2,
+      "draw": 5,
       "loss": 3,
       "gf": 11,
-      "ga": 10,
-      "gd": 1,
-      "points": 13
+      "ga": 12,
+      "gd": -1,
+      "points": 11
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 6,
@@ -136,11 +137,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.24,
-    "ga_per_game": 0.9,
+    "gf_per_game": 1.27,
+    "ga_per_game": 0.93,
     "clean_sheets": 13,
     "failed_to_score": 7,
-    "both_scored": 14,
+    "both_scored": 15,
     "one_goal_games": 12,
     "biggest_win": {
       "round": 12,
@@ -188,7 +189,7 @@
       },
       {
         "round": 4,
-        "rank": 7,
+        "rank": 6,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -370,9 +371,9 @@
       },
       {
         "round": 30,
-        "rank": 3,
-        "points": 43,
-        "played": 29,
+        "rank": 4,
+        "points": 44,
+        "played": 30,
         "gd": 10
       }
     ],
@@ -390,15 +391,15 @@
       "ppg": 1.62
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 4,
-      "draw": 5,
+      "draw": 6,
       "loss": 4,
-      "gf": 14,
-      "ga": 12,
+      "gf": 16,
+      "ga": 14,
       "gd": 2,
-      "points": 17,
-      "ppg": 1.31
+      "points": 18,
+      "ppg": 1.29
     }
   },
   "fixtures": [
@@ -691,6 +692,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 30,
+      "date": "2026-09-20",
+      "venue": "H",
+      "opponent_id": "K22",
+      "opponent": "광주 FC",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -821,19 +832,20 @@
         "points": 4
       }
     ],
-    "goal_share": 0.222
+    "goal_share": 0.211
   },
   "attendance": {
-    "avg": 16483,
-    "total": 230763,
-    "games": 14,
-    "home_fans_avg": 15282,
+    "avg": 16133,
+    "total": 242002,
+    "games": 15,
+    "home_fans_avg": 15013,
     "away_fans_avg": 2025
   },
   "context": {
-    "band": "ACL 진출권",
-    "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
+    "band": "파이널A 경쟁",
+    "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
+      "화력 우위",
       "리그 최고 수비",
       "클린시트 다수",
       "무승부 체질"

@@ -8,27 +8,27 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k37-sm.png",
   "home_url": "https://chfc.kr",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:16+09:00",
+  "generated_at": "2026-09-21T04:22:21+09:00",
   "table": {
-    "rank": 12,
+    "rank": 11,
     "teams": 17,
-    "played": 25,
-    "win": 4,
+    "played": 26,
+    "win": 5,
     "draw": 14,
     "loss": 7,
-    "gf": 28,
-    "ga": 39,
-    "gd": -11,
-    "points": 26,
-    "ppg": 1.04,
-    "remaining": 7,
+    "gf": 31,
+    "ga": 41,
+    "gd": -10,
+    "points": 29,
+    "ppg": 1.12,
+    "remaining": 6,
     "scheduled": 32,
-    "gap_to_leader": 27,
-    "gap_to_cut": 15,
+    "gap_to_leader": 24,
+    "gap_to_cut": 12,
     "cut_rank": 6,
-    "gap_above": 0,
+    "gap_above": 2,
     "gap_below": 0,
-    "above": "용인",
+    "above": "성남",
     "below": "파주"
   },
   "splits": {
@@ -44,15 +44,15 @@
       "ppg": 0.92
     },
     "away": {
-      "played": 12,
-      "win": 2,
+      "played": 13,
+      "win": 3,
       "draw": 8,
       "loss": 2,
-      "gf": 14,
-      "ga": 16,
-      "gd": -2,
-      "points": 14,
-      "ppg": 1.17
+      "gf": 17,
+      "ga": 18,
+      "gd": -1,
+      "points": 17,
+      "ppg": 1.31
     }
   },
   "form": {
@@ -81,17 +81,17 @@
       "D",
       "L",
       "L",
+      "W",
       "W"
     ],
     "last5": [
-      "W",
       "D",
       "L",
       "L",
+      "W",
       "W"
     ],
     "last10": [
-      "D",
       "W",
       "D",
       "D",
@@ -100,6 +100,7 @@
       "D",
       "L",
       "L",
+      "W",
       "W"
     ],
     "last5_record": {
@@ -107,45 +108,45 @@
       "win": 2,
       "draw": 1,
       "loss": 2,
-      "gf": 5,
-      "ga": 6,
+      "gf": 6,
+      "ga": 7,
       "gd": -1,
       "points": 7
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
-      "draw": 4,
+      "win": 4,
+      "draw": 3,
       "loss": 3,
-      "gf": 10,
-      "ga": 13,
-      "gd": -3,
-      "points": 13
+      "gf": 12,
+      "ga": 14,
+      "gd": -2,
+      "points": 15
     },
     "streaks": {
       "current_type": "W",
-      "current_len": 1,
-      "longest_win": 1,
+      "current_len": 2,
+      "longest_win": 2,
       "longest_unbeaten": 7,
       "longest_winless": 13,
       "longest_loss": 2
     }
   },
   "scoring": {
-    "gf_per_game": 1.12,
-    "ga_per_game": 1.56,
+    "gf_per_game": 1.19,
+    "ga_per_game": 1.58,
     "clean_sheets": 5,
     "failed_to_score": 5,
-    "both_scored": 18,
-    "one_goal_games": 7,
+    "both_scored": 19,
+    "one_goal_games": 8,
     "biggest_win": {
-      "round": 26,
-      "date": "2026-09-12",
+      "round": 27,
+      "date": "2026-09-20",
       "venue": "A",
-      "opponent_id": "K34",
-      "opponent": "충남 아산",
-      "gf": 1,
-      "ga": 0,
+      "opponent_id": "K32",
+      "opponent": "안산 그리너스",
+      "gf": 3,
+      "ga": 2,
       "result": "W"
     },
     "biggest_loss": {
@@ -163,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 13,
+        "rank": 15,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -345,13 +346,13 @@
       },
       {
         "round": 27,
-        "rank": 12,
-        "points": 26,
-        "played": 25,
-        "gd": -11
+        "rank": 11,
+        "points": 29,
+        "played": 26,
+        "gd": -10
       }
     ],
-    "best_rank": 12,
+    "best_rank": 11,
     "worst_rank": 15,
     "first_half": {
       "played": 16,
@@ -365,15 +366,15 @@
       "ppg": 0.88
     },
     "second_half": {
-      "played": 9,
-      "win": 3,
+      "played": 10,
+      "win": 4,
       "draw": 3,
       "loss": 3,
-      "gf": 9,
-      "ga": 12,
-      "gd": -3,
-      "points": 12,
-      "ppg": 1.33
+      "gf": 12,
+      "ga": 14,
+      "gd": -2,
+      "points": 15,
+      "ppg": 1.5
     }
   },
   "fixtures": [
@@ -626,6 +627,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-20",
+      "venue": "A",
+      "opponent_id": "K32",
+      "opponent": "안산 그리너스",
+      "gf": 3,
+      "ga": 2,
+      "result": "W"
     }
   ],
   "squad": {
@@ -756,7 +767,7 @@
         "points": 2
       }
     ],
-    "goal_share": 0.464
+    "goal_share": 0.419
   },
   "attendance": null,
   "context": {

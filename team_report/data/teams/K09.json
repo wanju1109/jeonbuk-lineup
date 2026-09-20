@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:14+09:00",
+  "generated_at": "2026-09-21T04:22:19+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
-    "played": 29,
+    "played": 30,
     "win": 19,
     "draw": 5,
-    "loss": 5,
-    "gf": 55,
-    "ga": 23,
-    "gd": 32,
+    "loss": 6,
+    "gf": 56,
+    "ga": 25,
+    "gd": 31,
     "points": 62,
-    "ppg": 2.14,
-    "remaining": 9,
+    "ppg": 2.07,
+    "remaining": 8,
     "scheduled": 38,
     "gap_to_leader": 0,
     "gap_to_cut": 0,
@@ -44,15 +44,15 @@
       "ppg": 2.0
     },
     "away": {
-      "played": 16,
+      "played": 17,
       "win": 11,
       "draw": 3,
-      "loss": 2,
-      "gf": 33,
-      "ga": 13,
-      "gd": 20,
+      "loss": 3,
+      "gf": 34,
+      "ga": 15,
+      "gd": 19,
       "points": 36,
-      "ppg": 2.25
+      "ppg": 2.12
     }
   },
   "form": {
@@ -85,17 +85,17 @@
       "W",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
       "W",
       "W",
-      "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "L",
       "D",
       "D",
       "W",
@@ -104,17 +104,18 @@
       "W",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 4,
+      "win": 3,
       "draw": 0,
-      "loss": 1,
+      "loss": 2,
       "gf": 9,
-      "ga": 4,
-      "gd": 5,
-      "points": 12
+      "ga": 6,
+      "gd": 3,
+      "points": 9
     },
     "last10_record": {
       "played": 10,
@@ -122,12 +123,12 @@
       "draw": 2,
       "loss": 2,
       "gf": 21,
-      "ga": 9,
-      "gd": 12,
+      "ga": 8,
+      "gd": 13,
       "points": 20
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 5,
       "longest_unbeaten": 7,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.9,
-    "ga_per_game": 0.79,
+    "gf_per_game": 1.87,
+    "ga_per_game": 0.83,
     "clean_sheets": 13,
     "failed_to_score": 6,
-    "both_scored": 14,
-    "one_goal_games": 15,
+    "both_scored": 15,
+    "one_goal_games": 16,
     "biggest_win": {
       "round": 24,
       "date": "2026-08-22",
@@ -372,8 +373,8 @@
         "round": 30,
         "rank": 1,
         "points": 62,
-        "played": 29,
-        "gd": 32
+        "played": 30,
+        "gd": 31
       }
     ],
     "best_rank": 1,
@@ -390,15 +391,15 @@
       "ppg": 2.19
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 8,
       "draw": 3,
-      "loss": 2,
-      "gf": 27,
-      "ga": 11,
-      "gd": 16,
+      "loss": 3,
+      "gf": 28,
+      "ga": 13,
+      "gd": 15,
       "points": 27,
-      "ppg": 2.08
+      "ppg": 1.93
     }
   },
   "fixtures": [
@@ -691,6 +692,16 @@
       "gf": 2,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 30,
+      "date": "2026-09-20",
+      "venue": "A",
+      "opponent_id": "K03",
+      "opponent": "포항 스틸러스",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -821,18 +832,18 @@
         "points": 6
       }
     ],
-    "goal_share": 0.218
+    "goal_share": 0.214
   },
   "attendance": {
     "avg": 21993,
     "total": 285903,
     "games": 13,
     "home_fans_avg": 19692,
-    "away_fans_avg": 1391
+    "away_fans_avg": 1357
   },
   "context": {
     "band": "우승 경쟁",
-    "detail": "리그를 이끄는 자리에서 남은 9경기를 관리하면 트로피가 손에 들어옵니다.",
+    "detail": "리그를 이끄는 자리에서 남은 8경기를 관리하면 트로피가 손에 들어옵니다.",
     "tags": [
       "리그 최상급 화력",
       "리그 최고 수비",

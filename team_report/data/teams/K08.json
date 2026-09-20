@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:16+09:00",
+  "generated_at": "2026-09-21T04:22:21+09:00",
   "table": {
     "rank": 10,
     "teams": 17,
-    "played": 24,
+    "played": 25,
     "win": 7,
-    "draw": 9,
+    "draw": 10,
     "loss": 8,
-    "gf": 26,
-    "ga": 28,
+    "gf": 28,
+    "ga": 30,
     "gd": -2,
-    "points": 30,
-    "ppg": 1.25,
-    "remaining": 8,
+    "points": 31,
+    "ppg": 1.24,
+    "remaining": 7,
     "scheduled": 32,
-    "gap_to_leader": 23,
-    "gap_to_cut": 11,
+    "gap_to_leader": 22,
+    "gap_to_cut": 10,
     "cut_rank": 6,
     "gap_above": 3,
-    "gap_below": 4,
+    "gap_below": 2,
     "above": "경남",
-    "below": "용인"
+    "below": "충북청주"
   },
   "splits": {
     "home": {
-      "played": 11,
+      "played": 12,
       "win": 3,
-      "draw": 6,
+      "draw": 7,
       "loss": 2,
-      "gf": 11,
-      "ga": 10,
+      "gf": 13,
+      "ga": 12,
       "gd": 1,
-      "points": 15,
-      "ppg": 1.36
+      "points": 16,
+      "ppg": 1.33
     },
     "away": {
       "played": 13,
@@ -80,18 +80,18 @@
       "W",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "L",
       "W",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
       "L",
-      "L",
       "W",
       "L",
       "W",
@@ -99,30 +99,31 @@
       "W",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 2,
-      "draw": 1,
-      "loss": 2,
-      "gf": 6,
+      "draw": 2,
+      "loss": 1,
+      "gf": 7,
       "ga": 6,
-      "gd": 0,
-      "points": 7
+      "gd": 1,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
       "win": 4,
-      "draw": 1,
-      "loss": 5,
-      "gf": 12,
-      "ga": 14,
-      "gd": -2,
-      "points": 13
+      "draw": 2,
+      "loss": 4,
+      "gf": 14,
+      "ga": 15,
+      "gd": -1,
+      "points": 14
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 5,
@@ -131,11 +132,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.08,
-    "ga_per_game": 1.17,
+    "gf_per_game": 1.12,
+    "ga_per_game": 1.2,
     "clean_sheets": 4,
     "failed_to_score": 8,
-    "both_scored": 15,
+    "both_scored": 16,
     "one_goal_games": 12,
     "biggest_win": {
       "round": 6,
@@ -162,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 10,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -246,7 +247,7 @@
       },
       {
         "round": 13,
-        "rank": 11,
+        "rank": 10,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -345,8 +346,8 @@
       {
         "round": 27,
         "rank": 10,
-        "points": 30,
-        "played": 24,
+        "points": 31,
+        "played": 25,
         "gd": -2
       }
     ],
@@ -364,15 +365,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 8,
+      "played": 9,
       "win": 4,
-      "draw": 1,
+      "draw": 2,
       "loss": 3,
-      "gf": 10,
-      "ga": 10,
+      "gf": 12,
+      "ga": 12,
       "gd": 0,
-      "points": 13,
-      "ppg": 1.62
+      "points": 14,
+      "ppg": 1.56
     }
   },
   "fixtures": [
@@ -615,6 +616,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-20",
+      "venue": "H",
+      "opponent_id": "K39",
+      "opponent": "화성 FC",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -745,12 +756,12 @@
         "points": 2
       }
     ],
-    "goal_share": 0.115
+    "goal_share": 0.107
   },
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 11점 차. 남은 8경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 10점 차. 남은 7경기면 아직 늦지 않았습니다.",
     "tags": [
       "실리 축구",
       "무승부 체질",

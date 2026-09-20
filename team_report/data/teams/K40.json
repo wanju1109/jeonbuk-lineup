@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-09-20T04:17:16+09:00",
+  "generated_at": "2026-09-21T04:22:21+09:00",
   "table": {
-    "rank": 13,
+    "rank": 12,
     "teams": 17,
-    "played": 24,
-    "win": 7,
+    "played": 25,
+    "win": 8,
     "draw": 5,
     "loss": 12,
-    "gf": 22,
+    "gf": 24,
     "ga": 28,
-    "gd": -6,
-    "points": 26,
-    "ppg": 1.08,
-    "remaining": 8,
+    "gd": -4,
+    "points": 29,
+    "ppg": 1.16,
+    "remaining": 7,
     "scheduled": 32,
-    "gap_to_leader": 27,
-    "gap_to_cut": 15,
+    "gap_to_leader": 24,
+    "gap_to_cut": 12,
     "cut_rank": 6,
     "gap_above": 0,
-    "gap_below": 3,
+    "gap_below": 2,
     "above": "충북청주",
-    "below": "천안"
+    "below": "용인"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 0.92
     },
     "away": {
-      "played": 12,
-      "win": 4,
+      "played": 13,
+      "win": 5,
       "draw": 3,
       "loss": 5,
-      "gf": 12,
+      "gf": 14,
       "ga": 15,
-      "gd": -3,
-      "points": 15,
-      "ppg": 1.25
+      "gd": -1,
+      "points": 18,
+      "ppg": 1.38
     }
   },
   "form": {
@@ -80,17 +80,17 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "L",
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "L",
       "W",
       "D",
       "L",
@@ -99,30 +99,31 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
+      "win": 2,
       "draw": 2,
-      "loss": 2,
-      "gf": 3,
-      "ga": 4,
-      "gd": -1,
-      "points": 5
+      "loss": 1,
+      "gf": 5,
+      "ga": 3,
+      "gd": 2,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
+      "win": 4,
       "draw": 3,
-      "loss": 4,
-      "gf": 7,
-      "ga": 8,
-      "gd": -1,
-      "points": 12
+      "loss": 3,
+      "gf": 9,
+      "ga": 7,
+      "gd": 2,
+      "points": 15
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 2,
@@ -131,20 +132,20 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.92,
-    "ga_per_game": 1.17,
-    "clean_sheets": 6,
+    "gf_per_game": 0.96,
+    "ga_per_game": 1.12,
+    "clean_sheets": 7,
     "failed_to_score": 11,
     "both_scored": 11,
     "one_goal_games": 15,
     "biggest_win": {
-      "round": 6,
-      "date": "2026-04-05",
-      "venue": "H",
+      "round": 27,
+      "date": "2026-09-20",
+      "venue": "A",
       "opponent_id": "K41",
       "opponent": "김해 FC",
-      "gf": 3,
-      "ga": 1,
+      "gf": 2,
+      "ga": 0,
       "result": "W"
     },
     "biggest_loss": {
@@ -176,7 +177,7 @@
       },
       {
         "round": 3,
-        "rank": 10,
+        "rank": 11,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -190,14 +191,14 @@
       },
       {
         "round": 5,
-        "rank": 7,
+        "rank": 8,
         "points": 6,
         "played": 5,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 9,
         "played": 6,
         "gd": 2
@@ -344,10 +345,10 @@
       },
       {
         "round": 27,
-        "rank": 13,
-        "points": 26,
-        "played": 24,
-        "gd": -6
+        "rank": 12,
+        "points": 29,
+        "played": 25,
+        "gd": -4
       }
     ],
     "best_rank": 5,
@@ -364,15 +365,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 8,
-      "win": 2,
+      "played": 9,
+      "win": 3,
       "draw": 3,
       "loss": 3,
-      "gf": 5,
+      "gf": 7,
       "ga": 6,
-      "gd": -1,
-      "points": 9,
-      "ppg": 1.12
+      "gd": 1,
+      "points": 12,
+      "ppg": 1.33
     }
   },
   "fixtures": [
@@ -615,6 +616,16 @@
       "gf": 0,
       "ga": 0,
       "result": "D"
+    },
+    {
+      "round": 27,
+      "date": "2026-09-20",
+      "venue": "A",
+      "opponent_id": "K41",
+      "opponent": "김해 FC",
+      "gf": 2,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -745,7 +756,7 @@
         "points": 2
       }
     ],
-    "goal_share": 0.318
+    "goal_share": 0.292
   },
   "attendance": null,
   "context": {
@@ -753,6 +764,7 @@
     "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
       "득점 빈곤",
+      "수비 안정",
       "실리 축구",
       "침묵하는 공격",
       "한 골 승부사"
