@@ -1,6 +1,6 @@
 {
   "source": "https://www.kleague.com/getScheduleList.do",
-  "fetched_at": "2026-09-19T18:42:13.208570+00:00",
+  "fetched_at": "2026-09-20T18:56:17.224131+00:00",
   "requests": [
     {
       "year": 2023,
@@ -511,168 +511,168 @@
       "league": 1,
       "month": 1,
       "sha256": "c05461ff30280c1f10bd8a6baf8f045b22860c588c697377bdb6c0d92af29065",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 2,
       "sha256": "febccf0c373fcb9d19e5c8e856705d7ec4ed93bd5137eeebdff457ae0f027e6f",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 3,
       "sha256": "4387545ac1d0f74a638454c3153502ab4f45818987ce8557ceec3a4c61c7a179",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 4,
       "sha256": "27ebd565b5f42b6ec959736f8b23935fb8c668480cad5a49499b2cd9cb144e77",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 5,
       "sha256": "3c9d2b0ef6963fe3a8c21e701a0f0a765715a0aa084c1de12acfa08983801b54",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 6,
       "sha256": "3d0e6bfd114abab3fed66fb8413f49b4654e2a10f1724ea97574fe642f56e2ca",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 7,
       "sha256": "93fda68d0108871d1a1776b6c3885743830985cc08f1fc939b33db70a3eda878",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 8,
       "sha256": "35212a46fb5a74e064e09534a2f2b7d7885e175c1b5aec42ae67fb2682c78ff4",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 9,
-      "sha256": "e04165fbea2887b9319f5d45e7dab884519595d4fc2d0e88822e65b5f8fae5c9",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "sha256": "7c7244f4668b3ceb0c800043ade5f8aa43884387fa294b6b419af4adac02f46c",
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 10,
       "sha256": "fbeba2a8f27dc99f571481cfafbe00f7bb56fecf11a47527344a8f1e1433c818",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 11,
       "sha256": "1ee4c437f4c2a6d87b4fde742e46b8a0189e5ac79ca82eace12950b32f3f85e1",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 1,
       "month": 12,
       "sha256": "1ee4c437f4c2a6d87b4fde742e46b8a0189e5ac79ca82eace12950b32f3f85e1",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 1,
       "sha256": "0b3b7fe60c3f0bafc3c55260c3c9e0622f22484c412a3980a0583a7246390769",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 2,
       "sha256": "acac198f1f686a7f40d4e93e8236d81f2fbc1b8378372e406425e94e31b136ac",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 3,
       "sha256": "bccf2f8eb328b1cd0dbf88be87434ba7be59773032ba5a2edcfdcb51cf5c05ca",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 4,
       "sha256": "77b75ad8e068cd9d18eda6273ab2e45583c88859b7157e06808cd71b02d56888",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 5,
       "sha256": "aa357fe196db5874826d3c7cc4612dacc89e1b526e0b860722d1d41f04f9340f",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 6,
       "sha256": "65dab661eac1a8d148eb0290aa607e440f24a3a634265a1c23257edf7aef1da8",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 7,
       "sha256": "3802fecf73883530086f7cef6c077a8910e916b4b9d180ad00c35301a7dfce27",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 8,
       "sha256": "c611567b2732f5cd48d2704177c53570796d3a4d664fa3b0da06e1d703fa271d",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 9,
-      "sha256": "4a733697d6e80f588254df0e15ae5344e883dc0eff2e952d85c509c3a9b05ab2",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "sha256": "c5166d79cdf2ad1562f87fd413057b504e203ec0a3214aa3b4a1cd55f5cc986e",
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 10,
       "sha256": "28a832b2385ac609da1377faa7ba2f8f08401eb08330a5a43453a6ec80a47506",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 11,
       "sha256": "9ba5b9d31a154833e4052857a7518ecef1743a1664a65fbc98b4de3a89629cb0",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     },
     {
       "year": 2026,
       "league": 2,
       "month": 12,
       "sha256": "78adb98a0ba440258841f1e0fcc691fa7c4871245a498efb5c555994bf508a80",
-      "fetched_at": "2026-09-19T18:42:13.208570+00:00"
+      "fetched_at": "2026-09-20T18:56:17.224131+00:00"
     }
   ],
   "matches": [
@@ -31579,6 +31579,142 @@
       "score": [
         1,
         0
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K1-177",
+      "season": 2026,
+      "league": "K1",
+      "round": 30,
+      "date": "2026-09-20",
+      "time": "16:30",
+      "home": "강원",
+      "away": "제주",
+      "home_id": "K21",
+      "away_id": "K04",
+      "score": [
+        0,
+        1
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K1-178",
+      "season": 2026,
+      "league": "K1",
+      "round": 30,
+      "date": "2026-09-20",
+      "time": "16:30",
+      "home": "전북",
+      "away": "광주",
+      "home_id": "K05",
+      "away_id": "K22",
+      "score": [
+        2,
+        2
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K1-179",
+      "season": 2026,
+      "league": "K1",
+      "round": 30,
+      "date": "2026-09-20",
+      "time": "19:00",
+      "home": "인천",
+      "away": "대전",
+      "home_id": "K18",
+      "away_id": "K10",
+      "score": [
+        1,
+        1
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K1-180",
+      "season": 2026,
+      "league": "K1",
+      "round": 30,
+      "date": "2026-09-20",
+      "time": "19:00",
+      "home": "포항",
+      "away": "서울",
+      "home_id": "K03",
+      "away_id": "K09",
+      "score": [
+        2,
+        1
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K2-213",
+      "season": 2026,
+      "league": "K2",
+      "round": 27,
+      "date": "2026-09-20",
+      "time": "16:30",
+      "home": "안산",
+      "away": "충북청주",
+      "home_id": "K32",
+      "away_id": "K37",
+      "score": [
+        2,
+        3
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K2-214",
+      "season": 2026,
+      "league": "K2",
+      "round": 27,
+      "date": "2026-09-20",
+      "time": "16:30",
+      "home": "용인",
+      "away": "경남",
+      "home_id": "K42",
+      "away_id": "K20",
+      "score": [
+        0,
+        0
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K2-215",
+      "season": 2026,
+      "league": "K2",
+      "round": 27,
+      "date": "2026-09-20",
+      "time": "19:00",
+      "home": "김해",
+      "away": "파주",
+      "home_id": "K41",
+      "away_id": "K40",
+      "score": [
+        0,
+        2
+      ],
+      "finished": true
+    },
+    {
+      "id": "2026-K2-216",
+      "season": 2026,
+      "league": "K2",
+      "round": 27,
+      "date": "2026-09-20",
+      "time": "19:00",
+      "home": "성남",
+      "away": "화성",
+      "home_id": "K08",
+      "away_id": "K39",
+      "score": [
+        2,
+        2
       ],
       "finished": true
     }
