@@ -302,7 +302,11 @@ def _event_abs_sec(e: dict) -> int:
 
 
 def enrich_sheet_goals_from_chalk(events: list, players: list | None = None) -> list:
-    """Copy nearby shot telemetry / AST onto match_sheet GL rows."""
+    """Attach chalk shot/AST data to match_sheet GLs.
+
+    When a nearby ST/RCV exists for the same scorer, promote that chalk row to GL
+    and drop the sheet stub so xG/shots are not double-counted.
+    """
     names: dict[str, str] = {}
     for p in players or []:
         if not isinstance(p, dict):
@@ -311,22 +315,22 @@ def enrich_sheet_goals_from_chalk(events: list, players: list | None = None) -> 
         nm = str(p.get("NAME") or p.get("name") or "").strip()
         if pid and nm:
             names[pid] = nm
-    out = []
-    evs = events if isinstance(events, list) else []
+    evs = [dict(e) if isinstance(e, dict) else e for e in (events or [])]
+    promote_seq: set[int] = set()
+    drop_sheet_seq: set[int] = set()
+    patches: dict[int, dict] = {}
+
     for e in evs:
         if not isinstance(e, dict):
-            out.append(e)
             continue
-        row = dict(e)
-        if row.get("TYPE_DETAIL_CD") != "GL" or row.get("source") != "match_sheet":
-            out.append(row)
+        if e.get("TYPE_DETAIL_CD") != "GL" or e.get("source") != "match_sheet":
             continue
-        pid = str(row.get("PLAYER_ID") or "")
+        pid = str(e.get("PLAYER_ID") or "")
         try:
-            period = int(row.get("PERIOD_ID") or 1)
+            period = int(e.get("PERIOD_ID") or 1)
         except (TypeError, ValueError):
             period = 1
-        gabs = _event_abs_sec(row)
+        gabs = _event_abs_sec(e)
         best_st = None
         best_st_dist = 10**9
         best_ast = None
@@ -354,14 +358,47 @@ def enrich_sheet_goals_from_chalk(events: list, players: list | None = None) -> 
                     best_st_dist = dist
             if (
                 other.get("TYPE_DETAIL_CD") == "AST"
-                and str(other.get("TEAM_ID") or "") == str(row.get("TEAM_ID") or "")
+                and str(other.get("TEAM_ID") or "") == str(e.get("TEAM_ID") or "")
             ):
                 if dist < best_ast_dist:
                     best_ast = other
                     best_ast_dist = dist
+
+        sheet_seq = e.get("SEQ")
+        if best_st is not None and best_st.get("SEQ") is not None:
+            st_seq = best_st.get("SEQ")
+            try:
+                st_seq_i = int(st_seq)
+                sheet_seq_i = int(sheet_seq) if sheet_seq is not None else None
+            except (TypeError, ValueError):
+                st_seq_i = None
+                sheet_seq_i = None
+            if st_seq_i is not None:
+                patch = {
+                    "TYPE_CD": "ST",
+                    "TYPE_DETAIL_CD": "GL",
+                    "OWN_GOAL_CODE": e.get("OWN_GOAL_CODE") or "N",
+                    "source": "promoted_rcv",
+                    "sheet_label": e.get("sheet_label"),
+                    "sheet_minute": e.get("sheet_minute"),
+                }
+                if e.get("assist_player_id"):
+                    patch["assist_player_id"] = e.get("assist_player_id")
+                    patch["assist_name"] = e.get("assist_name")
+                elif best_ast is not None:
+                    aid = str(best_ast.get("PLAYER_ID") or "")
+                    if aid:
+                        patch["assist_player_id"] = aid
+                        patch["assist_name"] = names.get(aid) or e.get("assist_name")
+                patches[st_seq_i] = patch
+                promote_seq.add(st_seq_i)
+                if sheet_seq_i is not None:
+                    drop_sheet_seq.add(sheet_seq_i)
+                continue
+
         if best_st is not None:
-            if row.get("EXPECTED_GOAL") in (None, ""):
-                row["EXPECTED_GOAL"] = best_st.get("EXPECTED_GOAL")
+            if e.get("EXPECTED_GOAL") in (None, ""):
+                e["EXPECTED_GOAL"] = best_st.get("EXPECTED_GOAL")
             for key in (
                 "START_POINT_X",
                 "START_POINT_Y",
@@ -370,18 +407,44 @@ def enrich_sheet_goals_from_chalk(events: list, players: list | None = None) -> 
                 "SHOT_GOALPOST_SITE",
                 "PA_AREA_YN_CD",
                 "EVENT_BEPRO",
+                "MIN_TIME",
+                "SEC_TIME",
             ):
-                if row.get(key) in (None, "") and best_st.get(key) not in (None, ""):
-                    row[key] = best_st.get(key)
-            if row.get("back_no") in (None, "") and best_st.get("back_no") not in (None, ""):
-                row["back_no"] = best_st.get("back_no")
-        if best_ast is not None and not row.get("assist_player_id"):
+                if e.get(key) in (None, "") and best_st.get(key) not in (None, ""):
+                    e[key] = best_st.get(key)
+                elif key in ("MIN_TIME", "SEC_TIME") and best_st.get(key) is not None:
+                    e[key] = best_st.get(key)
+            if e.get("back_no") in (None, "") and best_st.get("back_no") not in (None, ""):
+                e["back_no"] = best_st.get("back_no")
+        if best_ast is not None and not e.get("assist_player_id"):
             aid = str(best_ast.get("PLAYER_ID") or "")
             if aid:
-                row["assist_player_id"] = aid
-                if not row.get("assist_name"):
-                    row["assist_name"] = names.get(aid) or None
-        out.append(row)
+                e["assist_player_id"] = aid
+                if not e.get("assist_name"):
+                    e["assist_name"] = names.get(aid) or None
+
+    out = []
+    for e in evs:
+        if not isinstance(e, dict):
+            out.append(e)
+            continue
+        try:
+            seq_i = int(e.get("SEQ")) if e.get("SEQ") is not None else None
+        except (TypeError, ValueError):
+            seq_i = None
+        if (
+            seq_i is not None
+            and e.get("TYPE_DETAIL_CD") == "GL"
+            and e.get("source") == "match_sheet"
+            and seq_i in drop_sheet_seq
+        ):
+            continue
+        if seq_i is not None and seq_i in promote_seq:
+            row = dict(e)
+            row.update(patches.get(seq_i) or {})
+            out.append(row)
+            continue
+        out.append(e)
     return out
 
 
