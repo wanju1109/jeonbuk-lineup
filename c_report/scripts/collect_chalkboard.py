@@ -281,6 +281,8 @@ def merge_sheet_goals_into_events(
             ):
                 matched["MIN_TIME"] = abs_min
                 matched["sheet_minute"] = sheet_min
+            if is_own_goal_row(row):
+                matched["OWN_GOAL_CODE"] = "Y"
             assist_id = str(row.get("inPlayerId") or "").strip()
             if assist_id and not matched.get("assist_player_id"):
                 matched["assist_player_id"] = assist_id
