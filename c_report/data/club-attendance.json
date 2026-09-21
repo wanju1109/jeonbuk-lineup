@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-20",
+  "as_of": "2026-09-21",
   "year": "2026",
   "league": "K리그1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -20,10 +20,10 @@
     {
       "name": "전북",
       "total": 242002,
-      "away_at_home": 16812,
+      "away_at_home": 17237,
       "games": 15,
       "avg": 16133,
-      "home_fans_avg": 15013,
+      "home_fans_avg": 14984,
       "away_fans_total": 30371,
       "away_games": 15,
       "away_fans_avg": 2025,
@@ -45,11 +45,11 @@
     },
     {
       "name": "인천",
-      "total": 147786,
+      "total": 147986,
       "away_at_home": 17602,
       "games": 15,
-      "avg": 9852,
-      "home_fans_avg": 8679,
+      "avg": 9866,
+      "home_fans_avg": 8692,
       "away_fans_total": 20262,
       "away_games": 14,
       "away_fans_avg": 1447,
@@ -66,8 +66,8 @@
       "away_fans_total": 12232,
       "away_games": 15,
       "away_fans_avg": 815,
-      "away_stadium_total": 130418,
-      "away_stadium_avg": 8695
+      "away_stadium_total": 130618,
+      "away_stadium_avg": 8708
     },
     {
       "name": "안양",
@@ -97,11 +97,11 @@
     },
     {
       "name": "부천",
-      "total": 112388,
+      "total": 112064,
       "away_at_home": 18308,
       "games": 17,
-      "avg": 6611,
-      "home_fans_avg": 5534,
+      "avg": 6592,
+      "home_fans_avg": 5515,
       "away_fans_total": 7398,
       "away_games": 13,
       "away_fans_avg": 569,
@@ -141,11 +141,11 @@
       "games": 16,
       "avg": 3185,
       "home_fans_avg": 2642,
-      "away_fans_total": 3948,
-      "away_games": 13,
-      "away_fans_avg": 304,
-      "away_stadium_total": 104559,
-      "away_stadium_avg": 8043
+      "away_fans_total": 4373,
+      "away_games": 14,
+      "away_fans_avg": 312,
+      "away_stadium_total": 115798,
+      "away_stadium_avg": 8271
     },
     {
       "name": "김천",
@@ -157,8 +157,8 @@
       "away_fans_total": 3497,
       "away_games": 16,
       "away_fans_avg": 219,
-      "away_stadium_total": 132358,
-      "away_stadium_avg": 8272
+      "away_stadium_total": 132034,
+      "away_stadium_avg": 8252
     }
   ]
 }

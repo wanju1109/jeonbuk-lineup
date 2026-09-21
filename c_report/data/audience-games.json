@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T17:47:56.956784+00:00",
+  "updated_at": "2026-09-21T19:49:08.406744+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -546,8 +546,8 @@
       "score": "2:2",
       "venue": "전주 월드컵 경기장",
       "attendance": 11239,
-      "attendance_home": 11239,
-      "attendance_away": 0,
+      "attendance_home": 10814,
+      "attendance_away": 425,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -775,6 +775,20 @@
       "weekday": "주말",
       "meet_seq": 1
     },
+    "179": {
+      "game_id": "179",
+      "year": "2026",
+      "date": "2026-09-20",
+      "home": "인천",
+      "away": "대전",
+      "score": "1:1",
+      "venue": "인천 축구 전용경기장",
+      "attendance": 9312,
+      "attendance_home": 8378,
+      "attendance_away": 934,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
     "137": {
       "game_id": "137",
       "year": "2026",
@@ -800,20 +814,6 @@
       "attendance": 9218,
       "attendance_home": 6796,
       "attendance_away": 2422,
-      "weekday": "주말",
-      "meet_seq": 1
-    },
-    "179": {
-      "game_id": "179",
-      "year": "2026",
-      "date": "2026-09-20",
-      "home": "인천",
-      "away": "대전",
-      "score": "1:1",
-      "venue": "인천 축구 전용경기장",
-      "attendance": 9112,
-      "attendance_home": 8178,
-      "attendance_away": 934,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -1741,20 +1741,6 @@
       "weekday": "주말",
       "meet_seq": 1
     },
-    "175": {
-      "game_id": "175",
-      "year": "2026",
-      "date": "2026-09-19",
-      "home": "부천",
-      "away": "김천",
-      "score": "0:2",
-      "venue": "부천 종합 운동장",
-      "attendance": 4926,
-      "attendance_home": 4844,
-      "attendance_away": 82,
-      "weekday": "주말",
-      "meet_seq": 1
-    },
     "125": {
       "game_id": "125",
       "year": "2026",
@@ -1795,6 +1781,20 @@
       "attendance_home": 4460,
       "attendance_away": 158,
       "weekday": "-",
+      "meet_seq": 1
+    },
+    "175": {
+      "game_id": "175",
+      "year": "2026",
+      "date": "2026-09-19",
+      "home": "부천",
+      "away": "김천",
+      "score": "0:2",
+      "venue": "부천 종합 운동장",
+      "attendance": 4602,
+      "attendance_home": 4520,
+      "attendance_away": 82,
+      "weekday": "주말",
       "meet_seq": 1
     },
     "148": {
