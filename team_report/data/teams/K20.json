@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-09-21T04:22:21+09:00",
+  "generated_at": "2026-09-22T05:59:26+09:00",
   "table": {
     "rank": 9,
     "teams": 17,
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 14,
+        "rank": 15,
         "points": 0,
         "played": 1,
         "gd": -3

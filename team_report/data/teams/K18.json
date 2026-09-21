@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-09-21T04:22:20+09:00",
+  "generated_at": "2026-09-22T05:59:25+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -824,10 +824,10 @@
     "goal_share": 0.333
   },
   "attendance": {
-    "avg": 9852,
-    "total": 147786,
+    "avg": 9866,
+    "total": 147986,
     "games": 15,
-    "home_fans_avg": 8679,
+    "home_fans_avg": 8692,
     "away_fans_avg": 1447
   },
   "context": {

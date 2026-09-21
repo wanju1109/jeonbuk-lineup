@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-09-21T04:22:20+09:00",
+  "generated_at": "2026-09-22T05:59:25+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -168,21 +168,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 6,
+        "rank": 4,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 8,
+        "rank": 7,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 8,
+        "rank": 7,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -217,7 +217,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
