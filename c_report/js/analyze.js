@@ -99,6 +99,19 @@ const Analyze = (() => {
     return p.NAME || p.name || fallback;
   }
 
+  function isOwnGoal(e) {
+    return String(e && e.OWN_GOAL_CODE ? e.OWN_GOAL_CODE : "").toUpperCase() === "Y";
+  }
+
+  function scoringTeamId(e, homeId, awayId) {
+    if (e && e.scoring_team_id) return e.scoring_team_id;
+    const tid = e && e.TEAM_ID;
+    if (!isOwnGoal(e)) return tid;
+    if (tid === homeId) return awayId;
+    if (tid === awayId) return homeId;
+    return tid;
+  }
+
   function teamStats(events, homeId, awayId) {
     const blank = () => ({
       shots: 0,
@@ -121,13 +134,17 @@ const Analyze = (() => {
     const out = { [homeId]: blank(), [awayId]: blank() };
 
     for (const e of events) {
+      const own = isOwnGoal(e);
+      const d = e.TYPE_DETAIL_CD;
+      if (d === "GL") {
+        const sid = scoringTeamId(e, homeId, awayId);
+        if (out[sid]) out[sid].goals += 1;
+      }
       const row = out[e.TEAM_ID];
       if (!row) continue;
-      const d = e.TYPE_DETAIL_CD;
-      if (e.TYPE_CD === "ST") {
+      if (e.TYPE_CD === "ST" && !own) {
         row.shots += 1;
         row.xg += Number(e.EXPECTED_GOAL || 0);
-        if (d === "GL") row.goals += 1;
       }
       if (e.TYPE_CD === "PS") {
         row.passes += 1;
@@ -146,8 +163,10 @@ const Analyze = (() => {
     }
 
     // Recompute SOT more reliably: goals + shots with goalpost site and not missed/blocked
+    // Own goals are credited to the opponent only; skip defender shot/xG/SOT distortion.
     for (const teamId of [homeId, awayId]) {
       out[teamId].sot = events.filter((e) => {
+        if (isOwnGoal(e)) return false;
         if (e.TEAM_ID !== teamId || e.TYPE_CD !== "ST") return false;
         if (e.TYPE_DETAIL_CD === "GL") return true;
         if (e.TYPE_DETAIL_CD === "MST" || e.TYPE_DETAIL_CD === "BT" || e.TYPE_DETAIL_CD === "STB") return false;
@@ -182,13 +201,17 @@ const Analyze = (() => {
     };
     for (const e of events) {
       const period = Number(e.PERIOD_ID || 1) <= 1 ? 1 : 2;
+      const own = isOwnGoal(e);
+      const d = e.TYPE_DETAIL_CD;
+      if (d === "GL") {
+        const sid = scoringTeamId(e, homeId, awayId);
+        if (out[period][sid]) out[period][sid].goals += 1;
+      }
       const row = out[period][e.TEAM_ID];
       if (!row) continue;
-      const d = e.TYPE_DETAIL_CD;
-      if (e.TYPE_CD === "ST") {
+      if (e.TYPE_CD === "ST" && !own) {
         row.shots += 1;
         row.xg += Number(e.EXPECTED_GOAL || 0);
-        if (d === "GL") row.goals += 1;
         if (d === "GL") row.sot += 1;
         else if (d !== "MST" && d !== "BT" && d !== "STB" && e.SHOT_GOALPOST_SITE) row.sot += 1;
       }
@@ -222,13 +245,21 @@ const Analyze = (() => {
     const after = { [homeId]: { xg: 0, shots: 0, goals: 0 }, [awayId]: { xg: 0, shots: 0, goals: 0 } };
 
     for (const e of events) {
-      if (e.TYPE_CD !== "ST") continue;
+      const own = isOwnGoal(e);
+      const isGoal = e.TYPE_DETAIL_CD === "GL";
+      if (e.TYPE_CD !== "ST" && !isGoal) continue;
       const bucket = absSeconds(e) < t0 ? before : after;
-      const row = bucket[e.TEAM_ID];
-      if (!row) continue;
-      row.shots += 1;
-      row.xg += Number(e.EXPECTED_GOAL || 0);
-      if (e.TYPE_DETAIL_CD === "GL") row.goals += 1;
+      if (isGoal) {
+        const sid = scoringTeamId(e, homeId, awayId);
+        if (bucket[sid]) bucket[sid].goals += 1;
+      }
+      if (e.TYPE_CD === "ST" && !own) {
+        const row = bucket[e.TEAM_ID];
+        if (row) {
+          row.shots += 1;
+          row.xg += Number(e.EXPECTED_GOAL || 0);
+        }
+      }
     }
     for (const side of [before, after]) {
       for (const id of [homeId, awayId]) {
@@ -236,7 +267,7 @@ const Analyze = (() => {
       }
     }
 
-    const scorerSide = first.TEAM_ID === homeId ? "home" : "away";
+    const scorerSide = scoringTeamId(first, homeId, awayId) === homeId ? "home" : "away";
     return {
       hasFirstGoal: true,
       firstGoal: first,
@@ -1668,6 +1699,8 @@ const Analyze = (() => {
     formatClock,
     playerMap,
     nameOf,
+    isOwnGoal,
+    scoringTeamId,
     teamStats,
     goals,
     periodStats,

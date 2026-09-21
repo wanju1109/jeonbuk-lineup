@@ -1217,10 +1217,12 @@
     box.innerHTML = goalList
       .map((g, i) => {
         const nm = Analyze.nameOf(pmap, g.PLAYER_ID);
-        const isHome = g.TEAM_ID === meta.home.team_id;
+        const scoringId = Analyze.scoringTeamId(g, meta.home.team_id, meta.away.team_id);
+        const isHome = scoringId === meta.home.team_id;
         const side = isHome ? "home" : "away";
         const team = isHome ? meta.home.name : meta.away.name;
         const pk = g.TYPE_DETAIL_CD2 === "PK" ? " · PK" : "";
+        const og = Analyze.isOwnGoal(g) ? " · 자책골" : "";
         const assist =
           g.assist_name ||
           (g.assist_player_id ? Analyze.nameOf(pmap, g.assist_player_id, "") : "");
@@ -1236,7 +1238,7 @@
           <div class="top"><span class="goal-team">${escapeHtml(
             Analyze.formatClock(g)
           )} ${escapeHtml(team)}</span><span>${escapeHtml(xgLabel)}</span></div>
-          <div class="meta">${escapeHtml(nm)}${pk}${escapeHtml(assistBit)} · #${escapeHtml(String(g.back_no || ""))}</div>
+          <div class="meta">${escapeHtml(nm)}${pk}${og}${escapeHtml(assistBit)} · #${escapeHtml(String(g.back_no || ""))}</div>
         </button>`;
       })
       .join("");
@@ -1249,7 +1251,10 @@
     });
 
     const goal = goalList[state.selectedGoalIdx];
-    const goalSide = goal.TEAM_ID === meta.home.team_id ? "home" : "away";
+    const goalSide =
+      Analyze.scoringTeamId(goal, meta.home.team_id, meta.away.team_id) === meta.home.team_id
+        ? "home"
+        : "away";
     /* Drives the colour of the sequence numbers and pitch arrows below. */
     section?.setAttribute("data-side", goalSide);
     const seq = Analyze.sequenceBeforeGoal(state.data.events, goal, 28);

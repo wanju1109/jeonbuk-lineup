@@ -117,6 +117,91 @@ def sheet_goal_rows(chart) -> list[dict]:
     return rows
 
 
+def is_own_goal_flag(value) -> bool:
+    s = str(value or "").strip().upper()
+    return s in ("Y", "1", "TRUE", "OG") or "자책" in str(value or "")
+
+
+def is_own_goal_row(row: dict) -> bool:
+    if not isinstance(row, dict):
+        return False
+    for key in (
+        "ownGoalYn", "ownGoalCode", "own_goal_code", "ogYn", "OG_YN",
+        "dispEventName", "actName", "actGubun2", "eventName",
+    ):
+        if is_own_goal_flag(row.get(key)):
+            return True
+        blob = str(row.get(key) or "")
+        if "자책" in blob or re.search(r"\bOWN[\s_-]*GOAL\b", blob, re.I):
+            return True
+    return False
+
+
+def scoring_team_id(team_id: str, own_goal: bool, home_id: str, away_id: str) -> str:
+    tid = str(team_id or "")
+    if not own_goal:
+        return tid
+    if home_id and tid == home_id:
+        return away_id
+    if away_id and tid == away_id:
+        return home_id
+    return tid
+
+
+def annotate_own_goals(events: list, home_id: str, away_id: str) -> list:
+    """Keep player TEAM_ID; set scoring_team_id for OG. Do not invent TEAM_ID flips on chalk rows."""
+    out = []
+    for e in events if isinstance(events, list) else []:
+        if not isinstance(e, dict):
+            out.append(e)
+            continue
+        row = dict(e)
+        own = is_own_goal_flag(row.get("OWN_GOAL_CODE"))
+        if row.get("TYPE_DETAIL_CD") == "GL" and own:
+            row["OWN_GOAL_CODE"] = "Y"
+            row["scoring_team_id"] = scoring_team_id(
+                row.get("TEAM_ID") or "", True, home_id, away_id
+            )
+        elif row.get("TYPE_DETAIL_CD") == "GL":
+            row["scoring_team_id"] = str(row.get("TEAM_ID") or "")
+        out.append(row)
+    return out
+
+
+def dump_sheet_goal_row(row: dict) -> str:
+    half = row.get("halfType")
+    minute = row.get("timeMin")
+    sec = row.get("timeSec")
+    return (
+        f"actName={row.get('actName')!r} "
+        f"dispEventName={row.get('dispEventName')!r} "
+        f"playerId={row.get('playerId')!r} "
+        f"time={half}:{minute}:{sec}"
+    )
+
+
+def warn_if_gl_short(events, official, sheet_rows, game_id: str) -> None:
+    gl_n = sum(
+        1
+        for e in (events or [])
+        if isinstance(e, dict) and e.get("TYPE_DETAIL_CD") == "GL"
+    )
+    if official is None:
+        return
+    try:
+        expected = int(official[0]) + int(official[1])
+    except (TypeError, ValueError):
+        return
+    if gl_n >= expected:
+        return
+    print(
+        f"[WARN] game_id={game_id}: GL count {gl_n} < official "
+        f"{official[0]}+{official[1]}={expected}"
+    )
+    for row in sheet_rows or []:
+        print(f"[WARN] sheet goal: {dump_sheet_goal_row(row)}")
+
+
 def goal_event_from_sheet(row: dict, year: str, meet_seq: str, game_id: str, seq: int) -> dict:
     """Minimal chalk-compatible GL event when Bepro chalk is gone/incomplete."""
     period = int(row.get("halfType") or 1)
@@ -125,6 +210,7 @@ def goal_event_from_sheet(row: dict, year: str, meet_seq: str, game_id: str, seq
     # Chalk 2nd-half clocks are absolute (45+); sheet times are half-relative.
     minute = sheet_min + 45 if period >= 2 else sheet_min
     assist_id = str(row.get("inPlayerId") or "").strip()
+    own = is_own_goal_row(row)
     return {
         "MEET_YEAR": str(year),
         "MEET_SEQ": int(meet_seq) if str(meet_seq).isdigit() else meet_seq,
@@ -143,7 +229,7 @@ def goal_event_from_sheet(row: dict, year: str, meet_seq: str, game_id: str, seq
         "START_POINT_Y": None,
         "END_POINT_X": None,
         "END_POINT_Y": None,
-        "OWN_GOAL_CODE": "N",
+        "OWN_GOAL_CODE": "Y" if own else "N",
         "PA_AREA_YN_CD": "",
         "SHOT_GOALPOST_SITE": "",
         "EVENT_ID": 800000 + seq,
@@ -206,6 +292,97 @@ def merge_sheet_goals_into_events(
         out.append(goal_event_from_sheet(row, year, meet_seq, game_id, i + 1))
         added += 1
     return out, added
+
+
+def _event_abs_sec(e: dict) -> int:
+    try:
+        return int(e.get("MIN_TIME") or 0) * 60 + int(e.get("SEC_TIME") or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def enrich_sheet_goals_from_chalk(events: list, players: list | None = None) -> list:
+    """Copy nearby shot telemetry / AST onto match_sheet GL rows."""
+    names: dict[str, str] = {}
+    for p in players or []:
+        if not isinstance(p, dict):
+            continue
+        pid = str(p.get("player_id") or p.get("PLAYER_ID") or "")
+        nm = str(p.get("NAME") or p.get("name") or "").strip()
+        if pid and nm:
+            names[pid] = nm
+    out = []
+    evs = events if isinstance(events, list) else []
+    for e in evs:
+        if not isinstance(e, dict):
+            out.append(e)
+            continue
+        row = dict(e)
+        if row.get("TYPE_DETAIL_CD") != "GL" or row.get("source") != "match_sheet":
+            out.append(row)
+            continue
+        pid = str(row.get("PLAYER_ID") or "")
+        try:
+            period = int(row.get("PERIOD_ID") or 1)
+        except (TypeError, ValueError):
+            period = 1
+        gabs = _event_abs_sec(row)
+        best_st = None
+        best_st_dist = 10**9
+        best_ast = None
+        best_ast_dist = 10**9
+        for other in evs:
+            if not isinstance(other, dict):
+                continue
+            if other.get("TYPE_DETAIL_CD") == "GL":
+                continue
+            try:
+                other_period = int(other.get("PERIOD_ID") or 1)
+            except (TypeError, ValueError):
+                other_period = 1
+            if other_period != period:
+                continue
+            dist = abs(_event_abs_sec(other) - gabs)
+            if dist > 180:
+                continue
+            if (
+                str(other.get("PLAYER_ID") or "") == pid
+                and other.get("TYPE_CD") == "ST"
+            ):
+                if dist < best_st_dist:
+                    best_st = other
+                    best_st_dist = dist
+            if (
+                other.get("TYPE_DETAIL_CD") == "AST"
+                and str(other.get("TEAM_ID") or "") == str(row.get("TEAM_ID") or "")
+            ):
+                if dist < best_ast_dist:
+                    best_ast = other
+                    best_ast_dist = dist
+        if best_st is not None:
+            if row.get("EXPECTED_GOAL") in (None, ""):
+                row["EXPECTED_GOAL"] = best_st.get("EXPECTED_GOAL")
+            for key in (
+                "START_POINT_X",
+                "START_POINT_Y",
+                "END_POINT_X",
+                "END_POINT_Y",
+                "SHOT_GOALPOST_SITE",
+                "PA_AREA_YN_CD",
+                "EVENT_BEPRO",
+            ):
+                if row.get(key) in (None, "") and best_st.get(key) not in (None, ""):
+                    row[key] = best_st.get(key)
+            if row.get("back_no") in (None, "") and best_st.get("back_no") not in (None, ""):
+                row["back_no"] = best_st.get("back_no")
+        if best_ast is not None and not row.get("assist_player_id"):
+            aid = str(best_ast.get("PLAYER_ID") or "")
+            if aid:
+                row["assist_player_id"] = aid
+                if not row.get("assist_name"):
+                    row["assist_name"] = names.get(aid) or None
+        out.append(row)
+    return out
 
 
 def players_from_lineup(lineup: dict) -> list[dict]:
@@ -577,9 +754,18 @@ def infer_team_names(events: list, players: list, home_hint: str, away_hint: str
 
 
 def parse_score_from_goals(events: list, home_id: str, away_id: str) -> tuple[int, int]:
-    goals = [e for e in events if e.get("TYPE_DETAIL_CD") == "GL"]
-    hs = sum(1 for g in goals if g.get("TEAM_ID") == home_id)
-    as_ = sum(1 for g in goals if g.get("TEAM_ID") == away_id)
+    goals = [e for e in events if isinstance(e, dict) and e.get("TYPE_DETAIL_CD") == "GL"]
+    hs = 0
+    as_ = 0
+    for g in goals:
+        own = is_own_goal_flag(g.get("OWN_GOAL_CODE"))
+        sid = str(g.get("scoring_team_id") or "") or scoring_team_id(
+            g.get("TEAM_ID") or "", own, home_id, away_id
+        )
+        if sid == home_id:
+            hs += 1
+        elif sid == away_id:
+            as_ += 1
     return hs, as_
 
 
@@ -836,6 +1022,7 @@ def fetch_chalkboard(client: PortalClient, year: str, meet_seq: str, round_id: s
 
     lineup_html = ""
     lineup = {"home": [], "away": [], "subs": []}
+    sheet_goals = []
     try:
         lineup_html = client.request(
             MAIN_FRAME,
@@ -849,6 +1036,7 @@ def fetch_chalkboard(client: PortalClient, year: str, meet_seq: str, round_id: s
         )
         chart = extract_js_array(lineup_html, "chartDataSet")
         lineup = parse_lineup_chart(chart)
+        sheet_goals = sheet_goal_rows(chart)
     except Exception as exc:
         print(f"[WARN] lineup fetch failed game_id={game_id}: {exc}")
 
@@ -875,6 +1063,7 @@ def fetch_chalkboard(client: PortalClient, year: str, meet_seq: str, round_id: s
         "players": players,
         "lineup": lineup,
         "pass_matrix": pass_matrix,
+        "sheet_goals": sheet_goals,
     }
 
 
@@ -1222,8 +1411,10 @@ def main() -> None:
                     ):
                         existing["lineup"] = fresh_lineup
 
-                    chart = extract_js_array(packed.get("lineup_html") or "", "chartDataSet")
-                    sheet_gl = sheet_goal_rows(chart)
+                    sheet_gl = packed.get("sheet_goals") or []
+                    if not sheet_gl:
+                        chart = extract_js_array(packed.get("lineup_html") or "", "chartDataSet")
+                        sheet_gl = sheet_goal_rows(chart)
                     merged_events, added_gl = merge_sheet_goals_into_events(
                         existing.get("events") or [],
                         sheet_gl,
@@ -1231,6 +1422,18 @@ def main() -> None:
                         MEET_SEQ,
                         gid,
                     )
+                    home_id = str((meta.get("home") or {}).get("team_id") or "")
+                    away_id = str((meta.get("away") or {}).get("team_id") or "")
+                    merged_events = enrich_sheet_goals_from_chalk(
+                        merged_events,
+                        merge_player_lists(
+                            existing.get("players") or [],
+                            packed.get("players") or [],
+                            players_from_lineup(existing.get("lineup") or {}),
+                        ),
+                    )
+                    merged_events = annotate_own_goals(merged_events, home_id, away_id)
+                    warn_if_gl_short(merged_events, official, sheet_gl, gid)
                     existing["events"] = merged_events
                     existing["players"] = merge_player_lists(
                         existing.get("players") or [],
@@ -1278,12 +1481,38 @@ def main() -> None:
                     print(f"[WARN] game_id={gid}: empty chalk, nothing to save")
                     continue
 
+                sheet_gl = packed.get("sheet_goals") or []
+                merged_events, added_gl = merge_sheet_goals_into_events(
+                    new_events,
+                    sheet_gl,
+                    YEAR,
+                    MEET_SEQ,
+                    gid,
+                )
+                home_meta, away_meta = infer_team_names(
+                    merged_events,
+                    packed.get("players") or [],
+                    match.get("home") or "",
+                    match.get("away") or "",
+                )
+                merged_events = enrich_sheet_goals_from_chalk(
+                    merged_events,
+                    merge_player_lists(
+                        packed.get("players") or [],
+                        players_from_lineup(packed.get("lineup") or {}),
+                    ),
+                )
+                merged_events = annotate_own_goals(
+                    merged_events, home_meta["team_id"], away_meta["team_id"]
+                )
+                official = parse_official_score(packed.get("html") or "")
+                warn_if_gl_short(merged_events, official, sheet_gl, gid)
                 payload = build_payload(
                     YEAR,
                     MEET_SEQ,
                     rid,
                     match,
-                    new_events,
+                    merged_events,
                     packed["players"],
                     packed["html"],
                     packed.get("lineup"),
@@ -1307,7 +1536,15 @@ def main() -> None:
                 if JEONBUK_KEY in f"{entry['home']}{entry['away']}{label}":
                     by_id[match_key(YEAR, gid)] = entry
                 collected += 1
-                print(f"[OK] game_id={gid} events={len(payload['events'])}")
+                gl_n = sum(
+                    1
+                    for e in merged_events
+                    if isinstance(e, dict) and e.get("TYPE_DETAIL_CD") == "GL"
+                )
+                print(
+                    f"[OK] game_id={gid} events={len(payload['events'])} "
+                    f"goals={gl_n}(+{added_gl})"
+                )
                 time.sleep(0.4)
             except Exception as exc:
                 print(f"[WARN] game_id={gid}: {exc}")
