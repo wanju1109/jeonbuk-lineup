@@ -25,10 +25,10 @@
     "kickoff_label": "2026-09-27 19:00 KST",
     "date_md": "09/27",
     "label": "강원 VS 인천 (129, 09/27)",
-    "hours_to_kickoff": 154.7,
+    "hours_to_kickoff": 148.9,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-21T08:19:38.398888+09:00",
+    "generated_at": "2026-09-21T14:08:44.748988+09:00",
     "preview_hours": 48.0
   },
   "headline": "22R PREVIEW · 강원 vs 인천",
@@ -124,9 +124,9 @@
       "sample": 5,
       "points": 5,
       "ppg": 1.0,
-      "goals_pg": 0.8,
+      "goals_pg": 1.0,
       "conceded_pg": 1.2,
-      "xg_delta": -0.72,
+      "xg_delta": 0.28,
       "xg_sample": 4,
       "clean_sheets": 0
     },
@@ -618,7 +618,7 @@
         "xga": 0.82,
         "shots": 8,
         "sot": 3,
-        "goals_for": 0,
+        "goals_for": 1,
         "goals_against": 1
       },
       {
@@ -759,9 +759,9 @@
         "적극 압박"
       ],
       "record": "1승 2무 2패 / 최근 5경기",
-      "goals_for": 4,
+      "goals_for": 5,
       "goals_against": 6,
-      "goal_diff": -2,
+      "goal_diff": -1,
       "avg_xg": 1.18,
       "avg_xga": 1.1,
       "avg_shots": 10.5,

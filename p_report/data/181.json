@@ -25,16 +25,16 @@
     "kickoff_label": "2026-10-09 19:00 KST",
     "date_md": "10/09",
     "label": "대전 VS 전북 (181, 10/09)",
-    "hours_to_kickoff": 442.7,
+    "hours_to_kickoff": 436.8,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-09-21T08:20:03.088905+09:00",
+    "generated_at": "2026-09-21T14:09:10.618930+09:00",
     "preview_hours": 48.0
   },
   "headline": "31R PREVIEW · 대전 vs 전북",
   "thesis": "대전 vs 전북. 전북 최근 D W D L D, 대전 최근 L W W D D. 원정에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
   "briefing": [
-    "대전 vs 전북. 전북 최근 D W D L D (1승 3무 1패 / 최근 5경기, 8득 3실). 대전은 L W W D D (2승 2무 1패 / 최근 5경기, 12득 8실).",
+    "대전 vs 전북. 전북 최근 D W D L D (1승 3무 1패 / 최근 5경기, 8득 5실). 대전은 L W W D D (2승 2무 1패 / 최근 5경기, 12득 8실).",
     "최근 5경기 평균 — 전북 xG 1.15·슈팅 12.0·유효슈팅 4.8, 대전 xG 1.6·슈팅 12.8·유효슈팅 4.5. 패스 성공률 78.8% vs 73.9%.",
     "올 시즌 맞대결 2경기 — 전북 1승 1무 0패.",
     "경기장 대전 월드컵 · 전북 원정. 원정에서는 첫 실점 방어와 전환 속도가 관건입니다.",
@@ -128,10 +128,10 @@
       "points": 6,
       "ppg": 1.2,
       "goals_pg": 1.6,
-      "conceded_pg": 0.6,
+      "conceded_pg": 1.0,
       "xg_delta": 2.26,
       "xg_sample": 5,
-      "clean_sheets": 3
+      "clean_sheets": 1
     },
     "verdict": "최근 승점 흐름은 대전 쪽이 더 좋습니다. 다만 최근 5경기 표본으로 보는 프리뷰입니다.",
     "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"
@@ -515,7 +515,7 @@
         "shots": 12,
         "sot": 4,
         "goals_for": 1,
-        "goals_against": 0
+        "goals_against": 1
       },
       {
         "game_id": "159",
@@ -587,7 +587,7 @@
         "shots": 23,
         "sot": 9,
         "goals_for": 3,
-        "goals_against": 0
+        "goals_against": 1
       }
     ],
     "opponent": [
@@ -743,8 +743,8 @@
       ],
       "record": "1승 3무 1패 / 최근 5경기",
       "goals_for": 8,
-      "goals_against": 3,
-      "goal_diff": 5,
+      "goals_against": 5,
+      "goal_diff": 3,
       "avg_xg": 1.15,
       "avg_xga": 1.18,
       "avg_shots": 12.0,
