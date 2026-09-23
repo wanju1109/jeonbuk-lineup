@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-09-23T05:07:59+09:00",
+  "generated_at": "2026-09-24T05:13:49+09:00",
   "table": {
     "rank": 6,
     "teams": 17,
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 10,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -353,7 +353,7 @@
       }
     ],
     "best_rank": 1,
-    "worst_rank": 9,
+    "worst_rank": 10,
     "first_half": {
       "played": 16,
       "win": 11,

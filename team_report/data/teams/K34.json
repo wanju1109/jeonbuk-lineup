@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-09-23T05:07:59+09:00",
+  "generated_at": "2026-09-24T05:13:49+09:00",
   "table": {
     "rank": 8,
     "teams": 17,
@@ -191,14 +191,14 @@
       },
       {
         "round": 5,
-        "rank": 8,
+        "rank": 7,
         "points": 6,
         "played": 4,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 9,
         "played": 5,
         "gd": 2
