@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T06:29:22.699857+09:00",
+  "updated_at": "2026-09-23T13:55:24.481873+09:00",
   "preview_hours": 48.0,
   "active_game_id": "181",
   "matches": [
@@ -11,7 +11,7 @@
       "away": "인천",
       "kickoff": "2026-09-27T19:00:00+09:00",
       "kickoff_label": "2026-09-27 19:00 KST",
-      "hours_to_kickoff": 108.5,
+      "hours_to_kickoff": 101.1,
       "within_48h": false,
       "published": false,
       "jeonbuk_match": false,
@@ -26,7 +26,7 @@
       "away": "전북",
       "kickoff": "2026-10-09T19:00:00+09:00",
       "kickoff_label": "2026-10-09 19:00 KST",
-      "hours_to_kickoff": 396.5,
+      "hours_to_kickoff": 389.1,
       "within_48h": false,
       "published": false,
       "jeonbuk_match": true,
