@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k41-sm.png",
   "home_url": "https://gimhaefc2008.com",
   "season": "2026",
-  "generated_at": "2026-09-24T05:13:50+09:00",
+  "generated_at": "2026-09-25T05:23:48+09:00",
   "table": {
     "rank": 17,
     "teams": 17,
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 13,
+        "rank": 15,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -351,7 +351,7 @@
         "gd": -30
       }
     ],
-    "best_rank": 13,
+    "best_rank": 15,
     "worst_rank": 17,
     "first_half": {
       "played": 16,
