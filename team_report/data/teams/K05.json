@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-09-25T05:23:46+09:00",
+  "generated_at": "2026-09-26T05:23:58+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -189,7 +189,7 @@
       },
       {
         "round": 4,
-        "rank": 6,
+        "rank": 5,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -716,7 +716,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
+        "apps": 29,
         "goals": 8,
         "assists": 3,
         "points": 11
@@ -728,10 +728,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 32,
-        "apps": 21,
-        "goals": 5,
+        "apps": 22,
+        "goals": 7,
         "assists": 1,
-        "points": 6
+        "points": 8
       },
       {
         "player_id": "20230224",
@@ -740,7 +740,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 30,
-        "apps": 26,
+        "apps": 27,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -752,19 +752,19 @@
         "position": "FW",
         "back_no": 7,
         "age": 29,
-        "apps": 28,
+        "apps": 29,
         "goals": 3,
         "assists": 5,
         "points": 8
       },
       {
-        "player_id": "20150052",
+        "player_id": "20140143",
         "departed": false,
-        "name": "김진규",
-        "position": "MF",
-        "back_no": 97,
-        "age": 29,
-        "apps": 26,
+        "name": "김영빈",
+        "position": "DF",
+        "back_no": 2,
+        "age": 35,
+        "apps": 27,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -778,7 +778,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 29,
-        "apps": 28,
+        "apps": 29,
         "goals": 3,
         "assists": 5,
         "points": 8
@@ -790,7 +790,7 @@
         "position": "MF",
         "back_no": 28,
         "age": 32,
-        "apps": 21,
+        "apps": 22,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -802,7 +802,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
+        "apps": 29,
         "goals": 8,
         "assists": 3,
         "points": 11
@@ -814,19 +814,19 @@
         "position": "FW",
         "back_no": 99,
         "age": 30,
-        "apps": 26,
+        "apps": 27,
         "goals": 4,
         "assists": 2,
         "points": 6
       },
       {
-        "player_id": "20150052",
+        "player_id": "20140143",
         "departed": false,
-        "name": "김진규",
-        "position": "MF",
-        "back_no": 97,
-        "age": 29,
-        "apps": 26,
+        "name": "김영빈",
+        "position": "DF",
+        "back_no": 2,
+        "age": 35,
+        "apps": 27,
         "goals": 2,
         "assists": 2,
         "points": 4

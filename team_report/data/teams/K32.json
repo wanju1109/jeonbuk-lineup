@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-09-25T05:23:48+09:00",
+  "generated_at": "2026-09-26T05:24:00+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 3,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -352,7 +352,7 @@
         "gd": -22
       }
     ],
-    "best_rank": 2,
+    "best_rank": 3,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -645,28 +645,28 @@
     "foreign": 5,
     "top_scorers": [
       {
-        "player_id": "20260170",
-        "departed": false,
-        "name": "마촙",
-        "position": "FW",
-        "back_no": 9,
-        "age": 27,
-        "apps": 21,
-        "goals": 5,
-        "assists": 4,
-        "points": 9
-      },
-      {
         "player_id": "20260171",
         "departed": false,
         "name": "리마",
         "position": "FW",
         "back_no": 10,
         "age": 28,
+        "apps": 23,
+        "goals": 6,
+        "assists": 1,
+        "points": 7
+      },
+      {
+        "player_id": "20260170",
+        "departed": false,
+        "name": "마촙",
+        "position": "FW",
+        "back_no": 9,
+        "age": 27,
         "apps": 22,
         "goals": 5,
-        "assists": 1,
-        "points": 6
+        "assists": 4,
+        "points": 9
       },
       {
         "player_id": "20130410",
@@ -675,10 +675,22 @@
         "position": "FW",
         "back_no": 92,
         "age": 37,
-        "apps": 11,
+        "apps": 12,
         "goals": 2,
         "assists": 2,
         "points": 4
+      },
+      {
+        "player_id": "20190173",
+        "departed": false,
+        "name": "정현우",
+        "position": "MF",
+        "back_no": 8,
+        "age": 26,
+        "apps": 12,
+        "goals": 2,
+        "assists": 1,
+        "points": 3
       },
       {
         "player_id": "20260173",
@@ -688,18 +700,6 @@
         "back_no": 15,
         "age": 26,
         "apps": 19,
-        "goals": 2,
-        "assists": 0,
-        "points": 2
-      },
-      {
-        "player_id": "20170297",
-        "departed": false,
-        "name": "류승우",
-        "position": "MF",
-        "back_no": 7,
-        "age": 32,
-        "apps": 14,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -713,7 +713,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 21,
+        "apps": 22,
         "goals": 5,
         "assists": 4,
         "points": 9
@@ -725,7 +725,7 @@
         "position": "DF",
         "back_no": 3,
         "age": 21,
-        "apps": 24,
+        "apps": 25,
         "goals": 1,
         "assists": 3,
         "points": 4
@@ -737,7 +737,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 23,
-        "apps": 16,
+        "apps": 17,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -749,7 +749,7 @@
         "position": "FW",
         "back_no": 92,
         "age": 37,
-        "apps": 11,
+        "apps": 12,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -761,13 +761,13 @@
         "position": "MF",
         "back_no": 28,
         "age": 22,
-        "apps": 18,
+        "apps": 19,
         "goals": 1,
         "assists": 2,
         "points": 3
       }
     ],
-    "goal_share": 0.185
+    "goal_share": 0.222
   },
   "attendance": null,
   "context": {

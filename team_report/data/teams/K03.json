@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-25T05:23:46+09:00",
+  "generated_at": "2026-09-26T05:23:58+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -168,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 4,
+        "rank": 6,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -716,7 +716,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 30,
-        "apps": 21,
+        "apps": 22,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -728,7 +728,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 21,
+        "apps": 22,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -740,10 +740,10 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
-        "assists": 3,
-        "points": 6
+        "assists": 4,
+        "points": 7
       },
       {
         "player_id": "20230148",
@@ -752,21 +752,21 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 20,
+        "apps": 21,
         "goals": 3,
         "assists": 1,
         "points": 4
       },
       {
-        "player_id": "20250022",
+        "player_id": "20260024",
         "departed": false,
-        "name": "조상혁",
-        "position": "FW",
-        "back_no": 18,
-        "age": 22,
-        "apps": 18,
-        "goals": 2,
-        "assists": 1,
+        "name": "니시야 켄토",
+        "position": "MF",
+        "back_no": 31,
+        "age": 26,
+        "apps": 25,
+        "goals": 3,
+        "assists": 0,
         "points": 3
       }
     ],
@@ -778,7 +778,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 30,
-        "apps": 21,
+        "apps": 22,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -790,10 +790,10 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
-        "assists": 3,
-        "points": 6
+        "assists": 4,
+        "points": 7
       },
       {
         "player_id": "20240063",
@@ -802,7 +802,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 23,
-        "apps": 28,
+        "apps": 29,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -814,7 +814,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 21,
+        "apps": 22,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -826,7 +826,7 @@
         "position": "DF",
         "back_no": 2,
         "age": 27,
-        "apps": 28,
+        "apps": 29,
         "goals": 0,
         "assists": 2,
         "points": 2

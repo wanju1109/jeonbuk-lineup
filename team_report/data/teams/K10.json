@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-09-25T05:23:46+09:00",
+  "generated_at": "2026-09-26T05:23:58+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -168,21 +168,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 4,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 8,
+        "rank": 7,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 8,
+        "rank": 7,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -203,7 +203,7 @@
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -217,7 +217,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -716,7 +716,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 32,
-        "apps": 22,
+        "apps": 23,
         "goals": 8,
         "assists": 2,
         "points": 10
@@ -728,7 +728,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 36,
-        "apps": 28,
+        "apps": 29,
         "goals": 7,
         "assists": 1,
         "points": 8
@@ -740,7 +740,7 @@
         "position": "FW",
         "back_no": 19,
         "age": 25,
-        "apps": 24,
+        "apps": 25,
         "goals": 5,
         "assists": 3,
         "points": 8
@@ -752,7 +752,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 29,
-        "apps": 24,
+        "apps": 25,
         "goals": 4,
         "assists": 5,
         "points": 9
@@ -764,7 +764,7 @@
         "position": "MF",
         "back_no": 17,
         "age": 32,
-        "apps": 29,
+        "apps": 30,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -778,10 +778,10 @@
         "position": "DF",
         "back_no": 16,
         "age": 32,
-        "apps": 22,
+        "apps": 23,
         "goals": 1,
-        "assists": 6,
-        "points": 7
+        "assists": 7,
+        "points": 8
       },
       {
         "player_id": "20260062",
@@ -790,7 +790,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 29,
-        "apps": 24,
+        "apps": 25,
         "goals": 4,
         "assists": 5,
         "points": 9
@@ -802,7 +802,7 @@
         "position": "MF",
         "back_no": 17,
         "age": 32,
-        "apps": 29,
+        "apps": 30,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -814,7 +814,7 @@
         "position": "FW",
         "back_no": 19,
         "age": 25,
-        "apps": 24,
+        "apps": 25,
         "goals": 5,
         "assists": 3,
         "points": 8
@@ -826,7 +826,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 32,
-        "apps": 22,
+        "apps": 23,
         "goals": 8,
         "assists": 2,
         "points": 10
