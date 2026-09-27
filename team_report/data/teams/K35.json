@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-09-27T04:44:47+09:00",
+  "generated_at": "2026-09-28T05:04:06+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -28,7 +28,7 @@
     "cut_rank": 6,
     "gap_above": 5,
     "gap_below": 1,
-    "above": "인천",
+    "above": "안양",
     "below": "부천"
   },
   "splits": {

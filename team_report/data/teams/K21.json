@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-09-27T04:44:46+09:00",
+  "generated_at": "2026-09-28T05:04:06+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
-    "played": 29,
+    "played": 30,
     "win": 10,
-    "draw": 12,
+    "draw": 13,
     "loss": 7,
     "gf": 36,
     "ga": 28,
     "gd": 8,
-    "points": 42,
-    "ppg": 1.45,
-    "remaining": 9,
+    "points": 43,
+    "ppg": 1.43,
+    "remaining": 8,
     "scheduled": 38,
-    "gap_to_leader": 20,
+    "gap_to_leader": 19,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 2,
+    "gap_above": 1,
+    "gap_below": 3,
     "above": "전북",
     "below": "대전"
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 4,
-      "draw": 7,
+      "draw": 8,
       "loss": 3,
       "gf": 17,
       "ga": 13,
       "gd": 4,
-      "points": 19,
-      "ppg": 1.36
+      "points": 20,
+      "ppg": 1.33
     },
     "away": {
       "played": 15,
@@ -85,18 +85,18 @@
       "W",
       "D",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "D",
       "W",
       "D",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
       "L",
-      "L",
       "W",
       "L",
       "D",
@@ -104,7 +104,8 @@
       "W",
       "D",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
@@ -119,15 +120,15 @@
     "last10_record": {
       "played": 10,
       "win": 2,
-      "draw": 4,
-      "loss": 4,
-      "gf": 12,
-      "ga": 16,
-      "gd": -4,
-      "points": 10
+      "draw": 5,
+      "loss": 3,
+      "gf": 11,
+      "ga": 14,
+      "gd": -3,
+      "points": 11
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 9,
@@ -136,10 +137,10 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.24,
-    "ga_per_game": 0.97,
-    "clean_sheets": 12,
-    "failed_to_score": 8,
+    "gf_per_game": 1.2,
+    "ga_per_game": 0.93,
+    "clean_sheets": 13,
+    "failed_to_score": 9,
     "both_scored": 13,
     "one_goal_games": 7,
     "biggest_win": {
@@ -202,7 +203,7 @@
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -315,64 +316,64 @@
       {
         "round": 22,
         "rank": 4,
-        "points": 32,
-        "played": 21,
+        "points": 33,
+        "played": 22,
         "gd": 8
       },
       {
         "round": 23,
         "rank": 3,
-        "points": 35,
-        "played": 22,
+        "points": 36,
+        "played": 23,
         "gd": 9
       },
       {
         "round": 24,
-        "rank": 4,
-        "points": 35,
-        "played": 23,
-        "gd": 6
-      },
-      {
-        "round": 25,
         "rank": 4,
         "points": 36,
         "played": 24,
         "gd": 6
       },
       {
-        "round": 26,
-        "rank": 5,
+        "round": 25,
+        "rank": 4,
         "points": 37,
         "played": 25,
         "gd": 6
       },
       {
-        "round": 27,
-        "rank": 4,
-        "points": 40,
+        "round": 26,
+        "rank": 5,
+        "points": 38,
         "played": 26,
-        "gd": 9
+        "gd": 6
       },
       {
-        "round": 28,
-        "rank": 5,
+        "round": 27,
+        "rank": 4,
         "points": 41,
         "played": 27,
         "gd": 9
       },
       {
-        "round": 29,
-        "rank": 5,
+        "round": 28,
+        "rank": 4,
         "points": 42,
         "played": 28,
         "gd": 9
       },
       {
+        "round": 29,
+        "rank": 4,
+        "points": 43,
+        "played": 29,
+        "gd": 9
+      },
+      {
         "round": 30,
         "rank": 5,
-        "points": 42,
-        "played": 29,
+        "points": 43,
+        "played": 30,
         "gd": 8
       }
     ],
@@ -390,15 +391,15 @@
       "ppg": 1.69
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 3,
-      "draw": 6,
+      "draw": 7,
       "loss": 4,
       "gf": 15,
       "ga": 17,
       "gd": -2,
-      "points": 15,
-      "ppg": 1.15
+      "points": 16,
+      "ppg": 1.14
     }
   },
   "fixtures": [
@@ -691,6 +692,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 22,
+      "date": "2026-09-27",
+      "venue": "H",
+      "opponent_id": "K18",
+      "opponent": "인천 유나이티드",
+      "gf": 0,
+      "ga": 0,
+      "result": "D"
     }
   ],
   "squad": {
@@ -824,10 +835,10 @@
     "goal_share": 0.222
   },
   "attendance": {
-    "avg": 6089,
-    "total": 85248,
-    "games": 14,
-    "home_fans_avg": 5726,
+    "avg": 6035,
+    "total": 90522,
+    "games": 15,
+    "home_fans_avg": 5658,
     "away_fans_avg": 564
   },
   "context": {
@@ -835,6 +846,7 @@
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
       "수비 안정",
+      "실리 축구",
       "클린시트 다수",
       "무승부 체질"
     ]

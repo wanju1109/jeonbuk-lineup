@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-09-27T04:44:46+09:00",
+  "generated_at": "2026-09-28T05:04:06+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -27,9 +27,9 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 0,
-    "gap_below": 2,
+    "gap_below": 1,
     "above": "대전",
-    "below": "안양"
+    "below": "인천"
   },
   "splits": {
     "home": {
@@ -168,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 6,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -182,7 +182,7 @@
       },
       {
         "round": 3,
-        "rank": 4,
+        "rank": 5,
         "points": 5,
         "played": 3,
         "gd": 1
@@ -322,7 +322,7 @@
       },
       {
         "round": 23,
-        "rank": 6,
+        "rank": 7,
         "points": 31,
         "played": 23,
         "gd": -3
@@ -336,21 +336,21 @@
       },
       {
         "round": 25,
-        "rank": 6,
+        "rank": 7,
         "points": 34,
         "played": 25,
         "gd": -5
       },
       {
         "round": 26,
-        "rank": 6,
+        "rank": 7,
         "points": 35,
         "played": 26,
         "gd": -5
       },
       {
         "round": 27,
-        "rank": 7,
+        "rank": 8,
         "points": 35,
         "played": 27,
         "gd": -7

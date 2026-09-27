@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-27T04:44:49+09:00",
+  "updated_at": "2026-09-28T05:04:07+09:00",
   "season": "2026",
-  "as_of": "2026-09-20",
+  "as_of": "2026-09-27",
   "source": "proto/data/league.json · player_report · c_report",
   "leagues": [
     {
@@ -122,21 +122,21 @@
           "full": "강원FC",
           "color": "#01605C",
           "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
-          "played": 29,
+          "played": 30,
           "win": 10,
-          "draw": 12,
+          "draw": 13,
           "loss": 7,
           "gf": 36,
           "ga": 28,
           "gd": 8,
-          "points": 42,
-          "ppg": 1.45,
+          "points": 43,
+          "ppg": 1.43,
           "last5": [
-            "D",
             "W",
             "D",
             "D",
-            "L"
+            "L",
+            "D"
           ],
           "band": "파이널A 경쟁",
           "file": "./data/teams/K21.json"
@@ -195,6 +195,32 @@
         },
         {
           "rank": 8,
+          "team_id": "K18",
+          "name": "인천",
+          "full": "인천 유나이티드",
+          "color": "#0A70BF",
+          "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
+          "played": 30,
+          "win": 10,
+          "draw": 9,
+          "loss": 11,
+          "gf": 36,
+          "ga": 33,
+          "gd": 3,
+          "points": 39,
+          "ppg": 1.3,
+          "last5": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "D"
+          ],
+          "band": "파이널A 추격",
+          "file": "./data/teams/K18.json"
+        },
+        {
+          "rank": 9,
           "team_id": "K27",
           "name": "안양",
           "full": "FC안양",
@@ -218,32 +244,6 @@
           ],
           "band": "파이널A 추격",
           "file": "./data/teams/K27.json"
-        },
-        {
-          "rank": 9,
-          "team_id": "K18",
-          "name": "인천",
-          "full": "인천 유나이티드",
-          "color": "#0A70BF",
-          "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
-          "played": 29,
-          "win": 10,
-          "draw": 8,
-          "loss": 11,
-          "gf": 36,
-          "ga": 33,
-          "gd": 3,
-          "points": 38,
-          "ppg": 1.31,
-          "last5": [
-            "D",
-            "L",
-            "W",
-            "L",
-            "D"
-          ],
-          "band": "파이널A 추격",
-          "file": "./data/teams/K18.json"
         },
         {
           "rank": 10,

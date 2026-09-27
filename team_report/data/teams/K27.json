@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k27-sm.png",
   "home_url": "https://www.fc-anyang.com",
   "season": "2026",
-  "generated_at": "2026-09-27T04:44:46+09:00",
+  "generated_at": "2026-09-28T05:04:06+09:00",
   "table": {
-    "rank": 8,
+    "rank": 9,
     "teams": 12,
     "played": 30,
     "win": 9,
@@ -26,10 +26,10 @@
     "gap_to_leader": 24,
     "gap_to_cut": 2,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 0,
-    "above": "포항",
-    "below": "인천"
+    "gap_above": 1,
+    "gap_below": 5,
+    "above": "인천",
+    "below": "김천"
   },
   "splits": {
     "home": {
@@ -168,14 +168,14 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 6,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 3,
+        "rank": 4,
         "points": 4,
         "played": 2,
         "gd": 1
@@ -322,7 +322,7 @@
       },
       {
         "round": 23,
-        "rank": 7,
+        "rank": 8,
         "points": 30,
         "played": 23,
         "gd": 0
@@ -336,21 +336,21 @@
       },
       {
         "round": 25,
-        "rank": 7,
+        "rank": 8,
         "points": 33,
         "played": 25,
         "gd": -6
       },
       {
         "round": 26,
-        "rank": 7,
+        "rank": 8,
         "points": 34,
         "played": 26,
         "gd": -6
       },
       {
         "round": 27,
-        "rank": 8,
+        "rank": 9,
         "points": 34,
         "played": 27,
         "gd": -9
@@ -371,7 +371,7 @@
       },
       {
         "round": 30,
-        "rank": 8,
+        "rank": 9,
         "points": 38,
         "played": 30,
         "gd": -9
