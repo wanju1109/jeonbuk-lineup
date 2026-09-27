@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-27 04:18:12",
+  "generated_at": "2026-09-28 04:51:36",
   "season": 2026,
   "current_round": {
-    "K1": 22,
+    "K1": 31,
     "K2": 28
   },
   "method": {
@@ -21,25 +21,25 @@
   "summary": {
     "K1": {
       "wdl_hit": 75,
-      "wdl_total": 179,
-      "wdl_rate": 41.9,
-      "ou_hit": 98,
-      "ou_total": 179,
-      "ou_rate": 54.75,
+      "wdl_total": 180,
+      "wdl_rate": 41.67,
+      "ou_hit": 99,
+      "ou_total": 180,
+      "ou_rate": 55.0,
       "rates": {
-        "wdl": 41.9,
-        "ou25": 54.75
+        "wdl": 41.67,
+        "ou25": 55.0
       },
       "hits": {
         "wdl": {
           "hit": 75,
-          "total": 179,
-          "rate": 41.9
+          "total": 180,
+          "rate": 41.67
         },
         "ou25": {
-          "hit": 98,
-          "total": 179,
-          "rate": 54.75
+          "hit": 99,
+          "total": 180,
+          "rate": 55.0
         }
       },
       "by_round": {
@@ -422,20 +422,20 @@
           }
         },
         "22": {
-          "wdl_rate": 20.0,
-          "ou_rate": 60.0,
+          "wdl_rate": 16.67,
+          "ou_rate": 66.67,
           "rates": {
-            "wdl": 20.0,
-            "ou25": 60.0
+            "wdl": 16.67,
+            "ou25": 66.67
           },
           "raw": {
             "wdl": [
               1,
-              5
+              6
             ],
             "ou25": [
-              3,
-              5
+              4,
+              6
             ]
           }
         },
@@ -27854,8 +27854,11 @@
       "home": "강원 FC",
       "away": "인천 유나이티드",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        0,
+        0
+      ],
       "form": {
         "home": "LLWLD",
         "away": "DDDWL",
@@ -27889,8 +27892,14 @@
           "line": 2.5
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "무",
+        "ou25": "언더"
+      },
+      "hit": {
+        "wdl": false,
+        "ou25": true
+      },
       "reason": {
         "headline": "승무패 승 · U/O 2.5 언더 (신뢰 낮음)",
         "paragraphs": [
