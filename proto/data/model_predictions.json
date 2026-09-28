@@ -1436,7 +1436,7 @@
     "K1-31-대전 하나-전북 현대-2026-10-09": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-09T00:00:00+09:00",
       "pick": "패",
@@ -1524,13 +1524,36 @@
             "away_form": 1.229,
             "elo_difference": -24.4
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-09T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.3909191143384569,
+          "dist": {
+            "승": 0.34670784864877435,
+            "무": 0.26237303701276876,
+            "패": 0.3909191143384569
+          },
+          "evidence": {
+            "home_games": 142,
+            "away_games": 144,
+            "home_ppg": 1.45,
+            "away_ppg": 1.521,
+            "home_form": 1.514,
+            "away_form": 1.229,
+            "elo_difference": -24.4
+          }
         }
       ]
     },
     "K1-31-강원 FC-부천 FC-2026-10-09": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-09T00:00:00+09:00",
       "pick": "승",
@@ -1618,13 +1641,36 @@
             "away_form": 0.657,
             "elo_difference": 79.0
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-09T00:00:00+09:00",
+          "pick": "승",
+          "prob": 0.44155734753165093,
+          "dist": {
+            "승": 0.44155734753165093,
+            "무": 0.2807254751112104,
+            "패": 0.2777171773571387
+          },
+          "evidence": {
+            "home_games": 146,
+            "away_games": 32,
+            "home_ppg": 1.394,
+            "away_ppg": 1.14,
+            "home_form": 1.229,
+            "away_form": 0.657,
+            "elo_difference": 75.1
+          }
         }
       ]
     },
     "K1-31-인천 유나이티드-포항 스틸러스-2026-10-09": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-09T00:00:00+09:00",
       "pick": "승",
@@ -1712,13 +1758,36 @@
             "away_form": 1.229,
             "elo_difference": -32.3
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-09T00:00:00+09:00",
+          "pick": "승",
+          "prob": 0.40268214059725016,
+          "dist": {
+            "승": 0.40268214059725016,
+            "무": 0.3005354182918943,
+            "패": 0.29678244111085555
+          },
+          "evidence": {
+            "home_games": 104,
+            "away_games": 141,
+            "home_ppg": 1.278,
+            "away_ppg": 1.343,
+            "home_form": 1.086,
+            "away_form": 1.229,
+            "elo_difference": -28.4
+          }
         }
       ]
     },
     "K2-28-수원 FC-화성 FC-2026-10-09": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-09T00:00:00+09:00",
       "pick": "승",
@@ -1806,13 +1875,36 @@
             "away_form": 1.514,
             "elo_difference": 68.8
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-09T00:00:00+09:00",
+          "pick": "승",
+          "prob": 0.4826647948445232,
+          "dist": {
+            "승": 0.4826647948445232,
+            "무": 0.24396702001997503,
+            "패": 0.27336818513550176
+          },
+          "evidence": {
+            "home_games": 25,
+            "away_games": 65,
+            "home_ppg": 1.794,
+            "away_ppg": 1.476,
+            "home_form": 1.943,
+            "away_form": 1.514,
+            "elo_difference": 68.8
+          }
         }
       ]
     },
     "K2-28-충북 청주-성남 FC-2026-10-09": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-09T00:00:00+09:00",
       "pick": "패",
@@ -1900,13 +1992,36 @@
             "away_form": 1.514,
             "elo_difference": -78.9
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-09T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.4350357483074305,
+          "dist": {
+            "승": 0.28535842353303986,
+            "무": 0.2796058281595296,
+            "패": 0.4350357483074305
+          },
+          "evidence": {
+            "home_games": 137,
+            "away_games": 138,
+            "home_ppg": 1.109,
+            "away_ppg": 1.352,
+            "home_form": 1.371,
+            "away_form": 1.514,
+            "elo_difference": -78.9
+          }
         }
       ]
     },
     "K2-28-김포 FC-서울 이랜드-2026-10-09": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-09T00:00:00+09:00",
       "pick": "패",
@@ -1994,13 +2109,36 @@
             "away_form": 1.514,
             "elo_difference": -71.9
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-09T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.43614050695011863,
+          "dist": {
+            "승": 0.30089278704813693,
+            "무": 0.2629667060017445,
+            "패": 0.43614050695011863
+          },
+          "evidence": {
+            "home_games": 137,
+            "away_games": 139,
+            "home_ppg": 1.371,
+            "away_ppg": 1.698,
+            "home_form": 1.086,
+            "away_form": 1.514,
+            "elo_difference": -71.9
+          }
         }
       ]
     },
     "K1-31-FC 서울-제주 SK-2026-10-10": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-10T00:00:00+09:00",
       "pick": "승",
@@ -2065,13 +2203,36 @@
             "away_form": 1.943,
             "elo_difference": 76.6
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-10T00:00:00+09:00",
+          "pick": "승",
+          "prob": 0.4767389782719159,
+          "dist": {
+            "승": 0.4767389782719159,
+            "무": 0.2619268929991427,
+            "패": 0.2613341287289414
+          },
+          "evidence": {
+            "home_games": 141,
+            "away_games": 145,
+            "home_ppg": 1.734,
+            "away_ppg": 1.455,
+            "home_form": 1.657,
+            "away_form": 1.943,
+            "elo_difference": 76.6
+          }
         }
       ]
     },
     "K1-31-김천 상무-FC 안양-2026-10-10": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-10T00:00:00+09:00",
       "pick": "승",
@@ -2136,13 +2297,36 @@
             "away_form": 1.086,
             "elo_difference": 29.7
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-10T00:00:00+09:00",
+          "pick": "승",
+          "prob": 0.42279440551721964,
+          "dist": {
+            "승": 0.42279440551721964,
+            "무": 0.2571637882205044,
+            "패": 0.32004180626227585
+          },
+          "evidence": {
+            "home_games": 106,
+            "away_games": 67,
+            "home_ppg": 1.277,
+            "away_ppg": 1.272,
+            "home_form": 1.229,
+            "away_form": 1.086,
+            "elo_difference": 29.7
+          }
         }
       ]
     },
     "K2-28-전남 드래곤즈-용인 FC-2026-10-10": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-10T00:00:00+09:00",
       "pick": "패",
@@ -2207,13 +2391,36 @@
             "away_form": 1.086,
             "elo_difference": -35.4
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-10T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.38740811868281777,
+          "dist": {
+            "승": 0.3618474107411476,
+            "무": 0.25074447057603455,
+            "패": 0.38740811868281777
+          },
+          "evidence": {
+            "home_games": 138,
+            "away_games": 25,
+            "home_ppg": 1.158,
+            "away_ppg": 1.165,
+            "home_form": 1.514,
+            "away_form": 1.086,
+            "elo_difference": -35.4
+          }
         }
       ]
     },
     "K2-28-파주 프런티어-부산 아이파크-2026-10-10": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-10T00:00:00+09:00",
       "pick": "패",
@@ -2278,13 +2485,36 @@
             "away_form": 0.943,
             "elo_difference": -27.1
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-10T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.3704067638934681,
+          "dist": {
+            "승": 0.33305342412504385,
+            "무": 0.29653981198148804,
+            "패": 0.3704067638934681
+          },
+          "evidence": {
+            "home_games": 25,
+            "away_games": 138,
+            "home_ppg": 1.216,
+            "away_ppg": 1.378,
+            "home_form": 1.514,
+            "away_form": 0.943,
+            "elo_difference": -27.1
+          }
         }
       ]
     },
     "K2-28-천안 시티-경남 FC-2026-10-10": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-10T00:00:00+09:00",
       "pick": "패",
@@ -2349,13 +2579,36 @@
             "away_form": 1.657,
             "elo_difference": -92.5
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-10T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.4112208767544695,
+          "dist": {
+            "승": 0.31825890844715,
+            "무": 0.2705202147983805,
+            "패": 0.4112208767544695
+          },
+          "evidence": {
+            "home_games": 137,
+            "away_games": 138,
+            "home_ppg": 0.894,
+            "away_ppg": 1.293,
+            "home_form": 0.657,
+            "away_form": 1.657,
+            "elo_difference": -92.5
+          }
         }
       ]
     },
     "K2-28-김해 FC-충남 아산-2026-10-10": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-10T00:00:00+09:00",
       "pick": "패",
@@ -2420,13 +2673,36 @@
             "away_form": 1.229,
             "elo_difference": -115.2
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-10T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.583632730100725,
+          "dist": {
+            "승": 0.18307898020323257,
+            "무": 0.23328828969604232,
+            "패": 0.583632730100725
+          },
+          "evidence": {
+            "home_games": 25,
+            "away_games": 136,
+            "home_ppg": 0.718,
+            "away_ppg": 1.373,
+            "home_form": 0.514,
+            "away_form": 1.229,
+            "elo_difference": -115.2
+          }
         }
       ]
     },
     "K1-31-광주 FC-울산 HD-2026-10-11": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-11T00:00:00+09:00",
       "pick": "패",
@@ -2468,13 +2744,36 @@
             "away_form": 1.8,
             "elo_difference": -140.9
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-11T00:00:00+09:00",
+          "pick": "패",
+          "prob": 0.5805063748719117,
+          "dist": {
+            "승": 0.19451367765080904,
+            "무": 0.22497994747727929,
+            "패": 0.5805063748719117
+          },
+          "evidence": {
+            "home_games": 141,
+            "away_games": 141,
+            "home_ppg": 0.854,
+            "away_ppg": 1.428,
+            "home_form": 0.8,
+            "away_form": 1.8,
+            "elo_difference": -140.9
+          }
         }
       ]
     },
     "K2-28-수원 삼성-안산 그리너스-2026-10-11": {
       "version": "chronological-v2",
       "model": "poisson",
-      "generated_at": "2026-09-28T04:51:44.714629+09:00",
+      "generated_at": "2026-09-29T07:11:14.599680+09:00",
       "data_through": "2026-09-27",
       "kickoff": "2026-10-11T00:00:00+09:00",
       "pick": "승",
@@ -2516,12 +2815,35 @@
             "away_form": 0.8,
             "elo_difference": 294.8
           }
+        },
+        {
+          "version": "chronological-v2",
+          "model": "poisson",
+          "generated_at": "2026-09-28T04:51:44.714629+09:00",
+          "data_through": "2026-09-27",
+          "kickoff": "2026-10-11T00:00:00+09:00",
+          "pick": "승",
+          "prob": 0.7119787469976732,
+          "dist": {
+            "승": 0.7119787469976732,
+            "무": 0.1791195111905633,
+            "패": 0.10890174181176346
+          },
+          "evidence": {
+            "home_games": 100,
+            "away_games": 137,
+            "home_ppg": 1.885,
+            "away_ppg": 0.876,
+            "home_form": 2.229,
+            "away_form": 0.8,
+            "elo_difference": 294.8
+          }
         }
       ]
     }
   },
   "version": "chronological-v2",
   "mode": "shadow",
-  "updated_at": "2026-09-28T04:51:44.714629+09:00",
+  "updated_at": "2026-09-29T07:11:14.599680+09:00",
   "explanation": "Research forecasts, separate from saved picks. Daily refresh up to 24h before kickoff; past forecasts preserved."
 }
