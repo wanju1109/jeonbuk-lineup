@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-09-28T05:04:06+09:00",
+  "generated_at": "2026-09-29T07:30:12+09:00",
   "table": {
     "rank": 8,
     "teams": 12,
@@ -706,7 +706,7 @@
   ],
   "squad": {
     "size": 38,
-    "avg_age": 27.2,
+    "avg_age": 27.3,
     "foreign": 7,
     "top_scorers": [
       {
@@ -716,7 +716,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 26,
+        "apps": 27,
         "goals": 12,
         "assists": 1,
         "points": 13
@@ -740,7 +740,7 @@
         "position": "MF",
         "back_no": 11,
         "age": 35,
-        "apps": 29,
+        "apps": 30,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -764,7 +764,7 @@
         "position": "DF",
         "back_no": 2,
         "age": 31,
-        "apps": 27,
+        "apps": 28,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -777,8 +777,8 @@
         "name": "이주용",
         "position": "DF",
         "back_no": 32,
-        "age": 33,
-        "apps": 28,
+        "age": 34,
+        "apps": 29,
         "goals": 1,
         "assists": 4,
         "points": 5
@@ -790,7 +790,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 36,
-        "apps": 27,
+        "apps": 28,
         "goals": 1,
         "assists": 3,
         "points": 4
@@ -814,7 +814,7 @@
         "position": "MF",
         "back_no": 72,
         "age": 38,
-        "apps": 29,
+        "apps": 30,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -826,7 +826,7 @@
         "position": "DF",
         "back_no": 39,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 0,
         "assists": 2,
         "points": 2
