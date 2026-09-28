@@ -21,9 +21,10 @@ function questions(data,c,quick=false){validate(c);const candidates=pool(data,c.
  if(data.hintPolicy>=2){
   const category=h=>h[2]||(/팀|시즌|통산/.test(h[0])?'career':'profile');
   const distinguishes=h=>distractors.every(p=>!p.hints.some(x=>x[0]===h[0]&&x[1]===h[1]));
-  const highlight=data.hintPolicy>=4?hints.findIndex(h=>category(h)==='highlight'&&(!['jb','history'].includes(c.scope)||h[0].includes('전북'))&&distinguishes(h)):-1;
-  const jbFirst=data.hintPolicy>=3&&['jb','history'].includes(c.scope)?hints.findIndex(h=>h[0].includes('전북')&&distinguishes(h)):-1;
-  const preferred=highlight>=0?highlight:jbFirst>=0?jbFirst:hints.findIndex(h=>category(h)==='season'&&distinguishes(h));
+ const highlight=data.hintPolicy>=4?hints.findIndex(h=>category(h)==='highlight'&&(!['jb','history'].includes(c.scope)||h[0].includes('전북'))&&distinguishes(h)):-1;
+ const jbFirst=data.hintPolicy>=3&&['jb','history'].includes(c.scope)?hints.findIndex(h=>h[0].includes('전북')&&distinguishes(h)):-1;
+ const seasonFirst=data.hintPolicy>=5?hints.findIndex(h=>category(h)==='season'&&distinguishes(h)):-1;
+ const preferred=seasonFirst>=0?seasonFirst:highlight>=0?highlight:jbFirst>=0?jbFirst:hints.findIndex(h=>category(h)==='season'&&distinguishes(h));
   const record=preferred>=0?preferred:hints.findIndex(h=>category(h)==='career'&&distinguishes(h));
   if(record>=0){const [h]=hints.splice(record,1);hints.unshift(h);}
   const mixed=[hints.shift()];
