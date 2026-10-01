@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-01T06:23:57+09:00",
+  "generated_at": "2026-10-02T06:46:32+09:00",
   "table": {
     "rank": 10,
     "teams": 17,
@@ -247,7 +247,7 @@
       },
       {
         "round": 13,
-        "rank": 11,
+        "rank": 10,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -630,7 +630,7 @@
   ],
   "squad": {
     "size": 35,
-    "avg_age": 24.3,
+    "avg_age": 24.4,
     "foreign": 6,
     "top_scorers": [
       {
@@ -687,7 +687,7 @@
         "name": "유주안",
         "position": "FW",
         "back_no": 23,
-        "age": 27,
+        "age": 28,
         "apps": 24,
         "goals": 2,
         "assists": 1,
