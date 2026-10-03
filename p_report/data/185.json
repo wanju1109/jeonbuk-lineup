@@ -1,0 +1,1276 @@
+{
+  "meta": {
+    "game_id": "185",
+    "year": "2026",
+    "round": 31,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "김천",
+      "team_id": "K35"
+    },
+    "away": {
+      "name": "안양",
+      "team_id": "K27"
+    },
+    "opponent": "안양",
+    "ha": "H",
+    "jeonbuk_match": false,
+    "venue": "김천 종합",
+    "attendance_hint": {
+      "avg": 2192,
+      "games": 14,
+      "total": 30692
+    },
+    "kickoff": "2026-10-10T19:00:00+09:00",
+    "kickoff_label": "2026-10-10 19:00 KST",
+    "date_md": "10/10",
+    "label": "김천 VS 안양 (185, 10/10)",
+    "hours_to_kickoff": 166.1,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-10-03T20:52:44.213494+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "31R PREVIEW · 김천 vs 안양",
+  "thesis": "김천 vs 안양. 김천 최근 L D D D W, 안양 최근 D L L D W. 홈 김천이(가) 템포를 가져가며 xG 1.53 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "briefing": [
+    "김천 vs 안양. 김천 최근 L D D D W (1승 3무 1패 / 최근 5경기). 안양 최근 D L L D W (1승 2무 2패 / 최근 5경기).",
+    "최근 5경기 평균 — 김천 xG 1.53·슈팅 14.2, 안양 xG 0.94·슈팅 10.2. 패스 성공률 71.8% vs 73.2%.",
+    "올 시즌 맞대결 2경기 — 김천 기준 0승 2무 0패.",
+    "경기장 김천 종합 · 김천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
+    "선수 포커스 — 김천: 최근 가용 칠판 데이터 5경기 기준, 안양: 최근 가용 칠판 데이터 5경기 기준."
+  ],
+  "scout": {
+    "contrast": "김천은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 안양은(는) 비기는 흐름, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.53 vs 0.94, 슈팅 14.2 vs 10.2, 파이널 서드 터치 22.7% vs 20.9%입니다.",
+    "edge": [
+      "김천이(가) 최근 xG 1.53로 안양(0.94)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "홈 이점(김천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
+    ],
+    "risk": [
+      "조급한 장거리 슈팅은 금물. 기회가 비슷할수록 전환 수비 한 장면이 승부처입니다."
+    ],
+    "target": [
+      "중원 볼 경합과 측면 숫자 — 누가 더 넓게 펼치는지가 초반 분위기를 가릅니다.",
+      "첫 골 전후 템포 변화 — K리그는 선제골 이후 한 방 역습이 자주 나옵니다.",
+      "세트피스·코너 연결 — xG가 낮을수록 dead ball 비중이 커집니다."
+    ],
+    "caution": [
+      "안양 역습 첫 패스와 김천의 앞공간 커버."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 1.53,
+        "opponent": 0.94,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 2.01,
+        "opponent": 1.48,
+        "better": "opponent"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 14.2,
+        "opponent": 10.2,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 5.2,
+        "opponent": 3.0,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 71.8,
+        "opponent": 73.2,
+        "suffix": "%",
+        "better": "opponent"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 22.7,
+        "opponent": 20.9,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 22.0,
+        "opponent": 13.8,
+        "better": "jeonbuk"
+      }
+    ],
+    "summary": "최근 5경기 기준 — 김천 xG 1.53 / xGA 2.01, 안양 xG 0.94 / xGA 1.48."
+  },
+  "pulse": {
+    "home": {
+      "name": "김천",
+      "sample": 5,
+      "points": 6,
+      "ppg": 1.2,
+      "goals_pg": 1.4,
+      "conceded_pg": 1.4,
+      "xg_delta": -0.67,
+      "xg_sample": 5,
+      "clean_sheets": 2
+    },
+    "away": {
+      "name": "안양",
+      "sample": 5,
+      "points": 5,
+      "ppg": 1.0,
+      "goals_pg": 1.2,
+      "conceded_pg": 1.8,
+      "xg_delta": 1.3,
+      "xg_sample": 5,
+      "clean_sheets": 0
+    },
+    "verdict": "최근 승점 흐름은 팽팽합니다. 한 번의 전환·세트피스가 결과를 바꿀 수 있는 매치업입니다.",
+    "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"
+  },
+  "lineups": {
+    "home": {
+      "team": "김천",
+      "xi": [
+        {
+          "player_id": "20190154",
+          "name": "백종범",
+          "back_no": 1,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 513,
+          "score": 64.99
+        },
+        {
+          "player_id": "20200317",
+          "name": "변준수",
+          "back_no": 45,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 513,
+          "score": 64.99
+        },
+        {
+          "player_id": "20210136",
+          "name": "이강현",
+          "back_no": 56,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 499,
+          "score": 64.88
+        },
+        {
+          "player_id": "20230198",
+          "name": "이정택",
+          "back_no": 26,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 494,
+          "score": 64.82
+        },
+        {
+          "player_id": "20180096",
+          "name": "박태준",
+          "back_no": 55,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 466,
+          "score": 64.61
+        },
+        {
+          "player_id": "20180123",
+          "name": "고재현",
+          "back_no": 7,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 440,
+          "score": 64.38
+        },
+        {
+          "player_id": "20230332",
+          "name": "홍윤상",
+          "back_no": 48,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 342,
+          "score": 53.22
+        },
+        {
+          "player_id": "20230049",
+          "name": "박세진",
+          "back_no": 14,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 297,
+          "score": 52.77
+        },
+        {
+          "player_id": "20180324",
+          "name": "김태환",
+          "back_no": 11,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 401,
+          "score": 46.96
+        },
+        {
+          "player_id": "20220139",
+          "name": "박철우",
+          "back_no": 3,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 409,
+          "score": 43.99
+        },
+        {
+          "player_id": "20230157",
+          "name": "정재민",
+          "back_no": 57,
+          "pos": "FW",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 260,
+          "score": 39.73
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20200164",
+          "name": "이건희",
+          "back_no": 9,
+          "pos": "FW",
+          "starts": 2,
+          "apps": 3,
+          "minutes": 243,
+          "score": 28.23
+        },
+        {
+          "player_id": "20200105",
+          "name": "홍시후",
+          "back_no": 42,
+          "pos": "DF",
+          "starts": 1,
+          "apps": 3,
+          "minutes": 143,
+          "score": 24.39
+        },
+        {
+          "player_id": "20210227",
+          "name": "김이석",
+          "back_no": 8,
+          "pos": "FW",
+          "starts": 1,
+          "apps": 5,
+          "minutes": 198,
+          "score": 21.18
+        },
+        {
+          "player_id": "20190022",
+          "name": "박민서",
+          "back_no": 44,
+          "pos": "DF",
+          "starts": 1,
+          "apps": 1,
+          "minutes": 73,
+          "score": 20.73
+        },
+        {
+          "player_id": "20230103",
+          "name": "김주찬",
+          "back_no": 17,
+          "pos": "MF",
+          "starts": 1,
+          "apps": 4,
+          "minutes": 129,
+          "score": 19.29
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "excluded": [],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다."
+    },
+    "away": {
+      "team": "안양",
+      "xi": [
+        {
+          "player_id": "20190375",
+          "name": "김정훈",
+          "back_no": 23,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 521,
+          "score": 64.99
+        },
+        {
+          "player_id": "20130191",
+          "name": "이창용",
+          "back_no": 4,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 521,
+          "score": 64.99
+        },
+        {
+          "player_id": "20180108",
+          "name": "강지훈",
+          "back_no": 17,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 521,
+          "score": 64.99
+        },
+        {
+          "player_id": "20260346",
+          "name": "크네제비치",
+          "back_no": 18,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 451,
+          "score": 64.3
+        },
+        {
+          "player_id": "20130102",
+          "name": "권경원",
+          "back_no": 21,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 472,
+          "score": 54.36
+        },
+        {
+          "player_id": "20240078",
+          "name": "마테우스",
+          "back_no": 7,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 446,
+          "score": 54.11
+        },
+        {
+          "player_id": "20160073",
+          "name": "김정현",
+          "back_no": 8,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 303,
+          "score": 51.03
+        },
+        {
+          "player_id": "20140135",
+          "name": "김동진",
+          "back_no": 22,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 403,
+          "score": 47.92
+        },
+        {
+          "player_id": "20250365",
+          "name": "유키치",
+          "back_no": 10,
+          "pos": "FW",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 306,
+          "score": 43.06
+        },
+        {
+          "player_id": "20240243",
+          "name": "채현우",
+          "back_no": 71,
+          "pos": "FW",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 168,
+          "score": 40.68
+        },
+        {
+          "player_id": "20200170",
+          "name": "최건주",
+          "back_no": 27,
+          "pos": "FW",
+          "starts": 3,
+          "apps": 5,
+          "minutes": 331,
+          "score": 32.71
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20260090",
+          "name": "엘쿠라노",
+          "back_no": 9,
+          "pos": "FW",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 177,
+          "score": 29.77
+        },
+        {
+          "player_id": "20240084",
+          "name": "김운",
+          "back_no": 19,
+          "pos": "FW",
+          "starts": 1,
+          "apps": 3,
+          "minutes": 226,
+          "score": 26.45
+        },
+        {
+          "player_id": "20260091",
+          "name": "아일톤",
+          "back_no": 11,
+          "pos": "FW",
+          "starts": 1,
+          "apps": 2,
+          "minutes": 115,
+          "score": 23.55
+        },
+        {
+          "player_id": "20200084",
+          "name": "이진용",
+          "back_no": 26,
+          "pos": "MF",
+          "starts": 1,
+          "apps": 4,
+          "minutes": 140,
+          "score": 20.0
+        },
+        {
+          "player_id": "20260092",
+          "name": "김재현",
+          "back_no": 25,
+          "pos": "DF",
+          "starts": 1,
+          "apps": 3,
+          "minutes": 132,
+          "score": 19.12
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "excluded": [],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다."
+    }
+  },
+  "h2h_summary": {
+    "wins": 0,
+    "draws": 2,
+    "losses": 0,
+    "games": 2
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "151",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-29",
+        "home": "울산",
+        "away": "김천",
+        "score": "3:1",
+        "result": "L",
+        "opponent": "울산",
+        "ha": "A",
+        "xg": 1.02,
+        "xga": 3.79,
+        "shots": 12,
+        "sot": 6,
+        "goals_for": 1,
+        "goals_against": 3,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 56.7,
+        "final_third_pct": 30.5,
+        "presses": 30,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "162",
+        "year": "2026",
+        "round": 27,
+        "date": "2026-09-06",
+        "home": "김천",
+        "away": "광주",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "광주",
+        "ha": "H",
+        "xg": 2.4,
+        "xga": 1.81,
+        "shots": 22,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 78.1,
+        "final_third_pct": 27.3,
+        "presses": 22,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "168",
+        "year": "2026",
+        "round": 28,
+        "date": "2026-09-09",
+        "home": "포항",
+        "away": "김천",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "포항",
+        "ha": "A",
+        "xg": 0.79,
+        "xga": 1.46,
+        "shots": 10,
+        "sot": 1,
+        "goals_for": 0,
+        "goals_against": 0,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 72.9,
+        "final_third_pct": 14.4,
+        "presses": 18,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "173",
+        "year": "2026",
+        "round": 29,
+        "date": "2026-09-13",
+        "home": "김천",
+        "away": "강원",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "강원",
+        "ha": "H",
+        "xg": 1.34,
+        "xga": 1.6,
+        "shots": 11,
+        "sot": 5,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 70.7,
+        "final_third_pct": 16.5,
+        "presses": 14,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "175",
+        "year": "2026",
+        "round": 30,
+        "date": "2026-09-19",
+        "home": "부천",
+        "away": "김천",
+        "score": "0:2",
+        "result": "W",
+        "opponent": "부천",
+        "ha": "A",
+        "xg": 2.12,
+        "xga": 1.39,
+        "shots": 16,
+        "sot": 8,
+        "goals_for": 2,
+        "goals_against": 0,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 80.8,
+        "final_third_pct": 24.6,
+        "presses": 26,
+        "stats_source": "portal"
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "152",
+        "year": "2026",
+        "round": 26,
+        "date": "2026-08-29",
+        "home": "부천",
+        "away": "안양",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "부천",
+        "ha": "A",
+        "xg": 0.58,
+        "xga": 1.09,
+        "shots": 12,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 76.9,
+        "final_third_pct": 23.7,
+        "presses": 9,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "161",
+        "year": "2026",
+        "round": 27,
+        "date": "2026-09-06",
+        "home": "안양",
+        "away": "강원",
+        "score": "0:3",
+        "result": "L",
+        "opponent": "강원",
+        "ha": "H",
+        "xg": 0.28,
+        "xga": 1.37,
+        "shots": 7,
+        "sot": 0,
+        "goals_for": 0,
+        "goals_against": 3,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 78.0,
+        "final_third_pct": 22.0,
+        "presses": 22,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "165",
+        "year": "2026",
+        "round": 28,
+        "date": "2026-09-09",
+        "home": "대전",
+        "away": "안양",
+        "score": "3:2",
+        "result": "L",
+        "opponent": "대전",
+        "ha": "A",
+        "xg": 1.24,
+        "xga": 1.79,
+        "shots": 7,
+        "sot": 2,
+        "goals_for": 2,
+        "goals_against": 3,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 64.4,
+        "final_third_pct": 15.0,
+        "presses": 12,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "174",
+        "year": "2026",
+        "round": 29,
+        "date": "2026-09-13",
+        "home": "광주",
+        "away": "안양",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "광주",
+        "ha": "A",
+        "xg": 1.1,
+        "xga": 1.55,
+        "shots": 14,
+        "sot": 3,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 79.7,
+        "final_third_pct": 19.9,
+        "presses": 14,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "176",
+        "year": "2026",
+        "round": 30,
+        "date": "2026-09-19",
+        "home": "안양",
+        "away": "울산",
+        "score": "2:1",
+        "result": "W",
+        "opponent": "울산",
+        "ha": "H",
+        "xg": 1.5,
+        "xga": 1.58,
+        "shots": 11,
+        "sot": 6,
+        "goals_for": 2,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 66.8,
+        "final_third_pct": 23.9,
+        "presses": 12,
+        "stats_source": "portal"
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "42",
+      "round": 7,
+      "date": "2026-04-12",
+      "home": "김천",
+      "away": "안양",
+      "score": "1:1",
+      "result": "D",
+      "venue": "김천 종합"
+    },
+    {
+      "game_id": "83",
+      "round": 14,
+      "date": "2026-05-13",
+      "home": "안양",
+      "away": "김천",
+      "score": "2:2",
+      "result": "D",
+      "venue": "안양 종합"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "김천",
+      "team_id": "K35",
+      "tags": [
+        "비기는 흐름",
+        "기회 창출↑",
+        "슈팅 많음",
+        "수비 기회 허용",
+        "적극 압박"
+      ],
+      "record": "1승 3무 1패 / 최근 5경기",
+      "goals_for": 7,
+      "goals_against": 7,
+      "goal_diff": 0,
+      "avg_xg": 1.53,
+      "avg_xga": 2.01,
+      "avg_shots": 14.2,
+      "avg_sot": 5.2,
+      "avg_pass_pct": 71.8,
+      "avg_final_third_pct": 22.7,
+      "avg_presses": 22.0,
+      "avg_x": 50.0,
+      "samples": 5
+    },
+    "opponent": {
+      "name": "안양",
+      "team_id": "K27",
+      "tags": [
+        "비기는 흐름",
+        "수비 기회 허용",
+        "낮은 블록형"
+      ],
+      "record": "1승 2무 2패 / 최근 5경기",
+      "goals_for": 6,
+      "goals_against": 9,
+      "goal_diff": -3,
+      "avg_xg": 0.94,
+      "avg_xga": 1.48,
+      "avg_shots": 10.2,
+      "avg_sot": 3.0,
+      "avg_pass_pct": 73.2,
+      "avg_final_third_pct": 20.9,
+      "avg_presses": 13.8,
+      "avg_x": 50.0,
+      "samples": 5
+    }
+  },
+  "players": {
+    "jeonbuk": [
+      {
+        "player_id": "20180096",
+        "name": "박태준",
+        "back_no": 55,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.02,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 12,
+        "touches": 362,
+        "press": 26,
+        "minutes": 466,
+        "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "stat_line": "최근 5경기 · xG 0.02 · 골 0 · 슈팅 1 · 키패스 12 · 압박 26 · 터치 362"
+      },
+      {
+        "player_id": "20230049",
+        "name": "박세진",
+        "back_no": 14,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.7,
+        "goals": 1,
+        "shots": 6,
+        "keypass": 4,
+        "touches": 149,
+        "press": 10,
+        "minutes": 297,
+        "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "stat_line": "최근 5경기 · xG 0.7 · 골 1 · 슈팅 6 · 키패스 4 · 압박 10 · 터치 149"
+      },
+      {
+        "player_id": "20180123",
+        "name": "고재현",
+        "back_no": 7,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.94,
+        "goals": 0,
+        "shots": 11,
+        "keypass": 3,
+        "touches": 173,
+        "press": 12,
+        "minutes": 440,
+        "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "stat_line": "최근 5경기 · xG 0.94 · 골 0 · 슈팅 11 · 키패스 3 · 압박 12 · 터치 173"
+      },
+      {
+        "player_id": "20230332",
+        "name": "홍윤상",
+        "back_no": 48,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.32,
+        "goals": 0,
+        "shots": 4,
+        "keypass": 6,
+        "touches": 175,
+        "press": 7,
+        "minutes": 342,
+        "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "stat_line": "최근 5경기 · xG 0.32 · 골 0 · 슈팅 4 · 키패스 6 · 압박 7 · 터치 175"
+      }
+    ],
+    "opponent_danger": [
+      {
+        "player_id": "20240078",
+        "name": "마테우스",
+        "back_no": 7,
+        "pos": "MF",
+        "games": 5,
+        "xg": 1.74,
+        "goals": 1,
+        "shots": 18,
+        "keypass": 6,
+        "touches": 225,
+        "press": 10,
+        "minutes": 446,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 1.74 · 골 1 · 슈팅 18 · 키패스 6 · 압박 10 · 터치 225"
+      },
+      {
+        "player_id": "20200170",
+        "name": "최건주",
+        "back_no": 27,
+        "pos": "대기",
+        "games": 5,
+        "xg": 0.6,
+        "goals": 1,
+        "shots": 2,
+        "keypass": 4,
+        "touches": 121,
+        "press": 1,
+        "minutes": 331,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 0.6 · 골 1 · 슈팅 2 · 키패스 4 · 터치 121"
+      },
+      {
+        "player_id": "20250365",
+        "name": "유키치",
+        "back_no": 10,
+        "pos": "FW",
+        "games": 4,
+        "xg": 0.31,
+        "goals": 0,
+        "shots": 5,
+        "keypass": 5,
+        "touches": 128,
+        "press": 18,
+        "minutes": 306,
+        "note": "키패스 각을 막는 것이 실점 예방. 받는 발·턴 방향을 먼저 차단하세요.",
+        "stat_line": "최근 4경기 · xG 0.31 · 골 0 · 슈팅 5 · 키패스 5 · 압박 18 · 터치 128"
+      },
+      {
+        "player_id": "20140135",
+        "name": "김동진",
+        "back_no": 22,
+        "pos": "DF",
+        "games": 4,
+        "xg": 0.18,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 2,
+        "touches": 226,
+        "press": 14,
+        "minutes": 403,
+        "note": "전방 압박으로 빌드업을 흔드는 타입. 첫 패스 실수를 유도당하지 마세요.",
+        "stat_line": "최근 4경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 2 · 압박 14 · 터치 226"
+      }
+    ],
+    "opponent_hub": [
+      {
+        "player_id": "20180108",
+        "name": "강지훈",
+        "back_no": 17,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.04,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 2,
+        "touches": 351,
+        "press": 4,
+        "minutes": 521,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 2 · 터치 351"
+      },
+      {
+        "player_id": "20260346",
+        "name": "크네제비치",
+        "back_no": 18,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.17,
+        "goals": 0,
+        "shots": 3,
+        "keypass": 2,
+        "touches": 223,
+        "press": 0,
+        "minutes": 451,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.17 · 골 0 · 슈팅 3 · 키패스 2 · 터치 223"
+      },
+      {
+        "player_id": "20130191",
+        "name": "이창용",
+        "back_no": 4,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.43,
+        "goals": 1,
+        "shots": 3,
+        "keypass": 0,
+        "touches": 372,
+        "press": 1,
+        "minutes": 521,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.43 · 골 1 · 슈팅 3 · 키패스 0 · 터치 372"
+      },
+      {
+        "player_id": "20130102",
+        "name": "권경원",
+        "back_no": 21,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.04,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 0,
+        "touches": 318,
+        "press": 0,
+        "minutes": 472,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 0 · 터치 318"
+      }
+    ],
+    "meta": {
+      "jeonbuk": {
+        "games": 5,
+        "sample_note": "최근 가용 칠판 데이터 5경기 기준",
+        "game_ids": [
+          "123",
+          "130",
+          "136",
+          "142",
+          "146"
+        ]
+      },
+      "opponent": {
+        "games": 5,
+        "sample_note": "최근 가용 칠판 데이터 5경기 기준",
+        "game_ids": [
+          "117",
+          "124",
+          "127",
+          "134",
+          "139"
+        ]
+      }
+    }
+  },
+  "cards": [
+    {
+      "key": "jb_key",
+      "label": "김천 핵심 선수",
+      "items": [
+        "#55 박태준 — 최근 5경기 · xG 0.02 · 골 0 · 슈팅 1 · 키패스 12 · 압박 26 · 터치 362. 키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "#14 박세진 — 최근 5경기 · xG 0.7 · 골 1 · 슈팅 6 · 키패스 4 · 압박 10 · 터치 149. 마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "#7 고재현 — 최근 5경기 · xG 0.94 · 골 0 · 슈팅 11 · 키패스 3 · 압박 12 · 터치 173. 마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "#48 홍윤상 — 최근 5경기 · xG 0.32 · 골 0 · 슈팅 4 · 키패스 6 · 압박 7 · 터치 175. 키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다."
+      ],
+      "players": [
+        {
+          "player_id": "20180096",
+          "name": "박태준",
+          "back_no": 55,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.02,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 12,
+          "touches": 362,
+          "press": 26,
+          "minutes": 466,
+          "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+          "stat_line": "최근 5경기 · xG 0.02 · 골 0 · 슈팅 1 · 키패스 12 · 압박 26 · 터치 362"
+        },
+        {
+          "player_id": "20230049",
+          "name": "박세진",
+          "back_no": 14,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.7,
+          "goals": 1,
+          "shots": 6,
+          "keypass": 4,
+          "touches": 149,
+          "press": 10,
+          "minutes": 297,
+          "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+          "stat_line": "최근 5경기 · xG 0.7 · 골 1 · 슈팅 6 · 키패스 4 · 압박 10 · 터치 149"
+        },
+        {
+          "player_id": "20180123",
+          "name": "고재현",
+          "back_no": 7,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.94,
+          "goals": 0,
+          "shots": 11,
+          "keypass": 3,
+          "touches": 173,
+          "press": 12,
+          "minutes": 440,
+          "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+          "stat_line": "최근 5경기 · xG 0.94 · 골 0 · 슈팅 11 · 키패스 3 · 압박 12 · 터치 173"
+        },
+        {
+          "player_id": "20230332",
+          "name": "홍윤상",
+          "back_no": 48,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.32,
+          "goals": 0,
+          "shots": 4,
+          "keypass": 6,
+          "touches": 175,
+          "press": 7,
+          "minutes": 342,
+          "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+          "stat_line": "최근 5경기 · xG 0.32 · 골 0 · 슈팅 4 · 키패스 6 · 압박 7 · 터치 175"
+        }
+      ]
+    },
+    {
+      "key": "opp_watch",
+      "label": "조심할 안양 선수",
+      "items": [
+        "#7 마테우스 — 최근 5경기 · xG 1.74 · 골 1 · 슈팅 18 · 키패스 6 · 압박 10 · 터치 225. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "#27 최건주 — 최근 5경기 · xG 0.6 · 골 1 · 슈팅 2 · 키패스 4 · 터치 121. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "#10 유키치 — 최근 4경기 · xG 0.31 · 골 0 · 슈팅 5 · 키패스 5 · 압박 18 · 터치 128. 키패스 각을 막는 것이 실점 예방. 받는 발·턴 방향을 먼저 차단하세요.",
+        "#22 김동진 — 최근 4경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 2 · 압박 14 · 터치 226. 전방 압박으로 빌드업을 흔드는 타입. 첫 패스 실수를 유도당하지 마세요."
+      ],
+      "players": [
+        {
+          "player_id": "20240078",
+          "name": "마테우스",
+          "back_no": 7,
+          "pos": "MF",
+          "games": 5,
+          "xg": 1.74,
+          "goals": 1,
+          "shots": 18,
+          "keypass": 6,
+          "touches": 225,
+          "press": 10,
+          "minutes": 446,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 1.74 · 골 1 · 슈팅 18 · 키패스 6 · 압박 10 · 터치 225"
+        },
+        {
+          "player_id": "20200170",
+          "name": "최건주",
+          "back_no": 27,
+          "pos": "대기",
+          "games": 5,
+          "xg": 0.6,
+          "goals": 1,
+          "shots": 2,
+          "keypass": 4,
+          "touches": 121,
+          "press": 1,
+          "minutes": 331,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 0.6 · 골 1 · 슈팅 2 · 키패스 4 · 터치 121"
+        },
+        {
+          "player_id": "20250365",
+          "name": "유키치",
+          "back_no": 10,
+          "pos": "FW",
+          "games": 4,
+          "xg": 0.31,
+          "goals": 0,
+          "shots": 5,
+          "keypass": 5,
+          "touches": 128,
+          "press": 18,
+          "minutes": 306,
+          "note": "키패스 각을 막는 것이 실점 예방. 받는 발·턴 방향을 먼저 차단하세요.",
+          "stat_line": "최근 4경기 · xG 0.31 · 골 0 · 슈팅 5 · 키패스 5 · 압박 18 · 터치 128"
+        },
+        {
+          "player_id": "20140135",
+          "name": "김동진",
+          "back_no": 22,
+          "pos": "DF",
+          "games": 4,
+          "xg": 0.18,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 2,
+          "touches": 226,
+          "press": 14,
+          "minutes": 403,
+          "note": "전방 압박으로 빌드업을 흔드는 타입. 첫 패스 실수를 유도당하지 마세요.",
+          "stat_line": "최근 4경기 · xG 0.18 · 골 0 · 슈팅 1 · 키패스 2 · 압박 14 · 터치 226"
+        }
+      ]
+    },
+    {
+      "key": "opp_hub",
+      "label": "최근 안양 전개 중심",
+      "items": [
+        "#17 강지훈 — 최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 2 · 터치 351. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "#18 크네제비치 — 최근 5경기 · xG 0.17 · 골 0 · 슈팅 3 · 키패스 2 · 터치 223. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "#4 이창용 — 최근 5경기 · xG 0.43 · 골 1 · 슈팅 3 · 키패스 0 · 터치 372. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "#21 권경원 — 최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 0 · 터치 318. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다."
+      ],
+      "players": [
+        {
+          "player_id": "20180108",
+          "name": "강지훈",
+          "back_no": 17,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.04,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 2,
+          "touches": 351,
+          "press": 4,
+          "minutes": 521,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 2 · 터치 351"
+        },
+        {
+          "player_id": "20260346",
+          "name": "크네제비치",
+          "back_no": 18,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.17,
+          "goals": 0,
+          "shots": 3,
+          "keypass": 2,
+          "touches": 223,
+          "press": 0,
+          "minutes": 451,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.17 · 골 0 · 슈팅 3 · 키패스 2 · 터치 223"
+        },
+        {
+          "player_id": "20130191",
+          "name": "이창용",
+          "back_no": 4,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.43,
+          "goals": 1,
+          "shots": 3,
+          "keypass": 0,
+          "touches": 372,
+          "press": 1,
+          "minutes": 521,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.43 · 골 1 · 슈팅 3 · 키패스 0 · 터치 372"
+        },
+        {
+          "player_id": "20130102",
+          "name": "권경원",
+          "back_no": 21,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.04,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 0,
+          "touches": 318,
+          "press": 0,
+          "minutes": 472,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.04 · 골 0 · 슈팅 1 · 키패스 0 · 터치 318"
+        }
+      ]
+    },
+    {
+      "key": "prep",
+      "label": "매치업 대비 포인트",
+      "items": [
+        "안양은(는) 낮은 블록·후방 점유 비중이 큽니다. 중앙 고집보다 측면 오버랩 후 컷백·하프스페이스 침투로 박스를 열어야 합니다.",
+        "안양 허용 xG 1.48로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
+        "안양 최근 비기는 흐름입니다. 선제골 이후 템포를 죽이지 말고 두 번째 슈팅 루트까지 밀어붙여야 승점 3이 열립니다.",
+        "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요."
+      ],
+      "players": []
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다. 선수 포커스는 가용 칠판 경기 기준입니다."
+}
