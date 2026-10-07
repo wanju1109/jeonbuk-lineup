@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-07T06:35:52+09:00",
+  "generated_at": "2026-10-08T06:56:28+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -705,8 +705,8 @@
     }
   ],
   "squad": {
-    "size": 36,
-    "avg_age": 25.1,
+    "size": 34,
+    "avg_age": 25.0,
     "foreign": 0,
     "top_scorers": [
       {
@@ -796,18 +796,6 @@
         "points": 5
       },
       {
-        "player_id": "20230198",
-        "departed": false,
-        "name": "이정택",
-        "position": "DF",
-        "back_no": 26,
-        "age": 28,
-        "apps": 27,
-        "goals": 1,
-        "assists": 3,
-        "points": 4
-      },
-      {
         "player_id": "20200164",
         "departed": false,
         "name": "이건희",
@@ -827,6 +815,18 @@
         "back_no": 49,
         "age": 28,
         "apps": 7,
+        "goals": 0,
+        "assists": 2,
+        "points": 2
+      },
+      {
+        "player_id": "20230157",
+        "departed": false,
+        "name": "정재민",
+        "position": "FW",
+        "back_no": 57,
+        "age": 24,
+        "apps": 16,
         "goals": 0,
         "assists": 2,
         "points": 2

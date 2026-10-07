@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-10-07T06:35:53+09:00",
+  "generated_at": "2026-10-08T06:56:30+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
@@ -177,7 +177,7 @@
       },
       {
         "round": 3,
-        "rank": 11,
+        "rank": 10,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -673,7 +673,7 @@
         "player_id": "20260115",
         "departed": false,
         "name": "유재준",
-        "position": "MF",
+        "position": "FW",
         "back_no": 19,
         "age": 22,
         "apps": 23,
@@ -699,7 +699,7 @@
         "player_id": "20260115",
         "departed": false,
         "name": "유재준",
-        "position": "MF",
+        "position": "FW",
         "back_no": 19,
         "age": 22,
         "apps": 23,

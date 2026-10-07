@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-10-07T06:35:51+09:00",
+  "generated_at": "2026-10-08T06:56:28+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -217,7 +217,7 @@
       },
       {
         "round": 8,
-        "rank": 7,
+        "rank": 8,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -705,8 +705,8 @@
     }
   ],
   "squad": {
-    "size": 41,
-    "avg_age": 27.4,
+    "size": 42,
+    "avg_age": 27.5,
     "foreign": 6,
     "top_scorers": [
       {
@@ -820,16 +820,16 @@
         "points": 8
       },
       {
-        "player_id": "20160178",
+        "player_id": "20230198",
         "departed": false,
-        "name": "정재희",
-        "position": "FW",
-        "back_no": 27,
-        "age": 32,
-        "apps": 23,
-        "goals": 8,
-        "assists": 2,
-        "points": 10
+        "name": "이정택",
+        "position": "DF",
+        "back_no": 26,
+        "age": 28,
+        "apps": 27,
+        "goals": 1,
+        "assists": 3,
+        "points": 4
       }
     ],
     "goal_share": 0.174
