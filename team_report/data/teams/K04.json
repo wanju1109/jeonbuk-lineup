@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-08T06:56:27+09:00",
+  "generated_at": "2026-10-09T07:00:10+09:00",
   "table": {
     "rank": 3,
     "teams": 12,
@@ -168,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -217,7 +217,7 @@
       },
       {
         "round": 8,
-        "rank": 7,
+        "rank": 8,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -705,8 +705,8 @@
     }
   ],
   "squad": {
-    "size": 35,
-    "avg_age": 25.6,
+    "size": 34,
+    "avg_age": 25.8,
     "foreign": 6,
     "top_scorers": [
       {
@@ -720,6 +720,18 @@
         "goals": 6,
         "assists": 3,
         "points": 9
+      },
+      {
+        "player_id": "20200164",
+        "departed": false,
+        "name": "이건희",
+        "position": "FW",
+        "back_no": 10,
+        "age": 28,
+        "apps": 28,
+        "goals": 5,
+        "assists": 2,
+        "points": 7
       },
       {
         "player_id": "20260359",
@@ -756,18 +768,6 @@
         "goals": 3,
         "assists": 0,
         "points": 3
-      },
-      {
-        "player_id": "20210108",
-        "departed": false,
-        "name": "오재혁",
-        "position": "MF",
-        "back_no": 14,
-        "age": 24,
-        "apps": 16,
-        "goals": 2,
-        "assists": 2,
-        "points": 4
       }
     ],
     "top_assists": [
@@ -808,25 +808,25 @@
         "points": 6
       },
       {
-        "player_id": "20210108",
+        "player_id": "20200164",
         "departed": false,
-        "name": "오재혁",
-        "position": "MF",
-        "back_no": 14,
-        "age": 24,
-        "apps": 16,
-        "goals": 2,
+        "name": "이건희",
+        "position": "FW",
+        "back_no": 10,
+        "age": 28,
+        "apps": 28,
+        "goals": 5,
         "assists": 2,
-        "points": 4
+        "points": 7
       },
       {
-        "player_id": "20250095",
+        "player_id": "20250094",
         "departed": false,
-        "name": "김준하",
-        "position": "MF",
-        "back_no": 27,
-        "age": 20,
-        "apps": 21,
+        "name": "최병욱",
+        "position": "FW",
+        "back_no": 24,
+        "age": 21,
+        "apps": 24,
         "goals": 1,
         "assists": 2,
         "points": 3

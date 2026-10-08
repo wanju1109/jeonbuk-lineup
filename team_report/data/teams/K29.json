@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-08T06:56:29+09:00",
+  "generated_at": "2026-10-09T07:00:11+09:00",
   "table": {
     "rank": 2,
     "teams": 17,
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -629,7 +629,7 @@
     }
   ],
   "squad": {
-    "size": 49,
+    "size": 50,
     "avg_age": 24.6,
     "foreign": 4,
     "top_scorers": [
@@ -744,16 +744,16 @@
         "points": 5
       },
       {
-        "player_id": "20160096",
+        "player_id": "20220139",
         "departed": false,
-        "name": "서재민",
-        "position": "MF",
-        "back_no": 22,
+        "name": "박철우",
+        "position": "DF",
+        "back_no": 59,
         "age": 28,
-        "apps": 23,
-        "goals": 1,
+        "apps": 26,
+        "goals": 2,
         "assists": 3,
-        "points": 4
+        "points": 5
       }
     ],
     "goal_share": 0.26

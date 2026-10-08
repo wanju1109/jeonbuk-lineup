@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-08T06:56:29+09:00",
+  "generated_at": "2026-10-09T07:00:11+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
@@ -640,8 +640,8 @@
     }
   ],
   "squad": {
-    "size": 48,
-    "avg_age": 25.4,
+    "size": 47,
+    "avg_age": 25.5,
     "foreign": 9,
     "top_scorers": [
       {

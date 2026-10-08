@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-08T06:56:29+09:00",
+  "generated_at": "2026-10-09T07:00:11+09:00",
   "table": {
     "rank": 9,
     "teams": 17,
@@ -163,7 +163,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 13,
+        "rank": 14,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -629,7 +629,7 @@
     }
   ],
   "squad": {
-    "size": 41,
+    "size": 42,
     "avg_age": 24.3,
     "foreign": 5,
     "top_scorers": [

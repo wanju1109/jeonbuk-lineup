@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-10-08T06:56:28+09:00",
+  "generated_at": "2026-10-09T07:00:10+09:00",
   "table": {
     "rank": 8,
     "teams": 12,
@@ -705,7 +705,7 @@
     }
   ],
   "squad": {
-    "size": 38,
+    "size": 37,
     "avg_age": 27.3,
     "foreign": 7,
     "top_scorers": [

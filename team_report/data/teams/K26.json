@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-10-08T06:56:28+09:00",
+  "generated_at": "2026-10-09T07:00:11+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
@@ -705,8 +705,8 @@
     }
   ],
   "squad": {
-    "size": 36,
-    "avg_age": 27.0,
+    "size": 35,
+    "avg_age": 27.1,
     "foreign": 7,
     "top_scorers": [
       {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-10-08T06:56:29+09:00",
+  "generated_at": "2026-10-09T07:00:11+09:00",
   "table": {
     "rank": 3,
     "teams": 17,
@@ -640,7 +640,7 @@
     }
   ],
   "squad": {
-    "size": 35,
+    "size": 34,
     "avg_age": 24.7,
     "foreign": 5,
     "top_scorers": [
@@ -681,18 +681,6 @@
         "points": 5
       },
       {
-        "player_id": "20210175",
-        "departed": false,
-        "name": "변경준",
-        "position": "FW",
-        "back_no": 11,
-        "age": 24,
-        "apps": 12,
-        "goals": 3,
-        "assists": 2,
-        "points": 5
-      },
-      {
         "player_id": "20260290",
         "departed": false,
         "name": "안주완",
@@ -703,6 +691,18 @@
         "goals": 3,
         "assists": 0,
         "points": 3
+      },
+      {
+        "player_id": "20220189",
+        "departed": false,
+        "name": "오인표",
+        "position": "DF",
+        "back_no": 13,
+        "age": 29,
+        "apps": 23,
+        "goals": 2,
+        "assists": 4,
+        "points": 6
       }
     ],
     "top_assists": [
@@ -755,16 +755,16 @@
         "points": 5
       },
       {
-        "player_id": "20210175",
+        "player_id": "20250344",
         "departed": false,
-        "name": "변경준",
+        "name": "까리우스",
         "position": "FW",
-        "back_no": 11,
-        "age": 24,
-        "apps": 12,
-        "goals": 3,
+        "back_no": 10,
+        "age": 29,
+        "apps": 14,
+        "goals": 2,
         "assists": 2,
-        "points": 5
+        "points": 4
       }
     ],
     "goal_share": 0.222
