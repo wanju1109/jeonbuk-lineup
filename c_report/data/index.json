@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T18:25:43.627935+00:00",
+  "updated_at": "2026-10-09T19:53:33.502973+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -462,7 +462,9 @@
       "venue": "대전 월드컵",
       "attendance": 15420,
       "file": "./data/181.json",
-      "label": "대전 VS 전북 (181, 10/09)"
+      "label": "대전 VS 전북 (181, 10/09)",
+      "attendance_home": 12203,
+      "attendance_away": 3217
     }
   ]
 }

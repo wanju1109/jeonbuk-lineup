@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-08T20:20:36.227485+00:00",
+  "updated_at": "2026-10-09T19:53:32.843324+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
-  "count": 180,
+  "count": 183,
   "games": {
     "72": {
       "game_id": "72",
@@ -299,6 +299,20 @@
       "weekday": "주말",
       "meet_seq": 1
     },
+    "181": {
+      "game_id": "181",
+      "year": "2026",
+      "date": "2026-10-09",
+      "home": "대전",
+      "away": "전북",
+      "score": "2:1",
+      "venue": "대전 월드컵 경기장",
+      "attendance": 15420,
+      "attendance_home": 12203,
+      "attendance_away": 3217,
+      "weekday": "-",
+      "meet_seq": 1
+    },
     "77": {
       "game_id": "77",
       "year": "2026",
@@ -395,6 +409,20 @@
       "attendance_home": 8550,
       "attendance_away": 4000,
       "weekday": "주말",
+      "meet_seq": 1
+    },
+    "183": {
+      "game_id": "183",
+      "year": "2026",
+      "date": "2026-10-09",
+      "home": "인천",
+      "away": "포항",
+      "score": "3:0",
+      "venue": "인천 축구 전용경기장",
+      "attendance": 12201,
+      "attendance_home": 10706,
+      "attendance_away": 1495,
+      "weekday": "-",
       "meet_seq": 1
     },
     "160": {
@@ -1375,6 +1403,20 @@
       "attendance_home": 5496,
       "attendance_away": 925,
       "weekday": "주말",
+      "meet_seq": 1
+    },
+    "182": {
+      "game_id": "182",
+      "year": "2026",
+      "date": "2026-10-09",
+      "home": "강원",
+      "away": "부천",
+      "score": "2:0",
+      "venue": "강릉하이원아레나",
+      "attendance": 6398,
+      "attendance_home": 6398,
+      "attendance_away": 0,
+      "weekday": "-",
       "meet_seq": 1
     },
     "21": {
