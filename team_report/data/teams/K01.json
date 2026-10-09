@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-09T07:00:10+09:00",
+  "generated_at": "2026-10-10T06:36:25+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -29,7 +29,7 @@
     "gap_above": 15,
     "gap_below": 1,
     "above": "서울",
-    "below": "제주"
+    "below": "강원"
   },
   "splits": {
     "home": {
@@ -371,6 +371,13 @@
       },
       {
         "round": 30,
+        "rank": 2,
+        "points": 47,
+        "played": 30,
+        "gd": 5
+      },
+      {
+        "round": 31,
         "rank": 2,
         "points": 47,
         "played": 30,
@@ -845,8 +852,7 @@
     "band": "ACL 진출권",
     "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
     "tags": [
-      "화력 우위",
-      "수비 불안"
+      "화력 우위"
     ]
   },
   "profile": {

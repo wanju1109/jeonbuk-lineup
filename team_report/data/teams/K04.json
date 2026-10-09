@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-09T07:00:10+09:00",
+  "generated_at": "2026-10-10T06:36:25+09:00",
   "table": {
-    "rank": 3,
+    "rank": 4,
     "teams": 12,
     "played": 30,
     "win": 12,
@@ -26,9 +26,9 @@
     "gap_to_leader": 16,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 1,
+    "gap_above": 0,
     "gap_below": 2,
-    "above": "울산",
+    "above": "강원",
     "below": "전북"
   },
   "splits": {
@@ -168,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -372,6 +372,13 @@
       {
         "round": 30,
         "rank": 3,
+        "points": 46,
+        "played": 30,
+        "gd": 6
+      },
+      {
+        "round": 31,
+        "rank": 4,
         "points": 46,
         "played": 30,
         "gd": 6
@@ -842,8 +849,8 @@
     "away_fans_avg": 237
   },
   "context": {
-    "band": "ACL 진출권",
-    "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
+    "band": "파이널A 경쟁",
+    "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
       "수비 안정",
       "실리 축구",

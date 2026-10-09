@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-10-09T07:00:12+09:00",
+  "generated_at": "2026-10-10T06:36:27+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
@@ -346,6 +346,13 @@
       },
       {
         "round": 27,
+        "rank": 15,
+        "points": 22,
+        "played": 26,
+        "gd": -22
+      },
+      {
+        "round": 28,
         "rank": 15,
         "points": 22,
         "played": 26,

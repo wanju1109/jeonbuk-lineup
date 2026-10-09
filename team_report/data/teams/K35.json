@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-09T07:00:10+09:00",
+  "generated_at": "2026-10-10T06:36:25+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -24,7 +24,7 @@
     "remaining": 8,
     "scheduled": 38,
     "gap_to_leader": 29,
-    "gap_to_cut": 7,
+    "gap_to_cut": 10,
     "cut_rank": 6,
     "gap_above": 5,
     "gap_below": 1,
@@ -371,6 +371,13 @@
       },
       {
         "round": 30,
+        "rank": 10,
+        "points": 33,
+        "played": 30,
+        "gd": -6
+      },
+      {
+        "round": 31,
         "rank": 10,
         "points": 33,
         "played": 30,
@@ -845,7 +852,6 @@
     "band": "강등 확정",
     "detail": "순위와 무관하게 2027시즌을 K리그2에서 시작합니다. 남은 경기는 승점이 아니라 선수 개개인의 가치를 증명하는 무대입니다. 다만 김천이 11위 안에 들면 12위 팀이 승강 플레이오프를 치르고, 김천이 12위로 마치면 그마저 열리지 않습니다. 순위표 맨 아래 두 자리의 의미가 김천의 최종 순위에 걸려 있습니다.",
     "tags": [
-      "득점 빈곤",
       "무승부 체질"
     ]
   },

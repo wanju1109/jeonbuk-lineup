@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-10-09T07:00:12+09:00",
+  "generated_at": "2026-10-10T06:36:26+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
@@ -26,9 +26,9 @@
     "gap_to_leader": 24,
     "gap_to_cut": 12,
     "cut_rank": 6,
-    "gap_above": 0,
+    "gap_above": 2,
     "gap_below": 2,
-    "above": "충북청주",
+    "above": "성남",
     "below": "용인"
   },
   "splits": {
@@ -191,14 +191,14 @@
       },
       {
         "round": 5,
-        "rank": 7,
+        "rank": 8,
         "points": 6,
         "played": 5,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 9,
         "played": 6,
         "gd": 2
@@ -345,6 +345,13 @@
       },
       {
         "round": 27,
+        "rank": 12,
+        "points": 29,
+        "played": 25,
+        "gd": -4
+      },
+      {
+        "round": 28,
         "rank": 12,
         "points": 29,
         "played": 25,
@@ -764,7 +771,6 @@
     "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
       "득점 빈곤",
-      "수비 안정",
       "실리 축구",
       "침묵하는 공격",
       "한 골 승부사"

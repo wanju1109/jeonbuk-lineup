@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-10-09T07:00:11+09:00",
+  "generated_at": "2026-10-10T06:36:26+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
-    "played": 25,
+    "played": 26,
     "win": 8,
     "draw": 11,
-    "loss": 6,
+    "loss": 7,
     "gf": 31,
-    "ga": 30,
-    "gd": 1,
+    "ga": 31,
+    "gd": 0,
     "points": 35,
-    "ppg": 1.4,
-    "remaining": 7,
+    "ppg": 1.35,
+    "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 18,
     "gap_to_cut": 6,
@@ -33,15 +33,15 @@
   },
   "splits": {
     "home": {
-      "played": 10,
+      "played": 11,
       "win": 2,
       "draw": 5,
-      "loss": 3,
+      "loss": 4,
       "gf": 12,
-      "ga": 14,
-      "gd": -2,
+      "ga": 15,
+      "gd": -3,
       "points": 11,
-      "ppg": 1.1
+      "ppg": 1.0
     },
     "away": {
       "played": 15,
@@ -81,17 +81,17 @@
       "L",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "D",
       "L",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "L",
       "D",
       "D",
       "D",
@@ -100,17 +100,18 @@
       "L",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 2,
-      "loss": 2,
-      "gf": 6,
+      "draw": 1,
+      "loss": 3,
+      "gf": 5,
       "ga": 9,
-      "gd": -3,
-      "points": 5
+      "gd": -4,
+      "points": 4
     },
     "last10_record": {
       "played": 10,
@@ -118,12 +119,12 @@
       "draw": 5,
       "loss": 3,
       "gf": 12,
-      "ga": 14,
-      "gd": -2,
+      "ga": 13,
+      "gd": -1,
       "points": 11
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 5,
@@ -132,12 +133,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.24,
-    "ga_per_game": 1.2,
+    "gf_per_game": 1.19,
+    "ga_per_game": 1.19,
     "clean_sheets": 7,
-    "failed_to_score": 4,
+    "failed_to_score": 5,
     "both_scored": 15,
-    "one_goal_games": 9,
+    "one_goal_games": 10,
     "biggest_win": {
       "round": 21,
       "date": "2026-08-07",
@@ -342,6 +343,13 @@
         "points": 35,
         "played": 25,
         "gd": 1
+      },
+      {
+        "round": 28,
+        "rank": 7,
+        "points": 35,
+        "played": 26,
+        "gd": 0
       }
     ],
     "best_rank": 5,
@@ -358,15 +366,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 9,
+      "played": 10,
       "win": 2,
       "draw": 5,
-      "loss": 2,
+      "loss": 3,
       "gf": 12,
-      "ga": 12,
-      "gd": 0,
+      "ga": 13,
+      "gd": -1,
       "points": 11,
-      "ppg": 1.22
+      "ppg": 1.1
     }
   },
   "fixtures": [
@@ -619,6 +627,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 28,
+      "date": "2026-10-09",
+      "venue": "H",
+      "opponent_id": "K31",
+      "opponent": "서울 이랜드",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -645,7 +663,7 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 13,
+        "apps": 14,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -657,7 +675,7 @@
         "position": "FW",
         "back_no": 50,
         "age": 31,
-        "apps": 25,
+        "apps": 26,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -669,7 +687,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 26,
-        "apps": 17,
+        "apps": 18,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -681,7 +699,7 @@
         "position": "MF",
         "back_no": 11,
         "age": 28,
-        "apps": 23,
+        "apps": 24,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -695,7 +713,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 26,
-        "apps": 19,
+        "apps": 20,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -719,7 +737,7 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 13,
+        "apps": 14,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -731,7 +749,7 @@
         "position": "DF",
         "back_no": 32,
         "age": 22,
-        "apps": 17,
+        "apps": 18,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -743,7 +761,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 26,
-        "apps": 17,
+        "apps": 18,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -754,7 +772,7 @@
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 6점 차. 남은 7경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 6점 차. 남은 6경기면 아직 늦지 않았습니다.",
     "tags": [
       "실리 축구",
       "원정에 강한 팀",
