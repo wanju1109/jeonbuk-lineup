@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:27+09:00",
+  "generated_at": "2026-10-11T05:32:35+09:00",
   "table": {
-    "rank": 15,
+    "rank": 16,
     "teams": 17,
     "played": 26,
     "win": 6,
@@ -24,12 +24,12 @@
     "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 31,
-    "gap_to_cut": 19,
+    "gap_to_cut": 20,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 1,
-    "above": "천안",
-    "below": "전남"
+    "gap_above": 2,
+    "gap_below": 8,
+    "above": "전남",
+    "below": "김해"
   },
   "splits": {
     "home": {
@@ -353,7 +353,7 @@
       },
       {
         "round": 28,
-        "rank": 15,
+        "rank": 16,
         "points": 22,
         "played": 26,
         "gd": -22

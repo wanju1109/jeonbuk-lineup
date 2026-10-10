@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:25+09:00",
+  "generated_at": "2026-10-11T05:32:34+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
-    "played": 30,
+    "played": 31,
     "win": 5,
     "draw": 18,
-    "loss": 7,
+    "loss": 8,
     "gf": 30,
-    "ga": 36,
-    "gd": -6,
+    "ga": 37,
+    "gd": -7,
     "points": 33,
-    "ppg": 1.1,
-    "remaining": 8,
+    "ppg": 1.06,
+    "remaining": 7,
     "scheduled": 38,
-    "gap_to_leader": 29,
+    "gap_to_leader": 32,
     "gap_to_cut": 10,
     "cut_rank": 6,
-    "gap_above": 5,
+    "gap_above": 7,
     "gap_below": 1,
-    "above": "안양",
+    "above": "포항",
     "below": "부천"
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 1,
       "draw": 10,
-      "loss": 3,
+      "loss": 4,
       "gf": 14,
-      "ga": 20,
-      "gd": -6,
+      "ga": 21,
+      "gd": -7,
       "points": 13,
-      "ppg": 0.93
+      "ppg": 0.87
     },
     "away": {
       "played": 16,
@@ -86,17 +86,17 @@
       "D",
       "D",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "L",
       "D",
       "D",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "W",
       "D",
       "D",
       "D",
@@ -105,30 +105,31 @@
       "D",
       "D",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
       "draw": 3,
       "loss": 1,
-      "gf": 7,
-      "ga": 7,
-      "gd": 0,
+      "gf": 6,
+      "ga": 5,
+      "gd": 1,
       "points": 6
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
+      "win": 1,
       "draw": 7,
-      "loss": 1,
-      "gf": 9,
-      "ga": 8,
-      "gd": 1,
-      "points": 13
+      "loss": 2,
+      "gf": 8,
+      "ga": 9,
+      "gd": -1,
+      "points": 10
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 7,
@@ -137,12 +138,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.0,
-    "ga_per_game": 1.2,
+    "gf_per_game": 0.97,
+    "ga_per_game": 1.19,
     "clean_sheets": 8,
-    "failed_to_score": 9,
+    "failed_to_score": 10,
     "both_scored": 18,
-    "one_goal_games": 6,
+    "one_goal_games": 7,
     "biggest_win": {
       "round": 30,
       "date": "2026-09-19",
@@ -380,8 +381,8 @@
         "round": 31,
         "rank": 10,
         "points": 33,
-        "played": 30,
-        "gd": -6
+        "played": 31,
+        "gd": -7
       }
     ],
     "best_rank": 7,
@@ -398,15 +399,15 @@
       "ppg": 0.94
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 3,
       "draw": 9,
-      "loss": 2,
+      "loss": 3,
       "gf": 14,
-      "ga": 14,
-      "gd": 0,
+      "ga": 15,
+      "gd": -1,
       "points": 18,
-      "ppg": 1.29
+      "ppg": 1.2
     }
   },
   "fixtures": [
@@ -709,6 +710,16 @@
       "gf": 2,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 31,
+      "date": "2026-10-10",
+      "venue": "H",
+      "opponent_id": "K27",
+      "opponent": "FC 안양",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -842,16 +853,17 @@
     "goal_share": 0.267
   },
   "attendance": {
-    "avg": 2192,
-    "total": 30692,
-    "games": 14,
-    "home_fans_avg": 1527,
+    "avg": 2204,
+    "total": 33055,
+    "games": 15,
+    "home_fans_avg": 1583,
     "away_fans_avg": 219
   },
   "context": {
     "band": "강등 확정",
     "detail": "순위와 무관하게 2027시즌을 K리그2에서 시작합니다. 남은 경기는 승점이 아니라 선수 개개인의 가치를 증명하는 무대입니다. 다만 김천이 11위 안에 들면 12위 팀이 승강 플레이오프를 치르고, 김천이 12위로 마치면 그마저 열리지 않습니다. 순위표 맨 아래 두 자리의 의미가 김천의 최종 순위에 걸려 있습니다.",
     "tags": [
+      "득점 빈곤",
       "무승부 체질"
     ]
   },

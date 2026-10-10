@@ -8,39 +8,39 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:26+09:00",
+  "generated_at": "2026-10-11T05:32:35+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
-    "played": 25,
+    "played": 26,
     "win": 8,
-    "draw": 5,
+    "draw": 6,
     "loss": 12,
-    "gf": 24,
-    "ga": 28,
+    "gf": 25,
+    "ga": 29,
     "gd": -4,
-    "points": 29,
-    "ppg": 1.16,
-    "remaining": 7,
+    "points": 30,
+    "ppg": 1.15,
+    "remaining": 6,
     "scheduled": 32,
-    "gap_to_leader": 24,
+    "gap_to_leader": 23,
     "gap_to_cut": 12,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 2,
+    "gap_above": 1,
+    "gap_below": 3,
     "above": "성남",
     "below": "용인"
   },
   "splits": {
     "home": {
-      "played": 12,
+      "played": 13,
       "win": 3,
-      "draw": 2,
+      "draw": 3,
       "loss": 7,
-      "gf": 10,
-      "ga": 13,
+      "gf": 11,
+      "ga": 14,
       "gd": -3,
-      "points": 11,
+      "points": 12,
       "ppg": 0.92
     },
     "away": {
@@ -81,17 +81,17 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
-      "W",
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "W",
@@ -100,33 +100,34 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
-      "draw": 2,
+      "win": 1,
+      "draw": 3,
       "loss": 1,
-      "gf": 5,
+      "gf": 4,
       "ga": 3,
-      "gd": 2,
-      "points": 8
+      "gd": 1,
+      "points": 6
     },
     "last10_record": {
       "played": 10,
-      "win": 4,
-      "draw": 3,
+      "win": 3,
+      "draw": 4,
       "loss": 3,
-      "gf": 9,
+      "gf": 8,
       "ga": 7,
-      "gd": 2,
-      "points": 15
+      "gd": 1,
+      "points": 13
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 2,
-      "longest_unbeaten": 2,
+      "longest_unbeaten": 3,
       "longest_winless": 7,
       "longest_loss": 4
     }
@@ -136,7 +137,7 @@
     "ga_per_game": 1.12,
     "clean_sheets": 7,
     "failed_to_score": 11,
-    "both_scored": 11,
+    "both_scored": 12,
     "one_goal_games": 15,
     "biggest_win": {
       "round": 27,
@@ -191,14 +192,14 @@
       },
       {
         "round": 5,
-        "rank": 8,
+        "rank": 7,
         "points": 6,
         "played": 5,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 9,
         "played": 6,
         "gd": 2
@@ -353,8 +354,8 @@
       {
         "round": 28,
         "rank": 12,
-        "points": 29,
-        "played": 25,
+        "points": 30,
+        "played": 26,
         "gd": -4
       }
     ],
@@ -372,15 +373,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 9,
+      "played": 10,
       "win": 3,
-      "draw": 3,
+      "draw": 4,
       "loss": 3,
-      "gf": 7,
-      "ga": 6,
+      "gf": 8,
+      "ga": 7,
       "gd": 1,
-      "points": 12,
-      "ppg": 1.33
+      "points": 13,
+      "ppg": 1.3
     }
   },
   "fixtures": [
@@ -633,6 +634,16 @@
       "gf": 2,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 28,
+      "date": "2026-10-10",
+      "venue": "H",
+      "opponent_id": "K06",
+      "opponent": "부산 아이파크",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -763,7 +774,7 @@
         "points": 3
       }
     ],
-    "goal_share": 0.292
+    "goal_share": 0.28
   },
   "attendance": null,
   "context": {

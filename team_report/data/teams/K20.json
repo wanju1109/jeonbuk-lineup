@@ -8,27 +8,27 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:26+09:00",
+  "generated_at": "2026-10-11T05:32:35+09:00",
   "table": {
     "rank": 9,
     "teams": 17,
-    "played": 25,
+    "played": 26,
     "win": 8,
     "draw": 10,
-    "loss": 7,
+    "loss": 8,
     "gf": 31,
-    "ga": 30,
-    "gd": 1,
+    "ga": 31,
+    "gd": 0,
     "points": 34,
-    "ppg": 1.36,
-    "remaining": 7,
+    "ppg": 1.31,
+    "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 19,
-    "gap_to_cut": 7,
+    "gap_to_cut": 8,
     "cut_rank": 6,
-    "gap_above": 0,
+    "gap_above": 1,
     "gap_below": 2,
-    "above": "충남아산",
+    "above": "김포",
     "below": "충북청주"
   },
   "splits": {
@@ -44,15 +44,15 @@
       "ppg": 1.77
     },
     "away": {
-      "played": 12,
+      "played": 13,
       "win": 1,
       "draw": 8,
-      "loss": 3,
+      "loss": 4,
       "gf": 10,
-      "ga": 14,
-      "gd": -4,
+      "ga": 15,
+      "gd": -5,
       "points": 11,
-      "ppg": 0.92
+      "ppg": 0.85
     }
   },
   "form": {
@@ -81,17 +81,17 @@
       "D",
       "W",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last5": [
       "D",
+      "W",
+      "W",
       "D",
-      "W",
-      "W",
-      "D"
+      "L"
     ],
     "last10": [
-      "D",
       "W",
       "D",
       "D",
@@ -100,30 +100,31 @@
       "D",
       "W",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 2,
-      "draw": 3,
-      "loss": 0,
-      "gf": 4,
+      "draw": 2,
+      "loss": 1,
+      "gf": 3,
       "ga": 2,
-      "gd": 2,
-      "points": 9
+      "gd": 1,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
       "win": 3,
-      "draw": 6,
-      "loss": 1,
-      "gf": 12,
+      "draw": 5,
+      "loss": 2,
+      "gf": 11,
       "ga": 6,
-      "gd": 6,
-      "points": 15
+      "gd": 5,
+      "points": 14
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 6,
@@ -132,12 +133,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.24,
-    "ga_per_game": 1.2,
+    "gf_per_game": 1.19,
+    "ga_per_game": 1.19,
     "clean_sheets": 5,
-    "failed_to_score": 6,
+    "failed_to_score": 7,
     "both_scored": 15,
-    "one_goal_games": 11,
+    "one_goal_games": 12,
     "biggest_win": {
       "round": 18,
       "date": "2026-07-19",
@@ -163,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 15,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -354,8 +355,8 @@
         "round": 28,
         "rank": 9,
         "points": 34,
-        "played": 25,
-        "gd": 1
+        "played": 26,
+        "gd": 0
       }
     ],
     "best_rank": 7,
@@ -372,15 +373,15 @@
       "ppg": 1.25
     },
     "second_half": {
-      "played": 9,
+      "played": 10,
       "win": 3,
       "draw": 5,
-      "loss": 1,
+      "loss": 2,
       "gf": 11,
-      "ga": 5,
-      "gd": 6,
+      "ga": 6,
+      "gd": 5,
       "points": 14,
-      "ppg": 1.56
+      "ppg": 1.4
     }
   },
   "fixtures": [
@@ -633,6 +634,16 @@
       "gf": 0,
       "ga": 0,
       "result": "D"
+    },
+    {
+      "round": 28,
+      "date": "2026-10-10",
+      "venue": "A",
+      "opponent_id": "K38",
+      "opponent": "천안 시티",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -768,11 +779,12 @@
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 7점 차. 남은 7경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 8점 차. 남은 6경기면 아직 늦지 않았습니다.",
     "tags": [
       "실리 축구",
       "홈 강세",
-      "무승부 체질"
+      "무승부 체질",
+      "한 골 승부사"
     ]
   },
   "profile": {

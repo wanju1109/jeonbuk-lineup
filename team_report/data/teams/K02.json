@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:26+09:00",
+  "generated_at": "2026-10-11T05:32:34+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
@@ -770,6 +770,7 @@
     "band": "자동 승격권",
     "detail": "리그 선두에서 남은 7경기를 버티면 다이렉트 승격입니다.",
     "tags": [
+      "화력 우위",
       "리그 최고 수비",
       "클린시트 다수",
       "한 골 승부사"

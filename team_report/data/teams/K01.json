@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:25+09:00",
+  "generated_at": "2026-10-11T05:32:33+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -23,10 +23,10 @@
     "ppg": 1.57,
     "remaining": 8,
     "scheduled": 38,
-    "gap_to_leader": 15,
+    "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 15,
+    "gap_above": 18,
     "gap_below": 1,
     "above": "서울",
     "below": "강원"

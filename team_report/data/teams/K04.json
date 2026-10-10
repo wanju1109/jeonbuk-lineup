@@ -8,22 +8,22 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:25+09:00",
+  "generated_at": "2026-10-11T05:32:33+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
-    "played": 30,
+    "played": 31,
     "win": 12,
     "draw": 10,
-    "loss": 8,
-    "gf": 35,
-    "ga": 29,
-    "gd": 6,
+    "loss": 9,
+    "gf": 36,
+    "ga": 31,
+    "gd": 5,
     "points": 46,
-    "ppg": 1.53,
-    "remaining": 8,
+    "ppg": 1.48,
+    "remaining": 7,
     "scheduled": 38,
-    "gap_to_leader": 16,
+    "gap_to_leader": 19,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 0,
@@ -44,15 +44,15 @@
       "ppg": 1.29
     },
     "away": {
-      "played": 13,
+      "played": 14,
       "win": 7,
       "draw": 3,
-      "loss": 3,
-      "gf": 17,
-      "ga": 11,
-      "gd": 6,
+      "loss": 4,
+      "gf": 18,
+      "ga": 13,
+      "gd": 5,
       "points": 24,
-      "ppg": 1.85
+      "ppg": 1.71
     }
   },
   "form": {
@@ -86,17 +86,17 @@
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "W",
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "D",
       "W",
       "W",
       "D",
@@ -105,30 +105,31 @@
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
+      "win": 2,
       "draw": 2,
-      "loss": 0,
-      "gf": 7,
-      "ga": 3,
-      "gd": 4,
-      "points": 11
+      "loss": 1,
+      "gf": 5,
+      "ga": 4,
+      "gd": 1,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
       "win": 5,
-      "draw": 4,
-      "loss": 1,
-      "gf": 16,
-      "ga": 9,
-      "gd": 7,
-      "points": 19
+      "draw": 3,
+      "loss": 2,
+      "gf": 14,
+      "ga": 8,
+      "gd": 6,
+      "points": 18
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 9,
@@ -137,12 +138,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.17,
-    "ga_per_game": 0.97,
+    "gf_per_game": 1.16,
+    "ga_per_game": 1.0,
     "clean_sheets": 11,
     "failed_to_score": 7,
-    "both_scored": 16,
-    "one_goal_games": 14,
+    "both_scored": 17,
+    "one_goal_games": 15,
     "biggest_win": {
       "round": 26,
       "date": "2026-08-30",
@@ -380,8 +381,8 @@
         "round": 31,
         "rank": 4,
         "points": 46,
-        "played": 30,
-        "gd": 6
+        "played": 31,
+        "gd": 5
       }
     ],
     "best_rank": 3,
@@ -398,15 +399,15 @@
       "ppg": 1.19
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 7,
       "draw": 6,
-      "loss": 1,
-      "gf": 21,
-      "ga": 12,
-      "gd": 9,
+      "loss": 2,
+      "gf": 22,
+      "ga": 14,
+      "gd": 8,
       "points": 27,
-      "ppg": 1.93
+      "ppg": 1.8
     }
   },
   "fixtures": [
@@ -709,6 +710,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 31,
+      "date": "2026-10-10",
+      "venue": "A",
+      "opponent_id": "K09",
+      "opponent": "FC 서울",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -839,7 +850,7 @@
         "points": 3
       }
     ],
-    "goal_share": 0.171
+    "goal_share": 0.167
   },
   "attendance": {
     "avg": 5177,
@@ -854,9 +865,7 @@
     "tags": [
       "수비 안정",
       "실리 축구",
-      "원정에 강한 팀",
       "클린시트 다수",
-      "무승부 체질",
       "한 골 승부사"
     ]
   },

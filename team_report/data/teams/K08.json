@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:26+09:00",
+  "generated_at": "2026-10-11T05:32:35+09:00",
   "table": {
     "rank": 11,
     "teams": 17,
@@ -24,10 +24,10 @@
     "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 22,
-    "gap_to_cut": 10,
+    "gap_to_cut": 11,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 2,
+    "gap_below": 1,
     "above": "충북청주",
     "below": "파주"
   },
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 10,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -248,7 +248,7 @@
       },
       {
         "round": 13,
-        "rank": 10,
+        "rank": 11,
         "points": 15,
         "played": 12,
         "gd": 0

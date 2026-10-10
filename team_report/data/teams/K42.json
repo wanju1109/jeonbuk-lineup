@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k42-sm.png",
   "home_url": "https://www.yonginfc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:26+09:00",
+  "generated_at": "2026-10-11T05:32:35+09:00",
   "table": {
     "rank": 13,
     "teams": 17,
-    "played": 25,
+    "played": 26,
     "win": 5,
     "draw": 12,
-    "loss": 8,
-    "gf": 31,
-    "ga": 35,
-    "gd": -4,
+    "loss": 9,
+    "gf": 32,
+    "ga": 37,
+    "gd": -5,
     "points": 27,
-    "ppg": 1.08,
-    "remaining": 7,
+    "ppg": 1.04,
+    "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 26,
-    "gap_to_cut": 14,
+    "gap_to_cut": 15,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 4,
+    "gap_above": 3,
+    "gap_below": 1,
     "above": "파주",
     "below": "천안"
   },
@@ -44,15 +44,15 @@
       "ppg": 1.0
     },
     "away": {
-      "played": 12,
+      "played": 13,
       "win": 3,
       "draw": 5,
-      "loss": 4,
-      "gf": 16,
-      "ga": 18,
-      "gd": -2,
+      "loss": 5,
+      "gf": 17,
+      "ga": 20,
+      "gd": -3,
       "points": 14,
-      "ppg": 1.17
+      "ppg": 1.08
     }
   },
   "form": {
@@ -81,17 +81,17 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "last5": [
-      "L",
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "last10": [
-      "D",
       "L",
       "D",
       "D",
@@ -100,7 +100,8 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "last5_record": {
       "played": 5,
@@ -115,15 +116,15 @@
     "last10_record": {
       "played": 10,
       "win": 2,
-      "draw": 5,
-      "loss": 3,
+      "draw": 4,
+      "loss": 4,
       "gf": 12,
-      "ga": 13,
-      "gd": -1,
-      "points": 11
+      "ga": 14,
+      "gd": -2,
+      "points": 10
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 7,
@@ -132,12 +133,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.24,
-    "ga_per_game": 1.4,
+    "gf_per_game": 1.23,
+    "ga_per_game": 1.42,
     "clean_sheets": 6,
     "failed_to_score": 6,
-    "both_scored": 16,
-    "one_goal_games": 5,
+    "both_scored": 17,
+    "one_goal_games": 6,
     "biggest_win": {
       "round": 24,
       "date": "2026-08-30",
@@ -163,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -354,11 +355,11 @@
         "round": 28,
         "rank": 13,
         "points": 27,
-        "played": 25,
-        "gd": -4
+        "played": 26,
+        "gd": -5
       }
     ],
-    "best_rank": 7,
+    "best_rank": 8,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -372,15 +373,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 9,
+      "played": 10,
       "win": 2,
       "draw": 4,
-      "loss": 3,
-      "gf": 11,
-      "ga": 12,
-      "gd": -1,
+      "loss": 4,
+      "gf": 12,
+      "ga": 14,
+      "gd": -2,
       "points": 10,
-      "ppg": 1.11
+      "ppg": 1.0
     }
   },
   "fixtures": [
@@ -633,6 +634,16 @@
       "gf": 0,
       "ga": 0,
       "result": "D"
+    },
+    {
+      "round": 28,
+      "date": "2026-10-10",
+      "venue": "A",
+      "opponent_id": "K07",
+      "opponent": "전남 드래곤즈",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -763,7 +774,7 @@
         "points": 2
       }
     ],
-    "goal_share": 0.194
+    "goal_share": 0.188
   },
   "attendance": null,
   "context": {

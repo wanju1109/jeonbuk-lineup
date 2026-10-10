@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:25+09:00",
+  "generated_at": "2026-10-11T05:32:33+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
@@ -23,7 +23,7 @@
     "ppg": 1.42,
     "remaining": 7,
     "scheduled": 38,
-    "gap_to_leader": 18,
+    "gap_to_leader": 21,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 2,
@@ -190,7 +190,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -863,6 +863,7 @@
     "band": "파이널A 경쟁",
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
+      "화력 우위",
       "수비 안정",
       "클린시트 다수",
       "무승부 체질"

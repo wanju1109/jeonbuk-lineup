@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-10-10T06:36:25+09:00",
+  "generated_at": "2026-10-11T05:32:33+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -23,13 +23,13 @@
     "ppg": 1.35,
     "remaining": 7,
     "scheduled": 38,
-    "gap_to_leader": 20,
+    "gap_to_leader": 23,
     "gap_to_cut": 1,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 2,
+    "gap_below": 1,
     "above": "대전",
-    "below": "포항"
+    "below": "안양"
   },
   "splits": {
     "home": {
@@ -853,10 +853,10 @@
     "goal_share": 0.333
   },
   "attendance": {
-    "avg": 10012,
-    "total": 160187,
+    "avg": 10011,
+    "total": 160175,
     "games": 16,
-    "home_fans_avg": 8818,
+    "home_fans_avg": 8817,
     "away_fans_avg": 1389
   },
   "context": {
