@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-09T19:53:32.843324+00:00",
+  "updated_at": "2026-10-10T19:03:35.528948+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
-  "count": 183,
+  "count": 185,
   "games": {
     "72": {
       "game_id": "72",
@@ -86,6 +86,20 @@
       "attendance": 24122,
       "attendance_home": 23426,
       "attendance_away": 696,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
+    "184": {
+      "game_id": "184",
+      "year": "2026",
+      "date": "2026-10-10",
+      "home": "서울",
+      "away": "제주",
+      "score": "2:1",
+      "venue": "서울 월드컵 경기장",
+      "attendance": 23403,
+      "attendance_home": 23403,
+      "attendance_away": 0,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -419,8 +433,8 @@
       "away": "포항",
       "score": "3:0",
       "venue": "인천 축구 전용경기장",
-      "attendance": 12201,
-      "attendance_home": 10706,
+      "attendance": 12189,
+      "attendance_home": 10694,
       "attendance_away": 1495,
       "weekday": "-",
       "meet_seq": 1
@@ -2326,6 +2340,20 @@
       "attendance": 2452,
       "attendance_home": 1931,
       "attendance_away": 521,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
+    "185": {
+      "game_id": "185",
+      "year": "2026",
+      "date": "2026-10-10",
+      "home": "김천",
+      "away": "안양",
+      "score": "0:1",
+      "venue": "김천 종합 운동장",
+      "attendance": 2363,
+      "attendance_home": 2363,
+      "attendance_away": 0,
       "weekday": "주말",
       "meet_seq": 1
     },
