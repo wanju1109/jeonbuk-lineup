@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-11T05:32:33+09:00",
+  "generated_at": "2026-10-12T05:55:13+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
-    "played": 30,
+    "played": 31,
     "win": 14,
     "draw": 5,
-    "loss": 11,
-    "gf": 45,
-    "ga": 40,
-    "gd": 5,
+    "loss": 12,
+    "gf": 48,
+    "ga": 44,
+    "gd": 4,
     "points": 47,
-    "ppg": 1.57,
-    "remaining": 8,
+    "ppg": 1.52,
+    "remaining": 7,
     "scheduled": 38,
     "gap_to_leader": 18,
     "gap_to_cut": 0,
@@ -44,15 +44,15 @@
       "ppg": 1.67
     },
     "away": {
-      "played": 15,
+      "played": 16,
       "win": 6,
       "draw": 4,
-      "loss": 5,
-      "gf": 19,
-      "ga": 17,
-      "gd": 2,
+      "loss": 6,
+      "gf": 22,
+      "ga": 21,
+      "gd": 1,
       "points": 22,
-      "ppg": 1.47
+      "ppg": 1.38
     }
   },
   "form": {
@@ -86,18 +86,18 @@
       "D",
       "W",
       "W",
+      "L",
       "L"
     ],
     "last5": [
-      "W",
       "D",
       "W",
       "W",
+      "L",
       "L"
     ],
     "last10": [
       "W",
-      "W",
       "L",
       "L",
       "L",
@@ -105,31 +105,32 @@
       "D",
       "W",
       "W",
+      "L",
       "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
+      "win": 2,
       "draw": 1,
-      "loss": 1,
+      "loss": 2,
       "gf": 7,
-      "ga": 4,
-      "gd": 3,
-      "points": 10
+      "ga": 7,
+      "gd": 0,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
-      "win": 5,
+      "win": 4,
       "draw": 1,
-      "loss": 4,
+      "loss": 5,
       "gf": 15,
-      "ga": 11,
-      "gd": 4,
-      "points": 16
+      "ga": 14,
+      "gd": 1,
+      "points": 13
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 3,
       "longest_unbeaten": 4,
       "longest_winless": 5,
@@ -137,12 +138,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.5,
-    "ga_per_game": 1.33,
+    "gf_per_game": 1.55,
+    "ga_per_game": 1.42,
     "clean_sheets": 6,
     "failed_to_score": 6,
-    "both_scored": 20,
-    "one_goal_games": 13,
+    "both_scored": 21,
+    "one_goal_games": 14,
     "biggest_win": {
       "round": 8,
       "date": "2026-04-19",
@@ -380,8 +381,8 @@
         "round": 31,
         "rank": 2,
         "points": 47,
-        "played": 30,
-        "gd": 5
+        "played": 31,
+        "gd": 4
       }
     ],
     "best_rank": 1,
@@ -398,15 +399,15 @@
       "ppg": 1.69
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 6,
       "draw": 2,
-      "loss": 6,
-      "gf": 22,
-      "ga": 19,
-      "gd": 3,
+      "loss": 7,
+      "gf": 25,
+      "ga": 23,
+      "gd": 2,
       "points": 20,
-      "ppg": 1.43
+      "ppg": 1.33
     }
   },
   "fixtures": [
@@ -709,6 +710,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 31,
+      "date": "2026-10-11",
+      "venue": "A",
+      "opponent_id": "K22",
+      "opponent": "광주 FC",
+      "gf": 3,
+      "ga": 4,
+      "result": "L"
     }
   ],
   "squad": {
@@ -839,20 +850,23 @@
         "points": 14
       }
     ],
-    "goal_share": 0.289
+    "goal_share": 0.271
   },
   "attendance": {
     "avg": 10628,
     "total": 159413,
     "games": 15,
     "home_fans_avg": 9922,
-    "away_fans_avg": 1434
+    "away_fans_avg": 1392
   },
   "context": {
     "band": "ACL 진출권",
     "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
     "tags": [
-      "화력 우위"
+      "화력 우위",
+      "수비 불안",
+      "공격 올인형",
+      "한 골 승부사"
     ]
   },
   "profile": {

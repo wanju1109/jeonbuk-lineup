@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-10-11T05:32:34+09:00",
+  "generated_at": "2026-10-12T05:55:14+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
-    "played": 25,
-    "win": 16,
+    "played": 26,
+    "win": 17,
     "draw": 5,
     "loss": 4,
-    "gf": 39,
-    "ga": 20,
-    "gd": 19,
-    "points": 53,
-    "ppg": 2.12,
-    "remaining": 7,
+    "gf": 43,
+    "ga": 21,
+    "gd": 22,
+    "points": 56,
+    "ppg": 2.15,
+    "remaining": 6,
     "scheduled": 32,
     "gap_to_leader": 0,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": null,
-    "gap_below": 2,
+    "gap_below": 5,
     "above": "",
     "below": "수원FC"
   },
   "splits": {
     "home": {
-      "played": 12,
-      "win": 7,
+      "played": 13,
+      "win": 8,
       "draw": 4,
       "loss": 1,
-      "gf": 16,
-      "ga": 8,
-      "gd": 8,
-      "points": 25,
-      "ppg": 2.08
+      "gf": 20,
+      "ga": 9,
+      "gd": 11,
+      "points": 28,
+      "ppg": 2.15
     },
     "away": {
       "played": 13,
@@ -81,22 +81,23 @@
       "W",
       "W",
       "W",
+      "W",
       "W"
     ],
     "last5": [
-      "D",
+      "W",
       "W",
       "W",
       "W",
       "W"
     ],
     "last10": [
-      "L",
       "D",
       "W",
       "D",
       "W",
       "D",
+      "W",
       "W",
       "W",
       "W",
@@ -104,46 +105,46 @@
     ],
     "last5_record": {
       "played": 5,
-      "win": 4,
-      "draw": 1,
+      "win": 5,
+      "draw": 0,
       "loss": 0,
-      "gf": 10,
-      "ga": 3,
-      "gd": 7,
-      "points": 13
+      "gf": 12,
+      "ga": 2,
+      "gd": 10,
+      "points": 15
     },
     "last10_record": {
       "played": 10,
-      "win": 6,
+      "win": 7,
       "draw": 3,
-      "loss": 1,
-      "gf": 18,
-      "ga": 8,
-      "gd": 10,
-      "points": 21
+      "loss": 0,
+      "gf": 21,
+      "ga": 7,
+      "gd": 14,
+      "points": 24
     },
     "streaks": {
       "current_type": "W",
-      "current_len": 4,
+      "current_len": 5,
       "longest_win": 5,
-      "longest_unbeaten": 9,
+      "longest_unbeaten": 10,
       "longest_winless": 2,
       "longest_loss": 1
     }
   },
   "scoring": {
-    "gf_per_game": 1.56,
-    "ga_per_game": 0.8,
+    "gf_per_game": 1.65,
+    "ga_per_game": 0.81,
     "clean_sheets": 13,
     "failed_to_score": 4,
-    "both_scored": 11,
+    "both_scored": 12,
     "one_goal_games": 14,
     "biggest_win": {
-      "round": 24,
-      "date": "2026-08-29",
-      "venue": "A",
-      "opponent_id": "K36",
-      "opponent": "김포 FC",
+      "round": 28,
+      "date": "2026-10-11",
+      "venue": "H",
+      "opponent_id": "K32",
+      "opponent": "안산 그리너스",
       "gf": 4,
       "ga": 1,
       "result": "W"
@@ -353,9 +354,9 @@
       {
         "round": 28,
         "rank": 1,
-        "points": 53,
-        "played": 25,
-        "gd": 19
+        "points": 56,
+        "played": 26,
+        "gd": 22
       }
     ],
     "best_rank": 1,
@@ -372,15 +373,15 @@
       "ppg": 2.0
     },
     "second_half": {
-      "played": 9,
-      "win": 6,
+      "played": 10,
+      "win": 7,
       "draw": 3,
       "loss": 0,
-      "gf": 17,
-      "ga": 6,
-      "gd": 11,
-      "points": 21,
-      "ppg": 2.33
+      "gf": 21,
+      "ga": 7,
+      "gd": 14,
+      "points": 24,
+      "ppg": 2.4
     }
   },
   "fixtures": [
@@ -633,6 +634,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 28,
+      "date": "2026-10-11",
+      "venue": "H",
+      "opponent_id": "K32",
+      "opponent": "안산 그리너스",
+      "gf": 4,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -763,12 +774,12 @@
         "points": 3
       }
     ],
-    "goal_share": 0.308
+    "goal_share": 0.279
   },
   "attendance": null,
   "context": {
     "band": "자동 승격권",
-    "detail": "리그 선두에서 남은 7경기를 버티면 다이렉트 승격입니다.",
+    "detail": "리그 선두에서 남은 6경기를 버티면 다이렉트 승격입니다.",
     "tags": [
       "화력 우위",
       "리그 최고 수비",

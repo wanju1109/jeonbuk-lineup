@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-10-11T05:32:34+09:00",
+  "generated_at": "2026-10-12T05:55:14+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
-    "played": 30,
-    "win": 1,
+    "played": 31,
+    "win": 2,
     "draw": 12,
     "loss": 17,
-    "gf": 21,
-    "ga": 63,
-    "gd": -42,
-    "points": 15,
-    "ppg": 0.5,
-    "remaining": 8,
+    "gf": 25,
+    "ga": 66,
+    "gd": -41,
+    "points": 18,
+    "ppg": 0.58,
+    "remaining": 7,
     "scheduled": 38,
-    "gap_to_leader": 50,
-    "gap_to_cut": 28,
+    "gap_to_leader": 47,
+    "gap_to_cut": 25,
     "cut_rank": 6,
-    "gap_above": 17,
+    "gap_above": 14,
     "gap_below": null,
     "above": "부천",
     "below": ""
   },
   "splits": {
     "home": {
-      "played": 16,
-      "win": 1,
+      "played": 17,
+      "win": 2,
       "draw": 5,
       "loss": 10,
-      "gf": 12,
-      "ga": 31,
-      "gd": -19,
-      "points": 8,
-      "ppg": 0.5
+      "gf": 16,
+      "ga": 34,
+      "gd": -18,
+      "points": 11,
+      "ppg": 0.65
     },
     "away": {
       "played": 14,
@@ -86,17 +86,17 @@
       "D",
       "L",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "L",
       "D",
       "L",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "L",
       "D",
       "L",
       "L",
@@ -105,31 +105,32 @@
       "D",
       "L",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 0,
+      "win": 1,
       "draw": 3,
-      "loss": 2,
-      "gf": 7,
-      "ga": 11,
-      "gd": -4,
-      "points": 3
+      "loss": 1,
+      "gf": 9,
+      "ga": 9,
+      "gd": 0,
+      "points": 6
     },
     "last10_record": {
       "played": 10,
-      "win": 0,
+      "win": 1,
       "draw": 5,
-      "loss": 5,
-      "gf": 10,
-      "ga": 18,
-      "gd": -8,
-      "points": 5
+      "loss": 4,
+      "gf": 14,
+      "ga": 19,
+      "gd": -5,
+      "points": 8
     },
     "streaks": {
-      "current_type": "D",
-      "current_len": 2,
+      "current_type": "W",
+      "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 4,
       "longest_winless": 28,
@@ -137,20 +138,20 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.7,
-    "ga_per_game": 2.1,
+    "gf_per_game": 0.81,
+    "ga_per_game": 2.13,
     "clean_sheets": 4,
     "failed_to_score": 16,
-    "both_scored": 14,
-    "one_goal_games": 8,
+    "both_scored": 15,
+    "one_goal_games": 9,
     "biggest_win": {
-      "round": 2,
-      "date": "2026-03-07",
+      "round": 31,
+      "date": "2026-10-11",
       "venue": "H",
-      "opponent_id": "K18",
-      "opponent": "인천 유나이티드",
-      "gf": 3,
-      "ga": 2,
+      "opponent_id": "K01",
+      "opponent": "울산 HD",
+      "gf": 4,
+      "ga": 3,
       "result": "W"
     },
     "biggest_loss": {
@@ -379,9 +380,9 @@
       {
         "round": 31,
         "rank": 12,
-        "points": 15,
-        "played": 30,
-        "gd": -42
+        "points": 18,
+        "played": 31,
+        "gd": -41
       }
     ],
     "best_rank": 4,
@@ -398,15 +399,15 @@
       "ppg": 0.5
     },
     "second_half": {
-      "played": 14,
-      "win": 0,
+      "played": 15,
+      "win": 1,
       "draw": 7,
       "loss": 7,
-      "gf": 13,
-      "ga": 25,
-      "gd": -12,
-      "points": 7,
-      "ppg": 0.5
+      "gf": 17,
+      "ga": 28,
+      "gd": -11,
+      "points": 10,
+      "ppg": 0.67
     }
   },
   "fixtures": [
@@ -709,6 +710,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 31,
+      "date": "2026-10-11",
+      "venue": "H",
+      "opponent_id": "K01",
+      "opponent": "울산 HD",
+      "gf": 4,
+      "ga": 3,
+      "result": "W"
     }
   ],
   "squad": {
@@ -839,13 +850,13 @@
         "points": 1
       }
     ],
-    "goal_share": 0.333
+    "goal_share": 0.28
   },
   "attendance": {
-    "avg": 3185,
-    "total": 50962,
-    "games": 16,
-    "home_fans_avg": 2642,
+    "avg": 3396,
+    "total": 57725,
+    "games": 17,
+    "home_fans_avg": 2840,
     "away_fans_avg": 312
   },
   "context": {

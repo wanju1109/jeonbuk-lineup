@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k42-sm.png",
   "home_url": "https://www.yonginfc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-11T05:32:35+09:00",
+  "generated_at": "2026-10-12T05:55:15+09:00",
   "table": {
     "rank": 13,
     "teams": 17,
@@ -23,7 +23,7 @@
     "ppg": 1.04,
     "remaining": 6,
     "scheduled": 32,
-    "gap_to_leader": 26,
+    "gap_to_leader": 29,
     "gap_to_cut": 15,
     "cut_rank": 6,
     "gap_above": 3,
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -359,7 +359,7 @@
         "gd": -5
       }
     ],
-    "best_rank": 8,
+    "best_rank": 7,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
