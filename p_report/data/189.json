@@ -25,17 +25,17 @@
     "kickoff_label": "2026-10-18 19:00 KST",
     "date_md": "10/18",
     "label": "대전 VS 광주 (189, 10/18)",
-    "hours_to_kickoff": 158.3,
+    "hours_to_kickoff": 153.3,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-10-12T04:39:28.887754+09:00",
+    "generated_at": "2026-10-12T09:40:36.869669+09:00",
     "preview_hours": 48.0
   },
   "headline": "32R PREVIEW · 대전 vs 광주",
   "thesis": "대전 vs 광주. 대전 최근 W W D D W, 광주 최근 D L D D W. 홈 대전이(가) 템포를 가져가며 xG 1.62 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "대전 vs 광주. 대전 최근 W W D D W (3승 2무 0패 / 최근 5경기). 광주 최근 D L D D W (1승 3무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 대전 xG 1.62·슈팅 14.2, 광주 xG 1.38·슈팅 11.4. 패스 성공률 73.2% vs 77.9%.",
+    "최근 5경기 평균 — 대전 xG 1.62·슈팅 14.2, 광주 xG 1.38·슈팅 11.4. 패스 성공률 73.2% vs 77.8%.",
     "올 시즌 맞대결 2경기 — 대전 기준 2승 0무 0패.",
     "경기장 대전 월드컵 · 대전 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 대전: 최근 가용 칠판 데이터 5경기 기준, 광주: 최근 가용 칠판 데이터 5경기 기준."
@@ -88,7 +88,7 @@
       {
         "label": "패스 성공률",
         "jeonbuk": 73.2,
-        "opponent": 77.9,
+        "opponent": 77.8,
         "suffix": "%",
         "better": "opponent"
       },
@@ -710,7 +710,7 @@
         "goals_against": 3,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 77.8,
+        "pass_pct": 77.3,
         "final_third_pct": 17.7,
         "presses": 12,
         "stats_source": "portal"
@@ -779,7 +779,7 @@
       "avg_xga": 1.84,
       "avg_shots": 11.4,
       "avg_sot": 4.4,
-      "avg_pass_pct": 77.9,
+      "avg_pass_pct": 77.8,
       "avg_final_third_pct": 17.6,
       "avg_presses": 14.6,
       "avg_x": 48.0,
