@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k38-sm.png",
   "home_url": "https://cheonancityfc.kr",
   "season": "2026",
-  "generated_at": "2026-10-12T05:55:15+09:00",
+  "generated_at": "2026-10-13T08:35:11+09:00",
   "table": {
     "rank": 14,
     "teams": 17,
@@ -165,7 +165,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0

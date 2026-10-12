@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-10-12T05:55:13+09:00",
+  "generated_at": "2026-10-13T08:35:09+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
@@ -190,7 +190,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
