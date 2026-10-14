@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:08+09:00",
+  "generated_at": "2026-10-15T05:36:57+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 1,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -359,7 +359,7 @@
         "gd": -14
       }
     ],
-    "best_rank": 1,
+    "best_rank": 2,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -658,10 +658,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 25,
-        "goals": 6,
+        "apps": 26,
+        "goals": 7,
         "assists": 6,
-        "points": 12
+        "points": 13
       },
       {
         "player_id": "20200134",
@@ -670,22 +670,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 18,
+        "apps": 19,
         "goals": 5,
         "assists": 2,
         "points": 7
-      },
-      {
-        "player_id": "20220159",
-        "departed": false,
-        "name": "윤민호",
-        "position": "MF",
-        "back_no": 14,
-        "age": 26,
-        "apps": 20,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
       },
       {
         "player_id": "20210306",
@@ -694,10 +682,22 @@
         "position": "FW",
         "back_no": 32,
         "age": 26,
-        "apps": 6,
-        "goals": 3,
+        "apps": 7,
+        "goals": 4,
         "assists": 0,
-        "points": 3
+        "points": 4
+      },
+      {
+        "player_id": "20220159",
+        "departed": false,
+        "name": "윤민호",
+        "position": "MF",
+        "back_no": 14,
+        "age": 26,
+        "apps": 21,
+        "goals": 3,
+        "assists": 1,
+        "points": 4
       },
       {
         "player_id": "20190059",
@@ -706,10 +706,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 27,
-        "apps": 23,
+        "apps": 24,
         "goals": 2,
-        "assists": 1,
-        "points": 3
+        "assists": 2,
+        "points": 4
       }
     ],
     "top_assists": [
@@ -720,10 +720,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 25,
-        "goals": 6,
+        "apps": 26,
+        "goals": 7,
         "assists": 6,
-        "points": 12
+        "points": 13
       },
       {
         "player_id": "20220324",
@@ -732,7 +732,7 @@
         "position": "FW",
         "back_no": 17,
         "age": 26,
-        "apps": 23,
+        "apps": 24,
         "goals": 1,
         "assists": 5,
         "points": 6
@@ -744,10 +744,22 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 18,
+        "apps": 19,
         "goals": 5,
         "assists": 2,
         "points": 7
+      },
+      {
+        "player_id": "20190059",
+        "departed": false,
+        "name": "정지용",
+        "position": "FW",
+        "back_no": 11,
+        "age": 27,
+        "apps": 24,
+        "goals": 2,
+        "assists": 2,
+        "points": 4
       },
       {
         "player_id": "20230271",
@@ -756,25 +768,13 @@
         "position": "FW",
         "back_no": 79,
         "age": 26,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 2,
         "points": 2
-      },
-      {
-        "player_id": "20220159",
-        "departed": false,
-        "name": "윤민호",
-        "position": "MF",
-        "back_no": 14,
-        "age": 26,
-        "apps": 20,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
       }
     ],
-    "goal_share": 0.2
+    "goal_share": 0.233
   },
   "attendance": null,
   "context": {

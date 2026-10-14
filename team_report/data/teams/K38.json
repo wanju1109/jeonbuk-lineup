@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k38-sm.png",
   "home_url": "https://cheonancityfc.kr",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:08+09:00",
+  "generated_at": "2026-10-15T05:36:57+09:00",
   "table": {
     "rank": 14,
     "teams": 17,
@@ -669,7 +669,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 32,
-        "apps": 25,
+        "apps": 26,
         "goals": 7,
         "assists": 1,
         "points": 8
@@ -681,7 +681,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 31,
-        "apps": 21,
+        "apps": 22,
         "goals": 6,
         "assists": 0,
         "points": 6
@@ -693,10 +693,10 @@
         "position": "FW",
         "back_no": 94,
         "age": 32,
-        "apps": 14,
-        "goals": 5,
+        "apps": 15,
+        "goals": 6,
         "assists": 0,
-        "points": 5
+        "points": 6
       },
       {
         "player_id": "20220246",
@@ -716,8 +716,8 @@
         "name": "이상준",
         "position": "FW",
         "back_no": 7,
-        "age": 26,
-        "apps": 25,
+        "age": 27,
+        "apps": 26,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -731,7 +731,7 @@
         "position": "DF",
         "back_no": 27,
         "age": 23,
-        "apps": 25,
+        "apps": 26,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -755,7 +755,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 32,
-        "apps": 25,
+        "apps": 26,
         "goals": 7,
         "assists": 1,
         "points": 8
@@ -767,7 +767,7 @@
         "position": "FW",
         "back_no": 70,
         "age": 22,
-        "apps": 12,
+        "apps": 13,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -778,8 +778,8 @@
         "name": "이상준",
         "position": "FW",
         "back_no": 7,
-        "age": 26,
-        "apps": 25,
+        "age": 27,
+        "apps": 26,
         "goals": 3,
         "assists": 1,
         "points": 4

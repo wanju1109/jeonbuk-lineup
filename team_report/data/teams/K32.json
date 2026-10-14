@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:08+09:00",
+  "generated_at": "2026-10-15T05:36:57+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
@@ -165,7 +165,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 1,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -360,7 +360,7 @@
         "gd": -25
       }
     ],
-    "best_rank": 2,
+    "best_rank": 1,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -669,7 +669,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 23,
+        "apps": 24,
         "goals": 6,
         "assists": 1,
         "points": 7
@@ -681,7 +681,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 22,
+        "apps": 23,
         "goals": 5,
         "assists": 4,
         "points": 9
@@ -693,7 +693,7 @@
         "position": "FW",
         "back_no": 92,
         "age": 37,
-        "apps": 12,
+        "apps": 13,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -705,7 +705,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 26,
-        "apps": 12,
+        "apps": 13,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -731,7 +731,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 22,
+        "apps": 23,
         "goals": 5,
         "assists": 4,
         "points": 9
@@ -743,10 +743,10 @@
         "position": "DF",
         "back_no": 3,
         "age": 21,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
-        "assists": 3,
-        "points": 4
+        "assists": 4,
+        "points": 5
       },
       {
         "player_id": "20250186",
@@ -755,7 +755,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 23,
-        "apps": 17,
+        "apps": 18,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -767,7 +767,7 @@
         "position": "FW",
         "back_no": 92,
         "age": 37,
-        "apps": 12,
+        "apps": 13,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -779,7 +779,7 @@
         "position": "MF",
         "back_no": 28,
         "age": 22,
-        "apps": 19,
+        "apps": 20,
         "goals": 1,
         "assists": 2,
         "points": 3

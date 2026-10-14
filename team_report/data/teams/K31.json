@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:07+09:00",
+  "generated_at": "2026-10-15T05:36:56+09:00",
   "table": {
     "rank": 3,
     "teams": 17,
@@ -179,7 +179,7 @@
       },
       {
         "round": 3,
-        "rank": 10,
+        "rank": 11,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -659,7 +659,7 @@
   ],
   "squad": {
     "size": 34,
-    "avg_age": 24.7,
+    "avg_age": 24.8,
     "foreign": 5,
     "top_scorers": [
       {

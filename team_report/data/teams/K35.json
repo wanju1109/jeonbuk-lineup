@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:06+09:00",
+  "generated_at": "2026-10-15T05:36:56+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -176,14 +176,14 @@
       },
       {
         "round": 2,
-        "rank": 7,
+        "rank": 8,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 7,
+        "rank": 8,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -782,7 +782,7 @@
         "position": "MF",
         "back_no": 55,
         "age": 27,
-        "apps": 28,
+        "apps": 29,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -844,7 +844,7 @@
         "position": "FW",
         "back_no": 49,
         "age": 28,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 2,
         "points": 2

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:07+09:00",
+  "generated_at": "2026-10-15T05:36:57+09:00",
   "table": {
     "rank": 9,
     "teams": 17,
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 13,
+        "rank": 14,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -658,7 +658,7 @@
         "position": "FW",
         "back_no": 90,
         "age": 19,
-        "apps": 22,
+        "apps": 23,
         "goals": 8,
         "assists": 1,
         "points": 9
@@ -670,7 +670,7 @@
         "position": "FW",
         "back_no": 66,
         "age": 27,
-        "apps": 19,
+        "apps": 20,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -682,7 +682,7 @@
         "position": "DF",
         "back_no": 27,
         "age": 24,
-        "apps": 21,
+        "apps": 22,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -720,7 +720,7 @@
         "position": "DF",
         "back_no": 27,
         "age": 24,
-        "apps": 21,
+        "apps": 22,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -732,7 +732,7 @@
         "position": "FW",
         "back_no": 66,
         "age": 27,
-        "apps": 19,
+        "apps": 20,
         "goals": 4,
         "assists": 2,
         "points": 6

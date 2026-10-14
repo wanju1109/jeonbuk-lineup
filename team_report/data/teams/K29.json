@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:06+09:00",
+  "generated_at": "2026-10-15T05:36:56+09:00",
   "table": {
     "rank": 2,
     "teams": 17,
@@ -648,7 +648,7 @@
   ],
   "squad": {
     "size": 50,
-    "avg_age": 24.6,
+    "avg_age": 24.7,
     "foreign": 4,
     "top_scorers": [
       {
@@ -767,7 +767,7 @@
         "name": "구본철",
         "position": "MF",
         "back_no": 14,
-        "age": 26,
+        "age": 27,
         "apps": 24,
         "goals": 2,
         "assists": 3,

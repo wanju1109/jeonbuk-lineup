@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:05+09:00",
+  "generated_at": "2026-10-15T05:36:55+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -734,10 +734,10 @@
         "position": "FW",
         "back_no": 99,
         "age": 27,
-        "apps": 23,
-        "goals": 13,
+        "apps": 24,
+        "goals": 15,
         "assists": 1,
-        "points": 14
+        "points": 16
       },
       {
         "player_id": "20180088",
@@ -746,10 +746,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 29,
+        "apps": 30,
         "goals": 11,
-        "assists": 10,
-        "points": 21
+        "assists": 11,
+        "points": 22
       },
       {
         "player_id": "20170095",
@@ -770,7 +770,7 @@
         "position": "DF",
         "back_no": 15,
         "age": 32,
-        "apps": 27,
+        "apps": 28,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -782,7 +782,7 @@
         "position": "DF",
         "back_no": 96,
         "age": 23,
-        "apps": 16,
+        "apps": 17,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -796,10 +796,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 29,
+        "apps": 30,
         "goals": 11,
-        "assists": 10,
-        "points": 21
+        "assists": 11,
+        "points": 22
       },
       {
         "player_id": "20150050",
@@ -808,7 +808,7 @@
         "position": "MF",
         "back_no": 24,
         "age": 32,
-        "apps": 30,
+        "apps": 31,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -832,25 +832,25 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 11,
+        "apps": 12,
         "goals": 1,
         "assists": 2,
         "points": 3
       },
       {
-        "player_id": "20230315",
+        "player_id": "20230108",
         "departed": false,
-        "name": "야고",
-        "position": "FW",
-        "back_no": 99,
-        "age": 27,
-        "apps": 23,
-        "goals": 13,
-        "assists": 1,
-        "points": 14
+        "name": "보야니치",
+        "position": "MF",
+        "back_no": 6,
+        "age": 31,
+        "apps": 29,
+        "goals": 0,
+        "assists": 2,
+        "points": 2
       }
     ],
-    "goal_share": 0.271
+    "goal_share": 0.312
   },
   "attendance": {
     "avg": 10628,

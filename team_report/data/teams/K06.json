@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:07+09:00",
+  "generated_at": "2026-10-15T05:36:56+09:00",
   "table": {
     "rank": 6,
     "teams": 17,
@@ -165,7 +165,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 10,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -361,7 +361,7 @@
       }
     ],
     "best_rank": 1,
-    "worst_rank": 9,
+    "worst_rank": 10,
     "first_half": {
       "played": 16,
       "win": 11,
@@ -681,7 +681,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 24,
+        "apps": 25,
         "goals": 7,
         "assists": 5,
         "points": 12
@@ -693,10 +693,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 20,
-        "apps": 23,
+        "apps": 24,
         "goals": 5,
-        "assists": 1,
-        "points": 6
+        "assists": 2,
+        "points": 7
       },
       {
         "player_id": "20150157",
@@ -705,19 +705,19 @@
         "position": "MF",
         "back_no": 8,
         "age": 34,
-        "apps": 24,
+        "apps": 25,
         "goals": 4,
         "assists": 0,
         "points": 4
       },
       {
-        "player_id": "20150030",
+        "player_id": "20230033",
         "departed": false,
-        "name": "김진혁",
+        "name": "김세훈",
         "position": "DF",
-        "back_no": 4,
-        "age": 33,
-        "apps": 20,
+        "back_no": 66,
+        "age": 22,
+        "apps": 24,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -731,7 +731,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 24,
+        "apps": 25,
         "goals": 7,
         "assists": 5,
         "points": 12
@@ -767,22 +767,22 @@
         "position": "MF",
         "back_no": 47,
         "age": 22,
-        "apps": 14,
+        "apps": 15,
         "goals": 2,
         "assists": 3,
         "points": 5
       },
       {
-        "player_id": "20140113",
+        "player_id": "20250217",
         "departed": false,
-        "name": "우주성",
-        "position": "DF",
-        "back_no": 5,
-        "age": 33,
-        "apps": 15,
-        "goals": 1,
+        "name": "백가온",
+        "position": "FW",
+        "back_no": 18,
+        "age": 20,
+        "apps": 24,
+        "goals": 5,
         "assists": 2,
-        "points": 3
+        "points": 7
       }
     ],
     "goal_share": 0.19

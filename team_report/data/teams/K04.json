@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:05+09:00",
+  "generated_at": "2026-10-15T05:36:55+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -169,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -724,7 +724,7 @@
   ],
   "squad": {
     "size": 34,
-    "avg_age": 25.8,
+    "avg_age": 25.9,
     "foreign": 6,
     "top_scorers": [
       {
@@ -734,7 +734,7 @@
         "position": "FW",
         "back_no": 94,
         "age": 25,
-        "apps": 27,
+        "apps": 28,
         "goals": 6,
         "assists": 3,
         "points": 9
@@ -746,10 +746,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
-        "goals": 5,
+        "apps": 29,
+        "goals": 6,
         "assists": 2,
-        "points": 7
+        "points": 8
       },
       {
         "player_id": "20260359",
@@ -770,7 +770,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 29,
-        "apps": 22,
+        "apps": 23,
         "goals": 3,
         "assists": 3,
         "points": 6
@@ -782,7 +782,7 @@
         "position": "FW",
         "back_no": 18,
         "age": 25,
-        "apps": 21,
+        "apps": 22,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -808,7 +808,7 @@
         "position": "FW",
         "back_no": 94,
         "age": 25,
-        "apps": 27,
+        "apps": 28,
         "goals": 6,
         "assists": 3,
         "points": 9
@@ -820,7 +820,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 29,
-        "apps": 22,
+        "apps": 23,
         "goals": 3,
         "assists": 3,
         "points": 6
@@ -832,19 +832,19 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
-        "goals": 5,
+        "apps": 29,
+        "goals": 6,
         "assists": 2,
-        "points": 7
+        "points": 8
       },
       {
-        "player_id": "20250094",
+        "player_id": "20210165",
         "departed": false,
-        "name": "최병욱",
-        "position": "FW",
-        "back_no": 24,
-        "age": 21,
-        "apps": 24,
+        "name": "김륜성",
+        "position": "DF",
+        "back_no": 40,
+        "age": 24,
+        "apps": 22,
         "goals": 1,
         "assists": 2,
         "points": 3

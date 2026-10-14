@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k42-sm.png",
   "home_url": "https://www.yonginfc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-14T06:48:08+09:00",
+  "generated_at": "2026-10-15T05:36:57+09:00",
   "table": {
     "rank": 13,
     "teams": 17,
@@ -658,7 +658,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 35,
-        "apps": 23,
+        "apps": 24,
         "goals": 6,
         "assists": 1,
         "points": 7
@@ -669,7 +669,7 @@
         "name": "가브리엘",
         "position": "FW",
         "back_no": 11,
-        "age": 24,
+        "age": 25,
         "apps": 21,
         "goals": 6,
         "assists": 0,
@@ -682,10 +682,10 @@
         "position": "FW",
         "back_no": 20,
         "age": 25,
-        "apps": 17,
-        "goals": 3,
+        "apps": 18,
+        "goals": 4,
         "assists": 0,
-        "points": 3
+        "points": 4
       },
       {
         "player_id": "20210135",
@@ -694,7 +694,7 @@
         "position": "FW",
         "back_no": 19,
         "age": 31,
-        "apps": 14,
+        "apps": 15,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -720,7 +720,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 28,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
         "assists": 6,
         "points": 7
@@ -732,7 +732,7 @@
         "position": "MF",
         "back_no": 66,
         "age": 23,
-        "apps": 23,
+        "apps": 24,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -744,7 +744,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 34,
-        "apps": 23,
+        "apps": 24,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -756,7 +756,7 @@
         "position": "DF",
         "back_no": 22,
         "age": 31,
-        "apps": 20,
+        "apps": 21,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -768,7 +768,7 @@
         "position": "DF",
         "back_no": 15,
         "age": 24,
-        "apps": 25,
+        "apps": 26,
         "goals": 0,
         "assists": 2,
         "points": 2
