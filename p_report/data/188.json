@@ -25,25 +25,25 @@
     "kickoff_label": "2026-10-17 19:00 KST",
     "date_md": "10/17",
     "label": "울산 VS 부천 (188, 10/17)",
-    "hours_to_kickoff": 29.3,
+    "hours_to_kickoff": 22.4,
     "within_48h": true,
     "published": true,
-    "generated_at": "2026-10-16T13:44:18.164997+09:00",
+    "generated_at": "2026-10-16T20:37:31.546815+09:00",
     "preview_hours": 48.0
   },
   "headline": "32R PREVIEW · 울산 vs 부천",
   "thesis": "울산 vs 부천. 울산 최근 D W W L L, 부천 최근 L L D L L. 홈 울산이(가) 템포를 가져가며 xG 1.5 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "울산 vs 부천. 울산 최근 D W W L L (2승 1무 2패 / 최근 5경기). 부천 최근 L L D L L (0승 1무 4패 / 최근 5경기).",
-    "최근 5경기 평균 — 울산 xG 1.5·슈팅 13.2, 부천 xG 0.88·슈팅 8.8. 패스 성공률 71.5% vs 69.3%.",
+    "최근 5경기 평균 — 울산 xG 1.5·슈팅 13.2, 부천 xG 0.93·슈팅 10.2. 패스 성공률 71.5% vs 69.9%.",
     "올 시즌 맞대결 2경기 — 울산 기준 2승 0무 0패.",
     "경기장 울산 문수 · 울산 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 울산: 최근 가용 칠판 데이터 5경기 기준, 부천: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "울산은 기회 창출↑, 슈팅 많음, 수비 기회 허용 흐름이고, 부천은(는) 부진, 기회 부족, 수비 기회 허용 그림입니다. 최근 xG 1.5 vs 0.88, 슈팅 13.2 vs 8.8, 파이널 서드 터치 25.9% vs 18.9%입니다.",
+    "contrast": "울산은 기회 창출↑, 슈팅 많음, 수비 기회 허용 흐름이고, 부천은(는) 부진, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.5 vs 0.93, 슈팅 13.2 vs 10.2, 파이널 서드 터치 25.9% vs 20.9%입니다.",
     "edge": [
-      "울산이(가) 최근 xG 1.5로 부천(0.88)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
+      "울산이(가) 최근 xG 1.5로 부천(0.93)보다 기회 질에서 앞섭니다. 홈에서 템포를 가져가기 좋습니다.",
       "부천 최근 흐름이 좋지 않습니다. 울산이 실수를 유도할 여지가 있습니다.",
       "홈 이점(울산). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -64,49 +64,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.5,
-        "opponent": 0.88,
+        "opponent": 0.93,
         "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.65,
-        "opponent": 1.89,
+        "opponent": 1.87,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
         "jeonbuk": 13.2,
-        "opponent": 8.8,
+        "opponent": 10.2,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 5.2,
-        "opponent": 4.2,
+        "opponent": 4.4,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 71.5,
-        "opponent": 69.3,
+        "opponent": 69.9,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
         "jeonbuk": 25.9,
-        "opponent": 18.9,
+        "opponent": 20.9,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 19.2,
-        "opponent": 14.8,
+        "opponent": 15.6,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 4경기 기준 — 울산 xG 1.5 / xGA 1.65, 부천 xG 0.88 / xGA 1.89."
+    "summary": "최근 4경기 기준 — 울산 xG 1.5 / xGA 1.65, 부천 xG 0.93 / xGA 1.87."
   },
   "pulse": {
     "home": {
@@ -127,8 +127,8 @@
       "ppg": 0.2,
       "goals_pg": 0.6,
       "conceded_pg": 2.6,
-      "xg_delta": -0.51,
-      "xg_sample": 4,
+      "xg_delta": -1.65,
+      "xg_sample": 5,
       "clean_sheets": 0
     },
     "verdict": "최근 승점 흐름은 울산 쪽이 더 좋습니다. 다만 최근 5경기 표본으로 보는 프리뷰입니다.",
@@ -618,15 +618,18 @@
         "result": "L",
         "opponent": "대전",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 1.14,
+        "xga": 1.81,
+        "shots": 16,
+        "sot": 5,
         "goals_for": 0,
         "goals_against": 5,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 72.3,
+        "final_third_pct": 29.0,
+        "presses": 19,
+        "stats_source": "portal"
       },
       {
         "game_id": "164",
@@ -777,7 +780,6 @@
       "team_id": "K26",
       "tags": [
         "부진",
-        "기회 부족",
         "수비 기회 허용",
         "낮은 블록형"
       ],
@@ -785,15 +787,15 @@
       "goals_for": 3,
       "goals_against": 13,
       "goal_diff": -10,
-      "avg_xg": 0.88,
-      "avg_xga": 1.89,
-      "avg_shots": 8.8,
-      "avg_sot": 4.2,
-      "avg_pass_pct": 69.3,
-      "avg_final_third_pct": 18.9,
-      "avg_presses": 14.8,
+      "avg_xg": 0.93,
+      "avg_xga": 1.87,
+      "avg_shots": 10.2,
+      "avg_sot": 4.4,
+      "avg_pass_pct": 69.9,
+      "avg_final_third_pct": 20.9,
+      "avg_presses": 15.6,
       "avg_x": 50.0,
-      "samples": 4
+      "samples": 5
     }
   },
   "players": {
@@ -1254,7 +1256,7 @@
       "label": "매치업 대비 포인트",
       "items": [
         "부천은(는) 낮은 블록·후방 점유 비중이 큽니다. 중앙 고집보다 측면 오버랩 후 컷백·하프스페이스 침투로 박스를 열어야 합니다.",
-        "부천 허용 xG 1.89로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
+        "부천 허용 xG 1.87로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
         "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요."
       ],
       "players": []
