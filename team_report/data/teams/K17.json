@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-16T05:17:19+09:00",
+  "generated_at": "2026-10-17T04:54:12+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
@@ -647,7 +647,7 @@
     }
   ],
   "squad": {
-    "size": 47,
+    "size": 49,
     "avg_age": 25.5,
     "foreign": 9,
     "top_scorers": [
@@ -662,6 +662,18 @@
         "goals": 8,
         "assists": 10,
         "points": 18
+      },
+      {
+        "player_id": "20180123",
+        "departed": false,
+        "name": "고재현",
+        "position": "FW",
+        "back_no": 17,
+        "age": 27,
+        "apps": 29,
+        "goals": 8,
+        "assists": 3,
+        "points": 11
       },
       {
         "player_id": "20180294",
@@ -698,18 +710,6 @@
         "goals": 6,
         "assists": 1,
         "points": 7
-      },
-      {
-        "player_id": "20160237",
-        "departed": false,
-        "name": "세징야",
-        "position": "FW",
-        "back_no": 11,
-        "age": 36,
-        "apps": 15,
-        "goals": 5,
-        "assists": 6,
-        "points": 11
       }
     ],
     "top_assists": [
@@ -750,6 +750,18 @@
         "points": 8
       },
       {
+        "player_id": "20180123",
+        "departed": false,
+        "name": "고재현",
+        "position": "FW",
+        "back_no": 17,
+        "age": 27,
+        "apps": 29,
+        "goals": 8,
+        "assists": 3,
+        "points": 11
+      },
+      {
         "player_id": "20210115",
         "departed": false,
         "name": "김대우",
@@ -760,18 +772,6 @@
         "goals": 0,
         "assists": 3,
         "points": 3
-      },
-      {
-        "player_id": "20180259",
-        "departed": false,
-        "name": "박인혁",
-        "position": "FW",
-        "back_no": 99,
-        "age": 30,
-        "apps": 16,
-        "goals": 2,
-        "assists": 2,
-        "points": 4
       }
     ],
     "goal_share": 0.167

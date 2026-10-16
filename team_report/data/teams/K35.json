@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-16T05:17:18+09:00",
+  "generated_at": "2026-10-17T04:54:11+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -723,22 +723,10 @@
     }
   ],
   "squad": {
-    "size": 39,
+    "size": 37,
     "avg_age": 24.8,
     "foreign": 0,
     "top_scorers": [
-      {
-        "player_id": "20180123",
-        "departed": false,
-        "name": "고재현",
-        "position": "FW",
-        "back_no": 7,
-        "age": 27,
-        "apps": 29,
-        "goals": 8,
-        "assists": 3,
-        "points": 11
-      },
       {
         "player_id": "20210175",
         "departed": false,
@@ -750,18 +738,6 @@
         "goals": 3,
         "assists": 2,
         "points": 5
-      },
-      {
-        "player_id": "20230049",
-        "departed": false,
-        "name": "박세진",
-        "position": "MF",
-        "back_no": 14,
-        "age": 22,
-        "apps": 24,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
       },
       {
         "player_id": "20210108",
@@ -786,21 +762,33 @@
         "goals": 2,
         "assists": 1,
         "points": 3
+      },
+      {
+        "player_id": "20230332",
+        "departed": false,
+        "name": "홍윤상",
+        "position": "FW",
+        "back_no": 48,
+        "age": 24,
+        "apps": 22,
+        "goals": 2,
+        "assists": 1,
+        "points": 3
+      },
+      {
+        "player_id": "20200099",
+        "departed": false,
+        "name": "허율",
+        "position": "FW",
+        "back_no": 68,
+        "age": 25,
+        "apps": 8,
+        "goals": 2,
+        "assists": 0,
+        "points": 2
       }
     ],
     "top_assists": [
-      {
-        "player_id": "20180123",
-        "departed": false,
-        "name": "고재현",
-        "position": "FW",
-        "back_no": 7,
-        "age": 27,
-        "apps": 29,
-        "goals": 8,
-        "assists": 3,
-        "points": 11
-      },
       {
         "player_id": "20210175",
         "departed": false,
@@ -848,9 +836,21 @@
         "goals": 0,
         "assists": 2,
         "points": 2
+      },
+      {
+        "player_id": "20230157",
+        "departed": false,
+        "name": "정재민",
+        "position": "FW",
+        "back_no": 57,
+        "age": 24,
+        "apps": 17,
+        "goals": 0,
+        "assists": 2,
+        "points": 2
       }
     ],
-    "goal_share": 0.267
+    "goal_share": 0.1
   },
   "attendance": {
     "avg": 2204,

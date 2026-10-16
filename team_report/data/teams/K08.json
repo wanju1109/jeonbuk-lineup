@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-16T05:17:19+09:00",
+  "generated_at": "2026-10-17T04:54:12+09:00",
   "table": {
     "rank": 11,
     "teams": 17,
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 10,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -248,7 +248,7 @@
       },
       {
         "round": 13,
-        "rank": 11,
+        "rank": 10,
         "points": 15,
         "played": 12,
         "gd": 0
