@@ -25,23 +25,23 @@
     "kickoff_label": "2026-10-24 19:00 KST",
     "date_md": "10/24",
     "label": "부천 VS 광주 (195, 10/24)",
-    "hours_to_kickoff": 157.2,
+    "hours_to_kickoff": 154.7,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-10-18T05:50:22.187607+09:00",
+    "generated_at": "2026-10-18T08:17:25.792012+09:00",
     "preview_hours": 48.0
   },
   "headline": "33R PREVIEW · 부천 vs 광주",
-  "thesis": "부천 vs 광주. 부천 최근 L D L L L, 광주 최근 D L D D W. 홈 부천이(가) 템포를 가져가며 xG 0.88 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "부천 vs 광주. 부천 최근 L D L L L, 광주 최근 D L D D W. 홈 부천이(가) 템포를 가져가며 xG 0.79 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "부천 vs 광주. 부천 최근 L D L L L (0승 1무 4패 / 최근 5경기). 광주 최근 D L D D W (1승 3무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 부천 xG 0.88·슈팅 8.8, 광주 xG 1.38·슈팅 11.4. 패스 성공률 69.3% vs 77.8%.",
+    "최근 5경기 평균 — 부천 xG 0.79·슈팅 7.8, 광주 xG 1.38·슈팅 11.4. 패스 성공률 66.7% vs 77.8%.",
     "올 시즌 맞대결 2경기 — 부천 기준 1승 1무 0패.",
     "경기장 부천 종합 · 부천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 부천: 최근 가용 칠판 데이터 5경기 기준, 광주: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "부천은 부진, 기회 부족, 수비 기회 허용 흐름이고, 광주은(는) 비기는 흐름, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 0.88 vs 1.38, 슈팅 8.8 vs 11.4, 파이널 서드 터치 18.9% vs 17.6%입니다.",
+    "contrast": "부천은 부진, 기회 부족, 수비 기회 허용 흐름이고, 광주은(는) 비기는 흐름, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 0.79 vs 1.38, 슈팅 7.8 vs 11.4, 파이널 서드 터치 18.6% vs 17.6%입니다.",
     "edge": [
       "홈 이점(부천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -61,50 +61,50 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 0.88,
+        "jeonbuk": 0.79,
         "opponent": 1.38,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.89,
+        "jeonbuk": 2.17,
         "opponent": 1.84,
         "better": "opponent"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 8.8,
+        "jeonbuk": 7.8,
         "opponent": 11.4,
         "better": "opponent"
       },
       {
         "label": "유효슈팅",
-        "jeonbuk": 4.2,
+        "jeonbuk": 3.8,
         "opponent": 4.4,
         "better": "opponent"
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 69.3,
+        "jeonbuk": 66.7,
         "opponent": 77.8,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 18.9,
+        "jeonbuk": 18.6,
         "opponent": 17.6,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 14.8,
+        "jeonbuk": 13.6,
         "opponent": 14.6,
-        "better": "jeonbuk"
+        "better": "opponent"
       }
     ],
-    "summary": "최근 4경기 기준 — 부천 xG 0.88 / xGA 1.89, 광주 xG 1.38 / xGA 1.84."
+    "summary": "최근 5경기 기준 — 부천 xG 0.79 / xGA 2.17, 광주 xG 1.38 / xGA 1.84."
   },
   "pulse": {
     "home": {
@@ -114,8 +114,8 @@
       "ppg": 0.2,
       "goals_pg": 0.8,
       "conceded_pg": 2.0,
-      "xg_delta": 0.49,
-      "xg_sample": 4,
+      "xg_delta": 0.05,
+      "xg_sample": 5,
       "clean_sheets": 0
     },
     "away": {
@@ -593,15 +593,18 @@
         "result": "L",
         "opponent": "울산",
         "ha": "A",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 0.44,
+        "xga": 3.33,
+        "shots": 4,
+        "sot": 2,
         "goals_for": 1,
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 56.4,
+        "final_third_pct": 17.3,
+        "presses": 9,
+        "stats_source": "portal"
       }
     ],
     "opponent": [
@@ -757,15 +760,15 @@
       "goals_for": 4,
       "goals_against": 10,
       "goal_diff": -6,
-      "avg_xg": 0.88,
-      "avg_xga": 1.89,
-      "avg_shots": 8.8,
-      "avg_sot": 4.2,
-      "avg_pass_pct": 69.3,
-      "avg_final_third_pct": 18.9,
-      "avg_presses": 14.8,
+      "avg_xg": 0.79,
+      "avg_xga": 2.17,
+      "avg_shots": 7.8,
+      "avg_sot": 3.8,
+      "avg_pass_pct": 66.7,
+      "avg_final_third_pct": 18.6,
+      "avg_presses": 13.6,
       "avg_x": 50.0,
-      "samples": 4
+      "samples": 5
     },
     "opponent": {
       "name": "광주",
