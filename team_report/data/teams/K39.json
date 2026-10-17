@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:12+09:00",
+  "generated_at": "2026-10-18T04:16:29+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
@@ -26,7 +26,7 @@
     "gap_to_leader": 12,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 2,
+    "gap_above": 5,
     "gap_below": 2,
     "above": "대구",
     "below": "부산"
@@ -354,6 +354,13 @@
       },
       {
         "round": 28,
+        "rank": 5,
+        "points": 44,
+        "played": 27,
+        "gd": 13
+      },
+      {
+        "round": 29,
         "rank": 5,
         "points": 44,
         "played": 27,

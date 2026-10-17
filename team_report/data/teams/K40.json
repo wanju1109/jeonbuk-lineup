@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:13+09:00",
+  "generated_at": "2026-10-18T04:16:29+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
-    "played": 26,
+    "played": 27,
     "win": 8,
     "draw": 6,
-    "loss": 12,
-    "gf": 25,
-    "ga": 29,
-    "gd": -4,
+    "loss": 13,
+    "gf": 26,
+    "ga": 33,
+    "gd": -7,
     "points": 30,
-    "ppg": 1.15,
-    "remaining": 6,
+    "ppg": 1.11,
+    "remaining": 5,
     "scheduled": 32,
     "gap_to_leader": 26,
     "gap_to_cut": 12,
@@ -44,15 +44,15 @@
       "ppg": 0.92
     },
     "away": {
-      "played": 13,
+      "played": 14,
       "win": 5,
       "draw": 3,
-      "loss": 5,
-      "gf": 14,
-      "ga": 15,
-      "gd": -1,
+      "loss": 6,
+      "gf": 15,
+      "ga": 19,
+      "gd": -4,
       "points": 18,
-      "ppg": 1.38
+      "ppg": 1.29
     }
   },
   "form": {
@@ -82,17 +82,17 @@
       "L",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last5": [
-      "D",
       "L",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last10": [
-      "D",
       "L",
       "W",
       "L",
@@ -101,30 +101,31 @@
       "L",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 3,
-      "loss": 1,
+      "draw": 2,
+      "loss": 2,
       "gf": 4,
-      "ga": 3,
-      "gd": 1,
-      "points": 6
+      "ga": 6,
+      "gd": -2,
+      "points": 5
     },
     "last10_record": {
       "played": 10,
       "win": 3,
-      "draw": 4,
-      "loss": 3,
-      "gf": 8,
-      "ga": 7,
-      "gd": 1,
-      "points": 13
+      "draw": 3,
+      "loss": 4,
+      "gf": 9,
+      "ga": 11,
+      "gd": -2,
+      "points": 12
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 3,
@@ -134,10 +135,10 @@
   },
   "scoring": {
     "gf_per_game": 0.96,
-    "ga_per_game": 1.12,
+    "ga_per_game": 1.22,
     "clean_sheets": 7,
     "failed_to_score": 11,
-    "both_scored": 12,
+    "both_scored": 13,
     "one_goal_games": 15,
     "biggest_win": {
       "round": 27,
@@ -192,14 +193,14 @@
       },
       {
         "round": 5,
-        "rank": 8,
+        "rank": 7,
         "points": 6,
         "played": 5,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 9,
         "played": 6,
         "gd": 2
@@ -357,6 +358,13 @@
         "points": 30,
         "played": 26,
         "gd": -4
+      },
+      {
+        "round": 29,
+        "rank": 12,
+        "points": 30,
+        "played": 27,
+        "gd": -7
       }
     ],
     "best_rank": 5,
@@ -373,15 +381,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 10,
+      "played": 11,
       "win": 3,
       "draw": 4,
-      "loss": 3,
-      "gf": 8,
-      "ga": 7,
-      "gd": 1,
+      "loss": 4,
+      "gf": 9,
+      "ga": 11,
+      "gd": -2,
       "points": 13,
-      "ppg": 1.3
+      "ppg": 1.18
     }
   },
   "fixtures": [
@@ -644,6 +652,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 29,
+      "date": "2026-10-17",
+      "venue": "A",
+      "opponent_id": "K36",
+      "opponent": "김포 FC",
+      "gf": 1,
+      "ga": 4,
+      "result": "L"
     }
   ],
   "squad": {
@@ -658,10 +676,10 @@
         "position": "FW",
         "back_no": 92,
         "age": 34,
-        "apps": 24,
+        "apps": 25,
         "goals": 8,
-        "assists": 1,
-        "points": 9
+        "assists": 2,
+        "points": 10
       },
       {
         "player_id": "20190146",
@@ -670,7 +688,7 @@
         "position": "FW",
         "back_no": 18,
         "age": 29,
-        "apps": 19,
+        "apps": 20,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -682,7 +700,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 29,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -694,7 +712,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -706,7 +724,7 @@
         "position": "FW",
         "back_no": 19,
         "age": 22,
-        "apps": 24,
+        "apps": 25,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -714,13 +732,25 @@
     ],
     "top_assists": [
       {
+        "player_id": "20260288",
+        "departed": false,
+        "name": "보르하 바스톤",
+        "position": "FW",
+        "back_no": 92,
+        "age": 34,
+        "apps": 25,
+        "goals": 8,
+        "assists": 2,
+        "points": 10
+      },
+      {
         "player_id": "20260115",
         "departed": false,
         "name": "유재준",
         "position": "FW",
         "back_no": 19,
         "age": 22,
-        "apps": 24,
+        "apps": 25,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -732,7 +762,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 2,
         "assists": 2,
         "points": 4
@@ -744,22 +774,10 @@
         "position": "DF",
         "back_no": 22,
         "age": 25,
-        "apps": 16,
+        "apps": 17,
         "goals": 0,
         "assists": 2,
         "points": 2
-      },
-      {
-        "player_id": "20260288",
-        "departed": false,
-        "name": "보르하 바스톤",
-        "position": "FW",
-        "back_no": 92,
-        "age": 34,
-        "apps": 24,
-        "goals": 8,
-        "assists": 1,
-        "points": 9
       },
       {
         "player_id": "20190146",
@@ -768,13 +786,13 @@
         "position": "FW",
         "back_no": 18,
         "age": 29,
-        "apps": 19,
+        "apps": 20,
         "goals": 3,
         "assists": 1,
         "points": 4
       }
     ],
-    "goal_share": 0.32
+    "goal_share": 0.308
   },
   "attendance": null,
   "context": {
@@ -782,7 +800,6 @@
     "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
       "득점 빈곤",
-      "실리 축구",
       "침묵하는 공격",
       "한 골 승부사"
     ]

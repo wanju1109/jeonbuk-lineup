@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:12+09:00",
+  "generated_at": "2026-10-18T04:16:29+09:00",
   "table": {
-    "rank": 8,
+    "rank": 7,
     "teams": 17,
-    "played": 26,
-    "win": 8,
+    "played": 27,
+    "win": 9,
     "draw": 11,
     "loss": 7,
-    "gf": 31,
-    "ga": 31,
-    "gd": 0,
-    "points": 35,
-    "ppg": 1.35,
-    "remaining": 6,
+    "gf": 35,
+    "ga": 32,
+    "gd": 3,
+    "points": 38,
+    "ppg": 1.41,
+    "remaining": 5,
     "scheduled": 32,
-    "gap_to_leader": 21,
-    "gap_to_cut": 7,
+    "gap_to_leader": 18,
+    "gap_to_cut": 4,
     "cut_rank": 6,
-    "gap_above": 0,
-    "gap_below": 1,
-    "above": "충남아산",
-    "below": "경남"
+    "gap_above": 4,
+    "gap_below": 2,
+    "above": "부산",
+    "below": "충남아산"
   },
   "splits": {
     "home": {
-      "played": 11,
-      "win": 2,
+      "played": 12,
+      "win": 3,
       "draw": 5,
       "loss": 4,
-      "gf": 12,
-      "ga": 15,
-      "gd": -3,
-      "points": 11,
-      "ppg": 1.0
+      "gf": 16,
+      "ga": 16,
+      "gd": 0,
+      "points": 14,
+      "ppg": 1.17
     },
     "away": {
       "played": 15,
@@ -82,49 +82,50 @@
       "L",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
       "L",
-      "L",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
       "D",
       "D",
-      "D",
       "W",
       "D",
       "L",
       "L",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
+      "win": 2,
       "draw": 1,
-      "loss": 3,
-      "gf": 5,
-      "ga": 9,
-      "gd": -4,
-      "points": 4
+      "loss": 2,
+      "gf": 8,
+      "ga": 6,
+      "gd": 2,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
-      "draw": 5,
+      "win": 3,
+      "draw": 4,
       "loss": 3,
-      "gf": 12,
+      "gf": 15,
       "ga": 13,
-      "gd": -1,
-      "points": 11
+      "gd": 2,
+      "points": 13
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 5,
@@ -133,20 +134,20 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.19,
+    "gf_per_game": 1.3,
     "ga_per_game": 1.19,
     "clean_sheets": 7,
     "failed_to_score": 5,
-    "both_scored": 15,
+    "both_scored": 16,
     "one_goal_games": 10,
     "biggest_win": {
-      "round": 21,
-      "date": "2026-08-07",
+      "round": 29,
+      "date": "2026-10-17",
       "venue": "H",
-      "opponent_id": "K37",
-      "opponent": "충북 청주",
-      "gf": 3,
-      "ga": 0,
+      "opponent_id": "K40",
+      "opponent": "파주 프런티어",
+      "gf": 4,
+      "ga": 1,
       "result": "W"
     },
     "biggest_loss": {
@@ -350,6 +351,13 @@
         "points": 35,
         "played": 26,
         "gd": 0
+      },
+      {
+        "round": 29,
+        "rank": 7,
+        "points": 38,
+        "played": 27,
+        "gd": 3
       }
     ],
     "best_rank": 5,
@@ -366,15 +374,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 10,
-      "win": 2,
+      "played": 11,
+      "win": 3,
       "draw": 5,
       "loss": 3,
-      "gf": 12,
-      "ga": 13,
-      "gd": -1,
-      "points": 11,
-      "ppg": 1.1
+      "gf": 16,
+      "ga": 14,
+      "gd": 2,
+      "points": 14,
+      "ppg": 1.27
     }
   },
   "fixtures": [
@@ -637,6 +645,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 29,
+      "date": "2026-10-17",
+      "venue": "H",
+      "opponent_id": "K40",
+      "opponent": "파주 프런티어",
+      "gf": 4,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -663,10 +681,10 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 14,
-        "goals": 3,
-        "assists": 2,
-        "points": 5
+        "apps": 15,
+        "goals": 4,
+        "assists": 3,
+        "points": 7
       },
       {
         "player_id": "20160082",
@@ -675,10 +693,10 @@
         "position": "FW",
         "back_no": 50,
         "age": 31,
-        "apps": 26,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
+        "apps": 27,
+        "goals": 4,
+        "assists": 2,
+        "points": 6
       },
       {
         "player_id": "20250183",
@@ -687,25 +705,37 @@
         "position": "MF",
         "back_no": 8,
         "age": 26,
-        "apps": 18,
+        "apps": 19,
         "goals": 3,
         "assists": 1,
         "points": 4
       },
       {
-        "player_id": "20190015",
+        "player_id": "20090125",
         "departed": false,
-        "name": "이시헌",
+        "name": "김성준",
         "position": "MF",
-        "back_no": 11,
-        "age": 28,
-        "apps": 24,
-        "goals": 2,
-        "assists": 1,
+        "back_no": 16,
+        "age": 38,
+        "apps": 23,
+        "goals": 3,
+        "assists": 0,
         "points": 3
       }
     ],
     "top_assists": [
+      {
+        "player_id": "20230316",
+        "departed": false,
+        "name": "파울리뇨",
+        "position": "FW",
+        "back_no": 96,
+        "age": 30,
+        "apps": 15,
+        "goals": 4,
+        "assists": 3,
+        "points": 7
+      },
       {
         "player_id": "20250171",
         "departed": false,
@@ -713,7 +743,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 26,
-        "apps": 20,
+        "apps": 21,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -731,16 +761,16 @@
         "points": 7
       },
       {
-        "player_id": "20230316",
+        "player_id": "20160082",
         "departed": false,
-        "name": "파울리뇨",
+        "name": "박동진",
         "position": "FW",
-        "back_no": 96,
-        "age": 30,
-        "apps": 14,
-        "goals": 3,
+        "back_no": 50,
+        "age": 31,
+        "apps": 27,
+        "goals": 4,
         "assists": 2,
-        "points": 5
+        "points": 6
       },
       {
         "player_id": "20250185",
@@ -749,33 +779,20 @@
         "position": "DF",
         "back_no": 32,
         "age": 22,
-        "apps": 18,
+        "apps": 19,
         "goals": 0,
         "assists": 2,
         "points": 2
-      },
-      {
-        "player_id": "20250183",
-        "departed": false,
-        "name": "디자우마",
-        "position": "MF",
-        "back_no": 8,
-        "age": 26,
-        "apps": 18,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
       }
     ],
-    "goal_share": 0.161
+    "goal_share": 0.143
   },
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 7점 차. 남은 6경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 4점 차. 남은 5경기면 아직 늦지 않았습니다.",
     "tags": [
       "실리 축구",
-      "원정에 강한 팀",
       "무승부 체질"
     ]
   },

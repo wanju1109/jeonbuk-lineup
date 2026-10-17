@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:11+09:00",
+  "generated_at": "2026-10-18T04:16:28+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -218,7 +218,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -379,6 +379,13 @@
       },
       {
         "round": 31,
+        "rank": 6,
+        "points": 43,
+        "played": 31,
+        "gd": 10
+      },
+      {
+        "round": 32,
         "rank": 6,
         "points": 43,
         "played": 31,
@@ -863,7 +870,7 @@
     "band": "파이널A 경쟁",
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
-      "리그 최상급 화력"
+      "화력 우위"
     ]
   },
   "profile": {

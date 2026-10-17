@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:11+09:00",
+  "generated_at": "2026-10-18T04:16:27+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
@@ -27,7 +27,7 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": null,
-    "gap_below": 18,
+    "gap_below": 15,
     "above": "",
     "below": "울산"
   },
@@ -379,6 +379,13 @@
       },
       {
         "round": 31,
+        "rank": 1,
+        "points": 65,
+        "played": 31,
+        "gd": 32
+      },
+      {
+        "round": 32,
         "rank": 1,
         "points": 65,
         "played": 31,

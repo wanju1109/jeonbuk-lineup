@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:12+09:00",
+  "generated_at": "2026-10-18T04:16:29+09:00",
   "table": {
     "rank": 6,
     "teams": 17,
@@ -27,9 +27,9 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 2,
-    "gap_below": 7,
+    "gap_below": 4,
     "above": "화성",
-    "below": "충남아산"
+    "below": "김포"
   },
   "splits": {
     "home": {
@@ -354,6 +354,13 @@
       },
       {
         "round": 28,
+        "rank": 6,
+        "points": 42,
+        "played": 27,
+        "gd": 7
+      },
+      {
+        "round": 29,
         "rank": 6,
         "points": 42,
         "played": 27,

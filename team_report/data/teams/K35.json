@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:11+09:00",
+  "generated_at": "2026-10-18T04:16:28+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -169,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 5,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -383,9 +383,16 @@
         "points": 33,
         "played": 31,
         "gd": -7
+      },
+      {
+        "round": 32,
+        "rank": 10,
+        "points": 33,
+        "played": 31,
+        "gd": -7
       }
     ],
-    "best_rank": 7,
+    "best_rank": 5,
     "worst_rank": 11,
     "first_half": {
       "played": 16,

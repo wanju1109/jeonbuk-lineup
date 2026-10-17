@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:11+09:00",
+  "generated_at": "2026-10-18T04:16:27+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
-    "played": 31,
-    "win": 14,
+    "played": 32,
+    "win": 15,
     "draw": 5,
     "loss": 12,
-    "gf": 48,
-    "ga": 44,
-    "gd": 4,
-    "points": 47,
-    "ppg": 1.52,
-    "remaining": 7,
+    "gf": 50,
+    "ga": 45,
+    "gd": 5,
+    "points": 50,
+    "ppg": 1.56,
+    "remaining": 6,
     "scheduled": 38,
-    "gap_to_leader": 18,
+    "gap_to_leader": 15,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 18,
-    "gap_below": 1,
+    "gap_above": 15,
+    "gap_below": 4,
     "above": "서울",
     "below": "강원"
   },
   "splits": {
     "home": {
-      "played": 15,
-      "win": 8,
+      "played": 16,
+      "win": 9,
       "draw": 1,
       "loss": 6,
-      "gf": 26,
-      "ga": 23,
-      "gd": 3,
-      "points": 25,
-      "ppg": 1.67
+      "gf": 28,
+      "ga": 24,
+      "gd": 4,
+      "points": 28,
+      "ppg": 1.75
     },
     "away": {
       "played": 16,
@@ -87,17 +87,17 @@
       "W",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
-      "D",
       "W",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
-      "W",
       "L",
       "L",
       "L",
@@ -106,17 +106,18 @@
       "W",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
-      "draw": 1,
+      "win": 3,
+      "draw": 0,
       "loss": 2,
-      "gf": 7,
-      "ga": 7,
-      "gd": 0,
-      "points": 7
+      "gf": 9,
+      "ga": 8,
+      "gd": 1,
+      "points": 9
     },
     "last10_record": {
       "played": 10,
@@ -124,13 +125,13 @@
       "draw": 1,
       "loss": 5,
       "gf": 15,
-      "ga": 14,
-      "gd": 1,
+      "ga": 15,
+      "gd": 0,
       "points": 13
     },
     "streaks": {
-      "current_type": "L",
-      "current_len": 2,
+      "current_type": "W",
+      "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 4,
       "longest_winless": 5,
@@ -138,12 +139,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.55,
-    "ga_per_game": 1.42,
+    "gf_per_game": 1.56,
+    "ga_per_game": 1.41,
     "clean_sheets": 6,
     "failed_to_score": 6,
-    "both_scored": 21,
-    "one_goal_games": 14,
+    "both_scored": 22,
+    "one_goal_games": 15,
     "biggest_win": {
       "round": 8,
       "date": "2026-04-19",
@@ -383,6 +384,13 @@
         "points": 47,
         "played": 31,
         "gd": 4
+      },
+      {
+        "round": 32,
+        "rank": 2,
+        "points": 50,
+        "played": 32,
+        "gd": 5
       }
     ],
     "best_rank": 1,
@@ -399,15 +407,15 @@
       "ppg": 1.69
     },
     "second_half": {
-      "played": 15,
-      "win": 6,
+      "played": 16,
+      "win": 7,
       "draw": 2,
       "loss": 7,
-      "gf": 25,
-      "ga": 23,
-      "gd": 2,
-      "points": 20,
-      "ppg": 1.33
+      "gf": 27,
+      "ga": 24,
+      "gd": 3,
+      "points": 23,
+      "ppg": 1.44
     }
   },
   "fixtures": [
@@ -720,6 +728,16 @@
       "gf": 3,
       "ga": 4,
       "result": "L"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-17",
+      "venue": "H",
+      "opponent_id": "K26",
+      "opponent": "부천 FC",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -734,10 +752,10 @@
         "position": "FW",
         "back_no": 99,
         "age": 27,
-        "apps": 24,
-        "goals": 15,
+        "apps": 25,
+        "goals": 16,
         "assists": 1,
-        "points": 16
+        "points": 17
       },
       {
         "player_id": "20180088",
@@ -746,10 +764,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 11,
-        "assists": 11,
-        "points": 22
+        "assists": 12,
+        "points": 23
       },
       {
         "player_id": "20170095",
@@ -770,19 +788,19 @@
         "position": "DF",
         "back_no": 15,
         "age": 32,
-        "apps": 28,
+        "apps": 29,
         "goals": 4,
         "assists": 0,
         "points": 4
       },
       {
-        "player_id": "20240107",
+        "player_id": "20180296",
         "departed": false,
-        "name": "최석현",
-        "position": "DF",
-        "back_no": 96,
-        "age": 23,
-        "apps": 17,
+        "name": "이진현",
+        "position": "MF",
+        "back_no": 14,
+        "age": 29,
+        "apps": 28,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -796,10 +814,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 11,
-        "assists": 11,
-        "points": 22
+        "assists": 12,
+        "points": 23
       },
       {
         "player_id": "20150050",
@@ -808,7 +826,7 @@
         "position": "MF",
         "back_no": 24,
         "age": 32,
-        "apps": 31,
+        "apps": 32,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -832,7 +850,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 12,
+        "apps": 13,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -844,26 +862,26 @@
         "position": "MF",
         "back_no": 6,
         "age": 31,
-        "apps": 29,
+        "apps": 30,
         "goals": 0,
         "assists": 2,
         "points": 2
       }
     ],
-    "goal_share": 0.312
+    "goal_share": 0.32
   },
   "attendance": {
-    "avg": 10628,
-    "total": 159413,
-    "games": 15,
-    "home_fans_avg": 9922,
+    "avg": 11632,
+    "total": 186115,
+    "games": 16,
+    "home_fans_avg": 10925,
     "away_fans_avg": 1392
   },
   "context": {
     "band": "ACL 진출권",
     "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
     "tags": [
-      "화력 우위",
+      "리그 최상급 화력",
       "수비 불안",
       "공격 올인형",
       "한 골 승부사"

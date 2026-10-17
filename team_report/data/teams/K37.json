@@ -8,25 +8,25 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k37-sm.png",
   "home_url": "https://chfc.kr",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:12+09:00",
+  "generated_at": "2026-10-18T04:16:29+09:00",
   "table": {
     "rank": 10,
     "teams": 17,
-    "played": 27,
+    "played": 28,
     "win": 6,
     "draw": 14,
-    "loss": 7,
-    "gf": 34,
-    "ga": 42,
-    "gd": -8,
+    "loss": 8,
+    "gf": 35,
+    "ga": 45,
+    "gd": -10,
     "points": 32,
-    "ppg": 1.19,
-    "remaining": 5,
+    "ppg": 1.14,
+    "remaining": 4,
     "scheduled": 32,
     "gap_to_leader": 24,
     "gap_to_cut": 10,
     "cut_rank": 6,
-    "gap_above": 2,
+    "gap_above": 3,
     "gap_below": 1,
     "above": "경남",
     "below": "성남"
@@ -44,15 +44,15 @@
       "ppg": 1.07
     },
     "away": {
-      "played": 13,
+      "played": 14,
       "win": 3,
       "draw": 8,
-      "loss": 2,
-      "gf": 17,
-      "ga": 18,
-      "gd": -1,
+      "loss": 3,
+      "gf": 18,
+      "ga": 21,
+      "gd": -3,
       "points": 17,
-      "ppg": 1.31
+      "ppg": 1.21
     }
   },
   "form": {
@@ -83,18 +83,18 @@
       "L",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
       "L",
-      "L",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
       "D",
-      "D",
       "L",
       "W",
       "D",
@@ -102,7 +102,8 @@
       "L",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
@@ -110,23 +111,23 @@
       "draw": 0,
       "loss": 2,
       "gf": 8,
-      "ga": 7,
-      "gd": 1,
+      "ga": 8,
+      "gd": 0,
       "points": 9
     },
     "last10_record": {
       "played": 10,
       "win": 4,
-      "draw": 3,
-      "loss": 3,
+      "draw": 2,
+      "loss": 4,
       "gf": 14,
-      "ga": 15,
-      "gd": -1,
-      "points": 15
+      "ga": 17,
+      "gd": -3,
+      "points": 14
     },
     "streaks": {
-      "current_type": "W",
-      "current_len": 3,
+      "current_type": "L",
+      "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 7,
       "longest_winless": 13,
@@ -134,11 +135,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.26,
-    "ga_per_game": 1.56,
+    "gf_per_game": 1.25,
+    "ga_per_game": 1.61,
     "clean_sheets": 5,
     "failed_to_score": 5,
-    "both_scored": 20,
+    "both_scored": 21,
     "one_goal_games": 8,
     "biggest_win": {
       "round": 28,
@@ -358,6 +359,13 @@
         "points": 32,
         "played": 27,
         "gd": -8
+      },
+      {
+        "round": 29,
+        "rank": 10,
+        "points": 32,
+        "played": 28,
+        "gd": -10
       }
     ],
     "best_rank": 10,
@@ -374,15 +382,15 @@
       "ppg": 0.88
     },
     "second_half": {
-      "played": 11,
+      "played": 12,
       "win": 5,
       "draw": 3,
-      "loss": 3,
-      "gf": 15,
-      "ga": 15,
-      "gd": 0,
+      "loss": 4,
+      "gf": 16,
+      "ga": 18,
+      "gd": -2,
       "points": 18,
-      "ppg": 1.64
+      "ppg": 1.5
     }
   },
   "fixtures": [
@@ -655,6 +663,16 @@
       "gf": 3,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 29,
+      "date": "2026-10-17",
+      "venue": "A",
+      "opponent_id": "K17",
+      "opponent": "대구 FC",
+      "gf": 1,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -669,7 +687,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 27,
+        "apps": 28,
         "goals": 14,
         "assists": 1,
         "points": 15
@@ -681,10 +699,10 @@
         "position": "FW",
         "back_no": 13,
         "age": 25,
-        "apps": 26,
-        "goals": 6,
+        "apps": 27,
+        "goals": 7,
         "assists": 1,
-        "points": 7
+        "points": 8
       },
       {
         "player_id": "20230018",
@@ -693,7 +711,7 @@
         "position": "MF",
         "back_no": 42,
         "age": 22,
-        "apps": 25,
+        "apps": 26,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -705,7 +723,7 @@
         "position": "FW",
         "back_no": 14,
         "age": 23,
-        "apps": 24,
+        "apps": 25,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -717,7 +735,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 34,
-        "apps": 27,
+        "apps": 28,
         "goals": 1,
         "assists": 1,
         "points": 2
@@ -731,10 +749,10 @@
         "position": "DF",
         "back_no": 25,
         "age": 25,
-        "apps": 21,
+        "apps": 22,
         "goals": 0,
-        "assists": 9,
-        "points": 9
+        "assists": 10,
+        "points": 10
       },
       {
         "player_id": "20220151",
@@ -743,7 +761,7 @@
         "position": "FW",
         "back_no": 14,
         "age": 23,
-        "apps": 24,
+        "apps": 25,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -755,7 +773,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 27,
+        "apps": 28,
         "goals": 14,
         "assists": 1,
         "points": 15
@@ -767,10 +785,10 @@
         "position": "FW",
         "back_no": 13,
         "age": 25,
-        "apps": 26,
-        "goals": 6,
+        "apps": 27,
+        "goals": 7,
         "assists": 1,
-        "points": 7
+        "points": 8
       },
       {
         "player_id": "20140040",
@@ -779,13 +797,13 @@
         "position": "MF",
         "back_no": 5,
         "age": 34,
-        "apps": 27,
+        "apps": 28,
         "goals": 1,
         "assists": 1,
         "points": 2
       }
     ],
-    "goal_share": 0.412
+    "goal_share": 0.4
   },
   "attendance": null,
   "context": {

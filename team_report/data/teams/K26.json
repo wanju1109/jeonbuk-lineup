@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:11+09:00",
+  "generated_at": "2026-10-18T04:16:28+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
-    "played": 31,
+    "played": 32,
     "win": 7,
     "draw": 11,
-    "loss": 13,
-    "gf": 31,
-    "ga": 42,
-    "gd": -11,
+    "loss": 14,
+    "gf": 32,
+    "ga": 44,
+    "gd": -12,
     "points": 32,
-    "ppg": 1.03,
-    "remaining": 7,
+    "ppg": 1.0,
+    "remaining": 6,
     "scheduled": 38,
     "gap_to_leader": 33,
     "gap_to_cut": 11,
@@ -44,15 +44,15 @@
       "ppg": 0.94
     },
     "away": {
-      "played": 14,
+      "played": 15,
       "win": 4,
       "draw": 4,
-      "loss": 6,
-      "gf": 13,
-      "ga": 16,
-      "gd": -3,
+      "loss": 7,
+      "gf": 14,
+      "ga": 18,
+      "gd": -4,
       "points": 16,
-      "ppg": 1.14
+      "ppg": 1.07
     }
   },
   "form": {
@@ -87,17 +87,17 @@
       "L",
       "D",
       "L",
+      "L",
       "L"
     ],
     "last5": [
       "L",
-      "L",
       "D",
+      "L",
       "L",
       "L"
     ],
     "last10": [
-      "D",
       "W",
       "W",
       "L",
@@ -105,6 +105,7 @@
       "L",
       "L",
       "D",
+      "L",
       "L",
       "L"
     ],
@@ -113,37 +114,37 @@
       "win": 0,
       "draw": 1,
       "loss": 4,
-      "gf": 3,
-      "ga": 13,
-      "gd": -10,
+      "gf": 4,
+      "ga": 10,
+      "gd": -6,
       "points": 1
     },
     "last10_record": {
       "played": 10,
       "win": 2,
-      "draw": 3,
-      "loss": 5,
-      "gf": 10,
-      "ga": 17,
-      "gd": -7,
-      "points": 9
+      "draw": 2,
+      "loss": 6,
+      "gf": 11,
+      "ga": 19,
+      "gd": -8,
+      "points": 8
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 2,
+      "current_len": 3,
       "longest_win": 2,
       "longest_unbeaten": 5,
-      "longest_winless": 7,
-      "longest_loss": 2
+      "longest_winless": 8,
+      "longest_loss": 3
     }
   },
   "scoring": {
     "gf_per_game": 1.0,
-    "ga_per_game": 1.35,
+    "ga_per_game": 1.38,
     "clean_sheets": 9,
     "failed_to_score": 13,
-    "both_scored": 13,
-    "one_goal_games": 11,
+    "both_scored": 14,
+    "one_goal_games": 12,
     "biggest_win": {
       "round": 24,
       "date": "2026-08-22",
@@ -190,7 +191,7 @@
       },
       {
         "round": 4,
-        "rank": 7,
+        "rank": 5,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -218,7 +219,7 @@
       },
       {
         "round": 8,
-        "rank": 6,
+        "rank": 5,
         "points": 10,
         "played": 8,
         "gd": 0
@@ -383,6 +384,13 @@
         "points": 32,
         "played": 31,
         "gd": -11
+      },
+      {
+        "round": 32,
+        "rank": 11,
+        "points": 32,
+        "played": 32,
+        "gd": -12
       }
     ],
     "best_rank": 2,
@@ -399,15 +407,15 @@
       "ppg": 1.12
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 3,
       "draw": 5,
-      "loss": 7,
-      "gf": 18,
-      "ga": 25,
-      "gd": -7,
+      "loss": 8,
+      "gf": 19,
+      "ga": 27,
+      "gd": -8,
       "points": 14,
-      "ppg": 0.93
+      "ppg": 0.88
     }
   },
   "fixtures": [
@@ -720,6 +728,16 @@
       "gf": 0,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-17",
+      "venue": "A",
+      "opponent_id": "K01",
+      "opponent": "울산 HD",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -734,7 +752,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 10,
         "assists": 4,
         "points": 14
@@ -758,7 +776,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 25,
-        "apps": 30,
+        "apps": 31,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -782,7 +800,7 @@
         "position": "MF",
         "back_no": 4,
         "age": 20,
-        "apps": 13,
+        "apps": 14,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -795,7 +813,7 @@
         "name": "바사니",
         "position": "FW",
         "back_no": 10,
-        "age": 28,
+        "age": 29,
         "apps": 22,
         "goals": 0,
         "assists": 5,
@@ -808,7 +826,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 10,
         "assists": 4,
         "points": 14
@@ -820,7 +838,7 @@
         "position": "DF",
         "back_no": 7,
         "age": 26,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
         "assists": 4,
         "points": 5
@@ -844,20 +862,20 @@
         "position": "DF",
         "back_no": 26,
         "age": 33,
-        "apps": 28,
+        "apps": 29,
         "goals": 1,
         "assists": 1,
         "points": 2
       }
     ],
-    "goal_share": 0.323
+    "goal_share": 0.312
   },
   "attendance": {
     "avg": 6592,
     "total": 112064,
     "games": 17,
     "home_fans_avg": 5515,
-    "away_fans_avg": 564
+    "away_fans_avg": 575
   },
   "context": {
     "band": "중위권",

@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-17T04:54:13+09:00",
+  "generated_at": "2026-10-18T04:16:29+09:00",
   "table": {
-    "rank": 15,
+    "rank": 16,
     "teams": 17,
     "played": 26,
     "win": 5,
@@ -26,10 +26,10 @@
     "gap_to_leader": 32,
     "gap_to_cut": 18,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 2,
-    "above": "천안",
-    "below": "안산"
+    "gap_above": 1,
+    "gap_below": 10,
+    "above": "안산",
+    "below": "김해"
   },
   "splits": {
     "home": {
@@ -164,7 +164,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -357,9 +357,16 @@
         "points": 24,
         "played": 26,
         "gd": -14
+      },
+      {
+        "round": 29,
+        "rank": 16,
+        "points": 24,
+        "played": 26,
+        "gd": -14
       }
     ],
-    "best_rank": 3,
+    "best_rank": 2,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -693,7 +700,7 @@
         "name": "윤민호",
         "position": "MF",
         "back_no": 14,
-        "age": 26,
+        "age": 27,
         "apps": 21,
         "goals": 3,
         "assists": 1,
