@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-16",
+  "as_of": "2026-10-17",
   "year": "2026",
   "league": "K리그1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -32,11 +32,11 @@
     },
     {
       "name": "울산",
-      "total": 159413,
-      "away_at_home": 10587,
-      "games": 15,
-      "avg": 10628,
-      "home_fans_avg": 9922,
+      "total": 186115,
+      "away_at_home": 11322,
+      "games": 16,
+      "avg": 11632,
+      "home_fans_avg": 10925,
       "away_fans_total": 22266,
       "away_games": 16,
       "away_fans_avg": 1392,
@@ -102,11 +102,11 @@
       "games": 17,
       "avg": 6592,
       "home_fans_avg": 5515,
-      "away_fans_total": 7890,
-      "away_games": 14,
-      "away_fans_avg": 564,
-      "away_stadium_total": 117085,
-      "away_stadium_avg": 8363
+      "away_fans_total": 8625,
+      "away_games": 15,
+      "away_fans_avg": 575,
+      "away_stadium_total": 143787,
+      "away_stadium_avg": 9586
     },
     {
       "name": "강원",
