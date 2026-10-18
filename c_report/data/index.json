@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T15:59:23.070339+00:00",
+  "updated_at": "2026-10-18T17:39:42.444102+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -477,7 +477,9 @@
       "venue": "전주 월드컵",
       "attendance": 11469,
       "file": "./data/190.json",
-      "label": "전북 VS 제주 (190, 10/18)"
+      "label": "전북 VS 제주 (190, 10/18)",
+      "attendance_home": 11187,
+      "attendance_away": 282
     }
   ]
 }
