@@ -25,17 +25,17 @@
     "kickoff_label": "2026-10-24 19:00 KST",
     "date_md": "10/24",
     "label": "서울 VS 강원 (198, 10/24)",
-    "hours_to_kickoff": 133.0,
+    "hours_to_kickoff": 130.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-10-19T05:58:42.883636+09:00",
+    "generated_at": "2026-10-19T08:27:38.187612+09:00",
     "preview_hours": 48.0
   },
   "headline": "33R PREVIEW · 서울 vs 강원",
   "thesis": "서울 vs 강원. 서울 최근 L W L W D, 강원 최근 D L D W D. 홈 서울이(가) 템포를 가져가며 xG 1.82 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "서울 vs 강원. 서울 최근 L W L W D (2승 1무 2패 / 최근 5경기). 강원 최근 D L D W D (1승 3무 1패 / 최근 5경기).",
-    "최근 5경기 평균 — 서울 xG 1.82·슈팅 13.8, 강원 xG 1.23·슈팅 13.4. 패스 성공률 72.6% vs 69.5%.",
+    "최근 5경기 평균 — 서울 xG 1.82·슈팅 13.8, 강원 xG 1.23·슈팅 13.4. 패스 성공률 72.6% vs 69.4%.",
     "올 시즌 맞대결 2경기 — 서울 기준 1승 1무 0패.",
     "경기장 서울 월드컵 · 서울 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 서울: 최근 가용 칠판 데이터 5경기 기준, 강원: 최근 가용 칠판 데이터 5경기 기준."
@@ -88,7 +88,7 @@
       {
         "label": "패스 성공률",
         "jeonbuk": 72.6,
-        "opponent": 69.5,
+        "opponent": 69.4,
         "suffix": "%",
         "better": "jeonbuk"
       },
@@ -719,7 +719,7 @@
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 72.9,
+        "pass_pct": 72.7,
         "final_third_pct": 29.3,
         "presses": 40,
         "stats_source": "portal"
@@ -789,7 +789,7 @@
       "avg_xga": 0.95,
       "avg_shots": 13.4,
       "avg_sot": 5.2,
-      "avg_pass_pct": 69.5,
+      "avg_pass_pct": 69.4,
       "avg_final_third_pct": 27.3,
       "avg_presses": 27.2,
       "avg_x": 50.0,

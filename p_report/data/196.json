@@ -25,17 +25,17 @@
     "kickoff_label": "2026-10-24 19:00 KST",
     "date_md": "10/24",
     "label": "김천 VS 대전 (196, 10/24)",
-    "hours_to_kickoff": 133.0,
+    "hours_to_kickoff": 130.6,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-10-19T05:57:10.482885+09:00",
+    "generated_at": "2026-10-19T08:25:58.546626+09:00",
     "preview_hours": 48.0
   },
   "headline": "33R PREVIEW · 김천 vs 대전",
   "thesis": "김천 vs 대전. 김천 최근 D D W L D, 대전 최근 W D D W W. 홈 김천이(가) 템포를 가져가며 xG 1.49 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "김천 vs 대전. 김천 최근 D D W L D (1승 3무 1패 / 최근 5경기). 대전 최근 W D D W W (3승 2무 0패 / 최근 5경기).",
-    "최근 5경기 평균 — 김천 xG 1.49·슈팅 12.4, 대전 xG 1.78·슈팅 15.4. 패스 성공률 73.7% vs 67.6%.",
+    "최근 5경기 평균 — 김천 xG 1.49·슈팅 12.4, 대전 xG 1.78·슈팅 15.4. 패스 성공률 73.7% vs 67.5%.",
     "올 시즌 맞대결 2경기 — 김천 기준 1승 1무 0패.",
     "경기장 김천 종합 · 김천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 김천: 최근 가용 칠판 데이터 5경기 기준, 대전: 최근 가용 칠판 데이터 5경기 기준."
@@ -88,7 +88,7 @@
       {
         "label": "패스 성공률",
         "jeonbuk": 73.7,
-        "opponent": 67.6,
+        "opponent": 67.5,
         "suffix": "%",
         "better": "jeonbuk"
       },
@@ -603,7 +603,7 @@
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 71.0,
+        "pass_pct": 70.7,
         "final_third_pct": 20.8,
         "presses": 17,
         "stats_source": "portal"
@@ -719,7 +719,7 @@
         "goals_against": 2,
         "stats_limited": false,
         "score_source": "official",
-        "pass_pct": 44.9,
+        "pass_pct": 44.4,
         "final_third_pct": 32.0,
         "presses": 32,
         "stats_source": "portal"
@@ -790,7 +790,7 @@
       "avg_xga": 1.28,
       "avg_shots": 15.4,
       "avg_sot": 5.4,
-      "avg_pass_pct": 67.6,
+      "avg_pass_pct": 67.5,
       "avg_final_third_pct": 27.2,
       "avg_presses": 27.8,
       "avg_x": 49.7,
