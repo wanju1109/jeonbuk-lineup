@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T04:46:15.814597+00:00",
+  "updated_at": "2026-10-18T11:23:05.171412+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -465,6 +465,19 @@
       "label": "대전 VS 전북 (181, 10/09)",
       "attendance_home": 12203,
       "attendance_away": 3217
+    },
+    {
+      "game_id": "190",
+      "year": "2026",
+      "round": 32,
+      "home": "전북",
+      "away": "제주",
+      "score": "3:2",
+      "date": "2026-10-18",
+      "venue": "전주 월드컵",
+      "attendance": 11469,
+      "file": "./data/190.json",
+      "label": "전북 VS 제주 (190, 10/18)"
     }
   ]
 }
