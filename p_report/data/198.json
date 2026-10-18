@@ -17,18 +17,18 @@
     "jeonbuk_match": false,
     "venue": "서울 월드컵",
     "attendance_hint": {
-      "avg": 22093,
-      "games": 14,
-      "total": 309306
+      "avg": 21540,
+      "games": 15,
+      "total": 323094
     },
     "kickoff": "2026-10-24T19:00:00+09:00",
     "kickoff_label": "2026-10-24 19:00 KST",
     "date_md": "10/24",
     "label": "서울 VS 강원 (198, 10/24)",
-    "hours_to_kickoff": 137.9,
+    "hours_to_kickoff": 133.0,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-10-19T01:06:38.984631+09:00",
+    "generated_at": "2026-10-19T05:58:42.883636+09:00",
     "preview_hours": 48.0
   },
   "headline": "33R PREVIEW · 서울 vs 강원",
