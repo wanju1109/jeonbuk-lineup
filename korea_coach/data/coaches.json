@@ -1,6 +1,6 @@
 {
   "season": "2026",
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-18",
   "scoring_version": "league-performance-v1",
   "note": "Current league performance: results 50%, relative change 30%, recent 8 matches 20%. Editorial abilities are separate.",
   "sources": [
@@ -82,8 +82,8 @@
           ]
         }
       ],
-      "rating": 49.2,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 54.3,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "수비 블록 · 세트피스",
@@ -141,47 +141,47 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 49.2,
+        "score": 54.3,
         "components": [
           {
             "key": "results",
             "label": "재임 성과",
-            "score": 62.5,
+            "score": 75.0,
             "weight": 0.5,
-            "contribution": 31.25
+            "contribution": 37.5
           },
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 29.216,
+            "score": 30.928,
             "weight": 0.3,
-            "contribution": 8.765
+            "contribution": 9.278
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 45.833,
+            "score": 37.5,
             "weight": 0.2,
-            "contribution": 9.167
+            "contribution": 7.5
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-09",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 44,
-          "ppg": 1.4194,
-          "adjusted_ppg": 1.4024,
-          "league_ppg": 1.3369,
+          "points": 47,
+          "ppg": 1.4688,
+          "adjusted_ppg": 1.4417,
+          "league_ppg": 1.3333,
           "recent_n": 8,
           "recent_points": 10,
           "previous_n": 38,
           "previous_ppg": 2.0789,
           "comparison": "전년 같은 리그",
-          "relative_change": -0.5196
+          "relative_change": -0.4768
         },
         "game_ids": [
           "2026-K1-4",
@@ -214,7 +214,8 @@
           "2026-K1-166",
           "2026-K1-169",
           "2026-K1-178",
-          "2026-K1-181"
+          "2026-K1-181",
+          "2026-K1-190"
         ]
       }
     },
@@ -289,8 +290,8 @@
           ]
         }
       ],
-      "rating": 89.8,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 87.9,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "유연한 역습",
         "style": "측면 공격 · 세트피스",
@@ -348,7 +349,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 89.8,
+        "score": 87.9,
         "components": [
           {
             "key": "results",
@@ -360,35 +361,35 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 75.683,
+            "score": 74.856,
             "weight": 0.3,
-            "contribution": 22.705
+            "contribution": 22.457
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 95.833,
+            "score": 87.5,
             "weight": 0.2,
-            "contribution": 19.167
+            "contribution": 17.5
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-10",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 65,
-          "ppg": 2.0968,
-          "adjusted_ppg": 1.9409,
-          "league_ppg": 1.3369,
+          "points": 66,
+          "ppg": 2.0625,
+          "adjusted_ppg": 1.9167,
+          "league_ppg": 1.3333,
           "recent_n": 8,
-          "recent_points": 18,
+          "recent_points": 16,
           "previous_n": 37,
           "previous_ppg": 1.3243,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.6421
+          "relative_change": 0.6214
         },
         "game_ids": [
           "2026-K1-1",
@@ -421,7 +422,8 @@
           "2026-K1-163",
           "2026-K1-169",
           "2026-K1-180",
-          "2026-K1-184"
+          "2026-K1-184",
+          "2026-K1-187"
         ]
       }
     },
@@ -490,7 +492,7 @@
           ]
         }
       ],
-      "rating": 78.5,
+      "rating": 78.6,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "관리형",
@@ -549,7 +551,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 78.5,
+        "score": 78.6,
         "components": [
           {
             "key": "results",
@@ -561,9 +563,9 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 63.186,
+            "score": 63.3,
             "weight": 0.3,
-            "contribution": 18.956
+            "contribution": 18.99
           },
           {
             "key": "recent",
@@ -582,14 +584,14 @@
         "inputs": {
           "points": 50,
           "ppg": 1.5625,
-          "adjusted_ppg": 1.5174,
-          "league_ppg": 1.3369,
+          "adjusted_ppg": 1.5167,
+          "league_ppg": 1.3333,
           "recent_n": 8,
           "recent_points": 13,
           "previous_n": 37,
           "previous_ppg": 1.1892,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.3297
+          "relative_change": 0.3325
         },
         "game_ids": [
           "2026-K1-2",
@@ -697,8 +699,8 @@
           ]
         }
       ],
-      "rating": 65.6,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 65.5,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "유연한 조직",
         "style": "거리 · 타이밍",
@@ -756,7 +758,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 65.6,
+        "score": 65.5,
         "components": [
           {
             "key": "results",
@@ -768,9 +770,9 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 54.745,
+            "score": 54.406,
             "weight": 0.3,
-            "contribution": 16.424
+            "contribution": 16.322
           },
           {
             "key": "recent",
@@ -783,20 +785,20 @@
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-09",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 46,
-          "ppg": 1.4839,
-          "adjusted_ppg": 1.4537,
-          "league_ppg": 1.3369,
+          "points": 47,
+          "ppg": 1.4688,
+          "adjusted_ppg": 1.4417,
+          "league_ppg": 1.3333,
           "recent_n": 8,
           "recent_points": 11,
           "previous_n": 38,
           "previous_ppg": 1.3684,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.1186
+          "relative_change": 0.1101
         },
         "game_ids": [
           "2026-K1-2",
@@ -829,7 +831,8 @@
           "2026-K1-173",
           "2026-K1-177",
           "2026-K1-129",
-          "2026-K1-182"
+          "2026-K1-182",
+          "2026-K1-191"
         ]
       }
     },
@@ -903,8 +906,8 @@
           ]
         }
       ],
-      "rating": 57.1,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 61.3,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "전방 압박",
         "style": "다이렉트 공격",
@@ -962,47 +965,47 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 57.1,
+        "score": 61.3,
         "components": [
           {
             "key": "results",
             "label": "재임 성과",
-            "score": 54.167,
+            "score": 58.333,
             "weight": 0.5,
-            "contribution": 27.083
+            "contribution": 29.167
           },
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 41.563,
+            "score": 43.3,
             "weight": 0.3,
-            "contribution": 12.469
+            "contribution": 12.99
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 87.5,
+            "score": 95.833,
             "weight": 0.2,
-            "contribution": 17.5
+            "contribution": 19.167
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-09",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 43,
-          "ppg": 1.3871,
-          "adjusted_ppg": 1.3768,
-          "league_ppg": 1.3369,
+          "points": 46,
+          "ppg": 1.4375,
+          "adjusted_ppg": 1.4167,
+          "league_ppg": 1.3333,
           "recent_n": 8,
           "recent_points": 17,
           "previous_n": 37,
           "previous_ppg": 1.6757,
           "comparison": "전년 같은 리그",
-          "relative_change": -0.2109
+          "relative_change": -0.1675
         },
         "game_ids": [
           "2026-K1-6",
@@ -1035,7 +1038,8 @@
           "2026-K1-165",
           "2026-K1-172",
           "2026-K1-179",
-          "2026-K1-181"
+          "2026-K1-181",
+          "2026-K1-189"
         ]
       }
     },
@@ -1108,8 +1112,8 @@
           ]
         }
       ],
-      "rating": 44.6,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 45.4,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "점유 빌드업",
         "style": "중원 조작",
@@ -1167,7 +1171,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 44.6,
+        "score": 45.4,
         "components": [
           {
             "key": "results",
@@ -1186,24 +1190,24 @@
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 33.333,
+            "score": 37.5,
             "weight": 0.2,
-            "contribution": 6.667
+            "contribution": 7.5
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-09",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 42,
-          "ppg": 1.3548,
-          "adjusted_ppg": 1.3512,
-          "league_ppg": 1.3369,
+          "points": 43,
+          "ppg": 1.3438,
+          "adjusted_ppg": 1.3417,
+          "league_ppg": 1.3333,
           "recent_n": 8,
-          "recent_points": 9,
+          "recent_points": 10,
           "previous_n": 0,
           "previous_ppg": null,
           "comparison": "동일 리그 이전 표본 부족 → 중립 50점",
@@ -1240,7 +1244,8 @@
           "2026-K1-170",
           "2026-K1-179",
           "2026-K1-129",
-          "2026-K1-183"
+          "2026-K1-183",
+          "2026-K1-191"
         ]
       }
     },
@@ -1308,8 +1313,8 @@
           ]
         }
       ],
-      "rating": 34.4,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 35.2,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "관리형",
         "style": "수비 블록 · 역습",
@@ -1367,7 +1372,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 34.4,
+        "score": 35.2,
         "components": [
           {
             "key": "results",
@@ -1379,35 +1384,35 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 43.819,
+            "score": 43.634,
             "weight": 0.3,
-            "contribution": 13.146
+            "contribution": 13.09
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 33.333,
+            "score": 37.5,
             "weight": 0.2,
-            "contribution": 6.667
+            "contribution": 7.5
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-09",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 40,
-          "ppg": 1.2903,
-          "adjusted_ppg": 1.2999,
-          "league_ppg": 1.3369,
+          "points": 41,
+          "ppg": 1.2812,
+          "adjusted_ppg": 1.2917,
+          "league_ppg": 1.3333,
           "recent_n": 8,
-          "recent_points": 9,
+          "recent_points": 10,
           "previous_n": 37,
           "previous_ppg": 1.5135,
           "comparison": "전년 같은 리그",
-          "relative_change": -0.1545
+          "relative_change": -0.1592
         },
         "game_ids": [
           "2026-K1-3",
@@ -1440,7 +1445,8 @@
           "2026-K1-168",
           "2026-K1-172",
           "2026-K1-180",
-          "2026-K1-183"
+          "2026-K1-183",
+          "2026-K1-192"
         ]
       }
     },
@@ -1508,8 +1514,8 @@
           ]
         }
       ],
-      "rating": 46.5,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 49.0,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "유연한 역습",
         "style": "수비 조직 · 전환",
@@ -1567,7 +1573,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 46.5,
+        "score": 49.0,
         "components": [
           {
             "key": "results",
@@ -1579,35 +1585,35 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 53.734,
+            "score": 53.522,
             "weight": 0.3,
-            "contribution": 16.12
+            "contribution": 16.057
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 58.333,
+            "score": 70.833,
             "weight": 0.2,
-            "contribution": 11.667
+            "contribution": 14.167
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-10",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 41,
-          "ppg": 1.3226,
-          "adjusted_ppg": 1.3255,
-          "league_ppg": 1.3369,
+          "points": 42,
+          "ppg": 1.3125,
+          "adjusted_ppg": 1.3167,
+          "league_ppg": 1.3333,
           "recent_n": 8,
-          "recent_points": 11,
+          "recent_points": 12,
           "previous_n": 37,
           "previous_ppg": 1.2432,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.0933
+          "relative_change": 0.0881
         },
         "game_ids": [
           "2026-K1-6",
@@ -1640,7 +1646,8 @@
           "2026-K1-165",
           "2026-K1-174",
           "2026-K1-176",
-          "2026-K1-185"
+          "2026-K1-185",
+          "2026-K1-192"
         ]
       }
     },
@@ -1800,8 +1807,8 @@
         "inputs": {
           "points": 32,
           "ppg": 1.0,
-          "adjusted_ppg": 1.0674,
-          "league_ppg": 1.3369,
+          "adjusted_ppg": 1.0667,
+          "league_ppg": 1.3333,
           "recent_n": 8,
           "recent_points": 2,
           "previous_n": 2,
@@ -1910,7 +1917,7 @@
         }
       ],
       "rating": 24.7,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "관리형",
         "style": "규율 · 라인 관리",
@@ -1980,9 +1987,9 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 33.586,
+            "score": 33.58,
             "weight": 0.3,
-            "contribution": 10.076
+            "contribution": 10.074
           },
           {
             "key": "recent",
@@ -1995,20 +2002,20 @@
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-10",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
-          "points": 33,
-          "ppg": 1.0645,
-          "adjusted_ppg": 1.1204,
-          "league_ppg": 1.3369,
+          "points": 34,
+          "ppg": 1.0625,
+          "adjusted_ppg": 1.1167,
+          "league_ppg": 1.3333,
           "recent_n": 8,
           "recent_points": 8,
           "previous_n": 38,
           "previous_ppg": 1.6053,
           "comparison": "전년 같은 리그",
-          "relative_change": -0.4103
+          "relative_change": -0.4105
         },
         "game_ids": [
           "2026-K1-3",
@@ -2041,7 +2048,8 @@
           "2026-K1-168",
           "2026-K1-173",
           "2026-K1-175",
-          "2026-K1-185"
+          "2026-K1-185",
+          "2026-K1-187"
         ]
       }
     },
@@ -2115,8 +2123,8 @@
           ]
         }
       ],
-      "rating": 11.8,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+      "rating": 11.6,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
       "tactics": {
         "kind": "전방 압박",
         "style": "높은 라인 · 전방 압박",
@@ -2174,7 +2182,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 11.8,
+        "score": 11.6,
         "components": [
           {
             "key": "results",
@@ -2186,9 +2194,9 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 23.922,
+            "score": 23.3,
             "weight": 0.3,
-            "contribution": 7.177
+            "contribution": 6.99
           },
           {
             "key": "recent",
@@ -2201,20 +2209,20 @@
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 31,
-        "through": "2026-10-11",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 31경기 기준.",
+        "n": 32,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 32경기 기준.",
         "inputs": {
           "points": 18,
-          "ppg": 0.5806,
-          "adjusted_ppg": 0.7358,
-          "league_ppg": 1.3369,
+          "ppg": 0.5625,
+          "adjusted_ppg": 0.7167,
+          "league_ppg": 1.3333,
           "recent_n": 8,
           "recent_points": 7,
           "previous_n": 37,
           "previous_ppg": 1.4324,
           "comparison": "전년 같은 리그",
-          "relative_change": -0.652
+          "relative_change": -0.6675
         },
         "game_ids": [
           "2026-K1-5",
@@ -2247,7 +2255,8 @@
           "2026-K1-167",
           "2026-K1-174",
           "2026-K1-178",
-          "2026-K1-186"
+          "2026-K1-186",
+          "2026-K1-189"
         ]
       }
     },
@@ -2321,8 +2330,8 @@
           ]
         }
       ],
-      "rating": 85.5,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 26경기 기준.",
+      "rating": 85.8,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
       "tactics": {
         "kind": "전방 압박",
         "style": "높은 라인 · 압박",
@@ -2380,7 +2389,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 85.5,
+        "score": 85.8,
         "components": [
           {
             "key": "results",
@@ -2392,9 +2401,9 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 58.498,
+            "score": 59.62,
             "weight": 0.3,
-            "contribution": 17.549
+            "contribution": 17.886
           },
           {
             "key": "recent",
@@ -2407,20 +2416,20 @@
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 26,
-        "through": "2026-10-11",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 26경기 기준.",
+        "n": 27,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
         "inputs": {
-          "points": 56,
-          "ppg": 2.1538,
-          "adjusted_ppg": 1.9625,
-          "league_ppg": 1.3406,
+          "points": 59,
+          "ppg": 2.1852,
+          "adjusted_ppg": 1.9926,
+          "league_ppg": 1.3427,
           "recent_n": 8,
-          "recent_points": 20,
+          "recent_points": 22,
           "previous_n": 39,
           "previous_ppg": 1.8462,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.2124
+          "relative_change": 0.2405
         },
         "game_ids": [
           "2026-K2-2",
@@ -2448,7 +2457,8 @@
           "2026-K2-187",
           "2026-K2-199",
           "2026-K2-202",
-          "2026-K2-224"
+          "2026-K2-224",
+          "2026-K2-230"
         ]
       }
     },
@@ -2516,7 +2526,7 @@
           ]
         }
       ],
-      "rating": 80.2,
+      "rating": 79.6,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 19경기 기준.",
       "tactics": {
         "kind": "관리형",
@@ -2575,7 +2585,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 80.2,
+        "score": 79.6,
         "components": [
           {
             "key": "results",
@@ -2587,16 +2597,16 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 68.211,
+            "score": 68.129,
             "weight": 0.3,
-            "contribution": 20.463
+            "contribution": 20.439
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 85.294,
+            "score": 82.353,
             "weight": 0.2,
-            "contribution": 17.059
+            "contribution": 16.471
           }
         ],
         "season": 2026,
@@ -2608,14 +2618,14 @@
         "inputs": {
           "points": 38,
           "ppg": 2.0,
-          "adjusted_ppg": 1.8034,
-          "league_ppg": 1.3364,
+          "adjusted_ppg": 1.8042,
+          "league_ppg": 1.3393,
           "recent_n": 8,
           "recent_points": 17,
           "previous_n": 8,
           "previous_ppg": 1.375,
           "comparison": "재임 전 같은 시즌",
-          "relative_change": 0.4553
+          "relative_change": 0.4532
         },
         "game_ids": [
           "2026-K2-73",
@@ -2796,8 +2806,8 @@
         "inputs": {
           "points": 54,
           "ppg": 2.0,
-          "adjusted_ppg": 1.8493,
-          "league_ppg": 1.3406,
+          "adjusted_ppg": 1.8498,
+          "league_ppg": 1.3427,
           "recent_n": 8,
           "recent_points": 18,
           "previous_n": 0,
@@ -2900,8 +2910,8 @@
           ]
         }
       ],
-      "rating": 75.9,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
+      "rating": 76.9,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 28경기 기준.",
       "tactics": {
         "kind": "관리형",
         "style": "실점 관리 · 안정",
@@ -2959,7 +2969,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 75.9,
+        "score": 76.9,
         "components": [
           {
             "key": "results",
@@ -2971,35 +2981,35 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 57.843,
+            "score": 59.152,
             "weight": 0.3,
-            "contribution": 17.353
+            "contribution": 17.746
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 79.412,
+            "score": 82.353,
             "weight": 0.2,
-            "contribution": 15.882
+            "contribution": 16.471
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 27,
-        "through": "2026-10-09",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
+        "n": 28,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 28경기 기준.",
         "inputs": {
-          "points": 51,
-          "ppg": 1.8889,
-          "adjusted_ppg": 1.7636,
-          "league_ppg": 1.3406,
+          "points": 54,
+          "ppg": 1.9286,
+          "adjusted_ppg": 1.7984,
+          "league_ppg": 1.3427,
           "recent_n": 8,
-          "recent_points": 15,
+          "recent_points": 17,
           "previous_n": 40,
           "previous_ppg": 1.625,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.1961
+          "relative_change": 0.2288
         },
         "game_ids": [
           "2026-K2-2",
@@ -3028,7 +3038,8 @@
           "2026-K2-193",
           "2026-K2-202",
           "2026-K2-211",
-          "2026-K2-219"
+          "2026-K2-219",
+          "2026-K2-231"
         ]
       }
     },
@@ -3096,8 +3107,8 @@
           ]
         }
       ],
-      "rating": 68.3,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
+      "rating": 62.5,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 28경기 기준.",
       "tactics": {
         "kind": "전방 압박",
         "style": "측면 투지",
@@ -3155,47 +3166,47 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 68.3,
+        "score": 62.5,
         "components": [
           {
             "key": "results",
             "label": "재임 성과",
-            "score": 73.529,
+            "score": 67.647,
             "weight": 0.5,
-            "contribution": 36.765
+            "contribution": 33.824
           },
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 69.775,
+            "score": 67.973,
             "weight": 0.3,
-            "contribution": 20.932
+            "contribution": 20.392
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 52.941,
+            "score": 41.176,
             "weight": 0.2,
-            "contribution": 10.588
+            "contribution": 8.235
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 27,
-        "through": "2026-10-09",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
+        "n": 28,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 28경기 기준.",
         "inputs": {
           "points": 44,
-          "ppg": 1.6296,
-          "adjusted_ppg": 1.5636,
-          "league_ppg": 1.3406,
+          "ppg": 1.5714,
+          "adjusted_ppg": 1.5206,
+          "league_ppg": 1.3427,
           "recent_n": 8,
-          "recent_points": 10,
+          "recent_points": 9,
           "previous_n": 39,
           "previous_ppg": 1.0256,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.4944
+          "relative_change": 0.4493
         },
         "game_ids": [
           "2026-K2-4",
@@ -3224,7 +3235,8 @@
           "2026-K2-196",
           "2026-K2-203",
           "2026-K2-216",
-          "2026-K2-217"
+          "2026-K2-217",
+          "2026-K2-230"
         ]
       }
     },
@@ -3292,8 +3304,8 @@
           ]
         }
       ],
-      "rating": 53.2,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
+      "rating": 61.9,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 28경기 기준.",
       "tactics": {
         "kind": "유연한 역습",
         "style": "수비 블록 · 역습",
@@ -3351,47 +3363,47 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 53.2,
+        "score": 61.9,
         "components": [
           {
             "key": "results",
             "label": "재임 성과",
-            "score": 67.647,
+            "score": 73.529,
             "weight": 0.5,
-            "contribution": 33.824
+            "contribution": 36.765
           },
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 54.723,
+            "score": 56.318,
             "weight": 0.3,
-            "contribution": 16.417
+            "contribution": 16.896
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 14.706,
+            "score": 41.176,
             "weight": 0.2,
-            "contribution": 2.941
+            "contribution": 8.235
           }
         ],
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 27,
-        "through": "2026-10-10",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
+        "n": 28,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 28경기 기준.",
         "inputs": {
-          "points": 42,
-          "ppg": 1.5556,
-          "adjusted_ppg": 1.5064,
-          "league_ppg": 1.3406,
+          "points": 45,
+          "ppg": 1.6071,
+          "adjusted_ppg": 1.5484,
+          "league_ppg": 1.3427,
           "recent_n": 8,
-          "recent_points": 6,
+          "recent_points": 9,
           "previous_n": 39,
           "previous_ppg": 1.4103,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.1181
+          "relative_change": 0.158
         },
         "game_ids": [
           "2026-K2-8",
@@ -3420,7 +3432,8 @@
           "2026-K2-195",
           "2026-K2-207",
           "2026-K2-212",
-          "2026-K2-221"
+          "2026-K2-221",
+          "2026-K2-232"
         ]
       }
     },
@@ -3483,7 +3496,7 @@
           ]
         }
       ],
-      "rating": 53.4,
+      "rating": 54.0,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
       "tactics": {
         "kind": "유연한 역습",
@@ -3542,7 +3555,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 53.4,
+        "score": 54.0,
         "components": [
           {
             "key": "results",
@@ -3554,16 +3567,16 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 59.489,
+            "score": 59.425,
             "weight": 0.3,
-            "contribution": 17.847
+            "contribution": 17.828
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 52.941,
+            "score": 55.882,
             "weight": 0.2,
-            "contribution": 10.588
+            "contribution": 11.176
           }
         ],
         "season": 2026,
@@ -3575,14 +3588,14 @@
         "inputs": {
           "points": 35,
           "ppg": 1.2963,
-          "adjusted_ppg": 1.3064,
-          "league_ppg": 1.3406,
+          "adjusted_ppg": 1.3069,
+          "league_ppg": 1.3427,
           "recent_n": 8,
           "recent_points": 10,
           "previous_n": 39,
           "previous_ppg": 1.0256,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.2372
+          "relative_change": 0.2356
         },
         "game_ids": [
           "2026-K2-6",
@@ -3674,7 +3687,7 @@
           ]
         }
       ],
-      "rating": 58.9,
+      "rating": 58.8,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
       "tactics": {
         "kind": "관리형",
@@ -3733,7 +3746,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 58.9,
+        "score": 58.8,
         "components": [
           {
             "key": "results",
@@ -3745,9 +3758,9 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 50.152,
+            "score": 50.088,
             "weight": 0.3,
-            "contribution": 15.045
+            "contribution": 15.026
           },
           {
             "key": "recent",
@@ -3766,14 +3779,14 @@
         "inputs": {
           "points": 38,
           "ppg": 1.4074,
-          "adjusted_ppg": 1.3921,
-          "league_ppg": 1.3406,
+          "adjusted_ppg": 1.3926,
+          "league_ppg": 1.3427,
           "recent_n": 8,
           "recent_points": 11,
           "previous_n": 39,
           "previous_ppg": 1.4103,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.0038
+          "relative_change": 0.0022
         },
         "game_ids": [
           "2026-K2-15",
@@ -3870,7 +3883,7 @@
           ]
         }
       ],
-      "rating": 36.7,
+      "rating": 32.5,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 8경기 기준.",
       "tactics": {
         "kind": "관리형",
@@ -3929,28 +3942,28 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 36.7,
+        "score": 32.5,
         "components": [
           {
             "key": "results",
             "label": "재임 성과",
-            "score": 32.353,
+            "score": 26.471,
             "weight": 0.5,
-            "contribution": 16.176
+            "contribution": 13.235
           },
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 46.739,
+            "score": 46.593,
             "weight": 0.3,
-            "contribution": 14.022
+            "contribution": 13.978
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 32.353,
+            "score": 26.471,
             "weight": 0.2,
-            "contribution": 6.471
+            "contribution": 5.294
           }
         ],
         "season": 2026,
@@ -3962,14 +3975,14 @@
         "inputs": {
           "points": 8,
           "ppg": 1.0,
-          "adjusted_ppg": 1.1721,
-          "league_ppg": 1.3443,
+          "adjusted_ppg": 1.1758,
+          "league_ppg": 1.3516,
           "recent_n": 8,
           "recent_points": 8,
           "previous_n": 19,
           "previous_ppg": 1.2105,
           "comparison": "재임 전 같은 시즌",
-          "relative_change": -0.0815
+          "relative_change": -0.0852
         },
         "game_ids": [
           "2026-K2-176",
@@ -4047,7 +4060,7 @@
           ]
         }
       ],
-      "rating": 34.1,
+      "rating": 32.9,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
       "tactics": {
         "kind": "관리형",
@@ -4106,7 +4119,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 34.1,
+        "score": 32.9,
         "components": [
           {
             "key": "results",
@@ -4125,9 +4138,9 @@
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 29.412,
+            "score": 23.529,
             "weight": 0.2,
-            "contribution": 5.882
+            "contribution": 4.706
           }
         ],
         "season": 2026,
@@ -4139,8 +4152,8 @@
         "inputs": {
           "points": 27,
           "ppg": 1.0,
-          "adjusted_ppg": 1.0779,
-          "league_ppg": 1.3406,
+          "adjusted_ppg": 1.0783,
+          "league_ppg": 1.3427,
           "recent_n": 8,
           "recent_points": 8,
           "previous_n": 0,
@@ -4243,7 +4256,7 @@
           ]
         }
       ],
-      "rating": 30.5,
+      "rating": 29.9,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
       "tactics": {
         "kind": "유연한 역습",
@@ -4302,7 +4315,7 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 30.5,
+        "score": 29.9,
         "components": [
           {
             "key": "results",
@@ -4314,16 +4327,16 @@
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 57.714,
+            "score": 57.65,
             "weight": 0.3,
-            "contribution": 17.314
+            "contribution": 17.295
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 14.706,
+            "score": 11.765,
             "weight": 0.2,
-            "contribution": 2.941
+            "contribution": 2.353
           }
         ],
         "season": 2026,
@@ -4335,14 +4348,14 @@
         "inputs": {
           "points": 26,
           "ppg": 0.963,
-          "adjusted_ppg": 1.0493,
-          "league_ppg": 1.3406,
+          "adjusted_ppg": 1.0498,
+          "league_ppg": 1.3427,
           "recent_n": 8,
           "recent_points": 6,
           "previous_n": 39,
           "previous_ppg": 0.7692,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.1928
+          "relative_change": 0.1913
         },
         "game_ids": [
           "2026-K2-3",
@@ -4439,7 +4452,7 @@
           ]
         }
       ],
-      "rating": 24.8,
+      "rating": 27.1,
       "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 28경기 기준.",
       "tactics": {
         "kind": "점유 지향",
@@ -4498,28 +4511,28 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 24.8,
+        "score": 27.1,
         "components": [
           {
             "key": "results",
             "label": "재임 성과",
-            "score": 8.824,
+            "score": 14.706,
             "weight": 0.5,
-            "contribution": 4.412
+            "contribution": 7.353
           },
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 57.99,
+            "score": 57.926,
             "weight": 0.3,
-            "contribution": 17.397
+            "contribution": 17.378
           },
           {
             "key": "recent",
             "label": "최근 8경기",
-            "score": 14.706,
+            "score": 11.765,
             "weight": 0.2,
-            "contribution": 2.941
+            "contribution": 2.353
           }
         ],
         "season": 2026,
@@ -4531,14 +4544,14 @@
         "inputs": {
           "points": 25,
           "ppg": 0.8929,
-          "adjusted_ppg": 0.9924,
-          "league_ppg": 1.3406,
+          "adjusted_ppg": 0.9928,
+          "league_ppg": 1.3427,
           "recent_n": 8,
           "recent_points": 6,
           "previous_n": 39,
           "previous_ppg": 0.6923,
           "comparison": "전년 같은 리그",
-          "relative_change": 0.1998
+          "relative_change": 0.1982
         },
         "game_ids": [
           "2026-K2-1",
@@ -4636,8 +4649,8 @@
           ]
         }
       ],
-      "rating": 53.2,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 17경기 기준.",
+      "rating": 43.8,
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 18경기 기준.",
       "tactics": {
         "kind": "관리형",
         "style": "응급 수비 재편",
@@ -4695,21 +4708,21 @@
       "performance": {
         "version": "league-performance-v1",
         "status": "scored",
-        "score": 53.2,
+        "score": 43.8,
         "components": [
           {
             "key": "results",
             "label": "재임 성과",
-            "score": 44.118,
+            "score": 26.471,
             "weight": 0.5,
-            "contribution": 22.059
+            "contribution": 13.235
           },
           {
             "key": "change",
             "label": "기준 대비 변화",
-            "score": 60.783,
+            "score": 58.87,
             "weight": 0.3,
-            "contribution": 18.235
+            "contribution": 17.661
           },
           {
             "key": "recent",
@@ -4722,20 +4735,20 @@
         "season": 2026,
         "start": "2026-05-01",
         "source": "https://www.transfermarkt.co.kr/kwan-sik-lim/profil/trainer/65581",
-        "n": 17,
-        "through": "2026-10-10",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 17경기 기준.",
+        "n": 18,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 18경기 기준.",
         "inputs": {
           "points": 19,
-          "ppg": 1.1176,
-          "adjusted_ppg": 1.188,
-          "league_ppg": 1.3376,
+          "ppg": 1.0556,
+          "adjusted_ppg": 1.1433,
+          "league_ppg": 1.3406,
           "recent_n": 8,
           "recent_points": 11,
           "previous_n": 9,
           "previous_ppg": 0.5556,
           "comparison": "재임 전 같은 시즌",
-          "relative_change": 0.2696
+          "relative_change": 0.2218
         },
         "game_ids": [
           "2026-K2-85",
@@ -4754,7 +4767,8 @@
           "2026-K2-198",
           "2026-K2-206",
           "2026-K2-209",
-          "2026-K2-220"
+          "2026-K2-220",
+          "2026-K2-232"
         ]
       }
     },
@@ -4818,7 +4832,7 @@
         }
       ],
       "rating": 17.1,
-      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 26경기 기준.",
+      "rating_note": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
       "tactics": {
         "kind": "유연한 역습",
         "style": "세컨드볼 · 세트피스",
@@ -4903,14 +4917,14 @@
         "season": 2026,
         "start": "2026-01-01",
         "source": "team_report/data/team_profiles.json + 기존 개막 감독 프로필",
-        "n": 26,
-        "through": "2026-10-10",
-        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 26경기 기준.",
+        "n": 27,
+        "through": "2026-10-18",
+        "reason": "재임 성과 50% + 기준 대비 변화 30% + 최근 8경기 20%. 27경기 기준.",
         "inputs": {
           "points": 14,
-          "ppg": 0.5385,
-          "adjusted_ppg": 0.7272,
-          "league_ppg": 1.3406,
+          "ppg": 0.5185,
+          "adjusted_ppg": 0.7069,
+          "league_ppg": 1.3427,
           "recent_n": 8,
           "recent_points": 3,
           "previous_n": 0,
@@ -4944,7 +4958,8 @@
           "2026-K2-198",
           "2026-K2-207",
           "2026-K2-215",
-          "2026-K2-223"
+          "2026-K2-223",
+          "2026-K2-231"
         ]
       }
     },
