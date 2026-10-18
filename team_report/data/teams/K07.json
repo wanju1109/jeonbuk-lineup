@@ -8,23 +8,23 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:29+09:00",
+  "generated_at": "2026-10-19T04:23:23+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
-    "played": 26,
+    "played": 27,
     "win": 5,
     "draw": 9,
-    "loss": 12,
-    "gf": 30,
-    "ga": 44,
-    "gd": -14,
+    "loss": 13,
+    "gf": 31,
+    "ga": 46,
+    "gd": -15,
     "points": 24,
-    "ppg": 0.92,
-    "remaining": 6,
+    "ppg": 0.89,
+    "remaining": 5,
     "scheduled": 32,
-    "gap_to_leader": 32,
-    "gap_to_cut": 18,
+    "gap_to_leader": 35,
+    "gap_to_cut": 20,
     "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 10,
@@ -44,15 +44,15 @@
       "ppg": 1.33
     },
     "away": {
-      "played": 14,
+      "played": 15,
       "win": 1,
       "draw": 5,
-      "loss": 8,
-      "gf": 16,
-      "ga": 28,
-      "gd": -12,
+      "loss": 9,
+      "gf": 17,
+      "ga": 30,
+      "gd": -13,
       "points": 8,
-      "ppg": 0.57
+      "ppg": 0.53
     }
   },
   "form": {
@@ -82,17 +82,17 @@
       "D",
       "D",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "W",
       "D",
       "D",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "L",
@@ -101,30 +101,31 @@
       "D",
       "D",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
+      "win": 1,
       "draw": 2,
-      "loss": 1,
+      "loss": 2,
       "gf": 7,
-      "ga": 8,
-      "gd": -1,
-      "points": 8
+      "ga": 10,
+      "gd": -3,
+      "points": 5
     },
     "last10_record": {
       "played": 10,
-      "win": 4,
+      "win": 3,
       "draw": 3,
-      "loss": 3,
+      "loss": 4,
       "gf": 12,
-      "ga": 13,
-      "gd": -1,
-      "points": 15
+      "ga": 15,
+      "gd": -3,
+      "points": 12
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 4,
@@ -134,11 +135,11 @@
   },
   "scoring": {
     "gf_per_game": 1.15,
-    "ga_per_game": 1.69,
+    "ga_per_game": 1.7,
     "clean_sheets": 4,
     "failed_to_score": 9,
-    "both_scored": 14,
-    "one_goal_games": 11,
+    "both_scored": 15,
+    "one_goal_games": 12,
     "biggest_win": {
       "round": 1,
       "date": "2026-03-01",
@@ -164,7 +165,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 1,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -362,11 +363,11 @@
         "round": 29,
         "rank": 16,
         "points": 24,
-        "played": 26,
-        "gd": -14
+        "played": 27,
+        "gd": -15
       }
     ],
-    "best_rank": 2,
+    "best_rank": 1,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -380,15 +381,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 10,
+      "played": 11,
       "win": 4,
       "draw": 3,
-      "loss": 3,
-      "gf": 12,
-      "ga": 13,
-      "gd": -1,
+      "loss": 4,
+      "gf": 13,
+      "ga": 15,
+      "gd": -2,
       "points": 15,
-      "ppg": 1.5
+      "ppg": 1.36
     }
   },
   "fixtures": [
@@ -651,6 +652,16 @@
       "gf": 2,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 29,
+      "date": "2026-10-18",
+      "venue": "A",
+      "opponent_id": "K06",
+      "opponent": "부산 아이파크",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -665,7 +676,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 26,
+        "apps": 27,
         "goals": 7,
         "assists": 6,
         "points": 13
@@ -677,7 +688,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 19,
+        "apps": 20,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -701,21 +712,21 @@
         "position": "MF",
         "back_no": 14,
         "age": 27,
-        "apps": 21,
+        "apps": 22,
         "goals": 3,
         "assists": 1,
         "points": 4
       },
       {
-        "player_id": "20190059",
+        "player_id": "20260191",
         "departed": false,
-        "name": "정지용",
+        "name": "이라클리",
         "position": "FW",
-        "back_no": 11,
-        "age": 27,
-        "apps": 24,
-        "goals": 2,
-        "assists": 2,
+        "back_no": 27,
+        "age": 28,
+        "apps": 13,
+        "goals": 3,
+        "assists": 1,
         "points": 4
       }
     ],
@@ -727,7 +738,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 26,
+        "apps": 27,
         "goals": 7,
         "assists": 6,
         "points": 13
@@ -739,10 +750,22 @@
         "position": "FW",
         "back_no": 17,
         "age": 26,
-        "apps": 24,
+        "apps": 25,
         "goals": 1,
         "assists": 5,
         "points": 6
+      },
+      {
+        "player_id": "20230271",
+        "departed": false,
+        "name": "미란징야",
+        "position": "FW",
+        "back_no": 79,
+        "age": 26,
+        "apps": 9,
+        "goals": 0,
+        "assists": 3,
+        "points": 3
       },
       {
         "player_id": "20200134",
@@ -751,7 +774,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 19,
+        "apps": 20,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -763,25 +786,13 @@
         "position": "FW",
         "back_no": 11,
         "age": 27,
-        "apps": 24,
+        "apps": 25,
         "goals": 2,
         "assists": 2,
         "points": 4
-      },
-      {
-        "player_id": "20230271",
-        "departed": false,
-        "name": "미란징야",
-        "position": "FW",
-        "back_no": 79,
-        "age": 26,
-        "apps": 8,
-        "goals": 0,
-        "assists": 2,
-        "points": 2
       }
     ],
-    "goal_share": 0.233
+    "goal_share": 0.226
   },
   "attendance": null,
   "context": {

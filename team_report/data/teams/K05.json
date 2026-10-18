@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:27+09:00",
+  "generated_at": "2026-10-19T04:23:21+09:00",
   "table": {
-    "rank": 5,
+    "rank": 3,
     "teams": 12,
-    "played": 31,
-    "win": 11,
+    "played": 32,
+    "win": 12,
     "draw": 11,
     "loss": 9,
-    "gf": 39,
-    "ga": 30,
-    "gd": 9,
-    "points": 44,
-    "ppg": 1.42,
-    "remaining": 7,
+    "gf": 42,
+    "ga": 32,
+    "gd": 10,
+    "points": 47,
+    "ppg": 1.47,
+    "remaining": 6,
     "scheduled": 38,
-    "gap_to_leader": 21,
+    "gap_to_leader": 19,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 1,
-    "above": "제주",
-    "below": "대전"
+    "gap_above": 3,
+    "gap_below": 0,
+    "above": "울산",
+    "below": "강원"
   },
   "splits": {
     "home": {
-      "played": 15,
-      "win": 7,
+      "played": 16,
+      "win": 8,
       "draw": 3,
       "loss": 5,
-      "gf": 23,
-      "ga": 17,
-      "gd": 6,
-      "points": 24,
-      "ppg": 1.6
+      "gf": 26,
+      "ga": 19,
+      "gd": 7,
+      "points": 27,
+      "ppg": 1.69
     },
     "away": {
       "played": 16,
@@ -87,18 +87,18 @@
       "D",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
-      "W",
       "D",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
       "L",
-      "L",
       "W",
       "D",
       "D",
@@ -106,30 +106,31 @@
       "D",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
       "draw": 2,
       "loss": 2,
-      "gf": 7,
-      "ga": 7,
-      "gd": 0,
+      "gf": 8,
+      "ga": 9,
+      "gd": -1,
       "points": 5
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
+      "win": 3,
       "draw": 4,
-      "loss": 4,
-      "gf": 12,
-      "ga": 14,
-      "gd": -2,
-      "points": 10
+      "loss": 3,
+      "gf": 14,
+      "ga": 13,
+      "gd": 1,
+      "points": 13
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 6,
@@ -138,12 +139,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.26,
-    "ga_per_game": 0.97,
+    "gf_per_game": 1.31,
+    "ga_per_game": 1.0,
     "clean_sheets": 13,
     "failed_to_score": 7,
-    "both_scored": 16,
-    "one_goal_games": 13,
+    "both_scored": 17,
+    "one_goal_games": 14,
     "biggest_win": {
       "round": 12,
       "date": "2026-05-05",
@@ -190,7 +191,7 @@
       },
       {
         "round": 4,
-        "rank": 7,
+        "rank": 6,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -386,10 +387,10 @@
       },
       {
         "round": 32,
-        "rank": 5,
-        "points": 44,
-        "played": 31,
-        "gd": 9
+        "rank": 3,
+        "points": 47,
+        "played": 32,
+        "gd": 10
       }
     ],
     "best_rank": 2,
@@ -406,15 +407,15 @@
       "ppg": 1.62
     },
     "second_half": {
-      "played": 15,
-      "win": 4,
+      "played": 16,
+      "win": 5,
       "draw": 6,
       "loss": 5,
-      "gf": 17,
-      "ga": 16,
-      "gd": 1,
-      "points": 18,
-      "ppg": 1.2
+      "gf": 20,
+      "ga": 18,
+      "gd": 2,
+      "points": 21,
+      "ppg": 1.31
     }
   },
   "fixtures": [
@@ -727,6 +728,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-18",
+      "venue": "H",
+      "opponent_id": "K04",
+      "opponent": "제주 SK",
+      "gf": 3,
+      "ga": 2,
+      "result": "W"
     }
   ],
   "squad": {
@@ -735,28 +746,28 @@
     "foreign": 9,
     "top_scorers": [
       {
-        "player_id": "20220042",
-        "departed": false,
-        "name": "이승우",
-        "position": "FW",
-        "back_no": 10,
-        "age": 28,
-        "apps": 30,
-        "goals": 8,
-        "assists": 3,
-        "points": 11
-      },
-      {
         "player_id": "20220244",
         "departed": false,
         "name": "티아고",
         "position": "FW",
         "back_no": 9,
         "age": 32,
-        "apps": 23,
-        "goals": 8,
+        "apps": 24,
+        "goals": 10,
         "assists": 1,
-        "points": 9
+        "points": 11
+      },
+      {
+        "player_id": "20220042",
+        "departed": false,
+        "name": "이승우",
+        "position": "FW",
+        "back_no": 10,
+        "age": 28,
+        "apps": 31,
+        "goals": 8,
+        "assists": 4,
+        "points": 12
       },
       {
         "player_id": "20230224",
@@ -765,7 +776,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 30,
-        "apps": 27,
+        "apps": 28,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -777,37 +788,25 @@
         "position": "FW",
         "back_no": 7,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 3,
         "assists": 5,
         "points": 8
       },
       {
-        "player_id": "20150052",
+        "player_id": "20140143",
         "departed": false,
-        "name": "김진규",
-        "position": "MF",
-        "back_no": 97,
-        "age": 29,
+        "name": "김영빈",
+        "position": "DF",
+        "back_no": 2,
+        "age": 35,
         "apps": 28,
-        "goals": 2,
+        "goals": 3,
         "assists": 2,
-        "points": 4
+        "points": 5
       }
     ],
     "top_assists": [
-      {
-        "player_id": "20170121",
-        "departed": false,
-        "name": "이동준",
-        "position": "FW",
-        "back_no": 7,
-        "age": 29,
-        "apps": 30,
-        "goals": 3,
-        "assists": 5,
-        "points": 8
-      },
       {
         "player_id": "20150104",
         "departed": false,
@@ -815,10 +814,22 @@
         "position": "MF",
         "back_no": 28,
         "age": 32,
-        "apps": 23,
+        "apps": 24,
         "goals": 0,
+        "assists": 7,
+        "points": 7
+      },
+      {
+        "player_id": "20170121",
+        "departed": false,
+        "name": "이동준",
+        "position": "FW",
+        "back_no": 7,
+        "age": 29,
+        "apps": 31,
+        "goals": 3,
         "assists": 5,
-        "points": 5
+        "points": 8
       },
       {
         "player_id": "20220042",
@@ -827,10 +838,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 30,
+        "apps": 31,
         "goals": 8,
-        "assists": 3,
-        "points": 11
+        "assists": 4,
+        "points": 12
       },
       {
         "player_id": "20230224",
@@ -839,7 +850,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 30,
-        "apps": 27,
+        "apps": 28,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -851,24 +862,24 @@
         "position": "DF",
         "back_no": 2,
         "age": 35,
-        "apps": 27,
-        "goals": 2,
+        "apps": 28,
+        "goals": 3,
         "assists": 2,
-        "points": 4
+        "points": 5
       }
     ],
-    "goal_share": 0.205
+    "goal_share": 0.238
   },
   "attendance": {
-    "avg": 16133,
-    "total": 242002,
-    "games": 15,
-    "home_fans_avg": 14984,
+    "avg": 15842,
+    "total": 253471,
+    "games": 16,
+    "home_fans_avg": 14747,
     "away_fans_avg": 2099
   },
   "context": {
-    "band": "파이널A 경쟁",
-    "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
+    "band": "ACL 진출권",
+    "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
     "tags": [
       "화력 우위",
       "수비 안정",

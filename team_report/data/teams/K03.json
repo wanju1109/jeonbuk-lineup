@@ -8,23 +8,23 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:28+09:00",
+  "generated_at": "2026-10-19T04:23:22+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
-    "played": 31,
+    "played": 32,
     "win": 11,
-    "draw": 7,
+    "draw": 8,
     "loss": 13,
     "gf": 28,
     "ga": 37,
     "gd": -9,
-    "points": 40,
-    "ppg": 1.29,
-    "remaining": 7,
+    "points": 41,
+    "ppg": 1.28,
+    "remaining": 6,
     "scheduled": 38,
     "gap_to_leader": 25,
-    "gap_to_cut": 3,
+    "gap_to_cut": 5,
     "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 7,
@@ -33,15 +33,15 @@
   },
   "splits": {
     "home": {
-      "played": 13,
+      "played": 14,
       "win": 4,
-      "draw": 3,
+      "draw": 4,
       "loss": 6,
       "gf": 6,
       "ga": 11,
       "gd": -5,
-      "points": 15,
-      "ppg": 1.15
+      "points": 16,
+      "ppg": 1.14
     },
     "away": {
       "played": 18,
@@ -87,17 +87,17 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "L",
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
-      "L",
       "W",
       "L",
       "W",
@@ -106,30 +106,31 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 2,
-      "loss": 2,
+      "draw": 3,
+      "loss": 1,
       "gf": 4,
-      "ga": 8,
-      "gd": -4,
-      "points": 5
+      "ga": 6,
+      "gd": -2,
+      "points": 6
     },
     "last10_record": {
       "played": 10,
       "win": 3,
-      "draw": 3,
-      "loss": 4,
+      "draw": 4,
+      "loss": 3,
       "gf": 8,
-      "ga": 15,
-      "gd": -7,
-      "points": 12
+      "ga": 13,
+      "gd": -5,
+      "points": 13
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 4,
@@ -138,10 +139,10 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.9,
-    "ga_per_game": 1.19,
-    "clean_sheets": 10,
-    "failed_to_score": 13,
+    "gf_per_game": 0.88,
+    "ga_per_game": 1.16,
+    "clean_sheets": 11,
+    "failed_to_score": 14,
     "both_scored": 11,
     "one_goal_games": 14,
     "biggest_win": {
@@ -169,7 +170,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 5,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -387,8 +388,8 @@
       {
         "round": 32,
         "rank": 9,
-        "points": 40,
-        "played": 31,
+        "points": 41,
+        "played": 32,
         "gd": -9
       }
     ],
@@ -406,14 +407,14 @@
       "ppg": 1.56
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 4,
-      "draw": 3,
+      "draw": 4,
       "loss": 8,
       "gf": 13,
       "ga": 23,
       "gd": -10,
-      "points": 15,
+      "points": 16,
       "ppg": 1.0
     }
   },
@@ -727,6 +728,16 @@
       "gf": 0,
       "ga": 3,
       "result": "L"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-18",
+      "venue": "H",
+      "opponent_id": "K27",
+      "opponent": "FC 안양",
+      "gf": 0,
+      "ga": 0,
+      "result": "D"
     }
   ],
   "squad": {
@@ -753,7 +764,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 23,
+        "apps": 24,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -765,7 +776,7 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 25,
+        "apps": 26,
         "goals": 3,
         "assists": 4,
         "points": 7
@@ -777,7 +788,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 22,
+        "apps": 23,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -789,7 +800,7 @@
         "position": "MF",
         "back_no": 31,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -815,7 +826,7 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 25,
+        "apps": 26,
         "goals": 3,
         "assists": 4,
         "points": 7
@@ -827,7 +838,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 23,
-        "apps": 30,
+        "apps": 31,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -839,7 +850,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 23,
+        "apps": 24,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -860,19 +871,18 @@
     "goal_share": 0.143
   },
   "attendance": {
-    "avg": 7279,
-    "total": 94629,
-    "games": 13,
-    "home_fans_avg": 6691,
+    "avg": 7417,
+    "total": 103841,
+    "games": 14,
+    "home_fans_avg": 6837,
     "away_fans_avg": 974
   },
   "context": {
     "band": "파이널A 추격",
-    "detail": "6위와 3점 차. 상위 스플릿이 아직 사정권입니다.",
+    "detail": "6위와 5점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "득점 빈곤",
-      "침묵하는 공격",
-      "한 골 승부사"
+      "침묵하는 공격"
     ]
   },
   "profile": {

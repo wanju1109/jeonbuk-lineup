@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:29+09:00",
+  "generated_at": "2026-10-19T04:23:23+09:00",
   "table": {
-    "rank": 5,
+    "rank": 6,
     "teams": 17,
-    "played": 27,
+    "played": 28,
     "win": 12,
     "draw": 8,
-    "loss": 7,
-    "gf": 41,
-    "ga": 28,
-    "gd": 13,
+    "loss": 8,
+    "gf": 43,
+    "ga": 31,
+    "gd": 12,
     "points": 44,
-    "ppg": 1.63,
-    "remaining": 5,
+    "ppg": 1.57,
+    "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 12,
+    "gap_to_leader": 15,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 5,
-    "gap_below": 2,
-    "above": "대구",
-    "below": "부산"
+    "gap_above": 1,
+    "gap_below": 6,
+    "above": "부산",
+    "below": "김포"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.81
     },
     "away": {
-      "played": 11,
+      "played": 12,
       "win": 4,
       "draw": 3,
-      "loss": 4,
-      "gf": 13,
-      "ga": 10,
-      "gd": 3,
+      "loss": 5,
+      "gf": 15,
+      "ga": 13,
+      "gd": 2,
       "points": 15,
-      "ppg": 1.36
+      "ppg": 1.25
     }
   },
   "form": {
@@ -83,17 +83,17 @@
       "D",
       "W",
       "D",
+      "L",
       "L"
     ],
     "last5": [
-      "W",
       "D",
       "W",
       "D",
+      "L",
       "L"
     ],
     "last10": [
-      "W",
       "W",
       "D",
       "D",
@@ -102,31 +102,32 @@
       "D",
       "W",
       "D",
+      "L",
       "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
+      "win": 1,
       "draw": 2,
-      "loss": 1,
+      "loss": 2,
       "gf": 7,
-      "ga": 5,
-      "gd": 2,
-      "points": 8
+      "ga": 7,
+      "gd": 0,
+      "points": 5
     },
     "last10_record": {
       "played": 10,
-      "win": 4,
+      "win": 3,
       "draw": 4,
-      "loss": 2,
-      "gf": 15,
-      "ga": 9,
-      "gd": 6,
-      "points": 16
+      "loss": 3,
+      "gf": 14,
+      "ga": 10,
+      "gd": 4,
+      "points": 13
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 3,
       "longest_unbeaten": 8,
       "longest_winless": 4,
@@ -134,12 +135,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.52,
-    "ga_per_game": 1.04,
+    "gf_per_game": 1.54,
+    "ga_per_game": 1.11,
     "clean_sheets": 9,
     "failed_to_score": 7,
-    "both_scored": 14,
-    "one_goal_games": 12,
+    "both_scored": 15,
+    "one_goal_games": 13,
     "biggest_win": {
       "round": 20,
       "date": "2026-08-01",
@@ -361,10 +362,10 @@
       },
       {
         "round": 29,
-        "rank": 5,
+        "rank": 6,
         "points": 44,
-        "played": 27,
-        "gd": 13
+        "played": 28,
+        "gd": 12
       }
     ],
     "best_rank": 4,
@@ -381,15 +382,15 @@
       "ppg": 1.56
     },
     "second_half": {
-      "played": 11,
+      "played": 12,
       "win": 5,
       "draw": 4,
-      "loss": 2,
-      "gf": 18,
-      "ga": 9,
-      "gd": 9,
+      "loss": 3,
+      "gf": 20,
+      "ga": 12,
+      "gd": 8,
       "points": 19,
-      "ppg": 1.73
+      "ppg": 1.58
     }
   },
   "fixtures": [
@@ -662,6 +663,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 29,
+      "date": "2026-10-18",
+      "venue": "A",
+      "opponent_id": "K02",
+      "opponent": "수원 삼성",
+      "gf": 2,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -676,7 +687,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 30,
-        "apps": 27,
+        "apps": 28,
         "goals": 11,
         "assists": 9,
         "points": 20
@@ -688,10 +699,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 21,
+        "apps": 22,
         "goals": 8,
-        "assists": 1,
-        "points": 9
+        "assists": 2,
+        "points": 10
       },
       {
         "player_id": "20190347",
@@ -700,7 +711,7 @@
         "position": "FW",
         "back_no": 90,
         "age": 36,
-        "apps": 24,
+        "apps": 25,
         "goals": 5,
         "assists": 4,
         "points": 9
@@ -712,7 +723,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 4,
         "assists": 5,
         "points": 9
@@ -738,7 +749,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 30,
-        "apps": 27,
+        "apps": 28,
         "goals": 11,
         "assists": 9,
         "points": 20
@@ -750,7 +761,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 4,
         "assists": 5,
         "points": 9
@@ -762,7 +773,7 @@
         "position": "FW",
         "back_no": 90,
         "age": 36,
-        "apps": 24,
+        "apps": 25,
         "goals": 5,
         "assists": 4,
         "points": 9
@@ -774,7 +785,7 @@
         "position": "DF",
         "back_no": 22,
         "age": 21,
-        "apps": 26,
+        "apps": 27,
         "goals": 2,
         "assists": 4,
         "points": 6
@@ -792,14 +803,15 @@
         "points": 6
       }
     ],
-    "goal_share": 0.268
+    "goal_share": 0.256
   },
   "attendance": null,
   "context": {
     "band": "승격 플레이오프권",
     "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
     "tags": [
-      "리그 최고 수비"
+      "리그 최고 수비",
+      "한 골 승부사"
     ]
   },
   "profile": {

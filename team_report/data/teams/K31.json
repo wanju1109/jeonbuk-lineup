@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:28+09:00",
+  "generated_at": "2026-10-19T04:23:22+09:00",
   "table": {
     "rank": 3,
     "teams": 17,
-    "played": 27,
-    "win": 15,
+    "played": 28,
+    "win": 16,
     "draw": 6,
     "loss": 6,
-    "gf": 46,
-    "ga": 30,
-    "gd": 16,
-    "points": 51,
-    "ppg": 1.89,
-    "remaining": 5,
+    "gf": 52,
+    "ga": 32,
+    "gd": 20,
+    "points": 54,
+    "ppg": 1.93,
+    "remaining": 4,
     "scheduled": 32,
     "gap_to_leader": 5,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 3,
-    "gap_below": 2,
+    "gap_above": 0,
+    "gap_below": 5,
     "above": "수원FC",
     "below": "대구"
   },
   "splits": {
     "home": {
-      "played": 13,
-      "win": 7,
+      "played": 14,
+      "win": 8,
       "draw": 2,
       "loss": 4,
-      "gf": 25,
-      "ga": 18,
-      "gd": 7,
-      "points": 23,
-      "ppg": 1.77
+      "gf": 31,
+      "ga": 20,
+      "gd": 11,
+      "points": 26,
+      "ppg": 1.86
     },
     "away": {
       "played": 14,
@@ -83,18 +83,18 @@
       "W",
       "L",
       "W",
+      "W",
       "W"
     ],
     "last5": [
-      "D",
       "W",
       "L",
+      "W",
       "W",
       "W"
     ],
     "last10": [
       "W",
-      "W",
       "D",
       "W",
       "D",
@@ -102,31 +102,32 @@
       "W",
       "L",
       "W",
+      "W",
       "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
-      "draw": 1,
+      "win": 4,
+      "draw": 0,
       "loss": 1,
-      "gf": 6,
-      "ga": 3,
-      "gd": 3,
-      "points": 10
+      "gf": 11,
+      "ga": 4,
+      "gd": 7,
+      "points": 12
     },
     "last10_record": {
       "played": 10,
       "win": 6,
       "draw": 3,
       "loss": 1,
-      "gf": 16,
-      "ga": 9,
-      "gd": 7,
+      "gf": 18,
+      "ga": 8,
+      "gd": 10,
       "points": 21
     },
     "streaks": {
       "current_type": "W",
-      "current_len": 2,
+      "current_len": 3,
       "longest_win": 4,
       "longest_unbeaten": 9,
       "longest_winless": 2,
@@ -134,20 +135,20 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.7,
-    "ga_per_game": 1.11,
+    "gf_per_game": 1.86,
+    "ga_per_game": 1.14,
     "clean_sheets": 8,
     "failed_to_score": 4,
-    "both_scored": 17,
+    "both_scored": 18,
     "one_goal_games": 12,
     "biggest_win": {
-      "round": 6,
-      "date": "2026-04-04",
+      "round": 29,
+      "date": "2026-10-18",
       "venue": "H",
-      "opponent_id": "K29",
-      "opponent": "수원 FC",
-      "gf": 3,
-      "ga": 0,
+      "opponent_id": "K41",
+      "opponent": "김해 FC",
+      "gf": 6,
+      "ga": 2,
       "result": "W"
     },
     "biggest_loss": {
@@ -179,7 +180,7 @@
       },
       {
         "round": 3,
-        "rank": 10,
+        "rank": 11,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -362,9 +363,9 @@
       {
         "round": 29,
         "rank": 3,
-        "points": 51,
-        "played": 27,
-        "gd": 16
+        "points": 54,
+        "played": 28,
+        "gd": 20
       }
     ],
     "best_rank": 2,
@@ -381,15 +382,15 @@
       "ppg": 1.81
     },
     "second_half": {
-      "played": 11,
-      "win": 6,
+      "played": 12,
+      "win": 7,
       "draw": 4,
       "loss": 1,
-      "gf": 18,
-      "ga": 11,
-      "gd": 7,
-      "points": 22,
-      "ppg": 2.0
+      "gf": 24,
+      "ga": 13,
+      "gd": 11,
+      "points": 25,
+      "ppg": 2.08
     }
   },
   "fixtures": [
@@ -662,6 +663,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 29,
+      "date": "2026-10-18",
+      "venue": "H",
+      "opponent_id": "K41",
+      "opponent": "김해 FC",
+      "gf": 6,
+      "ga": 2,
+      "result": "W"
     }
   ],
   "squad": {
@@ -676,10 +687,10 @@
         "position": "FW",
         "back_no": 16,
         "age": 26,
-        "apps": 26,
-        "goals": 10,
-        "assists": 4,
-        "points": 14
+        "apps": 27,
+        "goals": 11,
+        "assists": 5,
+        "points": 16
       },
       {
         "player_id": "20250192",
@@ -688,10 +699,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 31,
-        "apps": 26,
-        "goals": 9,
+        "apps": 27,
+        "goals": 11,
         "assists": 5,
-        "points": 14
+        "points": 16
       },
       {
         "player_id": "20240301",
@@ -700,84 +711,10 @@
         "position": "MF",
         "back_no": 6,
         "age": 22,
-        "apps": 26,
+        "apps": 27,
         "goals": 4,
-        "assists": 1,
-        "points": 5
-      },
-      {
-        "player_id": "20260290",
-        "departed": false,
-        "name": "안주완",
-        "position": "FW",
-        "back_no": 70,
-        "age": 17,
-        "apps": 15,
-        "goals": 3,
-        "assists": 0,
-        "points": 3
-      },
-      {
-        "player_id": "20220189",
-        "departed": false,
-        "name": "오인표",
-        "position": "DF",
-        "back_no": 13,
-        "age": 29,
-        "apps": 24,
-        "goals": 2,
-        "assists": 4,
+        "assists": 2,
         "points": 6
-      }
-    ],
-    "top_assists": [
-      {
-        "player_id": "20250192",
-        "departed": false,
-        "name": "에울레르",
-        "position": "FW",
-        "back_no": 7,
-        "age": 31,
-        "apps": 26,
-        "goals": 9,
-        "assists": 5,
-        "points": 14
-      },
-      {
-        "player_id": "20220035",
-        "departed": false,
-        "name": "박재용",
-        "position": "FW",
-        "back_no": 16,
-        "age": 26,
-        "apps": 26,
-        "goals": 10,
-        "assists": 4,
-        "points": 14
-      },
-      {
-        "player_id": "20220189",
-        "departed": false,
-        "name": "오인표",
-        "position": "DF",
-        "back_no": 13,
-        "age": 29,
-        "apps": 24,
-        "goals": 2,
-        "assists": 4,
-        "points": 6
-      },
-      {
-        "player_id": "20210138",
-        "departed": false,
-        "name": "박창환",
-        "position": "MF",
-        "back_no": 30,
-        "age": 24,
-        "apps": 25,
-        "goals": 2,
-        "assists": 3,
-        "points": 5
       },
       {
         "player_id": "20250344",
@@ -786,24 +723,98 @@
         "position": "FW",
         "back_no": 10,
         "age": 29,
-        "apps": 15,
-        "goals": 2,
-        "assists": 2,
-        "points": 4
+        "apps": 16,
+        "goals": 3,
+        "assists": 3,
+        "points": 6
+      },
+      {
+        "player_id": "20260290",
+        "departed": false,
+        "name": "안주완",
+        "position": "FW",
+        "back_no": 70,
+        "age": 17,
+        "apps": 16,
+        "goals": 3,
+        "assists": 0,
+        "points": 3
       }
     ],
-    "goal_share": 0.217
+    "top_assists": [
+      {
+        "player_id": "20220035",
+        "departed": false,
+        "name": "박재용",
+        "position": "FW",
+        "back_no": 16,
+        "age": 26,
+        "apps": 27,
+        "goals": 11,
+        "assists": 5,
+        "points": 16
+      },
+      {
+        "player_id": "20250192",
+        "departed": false,
+        "name": "에울레르",
+        "position": "FW",
+        "back_no": 7,
+        "age": 31,
+        "apps": 27,
+        "goals": 11,
+        "assists": 5,
+        "points": 16
+      },
+      {
+        "player_id": "20220189",
+        "departed": false,
+        "name": "오인표",
+        "position": "DF",
+        "back_no": 13,
+        "age": 29,
+        "apps": 25,
+        "goals": 2,
+        "assists": 5,
+        "points": 7
+      },
+      {
+        "player_id": "20210138",
+        "departed": false,
+        "name": "박창환",
+        "position": "MF",
+        "back_no": 30,
+        "age": 24,
+        "apps": 26,
+        "goals": 2,
+        "assists": 4,
+        "points": 6
+      },
+      {
+        "player_id": "20250344",
+        "departed": false,
+        "name": "까리우스",
+        "position": "FW",
+        "back_no": 10,
+        "age": 29,
+        "apps": 16,
+        "goals": 3,
+        "assists": 3,
+        "points": 6
+      }
+    ],
+    "goal_share": 0.212
   },
   "attendance": {
-    "avg": 22093,
-    "total": 309306,
-    "games": 14,
-    "home_fans_avg": 19866,
+    "avg": 21540,
+    "total": 323094,
+    "games": 15,
+    "home_fans_avg": 19454,
     "away_fans_avg": 1357
   },
   "context": {
     "band": "자동 승격 도전",
-    "detail": "2위와 3점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
+    "detail": "2위와 0점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "화력 우위",
       "수비 안정"

@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:27+09:00",
+  "generated_at": "2026-10-19T04:23:22+09:00",
   "table": {
-    "rank": 4,
+    "rank": 6,
     "teams": 12,
-    "played": 31,
+    "played": 32,
     "win": 12,
     "draw": 10,
-    "loss": 9,
-    "gf": 36,
-    "ga": 31,
-    "gd": 5,
+    "loss": 10,
+    "gf": 38,
+    "ga": 34,
+    "gd": 4,
     "points": 46,
-    "ppg": 1.48,
-    "remaining": 7,
+    "ppg": 1.44,
+    "remaining": 6,
     "scheduled": 38,
-    "gap_to_leader": 19,
+    "gap_to_leader": 20,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 0,
-    "gap_below": 2,
-    "above": "강원",
-    "below": "전북"
+    "gap_below": 3,
+    "above": "대전",
+    "below": "인천"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.29
     },
     "away": {
-      "played": 14,
+      "played": 15,
       "win": 7,
       "draw": 3,
-      "loss": 4,
-      "gf": 18,
-      "ga": 13,
-      "gd": 5,
+      "loss": 5,
+      "gf": 20,
+      "ga": 16,
+      "gd": 4,
       "points": 24,
-      "ppg": 1.71
+      "ppg": 1.6
     }
   },
   "form": {
@@ -87,17 +87,17 @@
       "W",
       "D",
       "W",
+      "L",
       "L"
     ],
     "last5": [
-      "D",
       "W",
       "D",
       "W",
+      "L",
       "L"
     ],
     "last10": [
-      "W",
       "W",
       "D",
       "L",
@@ -106,31 +106,32 @@
       "W",
       "D",
       "W",
+      "L",
       "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 2,
-      "draw": 2,
-      "loss": 1,
-      "gf": 5,
-      "ga": 4,
-      "gd": 1,
-      "points": 8
+      "draw": 1,
+      "loss": 2,
+      "gf": 7,
+      "ga": 7,
+      "gd": 0,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
-      "win": 5,
+      "win": 4,
       "draw": 3,
-      "loss": 2,
-      "gf": 14,
-      "ga": 8,
-      "gd": 6,
-      "points": 18
+      "loss": 3,
+      "gf": 13,
+      "ga": 10,
+      "gd": 3,
+      "points": 15
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 2,
       "longest_unbeaten": 9,
       "longest_winless": 5,
@@ -138,12 +139,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.16,
-    "ga_per_game": 1.0,
+    "gf_per_game": 1.19,
+    "ga_per_game": 1.06,
     "clean_sheets": 11,
     "failed_to_score": 7,
-    "both_scored": 17,
-    "one_goal_games": 15,
+    "both_scored": 18,
+    "one_goal_games": 16,
     "biggest_win": {
       "round": 26,
       "date": "2026-08-30",
@@ -169,7 +170,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -218,7 +219,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -386,10 +387,10 @@
       },
       {
         "round": 32,
-        "rank": 4,
+        "rank": 6,
         "points": 46,
-        "played": 31,
-        "gd": 5
+        "played": 32,
+        "gd": 4
       }
     ],
     "best_rank": 3,
@@ -406,15 +407,15 @@
       "ppg": 1.19
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 7,
       "draw": 6,
-      "loss": 2,
-      "gf": 22,
-      "ga": 14,
-      "gd": 8,
+      "loss": 3,
+      "gf": 24,
+      "ga": 17,
+      "gd": 7,
       "points": 27,
-      "ppg": 1.8
+      "ppg": 1.69
     }
   },
   "fixtures": [
@@ -727,6 +728,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-18",
+      "venue": "A",
+      "opponent_id": "K05",
+      "opponent": "전북 현대",
+      "gf": 2,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -741,10 +752,10 @@
         "position": "FW",
         "back_no": 94,
         "age": 25,
-        "apps": 28,
-        "goals": 6,
+        "apps": 29,
+        "goals": 8,
         "assists": 3,
-        "points": 9
+        "points": 11
       },
       {
         "player_id": "20200164",
@@ -753,7 +764,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 29,
+        "apps": 30,
         "goals": 6,
         "assists": 2,
         "points": 8
@@ -789,7 +800,7 @@
         "position": "FW",
         "back_no": 18,
         "age": 25,
-        "apps": 22,
+        "apps": 23,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -815,10 +826,10 @@
         "position": "FW",
         "back_no": 94,
         "age": 25,
-        "apps": 28,
-        "goals": 6,
+        "apps": 29,
+        "goals": 8,
         "assists": 3,
-        "points": 9
+        "points": 11
       },
       {
         "player_id": "20240126",
@@ -839,7 +850,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 29,
+        "apps": 30,
         "goals": 6,
         "assists": 2,
         "points": 8
@@ -851,28 +862,26 @@
         "position": "DF",
         "back_no": 40,
         "age": 24,
-        "apps": 22,
+        "apps": 23,
         "goals": 1,
         "assists": 2,
         "points": 3
       }
     ],
-    "goal_share": 0.167
+    "goal_share": 0.211
   },
   "attendance": {
     "avg": 5177,
     "total": 88010,
     "games": 17,
     "home_fans_avg": 4626,
-    "away_fans_avg": 311
+    "away_fans_avg": 309
   },
   "context": {
     "band": "파이널A 경쟁",
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
-      "수비 안정",
       "실리 축구",
-      "클린시트 다수",
       "한 골 승부사"
     ]
   },

@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:27+09:00",
+  "generated_at": "2026-10-19T04:23:21+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
-    "played": 31,
+    "played": 32,
     "win": 20,
-    "draw": 5,
+    "draw": 6,
     "loss": 6,
-    "gf": 58,
-    "ga": 26,
+    "gf": 60,
+    "ga": 28,
     "gd": 32,
-    "points": 65,
-    "ppg": 2.1,
-    "remaining": 7,
+    "points": 66,
+    "ppg": 2.06,
+    "remaining": 6,
     "scheduled": 38,
     "gap_to_leader": 0,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": null,
-    "gap_below": 15,
+    "gap_below": 16,
     "above": "",
     "below": "울산"
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 9,
-      "draw": 2,
+      "draw": 3,
       "loss": 3,
-      "gf": 24,
-      "ga": 11,
+      "gf": 26,
+      "ga": 13,
       "gd": 13,
-      "points": 29,
-      "ppg": 2.07
+      "points": 30,
+      "ppg": 2.0
     },
     "away": {
       "played": 17,
@@ -87,17 +87,17 @@
       "L",
       "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
-      "W",
       "L",
       "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last10": [
-      "D",
       "W",
       "W",
       "W",
@@ -106,30 +106,31 @@
       "L",
       "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
-      "draw": 0,
+      "win": 2,
+      "draw": 1,
       "loss": 2,
-      "gf": 6,
-      "ga": 5,
-      "gd": 1,
-      "points": 9
+      "gf": 7,
+      "ga": 7,
+      "gd": 0,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
       "win": 7,
       "draw": 1,
       "loss": 2,
-      "gf": 23,
-      "ga": 9,
+      "gf": 25,
+      "ga": 11,
       "gd": 14,
       "points": 22
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 5,
       "longest_unbeaten": 7,
@@ -138,11 +139,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.87,
-    "ga_per_game": 0.84,
+    "gf_per_game": 1.88,
+    "ga_per_game": 0.88,
     "clean_sheets": 13,
     "failed_to_score": 6,
-    "both_scored": 16,
+    "both_scored": 17,
     "one_goal_games": 17,
     "biggest_win": {
       "round": 24,
@@ -387,8 +388,8 @@
       {
         "round": 32,
         "rank": 1,
-        "points": 65,
-        "played": 31,
+        "points": 66,
+        "played": 32,
         "gd": 32
       }
     ],
@@ -406,15 +407,15 @@
       "ppg": 2.19
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 9,
-      "draw": 3,
+      "draw": 4,
       "loss": 3,
-      "gf": 30,
-      "ga": 14,
+      "gf": 32,
+      "ga": 16,
       "gd": 16,
-      "points": 30,
-      "ppg": 2.0
+      "points": 31,
+      "ppg": 1.94
     }
   },
   "fixtures": [
@@ -727,6 +728,16 @@
       "gf": 2,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-17",
+      "venue": "H",
+      "opponent_id": "K35",
+      "opponent": "김천 상무",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -741,10 +752,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 28,
-        "goals": 14,
+        "apps": 29,
+        "goals": 16,
         "assists": 1,
-        "points": 15
+        "points": 17
       },
       {
         "player_id": "20160099",
@@ -753,10 +764,10 @@
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 31,
+        "apps": 32,
         "goals": 8,
-        "assists": 6,
-        "points": 14
+        "assists": 7,
+        "points": 15
       },
       {
         "player_id": "20170052",
@@ -789,10 +800,10 @@
         "position": "FW",
         "back_no": 27,
         "age": 34,
-        "apps": 29,
+        "apps": 30,
         "goals": 4,
-        "assists": 7,
-        "points": 11
+        "assists": 8,
+        "points": 12
       }
     ],
     "top_assists": [
@@ -803,10 +814,10 @@
         "position": "FW",
         "back_no": 27,
         "age": 34,
-        "apps": 29,
+        "apps": 30,
         "goals": 4,
-        "assists": 7,
-        "points": 11
+        "assists": 8,
+        "points": 12
       },
       {
         "player_id": "20160099",
@@ -815,10 +826,10 @@
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 31,
+        "apps": 32,
         "goals": 8,
-        "assists": 6,
-        "points": 14
+        "assists": 7,
+        "points": 15
       },
       {
         "player_id": "20240179",
@@ -827,7 +838,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 5,
         "points": 8
@@ -851,24 +862,24 @@
         "position": "MF",
         "back_no": 6,
         "age": 27,
-        "apps": 30,
+        "apps": 31,
         "goals": 3,
         "assists": 3,
         "points": 6
       }
     ],
-    "goal_share": 0.241
+    "goal_share": 0.267
   },
   "attendance": {
-    "avg": 22093,
-    "total": 309306,
-    "games": 14,
-    "home_fans_avg": 19866,
+    "avg": 21540,
+    "total": 323094,
+    "games": 15,
+    "home_fans_avg": 19454,
     "away_fans_avg": 1357
   },
   "context": {
     "band": "우승 경쟁",
-    "detail": "리그를 이끄는 자리에서 남은 7경기를 관리하면 트로피가 손에 들어옵니다.",
+    "detail": "리그를 이끄는 자리에서 남은 6경기를 관리하면 트로피가 손에 들어옵니다.",
     "tags": [
       "리그 최상급 화력",
       "리그 최고 수비",

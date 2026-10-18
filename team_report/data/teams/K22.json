@@ -8,23 +8,23 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:28+09:00",
+  "generated_at": "2026-10-19T04:23:22+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
-    "played": 31,
+    "played": 32,
     "win": 2,
     "draw": 12,
-    "loss": 17,
-    "gf": 25,
-    "ga": 66,
-    "gd": -41,
+    "loss": 18,
+    "gf": 27,
+    "ga": 69,
+    "gd": -42,
     "points": 18,
-    "ppg": 0.58,
-    "remaining": 7,
+    "ppg": 0.56,
+    "remaining": 6,
     "scheduled": 38,
-    "gap_to_leader": 47,
-    "gap_to_cut": 25,
+    "gap_to_leader": 48,
+    "gap_to_cut": 28,
     "cut_rank": 6,
     "gap_above": 14,
     "gap_below": null,
@@ -44,15 +44,15 @@
       "ppg": 0.65
     },
     "away": {
-      "played": 14,
+      "played": 15,
       "win": 0,
       "draw": 7,
-      "loss": 7,
-      "gf": 9,
-      "ga": 32,
-      "gd": -23,
+      "loss": 8,
+      "gf": 11,
+      "ga": 35,
+      "gd": -24,
       "points": 7,
-      "ppg": 0.5
+      "ppg": 0.47
     }
   },
   "form": {
@@ -87,17 +87,17 @@
       "L",
       "D",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "D",
       "L",
       "D",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "D",
       "L",
       "L",
       "D",
@@ -106,30 +106,31 @@
       "L",
       "D",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 3,
-      "loss": 1,
+      "draw": 2,
+      "loss": 2,
       "gf": 9,
-      "ga": 9,
-      "gd": 0,
-      "points": 6
+      "ga": 10,
+      "gd": -1,
+      "points": 5
     },
     "last10_record": {
       "played": 10,
       "win": 1,
-      "draw": 5,
-      "loss": 4,
-      "gf": 14,
-      "ga": 19,
-      "gd": -5,
-      "points": 8
+      "draw": 4,
+      "loss": 5,
+      "gf": 16,
+      "ga": 22,
+      "gd": -6,
+      "points": 7
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 4,
@@ -138,12 +139,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.81,
-    "ga_per_game": 2.13,
+    "gf_per_game": 0.84,
+    "ga_per_game": 2.16,
     "clean_sheets": 4,
     "failed_to_score": 16,
-    "both_scored": 15,
-    "one_goal_games": 9,
+    "both_scored": 16,
+    "one_goal_games": 10,
     "biggest_win": {
       "round": 31,
       "date": "2026-10-11",
@@ -169,7 +170,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -388,8 +389,8 @@
         "round": 32,
         "rank": 12,
         "points": 18,
-        "played": 31,
-        "gd": -41
+        "played": 32,
+        "gd": -42
       }
     ],
     "best_rank": 3,
@@ -406,15 +407,15 @@
       "ppg": 0.5
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 1,
       "draw": 7,
-      "loss": 7,
-      "gf": 17,
-      "ga": 28,
-      "gd": -11,
+      "loss": 8,
+      "gf": 19,
+      "ga": 31,
+      "gd": -12,
       "points": 10,
-      "ppg": 0.67
+      "ppg": 0.62
     }
   },
   "fixtures": [
@@ -727,6 +728,16 @@
       "gf": 4,
       "ga": 3,
       "result": "W"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-18",
+      "venue": "A",
+      "opponent_id": "K10",
+      "opponent": "대전 하나",
+      "gf": 2,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -741,10 +752,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 27,
-        "apps": 19,
-        "goals": 8,
+        "apps": 20,
+        "goals": 10,
         "assists": 2,
-        "points": 10
+        "points": 12
       },
       {
         "player_id": "20240210",
@@ -753,7 +764,7 @@
         "position": "MF",
         "back_no": 88,
         "age": 22,
-        "apps": 28,
+        "apps": 29,
         "goals": 6,
         "assists": 1,
         "points": 7
@@ -765,7 +776,7 @@
         "position": "FW",
         "back_no": 40,
         "age": 34,
-        "apps": 18,
+        "apps": 19,
         "goals": 5,
         "assists": 0,
         "points": 5
@@ -777,7 +788,7 @@
         "position": "FW",
         "back_no": 50,
         "age": 30,
-        "apps": 15,
+        "apps": 16,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -803,7 +814,7 @@
         "position": "FW",
         "back_no": 50,
         "age": 30,
-        "apps": 15,
+        "apps": 16,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -815,10 +826,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 27,
-        "apps": 19,
-        "goals": 8,
+        "apps": 20,
+        "goals": 10,
         "assists": 2,
-        "points": 10
+        "points": 12
       },
       {
         "player_id": "20250366",
@@ -845,26 +856,26 @@
         "points": 3
       },
       {
-        "player_id": "20190114",
+        "player_id": "20200029",
         "departed": false,
-        "name": "하승운",
+        "name": "권성윤",
         "position": "FW",
-        "back_no": 9,
-        "age": 28,
-        "apps": 27,
+        "back_no": 22,
+        "age": 25,
+        "apps": 28,
         "goals": 0,
         "assists": 2,
         "points": 2
       }
     ],
-    "goal_share": 0.32
+    "goal_share": 0.37
   },
   "attendance": {
     "avg": 3396,
     "total": 57725,
     "games": 17,
     "home_fans_avg": 2840,
-    "away_fans_avg": 312
+    "away_fans_avg": 311
   },
   "context": {
     "band": "승강 플레이오프권",

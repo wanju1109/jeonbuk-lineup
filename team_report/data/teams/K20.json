@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:29+09:00",
+  "generated_at": "2026-10-19T04:23:23+09:00",
   "table": {
     "rank": 9,
     "teams": 17,
@@ -23,8 +23,8 @@
     "ppg": 1.3,
     "remaining": 5,
     "scheduled": 32,
-    "gap_to_leader": 21,
-    "gap_to_cut": 7,
+    "gap_to_leader": 24,
+    "gap_to_cut": 9,
     "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 3,
@@ -165,7 +165,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 14,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -796,8 +796,8 @@
   },
   "attendance": null,
   "context": {
-    "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 7점 차. 남은 5경기면 아직 늦지 않았습니다.",
+    "band": "중위권",
+    "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
       "실리 축구",
       "홈 강세",

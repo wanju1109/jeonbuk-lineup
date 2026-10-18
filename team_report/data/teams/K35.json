@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:28+09:00",
+  "generated_at": "2026-10-19T04:23:22+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
-    "played": 31,
+    "played": 32,
     "win": 5,
-    "draw": 18,
+    "draw": 19,
     "loss": 8,
-    "gf": 30,
-    "ga": 37,
+    "gf": 32,
+    "ga": 39,
     "gd": -7,
-    "points": 33,
+    "points": 34,
     "ppg": 1.06,
-    "remaining": 7,
+    "remaining": 6,
     "scheduled": 38,
     "gap_to_leader": 32,
-    "gap_to_cut": 10,
+    "gap_to_cut": 12,
     "cut_rank": 6,
     "gap_above": 7,
-    "gap_below": 1,
+    "gap_below": 2,
     "above": "포항",
     "below": "부천"
   },
@@ -44,15 +44,15 @@
       "ppg": 0.87
     },
     "away": {
-      "played": 16,
+      "played": 17,
       "win": 4,
-      "draw": 8,
+      "draw": 9,
       "loss": 4,
-      "gf": 16,
-      "ga": 16,
+      "gf": 18,
+      "ga": 18,
       "gd": 0,
-      "points": 20,
-      "ppg": 1.25
+      "points": 21,
+      "ppg": 1.24
     }
   },
   "form": {
@@ -87,17 +87,17 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
       "D",
       "D",
-      "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
-      "D",
       "D",
       "D",
       "D",
@@ -106,7 +106,8 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
@@ -123,13 +124,13 @@
       "win": 1,
       "draw": 7,
       "loss": 2,
-      "gf": 8,
-      "ga": 9,
+      "gf": 10,
+      "ga": 11,
       "gd": -1,
       "points": 10
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 7,
@@ -138,11 +139,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.97,
-    "ga_per_game": 1.19,
+    "gf_per_game": 1.0,
+    "ga_per_game": 1.22,
     "clean_sheets": 8,
     "failed_to_score": 10,
-    "both_scored": 18,
+    "both_scored": 19,
     "one_goal_games": 7,
     "biggest_win": {
       "round": 30,
@@ -169,7 +170,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 5,
+        "rank": 6,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -387,12 +388,12 @@
       {
         "round": 32,
         "rank": 10,
-        "points": 33,
-        "played": 31,
+        "points": 34,
+        "played": 32,
         "gd": -7
       }
     ],
-    "best_rank": 5,
+    "best_rank": 6,
     "worst_rank": 11,
     "first_half": {
       "played": 16,
@@ -406,15 +407,15 @@
       "ppg": 0.94
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 3,
-      "draw": 9,
+      "draw": 10,
       "loss": 3,
-      "gf": 14,
-      "ga": 15,
+      "gf": 16,
+      "ga": 17,
       "gd": -1,
-      "points": 18,
-      "ppg": 1.2
+      "points": 19,
+      "ppg": 1.19
     }
   },
   "fixtures": [
@@ -727,6 +728,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 32,
+      "date": "2026-10-17",
+      "venue": "A",
+      "opponent_id": "K09",
+      "opponent": "FC 서울",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -765,7 +776,7 @@
         "position": "MF",
         "back_no": 55,
         "age": 27,
-        "apps": 29,
+        "apps": 30,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -777,19 +788,19 @@
         "position": "FW",
         "back_no": 48,
         "age": 24,
-        "apps": 22,
+        "apps": 23,
         "goals": 2,
         "assists": 1,
         "points": 3
       },
       {
-        "player_id": "20200099",
+        "player_id": "20200174",
         "departed": false,
-        "name": "허율",
+        "name": "김인균",
         "position": "FW",
-        "back_no": 68,
-        "age": 25,
-        "apps": 8,
+        "back_no": 21,
+        "age": 28,
+        "apps": 24,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -839,7 +850,7 @@
         "position": "FW",
         "back_no": 49,
         "age": 28,
-        "apps": 8,
+        "apps": 9,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -851,26 +862,25 @@
         "position": "FW",
         "back_no": 57,
         "age": 24,
-        "apps": 17,
+        "apps": 18,
         "goals": 0,
         "assists": 2,
         "points": 2
       }
     ],
-    "goal_share": 0.1
+    "goal_share": 0.094
   },
   "attendance": {
     "avg": 2204,
     "total": 33055,
     "games": 15,
     "home_fans_avg": 1523,
-    "away_fans_avg": 219
+    "away_fans_avg": 212
   },
   "context": {
     "band": "강등 확정",
     "detail": "순위와 무관하게 2027시즌을 K리그2에서 시작합니다. 남은 경기는 승점이 아니라 선수 개개인의 가치를 증명하는 무대입니다. 다만 김천이 11위 안에 들면 12위 팀이 승강 플레이오프를 치르고, 김천이 12위로 마치면 그마저 열리지 않습니다. 순위표 맨 아래 두 자리의 의미가 김천의 최종 순위에 걸려 있습니다.",
     "tags": [
-      "득점 빈곤",
       "무승부 체질"
     ]
   },

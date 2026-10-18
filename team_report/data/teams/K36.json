@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:29+09:00",
+  "generated_at": "2026-10-19T04:23:23+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
@@ -23,12 +23,12 @@
     "ppg": 1.41,
     "remaining": 5,
     "scheduled": 32,
-    "gap_to_leader": 18,
-    "gap_to_cut": 4,
+    "gap_to_leader": 21,
+    "gap_to_cut": 6,
     "cut_rank": 6,
-    "gap_above": 4,
+    "gap_above": 6,
     "gap_below": 2,
-    "above": "부산",
+    "above": "화성",
     "below": "충남아산"
   },
   "splits": {
@@ -790,7 +790,7 @@
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 4점 차. 남은 5경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 6점 차. 남은 5경기면 아직 늦지 않았습니다.",
     "tags": [
       "실리 축구",
       "무승부 체질"

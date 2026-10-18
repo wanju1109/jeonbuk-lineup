@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:29+09:00",
+  "generated_at": "2026-10-19T04:23:22+09:00",
   "table": {
-    "rank": 6,
+    "rank": 5,
     "teams": 17,
-    "played": 27,
-    "win": 12,
+    "played": 28,
+    "win": 13,
     "draw": 6,
     "loss": 9,
-    "gf": 42,
-    "ga": 35,
-    "gd": 7,
-    "points": 42,
-    "ppg": 1.56,
-    "remaining": 5,
+    "gf": 44,
+    "ga": 36,
+    "gd": 8,
+    "points": 45,
+    "ppg": 1.61,
+    "remaining": 4,
     "scheduled": 32,
     "gap_to_leader": 14,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 4,
-    "above": "화성",
-    "below": "김포"
+    "gap_above": 4,
+    "gap_below": 1,
+    "above": "대구",
+    "below": "화성"
   },
   "splits": {
     "home": {
-      "played": 13,
-      "win": 7,
+      "played": 14,
+      "win": 8,
       "draw": 3,
       "loss": 3,
-      "gf": 21,
-      "ga": 13,
-      "gd": 8,
-      "points": 24,
-      "ppg": 1.85
+      "gf": 23,
+      "ga": 14,
+      "gd": 9,
+      "points": 27,
+      "ppg": 1.93
     },
     "away": {
       "played": 14,
@@ -83,49 +83,50 @@
       "L",
       "W",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
       "L",
-      "L",
       "W",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
       "L",
       "L",
-      "L",
       "D",
       "D",
       "L",
       "L",
       "W",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
+      "win": 2,
       "draw": 1,
-      "loss": 3,
-      "gf": 4,
-      "ga": 5,
-      "gd": -1,
-      "points": 4
+      "loss": 2,
+      "gf": 5,
+      "ga": 4,
+      "gd": 1,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
-      "win": 1,
+      "win": 2,
       "draw": 3,
-      "loss": 6,
-      "gf": 7,
-      "ga": 14,
-      "gd": -7,
-      "points": 6
+      "loss": 5,
+      "gf": 8,
+      "ga": 11,
+      "gd": -3,
+      "points": 9
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 7,
       "longest_unbeaten": 8,
@@ -134,12 +135,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.56,
-    "ga_per_game": 1.3,
+    "gf_per_game": 1.57,
+    "ga_per_game": 1.29,
     "clean_sheets": 6,
     "failed_to_score": 5,
-    "both_scored": 17,
-    "one_goal_games": 13,
+    "both_scored": 18,
+    "one_goal_games": 14,
     "biggest_win": {
       "round": 14,
       "date": "2026-05-30",
@@ -165,7 +166,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 10,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -361,14 +362,14 @@
       },
       {
         "round": 29,
-        "rank": 6,
-        "points": 42,
-        "played": 27,
-        "gd": 7
+        "rank": 5,
+        "points": 45,
+        "played": 28,
+        "gd": 8
       }
     ],
     "best_rank": 1,
-    "worst_rank": 9,
+    "worst_rank": 10,
     "first_half": {
       "played": 16,
       "win": 11,
@@ -381,15 +382,15 @@
       "ppg": 2.25
     },
     "second_half": {
-      "played": 11,
-      "win": 1,
+      "played": 12,
+      "win": 2,
       "draw": 3,
       "loss": 7,
-      "gf": 7,
-      "ga": 15,
-      "gd": -8,
-      "points": 6,
-      "ppg": 0.55
+      "gf": 9,
+      "ga": 16,
+      "gd": -7,
+      "points": 9,
+      "ppg": 0.75
     }
   },
   "fixtures": [
@@ -662,6 +663,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 29,
+      "date": "2026-10-18",
+      "venue": "H",
+      "opponent_id": "K07",
+      "opponent": "전남 드래곤즈",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -688,7 +699,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 25,
+        "apps": 26,
         "goals": 7,
         "assists": 5,
         "points": 12
@@ -700,10 +711,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 20,
-        "apps": 24,
+        "apps": 25,
         "goals": 5,
-        "assists": 2,
-        "points": 7
+        "assists": 3,
+        "points": 8
       },
       {
         "player_id": "20150157",
@@ -712,7 +723,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 34,
-        "apps": 25,
+        "apps": 26,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -724,7 +735,7 @@
         "position": "DF",
         "back_no": 66,
         "age": 22,
-        "apps": 24,
+        "apps": 25,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -738,7 +749,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 25,
+        "apps": 26,
         "goals": 7,
         "assists": 5,
         "points": 12
@@ -754,6 +765,18 @@
         "goals": 8,
         "assists": 4,
         "points": 12
+      },
+      {
+        "player_id": "20250217",
+        "departed": false,
+        "name": "백가온",
+        "position": "FW",
+        "back_no": 18,
+        "age": 20,
+        "apps": 25,
+        "goals": 5,
+        "assists": 3,
+        "points": 8
       },
       {
         "player_id": "20190115",
@@ -778,21 +801,9 @@
         "goals": 2,
         "assists": 3,
         "points": 5
-      },
-      {
-        "player_id": "20250217",
-        "departed": false,
-        "name": "백가온",
-        "position": "FW",
-        "back_no": 18,
-        "age": 20,
-        "apps": 24,
-        "goals": 5,
-        "assists": 2,
-        "points": 7
       }
     ],
-    "goal_share": 0.19
+    "goal_share": 0.182
   },
   "attendance": null,
   "context": {

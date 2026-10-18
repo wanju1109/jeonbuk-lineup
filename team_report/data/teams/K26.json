@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:28+09:00",
+  "generated_at": "2026-10-19T04:23:22+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
@@ -23,10 +23,10 @@
     "ppg": 1.0,
     "remaining": 6,
     "scheduled": 38,
-    "gap_to_leader": 33,
-    "gap_to_cut": 11,
+    "gap_to_leader": 34,
+    "gap_to_cut": 14,
     "cut_rank": 6,
-    "gap_above": 1,
+    "gap_above": 2,
     "gap_below": 14,
     "above": "김천",
     "below": "광주"
@@ -881,6 +881,7 @@
     "band": "중위권",
     "detail": "위도 아래도 멀어진 자리. 시즌의 방향을 스스로 정해야 합니다.",
     "tags": [
+      "득점 빈곤",
       "침묵하는 공격",
       "무승부 체질"
     ]

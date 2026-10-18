@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-10-18T04:16:29+09:00",
+  "generated_at": "2026-10-19T04:23:23+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
@@ -23,8 +23,8 @@
     "ppg": 0.89,
     "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 31,
-    "gap_to_cut": 17,
+    "gap_to_leader": 34,
+    "gap_to_cut": 19,
     "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 1,
@@ -166,7 +166,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 1,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -368,7 +368,7 @@
         "gd": -21
       }
     ],
-    "best_rank": 1,
+    "best_rank": 2,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
