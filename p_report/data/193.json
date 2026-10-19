@@ -17,18 +17,18 @@
     "jeonbuk_match": false,
     "venue": "울산 문수",
     "attendance_hint": {
-      "avg": 11632,
+      "avg": 11527,
       "games": 16,
-      "total": 186115
+      "total": 184430
     },
     "kickoff": "2026-10-24T19:00:00+09:00",
     "kickoff_label": "2026-10-24 19:00 KST",
     "date_md": "10/24",
     "label": "울산 VS 포항 (193, 10/24)",
-    "hours_to_kickoff": 116.4,
+    "hours_to_kickoff": 109.3,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-10-19T22:38:35.978093+09:00",
+    "generated_at": "2026-10-20T05:39:51.533813+09:00",
     "preview_hours": 48.0
   },
   "headline": "33R PREVIEW · 울산 vs 포항",
