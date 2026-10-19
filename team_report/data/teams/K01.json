@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-19T04:23:21+09:00",
+  "generated_at": "2026-10-20T06:26:26+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -871,10 +871,10 @@
     "goal_share": 0.32
   },
   "attendance": {
-    "avg": 11632,
-    "total": 186115,
+    "avg": 11527,
+    "total": 184430,
     "games": 16,
-    "home_fans_avg": 10925,
+    "home_fans_avg": 10819,
     "away_fans_avg": 1392
   },
   "context": {
