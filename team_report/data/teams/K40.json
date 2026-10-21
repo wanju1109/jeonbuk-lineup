@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-10-21T05:29:04+09:00",
+  "generated_at": "2026-10-22T05:33:33+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
@@ -179,7 +179,7 @@
       },
       {
         "round": 3,
-        "rank": 11,
+        "rank": 10,
         "points": 3,
         "played": 3,
         "gd": -1
