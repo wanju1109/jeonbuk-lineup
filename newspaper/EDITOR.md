@@ -34,6 +34,10 @@
    - 에펨코리아 국내축구 루머 https://www.fmkorea.com/index.php?mid=football_korean&category=108791244
    - 에버그린 루머 https://evergreenjb.me/free/category/212 (회원 전용이라 안 열리면 자유게시판 https://evergreenjb.me/free 제목으로 분위기만 본다)
    - 루리웹 축구게시판 루머 https://bbs.ruliweb.com/sports/board/300254?cate=361
+   전체 게시판 세 곳도 훑어 전북 관련 글(전북, 전주성, 감독·선수 이름)을 찾는다. 경기장·티켓·응원 이야기도 여기 많다.
+   - 추꾸 국내축구 https://www.chuggu.net/football_k
+   - 에펨코리아 국내축구 https://www.fmkorea.com/football_korean
+   - 루리웹 축구게시판 https://bbs.ruliweb.com/sports/board/300254
    전북 관련 글은 다른 커뮤니티나 기사로 교차 확인하고, 확인되면 등급을 올린다.
 3. 경기 다음 날이면 경기 리뷰, 감독·선수 인터뷰, 평점, 명장면, 팬 반응을 자세히.
 4. 경기 당일이면 예상 라인업, 부상·결장자, 상대 팀 흐름, 중계 정보.

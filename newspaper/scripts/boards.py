@@ -1,4 +1,4 @@
-"""커뮤니티 루머 게시판 읽기 (추꾸, 에펨코리아, 루리웹).
+"""커뮤니티 게시판 읽기: 추꾸·에펨코리아·루리웹의 루머 게시판과 국내축구 전체 게시판.
 
 에버그린 루머 게시판은 회원 전용이라 evergreen.py에서 로그인 후 읽는다.
 추꾸는 목록은 공개, 본문은 회원 전용이라 CHUGGU_ID / CHUGGU_PW가 있으면 로그인한다.
@@ -45,6 +45,41 @@ BOARDS = {
         "when": r'<td class="time"[^>]*>(.*?)</td>',
         "body": r'<div class="view_content[^"]*"[^>]*>(.*?)</div>\s*</div>',
     },
+    # 전체 게시판: 글이 많아 여러 쪽을 읽고 전북 관련 제목만 남긴다
+    "추꾸 국내축구": {
+        "url": "https://www.chuggu.net/football_k",
+        "pages": ["https://www.chuggu.net/football_k?page=2", "https://www.chuggu.net/football_k?page=3"],
+        "base": "https://www.chuggu.net",
+        "row": r"<tr[^>]*>(.*?)</tr>",
+        "link": r'<a[^>]*href="(/football_k/\d+)"[^>]*>(.*?)</a>',
+        "cate": r'class="[^"]*ctg_col[^"]*"[^>]*>(.*?)</td>',
+        "when": r'<time datetime="([^"]+)"',
+        "body": r'<div class="[^"]*xe_content[^"]*"[^>]*>(.*?)</div>',
+        "related_only": True,
+        "login": ("CHUGGU_ID", "CHUGGU_PW", "football_k"),
+    },
+    "에펨코리아 국내축구": {
+        "url": "https://www.fmkorea.com/football_korean",
+        "pages": ["https://www.fmkorea.com/index.php?mid=football_korean&page=2", "https://www.fmkorea.com/index.php?mid=football_korean&page=3"],
+        "base": "https://www.fmkorea.com",
+        "row": r"<tr[^>]*>(.*?)</tr>",
+        "link": r'<td class="title[^"]*">\s*<a href="(/\d{8,})"[^>]*>(.*?)</a>',
+        "cate": r'<td class="cate">(.*?)</td>',
+        "when": r'<td class="time">(.*?)</td>',
+        "body": r'<div class="[^"]*xe_content[^"]*"[^>]*>(.*?)</div>',
+        "related_only": True,
+    },
+    "루리웹 축구게시판": {
+        "url": "https://bbs.ruliweb.com/sports/board/300254",
+        "pages": ["https://bbs.ruliweb.com/sports/board/300254?page=2", "https://bbs.ruliweb.com/sports/board/300254?page=3"],
+        "base": "",
+        "row": r'<tr class="table_body[^"]*"[^>]*>(.*?)</tr>',
+        "link": r'<a class="(?:subject_link|deco)[^"]*" href="(https://bbs\.ruliweb\.com/sports/board/300254/read/\d+)[^"]*"[^>]*>(.*?)</a>',
+        "cate": r'<td class="divsn[^"]*"[^>]*>(.*?)</td>',
+        "when": r'<td class="time"[^>]*>(.*?)</td>',
+        "body": r'<div class="view_content[^"]*"[^>]*>(.*?)</div>\s*</div>',
+        "related_only": True,
+    },
 }
 
 # 전북 관련 글을 고를 때 쓰는 기본 단어 (선수 이름은 호출하는 쪽에서 더한다)
@@ -76,9 +111,11 @@ def _get(s: requests.Session, url: str) -> str:
 def read_board(name: str, s: requests.Session | None = None) -> list[dict]:
     cfg = BOARDS[name]
     s = s or _session()
-    doc = _get(s, cfg["url"])
+    rows = []
+    for url in [cfg["url"]] + cfg.get("pages", []):
+        rows += re.findall(cfg["row"], _get(s, url), re.S)
     posts, seen = [], set()
-    for row in re.findall(cfg["row"], doc, re.S):
+    for row in rows:
         a = re.search(cfg["link"], row, re.S)
         if not a:
             continue
@@ -125,7 +162,7 @@ def _session() -> requests.Session:
 
 
 def collect(today: dt.date, extra_words: list[str] | None = None, bodies_per_board: int = 4, max_age: int = 3) -> dict:
-    """모든 루머 게시판의 최근(max_age일 이내) 글 제목과, 전북 관련 글 본문 일부."""
+    """루머 게시판은 최근(max_age일 이내) 글 전부, 전체 게시판은 전북 관련 글만. 전북 관련 글은 본문 일부도."""
     words = JB_WORDS + (extra_words or [])
     s, out = _session(), {"posts": [], "bodies": [], "errors": {}, "logged_in": []}
     for name in BOARDS:
@@ -135,12 +172,13 @@ def collect(today: dt.date, extra_words: list[str] | None = None, bodies_per_boa
         except requests.RequestException as e:
             out["errors"][name + " 로그인"] = str(e)[:120]
         try:
-            posts = [p for p in read_board(name, s) if _age_days(p["when"], today) <= max_age][:30]
+            posts = [p for p in read_board(name, s) if _age_days(p["when"], today) <= max_age]
         except requests.RequestException as e:
             out["errors"][name] = str(e)[:120]
             continue
-        out["posts"] += posts
-        related = [p for p in posts if any(re.search(rf"(?<![가-힣]){re.escape(w)}", p["title"]) for w in words)][:bodies_per_board]
+        related = [p for p in posts if any(re.search(rf"(?<![가-힣]){re.escape(w)}", p["title"]) for w in words)]
+        out["posts"] += related if BOARDS[name].get("related_only") else posts[:30]
+        related = related[:bodies_per_board]
         for p in related:
             try:
                 out["bodies"].append({**p, "body": read_body(name, p["url"], s)})
