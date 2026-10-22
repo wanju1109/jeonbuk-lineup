@@ -229,6 +229,48 @@ def community_boards(today: dt.date, names: list[str]) -> dict:
         return {"posts": [], "bodies": [], "errors": {"all": str(e)[:200]}}
 
 
+def period_summary(played: list[dict], start: str, end: str) -> dict:
+    """기간(start~end, 포함) 전북 리그 성적과 득점자. 월말 특집·시즌 결산용."""
+    games = [m for m in played if start <= m["date"] <= end]
+    res, gf_t, ga_t = [], 0, 0
+    for m in games:
+        home = "전북" in m["home"]
+        gf, ga = (m["score"][0], m["score"][1]) if home else (m["score"][1], m["score"][0])
+        gf_t += gf
+        ga_t += ga
+        res.append({"date": m["date"], "round": m["round"], "opp": short(m["away"] if home else m["home"]),
+                    "home": home, "gf": gf, "ga": ga, "r": "W" if gf > ga else "D" if gf == ga else "L"})
+    scorers: dict[str, int] = defaultdict(int)
+    attendance = []
+    try:
+        for mi in load("c_report/data/index.json")["matches"]:
+            if not (start <= mi["date"] <= end) or not mi.get("score"):
+                continue
+            jb_home = mi["home"] == "전북"
+            if jb_home and mi.get("attendance"):
+                attendance.append(mi["attendance"])
+            path = ROOT / "c_report" / "data" / f"{mi['game_id']}.json"
+            if not path.exists():
+                continue
+            g = load(f"c_report/data/{mi['game_id']}.json")
+            names = {p["player_id"]: p["name"] for s in ("home", "away") for p in g["lineup"][s]}
+            side = "H" if jb_home else "A"
+            for e in g["events"]:
+                if e["TYPE_CD"] == "ST" and e["TYPE_DETAIL_CD"] == "GL" and e["HA_CODE"] == side and e.get("OWN_GOAL_CODE") != "Y":
+                    scorers[names.get(e["PLAYER_ID"], "?")] += 1
+    except FileNotFoundError:
+        pass
+    w = sum(r["r"] == "W" for r in res)
+    d = sum(r["r"] == "D" for r in res)
+    return {
+        "from": start, "to": end, "played": len(res), "w": w, "d": d, "l": len(res) - w - d, "pts": w * 3 + d,
+        "gf": gf_t, "ga": ga_t, "results": res,
+        "scorers": sorted(({"name": k, "goals": v} for k, v in scorers.items()), key=lambda x: -x["goals"]),
+        "home_attendance_avg": round(sum(attendance) / len(attendance)) if attendance else None,
+        "note": "K리그1 리그 경기 기준(ACL·컵 제외). 득점자는 K리그 부가기록 기준.",
+    }
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="발행일(KST). 기본은 오늘")
@@ -274,8 +316,20 @@ def main() -> None:
     teams = {"전북"} | ({nxt["opp_short"]} if nxt else set()) | ({lm["home"], lm["away"]} if lm else set())
     a, catalog = assets(teams, today.year)
 
+    # 특집 판단: 월말, 시즌 결산(리그 최종전 다음 날), 새 시즌 프리뷰(개막 7일 전·전날)
+    specials, extra = [], {}
+    if (today + dt.timedelta(days=1)).month != today.month:
+        specials.append("month_end")
+        extra["month"] = period_summary(played, today.replace(day=1).isoformat(), today.isoformat())
+    if played and not upcoming and played[-1]["date"] == yesterday:
+        specials.append("season_review")
+        extra["season"] = period_summary(played, played[0]["date"], played[-1]["date"])
+    if not played and nxt and nxt["d_minus"] in (7, 1):
+        specials.append("season_preview")
+
     ctx = {
         "date": today.isoformat(),
+        "specials": specials,
         "weekday": WD[today.weekday()],
         "no": issue_no(today),
         "matchday_after": bool(lm and lm["date"] == yesterday),
@@ -289,6 +343,7 @@ def main() -> None:
             "next": nxt,
             "last": lm,
             "upcoming_league": [{"date": m["date"], "home": short(m["home"]), "away": short(m["away"]), "round": m["round"]} for m in upcoming[:5]],
+            **extra,
         },
         "assets": a,
         "photo_catalog": catalog,
@@ -297,7 +352,7 @@ def main() -> None:
     }
     Path(args.out).write_text(json.dumps(ctx, ensure_ascii=False, indent=1), encoding="utf-8")
     b = ctx["boards"]
-    print(f"context: 제{ctx['no']}호 {ctx['date']} 경기다음날={ctx['matchday_after']} 경기당일={ctx['matchday_today']} "
+    print(f"context: 제{ctx['no']}호 {ctx['date']} 경기다음날={ctx['matchday_after']} 경기당일={ctx['matchday_today']} 특집={specials} "
           f"커뮤니티글={len(b.get('posts', []))} 로그인={b.get('logged_in', [])} 에버그린로그인={ctx['evergreen'].get('logged_in')} -> {args.out}")
 
 
