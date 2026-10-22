@@ -10,12 +10,12 @@
 
 | 시각(KST) | 단계 | 스크립트 |
 |---|---|---|
-| 06:17 | 기록·게시판 수집 | `scripts/build_context.py` — 순위, 지난 경기 부가기록, 다음 경기, 선수 사진 목록, 에버그린 글 제목 |
+| 06:17 | 기록·게시판 수집 | `scripts/build_context.py` — 순위, 지난 경기 부가기록, 다음 경기, 선수 사진 목록, 에버그린 글 제목, 루머 게시판(`scripts/boards.py`: 추꾸·에펨코리아·루리웹) |
 | ~06:20 | 취재·편집 | `scripts/generate_issue.py` — Claude가 웹 검색으로 뉴스·루머를 모으고 `issues/{no}.json`을 쓴다 |
 | ~06:50 | 커밋 | `issues/{no}.json`, `issues/index.json` |
 | 07:00 | 게시 | `scripts/post_evergreen.py` — Pages 반영을 확인한 뒤 로그인해서 글쓰기 |
 
-전날 전북 경기가 있었으면(c_report 데이터 기준) 경기 리포트·데이터 분석 면이 붙은 특별판(6~7면)이 된다.
+편집 규칙: 경기 리포트·데이터 분석 면은 경기 다음 날에만(6~7면 특별판), 경기 프리뷰 면은 경기 당일에만 싣는다. 큰 이야기가 있는 날에는 특집 면을 넣는다.
 
 ## 필요한 설정 (Settings → Secrets and variables → Actions)
 
@@ -24,6 +24,7 @@
 | `ANTHROPIC_API_KEY` | Secret | console.anthropic.com 에서 만든 API 키 |
 | `EVERGREEN_ID` | Secret | 에버그린 아이디 |
 | `EVERGREEN_PW` | Secret | 에버그린 비밀번호 |
+| `CHUGGU_ID` / `CHUGGU_PW` | Secret | 추꾸 계정 (선택). 루머 게시판 본문을 읽을 때만 쓴다. 없으면 제목만 읽는다 |
 | `EVERGREEN_CATEGORY` | Variable | 말머리 번호. 기본 211(칼럼/분석). 자유 147, 기사 148, 기록/통계 213 |
 
 ## 수동 실행

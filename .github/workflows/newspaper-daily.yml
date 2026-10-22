@@ -55,6 +55,8 @@ jobs:
         env:
           EVERGREEN_ID: ${{ secrets.EVERGREEN_ID }}
           EVERGREEN_PW: ${{ secrets.EVERGREEN_PW }}
+          CHUGGU_ID: ${{ secrets.CHUGGU_ID }}
+          CHUGGU_PW: ${{ secrets.CHUGGU_PW }}
         run: python newspaper/scripts/build_context.py --date "${{ steps.d.outputs.date }}" --out "$RUNNER_TEMP/ctx.json"
 
       - name: Write issue (Claude)

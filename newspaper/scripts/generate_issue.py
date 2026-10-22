@@ -39,6 +39,7 @@ VOICE = """당신은 전북현대 팬 신문 '전주성 조간'의 편집장이�
 - 커뮤니티 글은 닉네임을 쓰지 않고 흐름을 요약한다. 원문을 길게 옮기지 않는다.
 - 기사 원문 문장을 그대로 옮기지 않는다. 직접 인용은 한 호에 2개 이하, 각 15단어 이하.
 - 모르는 것은 쓰지 않는다. 일정·시간이 불확실하면 '확인 필요'라고 쓴다.
+- 'jeonbuk-lineup'이라는 이름은 신문 어디에도 쓰지 않는다. 기록 출처는 'K리그 데이터포털'로만 적는다.
 """
 
 RESEARCH_TASK = """오늘은 {date}({weekday}) 아침이고, 전주성 조간 제{no}호를 만든다.
@@ -46,11 +47,16 @@ RESEARCH_TASK = """오늘은 {date}({weekday}) 아침이고, 전주성 조간 �
 
 찾을 것
 1. 언론 기사: 경기 결과·리뷰, 선수단 소식(부상, 복귀, 징계, 인터뷰), 감독·구단 소식, 이적설, 일정·티켓, 경기장, 구단 행사.
-2. 루머: 감독 교체설, 이적설 등. 에펨코리아 국내축구 게시판, 루리웹, 디시 K리그 갤러리, 에버그린(evergreenjb.me) 등 커뮤니티 반응도 살핀다.
+2. 루머: 감독 교체설, 이적설 등. 아래 루머 게시판 네 곳을 기본으로 본다(목록은 아래에 미리 읽어 두었다. 필요하면 web_fetch로 더 본다).
+   - 추꾸 국내축구 루머 https://www.chuggu.net/football_k/category/52158
+   - 에펨코리아 국내축구 루머 https://www.fmkorea.com/index.php?mid=football_korean&category=108791244
+   - 에버그린 루머 https://evergreenjb.me/free/category/212 (회원 전용)
+   - 루리웹 축구게시판 루머 https://bbs.ruliweb.com/sports/board/300254?cate=361
+   전북과 관련된 글은 다른 커뮤니티나 기사로 교차 확인을 시도하고, 확인되면 등급을 올린다.
 3. 다음 경기 상대의 최근 상황(순위, 부상자, 감독 발언).
 4. {matchday}
 
-아래 '에버그린 게시판'은 오늘 아침 직접 읽어 온 글 제목이다(루머 게시판은 회원 전용이라 내용 요약만 쓸 것).
+아래 '커뮤니티'는 오늘 아침 직접 읽어 온 글 제목과 일부 본문이다(회원 전용 글은 내용 요약만 쓸 것).
 
 메모 형식: 항목마다 [분류] 한 줄 요약 / 핵심 사실(숫자·날짜·인물) / 출처 매체·URL / 신뢰도(공식·보도·설·바람).
 마지막에 '오늘의 톱 후보' 3개를 이유와 함께 적는다. 신문 본문은 아직 쓰지 않는다.
@@ -58,7 +64,7 @@ RESEARCH_TASK = """오늘은 {date}({weekday}) 아침이고, 전주성 조간 �
 [기록 요약]
 {facts}
 
-[에버그린 게시판]
+[커뮤니티]
 {board}
 """
 
@@ -197,7 +203,12 @@ def board_for_prompt(ctx: dict) -> str:
             if p.get("category") != "공지":
                 lines.append(f"- [{label}/{p.get('category')}] {p['title']} ({p.get('when')})")
     for r in eg.get("rumor_bodies", []):
-        lines.append(f"  · 루머글 '{r['title']}' 요지: {r['body'][:400]}")
+        lines.append(f"  · 에버그린 루머글 '{r['title']}' 요지: {r['body'][:400]}")
+    bd = ctx.get("boards") or {}
+    for p in bd.get("posts", []):
+        lines.append(f"- [{p['site']}] {p['title']} ({p.get('when', '')[:16]}) {p['url']}")
+    for b in bd.get("bodies", []):
+        lines.append(f"  · {b['site']} '{b['title']}' 요지: {b['body'][:400]}")
     return "\n".join(lines) or "(읽지 못함)"
 
 
@@ -212,8 +223,10 @@ def research(client, ctx: dict) -> str:
     md = (
         f"어제 {last.get('home')} {last.get('score', ['?', '?'])[0]}:{last.get('score', ['?', '?'])[1]} {last.get('away')} 경기가 있었다. "
         "경기 리뷰, 감독·선수 인터뷰, 평점, 명장면, 팬 반응을 특히 자세히 찾는다."
-        if ctx["matchday_after"] else "어제는 전북 경기가 없었다. 다음 경기 준비 상황과 팀 소식을 찾는다."
+        if ctx["matchday_after"] else "어제는 전북 경기가 없었다. 팀 소식과 다음 경기 준비 상황을 찾는다."
     )
+    if ctx.get("matchday_today"):
+        md += " 오늘 전북 경기가 있다. 예상 라인업, 부상·결장자, 상대 팀 최근 흐름, 중계 정보를 찾는다."
     prompt = RESEARCH_TASK.format(date=ctx["date"], weekday=ctx["weekday"], no=ctx["no"], matchday=md, facts=facts_for_prompt(ctx), board=board_for_prompt(ctx))
     tools = [
         {"type": "web_search_20260209", "name": "web_search", "max_uses": 25, "user_location": {"type": "approximate", "country": "KR", "timezone": "Asia/Seoul"}},
@@ -238,11 +251,19 @@ def write(client, ctx: dict, notes: str) -> dict:
     library = ", ".join(f"{k}({v['desc']})" for k, v in lib.items())
     catalog = "; ".join(f"{c['key']}={c['name']}({c['team']}{' ' + str(c.get('no')) + '번' if c.get('no') else ''}{' 감독' if c.get('role') else ''})" for c in ctx["photo_catalog"])
     charts = '"scoreboard"(지난 경기 스코어), "goal_timeline"(득점·슈팅 흐름), "shotmap"(슈팅 지도), "compare"(팀 기록 비교)' if ctx["data"].get("last") else ""
+    parts = []
     if ctx["matchday_after"]:
-        edition = ("어제 전북 경기가 있었다. 경기 다음 날 특별판: 6~7면. 2면은 '경기 리포트'(chart scoreboard, 기자 리뷰, goal_timeline), "
-                   "3면은 '데이터 분석'(shotmap, compare, 선수 cutout으로 숨은 MVP·결정적 장면 분석, 재미있는 숫자 3개 이상). 그 뒤로 뉴스, 다음 경기, 루머 데스크.")
-    else:
-        edition = "경기가 없던 날: 5면 안팎. 그날 가장 큰 뉴스로 1~2면, 다음 경기 프리뷰(chart next, standings, form), 장외 소식, 루머 데스크."
+        parts.append("어제 전북 경기가 있었다. 경기 다음 날 특별판: 6~7면. 2면은 '경기 리포트'(chart scoreboard, 기자 리뷰, goal_timeline), "
+                     "3면은 '데이터 분석'(shotmap, compare, 선수 cutout으로 숨은 MVP·결정적 장면 분석, 재미있는 숫자 3개 이상).")
+    if ctx.get("matchday_today"):
+        parts.append("오늘 전북 경기가 있다. '오늘의 경기' 프리뷰 면을 만든다(chart next, standings, form, 관전 포인트, 예상 라인업·부상자, 상대 감독·주요 선수 사진).")
+    if not parts:
+        parts.append("어제도 오늘도 전북 경기가 없다: 5면 안팎. 경기 리포트나 경기 프리뷰 면은 만들지 않는다. "
+                     "다음 경기는 1면 figs나 strip에 'D-n'으로만 짧게 알린다. 그날의 뉴스, 장외 소식, 루머 데스크로 채운다.")
+    parts.append("지난 경기를 다시 보는 면은 경기 다음 날에만, 경기 프리뷰 면은 경기 당일에만 만든다(ACL·컵대회 포함, 취재 메모로 판단).")
+    parts.append("특집: 그날 유난히 큰 이야기(감독 교체설, 대형 이적, 구단 사건, 기록 달성)가 있으면 '특집' 면을 하나 만든다. "
+                 "timeline으로 경과를 정리하고, signal(루머 신호등)이나 bars(숫자 비교), 인물 사진을 함께 쓴다. 매일 넣지 말고 그럴 만한 날에만 넣는다.")
+    edition = " ".join(parts)
     ex_path = NP / "issues" / "0.json"
     example = ""
     if ex_path.exists():

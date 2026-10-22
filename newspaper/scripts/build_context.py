@@ -212,6 +212,16 @@ def evergreen_board() -> dict:
     return out
 
 
+def community_boards(today: dt.date, names: list[str]) -> dict:
+    sys.path.insert(0, str(Path(__file__).parent))
+    import boards  # noqa: E402
+
+    try:
+        return boards.collect(today, names)
+    except Exception as e:  # 커뮤니티가 막혀도 신문은 나온다
+        return {"posts": [], "bodies": [], "errors": {"all": str(e)[:200]}}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="발행일(KST). 기본은 오늘")
@@ -262,6 +272,7 @@ def main() -> None:
         "weekday": WD[today.weekday()],
         "no": issue_no(today),
         "matchday_after": bool(lm and lm["date"] == yesterday),
+        "matchday_today": bool(nxt and nxt["date"] == today.isoformat()),
         "data": {
             "standings": table,
             "games_left_to_split": max(0, split_round - rnd) if rnd < split_round else 0,
@@ -275,9 +286,12 @@ def main() -> None:
         "assets": a,
         "photo_catalog": catalog,
         "evergreen": {} if args.no_board else evergreen_board(),
+        "boards": {} if args.no_board else community_boards(today, [c["name"] for c in catalog if c["team"] == "전북"]),
     }
     Path(args.out).write_text(json.dumps(ctx, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"context: 제{ctx['no']}호 {ctx['date']} matchday_after={ctx['matchday_after']} -> {args.out}")
+    b = ctx["boards"]
+    print(f"context: 제{ctx['no']}호 {ctx['date']} 경기다음날={ctx['matchday_after']} 경기당일={ctx['matchday_today']} "
+          f"커뮤니티글={len(b.get('posts', []))} 로그인={b.get('logged_in', [])} 에버그린로그인={ctx['evergreen'].get('logged_in')} -> {args.out}")
 
 
 if __name__ == "__main__":
