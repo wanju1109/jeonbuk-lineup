@@ -39,13 +39,25 @@ def log(msg: str) -> None:
         f.write(line + "\n")
 
 
+def apply_backspaces(s: str) -> str:
+    """일부 터미널의 숨김 입력은 백스페이스를 DEL(0x7f)/BS(0x08) 문자로 저장한다. 지운 대로 되돌린다."""
+    out: list[str] = []
+    for ch in s:
+        if ch in "\x7f\x08":
+            if out:
+                out.pop()
+        else:
+            out.append(ch)
+    return "".join(out).strip()
+
+
 def load_credentials() -> None:
     if os.environ.get("EVERGREEN_ID") and os.environ.get("EVERGREEN_PW"):
         return
     import keyring
 
     for key in ("EVERGREEN_ID", "EVERGREEN_PW"):
-        val = keyring.get_password("jeonju-morning", key)
+        val = apply_backspaces(keyring.get_password("jeonju-morning", key) or "")
         if not val:
             sys.exit(f"자격 증명 관리자에 {key}가 없습니다: python -m keyring set jeonju-morning {key}")
         os.environ[key] = val
