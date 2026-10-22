@@ -106,7 +106,9 @@ def main() -> None:
     cmd = [sys.executable, str(ROOT / "newspaper" / "scripts" / "post_evergreen.py"), "--no", str(no)]
     if args.dry_run:
         cmd.append("--dry-run")
-    r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
+    # 자식 프로세스도 UTF-8로 출력하게 한다(작업 스케줄러에서는 기본이 cp949라 읽다가 죽었다)
+    env = {**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1"}
+    r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
     log((r.stdout + r.stderr).strip())
     if r.returncode != 0:
         sys.exit(r.returncode)
