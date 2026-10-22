@@ -23,38 +23,17 @@ ROOT = Path(__file__).resolve().parents[2]
 PAGES = "https://wanju1109.github.io/jeonbuk-lineup/newspaper/"
 
 
-EVERGREEN_WIDTH = 975  # 에버그린 PC 본문 폭(px)
+IFRAME_HEIGHT = 1500  # 고정 높이. 신문이 더 길면 칸 안에서 스크롤한다(사용자 선택)
 
 
-def measure_height(url: str, width: int = EVERGREEN_WIDTH) -> int | None:
-    """게시글용 화면을 실제 폭으로 열어 높이를 잰다. 설치된 Edge(없으면 Chrome)를 쓴다."""
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        return None
-    for channel in ("msedge", "chrome"):
-        try:
-            with sync_playwright() as p:
-                b = p.chromium.launch(channel=channel, headless=True)
-                page = b.new_page(viewport={"width": width, "height": 900})
-                page.goto(url, wait_until="networkidle", timeout=60000)
-                page.wait_for_selector("html[data-ready='1']", timeout=60000)
-                h = page.evaluate("document.documentElement.scrollHeight")
-                b.close()
-                return int(h)
-        except Exception as e:  # 브라우저가 없거나 실패하면 다음 후보
-            print(f"높이 측정 실패({channel}): {str(e)[:120]}", file=sys.stderr)
-    return None
-
-
-def body_html(no: int, url: str, embed_url: str, summary: str, height: int) -> str:
-    u, e = html.escape(url, quote=True), html.escape(embed_url, quote=True)
+def body_html(no: int, url: str, summary: str) -> str:
+    u = html.escape(url, quote=True)
     return (
         f'<p><b>전주성 조간 제{no}호</b> · {html.escape(summary)}</p>'
         f'<p><a href="{u}" target="_blank">휴대폰에서는 여기를 눌러 새 창으로 크게 보세요</a></p>'
         '<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">'
-        f'<iframe src="{e}" title="전주성 조간 제{no}호" width="100%" height="{height}" '
-        f'style="width:100%;max-width:1100px;height:{height}px;border:0;border-radius:12px;overflow:hidden;background:#e9efe6;display:block;" '
+        f'<iframe src="{u}" title="전주성 조간 제{no}호" width="100%" height="{IFRAME_HEIGHT}" '
+        f'style="width:100%;max-width:1100px;height:{IFRAME_HEIGHT}px;border:0;border-radius:12px;overflow:hidden;background:#e9efe6;display:block;" '
         'loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>'
     )
 
@@ -95,7 +74,6 @@ def main() -> None:
     d = issue["date"]
     title = f"[전주성 조간 제{args.no}호] {issue['headline']}"
     url = f"{PAGES}?no={args.no}"
-    embed_url = f"{PAGES}?no={args.no}&embed=1"
 
     if args.wait_pages and not args.dry_run:
         wait_for_pages(args.no)
@@ -112,12 +90,8 @@ def main() -> None:
                 posted[str(args.no)] = dup.url
                 posted_path.write_text(json.dumps(posted, ensure_ascii=False, indent=1), encoding="utf-8")
             return
-        measured = measure_height(embed_url)
-        # 못 재면 면 수로 넉넉히 잡는다(빈칸이 조금 생겨도 이중 스크롤보다 낫다)
-        height = measured + 24 if measured else 1700 * len(issue["pages"])
-        print(f"iframe 높이 {height}px ({'측정' if measured else '추정'})")
         srl = args.update.rstrip("/").rsplit("/", 1)[-1] if args.update else None
-        result = eg.post(title, body_html(args.no, url, embed_url, issue.get("summary", ""), height), cat, dry_run=args.dry_run, document_srl=srl)
+        result = eg.post(title, body_html(args.no, url, issue.get("summary", "")), cat, dry_run=args.dry_run, document_srl=srl)
     except EvergreenError as e:
         raise SystemExit(str(e))
     print(f"{d} 제{args.no}호 · 말머리 {cat} · {result}")
