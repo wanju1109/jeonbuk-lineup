@@ -316,11 +316,13 @@ def main() -> None:
     teams = {"전북"} | ({nxt["opp_short"]} if nxt else set()) | ({lm["home"], lm["away"]} if lm else set())
     a, catalog = assets(teams, today.year)
 
-    # 특집 판단: 월말, 시즌 결산(리그 최종전 다음 날), 새 시즌 프리뷰(개막 7일 전·전날)
+    # 특집 판단: 월간 결산(매달 1일에 지난달), 시즌 결산(리그 최종전 다음 날), 새 시즌 프리뷰(개막 7일 전·전날)
+    # 말일에도 경기가 있을 수 있어 월간 결산은 다음 달 1일에 한다.
     specials, extra = [], {}
-    if (today + dt.timedelta(days=1)).month != today.month:
-        specials.append("month_end")
-        extra["month"] = period_summary(played, today.replace(day=1).isoformat(), today.isoformat())
+    if today.day == 1:
+        last_day = today - dt.timedelta(days=1)
+        specials.append("month_review")
+        extra["month"] = {**period_summary(played, last_day.replace(day=1).isoformat(), last_day.isoformat()), "label": f"{last_day.month}월"}
     if played and not upcoming and played[-1]["date"] == yesterday:
         specials.append("season_review")
         extra["season"] = period_summary(played, played[0]["date"], played[-1]["date"])
