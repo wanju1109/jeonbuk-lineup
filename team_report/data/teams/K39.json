@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-10-22T05:33:32+09:00",
+  "generated_at": "2026-10-23T05:30:29+09:00",
   "table": {
     "rank": 6,
     "teams": 17,
@@ -784,7 +784,7 @@
         "name": "김대환",
         "position": "DF",
         "back_no": 22,
-        "age": 21,
+        "age": 22,
         "apps": 27,
         "goals": 2,
         "assists": 4,
