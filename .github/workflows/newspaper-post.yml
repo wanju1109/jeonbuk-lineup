@@ -1,0 +1,98 @@
+name: newspaper post (전주성 조간 에버그린 게시)
+
+# Claude 루틴이 새 호(newspaper/issues/N.json)를 push하면 07:00 KST에 에버그린 칼럼/분석에 올린다.
+# 루틴이 main이 아닌 브랜치에 push해도 새 호 파일을 main으로 옮긴 뒤 게시한다.
+on:
+  push:
+    paths:
+      - "newspaper/issues/*.json"
+  workflow_dispatch:
+    inputs:
+      no:
+        description: "호수 (비우면 오늘 호)"
+        required: false
+        default: ""
+      mode:
+        description: "dry-run(로그인·글쓰기 화면만 확인) / yes(실제 게시)"
+        required: false
+        default: "dry-run"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: newspaper-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      TZ: Asia/Seoul
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "requests>=2.31"
+
+      - name: Which issue
+        id: w
+        run: |
+          NO="${{ github.event.inputs.no }}"
+          if [ -z "$NO" ]; then
+            NO=$(python -c "import datetime as d;print((d.date.today()-d.date(2026,10,23)).days+1)")
+          fi
+          echo "no=$NO" >> "$GITHUB_OUTPUT"
+          MODE="${{ github.event.inputs.mode }}"
+          [ "${{ github.event_name }}" = "push" ] && MODE="yes"
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          if [ ! -f "newspaper/issues/$NO.json" ]; then echo "제${NO}호 파일이 아직 없습니다"; echo "skip=1" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Bring issue to main
+        if: steps.w.outputs.skip != '1' && github.ref != 'refs/heads/main'
+        run: |
+          NO=${{ steps.w.outputs.no }}
+          cp newspaper/issues/$NO.json newspaper/issues/index.json "$RUNNER_TEMP/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout main && git pull --rebase
+          cp "$RUNNER_TEMP/$NO.json" newspaper/issues/
+          python - "$RUNNER_TEMP/index.json" <<'PY'
+          import json, sys
+          new = json.load(open(sys.argv[1], encoding="utf-8"))["issues"]
+          p = "newspaper/issues/index.json"
+          cur = json.load(open(p, encoding="utf-8"))["issues"]
+          by = {i["no"]: i for i in cur + new}
+          json.dump({"issues": sorted(by.values(), key=lambda i: i["no"])}, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          PY
+          git add newspaper/issues
+          git commit -m "chore(newspaper): 전주성 조간 제${NO}호 (루틴 브랜치에서 반영)" || true
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+
+      - name: Wait until 07:00 KST
+        if: steps.w.outputs.skip != '1' && steps.w.outputs.mode == 'yes'
+        run: |
+          now=$(date +%s); target=$(date -d "$(date +%F) 07:00" +%s)
+          if [ "$now" -lt "$target" ]; then sleep $((target - now)); fi
+
+      - name: Post
+        if: steps.w.outputs.skip != '1'
+        env:
+          EVERGREEN_ID: ${{ secrets.EVERGREEN_ID }}
+          EVERGREEN_PW: ${{ secrets.EVERGREEN_PW }}
+          EVERGREEN_CATEGORY: ${{ vars.EVERGREEN_CATEGORY }}
+        run: |
+          NO=${{ steps.w.outputs.no }}
+          if [ "${{ steps.w.outputs.mode }}" = "yes" ]; then
+            python newspaper/scripts/post_evergreen.py --no "$NO" --wait-pages
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add newspaper/issues/posted.json
+            git commit -m "chore(newspaper): 제${NO}호 에버그린 게시 기록" && { for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done; } || true
+          else
+            python newspaper/scripts/post_evergreen.py --no "$NO" --dry-run
+          fi

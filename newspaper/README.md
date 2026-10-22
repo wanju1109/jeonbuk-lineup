@@ -6,32 +6,29 @@
 - 보기: `https://wanju1109.github.io/jeonbuk-lineup/newspaper/` (최신호), `?no=N` (지난 호)
 - PC는 면 탭으로 넘겨 보고, 휴대폰은 모든 면이 한 줄로 이어진다.
 
-## 매일 흐름 (`.github/workflows/newspaper-daily.yml`)
+## 매일 흐름 (API 키 없음, PC 꺼져 있어도 됨)
 
-| 시각(KST) | 단계 | 스크립트 |
+| 시각(KST) | 누가 | 하는 일 |
 |---|---|---|
-| 06:17 | 기록·게시판 수집 | `scripts/build_context.py` — 순위, 지난 경기 부가기록, 다음 경기, 선수 사진 목록, 에버그린 글 제목, 루머 게시판(`scripts/boards.py`: 추꾸·에펨코리아·루리웹) |
-| ~06:20 | 취재·편집 | `scripts/generate_issue.py` — Claude가 웹 검색으로 뉴스·루머를 모으고 `issues/{no}.json`을 쓴다 |
-| ~06:50 | 커밋 | `issues/{no}.json`, `issues/index.json` |
-| 07:00 | 게시 | `scripts/post_evergreen.py` — Pages 반영을 확인한 뒤 로그인해서 글쓰기 |
+| 05:45 | GitHub Actions `newspaper-inbox.yml` | 에버그린 로그인 → 루머 탭 제목을 `inbox/boards.json`에 저장 (`scripts/collect_inbox.py`) |
+| 06:05 | Claude 루틴 (claude.ai/code/routines, 구독 사용) | `EDITOR.md` 지침대로 기록 계산(`build_context.py`) → 뉴스·루머 취재 → 초고 → `finalize_issue.py` 검사 → `issues/{no}.json` push |
+| 07:00 | GitHub Actions `newspaper-post.yml` | 새 호 push를 받아 07:00까지 기다린 뒤 에버그린 칼럼/분석에 iframe 글 게시 (`post_evergreen.py`) |
 
-편집 규칙: 경기 리포트·데이터 분석 면은 경기 다음 날에만(6~7면 특별판), 경기 프리뷰 면은 경기 당일에만 싣는다. 큰 이야기가 있는 날에는 특집 면을 넣는다.
+편집 규칙: 경기 리포트·데이터 분석 면은 경기 다음 날에만(6~7면 특별판), 경기 프리뷰 면은 경기 당일에만. 큰 이야기가 있는 날은 특집 면.
+루머 게시판: 추꾸·에펨코리아·루리웹(`scripts/boards.py`, 공개 목록), 에버그린 루머(회원 전용, 제목만).
 
 ## 필요한 설정 (Settings → Secrets and variables → Actions)
 
 | 이름 | 종류 | 내용 |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | Secret | console.anthropic.com 에서 만든 API 키 |
-| `EVERGREEN_ID` | Secret | 에버그린 아이디 |
-| `EVERGREEN_PW` | Secret | 에버그린 비밀번호 |
-| `CHUGGU_ID` / `CHUGGU_PW` | Secret | 추꾸 계정 (선택). 루머 게시판 본문을 읽을 때만 쓴다. 없으면 제목만 읽는다 |
-| `EVERGREEN_CATEGORY` | Variable | 말머리 번호. 기본 211(칼럼/분석). 자유 147, 기사 148, 기록/통계 213 |
+| `EVERGREEN_ID` / `EVERGREEN_PW` | Secret | 에버그린 계정 (루머 탭 읽기, 글쓰기) |
+| `EVERGREEN_CATEGORY` | Variable | 말머리 번호. 기본 211(칼럼/분석) |
 
 ## 수동 실행
 
-Actions → `newspaper daily (전주성 조간)` → Run workflow
-- `post`: `dry-run`(기본, 로그인과 글쓰기 화면만 확인) / `no`(신문만 만들기) / `yes`(실제 게시)
+- Actions → `newspaper post` → Run workflow: `mode`=`dry-run`(로그인·글쓰기 화면만 확인) / `yes`(실제 게시), `no`=호수
 - 같은 호를 두 번 올리지 않도록 `issues/posted.json`에 기록한다.
+- 루틴을 바로 돌리려면 claude.ai/code/routines 에서 '지금 실행'.
 
 ## 사진
 

@@ -209,6 +209,13 @@ def evergreen_board() -> dict:
             out["rumor_bodies"] = [{"title": p.title, "body": eg.read_post(p.url, 800)} for p in rumors[:6]]
     except Exception as e:
         out["error"] = str(e)
+    if not out["logged_in"]:  # 계정이 없는 곳(Claude 루틴)에서는 Actions가 새벽에 읽어 둔 제목을 쓴다
+        inbox = ROOT / "newspaper" / "inbox" / "boards.json"
+        if inbox.exists():
+            box = json.loads(inbox.read_text(encoding="utf-8"))
+            if box.get("date") == dt.datetime.now(KST).date().isoformat():
+                out["rumor"] = box.get("evergreen_rumor", [])
+                out["rumor_from_inbox"] = True
     return out
 
 

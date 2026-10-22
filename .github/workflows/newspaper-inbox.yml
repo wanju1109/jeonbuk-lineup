@@ -1,0 +1,35 @@
+name: newspaper inbox (전주성 조간 게시판 수집)
+
+on:
+  schedule:
+    # 05:45 KST — 06:05에 신문을 쓰는 Claude 루틴이 읽을 회원 전용 게시판 제목
+    - cron: "45 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TZ: Asia/Seoul
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "requests>=2.31"
+      - name: Collect
+        env:
+          EVERGREEN_ID: ${{ secrets.EVERGREEN_ID }}
+          EVERGREEN_PW: ${{ secrets.EVERGREEN_PW }}
+        run: python newspaper/scripts/collect_inbox.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add newspaper/inbox
+          git commit -m "chore(newspaper): 게시판 제목 수집" || exit 0
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
