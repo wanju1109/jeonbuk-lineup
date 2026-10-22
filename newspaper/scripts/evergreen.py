@@ -107,7 +107,9 @@ class Evergreen:
         if 'name="title"' not in page and "editor_sequence" not in page:
             raise EvergreenError("글쓰기 화면을 열 수 없습니다(로그인 또는 권한 확인 필요)")
         hidden = dict(re.findall(r'<input type="hidden" name="([^"]+)" value="([^"]*)"', page))
-        cats = {_text(n): v for v, n in re.findall(r'<option value="(\d+)"[^>]*>(.*?)</option>', page, re.S)}
+        # 말머리는 select가 아니라 라디오 버튼으로 나온다 (스킨에 따라 둘 다 대비)
+        cats = {_text(n): v for v, n in re.findall(r'name="category_srl" value="(\d+)"[^>]*/?>\s*<span[^>]*>(.*?)</span>', page, re.S)}
+        cats |= {_text(n): v for v, n in re.findall(r'<option value="(\d+)"[^>]*>(.*?)</option>', page, re.S)}
         return {"csrf": self._csrf(page), "hidden": hidden, "categories": cats}
 
     def post(self, title: str, content_html: str, category: int, dry_run: bool = False) -> str:
