@@ -72,10 +72,12 @@ class Evergreen:
             timeout=30,
             allow_redirects=True,
         )
-        r.raise_for_status()
+        # 아이디·비밀번호가 틀리면 Rhymix는 403과 함께 안내 문구를 돌려준다
+        msg = re.search(r'<div class="message-body">(.*?)</div>', r.text, re.S)
         self.logged_in = "procMemberLogout" in self.get("/free") or "dispMemberLogout" in r.text
         if not self.logged_in:
-            raise EvergreenError("에버그린 로그인 실패: 아이디/비밀번호(Secrets)를 확인하세요")
+            reason = _text(msg.group(1)).replace("닫기", "").strip() if msg else f"HTTP {r.status_code}"
+            raise EvergreenError(f"에버그린 로그인 실패: {reason}")
         return True
 
     # --- 목록 읽기 ---
