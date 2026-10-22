@@ -24,6 +24,12 @@ from pathlib import Path
 
 import requests
 
+# 작업 스케줄러는 창 없는 pythonw로 실행한다. 그때는 stdout/stderr가 없어 print에서 죽으므로 버린다.
+if sys.stdout is None:
+    sys.stdout = open(os.devnull, "w", encoding="utf-8")
+if sys.stderr is None:
+    sys.stderr = open(os.devnull, "w", encoding="utf-8")
+
 ROOT = Path(__file__).resolve().parents[2]
 STATE = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "JeonjuMorning" / "posted.json"
 LOG = STATE.with_name("post.log")
