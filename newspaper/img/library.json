@@ -1,0 +1,29 @@
+{
+  "note": "신문에 쓸 수 있는 사진. 저작권이 확인된 것만 넣는다. key는 issue JSON의 image 값으로 쓴다.",
+  "images": {
+    "fans": {
+      "src": "img/fans.webp",
+      "alt": "전주월드컵경기장 N석을 가득 메운 전북 서포터스",
+      "desc": "야간 홈경기, N석 응원석 전경. 1면 큰 사진용. 가로 4:3",
+      "credit": "사진 Haena96 / Wikimedia Commons (CC0)"
+    },
+    "interior": {
+      "src": "img/interior.webp",
+      "alt": "원정석에서 본 전주월드컵경기장 내부",
+      "desc": "낮 경기, 원정석 쪽에서 본 경기장 전체. 가로 4:3",
+      "credit": "사진 Haena96 / Wikimedia Commons (CC0)"
+    },
+    "exterior": {
+      "src": "img/exterior.webp",
+      "alt": "전주월드컵경기장 외관",
+      "desc": "경기장 외관 파노라마. 경기장 시설·행정 기사용. 가로 2.6:1",
+      "credit": "사진 Paladisious / Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "bento": {
+      "src": "img/bento.webp",
+      "alt": "2019 아시안컵에서 한국 대표팀을 지휘하는 파울루 벤투",
+      "desc": "파울루 벤투 감독 상반신. 세로에 가까움",
+      "credit": "사진 Zare-Ostovari / Wikimedia Commons (CC BY 4.0)"
+    }
+  }
+}
