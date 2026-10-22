@@ -1,0 +1,1709 @@
+{
+ "no": 1,
+ "date": "2026-10-23",
+ "matchday_after": false,
+ "headline": "정규리그 최종전, 전북 내일 안양 원정",
+ "summary": "24일 안양 원정으로 정규리그 마무리, 강원과 승점 47 동률 3위 싸움, 벤투설 열이틀째, 27일 베이징 원정",
+ "strip": [
+  "K리그1 3위 · 승점 47",
+  "다음 경기 D-1 · 24일(토) 14:00 안양 원정",
+  "ACLE 27일(화) 21:15 베이징 원정"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제1호 · 2026.10.23",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "fans",
+     "kicker": "정규리그 33라운드 D-1",
+     "title": "정규리그 최종전, 전북 내일 안양 원정",
+     "dek": "파이널A는 이미 확정했다. 남은 것은 3위 자리와 분위기다. 강원과 승점 47로 같고, 다득점에서 앞서 있다.",
+     "caption": "전주월드컵경기장 N석의 전북 서포터스",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북현대가 24일(토) 오후 2시 안양종합운동장에서 FC안양과 K리그1 33라운드를 치른다. 정규리그 마지막 경기다. 이날 여섯 경기가 같은 시각에 시작한다.",
+      "전북은 12승 11무 9패, 승점 47로 3위다. 4위 강원도 승점 47이다. 득실차도 10으로 같고 다득점에서 42골 대 39골로 앞섰다. 2위 울산(승점 50)과는 3점 차다. 지난 18일 제주를 3-2로 꺾으면서 파이널A 진출은 확정했다.",
+      "안양은 승점 42로 8위다. 6위 제주와 5위 대전이 이미 승점 46이라 이번 경기를 이겨도 파이널A에 오를 수 없다. 부담 없는 상대가 오히려 까다로울 수 있다. 전북은 지난 3월 18일 홈에서 안양을 2-1로 이겼고, 친정을 상대한 모따가 결승골을 넣었다.",
+      "바깥은 여전히 시끄럽다. 파울루 벤투 감독설은 열이틀째 이어지고 구단은 말이 없다. 안양전을 마치면 사흘 뒤 27일 베이징 원정이 기다린다. 이번 주 전북의 일정과 판세를 2~4면에 정리했다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "3위",
+       "label": "K리그1 순위 · 승점 47",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "42-39",
+       "label": "강원과 동률, 다득점에서 앞서",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "3점",
+       "label": "2위 울산과의 승점 차",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-1",
+       "label": "24일(토) 14:00 안양 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "순위 판세",
+   "teaser": "서울 우승 확정될까, 마지막 한 자리는 인천과 제주",
+   "folio": "33라운드, 리그의 운명이 갈린다",
+   "blocks": [
+    {
+     "type": "chart",
+     "span": 7,
+     "title": "K리그1 순위 (32라운드 종료)",
+     "chart": "standings",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 5,
+     "kicker": "리그 판세",
+     "title": "서울은 우승, 인천은 막차를 노린다",
+     "paragraphs": [
+      "FC서울이 승점 66으로 2위 울산에 16점 앞서 있다. 24일 강원을 이기면 파이널 라운드에 들어가기 전에 우승을 확정한다. 울산이 포항에 지면 서울 결과와 관계없이 우승이 정해진다.",
+      "정규라운드 안에 우승을 확정한 팀은 지금까지 전북뿐이다. 2018년 32라운드, 2025년 33라운드였다. 1년 전 같은 시기 정상에 섰던 전북이 올해는 그 장면을 다른 팀 경기에서 지켜보게 됐다.",
+      "파이널A 마지막 자리는 인천과 제주의 맞대결에서 갈린다. 제주는 비기기만 해도 오르고, 인천은 이기면 다득점에서 앞서 뒤집는다. 최하위 광주는 부천에 지면 꼴찌가 확정된다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 7,
+     "rule_top": true,
+     "title": "상위권 승점 (32라운드 종료)",
+     "items": [
+      {
+       "label": "서울",
+       "value": 66,
+       "text": "66",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산",
+       "value": 50,
+       "text": "50",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 47,
+       "text": "47",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 47,
+       "text": "47",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 46,
+       "text": "46",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "제주",
+       "value": 46,
+       "text": "46",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천",
+       "value": 43,
+       "text": "43",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "기록 K리그 데이터포털",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "rule_top": true,
+     "image": "coach:c01",
+     "big": "3위",
+     "paragraphs": [
+      "정정용 감독 첫 시즌",
+      "정규리그 32경기 승점 47",
+      "파이널A는 확정했다"
+     ],
+     "caption": "정정용 감독",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "list",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "24일 14:00 동시 킥오프",
+     "title": "33라운드에 걸린 것",
+     "items": [
+      {
+       "tag": "우승",
+       "title": "서울, 강원 잡으면 10년 만의 정상",
+       "text": "울산이 포항에 지면 서울은 결과와 관계없이 우승한다.",
+       "source_name": "데일리스포츠한국",
+       "source_url": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=434724",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "막차",
+       "title": "인천 대 제주, 파이널A 마지막 한 자리",
+       "text": "제주는 무승부 이상이면 진출, 인천은 승리하면 다득점으로 앞선다.",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99660",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "3위",
+       "title": "전북과 강원, 승점 47 동률",
+       "text": "강원이 서울과 붙는 사이 전북은 안양 원정에서 승점을 쌓아야 3위를 지킨다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "선수단",
+   "teaser": "티아고의 멀티골, 모따의 친정 나들이, 이승우의 자리",
+   "folio": "안양으로 가는 얼굴들",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20220244",
+     "big": "2골",
+     "paragraphs": [
+      "제주전 머리와 발로 두 골",
+      "슈팅 4개, 유효 2개",
+      "패스 20개 모두 성공"
+     ],
+     "caption": "티아고(9번)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20230224",
+     "big": "친정",
+     "paragraphs": [
+      "지난 시즌 안양에서 뛰었다",
+      "3월 안양전 결승골",
+      "제주전 교체로 5분"
+     ],
+     "caption": "모따(99번)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20220042",
+     "big": "10번",
+     "paragraphs": [
+      "제주전 후반 시작과 교체",
+      "선발 제외가 이어졌다",
+      "팀 내 최다 공격포인트"
+     ],
+     "caption": "이승우(10번)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "선수단",
+     "title": "공격의 중심은 티아고, 시선은 이승우에게",
+     "paragraphs": [
+      "제주전 3골 가운데 2골을 티아고가 넣었다. 108분을 뛰며 슈팅 4개 중 2개를 골문 안으로 보냈고 패스 20개를 하나도 놓치지 않았다. 나머지 1골은 주장 김영빈의 머리에서 나왔다.",
+      "이승우는 제주전에서 또 벤치에서 시작했다. 스포츠조선은 팀 내 최다 공격포인트를 기록 중인 선수의 선발 제외에 팬들의 비판이 거세다고 전했다. 후반 시작과 함께 들어가 55분을 뛰었다.",
+      "모따에게 안양전은 친정 나들이다. 지난 3월 18일 친정을 상대로 결승골을 넣고도 세리머니를 하지 않았다. 제주전에서는 후반 막판 교체로 들어갔다. 선발 명단은 경기 당일 발표된다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 5,
+     "rule_top": true,
+     "title": "전북 최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 12,
+     "rule_top": true,
+     "title": "제주전 전북 주요 기록",
+     "items": [
+      {
+       "label": "티아고",
+       "value": "2골 · 슈팅 4 · 패스 20/20",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "김영빈",
+       "value": "1골 · 수비 기여 13 · 패스 43/47",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "이탈로",
+       "value": "슈팅 3 · 유효 2",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강상윤",
+       "value": "패스 36/40 · 수비 기여 7",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "관중",
+       "value": "11,469명 (전주월드컵경기장)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "벤투설 그 후",
+   "teaser": "열이틀째 이어지는 벤투설, 확인된 것과 아닌 것",
+   "folio": "감독설, 어디까지 왔나",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "bento",
+     "caption": "파울루 벤투 감독(2019 아시안컵)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "감독설",
+     "title": "벤투 감독설 열이틀째, 구단은 입장 없어",
+     "paragraphs": [
+      "파울루 벤투 감독이 전북 차기 사령탑 후보로 거론된 지 열이틀이 지났다. 구단은 여전히 긍정도 부정도 하지 않는다. 정정용 감독은 그 사이 정규리그 최종전과 아시아 원정을 차례로 준비한다.",
+      "몇 가지는 정리됐다. 구단 관계자가 포르투갈로 가 벤투 측을 만났다는 소문이 돌았지만, OSEN은 마이클 김 디렉터에게 확인한 결과 최근 포르투갈 출국 사실이 없다고 전했다. 벤투의 측근인 제주 코스타 감독도 18일 전주에서 루머로 알고 있다고 답했다.",
+      "남은 숫자는 몸값이다. 스포티비뉴스는 벤투 측 요구액이 세후 약 44억 원, 옵션을 더하면 50억 원에 가깝다고 보도하며 K리그 부임 가능성을 낮게 봤다. 21일 축구 커뮤니티 루머 게시판에는 다른 해외 구단의 제안도 받고 있다는 출처 불명의 글이 올라왔다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "signal",
+     "span": 6,
+     "rule_top": true,
+     "title": "벤투설 신호등",
+     "items": [
+      {
+       "state": "yes",
+       "title": "언론 보도",
+       "text": "18일 후보설, 21일 몸값 보도",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "state": "no",
+       "title": "디렉터 포르투갈행",
+       "text": "출국 사실 없다고 보도됐다",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "state": "no",
+       "title": "측근 반응",
+       "text": "코스타 감독은 루머로 안다고 했다",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "state": "maybe",
+       "title": "구단 입장",
+       "text": "부인도 인정도 없다",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "big": "보도는 있고, 확인은 없다",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "chart": null
+    },
+    {
+     "type": "timeline",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "경과",
+     "title": "소문에서 몸값까지",
+     "items": [
+      {
+       "date": "10.11",
+       "title": "커뮤니티에 접촉설",
+       "text": "출처 표기 없는 짧은 글로 시작했다.",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "10.18",
+       "title": "후보설 보도, 코스타 감독 반응",
+       "text": "제주 감독은 루머로 안다고 답했다.",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10.18",
+       "title": "디렉터 출국설은 사실 아냐",
+       "text": "마이클 김 디렉터의 최근 포르투갈 출국은 없었다.",
+       "source_name": "OSEN",
+       "source_url": "https://sports.news.nate.com/view/20261018n08400",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10.21",
+       "title": "요구액 세후 약 44억 원 보도",
+       "text": "옵션 포함 50억 원 안팎, 부임 가능성은 낮다는 분석.",
+       "state": "hot",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://m.sports.naver.com/kfootball/article/477/0000634395",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "장외",
+   "teaser": "27일 베이징 원정, 정규리그 다음은 아시아",
+   "folio": "안양 다음은 베이징",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 7,
+     "image": "interior",
+     "caption": "전주월드컵경기장. 전북은 안양전과 베이징전을 모두 원정에서 치른다",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 5,
+     "kicker": "이번 주 일정",
+     "title": "나흘 동안 원정 두 번",
+     "items": [
+      {
+       "title": "24일(토) 14:00",
+       "text": "K리그1 33라운드 FC안양 원정 · 안양종합운동장",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "27일(화) 21:15",
+       "text": "ACLE 리그 스테이지 베이징 원정 · 워커스 스타디움",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "그다음",
+       "text": "파이널 라운드 일정은 연맹 발표 뒤 확인 필요",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "ACLE",
+     "title": "고베에서 막힌 아시아 원정, 다음은 베이징",
+     "paragraphs": [
+      "전북은 27일 베이징 원정으로 ACLE 리그 스테이지 일정을 이어간다. 직전 고베 원정에서는 0-2로 졌다. 후반 두 차례 골대를 맞히고도 득점하지 못하며 대회 첫 패배를 기록했다.",
+      "베이징 원정은 쉽지 않은 무대다. 같은 대회에서 포항이 베이징 원정 1차전에서 1-3으로 졌다. 안양전을 마치고 사흘 만에 중국으로 건너가야 하는 일정이라 선수 운용이 관심이다.",
+      "리그도 쉼 없이 이어진다. 33라운드가 끝나면 상위 여섯 팀이 한 번씩 더 맞붙는 파이널 라운드 5경기가 시작된다. 3위를 지키면 그 출발선이 한결 편해진다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 4,
+     "rule_top": true,
+     "title": "원정 두 경기",
+     "items": [
+      {
+       "value": "D-1",
+       "label": "안양 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-4",
+       "label": "베이징 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "0-2",
+       "label": "직전 ACLE 고베 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "루머 등급표 · 커뮤니티 온도 · 퀴즈",
+   "folio": "오늘의 루머와 퀴즈",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "전북, 파이널A 진출 확정",
+       "text": "18일 제주전 3-2 승리로 남은 경기와 관계없이 상위 6팀에 들었다.",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202610191408003/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "벤투, 전북 차기 감독 후보",
+       "text": "몸값 보도까지 나왔지만 매체는 부임 가능성을 낮게 봤다. 구단은 침묵.",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://m.sports.naver.com/kfootball/article/477/0000634395",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "구단 디렉터 포르투갈행설은 사실 아냐",
+       "text": "최근 출국 사실이 없다고 확인 보도됐다.",
+       "source_name": "OSEN",
+       "source_url": "https://sports.news.nate.com/view/20261018n08400",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "벤투, 해외 구단 제안도 받는 중",
+       "text": "21일 루머 게시판 글. 출처는 '축구계 지인', 다른 커뮤니티에서 옮겨 온 글이다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "안양전에서 이승우 선발",
+       "text": "선발 제외가 이어지며 팬들의 아쉬움이 커졌다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "벤투 몸값 이야기가 루머 게시판에 다시 올라왔다. 50억 원보다 더 높다는 주장이 담겼지만 출처는 확인되지 않는다.",
+       "label": "국내축구 루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "22일 밤 루머 게시판은 다른 구단 감독·선수 이야기로 채워졌다. 전북 관련 새 글은 드물었다.",
+       "label": "국내축구 루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "이승우 선발 제외가 이어지자 팬들의 비판이 거세다는 보도가 나왔다.",
+       "label": "스포츠조선 보도",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "1년 전 같은 날은 우승 확정, 올해는 파이널A 확정이라는 비교 기사가 나왔다.",
+       "label": "스포츠경향 보도",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 6,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "Q1. 정규라운드 안에 리그 우승을 확정한 사례는 전북의 몇 번뿐일까?",
+       "text": "두 번. 2018년 32라운드, 2025년 33라운드.",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "Q2. 제주전에서 수비 기여를 가장 많이 한 전북 선수는?",
+       "text": "김영빈(13회). 골도 하나 넣었다.",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "Q3. 지난 3월 18일 전북-안양전 결승골의 주인공은?",
+       "text": "모따. 전북이 2-1로 이겼다.",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "스포티비뉴스",
+       "text": "벤투 몸값 보도, 코스타 감독 발언",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://m.sports.naver.com/kfootball/article/477/0000634395",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "OSEN",
+       "text": "디렉터 포르투갈 출국설 확인",
+       "source_name": "OSEN",
+       "source_url": "https://sports.news.nate.com/view/20261018n08400",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "데일리스포츠한국",
+       "text": "33라운드 서울 우승 조건",
+       "source_name": "데일리스포츠한국",
+       "source_url": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=434724",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "포포투",
+       "text": "인천-제주 파이널A 막차",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99660",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "스포츠조선",
+       "text": "제주전 선발 명단, 이승우 선발 제외",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261018n07540",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "뉴스핌",
+       "text": "3월 안양전 모따 결승골",
+       "source_name": "뉴스핌",
+       "source_url": "https://www.newspim.com/news/view/20260318001263",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "재경일보",
+       "text": "고베 원정 0-2",
+       "source_name": "재경일보",
+       "source_url": "https://news.jkn.co.kr/post/1024037",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "K리그 데이터포털",
+       "text": "순위·경기 기록",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  },
+  "player:20220244": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png",
+   "alt": "티아고",
+   "back_no": 9,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20230224": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png",
+   "alt": "모따",
+   "back_no": 99,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20220042": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png",
+   "alt": "이승우",
+   "back_no": 10,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 32,
+    "w": 20,
+    "d": 6,
+    "l": 6,
+    "gf": 60,
+    "ga": 28,
+    "pts": 66,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 32,
+    "w": 15,
+    "d": 5,
+    "l": 12,
+    "gf": 50,
+    "ga": 45,
+    "pts": 50,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 32,
+    "w": 12,
+    "d": 11,
+    "l": 9,
+    "gf": 42,
+    "ga": 32,
+    "pts": 47,
+    "rank": 3,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 32,
+    "w": 11,
+    "d": 14,
+    "l": 7,
+    "gf": 39,
+    "ga": 29,
+    "pts": 47,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 32,
+    "w": 12,
+    "d": 10,
+    "l": 10,
+    "gf": 51,
+    "ga": 40,
+    "pts": 46,
+    "rank": 5,
+    "gd": 11
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 32,
+    "w": 12,
+    "d": 10,
+    "l": 10,
+    "gf": 38,
+    "ga": 34,
+    "pts": 46,
+    "rank": 6,
+    "gd": 4
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 32,
+    "w": 11,
+    "d": 10,
+    "l": 11,
+    "gf": 40,
+    "ga": 34,
+    "pts": 43,
+    "rank": 7,
+    "gd": 6
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 32,
+    "w": 10,
+    "d": 12,
+    "l": 10,
+    "gf": 39,
+    "ga": 47,
+    "pts": 42,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 32,
+    "w": 11,
+    "d": 8,
+    "l": 13,
+    "gf": 28,
+    "ga": 37,
+    "pts": 41,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 32,
+    "w": 5,
+    "d": 19,
+    "l": 8,
+    "gf": 32,
+    "ga": 39,
+    "pts": 34,
+    "rank": 10,
+    "gd": -7
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 32,
+    "w": 7,
+    "d": 11,
+    "l": 14,
+    "gf": 32,
+    "ga": 44,
+    "pts": 32,
+    "rank": 11,
+    "gd": -12
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 32,
+    "w": 2,
+    "d": 12,
+    "l": 18,
+    "gf": 27,
+    "ga": 69,
+    "pts": 18,
+    "rank": 12,
+    "gd": -42
+   }
+  ],
+  "games_left_to_split": 1,
+  "jeonbuk": {
+   "rank": 3,
+   "pts": 47,
+   "w": 12,
+   "d": 11,
+   "l": 9,
+   "gf": 42,
+   "ga": 32
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "김천 0-0"
+   },
+   {
+    "r": "D",
+    "label": "인천 1-1"
+   },
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-10-24",
+   "time": "",
+   "home": "안양",
+   "away": "전북",
+   "opp": "FC 안양",
+   "opp_short": "안양",
+   "is_home": false,
+   "round": 33,
+   "venue": "",
+   "comp": "K리그1 33R",
+   "home_note": "8위 · 승점 42",
+   "away_note": "3위 · 승점 47",
+   "when_label": "10월 24일(토)",
+   "d_minus": 1
+  },
+  "last": {
+   "game_id": "190",
+   "date": "2026-10-18",
+   "round": 32,
+   "home": "전북",
+   "away": "제주",
+   "venue": "전주 월드컵",
+   "attendance": 11469,
+   "comp": "K리그1 32R",
+   "score": [
+    3,
+    2
+   ],
+   "date_label": "10월 18일(일)",
+   "weather": "흐리고 비 25℃",
+   "referee": "송민석",
+   "managers": {
+    "home": "정정용",
+    "away": "세르지우 코스타"
+   },
+   "shots": [
+    [
+     "H",
+     1,
+     3,
+     "AST",
+     85.2,
+     40.9
+    ],
+    [
+     "H",
+     1,
+     11,
+     "MST",
+     80.4,
+     56.2
+    ],
+    [
+     "A",
+     1,
+     13,
+     "AST",
+     84.2,
+     13.2
+    ],
+    [
+     "H",
+     1,
+     16,
+     "MST",
+     72.2,
+     50.3
+    ],
+    [
+     "A",
+     1,
+     19,
+     "AST",
+     72.5,
+     50.1
+    ],
+    [
+     "H",
+     1,
+     21,
+     "AST",
+     87.3,
+     44.7
+    ],
+    [
+     "H",
+     1,
+     31,
+     "GL",
+     93.6,
+     45.2
+    ],
+    [
+     "A",
+     1,
+     34,
+     "MST",
+     75.0,
+     58.3
+    ],
+    [
+     "A",
+     1,
+     37,
+     "MST",
+     79.8,
+     71.2
+    ],
+    [
+     "H",
+     1,
+     41,
+     "MST",
+     87.3,
+     41.8
+    ],
+    [
+     "A",
+     1,
+     42,
+     "MST",
+     93.5,
+     51.3
+    ],
+    [
+     "A",
+     1,
+     53,
+     "GL",
+     89.6,
+     50.2
+    ],
+    [
+     "H",
+     1,
+     58,
+     "MST",
+     74.1,
+     67.4
+    ],
+    [
+     "H",
+     2,
+     46,
+     "GL",
+     92.7,
+     54.7
+    ],
+    [
+     "H",
+     2,
+     59,
+     "GL",
+     93.2,
+     47.4
+    ],
+    [
+     "H",
+     2,
+     63,
+     "AST",
+     73.4,
+     57.6
+    ],
+    [
+     "H",
+     2,
+     66,
+     "MST",
+     87.8,
+     46.2
+    ],
+    [
+     "A",
+     2,
+     67,
+     "MST",
+     92.2,
+     46.5
+    ],
+    [
+     "A",
+     2,
+     72,
+     "MST",
+     77.4,
+     42.3
+    ],
+    [
+     "A",
+     2,
+     75,
+     "MST",
+     90.1,
+     36.5
+    ],
+    [
+     "H",
+     2,
+     77,
+     "MST",
+     69.8,
+     48.6
+    ],
+    [
+     "A",
+     2,
+     77,
+     "BT",
+     83.1,
+     60.7
+    ],
+    [
+     "H",
+     2,
+     81,
+     "MST",
+     85.7,
+     69.4
+    ],
+    [
+     "H",
+     2,
+     82,
+     "BT",
+     86.5,
+     63.5
+    ],
+    [
+     "A",
+     2,
+     84,
+     "BT",
+     78.8,
+     48.4
+    ],
+    [
+     "A",
+     2,
+     90,
+     "GL",
+     89.8,
+     49.5
+    ],
+    [
+     "A",
+     2,
+     91,
+     "AST",
+     90.4,
+     24.7
+    ],
+    [
+     "H",
+     2,
+     97,
+     "MST",
+     96.5,
+     33.2
+    ],
+    [
+     "A",
+     2,
+     97,
+     "MST",
+     86.4,
+     62.7
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "티아고",
+     "label": "32'",
+     "minute": 32,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "네게바",
+     "label": "45+9'",
+     "minute": 45.5,
+     "pk": true,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "김영빈",
+     "label": "47'",
+     "minute": 47,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "티아고",
+     "label": "60'",
+     "minute": 60,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "네게바",
+     "label": "90+1'",
+     "minute": 91,
+     "pk": true,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     15,
+     14
+    ],
+    [
+     "유효슈팅",
+     6,
+     5
+    ],
+    [
+     "패스 성공",
+     311,
+     305
+    ],
+    [
+     "패스 성공률",
+     86.6,
+     85.4,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     3,
+     8
+    ],
+    [
+     "반칙",
+     10,
+     14
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-10-24",
+    "home": "안양",
+    "away": "전북",
+    "round": 33
+   }
+  ]
+ }
+}
