@@ -102,8 +102,9 @@ class Evergreen:
         return _text(m.group(1) if m else "")[:limit]
 
     # --- 글쓰기 ---
-    def write_form(self) -> dict:
-        page = self.get("/index.php", mid="free", act="dispBoardWrite")
+    def write_form(self, document_srl: str | None = None) -> dict:
+        params = {"mid": "free", "act": "dispBoardWrite"} | ({"document_srl": document_srl} if document_srl else {})
+        page = self.get("/index.php", **params)
         if 'name="title"' not in page and "editor_sequence" not in page:
             raise EvergreenError("글쓰기 화면을 열 수 없습니다(로그인 또는 권한 확인 필요)")
         hidden = dict(re.findall(r'<input type="hidden" name="([^"]+)" value="([^"]*)"', page))
@@ -112,10 +113,13 @@ class Evergreen:
         cats |= {_text(n): v for v, n in re.findall(r'<option value="(\d+)"[^>]*>(.*?)</option>', page, re.S)}
         return {"csrf": self._csrf(page), "hidden": hidden, "categories": cats}
 
-    def post(self, title: str, content_html: str, category: int, dry_run: bool = False) -> str:
+    def post(self, title: str, content_html: str, category: int, dry_run: bool = False, document_srl: str | None = None) -> str:
+        """새 글을 쓴다. document_srl을 주면 그 글을 고친다(내 글만 가능)."""
         if not self.logged_in:
             raise EvergreenError("로그인하지 않았습니다")
-        form = self.write_form()
+        form = self.write_form(document_srl)
+        if document_srl and form["hidden"].get("document_srl") != str(document_srl):
+            raise EvergreenError(f"글 {document_srl}의 수정 화면을 열 수 없습니다(내 글인지 확인)")
         if form["categories"] and str(category) not in form["categories"].values():
             raise EvergreenError(f"말머리 {category}를 글쓰기 화면에서 찾지 못했습니다: {form['categories']}")
         data = {k: v for k, v in form["hidden"].items() if k not in ("act", "error_return_url", "success_return_url")}

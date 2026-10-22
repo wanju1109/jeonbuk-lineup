@@ -81,11 +81,12 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true", help="로그인·글쓰기 화면만 확인하고 올리지 않는다")
     ap.add_argument("--wait-pages", action="store_true")
     ap.add_argument("--force", action="store_true", help="이미 올린 호도 다시 올린다")
+    ap.add_argument("--update", metavar="URL", help="이미 올린 글(https://evergreenjb.me/free/번호)을 새 내용으로 고친다")
     args = ap.parse_args()
 
     posted_path = ROOT / "newspaper" / "issues" / "posted.json"
     posted = json.loads(posted_path.read_text(encoding="utf-8")) if posted_path.exists() else {}
-    if str(args.no) in posted and not args.force and not args.dry_run:
+    if str(args.no) in posted and not args.force and not args.dry_run and not args.update:
         print(f"제{args.no}호는 이미 올렸습니다: {posted[str(args.no)]}")
         return
 
@@ -105,7 +106,7 @@ def main() -> None:
             raise SystemExit("EVERGREEN_ID / EVERGREEN_PW Secrets가 없습니다")
         mark = f"[전주성 조간 제{args.no}호]"
         dup = next((p for p in eg.list_posts(cat) + eg.list_posts() if p.title.startswith(mark)), None)
-        if dup and not args.force:  # 휴대폰으로 먼저 직접 올린 경우
+        if dup and not args.force and not args.update:  # 휴대폰으로 먼저 직접 올린 경우
             print(f"이미 게시판에 있음: {dup.url}")
             if not args.dry_run:
                 posted[str(args.no)] = dup.url
@@ -115,7 +116,8 @@ def main() -> None:
         # 못 재면 면 수로 넉넉히 잡는다(빈칸이 조금 생겨도 이중 스크롤보다 낫다)
         height = measured + 24 if measured else 1700 * len(issue["pages"])
         print(f"iframe 높이 {height}px ({'측정' if measured else '추정'})")
-        result = eg.post(title, body_html(args.no, url, embed_url, issue.get("summary", ""), height), cat, dry_run=args.dry_run)
+        srl = args.update.rstrip("/").rsplit("/", 1)[-1] if args.update else None
+        result = eg.post(title, body_html(args.no, url, embed_url, issue.get("summary", ""), height), cat, dry_run=args.dry_run, document_srl=srl)
     except EvergreenError as e:
         raise SystemExit(str(e))
     print(f"{d} 제{args.no}호 · 말머리 {cat} · {result}")
