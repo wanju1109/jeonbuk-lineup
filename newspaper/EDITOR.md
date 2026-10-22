@@ -8,12 +8,12 @@
 1. 저장소 루트에서 기록을 계산한다.
    ```bash
    pip install -q requests
-   python newspaper/scripts/build_context.py --out /tmp/ctx.json
+   python newspaper/scripts/build_context.py --no-board --out /tmp/ctx.json
    ```
    출력 줄에 호수, `경기다음날`, `경기당일`이 나온다. `/tmp/ctx.json`을 읽는다.
    - `data`: 순위·지난 경기·다음 경기·최근 폼. **숫자는 여기 값만 쓴다.**
    - `photo_catalog`: 쓸 수 있는 선수·감독 사진 키.
-   - `evergreen`, `boards`: 오늘 아침 읽어 온 커뮤니티 글 제목(일부 본문).
+   - 클라우드 환경은 일반 인터넷 접속이 막혀 있어 `--no-board`로 게시판 읽기를 건너뛴다. 게시판은 2단계에서 WebFetch로 읽는다.
 2. 취재한다(WebSearch, WebFetch). 아래 '취재' 항목.
 3. 초고를 `/tmp/draft.json`에 쓴다. 아래 '초고 형식'.
 4. 검사하고 발행 파일을 만든다. 문제가 나오면 초고를 고쳐 통과할 때까지 반복한다.
@@ -22,17 +22,17 @@
    ```
 5. `newspaper/issues/{호수}.json`, `newspaper/issues/index.json`만 커밋하고 push한다.
    커밋 메시지: `chore(newspaper): 전주성 조간 제N호`. 다른 파일은 건드리지 않는다.
-   push 뒤 GitHub Actions가 07:00에 에버그린에 올린다. 직접 에버그린에 글을 쓰지 않는다.
+   에버그린 게시는 별도 단계가 맡는다. 직접 에버그린에 글을 쓰지 않는다.
 
 ## 취재
 
 지난 약 30시간 동안 전북현대 관련 소식을 모은다.
 
 1. 언론 기사: 경기 결과·리뷰, 선수단(부상, 복귀, 징계, 인터뷰), 감독·구단, 이적설, 일정·티켓, 경기장, 구단 행사, ACL.
-2. 루머 게시판 네 곳을 기본으로 본다. 목록은 ctx에 미리 있다. 필요하면 WebFetch로 더 본다.
+2. 루머 게시판 네 곳을 WebFetch로 직접 읽는다(최근 3일 글 제목, 전북 관련 글은 본문까지).
    - 추꾸 국내축구 루머 https://www.chuggu.net/football_k/category/52158
    - 에펨코리아 국내축구 루머 https://www.fmkorea.com/index.php?mid=football_korean&category=108791244
-   - 에버그린 루머 https://evergreenjb.me/free/category/212 (회원 전용, ctx의 제목만 사용)
+   - 에버그린 루머 https://evergreenjb.me/free/category/212 (회원 전용이라 안 열리면 자유게시판 https://evergreenjb.me/free 제목으로 분위기만 본다)
    - 루리웹 축구게시판 루머 https://bbs.ruliweb.com/sports/board/300254?cate=361
    전북 관련 글은 다른 커뮤니티나 기사로 교차 확인하고, 확인되면 등급을 올린다.
 3. 경기 다음 날이면 경기 리뷰, 감독·선수 인터뷰, 평점, 명장면, 팬 반응을 자세히.

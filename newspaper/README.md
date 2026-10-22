@@ -10,12 +10,12 @@
 
 | 시각(KST) | 누가 | 하는 일 |
 |---|---|---|
-| 05:45 | GitHub Actions `newspaper-inbox.yml` | 에버그린 로그인 → 루머 탭 제목을 `inbox/boards.json`에 저장 (`scripts/collect_inbox.py`) |
 | 06:05 | Claude 루틴 (claude.ai/code/routines, 구독 사용) | `EDITOR.md` 지침대로 기록 계산(`build_context.py`) → 뉴스·루머 취재 → 초고 → `finalize_issue.py` 검사 → `issues/{no}.json` push |
-| 07:00 | GitHub Actions `newspaper-post.yml` | 새 호 push를 받아 07:00까지 기다린 뒤 에버그린 칼럼/분석에 iframe 글 게시 (`post_evergreen.py`) |
+| push 직후 | GitHub Actions `newspaper-post.yml` | 루틴이 다른 브랜치에 올렸으면 main으로 반영. 에버그린이 Actions 서버를 막아(403) 게시는 `POST_FROM_ACTIONS=true`일 때만 |
+| 07:00 | (게시 방식 결정 중) | `post_evergreen.py` — Pages 반영 확인 뒤 에버그린 칼럼/분석에 iframe 글 게시 |
 
 편집 규칙: 경기 리포트·데이터 분석 면은 경기 다음 날에만(6~7면 특별판), 경기 프리뷰 면은 경기 당일에만. 큰 이야기가 있는 날은 특집 면.
-루머 게시판: 추꾸·에펨코리아·루리웹(`scripts/boards.py`, 공개 목록), 에버그린 루머(회원 전용, 제목만).
+루머 게시판: 추꾸·에펨코리아·루리웹·에버그린. 루틴은 WebFetch로 읽고, 로컬에서는 `scripts/boards.py`로 읽을 수 있다.
 
 ## 필요한 설정 (Settings → Secrets and variables → Actions)
 

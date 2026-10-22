@@ -1,7 +1,8 @@
 name: newspaper post (전주성 조간 에버그린 게시)
 
-# Claude 루틴이 새 호(newspaper/issues/N.json)를 push하면 07:00 KST에 에버그린 칼럼/분석에 올린다.
-# 루틴이 main이 아닌 브랜치에 push해도 새 호 파일을 main으로 옮긴 뒤 게시한다.
+# Claude 루틴이 새 호(newspaper/issues/N.json)를 push하면 main으로 반영한다.
+# 에버그린은 GitHub Actions 서버 IP를 막으므로(403) 게시 단계는 저장소 변수
+# POST_FROM_ACTIONS=true 일 때만 돈다. 기본은 꺼짐.
 on:
   push:
     paths:
@@ -74,13 +75,13 @@ jobs:
           for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
 
       - name: Wait until 07:00 KST
-        if: steps.w.outputs.skip != '1' && steps.w.outputs.mode == 'yes'
+        if: steps.w.outputs.skip != '1' && steps.w.outputs.mode == 'yes' && vars.POST_FROM_ACTIONS == 'true'
         run: |
           now=$(date +%s); target=$(date -d "$(date +%F) 07:00" +%s)
           if [ "$now" -lt "$target" ]; then sleep $((target - now)); fi
 
       - name: Post
-        if: steps.w.outputs.skip != '1'
+        if: steps.w.outputs.skip != '1' && (vars.POST_FROM_ACTIONS == 'true' || github.event_name == 'workflow_dispatch')
         env:
           EVERGREEN_ID: ${{ secrets.EVERGREEN_ID }}
           EVERGREEN_PW: ${{ secrets.EVERGREEN_PW }}
