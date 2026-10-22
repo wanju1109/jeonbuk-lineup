@@ -199,3 +199,8 @@ svg text{font-family:var(--f-body)}
 .table2 td:first-child{color:var(--muted);white-space:nowrap;padding-right:14px}
 .quote{font-family:var(--f-quote);font-weight:800;font-size:clamp(22px,3.2vw,30px);line-height:1.4;color:var(--green);margin:0;text-wrap:balance}
 .quote + .by{margin-top:8px}
+
+/* 에버그린 게시글 iframe용(?embed=1): 탭·지난 호 숨김, 모든 면 이어 붙임 */
+.embed .tabs,.embed .archive{display:none}
+.embed .wrap{padding-block:12px 12px}
+.embed .sheet{animation:none}

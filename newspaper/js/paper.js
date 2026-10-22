@@ -9,6 +9,9 @@
   const WD = "일월화수목금토";
 
   let ISSUE = null, LIB = {};
+  // ?embed=1: 에버그린 게시글 iframe용. 탭 없이 모든 면을 이어 붙이고, 높이를 잴 수 있게 다 그린 뒤 data-ready를 단다.
+  const EMBED = new URLSearchParams(location.search).get("embed") === "1";
+  if (EMBED) document.documentElement.classList.add("embed");
 
   /* ---------- 이미지 ---------- */
   function asset(key) {
@@ -16,7 +19,7 @@
     return (ISSUE.assets && ISSUE.assets[key]) || LIB[key] || null;
   }
   function imgTag(a, extra) {
-    return `<img src="${esc(a.src)}" alt="${esc(a.alt || "")}" loading="lazy" ${extra || ""}>`;
+    return `<img src="${esc(a.src)}" alt="${esc(a.alt || "")}" loading="${EMBED ? "eager" : "lazy"}" ${extra || ""}>`;
   }
   function credit(a, caption) {
     const parts = [caption, a && a.credit].filter(Boolean).map(esc);
@@ -283,26 +286,33 @@
     function show(i, focus) {
       cur = i;
       tabs.forEach((t, j) => { t.setAttribute("aria-selected", j === i); t.tabIndex = j === i ? 0 : -1; });
-      if (mq.matches) return;
+      if (mq.matches || EMBED) return;
       all.setAttribute("aria-pressed", "false");
       panels.forEach((p, j) => (p.hidden = j !== i));
       if (focus) tabs[i].focus();
       try { history.replaceState(null, "", location.search + "#p" + (i + 1)); } catch (e) {}
     }
-    function go(i) { show(i); if (mq.matches) panels[i].scrollIntoView({ behavior: "smooth" }); else window.scrollTo({ top: 0 }); }
+    function go(i) { show(i); if (mq.matches || EMBED) panels[i].scrollIntoView({ behavior: "smooth" }); else window.scrollTo({ top: 0 }); }
     tabs.forEach((t, i) => {
       t.addEventListener("click", () => go(i));
       t.addEventListener("keydown", (e) => { if (e.key === "ArrowRight") show((i + 1) % tabs.length, true); if (e.key === "ArrowLeft") show((i - 1 + tabs.length) % tabs.length, true); });
     });
     document.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => go(+b.dataset.go)));
     all.addEventListener("click", () => { const on = all.getAttribute("aria-pressed") !== "true"; all.setAttribute("aria-pressed", on); panels.forEach((p, j) => (p.hidden = !on && j !== cur)); });
-    function layout() { if (mq.matches) panels.forEach((p) => (p.hidden = false)); else show(cur); }
+    function layout() { if (mq.matches || EMBED) panels.forEach((p) => (p.hidden = false)); else show(cur); }
     mq.addEventListener("change", layout);
     addEventListener("hashchange", () => { const h = /^#p(\d+)$/.exec(location.hash); if (h && +h[1] <= panels.length && +h[1] - 1 !== cur) go(+h[1] - 1); });
     const m = /^#p(\d+)$/.exec(location.hash);
     if (m && +m[1] <= panels.length) cur = +m[1] - 1;
     layout();
     if (m && mq.matches) panels[cur].scrollIntoView();
+  }
+
+  function markReady() {
+    const imgs = [...document.images].filter((i) => !i.complete);
+    Promise.all(imgs.map((i) => new Promise((r) => { i.onload = i.onerror = r; })))
+      .then(() => (document.fonts ? document.fonts.ready : null))
+      .then(() => requestAnimationFrame(() => { document.documentElement.dataset.ready = "1"; }));
   }
 
   /* ---------- 불러오기 ---------- */
@@ -317,6 +327,7 @@
       if (!pick) throw new Error("발행된 호가 없습니다");
       ISSUE = await getJSON(`issues/${pick.no}.json`);
       render();
+      if (EMBED) markReady();
       $("#archive").innerHTML = "지난 호: " + list.slice(-14).reverse().map((i) => `<a href="?no=${i.no}">제${i.no}호 ${esc(i.date.slice(5).replace("-", "/"))}</a>`).join("");
     } catch (e) {
       $("#paper").innerHTML = `<p class="err">신문을 불러오지 못했습니다. (${esc(e.message)})</p>`;
