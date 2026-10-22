@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>전주성 조간 게시용</title>
+<link rel="icon" href="../c_report/assets/jeonbuk-emblem.png">
+<style>
+  :root{--paper:#e9efe6;--sheet:#fbfcf8;--ink:#111b15;--muted:#56655b;--rule:#c9d5ca;--green:#0a5a35;--lime:#c9e43b}
+  @media (prefers-color-scheme:dark){:root{--paper:#0b130e;--sheet:#121b15;--ink:#e5eee7;--muted:#98a99e;--rule:#2a392f;--green:#4ab87f;color-scheme:dark}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+  main{max-width:640px;margin:0 auto;padding:20px max(16px,env(safe-area-inset-left)) 40px max(16px,env(safe-area-inset-right))}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 18px}
+  section{background:var(--sheet);border:1px solid var(--rule);padding:14px;margin-bottom:14px}
+  label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+  textarea,input{width:100%;font:14px/1.5 ui-monospace,Consolas,monospace;border:1px solid var(--rule);background:var(--paper);color:var(--ink);padding:8px}
+  textarea{height:140px;resize:vertical}
+  button{margin-top:8px;font:inherit;font-weight:700;background:var(--green);color:#fff;border:0;padding:10px 16px;cursor:pointer;width:100%}
+  button:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+  ol{padding-left:20px;margin:0}
+  li{margin-bottom:6px}
+  a{color:var(--green)}
+  .st{color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+  <h1>에버그린 게시용</h1>
+  <p class="sub" id="who">불러오는 중…</p>
+  <p class="st" id="state"></p>
+
+  <section>
+    <label for="title">1. 제목</label>
+    <input id="title" readonly>
+    <button data-copy="title">제목 복사</button>
+  </section>
+  <section>
+    <label for="body">2. 본문 (HTML 모드에 붙여넣기)</label>
+    <textarea id="body" readonly></textarea>
+    <button data-copy="body">본문 복사</button>
+  </section>
+  <section>
+    <label>3. 올리는 순서</label>
+    <ol>
+      <li><a href="https://evergreenjb.me/index.php?mid=free&act=dispBoardWrite" target="_blank" rel="noopener">에버그린 글쓰기</a>를 연다.</li>
+      <li>말머리 <b>칼럼/분석</b>을 고른다.</li>
+      <li>제목을 붙여넣는다.</li>
+      <li>편집기를 <b>HTML 모드</b>로 바꾸고 본문을 붙여넣는다.</li>
+      <li>등록. PC가 켜지면 같은 호가 이미 있는지 확인하고, 있으면 다시 올리지 않는다.</li>
+    </ol>
+  </section>
+</main>
+<script>
+(async function () {
+  const PAGES = "https://wanju1109.github.io/jeonbuk-lineup/newspaper/";
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  try {
+    const idx = await (await fetch("issues/index.json", { cache: "no-cache" })).json();
+    const want = new URLSearchParams(location.search).get("no");
+    const list = (idx.issues || []).filter((i) => i.no > 0);
+    const pick = want ? list.find((i) => String(i.no) === want) : list[list.length - 1];
+    if (!pick) throw new Error("발행된 호가 없습니다");
+    const issue = await (await fetch(`issues/${pick.no}.json`, { cache: "no-cache" })).json();
+    const url = `${PAGES}?no=${issue.no}`;
+    // post_evergreen.py 의 body_html 과 같은 모양
+    const body =
+      `<p><b>전주성 조간 제${issue.no}호</b> · ${esc(issue.summary || "")}</p>` +
+      `<p><a href="${url}" target="_blank">휴대폰에서는 여기를 눌러 새 창으로 크게 보세요</a></p>` +
+      `<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">` +
+      `<iframe src="${url}" title="전주성 조간 제${issue.no}호" width="100%" height="1500" ` +
+      `style="width:100%;max-width:1100px;height:1500px;border:0;border-radius:12px;overflow:hidden;background:#e9efe6;display:block;" ` +
+      `loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>`;
+    document.getElementById("title").value = `[전주성 조간 제${issue.no}호] ${issue.headline}`;
+    document.getElementById("body").value = body;
+    document.getElementById("who").textContent = `제${issue.no}호 · ${issue.date}`;
+    try {
+      const posted = await (await fetch("issues/posted.json", { cache: "no-cache" })).json();
+      if (posted[issue.no]) document.getElementById("state").innerHTML = `이미 게시됨: <a href="${esc(posted[issue.no])}" target="_blank" rel="noopener">글 보기</a>`;
+    } catch (e) {}
+  } catch (e) {
+    document.getElementById("who").textContent = "불러오지 못했습니다: " + e.message;
+  }
+  document.querySelectorAll("[data-copy]").forEach((b) =>
+    b.addEventListener("click", async () => {
+      const el = document.getElementById(b.dataset.copy);
+      try { await navigator.clipboard.writeText(el.value); } catch (e) { el.select(); document.execCommand("copy"); }
+      const t = b.textContent; b.textContent = "복사했어요"; setTimeout(() => (b.textContent = t), 1500);
+    })
+  );
+})();
+</script>
+</body>
+</html>

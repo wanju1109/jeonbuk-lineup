@@ -12,17 +12,23 @@
 |---|---|---|
 | 06:05 | Claude 루틴 (claude.ai/code/routines, 구독 사용) | `EDITOR.md` 지침대로 기록 계산(`build_context.py`) → 뉴스·루머 취재 → 초고 → `finalize_issue.py` 검사 → `issues/{no}.json` push |
 | push 직후 | GitHub Actions `newspaper-post.yml` | 루틴이 다른 브랜치에 올렸으면 main으로 반영. 에버그린이 Actions 서버를 막아(403) 게시는 `POST_FROM_ACTIONS=true`일 때만 |
-| 07:00 | (게시 방식 결정 중) | `post_evergreen.py` — Pages 반영 확인 뒤 에버그린 칼럼/분석에 iframe 글 게시 |
+| 07:00 | 집 PC 작업 스케줄러 `JeonjuMorningPost` | `scripts/post_local.py` → `post_evergreen.py`. 에버그린 칼럼/분석에 iframe 글 게시. PC가 꺼져 있었으면 켜진 뒤 바로 실행 |
+| 아무 때나 | 휴대폰 | `post.html` — 게시용 제목·본문 복사 페이지. 먼저 올리면 PC는 같은 호를 다시 올리지 않는다 |
 
 편집 규칙: 경기 리포트·데이터 분석 면은 경기 다음 날에만(6~7면 특별판), 경기 프리뷰 면은 경기 당일에만. 큰 이야기가 있는 날은 특집 면.
 커뮤니티: 추꾸·에펨코리아·루리웹·에버그린의 루머 게시판, 그리고 추꾸·에펨코리아·루리웹 국내축구 전체 게시판(전북 관련 글만). 루틴은 WebFetch로 읽고, 로컬에서는 `scripts/boards.py`로 읽을 수 있다.
 
-## 필요한 설정 (Settings → Secrets and variables → Actions)
+## 왜 게시만 집 PC에서 하나
 
-| 이름 | 종류 | 내용 |
-|---|---|---|
-| `EVERGREEN_ID` / `EVERGREEN_PW` | Secret | 에버그린 계정 (루머 탭 읽기, 글쓰기) |
-| `EVERGREEN_CATEGORY` | Variable | 말머리 번호. 기본 211(칼럼/분석) |
+에버그린·추꾸·에펨코리아는 해외 데이터센터 접속(GitHub Actions, Claude 클라우드)을 403/430으로 막는다(2026-10-22 확인).
+그래서 신문 편집은 클라우드 루틴이(게시판은 WebFetch로 읽음), 게시는 한국 가정용 인터넷인 집 PC가 맡는다.
+
+## 집 PC 설정
+
+- 저장소 사본: `%LOCALAPPDATA%\JeonjuMorning\jeonbuk-lineup`
+- 에버그린 계정: 윈도우 자격 증명 관리자 (`python -m keyring set jeonju-morning EVERGREEN_ID`, `... EVERGREEN_PW`)
+- 작업 스케줄러: `JeonjuMorningPost` 매일 07:00 + 로그인 시, 놓친 작업은 켜질 때 실행
+- 기록: `%LOCALAPPDATA%\JeonjuMorning\post.log`, `posted.json`
 
 ## 수동 실행
 

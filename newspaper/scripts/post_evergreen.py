@@ -78,6 +78,14 @@ def main() -> None:
     try:
         if not eg.login():
             raise SystemExit("EVERGREEN_ID / EVERGREEN_PW Secrets가 없습니다")
+        mark = f"[전주성 조간 제{args.no}호]"
+        dup = next((p for p in eg.list_posts(cat) + eg.list_posts() if p.title.startswith(mark)), None)
+        if dup and not args.force:  # 휴대폰으로 먼저 직접 올린 경우
+            print(f"이미 게시판에 있음: {dup.url}")
+            if not args.dry_run:
+                posted[str(args.no)] = dup.url
+                posted_path.write_text(json.dumps(posted, ensure_ascii=False, indent=1), encoding="utf-8")
+            return
         result = eg.post(title, body_html(args.no, url, issue.get("summary", "")), cat, dry_run=args.dry_run)
     except EvergreenError as e:
         raise SystemExit(str(e))
