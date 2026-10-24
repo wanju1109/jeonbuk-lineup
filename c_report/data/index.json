@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T04:48:14.638334+00:00",
+  "updated_at": "2026-10-24T11:17:28.515096+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -480,6 +480,19 @@
       "label": "전북 VS 제주 (190, 10/18)",
       "attendance_home": 11187,
       "attendance_away": 282
+    },
+    {
+      "game_id": "194",
+      "year": "2026",
+      "round": 33,
+      "home": "안양",
+      "away": "전북",
+      "score": "1:1",
+      "date": "2026-10-24",
+      "venue": "안양 종합",
+      "attendance": 9126,
+      "file": "./data/194.json",
+      "label": "안양 VS 전북 (194, 10/24)"
     }
   ]
 }
