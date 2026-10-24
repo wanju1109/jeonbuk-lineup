@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:47+09:00",
+  "generated_at": "2026-10-25T04:25:26+09:00",
   "table": {
-    "rank": 6,
+    "rank": 7,
     "teams": 12,
-    "played": 32,
+    "played": 33,
     "win": 12,
     "draw": 10,
-    "loss": 10,
-    "gf": 38,
-    "ga": 34,
-    "gd": 4,
+    "loss": 11,
+    "gf": 39,
+    "ga": 37,
+    "gd": 2,
     "points": 46,
-    "ppg": 1.44,
-    "remaining": 6,
+    "ppg": 1.39,
+    "remaining": 5,
     "scheduled": 38,
-    "gap_to_leader": 20,
+    "gap_to_leader": 21,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 0,
     "gap_below": 3,
-    "above": "대전",
-    "below": "인천"
+    "above": "인천",
+    "below": "안양"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.29
     },
     "away": {
-      "played": 15,
+      "played": 16,
       "win": 7,
       "draw": 3,
-      "loss": 5,
-      "gf": 20,
-      "ga": 16,
-      "gd": 4,
+      "loss": 6,
+      "gf": 21,
+      "ga": 19,
+      "gd": 2,
       "points": 24,
-      "ppg": 1.6
+      "ppg": 1.5
     }
   },
   "form": {
@@ -88,17 +88,17 @@
       "D",
       "W",
       "L",
+      "L",
       "L"
     ],
     "last5": [
-      "W",
       "D",
       "W",
+      "L",
       "L",
       "L"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "W",
@@ -106,32 +106,33 @@
       "W",
       "D",
       "W",
+      "L",
       "L",
       "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
+      "win": 1,
       "draw": 1,
-      "loss": 2,
+      "loss": 3,
       "gf": 7,
-      "ga": 7,
-      "gd": 0,
-      "points": 7
+      "ga": 10,
+      "gd": -3,
+      "points": 4
     },
     "last10_record": {
       "played": 10,
-      "win": 4,
+      "win": 3,
       "draw": 3,
-      "loss": 3,
-      "gf": 13,
-      "ga": 10,
-      "gd": 3,
-      "points": 15
+      "loss": 4,
+      "gf": 12,
+      "ga": 13,
+      "gd": -1,
+      "points": 12
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 2,
+      "current_len": 3,
       "longest_win": 2,
       "longest_unbeaten": 9,
       "longest_winless": 5,
@@ -139,11 +140,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.19,
-    "ga_per_game": 1.06,
+    "gf_per_game": 1.18,
+    "ga_per_game": 1.12,
     "clean_sheets": 11,
     "failed_to_score": 7,
-    "both_scored": 18,
+    "both_scored": 19,
     "one_goal_games": 16,
     "biggest_win": {
       "round": 26,
@@ -391,6 +392,13 @@
         "points": 46,
         "played": 32,
         "gd": 4
+      },
+      {
+        "round": 33,
+        "rank": 7,
+        "points": 46,
+        "played": 33,
+        "gd": 2
       }
     ],
     "best_rank": 3,
@@ -407,15 +415,15 @@
       "ppg": 1.19
     },
     "second_half": {
-      "played": 16,
+      "played": 17,
       "win": 7,
       "draw": 6,
-      "loss": 3,
-      "gf": 24,
-      "ga": 17,
-      "gd": 7,
+      "loss": 4,
+      "gf": 25,
+      "ga": 20,
+      "gd": 5,
       "points": 27,
-      "ppg": 1.69
+      "ppg": 1.59
     }
   },
   "fixtures": [
@@ -738,6 +746,16 @@
       "gf": 2,
       "ga": 3,
       "result": "L"
+    },
+    {
+      "round": 33,
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent_id": "K18",
+      "opponent": "인천 유나이티드",
+      "gf": 1,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -868,18 +886,18 @@
         "points": 3
       }
     ],
-    "goal_share": 0.211
+    "goal_share": 0.205
   },
   "attendance": {
     "avg": 5177,
     "total": 88010,
     "games": 17,
     "home_fans_avg": 4626,
-    "away_fans_avg": 309
+    "away_fans_avg": 324
   },
   "context": {
-    "band": "파이널A 경쟁",
-    "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
+    "band": "파이널A 추격",
+    "detail": "6위와 0점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "실리 축구",
       "한 골 승부사"

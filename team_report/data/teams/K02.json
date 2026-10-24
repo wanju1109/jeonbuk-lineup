@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:48+09:00",
+  "generated_at": "2026-10-25T04:25:26+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
@@ -361,6 +361,13 @@
       },
       {
         "round": 29,
+        "rank": 1,
+        "points": 59,
+        "played": 27,
+        "gd": 23
+      },
+      {
+        "round": 30,
         "rank": 1,
         "points": 59,
         "played": 27,

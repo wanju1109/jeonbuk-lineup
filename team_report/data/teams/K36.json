@@ -8,20 +8,20 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:48+09:00",
+  "generated_at": "2026-10-25T04:25:27+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
-    "played": 27,
+    "played": 28,
     "win": 9,
     "draw": 11,
-    "loss": 7,
-    "gf": 35,
-    "ga": 32,
-    "gd": 3,
+    "loss": 8,
+    "gf": 36,
+    "ga": 34,
+    "gd": 2,
     "points": 38,
-    "ppg": 1.41,
-    "remaining": 5,
+    "ppg": 1.36,
+    "remaining": 4,
     "scheduled": 32,
     "gap_to_leader": 21,
     "gap_to_cut": 6,
@@ -33,15 +33,15 @@
   },
   "splits": {
     "home": {
-      "played": 12,
+      "played": 13,
       "win": 3,
       "draw": 5,
-      "loss": 4,
-      "gf": 16,
-      "ga": 16,
-      "gd": 0,
+      "loss": 5,
+      "gf": 17,
+      "ga": 18,
+      "gd": -1,
       "points": 14,
-      "ppg": 1.17
+      "ppg": 1.08
     },
     "away": {
       "played": 15,
@@ -83,18 +83,18 @@
       "D",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "L",
       "D",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
       "D",
-      "D",
       "W",
       "D",
       "L",
@@ -102,7 +102,8 @@
       "D",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
@@ -117,15 +118,15 @@
     "last10_record": {
       "played": 10,
       "win": 3,
-      "draw": 4,
-      "loss": 3,
+      "draw": 3,
+      "loss": 4,
       "gf": 15,
-      "ga": 13,
-      "gd": 2,
-      "points": 13
+      "ga": 14,
+      "gd": 1,
+      "points": 12
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 5,
@@ -134,12 +135,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.3,
-    "ga_per_game": 1.19,
+    "gf_per_game": 1.29,
+    "ga_per_game": 1.21,
     "clean_sheets": 7,
     "failed_to_score": 5,
-    "both_scored": 16,
-    "one_goal_games": 10,
+    "both_scored": 17,
+    "one_goal_games": 11,
     "biggest_win": {
       "round": 29,
       "date": "2026-10-17",
@@ -358,6 +359,13 @@
         "points": 38,
         "played": 27,
         "gd": 3
+      },
+      {
+        "round": 30,
+        "rank": 7,
+        "points": 38,
+        "played": 28,
+        "gd": 2
       }
     ],
     "best_rank": 5,
@@ -374,15 +382,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 11,
+      "played": 12,
       "win": 3,
       "draw": 5,
-      "loss": 3,
-      "gf": 16,
-      "ga": 14,
-      "gd": 2,
+      "loss": 4,
+      "gf": 17,
+      "ga": 16,
+      "gd": 1,
       "points": 14,
-      "ppg": 1.27
+      "ppg": 1.17
     }
   },
   "fixtures": [
@@ -655,6 +663,16 @@
       "gf": 4,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 30,
+      "date": "2026-10-24",
+      "venue": "H",
+      "opponent_id": "K41",
+      "opponent": "김해 FC",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -785,14 +803,15 @@
         "points": 2
       }
     ],
-    "goal_share": 0.143
+    "goal_share": 0.139
   },
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 6점 차. 남은 5경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 6점 차. 남은 4경기면 아직 늦지 않았습니다.",
     "tags": [
       "실리 축구",
+      "원정에 강한 팀",
       "무승부 체질"
     ]
   },

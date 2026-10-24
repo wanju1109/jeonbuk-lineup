@@ -8,25 +8,25 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k41-sm.png",
   "home_url": "https://gimhaefc2008.com",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:49+09:00",
+  "generated_at": "2026-10-25T04:25:28+09:00",
   "table": {
     "rank": 17,
     "teams": 17,
-    "played": 27,
-    "win": 2,
+    "played": 28,
+    "win": 3,
     "draw": 8,
     "loss": 17,
-    "gf": 22,
-    "ga": 56,
-    "gd": -34,
-    "points": 14,
-    "ppg": 0.52,
-    "remaining": 5,
+    "gf": 24,
+    "ga": 57,
+    "gd": -33,
+    "points": 17,
+    "ppg": 0.61,
+    "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 45,
-    "gap_to_cut": 30,
+    "gap_to_leader": 42,
+    "gap_to_cut": 27,
     "cut_rank": 6,
-    "gap_above": 10,
+    "gap_above": 7,
     "gap_below": null,
     "above": "전남",
     "below": ""
@@ -44,15 +44,15 @@
       "ppg": 0.31
     },
     "away": {
-      "played": 14,
-      "win": 2,
+      "played": 15,
+      "win": 3,
       "draw": 4,
       "loss": 8,
-      "gf": 12,
-      "ga": 27,
-      "gd": -15,
-      "points": 10,
-      "ppg": 0.71
+      "gf": 14,
+      "ga": 28,
+      "gd": -14,
+      "points": 13,
+      "ppg": 0.87
     }
   },
   "form": {
@@ -83,17 +83,17 @@
       "L",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
-      "D",
       "L",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
-      "D",
       "L",
       "D",
       "L",
@@ -102,30 +102,31 @@
       "L",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 0,
-      "draw": 2,
+      "win": 1,
+      "draw": 1,
       "loss": 3,
       "gf": 5,
-      "ga": 13,
-      "gd": -8,
-      "points": 2
+      "ga": 12,
+      "gd": -7,
+      "points": 4
     },
     "last10_record": {
       "played": 10,
-      "win": 0,
-      "draw": 4,
+      "win": 1,
+      "draw": 3,
       "loss": 6,
       "gf": 8,
-      "ga": 22,
-      "gd": -14,
-      "points": 4
+      "ga": 21,
+      "gd": -13,
+      "points": 6
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 3,
@@ -134,20 +135,20 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.81,
-    "ga_per_game": 2.07,
+    "gf_per_game": 0.86,
+    "ga_per_game": 2.04,
     "clean_sheets": 2,
     "failed_to_score": 8,
-    "both_scored": 17,
-    "one_goal_games": 7,
+    "both_scored": 18,
+    "one_goal_games": 8,
     "biggest_win": {
-      "round": 17,
-      "date": "2026-07-10",
+      "round": 30,
+      "date": "2026-10-24",
       "venue": "A",
-      "opponent_id": "K38",
-      "opponent": "천안 시티",
-      "gf": 1,
-      "ga": 0,
+      "opponent_id": "K36",
+      "opponent": "김포 FC",
+      "gf": 2,
+      "ga": 1,
       "result": "W"
     },
     "biggest_loss": {
@@ -165,7 +166,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 14,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -365,9 +366,16 @@
         "points": 14,
         "played": 27,
         "gd": -34
+      },
+      {
+        "round": 30,
+        "rank": 17,
+        "points": 17,
+        "played": 28,
+        "gd": -33
       }
     ],
-    "best_rank": 14,
+    "best_rank": 13,
     "worst_rank": 17,
     "first_half": {
       "played": 16,
@@ -381,15 +389,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 11,
-      "win": 0,
+      "played": 12,
+      "win": 1,
       "draw": 5,
       "loss": 6,
-      "gf": 9,
-      "ga": 23,
-      "gd": -14,
-      "points": 5,
-      "ppg": 0.45
+      "gf": 11,
+      "ga": 24,
+      "gd": -13,
+      "points": 8,
+      "ppg": 0.67
     }
   },
   "fixtures": [
@@ -662,6 +670,16 @@
       "gf": 2,
       "ga": 6,
       "result": "L"
+    },
+    {
+      "round": 30,
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent_id": "K36",
+      "opponent": "김포 FC",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -792,7 +810,7 @@
         "points": 1
       }
     ],
-    "goal_share": 0.227
+    "goal_share": 0.208
   },
   "attendance": null,
   "context": {
@@ -800,7 +818,8 @@
     "detail": "순위표 바닥. 내년을 위한 재건이 먼저 보이는 자리입니다.",
     "tags": [
       "득점 빈곤",
-      "수비 불안"
+      "수비 불안",
+      "원정에 강한 팀"
     ]
   },
   "profile": {

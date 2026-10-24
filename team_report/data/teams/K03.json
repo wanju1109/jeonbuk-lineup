@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:47+09:00",
+  "generated_at": "2026-10-25T04:25:26+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
-    "played": 32,
+    "played": 33,
     "win": 11,
-    "draw": 8,
+    "draw": 9,
     "loss": 13,
-    "gf": 28,
-    "ga": 37,
+    "gf": 30,
+    "ga": 39,
     "gd": -9,
-    "points": 41,
-    "ppg": 1.28,
-    "remaining": 6,
+    "points": 42,
+    "ppg": 1.27,
+    "remaining": 5,
     "scheduled": 38,
     "gap_to_leader": 25,
-    "gap_to_cut": 5,
+    "gap_to_cut": 4,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 7,
+    "gap_below": 8,
     "above": "안양",
     "below": "김천"
   },
@@ -44,15 +44,15 @@
       "ppg": 1.14
     },
     "away": {
-      "played": 18,
+      "played": 19,
       "win": 7,
-      "draw": 4,
+      "draw": 5,
       "loss": 7,
-      "gf": 22,
-      "ga": 26,
+      "gf": 24,
+      "ga": 28,
       "gd": -4,
-      "points": 25,
-      "ppg": 1.39
+      "points": 26,
+      "ppg": 1.37
     }
   },
   "form": {
@@ -88,17 +88,17 @@
       "D",
       "W",
       "L",
+      "D",
       "D"
     ],
     "last5": [
       "D",
-      "D",
       "W",
       "L",
+      "D",
       "D"
     ],
     "last10": [
-      "W",
       "L",
       "W",
       "D",
@@ -107,6 +107,7 @@
       "D",
       "W",
       "L",
+      "D",
       "D"
     ],
     "last5_record": {
@@ -114,24 +115,24 @@
       "win": 1,
       "draw": 3,
       "loss": 1,
-      "gf": 4,
-      "ga": 6,
+      "gf": 6,
+      "ga": 8,
       "gd": -2,
       "points": 6
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
-      "draw": 4,
+      "win": 2,
+      "draw": 5,
       "loss": 3,
       "gf": 8,
-      "ga": 13,
-      "gd": -5,
-      "points": 13
+      "ga": 14,
+      "gd": -6,
+      "points": 11
     },
     "streaks": {
       "current_type": "D",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 2,
       "longest_unbeaten": 4,
       "longest_winless": 5,
@@ -139,11 +140,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.88,
-    "ga_per_game": 1.16,
+    "gf_per_game": 0.91,
+    "ga_per_game": 1.18,
     "clean_sheets": 11,
     "failed_to_score": 14,
-    "both_scored": 11,
+    "both_scored": 12,
     "one_goal_games": 14,
     "biggest_win": {
       "round": 17,
@@ -170,7 +171,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 6,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -184,7 +185,7 @@
       },
       {
         "round": 3,
-        "rank": 5,
+        "rank": 4,
         "points": 5,
         "played": 3,
         "gd": 1
@@ -391,6 +392,13 @@
         "points": 41,
         "played": 32,
         "gd": -9
+      },
+      {
+        "round": 33,
+        "rank": 9,
+        "points": 42,
+        "played": 33,
+        "gd": -9
       }
     ],
     "best_rank": 4,
@@ -407,14 +415,14 @@
       "ppg": 1.56
     },
     "second_half": {
-      "played": 16,
+      "played": 17,
       "win": 4,
-      "draw": 4,
+      "draw": 5,
       "loss": 8,
-      "gf": 13,
-      "ga": 23,
+      "gf": 15,
+      "ga": 25,
       "gd": -10,
-      "points": 16,
+      "points": 17,
       "ppg": 1.0
     }
   },
@@ -738,6 +746,16 @@
       "gf": 0,
       "ga": 0,
       "result": "D"
+    },
+    {
+      "round": 33,
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent_id": "K01",
+      "opponent": "울산 HD",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -868,18 +886,18 @@
         "points": 2
       }
     ],
-    "goal_share": 0.143
+    "goal_share": 0.133
   },
   "attendance": {
     "avg": 7417,
     "total": 103841,
     "games": 14,
     "home_fans_avg": 6837,
-    "away_fans_avg": 974
+    "away_fans_avg": 990
   },
   "context": {
     "band": "파이널A 추격",
-    "detail": "6위와 5점 차. 상위 스플릿이 아직 사정권입니다.",
+    "detail": "6위와 4점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "득점 빈곤",
       "침묵하는 공격"

@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:47+09:00",
+  "generated_at": "2026-10-25T04:25:25+09:00",
   "table": {
-    "rank": 5,
+    "rank": 3,
     "teams": 12,
-    "played": 32,
-    "win": 12,
+    "played": 33,
+    "win": 13,
     "draw": 10,
     "loss": 10,
-    "gf": 51,
-    "ga": 40,
-    "gd": 11,
-    "points": 46,
-    "ppg": 1.44,
-    "remaining": 6,
+    "gf": 53,
+    "ga": 41,
+    "gd": 12,
+    "points": 49,
+    "ppg": 1.48,
+    "remaining": 5,
     "scheduled": 38,
-    "gap_to_leader": 20,
+    "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 0,
-    "above": "강원",
-    "below": "제주"
+    "gap_above": 2,
+    "gap_below": 1,
+    "above": "울산",
+    "below": "전북"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.41
     },
     "away": {
-      "played": 15,
-      "win": 6,
+      "played": 16,
+      "win": 7,
       "draw": 4,
       "loss": 5,
-      "gf": 27,
-      "ga": 18,
-      "gd": 9,
-      "points": 22,
-      "ppg": 1.47
+      "gf": 29,
+      "ga": 19,
+      "gd": 10,
+      "points": 25,
+      "ppg": 1.56
     }
   },
   "form": {
@@ -88,17 +88,17 @@
       "D",
       "D",
       "W",
+      "W",
       "W"
     ],
     "last5": [
+      "D",
+      "D",
       "W",
-      "D",
-      "D",
       "W",
       "W"
     ],
     "last10": [
-      "L",
       "W",
       "W",
       "L",
@@ -106,6 +106,7 @@
       "W",
       "D",
       "D",
+      "W",
       "W",
       "W"
     ],
@@ -114,37 +115,37 @@
       "win": 3,
       "draw": 2,
       "loss": 0,
-      "gf": 11,
-      "ga": 8,
+      "gf": 10,
+      "ga": 7,
       "gd": 3,
       "points": 11
     },
     "last10_record": {
       "played": 10,
-      "win": 6,
+      "win": 7,
       "draw": 2,
-      "loss": 2,
+      "loss": 1,
       "gf": 24,
-      "ga": 16,
-      "gd": 8,
-      "points": 20
+      "ga": 13,
+      "gd": 11,
+      "points": 23
     },
     "streaks": {
       "current_type": "W",
-      "current_len": 2,
-      "longest_win": 2,
-      "longest_unbeaten": 6,
+      "current_len": 3,
+      "longest_win": 3,
+      "longest_unbeaten": 7,
       "longest_winless": 9,
       "longest_loss": 3
     }
   },
   "scoring": {
-    "gf_per_game": 1.59,
-    "ga_per_game": 1.25,
+    "gf_per_game": 1.61,
+    "ga_per_game": 1.24,
     "clean_sheets": 8,
     "failed_to_score": 9,
-    "both_scored": 18,
-    "one_goal_games": 11,
+    "both_scored": 19,
+    "one_goal_games": 12,
     "biggest_win": {
       "round": 27,
       "date": "2026-09-05",
@@ -170,21 +171,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 4,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 7,
+        "rank": 8,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 7,
+        "rank": 8,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -205,7 +206,7 @@
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -391,6 +392,13 @@
         "points": 46,
         "played": 32,
         "gd": 11
+      },
+      {
+        "round": 33,
+        "rank": 3,
+        "points": 49,
+        "played": 33,
+        "gd": 12
       }
     ],
     "best_rank": 3,
@@ -407,15 +415,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 16,
-      "win": 8,
+      "played": 17,
+      "win": 9,
       "draw": 5,
       "loss": 3,
-      "gf": 32,
-      "ga": 22,
-      "gd": 10,
-      "points": 29,
-      "ppg": 1.81
+      "gf": 34,
+      "ga": 23,
+      "gd": 11,
+      "points": 32,
+      "ppg": 1.88
     }
   },
   "fixtures": [
@@ -738,6 +746,16 @@
       "gf": 3,
       "ga": 2,
       "result": "W"
+    },
+    {
+      "round": 33,
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent_id": "K35",
+      "opponent": "김천 상무",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -868,7 +886,7 @@
         "points": 4
       }
     ],
-    "goal_share": 0.157
+    "goal_share": 0.151
   },
   "attendance": {
     "avg": 8001,
@@ -878,8 +896,8 @@
     "away_fans_avg": 815
   },
   "context": {
-    "band": "파이널A 경쟁",
-    "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
+    "band": "ACL 진출권",
+    "detail": "아시아 무대 티켓이 걸린 자리. 지키는 쪽이 된 순간 부담도 함께 옵니다.",
     "tags": [
       "리그 최상급 화력"
     ]

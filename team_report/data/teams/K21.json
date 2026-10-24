@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:47+09:00",
+  "generated_at": "2026-10-25T04:25:25+09:00",
   "table": {
-    "rank": 4,
+    "rank": 5,
     "teams": 12,
-    "played": 32,
+    "played": 33,
     "win": 11,
-    "draw": 14,
+    "draw": 15,
     "loss": 7,
-    "gf": 39,
-    "ga": 29,
+    "gf": 40,
+    "ga": 30,
     "gd": 10,
-    "points": 47,
-    "ppg": 1.47,
-    "remaining": 6,
+    "points": 48,
+    "ppg": 1.45,
+    "remaining": 5,
     "scheduled": 38,
     "gap_to_leader": 19,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 0,
-    "gap_below": 1,
+    "gap_below": 2,
     "above": "전북",
-    "below": "대전"
+    "below": "인천"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.41
     },
     "away": {
-      "played": 15,
+      "played": 16,
       "win": 6,
-      "draw": 5,
+      "draw": 6,
       "loss": 4,
-      "gf": 19,
-      "ga": 15,
+      "gf": 20,
+      "ga": 16,
       "gd": 4,
-      "points": 23,
-      "ppg": 1.53
+      "points": 24,
+      "ppg": 1.5
     }
   },
   "form": {
@@ -88,17 +88,17 @@
       "L",
       "D",
       "W",
+      "D",
       "D"
     ],
     "last5": [
-      "D",
       "L",
       "D",
       "W",
+      "D",
       "D"
     ],
     "last10": [
-      "L",
       "D",
       "D",
       "W",
@@ -107,6 +107,7 @@
       "L",
       "D",
       "W",
+      "D",
       "D"
     ],
     "last5_record": {
@@ -114,24 +115,24 @@
       "win": 1,
       "draw": 3,
       "loss": 1,
-      "gf": 5,
-      "ga": 4,
+      "gf": 4,
+      "ga": 3,
       "gd": 1,
       "points": 6
     },
     "last10_record": {
       "played": 10,
       "win": 2,
-      "draw": 6,
-      "loss": 2,
-      "gf": 11,
-      "ga": 10,
-      "gd": 1,
-      "points": 12
+      "draw": 7,
+      "loss": 1,
+      "gf": 12,
+      "ga": 8,
+      "gd": 4,
+      "points": 13
     },
     "streaks": {
       "current_type": "D",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 3,
       "longest_unbeaten": 9,
       "longest_winless": 5,
@@ -139,11 +140,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.22,
+    "gf_per_game": 1.21,
     "ga_per_game": 0.91,
     "clean_sheets": 14,
     "failed_to_score": 9,
-    "both_scored": 14,
+    "both_scored": 15,
     "one_goal_games": 7,
     "biggest_win": {
       "round": 27,
@@ -205,7 +206,7 @@
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -391,6 +392,13 @@
         "points": 47,
         "played": 32,
         "gd": 10
+      },
+      {
+        "round": 33,
+        "rank": 5,
+        "points": 48,
+        "played": 33,
+        "gd": 10
       }
     ],
     "best_rank": 2,
@@ -407,15 +415,15 @@
       "ppg": 1.69
     },
     "second_half": {
-      "played": 16,
+      "played": 17,
       "win": 4,
-      "draw": 8,
+      "draw": 9,
       "loss": 4,
-      "gf": 18,
-      "ga": 18,
+      "gf": 19,
+      "ga": 19,
       "gd": 0,
-      "points": 20,
-      "ppg": 1.25
+      "points": 21,
+      "ppg": 1.24
     }
   },
   "fixtures": [
@@ -738,6 +746,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 33,
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent_id": "K09",
+      "opponent": "FC 서울",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -868,7 +886,7 @@
         "points": 2
       }
     ],
-    "goal_share": 0.256
+    "goal_share": 0.25
   },
   "attendance": {
     "avg": 6028,

@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:47+09:00",
+  "generated_at": "2026-10-25T04:25:26+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
-    "played": 32,
+    "played": 33,
     "win": 7,
     "draw": 11,
-    "loss": 14,
+    "loss": 15,
     "gf": 32,
-    "ga": 44,
-    "gd": -12,
+    "ga": 47,
+    "gd": -15,
     "points": 32,
-    "ppg": 1.0,
-    "remaining": 6,
+    "ppg": 0.97,
+    "remaining": 5,
     "scheduled": 38,
-    "gap_to_leader": 34,
+    "gap_to_leader": 35,
     "gap_to_cut": 14,
     "cut_rank": 6,
     "gap_above": 2,
-    "gap_below": 14,
+    "gap_below": 11,
     "above": "김천",
     "below": "광주"
   },
   "splits": {
     "home": {
-      "played": 17,
+      "played": 18,
       "win": 3,
       "draw": 7,
-      "loss": 7,
+      "loss": 8,
       "gf": 18,
-      "ga": 26,
-      "gd": -8,
+      "ga": 29,
+      "gd": -11,
       "points": 16,
-      "ppg": 0.94
+      "ppg": 0.89
     },
     "away": {
       "played": 15,
@@ -88,23 +88,24 @@
       "D",
       "L",
       "L",
+      "L",
       "L"
     ],
     "last5": [
-      "L",
       "D",
+      "L",
       "L",
       "L",
       "L"
     ],
     "last10": [
       "W",
-      "W",
       "L",
       "D",
       "L",
       "L",
       "D",
+      "L",
       "L",
       "L",
       "L"
@@ -114,35 +115,35 @@
       "win": 0,
       "draw": 1,
       "loss": 4,
-      "gf": 4,
-      "ga": 10,
-      "gd": -6,
+      "gf": 3,
+      "ga": 11,
+      "gd": -8,
       "points": 1
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
+      "win": 1,
       "draw": 2,
-      "loss": 6,
-      "gf": 11,
-      "ga": 19,
-      "gd": -8,
-      "points": 8
+      "loss": 7,
+      "gf": 8,
+      "ga": 20,
+      "gd": -12,
+      "points": 5
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 3,
+      "current_len": 4,
       "longest_win": 2,
       "longest_unbeaten": 5,
-      "longest_winless": 8,
-      "longest_loss": 3
+      "longest_winless": 9,
+      "longest_loss": 4
     }
   },
   "scoring": {
-    "gf_per_game": 1.0,
-    "ga_per_game": 1.38,
+    "gf_per_game": 0.97,
+    "ga_per_game": 1.42,
     "clean_sheets": 9,
-    "failed_to_score": 13,
+    "failed_to_score": 14,
     "both_scored": 14,
     "one_goal_games": 12,
     "biggest_win": {
@@ -191,7 +192,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 6,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -391,6 +392,13 @@
         "points": 32,
         "played": 32,
         "gd": -12
+      },
+      {
+        "round": 33,
+        "rank": 11,
+        "points": 32,
+        "played": 33,
+        "gd": -15
       }
     ],
     "best_rank": 2,
@@ -407,15 +415,15 @@
       "ppg": 1.12
     },
     "second_half": {
-      "played": 16,
+      "played": 17,
       "win": 3,
       "draw": 5,
-      "loss": 8,
+      "loss": 9,
       "gf": 19,
-      "ga": 27,
-      "gd": -8,
+      "ga": 30,
+      "gd": -11,
       "points": 14,
-      "ppg": 0.88
+      "ppg": 0.82
     }
   },
   "fixtures": [
@@ -738,6 +746,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 33,
+      "date": "2026-10-24",
+      "venue": "H",
+      "opponent_id": "K22",
+      "opponent": "광주 FC",
+      "gf": 0,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -871,10 +889,10 @@
     "goal_share": 0.312
   },
   "attendance": {
-    "avg": 6592,
-    "total": 112064,
-    "games": 17,
-    "home_fans_avg": 5515,
+    "avg": 6563,
+    "total": 118140,
+    "games": 18,
+    "home_fans_avg": 5546,
     "away_fans_avg": 575
   },
   "context": {

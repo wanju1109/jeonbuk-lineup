@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:48+09:00",
+  "generated_at": "2026-10-25T04:25:26+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
-    "played": 27,
-    "win": 14,
+    "played": 28,
+    "win": 15,
     "draw": 7,
     "loss": 6,
-    "gf": 51,
-    "ga": 36,
-    "gd": 15,
-    "points": 49,
-    "ppg": 1.81,
-    "remaining": 5,
+    "gf": 55,
+    "ga": 38,
+    "gd": 17,
+    "points": 52,
+    "ppg": 1.86,
+    "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 10,
+    "gap_to_leader": 7,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 5,
-    "gap_below": 4,
+    "gap_above": 2,
+    "gap_below": 7,
     "above": "서울E",
     "below": "부산"
   },
@@ -44,15 +44,15 @@
       "ppg": 2.07
     },
     "away": {
-      "played": 13,
-      "win": 5,
+      "played": 14,
+      "win": 6,
       "draw": 5,
       "loss": 3,
-      "gf": 22,
-      "ga": 19,
-      "gd": 3,
-      "points": 20,
-      "ppg": 1.54
+      "gf": 26,
+      "ga": 21,
+      "gd": 5,
+      "points": 23,
+      "ppg": 1.64
     }
   },
   "form": {
@@ -83,18 +83,18 @@
       "D",
       "W",
       "L",
+      "W",
       "W"
     ],
     "last5": [
-      "W",
       "D",
       "W",
       "L",
+      "W",
       "W"
     ],
     "last10": [
       "L",
-      "L",
       "W",
       "W",
       "D",
@@ -102,6 +102,7 @@
       "D",
       "W",
       "L",
+      "W",
       "W"
     ],
     "last5_record": {
@@ -109,24 +110,24 @@
       "win": 3,
       "draw": 1,
       "loss": 1,
-      "gf": 9,
-      "ga": 5,
-      "gd": 4,
+      "gf": 11,
+      "ga": 6,
+      "gd": 5,
       "points": 10
     },
     "last10_record": {
       "played": 10,
-      "win": 5,
+      "win": 6,
       "draw": 2,
-      "loss": 3,
-      "gf": 15,
+      "loss": 2,
+      "gf": 18,
       "ga": 13,
-      "gd": 2,
-      "points": 17
+      "gd": 5,
+      "points": 20
     },
     "streaks": {
       "current_type": "W",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 3,
       "longest_unbeaten": 9,
       "longest_winless": 5,
@@ -134,11 +135,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.89,
-    "ga_per_game": 1.33,
+    "gf_per_game": 1.96,
+    "ga_per_game": 1.36,
     "clean_sheets": 8,
     "failed_to_score": 2,
-    "both_scored": 19,
+    "both_scored": 20,
     "one_goal_games": 9,
     "biggest_win": {
       "round": 16,
@@ -365,6 +366,13 @@
         "points": 49,
         "played": 27,
         "gd": 15
+      },
+      {
+        "round": 30,
+        "rank": 4,
+        "points": 52,
+        "played": 28,
+        "gd": 17
       }
     ],
     "best_rank": 2,
@@ -381,15 +389,15 @@
       "ppg": 1.94
     },
     "second_half": {
-      "played": 11,
-      "win": 5,
+      "played": 12,
+      "win": 6,
       "draw": 3,
       "loss": 3,
-      "gf": 16,
-      "ga": 14,
-      "gd": 2,
-      "points": 18,
-      "ppg": 1.64
+      "gf": 20,
+      "ga": 16,
+      "gd": 4,
+      "points": 21,
+      "ppg": 1.75
     }
   },
   "fixtures": [
@@ -662,6 +670,16 @@
       "gf": 3,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 30,
+      "date": "2026-10-24",
+      "venue": "A",
+      "opponent_id": "K07",
+      "opponent": "전남 드래곤즈",
+      "gf": 4,
+      "ga": 2,
+      "result": "W"
     }
   ],
   "squad": {
@@ -792,12 +810,12 @@
         "points": 3
       }
     ],
-    "goal_share": 0.176
+    "goal_share": 0.164
   },
   "attendance": null,
   "context": {
-    "band": "승격 플레이오프권",
-    "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
+    "band": "자동 승격 도전",
+    "detail": "2위와 2점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "리그 최상급 화력"
     ]

@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:46+09:00",
+  "generated_at": "2026-10-25T04:25:25+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
-    "played": 32,
+    "played": 33,
     "win": 15,
-    "draw": 5,
+    "draw": 6,
     "loss": 12,
-    "gf": 50,
-    "ga": 45,
+    "gf": 52,
+    "ga": 47,
     "gd": 5,
-    "points": 50,
-    "ppg": 1.56,
-    "remaining": 6,
+    "points": 51,
+    "ppg": 1.55,
+    "remaining": 5,
     "scheduled": 38,
     "gap_to_leader": 16,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 16,
-    "gap_below": 3,
+    "gap_below": 2,
     "above": "서울",
-    "below": "전북"
+    "below": "대전"
   },
   "splits": {
     "home": {
-      "played": 16,
+      "played": 17,
       "win": 9,
-      "draw": 1,
+      "draw": 2,
       "loss": 6,
-      "gf": 28,
-      "ga": 24,
+      "gf": 30,
+      "ga": 26,
       "gd": 4,
-      "points": 28,
-      "ppg": 1.75
+      "points": 29,
+      "ppg": 1.71
     },
     "away": {
       "played": 16,
@@ -88,17 +88,17 @@
       "W",
       "L",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
       "W",
+      "L",
+      "L",
       "W",
-      "L",
-      "L",
-      "W"
+      "D"
     ],
     "last10": [
-      "L",
       "L",
       "L",
       "W",
@@ -107,30 +107,31 @@
       "W",
       "L",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
-      "draw": 0,
+      "win": 2,
+      "draw": 1,
       "loss": 2,
-      "gf": 9,
-      "ga": 8,
-      "gd": 1,
-      "points": 9
+      "gf": 10,
+      "ga": 10,
+      "gd": 0,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
       "win": 4,
-      "draw": 1,
-      "loss": 5,
+      "draw": 2,
+      "loss": 4,
       "gf": 15,
-      "ga": 15,
-      "gd": 0,
-      "points": 13
+      "ga": 14,
+      "gd": 1,
+      "points": 14
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 4,
@@ -139,11 +140,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.56,
-    "ga_per_game": 1.41,
+    "gf_per_game": 1.58,
+    "ga_per_game": 1.42,
     "clean_sheets": 6,
     "failed_to_score": 6,
-    "both_scored": 22,
+    "both_scored": 23,
     "one_goal_games": 15,
     "biggest_win": {
       "round": 8,
@@ -391,6 +392,13 @@
         "points": 50,
         "played": 32,
         "gd": 5
+      },
+      {
+        "round": 33,
+        "rank": 2,
+        "points": 51,
+        "played": 33,
+        "gd": 5
       }
     ],
     "best_rank": 1,
@@ -407,15 +415,15 @@
       "ppg": 1.69
     },
     "second_half": {
-      "played": 16,
+      "played": 17,
       "win": 7,
-      "draw": 2,
+      "draw": 3,
       "loss": 7,
-      "gf": 27,
-      "ga": 24,
+      "gf": 29,
+      "ga": 26,
       "gd": 3,
-      "points": 23,
-      "ppg": 1.44
+      "points": 24,
+      "ppg": 1.41
     }
   },
   "fixtures": [
@@ -738,6 +746,16 @@
       "gf": 2,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 33,
+      "date": "2026-10-24",
+      "venue": "H",
+      "opponent_id": "K03",
+      "opponent": "포항 스틸러스",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -868,13 +886,13 @@
         "points": 2
       }
     ],
-    "goal_share": 0.32
+    "goal_share": 0.308
   },
   "attendance": {
-    "avg": 11527,
-    "total": 184430,
-    "games": 16,
-    "home_fans_avg": 10819,
+    "avg": 11745,
+    "total": 199658,
+    "games": 17,
+    "home_fans_avg": 11004,
     "away_fans_avg": 1392
   },
   "context": {

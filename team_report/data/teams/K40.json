@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-10-24T05:20:49+09:00",
+  "generated_at": "2026-10-25T04:25:27+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
@@ -179,7 +179,7 @@
       },
       {
         "round": 3,
-        "rank": 10,
+        "rank": 11,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -361,6 +361,13 @@
       },
       {
         "round": 29,
+        "rank": 12,
+        "points": 30,
+        "played": 27,
+        "gd": -7
+      },
+      {
+        "round": 30,
         "rank": 12,
         "points": 30,
         "played": 27,
@@ -800,6 +807,7 @@
     "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
       "득점 빈곤",
+      "실리 축구",
       "침묵하는 공격",
       "한 골 승부사"
     ]
