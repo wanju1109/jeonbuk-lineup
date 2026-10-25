@@ -13,6 +13,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -95,7 +96,8 @@ def last_match(today: dt.date) -> dict | None:
     g = load(f"c_report/data/{meta_i['game_id']}.json")
     meta = g["meta"]
     out["score"] = [meta["score"]["home"], meta["score"]["away"]]  # 공식 스코어 우선
-    out["weather"] = meta.get("weather")
+    # 포털이 기온을 비워 두면 "비 0℃"처럼 0℃가 붙어 온다. 그 0℃는 떼어 낸다.
+    out["weather"] = re.sub(r"\s*0(\.0)?\s*℃$", "", meta.get("weather") or "") or None
     out["referee"] = meta.get("referee")
     out["managers"] = {"home": meta["home"].get("manager"), "away": meta["away"].get("manager")}
     names, lineup = {}, {"home": [], "away": []}
@@ -105,6 +107,11 @@ def last_match(today: dt.date) -> dict | None:
             lineup[side].append({k: p.get(k) for k in ("player_id", "name", "back_no", "position", "starter", "minutes", "in_label", "out_label", "yellow", "red", "captain")})
     out["lineup"] = lineup
 
+    # 팀 단위 기록(선수 ID 0)에는 HA_CODE가 없고 TEAM_ID만 있다 → 팀 ID로 홈/원정을 채운다
+    home_id = meta["home"].get("team_id")
+    for e in g["events"]:
+        if "HA_CODE" not in e:
+            e["HA_CODE"] = "H" if e.get("TEAM_ID") == home_id else "A"
     ev = sorted(g["events"], key=lambda e: (e["PERIOD_ID"], e["MIN_TIME"], e["SEC_TIME"]))
     shots, goals = [], []
     for e in ev:
@@ -256,7 +263,7 @@ def period_summary(played: list[dict], start: str, end: str) -> dict:
             names = {p["player_id"]: p["name"] for s in ("home", "away") for p in g["lineup"][s]}
             side = "H" if jb_home else "A"
             for e in g["events"]:
-                if e["TYPE_CD"] == "ST" and e["TYPE_DETAIL_CD"] == "GL" and e["HA_CODE"] == side and e.get("OWN_GOAL_CODE") != "Y":
+                if e["TYPE_CD"] == "ST" and e["TYPE_DETAIL_CD"] == "GL" and e.get("HA_CODE") == side and e.get("OWN_GOAL_CODE") != "Y":
                     scorers[names.get(e["PLAYER_ID"], "?")] += 1
     except FileNotFoundError:
         pass
@@ -323,7 +330,8 @@ def main() -> None:
         last_day = today - dt.timedelta(days=1)
         specials.append("month_review")
         extra["month"] = {**period_summary(played, last_day.replace(day=1).isoformat(), last_day.isoformat()), "label": f"{last_day.month}월"}
-    if played and not upcoming and played[-1]["date"] == yesterday:
+    # K리그1은 38라운드(정규 33 + 파이널 5). 정규라운드 직후엔 파이널 일정이 아직 없을 수 있어 라운드로 판단한다.
+    if played and played[-1]["round"] >= 38 and not upcoming and played[-1]["date"] == yesterday:
         specials.append("season_review")
         extra["season"] = period_summary(played, played[0]["date"], played[-1]["date"])
     if not played and nxt and nxt["d_minus"] in (7, 1):

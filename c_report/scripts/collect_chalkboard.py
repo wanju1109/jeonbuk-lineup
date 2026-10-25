@@ -740,6 +740,8 @@ def parse_match_frame_meta(html: str) -> dict:
         weather = _clean_html_text(wm.group(1))
         try:
             temperature_c = float(wm.group(2))
+            if temperature_c == 0:  # 포털은 기온 칸이 비면 0℃로 내보낸다 → 기록 없음으로 본다
+                temperature_c = None
         except ValueError:
             temperature_c = None
 

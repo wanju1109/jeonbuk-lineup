@@ -1,29 +1,429 @@
 {
-  "note": "신문에 쓸 수 있는 사진. 저작권이 확인된 것만 넣는다. key는 issue JSON의 image 값으로 쓴다.",
-  "images": {
-    "fans": {
-      "src": "img/fans.webp",
-      "alt": "전주월드컵경기장 N석을 가득 메운 전북 서포터스",
-      "desc": "야간 홈경기, N석 응원석 전경. 1면 큰 사진용. 가로 4:3",
-      "credit": "사진 Haena96 / Wikimedia Commons (CC0)"
-    },
-    "interior": {
-      "src": "img/interior.webp",
-      "alt": "원정석에서 본 전주월드컵경기장 내부",
-      "desc": "낮 경기, 원정석 쪽에서 본 경기장 전체. 가로 4:3",
-      "credit": "사진 Haena96 / Wikimedia Commons (CC0)"
-    },
-    "exterior": {
-      "src": "img/exterior.webp",
-      "alt": "전주월드컵경기장 외관",
-      "desc": "경기장 외관 파노라마. 경기장 시설·행정 기사용. 가로 2.6:1",
-      "credit": "사진 Paladisious / Wikimedia Commons (CC BY-SA 4.0)"
-    },
-    "bento": {
-      "src": "img/bento.webp",
-      "alt": "2019 아시안컵에서 한국 대표팀을 지휘하는 파울루 벤투",
-      "desc": "파울루 벤투 감독 상반신. 세로에 가까움",
-      "credit": "사진 Zare-Ostovari / Wikimedia Commons (CC BY 4.0)"
-    }
+ "note": "신문에 쓸 수 있는 사진. 저작권이 확인된 것만 넣는다. key를 issue JSON의 image 값으로 쓴다. people은 선수 이름별 경기 사진 key 목록. 새 사진은 scripts/collect_commons.py로 모은다.",
+ "images": {
+  "fans": {
+   "src": "img/fans.webp",
+   "alt": "전주월드컵경기장 N석을 가득 메운 전북 서포터스",
+   "desc": "야간 홈경기, N석 응원석 전경. 1면 큰 사진용. 가로 4:3",
+   "credit": "사진 Haena96 / Wikimedia Commons (CC0)",
+   "shape": "가로"
+  },
+  "interior": {
+   "src": "img/interior.webp",
+   "alt": "원정석에서 본 전주월드컵경기장 내부",
+   "desc": "낮 경기, 원정석 쪽에서 본 경기장 전체. 가로 4:3",
+   "credit": "사진 Haena96 / Wikimedia Commons (CC0)",
+   "shape": "가로"
+  },
+  "exterior": {
+   "src": "img/exterior.webp",
+   "alt": "전주월드컵경기장 외관",
+   "desc": "경기장 외관 파노라마. 경기장 시설·행정 기사용. 가로 2.6:1",
+   "credit": "사진 Paladisious / Wikimedia Commons (CC BY-SA 4.0)",
+   "shape": "가로"
+  },
+  "bento": {
+   "src": "img/bento.webp",
+   "alt": "2019 아시안컵에서 한국 대표팀을 지휘하는 파울루 벤투",
+   "desc": "파울루 벤투 감독 상반신. 세로에 가까움",
+   "credit": "사진 Zare-Ostovari / Wikimedia Commons (CC BY 4.0)",
+   "shape": "세로"
+  },
+  "commons:김진규:250503": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%EC%A7%84%EA%B7%9C%29.jpg/1280px-250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%EC%A7%84%EA%B7%9C%29.jpg",
+   "alt": "김진규 (2025.05.03 FC 서을 vs 전북)",
+   "desc": "김진규 경기 사진. 2025.05.03 FC 서을 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_(%EA%B9%80%EC%A7%84%EA%B7%9C).jpg",
+   "shape": "세로"
+  },
+  "commons:김태환:250503": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%ED%83%9C%ED%99%98%29.jpg/1280px-250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%ED%83%9C%ED%99%98%29.jpg",
+   "alt": "김태환 (2025.05.03 FC 서을 vs 전북)",
+   "desc": "김태환 경기 사진. 2025.05.03 FC 서을 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_(%EA%B9%80%ED%83%9C%ED%99%98).jpg",
+   "shape": "세로"
+  },
+  "commons:송범근:250503": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EC%86%A1%EB%B2%94%EA%B7%BC%29.jpg/1280px-250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EC%86%A1%EB%B2%94%EA%B7%BC%29.jpg",
+   "alt": "송범근 (2025.05.03 FC 서을 vs 전북)",
+   "desc": "송범근 경기 사진. 2025.05.03 FC 서을 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_(%EC%86%A1%EB%B2%94%EA%B7%BC).jpg",
+   "shape": "세로"
+  },
+  "commons:Tiago Orobó:250702": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28Tiago_Orob%C3%B3%29.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28Tiago_Orob%C3%B3%29.jpg",
+   "alt": "Tiago Orobó (2025.07.02 FC 서울 vs 전북)",
+   "desc": "Tiago Orobó 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(Tiago_Orob%C3%B3).jpg",
+   "shape": "세로"
+  },
+  "commons:김영빈:250702": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%EC%98%81%EB%B9%88%29.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%EC%98%81%EB%B9%88%29.jpg",
+   "alt": "김영빈 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "김영빈 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EA%B9%80%EC%98%81%EB%B9%88).jpg",
+   "shape": "세로"
+  },
+  "commons:김태환:250702": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%ED%83%9C%ED%99%98%29.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%ED%83%9C%ED%99%98%29.jpg",
+   "alt": "김태환 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "김태환 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EA%B9%80%ED%83%9C%ED%99%98).jpg",
+   "shape": "세로"
+  },
+  "commons:박수일, 이승우:250702": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EB%B0%95%EC%88%98%EC%9D%BC%2C_%EC%9D%B4%EC%8A%B9%EC%9A%B0%29.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EB%B0%95%EC%88%98%EC%9D%BC%2C_%EC%9D%B4%EC%8A%B9%EC%9A%B0%29.jpg",
+   "alt": "박수일, 이승우 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "박수일, 이승우 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EB%B0%95%EC%88%98%EC%9D%BC,_%EC%9D%B4%EC%8A%B9%EC%9A%B0).jpg",
+   "shape": "세로"
+  },
+  "commons:이승우:250702-2": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%8A%B9%EC%9A%B0%29_2.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%8A%B9%EC%9A%B0%29_2.jpg",
+   "alt": "이승우 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "이승우 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%9D%B4%EC%8A%B9%EC%9A%B0)_2.jpg",
+   "shape": "세로"
+  },
+  "commons:이영재:250702-1": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%98%81%EC%9E%AC%29_1.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%98%81%EC%9E%AC%29_1.jpg",
+   "alt": "이영재 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "이영재 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%9D%B4%EC%98%81%EC%9E%AC)_1.jpg",
+   "shape": "세로"
+  },
+  "commons:이영재:250702-2": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%98%81%EC%9E%AC%29_2.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%98%81%EC%9E%AC%29_2.jpg",
+   "alt": "이영재 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "이영재 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%9D%B4%EC%98%81%EC%9E%AC)_2.jpg",
+   "shape": "세로"
+  },
+  "commons:김영빈:260411": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%EC%98%81%EB%B9%88%29.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EA%B9%80%EC%98%81%EB%B9%88%29.jpg",
+   "alt": "김영빈 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "김영빈 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EA%B9%80%EC%98%81%EB%B9%88).jpg",
+   "shape": "세로"
+  },
+  "commons:맹성웅:260411": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EB%A7%B9%EC%84%B1%EC%9B%85%29.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EB%A7%B9%EC%84%B1%EC%9B%85%29.jpg",
+   "alt": "맹성웅 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "맹성웅 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EB%A7%B9%EC%84%B1%EC%9B%85).jpg",
+   "shape": "세로"
+  },
+  "commons:이동준:260411": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EB%8F%99%EC%A4%80%29.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EB%8F%99%EC%A4%80%29.jpg",
+   "alt": "이동준 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "이동준 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%9D%B4%EB%8F%99%EC%A4%80).jpg",
+   "shape": "세로"
+  },
+  "commons:이승우:260411": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%8A%B9%EC%9A%B0%29.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%8A%B9%EC%9A%B0%29.jpg",
+   "alt": "이승우 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "이승우 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%9D%B4%EC%8A%B9%EC%9A%B0).jpg",
+   "shape": "세로"
+  },
+  "commons:정정용:260411": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%A0%95%EC%A0%95%EC%9A%A9%29.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%A0%95%EC%A0%95%EC%9A%A9%29.jpg",
+   "alt": "정정용 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "정정용 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%A0%95%EC%A0%95%EC%9A%A9).jpg",
+   "shape": "세로"
+  },
+  "commons:조위제:260411": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%A1%B0%EC%9C%84%EC%A0%9C%29.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%A1%B0%EC%9C%84%EC%A0%9C%29.jpg",
+   "alt": "조위제 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "조위제 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%A1%B0%EC%9C%84%EC%A0%9C).jpg",
+   "shape": "세로"
+  },
+  "commons:최우진:260411-2": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%B5%9C%EC%9A%B0%EC%A7%84%29_2.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%B5%9C%EC%9A%B0%EC%A7%84%29_2.jpg",
+   "alt": "최우진 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "최우진 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%B5%9C%EC%9A%B0%EC%A7%84)_2.jpg",
+   "shape": "세로"
+  },
+  "commons:강상윤:250503": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EA%B0%95%EC%83%81%EC%9C%A4%29.jpg/1280px-250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_%28%EA%B0%95%EC%83%81%EC%9C%A4%29.jpg",
+   "alt": "강상윤 (2025.05.03 FC 서을 vs 전북)",
+   "desc": "강상윤 경기 사진. 2025.05.03 FC 서을 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250503_FC_%EC%84%9C%EC%9D%84_vs_%EC%A0%84%EB%B6%81_(%EA%B0%95%EC%83%81%EC%9C%A4).jpg",
+   "shape": "세로"
+  },
+  "commons:연제운:250702": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%97%B0%EC%A0%9C%EC%9A%B4%29.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%97%B0%EC%A0%9C%EC%9A%B4%29.jpg",
+   "alt": "연제운 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "연제운 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%97%B0%EC%A0%9C%EC%9A%B4).jpg",
+   "shape": "세로"
+  },
+  "commons:이승우:250702-1": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%8A%B9%EC%9A%B0%29_1.jpg/1280px-250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%9D%B4%EC%8A%B9%EC%9A%B0%29_1.jpg",
+   "alt": "이승우 (2025.07.02 FC 서울 vs 전북)",
+   "desc": "이승우 경기 사진. 2025.07.02 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:250702_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%9D%B4%EC%8A%B9%EC%9A%B0)_1.jpg",
+   "shape": "세로"
+  },
+  "commons:Bruno Mota:260411": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28Bruno_Mota%29.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28Bruno_Mota%29.jpg",
+   "alt": "Bruno Mota (2026.04.11 FC 서울 vs 전북)",
+   "desc": "Bruno Mota 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(Bruno_Mota).jpg",
+   "shape": "세로"
+  },
+  "commons:최우진:260411-1": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%B5%9C%EC%9A%B0%EC%A7%84%29_1.jpg/1280px-260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_%28%EC%B5%9C%EC%9A%B0%EC%A7%84%29_1.jpg",
+   "alt": "최우진 (2026.04.11 FC 서울 vs 전북)",
+   "desc": "최우진 경기 사진. 2026.04.11 FC 서울 vs 전북",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%B5%9C%EC%9A%B0%EC%A7%84)_1.jpg",
+   "shape": "세로"
+  },
+  "commons:Italo:260912": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/260912_%EC%A0%84%EB%B6%81_vs_FC_%EC%84%9C%EC%9A%B8_%28Italo%29.jpg/1280px-260912_%EC%A0%84%EB%B6%81_vs_FC_%EC%84%9C%EC%9A%B8_%28Italo%29.jpg",
+   "alt": "Italo (2026.09.12 전북 vs FC 서울)",
+   "desc": "Italo 경기 사진. 2026.09.12 전북 vs FC 서울",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260912_%EC%A0%84%EB%B6%81_vs_FC_%EC%84%9C%EC%9A%B8_(Italo).jpg",
+   "shape": "세로"
+  },
+  "commons:송범근:260912": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/260912_%EC%A0%84%EB%B6%81_vs_FC_%EC%84%9C%EC%9A%B8_%28%EC%86%A1%EB%B2%94%EA%B7%BC%29.jpg/1280px-260912_%EC%A0%84%EB%B6%81_vs_FC_%EC%84%9C%EC%9A%B8_%28%EC%86%A1%EB%B2%94%EA%B7%BC%29.jpg",
+   "alt": "송범근 (2026.09.12 전북 vs FC 서울)",
+   "desc": "송범근 경기 사진. 2026.09.12 전북 vs FC 서울",
+   "credit": "사진 Explicit / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:260912_%EC%A0%84%EB%B6%81_vs_FC_%EC%84%9C%EC%9A%B8_(%EC%86%A1%EB%B2%94%EA%B7%BC).jpg",
+   "shape": "세로"
+  },
+  "commons:전주월드컵경기장:1": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Aux._field_of_Jeonju_World_Cup_Stadium.jpg/1280px-Aux._field_of_Jeonju_World_Cup_Stadium.jpg",
+   "alt": "Aux. field of Jeonju World Cup Stadium",
+   "desc": "전주월드컵경기장: Aux. field of Jeonju World Cup Stadium",
+   "credit": "사진 User:주전자 / Wikimedia Commons (CC BY-SA 3.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Aux._field_of_Jeonju_World_Cup_Stadium.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:5": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Jeonju_World_Cup_Stadium_at_the_2002_FIFA_World_Cup.jpg/1280px-Jeonju_World_Cup_Stadium_at_the_2002_FIFA_World_Cup.jpg",
+   "alt": "Jeonju World Cup Stadium at the 2002 FIFA World Cup",
+   "desc": "전주월드컵경기장: Jeonju World Cup Stadium at the 2002 FIFA World Cup",
+   "credit": "사진 PaoPao1985 / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonju_World_Cup_Stadium_at_the_2002_FIFA_World_Cup.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:6": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Jeonju_World_Cup_stadium_exterior.jpg/1280px-Jeonju_World_Cup_stadium_exterior.jpg",
+   "alt": "Jeonju World Cup stadium exterior",
+   "desc": "전주월드컵경기장: Jeonju World Cup stadium exterior",
+   "credit": "사진 Haena96 / Wikimedia Commons (CC0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonju_World_Cup_stadium_exterior.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:7": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Jeonju_World_Cup_stadium_interior.jpg/1280px-Jeonju_World_Cup_stadium_interior.jpg",
+   "alt": "Jeonju World Cup stadium interior",
+   "desc": "전주월드컵경기장: Jeonju World Cup stadium interior",
+   "credit": "사진 Haena96 / Wikimedia Commons (CC0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonju_World_Cup_stadium_interior.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:9": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Mad_Green_Boys.jpg/1280px-Mad_Green_Boys.jpg",
+   "alt": "Mad Green Boys",
+   "desc": "전주월드컵경기장: Mad Green Boys",
+   "credit": "사진 한영태 / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Mad_Green_Boys.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:10": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5.jpg/1280px-%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5.jpg",
+   "alt": "전주월드컵경기장",
+   "desc": "전주월드컵경기장: 전주월드컵경기장",
+   "credit": "사진 한영태 / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:11": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EA%B4%80%EC%A4%91%EC%84%9D.jpg/1280px-%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EA%B4%80%EC%A4%91%EC%84%9D.jpg",
+   "alt": "전주월드컵경기장 관중석",
+   "desc": "전주월드컵경기장: 전주월드컵경기장 관중석",
+   "credit": "사진 강동원0 / Wikimedia Commons (CC0)",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EA%B4%80%EC%A4%91%EC%84%9D.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:12": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EA%B4%80%EC%A4%91%EC%84%9D%EA%B3%BC%EC%9A%B4%EB%8F%99%EC%9E%A5.jpg/1280px-%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EA%B4%80%EC%A4%91%EC%84%9D%EA%B3%BC%EC%9A%B4%EB%8F%99%EC%9E%A5.jpg",
+   "alt": "전주월드컵경기장 관중석과운동장",
+   "desc": "전주월드컵경기장: 전주월드컵경기장 관중석과운동장",
+   "credit": "사진 강동원0 / Wikimedia Commons (CC0)",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EA%B4%80%EC%A4%91%EC%84%9D%EA%B3%BC%EC%9A%B4%EB%8F%99%EC%9E%A5.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:13": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%82%B4%EB%B6%80_%EC%A0%84%EA%B2%BD.jpg/1280px-%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%82%B4%EB%B6%80_%EC%A0%84%EA%B2%BD.jpg",
+   "alt": "전주월드컵경기장 내부 전경",
+   "desc": "전주월드컵경기장: 전주월드컵경기장 내부 전경",
+   "credit": "사진 한영태 / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%82%B4%EB%B6%80_%EC%A0%84%EA%B2%BD.jpg",
+   "shape": "가로"
+  },
+  "commons:전주월드컵경기장:14": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EC%9A%B4%EB%8F%99%EC%9E%A5.jpg/1280px-%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EC%9A%B4%EB%8F%99%EC%9E%A5.jpg",
+   "alt": "전주월드컵경기장 운동장",
+   "desc": "전주월드컵경기장: 전주월드컵경기장 운동장",
+   "credit": "사진 강동원0 / Wikimedia Commons (CC0)",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%A0%84%EC%A3%BC%EC%9B%94%EB%93%9C%EC%BB%B5%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EC%9A%B4%EB%8F%99%EC%9E%A5.jpg",
+   "shape": "가로"
+  },
+  "commons:전북 응원:1": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Jeonbuk_fans_at_K4_match.jpg/1280px-Jeonbuk_fans_at_K4_match.jpg",
+   "alt": "Jeonbuk fans at K4 match",
+   "desc": "전북 응원: Jeonbuk fans at K4 match",
+   "credit": "사진 Haena96 / Wikimedia Commons (CC0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonbuk_fans_at_K4_match.jpg",
+   "shape": "가로"
+  },
+  "commons:전북현대:1": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/2010_AFC_Champions_League_Adelaide_United_vs_Jeonbuk_Hyundai_Motors.jpg/1280px-2010_AFC_Champions_League_Adelaide_United_vs_Jeonbuk_Hyundai_Motors.jpg",
+   "alt": "2010 AFC Champions League Adelaide United vs Jeonbuk Hyundai Motors",
+   "desc": "전북현대: 2010 AFC Champions League Adelaide United vs Jeonbuk Hyundai Motors",
+   "credit": "사진 Adam Axon / Wikimedia Commons (CC BY 2.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:2010_AFC_Champions_League_Adelaide_United_vs_Jeonbuk_Hyundai_Motors.jpg",
+   "shape": "가로"
+  },
+  "commons:전북현대:2": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Chonbuk_clubamerica.jpg/1280px-Chonbuk_clubamerica.jpg",
+   "alt": "Chonbuk clubamerica",
+   "desc": "전북현대: Chonbuk clubamerica",
+   "credit": "사진 Yoppi from Kawasaki, Kanagawa, Japan / Wikimedia Commons (CC BY 2.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Chonbuk_clubamerica.jpg",
+   "shape": "가로"
+  },
+  "commons:전북현대:3": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Jeonbuk_HyundaI_Motors_FC_players_Lee_Jae-Sung%2C_Choi_Chul-soon%2C_Shin_Hyung-min_and_Kim_Min-jae_attended_The_Remind_Green_Concert.jpg/1280px-Jeonbuk_HyundaI_Motors_FC_players_Lee_Jae-Sung%2C_Choi_Chul-soon%2C_Shin_Hyung-min_and_Kim_Min-jae_attended_The_Remind_Green_Concert.jpg",
+   "alt": "Jeonbuk HyundaI Motors FC players Lee Jae-Sung, Choi Chul-soon, Shin Hyung-min and Kim Min-jae attended The Remind Green Concert",
+   "desc": "전북현대: Jeonbuk HyundaI Motors FC players Lee Jae-Sung, Choi Chul-soon, Shin Hyung-min and Kim Min-jae attended The Remind Green Concert",
+   "credit": "사진 고려 / Wikimedia Commons (CC BY 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonbuk_HyundaI_Motors_FC_players_Lee_Jae-Sung,_Choi_Chul-soon,_Shin_Hyung-min_and_Kim_Min-jae_attended_The_Remind_Green_Concert.jpg",
+   "shape": "가로"
+  },
+  "commons:전주 한옥마을:1": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Jeonju_Hanok_Maeul_02.jpg/1280px-Jeonju_Hanok_Maeul_02.jpg",
+   "alt": "Jeonju Hanok Maeul 02",
+   "desc": "전주 한옥마을: Jeonju Hanok Maeul 02",
+   "credit": "사진 Bernard Gagnon / Wikimedia Commons (CC0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Maeul_02.jpg",
+   "shape": "가로"
+  },
+  "commons:전주 한옥마을:2": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Jeonju_Hanok_Village_-_July_2018_%281%29.jpg/1280px-Jeonju_Hanok_Village_-_July_2018_%281%29.jpg",
+   "alt": "Jeonju Hanok Village - July 2018 (1)",
+   "desc": "전주 한옥마을: Jeonju Hanok Village - July 2018 (1)",
+   "credit": "사진 Shamus7792003 / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_-_July_2018_(1).jpg",
+   "shape": "가로"
+  },
+  "commons:전주 한옥마을:3": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Jeonju_Hanok_Village_-_July_2018_%2810%29.jpg/1280px-Jeonju_Hanok_Village_-_July_2018_%2810%29.jpg",
+   "alt": "Jeonju Hanok Village - July 2018 (10)",
+   "desc": "전주 한옥마을: Jeonju Hanok Village - July 2018 (10)",
+   "credit": "사진 Shamus7792003 / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_-_July_2018_(10).jpg",
+   "shape": "가로"
+  },
+  "commons:전주 한옥마을:4": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Jeonju_Hanok_Village_-_July_2018_%2811%29.jpg/1280px-Jeonju_Hanok_Village_-_July_2018_%2811%29.jpg",
+   "alt": "Jeonju Hanok Village - July 2018 (11)",
+   "desc": "전주 한옥마을: Jeonju Hanok Village - July 2018 (11)",
+   "credit": "사진 Shamus7792003 / Wikimedia Commons (CC BY-SA 4.0)",
+   "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_-_July_2018_(11).jpg",
+   "shape": "가로"
   }
+ },
+ "people": {
+  "김진규": [
+   "commons:김진규:250503"
+  ],
+  "김태환": [
+   "commons:김태환:250503",
+   "commons:김태환:250702"
+  ],
+  "송범근": [
+   "commons:송범근:250503",
+   "commons:송범근:260912"
+  ],
+  "티아고": [
+   "commons:Tiago Orobó:250702"
+  ],
+  "김영빈": [
+   "commons:김영빈:250702",
+   "commons:김영빈:260411"
+  ],
+  "박수일, 이승우": [
+   "commons:박수일, 이승우:250702"
+  ],
+  "이승우": [
+   "commons:이승우:250702-1",
+   "commons:이승우:250702-2",
+   "commons:이승우:260411"
+  ],
+  "이영재": [
+   "commons:이영재:250702-1",
+   "commons:이영재:250702-2"
+  ],
+  "맹성웅": [
+   "commons:맹성웅:260411"
+  ],
+  "이동준": [
+   "commons:이동준:260411"
+  ],
+  "정정용": [
+   "commons:정정용:260411"
+  ],
+  "조위제": [
+   "commons:조위제:260411"
+  ],
+  "최우진": [
+   "commons:최우진:260411-1",
+   "commons:최우진:260411-2"
+  ],
+  "강상윤": [
+   "commons:강상윤:250503"
+  ],
+  "연제운": [
+   "commons:연제운:250702"
+  ],
+  "모따": [
+   "commons:Bruno Mota:260411"
+  ],
+  "이탈로": [
+   "commons:Italo:260912"
+  ]
+ }
 }

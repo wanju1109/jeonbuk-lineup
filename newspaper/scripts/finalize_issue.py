@@ -28,6 +28,18 @@ MATCH_CHARTS = {"scoreboard", "goal_timeline", "shotmap", "compare"}
 BANNED = ["jeonbuk-lineup", "—"]
 
 
+def recent_heroes(no: int, n: int = 3) -> set[str]:
+    """직전 n개 호의 1면 사진 key."""
+    out = set()
+    for k in range(no - n, no):
+        f = NP / "issues" / f"{k}.json"
+        if k >= 1 and f.exists():
+            blocks = json.loads(f.read_text(encoding="utf-8"))["pages"][0]["blocks"]
+            if blocks and blocks[0].get("image"):
+                out.add(blocks[0]["image"])
+    return out
+
+
 def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
     errs: list[str] = []
     for k in ("headline", "summary", "strip", "pages"):
@@ -78,6 +90,11 @@ def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
     first = issue["pages"][0].get("blocks", []) if issue["pages"] else []
     if not first or first[0].get("type") != "hero":
         errs.append("1면 첫 블록은 hero여야 합니다")
+    else:
+        recent = recent_heroes(ctx["no"])
+        if first[0].get("image") in recent:
+            errs.append(f"1면 사진 {first[0].get('image')!r}는 최근 3호에서 이미 썼습니다. 오늘 주제에 맞는 다른 사진을 고르세요"
+                        f"(선수 이야기면 library.json people의 경기 사진이나 player: 사진)")
     return errs
 
 

@@ -183,6 +183,10 @@
     hero(b) {
       const a = asset(b.image);
       if (!a) return BLOCKS.article(b);
+      // 세로 사진(선수 경기 사진)이나 선수·감독 프로필이면 왼쪽 글, 오른쪽 사진으로 나눈 1면
+      const cutout = /^player:/.test(b.image), portrait = cutout || a.shape === "세로" || /^coach:/.test(b.image);
+      if (portrait)
+        return `<figure class="hero split${cutout ? " cutout" : ""}"><div class="over">${b.kicker ? `<div class="kicker">${esc(b.kicker)}</div>` : ""}<h2>${esc(b.title)}</h2>${b.dek ? `<p>${esc(b.dek)}</p>` : ""}</div>${imgTag(a)}</figure>${credit(a, b.caption)}`;
       return `<figure class="hero">${imgTag(a)}<div class="over">${b.kicker ? `<div class="kicker">${esc(b.kicker)}</div>` : ""}<h2>${esc(b.title)}</h2>${b.dek ? `<p>${esc(b.dek)}</p>` : ""}</div></figure>${credit(a, b.caption)}`;
     },
     article(b) {
