@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:26+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -171,7 +171,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -220,7 +220,7 @@
       },
       {
         "round": 8,
-        "rank": 7,
+        "rank": 8,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -770,10 +770,10 @@
         "position": "FW",
         "back_no": 94,
         "age": 25,
-        "apps": 29,
-        "goals": 8,
+        "apps": 30,
+        "goals": 9,
         "assists": 3,
-        "points": 11
+        "points": 12
       },
       {
         "player_id": "20200164",
@@ -782,7 +782,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 30,
+        "apps": 31,
         "goals": 6,
         "assists": 2,
         "points": 8
@@ -818,7 +818,7 @@
         "position": "FW",
         "back_no": 18,
         "age": 25,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -844,10 +844,10 @@
         "position": "FW",
         "back_no": 94,
         "age": 25,
-        "apps": 29,
-        "goals": 8,
+        "apps": 30,
+        "goals": 9,
         "assists": 3,
-        "points": 11
+        "points": 12
       },
       {
         "player_id": "20240126",
@@ -868,7 +868,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 30,
+        "apps": 31,
         "goals": 6,
         "assists": 2,
         "points": 8
@@ -880,13 +880,13 @@
         "position": "DF",
         "back_no": 40,
         "age": 24,
-        "apps": 23,
+        "apps": 24,
         "goals": 1,
         "assists": 2,
         "points": 3
       }
     ],
-    "goal_share": 0.205
+    "goal_share": 0.231
   },
   "attendance": {
     "avg": 5177,

@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:26+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
     "rank": 2,
     "teams": 17,
-    "played": 27,
+    "played": 28,
     "win": 15,
     "draw": 9,
-    "loss": 3,
+    "loss": 4,
     "gf": 53,
-    "ga": 30,
-    "gd": 23,
+    "ga": 31,
+    "gd": 22,
     "points": 54,
-    "ppg": 2.0,
-    "remaining": 5,
+    "ppg": 1.93,
+    "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 5,
+    "gap_to_leader": 8,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 5,
+    "gap_above": 8,
     "gap_below": 0,
     "above": "수원",
     "below": "서울E"
   },
   "splits": {
     "home": {
-      "played": 12,
+      "played": 13,
       "win": 7,
       "draw": 5,
-      "loss": 0,
+      "loss": 1,
       "gf": 24,
-      "ga": 10,
-      "gd": 14,
+      "ga": 11,
+      "gd": 13,
       "points": 26,
-      "ppg": 2.17
+      "ppg": 2.0
     },
     "away": {
       "played": 15,
@@ -83,18 +83,18 @@
       "D",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
       "D",
-      "D",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
       "W",
-      "W",
       "D",
       "W",
       "W",
@@ -102,31 +102,32 @@
       "D",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 3,
-      "draw": 2,
-      "loss": 0,
-      "gf": 8,
+      "draw": 1,
+      "loss": 1,
+      "gf": 7,
       "ga": 3,
-      "gd": 5,
-      "points": 11
+      "gd": 4,
+      "points": 10
     },
     "last10_record": {
       "played": 10,
-      "win": 7,
+      "win": 6,
       "draw": 3,
-      "loss": 0,
-      "gf": 17,
+      "loss": 1,
+      "gf": 15,
       "ga": 7,
-      "gd": 10,
-      "points": 24
+      "gd": 8,
+      "points": 21
     },
     "streaks": {
-      "current_type": "W",
-      "current_len": 3,
+      "current_type": "L",
+      "current_len": 1,
       "longest_win": 4,
       "longest_unbeaten": 15,
       "longest_winless": 4,
@@ -134,12 +135,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.96,
+    "gf_per_game": 1.89,
     "ga_per_game": 1.11,
     "clean_sheets": 6,
-    "failed_to_score": 2,
+    "failed_to_score": 3,
     "both_scored": 20,
-    "one_goal_games": 9,
+    "one_goal_games": 10,
     "biggest_win": {
       "round": 17,
       "date": "2026-07-10",
@@ -370,8 +371,8 @@
         "round": 30,
         "rank": 2,
         "points": 54,
-        "played": 27,
-        "gd": 23
+        "played": 28,
+        "gd": 22
       }
     ],
     "best_rank": 1,
@@ -388,15 +389,15 @@
       "ppg": 1.81
     },
     "second_half": {
-      "played": 11,
+      "played": 12,
       "win": 7,
       "draw": 4,
-      "loss": 0,
+      "loss": 1,
       "gf": 19,
-      "ga": 9,
-      "gd": 10,
+      "ga": 10,
+      "gd": 9,
       "points": 25,
-      "ppg": 2.27
+      "ppg": 2.08
     }
   },
   "fixtures": [
@@ -669,6 +670,16 @@
       "gf": 2,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 30,
+      "date": "2026-10-25",
+      "venue": "H",
+      "opponent_id": "K34",
+      "opponent": "충남 아산",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -683,7 +694,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 28,
-        "apps": 23,
+        "apps": 24,
         "goals": 13,
         "assists": 6,
         "points": 19
@@ -695,7 +706,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 20,
-        "apps": 26,
+        "apps": 27,
         "goals": 8,
         "assists": 1,
         "points": 9
@@ -707,7 +718,7 @@
         "position": "FW",
         "back_no": 70,
         "age": 22,
-        "apps": 20,
+        "apps": 21,
         "goals": 5,
         "assists": 3,
         "points": 8
@@ -719,7 +730,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 29,
-        "apps": 19,
+        "apps": 20,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -731,7 +742,7 @@
         "position": "MF",
         "back_no": 14,
         "age": 27,
-        "apps": 25,
+        "apps": 26,
         "goals": 3,
         "assists": 3,
         "points": 6
@@ -745,7 +756,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 28,
-        "apps": 23,
+        "apps": 24,
         "goals": 13,
         "assists": 6,
         "points": 19
@@ -757,7 +768,7 @@
         "position": "DF",
         "back_no": 27,
         "age": 29,
-        "apps": 25,
+        "apps": 26,
         "goals": 0,
         "assists": 6,
         "points": 6
@@ -781,7 +792,7 @@
         "position": "FW",
         "back_no": 70,
         "age": 22,
-        "apps": 20,
+        "apps": 21,
         "goals": 5,
         "assists": 3,
         "points": 8
@@ -793,7 +804,7 @@
         "position": "MF",
         "back_no": 14,
         "age": 27,
-        "apps": 25,
+        "apps": 26,
         "goals": 3,
         "assists": 3,
         "points": 6
@@ -807,8 +818,7 @@
     "detail": "올해는 2위까지 곧바로 올라갑니다. 플레이오프를 건너뛸 수 있는 자리에 서 있습니다.",
     "tags": [
       "리그 최상급 화력",
-      "수비 안정",
-      "무승부 체질"
+      "수비 안정"
     ]
   },
   "profile": {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:25+09:00",
+  "generated_at": "2026-10-26T04:32:19+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -770,7 +770,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 27,
-        "apps": 25,
+        "apps": 26,
         "goals": 16,
         "assists": 1,
         "points": 17
@@ -782,10 +782,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 31,
-        "goals": 11,
-        "assists": 12,
-        "points": 23
+        "apps": 32,
+        "goals": 12,
+        "assists": 13,
+        "points": 25
       },
       {
         "player_id": "20170095",
@@ -812,15 +812,15 @@
         "points": 4
       },
       {
-        "player_id": "20180296",
+        "player_id": "20220188",
         "departed": false,
-        "name": "이진현",
-        "position": "MF",
-        "back_no": 14,
-        "age": 29,
-        "apps": 28,
-        "goals": 2,
-        "assists": 1,
+        "name": "김영권",
+        "position": "DF",
+        "back_no": 19,
+        "age": 36,
+        "apps": 25,
+        "goals": 3,
+        "assists": 0,
         "points": 3
       }
     ],
@@ -832,10 +832,10 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 31,
-        "goals": 11,
-        "assists": 12,
-        "points": 23
+        "apps": 32,
+        "goals": 12,
+        "assists": 13,
+        "points": 25
       },
       {
         "player_id": "20150050",
@@ -868,7 +868,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 13,
+        "apps": 14,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -880,7 +880,7 @@
         "position": "MF",
         "back_no": 6,
         "age": 31,
-        "apps": 30,
+        "apps": 31,
         "goals": 0,
         "assists": 2,
         "points": 2

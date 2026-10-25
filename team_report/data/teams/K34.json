@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:27+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
-    "rank": 8,
+    "rank": 7,
     "teams": 17,
-    "played": 27,
-    "win": 9,
+    "played": 28,
+    "win": 10,
     "draw": 9,
     "loss": 9,
-    "gf": 35,
+    "gf": 36,
     "ga": 32,
-    "gd": 3,
-    "points": 36,
-    "ppg": 1.33,
-    "remaining": 5,
+    "gd": 4,
+    "points": 39,
+    "ppg": 1.39,
+    "remaining": 4,
     "scheduled": 32,
     "gap_to_leader": 23,
-    "gap_to_cut": 8,
+    "gap_to_cut": 6,
     "cut_rank": 6,
-    "gap_above": 2,
+    "gap_above": 6,
     "gap_below": 1,
-    "above": "김포",
-    "below": "경남"
+    "above": "화성",
+    "below": "김포"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.79
     },
     "away": {
-      "played": 13,
-      "win": 2,
+      "played": 14,
+      "win": 3,
       "draw": 5,
       "loss": 6,
-      "gf": 11,
+      "gf": 12,
       "ga": 15,
-      "gd": -4,
-      "points": 11,
-      "ppg": 0.85
+      "gd": -3,
+      "points": 14,
+      "ppg": 1.0
     }
   },
   "form": {
@@ -83,17 +83,17 @@
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
       "L",
-      "L",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "L",
       "W",
       "D",
       "L",
@@ -102,31 +102,32 @@
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
+      "win": 2,
       "draw": 2,
-      "loss": 2,
-      "gf": 4,
-      "ga": 5,
-      "gd": -1,
-      "points": 5
+      "loss": 1,
+      "gf": 5,
+      "ga": 3,
+      "gd": 2,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
+      "win": 4,
       "draw": 3,
-      "loss": 4,
-      "gf": 11,
-      "ga": 12,
-      "gd": -1,
-      "points": 12
+      "loss": 3,
+      "gf": 10,
+      "ga": 9,
+      "gd": 1,
+      "points": 15
     },
     "streaks": {
-      "current_type": "D",
-      "current_len": 2,
+      "current_type": "W",
+      "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 5,
       "longest_winless": 4,
@@ -134,12 +135,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.3,
-    "ga_per_game": 1.19,
-    "clean_sheets": 7,
+    "gf_per_game": 1.29,
+    "ga_per_game": 1.14,
+    "clean_sheets": 8,
     "failed_to_score": 8,
     "both_scored": 15,
-    "one_goal_games": 10,
+    "one_goal_games": 11,
     "biggest_win": {
       "round": 11,
       "date": "2026-05-09",
@@ -193,14 +194,14 @@
       },
       {
         "round": 5,
-        "rank": 7,
+        "rank": 8,
         "points": 6,
         "played": 4,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 9,
         "played": 5,
         "gd": 2
@@ -368,10 +369,10 @@
       },
       {
         "round": 30,
-        "rank": 8,
-        "points": 36,
-        "played": 27,
-        "gd": 3
+        "rank": 7,
+        "points": 39,
+        "played": 28,
+        "gd": 4
       }
     ],
     "best_rank": 4,
@@ -388,15 +389,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 11,
-      "win": 3,
+      "played": 12,
+      "win": 4,
       "draw": 3,
       "loss": 5,
-      "gf": 11,
+      "gf": 12,
       "ga": 13,
-      "gd": -2,
-      "points": 12,
-      "ppg": 1.09
+      "gd": -1,
+      "points": 15,
+      "ppg": 1.25
     }
   },
   "fixtures": [
@@ -669,6 +670,16 @@
       "gf": 0,
       "ga": 0,
       "result": "D"
+    },
+    {
+      "round": 30,
+      "date": "2026-10-25",
+      "venue": "A",
+      "opponent_id": "K29",
+      "opponent": "수원 FC",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -683,7 +694,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 26,
+        "apps": 27,
         "goals": 7,
         "assists": 2,
         "points": 9
@@ -695,7 +706,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 24,
+        "apps": 25,
         "goals": 7,
         "assists": 2,
         "points": 9
@@ -707,7 +718,7 @@
         "position": "FW",
         "back_no": 97,
         "age": 29,
-        "apps": 26,
+        "apps": 27,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -719,7 +730,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 24,
+        "apps": 25,
         "goals": 2,
         "assists": 4,
         "points": 6
@@ -731,7 +742,7 @@
         "position": "MF",
         "back_no": 33,
         "age": 30,
-        "apps": 26,
+        "apps": 27,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -745,7 +756,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 34,
-        "apps": 26,
+        "apps": 27,
         "goals": 1,
         "assists": 6,
         "points": 7
@@ -757,7 +768,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 36,
-        "apps": 22,
+        "apps": 23,
         "goals": 1,
         "assists": 5,
         "points": 6
@@ -769,7 +780,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 24,
+        "apps": 25,
         "goals": 2,
         "assists": 4,
         "points": 6
@@ -781,7 +792,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 26,
+        "apps": 27,
         "goals": 7,
         "assists": 2,
         "points": 9
@@ -793,22 +804,20 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 24,
+        "apps": 25,
         "goals": 7,
         "assists": 2,
         "points": 9
       }
     ],
-    "goal_share": 0.2
+    "goal_share": 0.194
   },
   "attendance": null,
   "context": {
-    "band": "중위권",
-    "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
+    "band": "PO 추격권",
+    "detail": "플레이오프 컷인 6위와 6점 차. 남은 4경기면 아직 늦지 않았습니다.",
     "tags": [
-      "실리 축구",
-      "홈 강세",
-      "무승부 체질"
+      "실리 축구"
     ]
   },
   "profile": {

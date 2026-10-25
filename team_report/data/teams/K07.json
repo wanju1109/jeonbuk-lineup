@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:28+09:00",
+  "generated_at": "2026-10-26T04:32:21+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
@@ -23,8 +23,8 @@
     "ppg": 0.86,
     "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 35,
-    "gap_to_cut": 20,
+    "gap_to_leader": 38,
+    "gap_to_cut": 21,
     "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 7,
@@ -166,7 +166,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 1,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -375,7 +375,7 @@
         "gd": -17
       }
     ],
-    "best_rank": 1,
+    "best_rank": 2,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -694,10 +694,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 27,
-        "goals": 7,
+        "apps": 28,
+        "goals": 8,
         "assists": 6,
-        "points": 13
+        "points": 14
       },
       {
         "player_id": "20200134",
@@ -706,7 +706,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 20,
+        "apps": 21,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -730,7 +730,7 @@
         "position": "MF",
         "back_no": 14,
         "age": 27,
-        "apps": 22,
+        "apps": 23,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -742,7 +742,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 28,
-        "apps": 13,
+        "apps": 14,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -756,10 +756,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 27,
-        "goals": 7,
+        "apps": 28,
+        "goals": 8,
         "assists": 6,
-        "points": 13
+        "points": 14
       },
       {
         "player_id": "20220324",
@@ -768,10 +768,10 @@
         "position": "FW",
         "back_no": 17,
         "age": 26,
-        "apps": 25,
-        "goals": 1,
+        "apps": 26,
+        "goals": 2,
         "assists": 5,
-        "points": 6
+        "points": 7
       },
       {
         "player_id": "20230271",
@@ -780,7 +780,7 @@
         "position": "FW",
         "back_no": 79,
         "age": 26,
-        "apps": 9,
+        "apps": 10,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -792,7 +792,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 20,
+        "apps": 21,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -804,13 +804,13 @@
         "position": "FW",
         "back_no": 11,
         "age": 27,
-        "apps": 25,
+        "apps": 26,
         "goals": 2,
         "assists": 2,
         "points": 4
       }
     ],
-    "goal_share": 0.212
+    "goal_share": 0.242
   },
   "attendance": null,
   "context": {

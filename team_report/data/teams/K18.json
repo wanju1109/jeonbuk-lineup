@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:26+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -770,10 +770,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 29,
+        "apps": 30,
         "goals": 14,
-        "assists": 1,
-        "points": 15
+        "assists": 2,
+        "points": 16
       },
       {
         "player_id": "20260168",
@@ -782,22 +782,10 @@
         "position": "FW",
         "back_no": 99,
         "age": 31,
-        "apps": 28,
+        "apps": 29,
         "goals": 7,
-        "assists": 1,
-        "points": 8
-      },
-      {
-        "player_id": "20210223",
-        "departed": false,
-        "name": "제르소",
-        "position": "MF",
-        "back_no": 11,
-        "age": 35,
-        "apps": 32,
-        "goals": 4,
-        "assists": 0,
-        "points": 4
+        "assists": 2,
+        "points": 9
       },
       {
         "player_id": "20190131",
@@ -806,22 +794,34 @@
         "position": "FW",
         "back_no": 10,
         "age": 26,
-        "apps": 28,
+        "apps": 29,
+        "goals": 4,
+        "assists": 2,
+        "points": 6
+      },
+      {
+        "player_id": "20210223",
+        "departed": false,
+        "name": "제르소",
+        "position": "MF",
+        "back_no": 11,
+        "age": 35,
+        "apps": 33,
+        "goals": 4,
+        "assists": 0,
+        "points": 4
+      },
+      {
+        "player_id": "20040081",
+        "departed": false,
+        "name": "이청용",
+        "position": "MF",
+        "back_no": 72,
+        "age": 38,
+        "apps": 33,
         "goals": 3,
         "assists": 2,
         "points": 5
-      },
-      {
-        "player_id": "20260160",
-        "departed": false,
-        "name": "후안 이비자",
-        "position": "DF",
-        "back_no": 2,
-        "age": 31,
-        "apps": 30,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
       }
     ],
     "top_assists": [
@@ -832,7 +832,7 @@
         "position": "DF",
         "back_no": 32,
         "age": 34,
-        "apps": 31,
+        "apps": 32,
         "goals": 1,
         "assists": 4,
         "points": 5
@@ -844,10 +844,34 @@
         "position": "MF",
         "back_no": 5,
         "age": 36,
-        "apps": 30,
-        "goals": 1,
+        "apps": 31,
+        "goals": 2,
         "assists": 3,
-        "points": 4
+        "points": 5
+      },
+      {
+        "player_id": "20180196",
+        "departed": false,
+        "name": "무고사",
+        "position": "FW",
+        "back_no": 9,
+        "age": 34,
+        "apps": 30,
+        "goals": 14,
+        "assists": 2,
+        "points": 16
+      },
+      {
+        "player_id": "20260168",
+        "departed": false,
+        "name": "페리어",
+        "position": "FW",
+        "back_no": 99,
+        "age": 31,
+        "apps": 29,
+        "goals": 7,
+        "assists": 2,
+        "points": 9
       },
       {
         "player_id": "20190131",
@@ -856,34 +880,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 26,
-        "apps": 28,
-        "goals": 3,
+        "apps": 29,
+        "goals": 4,
         "assists": 2,
-        "points": 5
-      },
-      {
-        "player_id": "20040081",
-        "departed": false,
-        "name": "이청용",
-        "position": "MF",
-        "back_no": 72,
-        "age": 38,
-        "apps": 32,
-        "goals": 2,
-        "assists": 2,
-        "points": 4
-      },
-      {
-        "player_id": "20230071",
-        "departed": false,
-        "name": "이민혁",
-        "position": "MF",
-        "back_no": 26,
-        "age": 24,
-        "apps": 19,
-        "goals": 1,
-        "assists": 2,
-        "points": 3
+        "points": 6
       }
     ],
     "goal_share": 0.326

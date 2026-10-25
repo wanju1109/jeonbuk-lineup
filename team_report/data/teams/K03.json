@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:26+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -171,7 +171,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 6,
+        "rank": 4,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -764,6 +764,18 @@
     "foreign": 5,
     "top_scorers": [
       {
+        "player_id": "20150253",
+        "departed": false,
+        "name": "완델손",
+        "position": "DF",
+        "back_no": 77,
+        "age": 37,
+        "apps": 27,
+        "goals": 4,
+        "assists": 4,
+        "points": 8
+      },
+      {
         "player_id": "20180204",
         "departed": false,
         "name": "원기종",
@@ -782,22 +794,22 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 24,
+        "apps": 25,
         "goals": 4,
         "assists": 2,
         "points": 6
       },
       {
-        "player_id": "20150253",
+        "player_id": "20260024",
         "departed": false,
-        "name": "완델손",
-        "position": "DF",
-        "back_no": 77,
-        "age": 37,
-        "apps": 26,
+        "name": "니시야 켄토",
+        "position": "MF",
+        "back_no": 31,
+        "age": 26,
+        "apps": 28,
         "goals": 3,
-        "assists": 4,
-        "points": 7
+        "assists": 1,
+        "points": 4
       },
       {
         "player_id": "20230148",
@@ -810,21 +822,21 @@
         "goals": 3,
         "assists": 1,
         "points": 4
-      },
-      {
-        "player_id": "20260024",
-        "departed": false,
-        "name": "니시야 켄토",
-        "position": "MF",
-        "back_no": 31,
-        "age": 26,
-        "apps": 27,
-        "goals": 3,
-        "assists": 0,
-        "points": 3
       }
     ],
     "top_assists": [
+      {
+        "player_id": "20150253",
+        "departed": false,
+        "name": "완델손",
+        "position": "DF",
+        "back_no": 77,
+        "age": 37,
+        "apps": 27,
+        "goals": 4,
+        "assists": 4,
+        "points": 8
+      },
       {
         "player_id": "20180204",
         "departed": false,
@@ -838,25 +850,13 @@
         "points": 8
       },
       {
-        "player_id": "20150253",
-        "departed": false,
-        "name": "완델손",
-        "position": "DF",
-        "back_no": 77,
-        "age": 37,
-        "apps": 26,
-        "goals": 3,
-        "assists": 4,
-        "points": 7
-      },
-      {
         "player_id": "20240063",
         "departed": false,
         "name": "김동진",
         "position": "MF",
         "back_no": 16,
         "age": 23,
-        "apps": 31,
+        "apps": 32,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -868,22 +868,22 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 24,
+        "apps": 25,
         "goals": 4,
         "assists": 2,
         "points": 6
       },
       {
-        "player_id": "20210182",
+        "player_id": "20230225",
         "departed": false,
-        "name": "어정원",
-        "position": "DF",
-        "back_no": 2,
+        "name": "조르지",
+        "position": "FW",
+        "back_no": 25,
         "age": 27,
-        "apps": 30,
-        "goals": 0,
+        "apps": 15,
+        "goals": 1,
         "assists": 2,
-        "points": 2
+        "points": 3
       }
     ],
     "goal_share": 0.133

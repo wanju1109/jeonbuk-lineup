@@ -8,25 +8,25 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k42-sm.png",
   "home_url": "https://www.yonginfc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:27+09:00",
+  "generated_at": "2026-10-26T04:32:21+09:00",
   "table": {
     "rank": 13,
     "teams": 17,
-    "played": 27,
-    "win": 5,
+    "played": 28,
+    "win": 6,
     "draw": 12,
     "loss": 10,
-    "gf": 32,
+    "gf": 34,
     "ga": 41,
-    "gd": -9,
-    "points": 27,
-    "ppg": 1.0,
-    "remaining": 5,
+    "gd": -7,
+    "points": 30,
+    "ppg": 1.07,
+    "remaining": 4,
     "scheduled": 32,
     "gap_to_leader": 32,
-    "gap_to_cut": 17,
+    "gap_to_cut": 15,
     "cut_rank": 6,
-    "gap_above": 3,
+    "gap_above": 1,
     "gap_below": 1,
     "above": "파주",
     "below": "천안"
@@ -44,15 +44,15 @@
       "ppg": 0.93
     },
     "away": {
-      "played": 13,
-      "win": 3,
+      "played": 14,
+      "win": 4,
       "draw": 5,
       "loss": 5,
-      "gf": 17,
+      "gf": 19,
       "ga": 20,
-      "gd": -3,
-      "points": 14,
-      "ppg": 1.08
+      "gd": -1,
+      "points": 17,
+      "ppg": 1.21
     }
   },
   "form": {
@@ -83,18 +83,18 @@
       "L",
       "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
-      "D",
       "L",
       "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
       "D",
-      "D",
       "W",
       "L",
       "W",
@@ -102,31 +102,32 @@
       "L",
       "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 0,
-      "draw": 2,
+      "win": 1,
+      "draw": 1,
       "loss": 3,
-      "gf": 3,
-      "ga": 10,
-      "gd": -7,
-      "points": 2
+      "gf": 4,
+      "ga": 9,
+      "gd": -5,
+      "points": 4
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
-      "draw": 4,
+      "win": 3,
+      "draw": 3,
       "loss": 4,
-      "gf": 12,
-      "ga": 15,
-      "gd": -3,
-      "points": 10
+      "gf": 13,
+      "ga": 14,
+      "gd": -1,
+      "points": 12
     },
     "streaks": {
-      "current_type": "L",
-      "current_len": 2,
+      "current_type": "W",
+      "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 7,
       "longest_winless": 7,
@@ -134,9 +135,9 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.19,
-    "ga_per_game": 1.52,
-    "clean_sheets": 6,
+    "gf_per_game": 1.21,
+    "ga_per_game": 1.46,
+    "clean_sheets": 7,
     "failed_to_score": 7,
     "both_scored": 17,
     "one_goal_games": 6,
@@ -165,7 +166,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -369,12 +370,12 @@
       {
         "round": 30,
         "rank": 13,
-        "points": 27,
-        "played": 27,
-        "gd": -9
+        "points": 30,
+        "played": 28,
+        "gd": -7
       }
     ],
-    "best_rank": 7,
+    "best_rank": 8,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -388,15 +389,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 11,
-      "win": 2,
+      "played": 12,
+      "win": 3,
       "draw": 4,
       "loss": 5,
-      "gf": 12,
+      "gf": 14,
       "ga": 18,
-      "gd": -6,
-      "points": 10,
-      "ppg": 0.91
+      "gd": -4,
+      "points": 13,
+      "ppg": 1.08
     }
   },
   "fixtures": [
@@ -669,6 +670,16 @@
       "gf": 0,
       "ga": 4,
       "result": "L"
+    },
+    {
+      "round": 30,
+      "date": "2026-10-25",
+      "venue": "A",
+      "opponent_id": "K37",
+      "opponent": "충북 청주",
+      "gf": 2,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -676,6 +687,18 @@
     "avg_age": 26.7,
     "foreign": 4,
     "top_scorers": [
+      {
+        "player_id": "20240208",
+        "departed": false,
+        "name": "가브리엘",
+        "position": "FW",
+        "back_no": 11,
+        "age": 25,
+        "apps": 23,
+        "goals": 8,
+        "assists": 0,
+        "points": 8
+      },
       {
         "player_id": "20260246",
         "departed": false,
@@ -687,18 +710,6 @@
         "goals": 6,
         "assists": 1,
         "points": 7
-      },
-      {
-        "player_id": "20240208",
-        "departed": false,
-        "name": "가브리엘",
-        "position": "FW",
-        "back_no": 11,
-        "age": 25,
-        "apps": 22,
-        "goals": 6,
-        "assists": 0,
-        "points": 6
       },
       {
         "player_id": "20230136",
@@ -719,7 +730,7 @@
         "position": "FW",
         "back_no": 19,
         "age": 31,
-        "apps": 15,
+        "apps": 16,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -745,7 +756,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 28,
-        "apps": 27,
+        "apps": 28,
         "goals": 1,
         "assists": 6,
         "points": 7
@@ -757,10 +768,10 @@
         "position": "MF",
         "back_no": 66,
         "age": 23,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
-        "assists": 2,
-        "points": 3
+        "assists": 3,
+        "points": 4
       },
       {
         "player_id": "20110158",
@@ -769,7 +780,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 34,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -781,7 +792,7 @@
         "position": "DF",
         "back_no": 22,
         "age": 31,
-        "apps": 22,
+        "apps": 23,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -793,13 +804,13 @@
         "position": "DF",
         "back_no": 15,
         "age": 24,
-        "apps": 27,
+        "apps": 28,
         "goals": 0,
         "assists": 2,
         "points": 2
       }
     ],
-    "goal_share": 0.188
+    "goal_share": 0.235
   },
   "attendance": null,
   "context": {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:26+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
@@ -23,11 +23,11 @@
     "ppg": 1.86,
     "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 7,
+    "gap_to_leader": 10,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 2,
-    "gap_below": 7,
+    "gap_below": 4,
     "above": "서울E",
     "below": "부산"
   },
@@ -688,40 +688,28 @@
     "foreign": 9,
     "top_scorers": [
       {
-        "player_id": "20180123",
-        "departed": false,
-        "name": "고재현",
-        "position": "FW",
-        "back_no": 17,
-        "age": 27,
-        "apps": 30,
-        "goals": 9,
-        "assists": 3,
-        "points": 12
-      },
-      {
         "player_id": "20250222",
         "departed": false,
         "name": "세라핌",
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 27,
-        "goals": 8,
+        "apps": 28,
+        "goals": 10,
         "assists": 10,
-        "points": 18
+        "points": 20
       },
       {
-        "player_id": "20180294",
+        "player_id": "20180123",
         "departed": false,
-        "name": "에드가",
+        "name": "고재현",
         "position": "FW",
-        "back_no": 9,
-        "age": 39,
-        "apps": 13,
-        "goals": 8,
-        "assists": 0,
-        "points": 8
+        "back_no": 17,
+        "age": 27,
+        "apps": 31,
+        "goals": 9,
+        "assists": 3,
+        "points": 12
       },
       {
         "player_id": "20260287",
@@ -730,9 +718,21 @@
         "position": "FW",
         "back_no": 16,
         "age": 23,
-        "apps": 21,
-        "goals": 7,
+        "apps": 22,
+        "goals": 8,
         "assists": 1,
+        "points": 9
+      },
+      {
+        "player_id": "20180294",
+        "departed": false,
+        "name": "에드가",
+        "position": "FW",
+        "back_no": 9,
+        "age": 39,
+        "apps": 14,
+        "goals": 8,
+        "assists": 0,
         "points": 8
       },
       {
@@ -742,10 +742,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 36,
-        "apps": 16,
-        "goals": 6,
-        "assists": 7,
-        "points": 13
+        "apps": 17,
+        "goals": 7,
+        "assists": 8,
+        "points": 15
       }
     ],
     "top_assists": [
@@ -756,10 +756,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 27,
-        "goals": 8,
+        "apps": 28,
+        "goals": 10,
         "assists": 10,
-        "points": 18
+        "points": 20
       },
       {
         "player_id": "20160237",
@@ -768,10 +768,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 36,
-        "apps": 16,
-        "goals": 6,
-        "assists": 7,
-        "points": 13
+        "apps": 17,
+        "goals": 7,
+        "assists": 8,
+        "points": 15
       },
       {
         "player_id": "20190174",
@@ -792,7 +792,7 @@
         "position": "FW",
         "back_no": 17,
         "age": 27,
-        "apps": 30,
+        "apps": 31,
         "goals": 9,
         "assists": 3,
         "points": 12
@@ -810,7 +810,7 @@
         "points": 3
       }
     ],
-    "goal_share": 0.164
+    "goal_share": 0.182
   },
   "attendance": null,
   "context": {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:25+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
@@ -206,7 +206,7 @@
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -770,10 +770,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 10,
-        "assists": 8,
-        "points": 18
+        "assists": 9,
+        "points": 19
       },
       {
         "player_id": "20260043",
@@ -794,7 +794,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 5,
         "points": 8
@@ -818,7 +818,7 @@
         "position": "MF",
         "back_no": 97,
         "age": 29,
-        "apps": 29,
+        "apps": 30,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -832,10 +832,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 10,
-        "assists": 8,
-        "points": 18
+        "assists": 9,
+        "points": 19
       },
       {
         "player_id": "20170164",
@@ -844,7 +844,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 5,
         "points": 8
@@ -856,22 +856,10 @@
         "position": "MF",
         "back_no": 97,
         "age": 29,
-        "apps": 29,
+        "apps": 30,
         "goals": 2,
         "assists": 3,
         "points": 5
-      },
-      {
-        "player_id": "20180057",
-        "departed": false,
-        "name": "최병찬",
-        "position": "FW",
-        "back_no": 96,
-        "age": 30,
-        "apps": 24,
-        "goals": 1,
-        "assists": 2,
-        "points": 3
       },
       {
         "player_id": "20230270",
@@ -880,10 +868,22 @@
         "position": "DF",
         "back_no": 99,
         "age": 27,
-        "apps": 28,
-        "goals": 0,
+        "apps": 29,
+        "goals": 1,
         "assists": 2,
-        "points": 2
+        "points": 3
+      },
+      {
+        "player_id": "20180057",
+        "departed": false,
+        "name": "최병찬",
+        "position": "FW",
+        "back_no": 96,
+        "age": 30,
+        "apps": 25,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
       }
     ],
     "goal_share": 0.25
@@ -893,7 +893,7 @@
     "total": 102478,
     "games": 17,
     "home_fans_avg": 5613,
-    "away_fans_avg": 564
+    "away_fans_avg": 612
   },
   "context": {
     "band": "파이널A 경쟁",

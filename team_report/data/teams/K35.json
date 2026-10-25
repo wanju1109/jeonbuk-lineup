@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-25T04:25:26+09:00",
+  "generated_at": "2026-10-26T04:32:20+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -171,21 +171,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 4,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 7,
+        "rank": 8,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 7,
+        "rank": 8,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -401,7 +401,7 @@
         "gd": -8
       }
     ],
-    "best_rank": 4,
+    "best_rank": 7,
     "worst_rank": 11,
     "first_half": {
       "played": 16,
@@ -794,7 +794,7 @@
         "position": "MF",
         "back_no": 55,
         "age": 27,
-        "apps": 30,
+        "apps": 31,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -806,7 +806,7 @@
         "position": "FW",
         "back_no": 48,
         "age": 24,
-        "apps": 23,
+        "apps": 24,
         "goals": 2,
         "assists": 1,
         "points": 3
@@ -818,7 +818,7 @@
         "position": "FW",
         "back_no": 21,
         "age": 28,
-        "apps": 24,
+        "apps": 25,
         "goals": 2,
         "assists": 0,
         "points": 2
@@ -862,25 +862,25 @@
         "points": 3
       },
       {
-        "player_id": "20220138",
-        "departed": false,
-        "name": "강민규",
-        "position": "FW",
-        "back_no": 49,
-        "age": 28,
-        "apps": 9,
-        "goals": 0,
-        "assists": 2,
-        "points": 2
-      },
-      {
         "player_id": "20230157",
         "departed": false,
         "name": "정재민",
         "position": "FW",
         "back_no": 57,
         "age": 24,
-        "apps": 18,
+        "apps": 19,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
+      },
+      {
+        "player_id": "20220138",
+        "departed": false,
+        "name": "강민규",
+        "position": "FW",
+        "back_no": 49,
+        "age": 28,
+        "apps": 10,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -892,7 +892,7 @@
     "avg": 2167,
     "total": 34669,
     "games": 16,
-    "home_fans_avg": 1528,
+    "home_fans_avg": 1466,
     "away_fans_avg": 212
   },
   "context": {
