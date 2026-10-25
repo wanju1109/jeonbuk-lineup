@@ -278,6 +278,66 @@ def period_summary(played: list[dict], start: str, end: str) -> dict:
     }
 
 
+def notables(lm: dict | None) -> list[dict]:
+    """지난 경기에서 기사가 될 만한 기록상의 사건: 1군 데뷔·시즌 첫 출전, 시즌 첫 골, 오랜만의 복귀.
+    c_report 경기 파일(올 시즌 리그)과 선수 프로필(통산 기록)로 판단한다. AI는 이걸 기사 후보로 쓰고 사실은 기사로 확인한다."""
+    if not lm or not lm.get("lineup"):
+        return []
+    side = "home" if lm["home"] == "전북" else "away"
+    idx = [m for m in load("c_report/data/index.json")["matches"] if m.get("score") and m["date"] < lm["date"]]
+    prev_apps: dict[str, list[str]] = defaultdict(list)
+    prev_goals: dict[str, int] = defaultdict(int)
+    for mi in idx:
+        f = ROOT / "c_report" / "data" / f"{mi['game_id']}.json"
+        if not f.exists():
+            continue
+        g = load(f"c_report/data/{mi['game_id']}.json")
+        s = "home" if g["meta"]["home"]["name"] == "전북" else "away"
+        for p in g["lineup"][s]:
+            if (p.get("minutes") or 0) > 0:
+                prev_apps[p["player_id"]].append(mi["date"])
+        ha = "H" if s == "home" else "A"
+        for e in g["events"]:
+            if e.get("TYPE_CD") == "ST" and e.get("TYPE_DETAIL_CD") == "GL" and e.get("HA_CODE") == ha and e.get("OWN_GOAL_CODE") != "Y":
+                prev_goals[e["PLAYER_ID"]] += 1
+    scorers = {g["player"] for g in lm.get("goals", []) if g["side"] == ("H" if side == "home" else "A") and not g.get("og")}
+    out = []
+    for p in lm["lineup"][side]:
+        if (p.get("minutes") or 0) <= 0:
+            continue
+        pid, name = p["player_id"], p["name"]
+        prof = {}
+        try:
+            prof = load(f"player_report/data/players/{pid}.json")
+        except FileNotFoundError:
+            pass
+        career = (prof.get("summary") or {}).get("total", {}).get("apps")
+        base = {"player_id": pid, "name": name, "back_no": p.get("back_no"), "minutes": p.get("minutes"),
+                "in": p.get("in_label") or ("선발" if p.get("starter") else ""), "birth": prof.get("birth"), "position": prof.get("position")}
+        if not prev_apps[pid]:
+            kind = "1군 데뷔 가능성 큼(통산 출전 기록 없음)" if not career else "시즌 첫 출전"
+            out.append({**base, "kind": kind})
+        elif len(prev_apps[pid]) and (dt.date.fromisoformat(lm["date"]) - dt.date.fromisoformat(prev_apps[pid][-1])).days >= 45:
+            out.append({**base, "kind": f"{(dt.date.fromisoformat(lm['date']) - dt.date.fromisoformat(prev_apps[pid][-1])).days}일 만의 출전(복귀)"})
+        if name in scorers and prev_goals[pid] == 0:
+            out.append({**base, "kind": "시즌 첫 골"})
+    return out
+
+
+def recent_issues(no: int, n: int = 3) -> list[dict]:
+    """직전 n개 호에서 다룬 주제(1면 제목, 면, 기사 제목). 새 사실 없이 같은 이야기를 반복하지 않게 루틴에 보여 준다."""
+    out = []
+    for k in range(max(1, no - n), no):
+        f = ROOT / "newspaper" / "issues" / f"{k}.json"
+        if not f.exists():
+            continue
+        d = json.loads(f.read_text(encoding="utf-8"))
+        titles = [b.get("title") for p in d["pages"] for b in p["blocks"] if b.get("title")]
+        titles += [i.get("title") for p in d["pages"] for b in p["blocks"] for i in (b.get("items") or []) if i.get("tag") in ("공식", "보도", "설", "바람")]
+        out.append({"no": k, "date": d["date"], "headline": d["headline"], "tabs": [p["tab"] for p in d["pages"]], "titles": [x for x in titles if x][:40]})
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="발행일(KST). 기본은 오늘")
@@ -340,6 +400,8 @@ def main() -> None:
     ctx = {
         "date": today.isoformat(),
         "specials": specials,
+        "notables": notables(lm) if (lm and lm["date"] == yesterday) else [],
+        "recent_issues": recent_issues(issue_no(today)),
         "weekday": WD[today.weekday()],
         "no": issue_no(today),
         "matchday_after": bool(lm and lm["date"] == yesterday),
@@ -362,7 +424,7 @@ def main() -> None:
     }
     Path(args.out).write_text(json.dumps(ctx, ensure_ascii=False, indent=1), encoding="utf-8")
     b = ctx["boards"]
-    print(f"context: 제{ctx['no']}호 {ctx['date']} 경기다음날={ctx['matchday_after']} 경기당일={ctx['matchday_today']} 특집={specials} "
+    print(f"context: 제{ctx['no']}호 {ctx['date']} 경기다음날={ctx['matchday_after']} 경기당일={ctx['matchday_today']} 특집={specials} 기록이슈={len(ctx['notables'])} "
           f"커뮤니티글={len(b.get('posts', []))} 로그인={b.get('logged_in', [])} 에버그린로그인={ctx['evergreen'].get('logged_in')} -> {args.out}")
 
 

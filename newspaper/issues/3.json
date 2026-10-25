@@ -135,7 +135,7 @@
   },
   {
    "tab": "경기 리포트",
-   "teaser": "먼저 맞고 끝에 따라붙었다, 취소된 역전골까지",
+   "teaser": "먼저 맞고 끝에 따라붙었다, 취소된 역전골까지 · N팀 출신 황승준 1군 데뷔",
    "folio": "K리그1 33R · 안양 1-1 전북",
    "blocks": [
     {
@@ -265,6 +265,86 @@
      "caption": null,
      "big": null,
      "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "황승준 · DF 27번",
+      "2005년생, N팀 출신",
+      "후반 17분 교체 투입"
+     ],
+     "image": "player:20250079",
+     "caption": "1군 첫 경기",
+     "big": "데뷔",
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "variant": "green",
+     "kicker": "새 얼굴",
+     "title": "N팀에서 올라온 황승준, 안양에서 1군 데뷔",
+     "dek": null,
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "24일 안양 원정에서 전북 벤치의 27번이 처음 1군 그라운드를 밟았다. 2005년생 수비수 황승준이다. 후반 17분 이상명 대신 들어가 추가시간까지 약 38분을 뛰었다.",
+      "황승준은 구단 N팀(2군)에서 뛰다 이번 경기 교체 명단에 처음 이름을 올렸다. 김태환·김태현이 빠진 오른쪽 수비 자리에 생긴 공백이 기회가 됐다.",
+      "정정용 감독은 경기 전 N팀에서 두각을 나타낸 선수들을 꾸준히 1군에 올려 훈련시키고 있다고 했다. 공백이 생겼을 때 그 자리를 잡는 문화가 자리 잡기를 바란다는 말도 덧붙였다.",
+      "파이널 라운드 5경기와 ACLE가 겹치는 빡빡한 일정이다. 오른쪽 수비 선택지가 하나 늘었다는 점에서 이번 데뷔는 숫자 이상의 의미가 있다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "list",
+     "span": 12,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": "출처",
+       "title": "황승준 콜업과 정정용 감독 발언",
+       "text": "경기 전 인터뷰",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261024n06458",
+       "value": null
+      },
+      {
+       "tag": "출처",
+       "title": "교체 투입 시점",
+       "text": "안양전 경기 기사",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/24/2026102412394632190",
+       "value": null
+      }
+     ]
     }
    ]
   },
@@ -1501,28 +1581,6 @@
        "value": null
       },
       {
-       "tag": "보도",
-       "title": "벤투 감독 전북 부임설",
-       "text": "18일 보도로 커졌다. 구단은 긍정도 부정도 하지 않았다.",
-       "source_name": "OSEN(네이트)",
-       "source_url": "https://sports.news.nate.com/view/20261018n08400",
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "tag": "보도",
-       "title": "코스타 제주 감독 \"루머로 알고 있다\"",
-       "text": "벤투 사단 출신 감독의 답. 확인된 접촉은 없다.",
-       "source_name": "스포티비뉴스",
-       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
        "tag": "설",
        "title": "파이널 라운드 끝나면 감독 거취 결론",
        "text": "커뮤니티에서 도는 이야기. 출처가 없다.",
@@ -1585,17 +1643,6 @@
       {
        "text": "국내축구 게시판 인기글에 전북의 올 시즌을 평가하는 제목이 올랐다. 반응은 엇갈렸다.",
        "label": "국내축구 게시판",
-       "tag": null,
-       "title": null,
-       "date": null,
-       "state": null,
-       "source_name": null,
-       "source_url": null,
-       "value": null
-      },
-      {
-       "text": "벤투설은 새 근거 없이 연봉 이야기만 반복된다는 분위기다.",
-       "label": "감독설",
        "tag": null,
        "title": null,
        "date": null,
@@ -1795,17 +1842,6 @@
        "value": null
       },
       {
-       "title": "벤투설",
-       "text": "코스타 감독 반응",
-       "source_name": "OSEN(네이트)",
-       "source_url": "https://sports.news.nate.com/view/20261018n08400",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
        "title": "대회요강",
        "text": "파이널 라운드 방식",
        "source_name": "한국프로축구연맹",
@@ -1858,6 +1894,12 @@
    "src": "../korea_coach/img/c01.jpg",
    "alt": "정정용 감독",
    "credit": "사진 Wikimedia Commons"
+  },
+  "player:20250079": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250079.png",
+   "alt": "황승준",
+   "back_no": 27,
+   "credit": "사진 전북현대 공식 선수 프로필"
   }
  },
  "data": {
