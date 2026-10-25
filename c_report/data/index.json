@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T16:35:05.763603+00:00",
+  "updated_at": "2026-10-25T17:57:54.626395+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -493,8 +493,8 @@
       "attendance": 9126,
       "file": "./data/194.json",
       "label": "안양 VS 전북 (194, 10/24)",
-      "attendance_home": 9126,
-      "attendance_away": 0
+      "attendance_home": 7711,
+      "attendance_away": 1415
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T17:43:21.899969+00:00",
+  "updated_at": "2026-10-25T17:57:53.406643+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -56,8 +56,8 @@
       "score": "1:1",
       "venue": "서울 월드컵 경기장",
       "attendance": 30022,
-      "attendance_home": 30022,
-      "attendance_away": 0,
+      "attendance_home": 28699,
+      "attendance_away": 1323,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -966,8 +966,8 @@
       "score": "1:1",
       "venue": "안양 종합 운동장",
       "attendance": 9126,
-      "attendance_home": 9126,
-      "attendance_away": 0,
+      "attendance_home": 7711,
+      "attendance_away": 1415,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -1638,8 +1638,8 @@
       "score": "0:3",
       "venue": "부천 종합 운동장",
       "attendance": 6076,
-      "attendance_home": 6076,
-      "attendance_away": 0,
+      "attendance_home": 5789,
+      "attendance_away": 287,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -2674,8 +2674,8 @@
       "score": "1:2",
       "venue": "김천 종합 운동장",
       "attendance": 1614,
-      "attendance_home": 1614,
-      "attendance_away": 0,
+      "attendance_home": 625,
+      "attendance_away": 989,
       "weekday": "주말",
       "meet_seq": 1
     },
