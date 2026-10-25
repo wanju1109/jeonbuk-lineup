@@ -101,6 +101,19 @@ def preview_job(today: dt.date) -> dict | None:
     return {"key": f"preview:{m['game_id']}", "title": title, "html": body("전북 매치 프리뷰", url, 920, lines)}
 
 
+def record_in_repo(key: str, url: str) -> None:
+    """클라우드 점검 루틴이 볼 수 있게 저장소에도 게시 기록을 남긴다(newspaper/issues/reports_posted.json)."""
+    path = ROOT / "newspaper" / "issues" / "reports_posted.json"
+    data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    data[key] = url
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    git = ["git", "-C", str(ROOT)]
+    subprocess.run(git + ["add", str(path)], check=False)
+    if subprocess.run(git + ["commit", "-q", "-m", f"chore(newspaper): {key} 에버그린 게시 기록"], check=False).returncode == 0:
+        subprocess.run(git + ["pull", "-q", "--rebase"], check=False)
+        subprocess.run(git + ["push", "-q"], check=False)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -130,6 +143,7 @@ def main() -> None:
             if not args.dry_run:
                 state[j["key"]] = result
                 STATE.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+                record_in_repo(j["key"], result)
     except EvergreenError as e:
         log(f"리포트·프리뷰 게시 실패: {e}")
         sys.exit(1)
