@@ -715,7 +715,8 @@
       );
     };
 
-    const weatherText = meta.weather || (meta.temperature_c != null ? `${meta.temperature_c}℃` : "");
+    // 포털은 기온이 비면 0℃로 준다 → "비 0℃"의 0℃는 떼고, 0℃ 단독도 표시하지 않는다
+    const weatherText = String(meta.weather || "").replace(/\s*0(\.0)?\s*℃$/, "") || (meta.temperature_c ? `${meta.temperature_c}℃` : "");
     const weatherHtml = weatherText
       ? `<span class="fact-weather">${weatherIconSvg(weatherText)}<span>${escapeHtml(weatherText)}</span></span>`
       : "";

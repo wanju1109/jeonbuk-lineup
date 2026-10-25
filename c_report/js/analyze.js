@@ -345,7 +345,7 @@ const Analyze = (() => {
     const nums = (index?.matches || [])
       .filter((m) => clubNameKey(m.away) === key)
       .map((m) => Number(m.attendance_away))
-      .filter((n) => Number.isFinite(n) && n >= 0);
+      .filter((n) => Number.isFinite(n) && n > 0);
     if (!nums.length) return null;
     const sum = nums.reduce((s, n) => s + n, 0);
     return { avg: sum / nums.length, games: nums.length };
@@ -416,7 +416,8 @@ const Analyze = (() => {
     }
     let away = Number(meta?.attendance_away);
     let home = Number(meta?.attendance_home);
-    if (!Number.isFinite(away) || away < 0) away = NaN;
+    // 관중 기록에서 원정 0명은 '아직 집계 안 됨'으로 온다 → 표시하지 않는다
+    if (!Number.isFinite(away) || away <= 0) away = NaN;
     if (!Number.isFinite(home) || home < 0) {
       home = Number.isFinite(away) ? Math.max(total - away, 0) : NaN;
     }
