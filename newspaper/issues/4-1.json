@@ -1,0 +1,1298 @@
+{
+ "no": "4-1",
+ "date": "2026-10-26",
+ "matchday_after": false,
+ "edition_note": "특별호",
+ "headline": "전북이 키운 수비수, 황승준의 첫 38분",
+ "summary": "황승준 특별호: 데뷔전 38분, 유스에서 1군까지, 오른쪽 수비 경쟁",
+ "strip": [
+  "특별호 · 황승준 1군 데뷔",
+  "2005년생 · 전북 유스(금산중·영생고)",
+  "2025 우선지명 · N팀 출신"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제4-1호 · 특별호 · 2026.10.26",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "rule_top": false,
+     "variant": null,
+     "kicker": "특별호 · 새 얼굴",
+     "title": "전북이 키운 수비수, 황승준의 첫 38분",
+     "dek": "금산중과 영생고, 용인대를 거쳐 우선지명으로 돌아온 2005년생. 24일 안양에서 그가 1군 그라운드를 처음 밟았다.",
+     "byline": null,
+     "paragraphs": null,
+     "image": "player:20250079",
+     "caption": "황승준(전북현대 27번)",
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": false,
+     "variant": "lead",
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "안양이 1-0으로 앞서던 24일 후반 17분, 전북 벤치에서 27번이 일어섰다. 2005년생 수비수 황승준이다. 이상명과 교체돼 오른쪽 수비 자리에 섰고, 추가시간까지 약 38분을 뛰었다. 전북은 후반 추가시간 티아고의 동점골로 1-1을 만들었다.",
+      "황승준은 전북이 직접 키운 선수다. U-15 금산중과 U-18 영생고에서 자랐고, 용인대에서 한 시즌을 뛴 뒤 2025시즌을 앞두고 우선지명으로 돌아왔다. 그해 전북 신인 가운데 우선지명은 그 한 명뿐이었다.",
+      "프로 입단 뒤에는 N팀에서 두 시즌 가까이 기다렸다. 김태환과 김태현이 빠진 오른쪽 수비에 공백이 생기자 정정용 감독이 그를 처음 교체 명단에 넣었다. 이 특별호는 그 38분과, 거기까지 온 길을 정리했다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": "숫자로 본 황승준",
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": null,
+       "text": null,
+       "label": "출생 연도 · 21세",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": "2005"
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": null,
+       "label": "등번호 · 수비수",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": "27번"
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": null,
+       "label": "데뷔전 출전 시간",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": "38분"
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": null,
+       "label": "데뷔전 패스 성공",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": "7/8"
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": null,
+       "label": "데뷔전 수비 기여",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": "7회"
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": null,
+       "label": "2025 전북 우선지명자",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": "유일"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tab": "데뷔전 그날",
+   "teaser": "0-1에서 들어가 1-1로 끝난 38분",
+   "folio": "K리그1 33R · 안양 1-1 전북 · 2026.10.24",
+   "blocks": [
+    {
+     "type": "chart",
+     "span": 12,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": "scoreboard",
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 7,
+     "rule_top": false,
+     "variant": null,
+     "kicker": "경기 흐름",
+     "title": "0-1에서 들어가, 1-1로 끝났다",
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": "안양 김운 선제골",
+       "text": "전북은 0-1로 전반을 마쳤다.",
+       "label": null,
+       "date": "전반 45+1'",
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "이승우 투입",
+       "text": "정정용 감독이 공격에 변화를 줬다.",
+       "label": null,
+       "date": "후반 시작",
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "황승준 1군 데뷔",
+       "text": "이상명 대신 오른쪽 수비로. 김진규도 같은 시각 들어갔다.",
+       "label": null,
+       "date": "후반 17분",
+       "state": "hot",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/24/2026102412394632190",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "콤파뇨 복귀",
+       "text": "69일 만에 그라운드로 돌아왔다.",
+       "label": null,
+       "date": "후반 28분",
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "티아고 동점골",
+       "text": "전북이 패배 직전에서 승점 1을 챙겼다.",
+       "label": null,
+       "date": "후반 90+2'",
+       "state": "hot",
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ]
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "후반 17분 투입",
+      "오른쪽 수비",
+      "추가시간까지 소화"
+     ],
+     "image": "player:20250079",
+     "caption": "데뷔전 출전 기록",
+     "big": "38분",
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": "데뷔전 38분, 무엇을 했나",
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": "K리그 데이터포털 부가기록. 수비 기여 7회 = 커트 3 + 태클 1 + 가로채기 1 + 걷어내기 2.",
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": null,
+       "text": "7회 (8회 중)",
+       "label": "패스 성공",
+       "date": null,
+       "state": "green",
+       "source_name": null,
+       "source_url": null,
+       "value": 7
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "3회",
+       "label": "커트",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 3
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "1회",
+       "label": "태클 성공",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 1
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "1회",
+       "label": "가로채기",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 1
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "2회",
+       "label": "걷어내기",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 2
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "2회",
+       "label": "파울 유도",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 2
+      }
+     ]
+    },
+    {
+     "type": "article",
+     "span": 6,
+     "rule_top": true,
+     "variant": "green",
+     "kicker": "분석",
+     "title": "화려하진 않았지만 실수도 없었다",
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "데뷔전 수비수에게 가장 중요한 건 실수를 하지 않는 것이다. 황승준은 패스 8번 중 7번을 동료에게 연결했고, 공을 빼앗긴 장면은 거의 없었다.",
+      "수비에서는 커트 3번과 가로채기 1번으로 안양의 패스를 끊었다. 태클은 2번 시도해 1번 성공했고, 걷어내기도 2번 했다. 상대 반칙을 2번 끌어내 전북이 숨을 고를 시간도 벌었다.",
+      "전북이 동점을 노리며 앞으로 몰아칠 때 그는 오른쪽 뒷공간을 지켰다. 첫 경기에서 맡은 역할을 차분히 해낸 38분이었다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "유스에서 1군까지",
+   "teaser": "금산중 · 영생고 · 용인대 · 우선지명 · N팀",
+   "folio": "전북 유스가 걸어온 길",
+   "blocks": [
+    {
+     "type": "timeline",
+     "span": 7,
+     "rule_top": false,
+     "variant": null,
+     "kicker": "성장 기록",
+     "title": "유스에서 1군까지, 8년",
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": "U-15 금산중",
+       "text": "전북 유스의 중학교 팀에서 축구를 시작했다.",
+       "label": null,
+       "date": "2018~2020",
+       "state": null,
+       "source_name": "나무위키",
+       "source_url": "https://namu.wiki/w/%ED%99%A9%EC%8A%B9%EC%A4%80",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "U-18 영생고",
+       "text": "전북 유니폼을 입고 고교 무대를 뛰었다.",
+       "label": null,
+       "date": "2021~2023",
+       "state": null,
+       "source_name": "나무위키",
+       "source_url": "https://namu.wiki/w/%ED%99%A9%EC%8A%B9%EC%A4%80",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "용인대",
+       "text": "대학에서 한 시즌을 보내며 성인 무대를 준비했다.",
+       "label": null,
+       "date": "2024",
+       "state": null,
+       "source_name": "나무위키",
+       "source_url": "https://namu.wiki/w/%ED%99%A9%EC%8A%B9%EC%A4%80",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "우선지명으로 전북 입단",
+       "text": "그해 전북 신인 가운데 유일한 우선지명이었다.",
+       "label": null,
+       "date": "2025",
+       "state": "hot",
+       "source_name": "나무위키",
+       "source_url": "https://namu.wiki/w/%ED%99%A9%EC%8A%B9%EC%A4%80",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "N팀에서 경험",
+       "text": "2군 무대에서 경기 감각을 쌓았다.",
+       "label": null,
+       "date": "2025~2026",
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "1군 데뷔",
+       "text": "안양 원정 후반 17분 교체 투입, 약 38분 출전.",
+       "label": null,
+       "date": "2026.10.24",
+       "state": "hot",
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ]
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": "commons:전주월드컵경기장:13",
+     "caption": "전주월드컵경기장. 황승준이 언젠가 홈 데뷔를 치를 무대",
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "알아두면 좋은 것",
+     "title": "우선지명이란?",
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "K리그 구단은 자기 유스 팀(U-18) 출신 선수를 신인 드래프트 전에 먼저 데려갈 수 있다. 이를 우선지명이라 한다.",
+      "구단이 유스 시절부터 지켜본 선수를 놓치지 않으려 쓰는 제도다. 황승준은 대학을 거친 뒤 이 제도로 전북에 돌아왔다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 6,
+     "rule_top": true,
+     "variant": "green",
+     "kicker": "기자 수첩",
+     "title": "'기회를 잡는 문화', 첫 사례가 되다",
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "정정용 감독은 안양전에 앞서 N팀에서 두각을 나타낸 선수들을 꾸준히 1군에 올려 훈련시키고 있다고 했다. 공백이 생겼을 때 그 자리를 잡고 올라서는 문화가 전북에 자리 잡기를 바란다는 말도 했다.",
+      "황승준은 그 말이 나온 바로 그날 데뷔했다. 유스, 대학, 우선지명, N팀, 1군. 구단이 그려 온 길을 처음부터 끝까지 밟아 올라온 셈이다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "오른쪽 수비",
+   "teaser": "김태환 · 김태현 · 이상명, 그리고 황승준",
+   "folio": "전북 오른쪽 수비 자원 정리",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "rule_top": false,
+     "variant": null,
+     "kicker": "포지션 경쟁",
+     "title": "오른쪽 수비, 이제 네 명이다",
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "올 시즌 전북 오른쪽 수비의 중심은 김태환이었다. 리그 24경기에 나섰다. 김태현이 19경기로 뒤를 받쳤고, 2003년생 이상명이 6경기에서 기회를 얻었다.",
+      "안양전에서는 김태환과 김태현이 함께 빠지면서 이상명이 선발로 나섰고, 황승준이 그 뒤를 이었다. 파이널 라운드 5경기와 ACLE를 함께 치르는 빡빡한 일정에서 선택지가 하나 늘었다.",
+      "1989년생 김태환과 2005년생 황승준은 16살 차이다. 베테랑이 길을 열어 두는 사이 유스 출신 막내가 따라붙는 그림이다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": "commons:김태환:250503",
+     "caption": "오른쪽 수비의 중심 김태환",
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 12,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": "2026 리그 출전 경기 수",
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": "K리그 데이터포털 경기 기록 기준(교체 출전 포함). 괄호는 출생 연도.",
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": null,
+       "text": "24경기",
+       "label": "김태환 (1989)",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 24
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "19경기",
+       "label": "김태현 (1996)",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 19
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "6경기",
+       "label": "이상명 (2003)",
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": 6
+      },
+      {
+       "tag": null,
+       "title": null,
+       "text": "1경기",
+       "label": "황승준 (2005)",
+       "date": null,
+       "state": "hot",
+       "source_name": null,
+       "source_url": null,
+       "value": 1
+      }
+     ]
+    },
+    {
+     "type": "cutout",
+     "span": 6,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "김태현",
+      "1996년생"
+     ],
+     "image": "player:20180185",
+     "caption": null,
+     "big": "77",
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 6,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "이상명",
+      "2003년생"
+     ],
+     "image": "player:20250159",
+     "caption": null,
+     "big": "24",
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "다음 장면",
+   "teaser": "퀴즈 · 오늘의 질문 · 출처",
+   "folio": "특별호 마무리",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "rule_top": false,
+     "variant": null,
+     "kicker": "앞으로",
+     "title": "첫 38분, 그다음은",
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "전북은 27일 베이징 궈안 원정(ACLE)을 치르고 이어서 K리그1 파이널 라운드에 들어간다. 오른쪽 수비 자원 사정에 따라 황승준에게 또 기회가 올 수 있다.",
+      "데뷔전은 시작일 뿐이다. 다음 출전에서 첫 선발, 첫 홈경기, 첫 공격 포인트까지 하나씩 채워 가는 과정을 조간이 계속 지켜보겠다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 5,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": "유스에서 N팀을 거쳐 1군까지, 구단이 그린 길을 그대로 밟은 38분",
+     "dek": null,
+     "byline": "전주성 조간 한 줄 평",
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quiz",
+     "span": 6,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": "특별호 퀴즈",
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": "Q1. 황승준이 거친 전북 U-18 팀은?",
+       "text": "영생고.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "Q2. 2025년 전북 신인 중 우선지명자는 몇 명?",
+       "text": "1명. 황승준뿐이었다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "Q3. 데뷔전에서 황승준이 성공한 패스는?",
+       "text": "8번 중 7번.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ]
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "오늘의 질문",
+     "title": "황승준의 첫 선발, 언제쯤일까?",
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "파이널 라운드와 ACLE가 이어지는 11월. 댓글로 예상을 남겨 주세요."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": null,
+     "kicker": null,
+     "title": "출처",
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": "네이트 스포츠",
+       "text": "안양전 앞 정정용 감독 인터뷰(황승준 콜업)",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "기사",
+       "source_url": "https://m.news.nate.com/view/20261024n06458",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "머니투데이",
+       "text": "안양전 경기 기사(교체 투입 시점)",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "기사",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/24/2026102412394632190",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "나무위키",
+       "text": "출신 학교·입단 경로",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "문서",
+       "source_url": "https://namu.wiki/w/%ED%99%A9%EC%8A%B9%EC%A4%80",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "K리그 데이터포털",
+       "text": "출전 시간·패스·수비 기록",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20250079": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250079.png",
+   "alt": "황승준",
+   "back_no": 27,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20180185": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180185.png",
+   "alt": "김태현",
+   "back_no": 77,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20250159": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250159.png",
+   "alt": "이상명",
+   "back_no": 24,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 33,
+    "w": 20,
+    "d": 7,
+    "l": 6,
+    "gf": 61,
+    "ga": 29,
+    "pts": 67,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 33,
+    "w": 15,
+    "d": 6,
+    "l": 12,
+    "gf": 52,
+    "ga": 47,
+    "pts": 51,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 33,
+    "w": 13,
+    "d": 10,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 49,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 33,
+    "w": 12,
+    "d": 12,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 48,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 33,
+    "w": 11,
+    "d": 15,
+    "l": 7,
+    "gf": 40,
+    "ga": 30,
+    "pts": 48,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 43,
+    "ga": 35,
+    "pts": 46,
+    "rank": 6,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 39,
+    "ga": 37,
+    "pts": 46,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 33,
+    "w": 10,
+    "d": 13,
+    "l": 10,
+    "gf": 40,
+    "ga": 48,
+    "pts": 43,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 33,
+    "w": 11,
+    "d": 9,
+    "l": 13,
+    "gf": 30,
+    "ga": 39,
+    "pts": 42,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 33,
+    "w": 5,
+    "d": 19,
+    "l": 9,
+    "gf": 33,
+    "ga": 41,
+    "pts": 34,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 33,
+    "w": 7,
+    "d": 11,
+    "l": 15,
+    "gf": 32,
+    "ga": 47,
+    "pts": 32,
+    "rank": 11,
+    "gd": -15
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 33,
+    "w": 3,
+    "d": 12,
+    "l": 18,
+    "gf": 30,
+    "ga": 69,
+    "pts": 21,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 4,
+   "pts": 48,
+   "w": 12,
+   "d": 12,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "인천 1-1"
+   },
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": null,
+  "last": {
+   "game_id": "194",
+   "date": "2026-10-24",
+   "round": 33,
+   "home": "안양",
+   "away": "전북",
+   "venue": "안양 종합",
+   "attendance": 9126,
+   "comp": "K리그1 33R",
+   "score": [
+    1,
+    1
+   ],
+   "date_label": "10월 24일(토)",
+   "weather": "비",
+   "referee": "고형진",
+   "managers": {
+    "home": "유병훈",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     7,
+     "AST",
+     79.2,
+     27.9
+    ],
+    [
+     "A",
+     1,
+     9,
+     "MST",
+     91.1,
+     34.0
+    ],
+    [
+     "A",
+     1,
+     13,
+     "MST",
+     77.0,
+     60.1
+    ],
+    [
+     "H",
+     1,
+     26,
+     "MST",
+     92.8,
+     48.1
+    ],
+    [
+     "A",
+     1,
+     31,
+     "MST",
+     89.5,
+     31.3
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     88.3,
+     53.8
+    ],
+    [
+     "H",
+     1,
+     39,
+     "MST",
+     86.4,
+     52.4
+    ],
+    [
+     "H",
+     1,
+     45,
+     "GL",
+     91.5,
+     61.3
+    ],
+    [
+     "H",
+     2,
+     46,
+     "AST",
+     83.8,
+     36.0
+    ],
+    [
+     "A",
+     2,
+     48,
+     "AST",
+     78.2,
+     57.7
+    ],
+    [
+     "H",
+     2,
+     63,
+     "MST",
+     90.3,
+     29.1
+    ],
+    [
+     "A",
+     2,
+     66,
+     "MST",
+     79.2,
+     78.1
+    ],
+    [
+     "A",
+     2,
+     79,
+     "AST",
+     88.2,
+     51.5
+    ],
+    [
+     "A",
+     2,
+     83,
+     "BT",
+     83.3,
+     57.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     92.0,
+     59.4
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     97.8,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     89,
+     "MST",
+     90.8,
+     45.8
+    ],
+    [
+     "A",
+     2,
+     91,
+     "GL",
+     96.3,
+     50.4
+    ],
+    [
+     "A",
+     2,
+     94,
+     "MST",
+     74.2,
+     45.6
+    ],
+    [
+     "H",
+     2,
+     98,
+     "BT",
+     77.5,
+     31.3
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "김운",
+     "label": "45+1'",
+     "minute": 45.5,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "티아고",
+     "label": "90+2'",
+     "minute": 92,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     11
+    ],
+    [
+     "유효슈팅",
+     4,
+     4
+    ],
+    [
+     "패스 성공",
+     187,
+     335
+    ],
+    [
+     "패스 성공률",
+     74.5,
+     85.7,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     7,
+     4
+    ],
+    [
+     "반칙",
+     15,
+     6
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": []
+ }
+}

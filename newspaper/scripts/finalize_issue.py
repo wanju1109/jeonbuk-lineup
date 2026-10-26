@@ -127,8 +127,9 @@ def finalize(ctx: dict, issue: dict, lib: dict) -> Path:
 
     idx_path = NP / "issues" / "index.json"
     idx = json.loads(idx_path.read_text(encoding="utf-8")) if idx_path.exists() else {"issues": []}
-    idx["issues"] = [i for i in idx["issues"] if i["no"] != ctx["no"]] + [{"no": ctx["no"], "date": ctx["date"], "headline": issue["headline"]}]
-    idx["issues"].sort(key=lambda i: i["no"])
+    idx["issues"] = [i for i in idx["issues"] if str(i["no"]) != str(ctx["no"])] + [{"no": ctx["no"], "date": ctx["date"], "headline": issue["headline"]}]
+    # 특별호("4-1")가 섞여 있어도 4 → 4-1 → 5 순서가 되게
+    idx["issues"].sort(key=lambda i: tuple(int(x) for x in str(i["no"]).split("-")))
     idx_path.write_text(json.dumps(idx, ensure_ascii=False, indent=1), encoding="utf-8")
     return path
 

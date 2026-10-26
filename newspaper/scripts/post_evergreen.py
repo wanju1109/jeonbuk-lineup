@@ -26,7 +26,7 @@ PAGES = "https://wanju1109.github.io/jeonbuk-lineup/newspaper/"
 IFRAME_HEIGHT = 1500  # 고정 높이. 신문이 더 길면 칸 안에서 스크롤한다(사용자 선택)
 
 
-def body_html(no: int, url: str, summary: str) -> str:
+def body_html(no, url: str, summary: str) -> str:
     u = html.escape(url, quote=True)
     return (
         f'<p><b>전주성 조간 제{no}호</b> · {html.escape(summary)}</p>'
@@ -38,14 +38,14 @@ def body_html(no: int, url: str, summary: str) -> str:
     )
 
 
-def wait_for_pages(no: int, timeout: int = 900) -> None:
+def wait_for_pages(no, timeout: int = 900) -> None:
     """GitHub Pages가 새 호 JSON을 내보낼 때까지 기다린다."""
     url = f"{PAGES}issues/{no}.json"
     start = time.time()
     while time.time() - start < timeout:
         try:
             r = requests.get(url, params={"t": int(time.time())}, timeout=20)
-            if r.ok and r.json().get("no") == no:
+            if r.ok and str(r.json().get("no")) == str(no):
                 print(f"Pages 반영 확인 ({int(time.time() - start)}초)")
                 return
         except (requests.RequestException, ValueError):
@@ -56,7 +56,7 @@ def wait_for_pages(no: int, timeout: int = 900) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--no", type=int, required=True)
+    ap.add_argument("--no", required=True, help="호수. 특별호는 4-1처럼")
     ap.add_argument("--dry-run", action="store_true", help="로그인·글쓰기 화면만 확인하고 올리지 않는다")
     ap.add_argument("--wait-pages", action="store_true")
     ap.add_argument("--force", action="store_true", help="이미 올린 호도 다시 올린다")
