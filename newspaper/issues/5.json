@@ -1,0 +1,1492 @@
+{
+ "no": 5,
+ "date": "2026-10-27",
+ "matchday_after": false,
+ "headline": "ACLE 3차전 오늘 밤 베이징 원정, 정정용 감독 승점 목표",
+ "summary": "전북이 27일 밤 9시 15분 베이징 노동자경기장에서 20경기 무패의 베이징 궈안과 ACLE 3차전을 치른다. 26일 발표된 파이널A 일정에서는 31일 대전 홈경기가 첫 판이다.",
+ "strip": [
+  "오늘 21:15 ACLE 3차전 · 베이징 원정",
+  "K리그1 4위 · 승점 48",
+  "파이널A D-4 · 31일 14:00 대전 홈",
+  "ACL 베이징 상대 3승 1무"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제5호 · 2026.10.27",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:Tiago Orobó:250702",
+     "kicker": "ACL 엘리트 리그 스테이지 3차전 · 오늘 21:15",
+     "title": "ACLE 3차전 오늘 밤 베이징 원정, 정정용 감독 승점 목표",
+     "dek": "전북은 25일 베이징에 먼저 들어가 이틀을 준비했다. 상대는 각종 대회 20경기 무패의 베이징 궈안이다.",
+     "caption": "티아고. 24일 안양전 추가시간 동점골로 팀을 구했다(자료 사진, 2025년 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "정정용 감독이 26일 베이징에서 열린 사전 기자회견에서 이번 원정의 목적을 승점이라고 밝혔다. 다만 베이징이 최근 지지 않고 있어 쉽지 않은 경기가 될 것이라고 했다고 중국 매체들이 전했다.",
+      "전북은 경기 이틀 전인 25일 베이징에 도착했다. 24일 안양 원정을 1-1로 마치고 곧장 이동한 일정이다. 킥오프는 27일 한국 시각 밤 9시 15분(현지 8시 15분), 장소는 노동자경기장이다.",
+      "베이징의 몽고메리 감독은 전북의 선수층이 좋고 존중하는 상대라고 했다. 로테이션 여부에는 즉답을 피했다. 베이징은 사흘 전 리그 원정에서 역전승을 거두고 각종 대회 무패를 20경기로 늘렸다.",
+      "아시아 무대 맞대결은 전북이 앞선다. 네 번 만나 3승 1무다. 베이징 원정 두 번은 모두 1-0 승리였다. 전북은 이 경기 뒤 31일 오후 2시 전주에서 대전과 파이널A 첫 경기를 치른다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "21:15",
+       "label": "킥오프(한국 시각)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "20",
+       "label": "베이징 각종 대회 연속 무패(중국 매체)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "3승 1무",
+       "label": "ACL 베이징 상대 전적",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-4",
+       "label": "파이널A 첫 경기 · 31일 대전 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "오늘의 경기",
+   "teaser": "20경기 무패 베이징, 승점이 필요한 전북. 노동자경기장 3차전",
+   "folio": "ACL 엘리트 · 3차전 베이징 궈안 원정",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "경기 전날 두 감독",
+     "title": "몽고메리 감독, 전북 선수층 높이 평가하고 로테이션은 말 아껴",
+     "paragraphs": [
+      "26일 베이징 사전 기자회견의 화두는 체력이었다. 베이징은 사흘 간격으로 리그 원정과 이번 경기를 치른다. 몽고메리 감독은 체력이 남은 선수들이 준비돼 있다고만 했다.",
+      "그는 ACLE 전용 외국인 선수들의 몸 상태가 좋다고 했다. 은콜롤로 등의 이름이 나왔다. 베이징은 1차전 포항을 3-1, 2차전 부리람을 1-0으로 이겼다.",
+      "베이징 쪽은 분위기를 끌어올리고 있다. 중국 매체에 따르면 노동자경기장 북쪽 관중석에는 새 경기장 개장 뒤 처음으로 대형 걸개 응원(티포)이 걸릴 예정이다.",
+      "전북은 1승 1패로 동아시아 10위다. 16강 직행은 8위까지다. 원정에서 승점을 가져오면 남은 다섯 경기 계산이 한결 편해진다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "image": "coach:c01",
+     "big": "승점",
+     "paragraphs": [
+      "베이징 원정 목표는 승점",
+      "상대는 최근 지지 않는 팀",
+      "어려운 경기 예상"
+     ],
+     "caption": "정정용 감독. 26일 베이징 사전 기자회견 발언(중국 매체 보도 요약).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "경기 정보",
+     "items": [
+      {
+       "label": "대회",
+       "value": "ACLE 리그 스테이지 3차전",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "일시",
+       "value": "10월 27일(화) 밤 9시 15분(한국 시각)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "장소",
+       "value": "중국 베이징 노동자경기장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 순위",
+       "value": "동아시아 10위 · 1승 1패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "베이징 순위",
+       "value": "동아시아 3위 · 2승",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "중계",
+       "value": "쿠팡플레이(확인 필요)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "상대 전적 · ACL 맞대결 4경기",
+     "items": [
+      {
+       "label": "전북 승",
+       "value": 3,
+       "text": "3",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "무승부",
+       "value": 1,
+       "text": "1",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "베이징 승",
+       "value": 0,
+       "text": "0",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "2015년 16강 1-1·1-0, 2019년 조별리그 3-1·1-0. 중국 매체도 베이징의 1무 3패로 집계했다.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220244",
+     "big": "90+2'",
+     "paragraphs": [
+      "안양전 추가시간 동점골",
+      "103분 풀타임",
+      "오늘도 최전방 후보"
+     ],
+     "caption": "티아고. 안양전에서 끝까지 뛴 공격수.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220042",
+     "big": "54분",
+     "paragraphs": [
+      "안양전 후반 시작 투입",
+      "공격에 속도를 더했다",
+      "선발 복귀 여부 관심"
+     ],
+     "caption": "이승우. 안양전 교체로 54분을 뛰었다.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 4,
+     "rule_top": true,
+     "title": "참고 · 안양전 선발",
+     "items": [
+      {
+       "label": "GK",
+       "value": "송범근",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "DF",
+       "value": "최우진 · 박지수 · 김영빈 · 이상명",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "MF",
+       "value": "감보아 · 강상윤 · 이영재",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "FW",
+       "value": "이탈로 · 티아고 · 이동준",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "오늘",
+       "value": "선발은 킥오프 1시간 전 공개. 사흘 뒤 대전전이 있어 변화 가능성",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "파이널A 일정",
+   "teaser": "31일 대전 홈으로 시작, 12월 6일 최종전까지 다섯 경기",
+   "folio": "K리그1 · 파이널 라운드 일정 발표",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "26일 연맹 발표",
+     "title": "파이널A는 31일 전주에서 대전과 시작",
+     "paragraphs": [
+      "한국프로축구연맹이 26일 파이널 라운드 일정을 발표했다. 파이널A 첫 경기는 31일 오후 2시 전주월드컵경기장의 전북과 대전 맞대결이다. 3위 대전(승점 49)과 4위 전북(48)의 승점 차는 1점이다.",
+      "전북은 이어 11월 8일 강원 원정, 21일 서울 홈, 29일 울산 원정을 치른다. 최종 38라운드는 12월 6일 오후 2시에 파이널A 여섯 경기가 함께 열린다. 마지막 상대는 인천이다.",
+      "홈 두 경기, 원정 두 경기에 최종전이 남았다. 선두 서울(67)과의 차이는 크다. 2위 울산(51)까지는 3점, 5위 강원(48)과는 같다. 다섯 경기 내내 순위가 오르내릴 수 있는 간격이다.",
+      "대전과는 올 시즌 세 번 만나 1승 1무 1패로 팽팽했다고 매체들은 전했다. 베이징에서 돌아온 뒤 사흘 만에 치르는 경기다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:전주월드컵경기장:13",
+     "caption": "전주월드컵경기장. 31일 파이널A 개막전이 열린다(자료 사진).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "전북의 남은 리그 5경기",
+     "title": "파이널A 일정",
+     "items": [
+      {
+       "date": "10.31(토) 14:00",
+       "title": "34R 전북-대전 · 전주",
+       "text": "3위와 4위의 1점 차 대결.",
+       "state": "hot",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/26/202610261233770476O",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "11.8(일)",
+       "title": "35R 강원-전북 · 강릉",
+       "text": "승점 같은 5위 강원 원정.",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1015317",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "11.21(토)",
+       "title": "36R 전북-서울 · 전주",
+       "text": "선두 서울을 홈에서 맞는다.",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261026n14647",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "11.29(일)",
+       "title": "37R 울산-전북 · 울산",
+       "text": "2위 울산 원정.",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261026n14647",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "12.6(일) 14:00",
+       "title": "38R 인천전",
+       "text": "파이널A 동시 킥오프. 홈·원정은 확인 필요.",
+       "source_name": "미디어펜",
+       "source_url": "https://www.mediapen.com/news/view/1132441",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 5,
+     "rule_top": true,
+     "chart": "standings",
+     "title": "K리그1 순위 (33라운드 종료)",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 12,
+     "rule_top": true,
+     "chart": "form",
+     "title": "전북 최근 리그 8경기",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "기자 수첩",
+   "teaser": "8일 동안 세 경기, 이번 주 전북의 달력",
+   "folio": "기자 수첩 · 오늘의 질문",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:정정용:260411",
+     "caption": "정정용 감독(자료 사진, 2026년 4월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 7,
+     "kicker": "기자 수첩",
+     "title": "8일, 세 경기, 두 나라",
+     "paragraphs": [
+      "24일 안양, 27일 베이징, 31일 전주. 전북의 이번 주 달력이다. 8일 동안 세 경기를 치르고 그 사이 국경을 두 번 넘는다.",
+      "정 감독은 안양전 전에 리그와 ACLE 어느 쪽도 놓칠 수 없다고 했다. 말은 쉬워도 실행은 명단에서 드러난다. 오늘 선발에 누가 이름을 올리는지가 곧 사흘 뒤 대전전의 예고편이다.",
+      "베이징도 사정이 같다. 사흘 전 리그 원정을 치르고 홈으로 돌아왔다. 두 팀 모두 지친 다리로 만난다. 교체 카드를 먼저, 정확하게 쓰는 쪽이 웃을 공산이 크다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "숫자 놀이 · 이번 주 전북",
+     "items": [
+      {
+       "value": "8일",
+       "label": "안양전부터 대전전까지",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "3경기",
+       "label": "리그 2 · ACLE 1",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "3일",
+       "label": "베이징전 뒤 대전전까지 휴식",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "2",
+       "label": "베이징 원정 ACL 승리, 모두 1-0",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "베이징전 선발, 몇 명을 바꾸는 게 좋을까",
+     "paragraphs": [
+      "사흘 뒤 대전과의 1점 차 맞대결이 기다린다. 안양전 선발에서 몇 자리를 바꿔야 할지, 여러분의 생각을 댓글로 남겨 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표와 퀴즈, 오늘 호 출처",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "파이널A 31일 전북-대전으로 개막",
+       "text": "연맹 26일 발표. 최종전은 12월 6일 오후 2시.",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/26/202610261233770476O",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "정정용 감독, 베이징 원정 목표는 승점",
+       "text": "26일 사전 기자회견 발언을 중국 매체가 전했다.",
+       "source_name": "신랑(新浪)",
+       "source_url": "https://k.sina.com.cn/article_7879995911_1d5af320706802x4uu.html",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "베이징, 각종 대회 20경기 무패",
+       "text": "오늘 지지 않으면 21경기로 구단 기록 경신이라고 중국 매체 보도.",
+       "source_name": "신랑(新浪)",
+       "source_url": "https://k.sina.com.cn/article_7879995911_1d5af320706802x60m.html",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "노동자경기장 북쪽 관중석 대형 티포",
+       "text": "새 경기장 개장 뒤 처음이라는 중국 매체 보도.",
+       "source_name": "신랑(新浪)",
+       "source_url": "https://k.sina.com.cn/article_7879995911_1d5af320706802x4uu.html",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "베이징 원정 세 번째 승리",
+       "text": "기록으로 확인된 두 번의 원정은 모두 1-0 승리였다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "국내 루머·축구 게시판은 오늘 접속이 원활하지 않아 전북 관련 새 글을 확인하지 못했다.",
+       "label": "편집부 알림",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "베이징 쪽은 20경기 무패 기록 경신에 기대가 크다.",
+       "label": "중국 매체 분위기",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "사흘 전 리그 역전승 뒤 주전 체력을 걱정하는 목소리도 있다.",
+       "label": "중국 매체 분위기",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "전북만 만나면 약했던 역대 전적을 깨자는 이야기가 많다.",
+       "label": "중국 매체 분위기",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 6,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "파이널A 첫 경기에서 전북이 만나는 팀은",
+       "text": "대전(31일 오후 2시 전주)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "ACL에서 전북과 베이징의 역대 전적은",
+       "text": "전북 3승 1무",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "베이징 궈안 감독의 이름은",
+       "text": "몽고메리",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "기록",
+       "text": "순위·경기 기록: K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "전북 25일 베이징 도착, 정정용 감독 발언",
+       "text": "중국 매체 보도",
+       "source_name": "신랑(新浪)",
+       "source_url": "https://k.sina.com.cn/article_7879995911_1d5af320706802x4uu.html",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "몽고메리 감독 사전 기자회견",
+       "text": "전북 선수층 평가, 로테이션",
+       "source_name": "신랑(新浪)",
+       "source_url": "https://k.sina.com.cn/article_7879995911_1d5af320706802x690.html",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "베이징 20경기 무패",
+       "text": "구단 기록 도전",
+       "source_name": "신랑(新浪)",
+       "source_url": "https://k.sina.com.cn/article_7879995911_1d5af320706802x60m.html",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "베이징 리그 원정 역전승",
+       "text": "체력 부담",
+       "source_name": "신랑(新浪)",
+       "source_url": "https://k.sina.com.cn/article_7879995911_1d5af320706802x61g.html",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2019년 전주 맞대결",
+       "text": "전북 3-1 베이징",
+       "source_name": "중국일보(China Daily)",
+       "source_url": "https://cn.chinadaily.com.cn/a/201903/06/WS5c807c32a31010568bdce0a2_1.html",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2019년 베이징 원정",
+       "text": "베이징 0-1 전북",
+       "source_name": "중국신문망",
+       "source_url": "https://www.chinanews.com/ty/2019/05-08/8830363.shtml",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "파이널 라운드 일정",
+       "text": "26일 연맹 발표",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/26/202610261233770476O",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "파이널 라운드 일정",
+       "text": "34~38라운드 날짜",
+       "source_name": "미디어펜",
+       "source_url": "https://www.mediapen.com/news/view/1132441",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "파이널 라운드 일정",
+       "text": "전북-대전 개막전",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261026n14647",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "정정용 감독 안양전 뒤 인터뷰",
+       "text": "중국 원정 각오",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1015109",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  },
+  "player:20220244": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png",
+   "alt": "티아고",
+   "back_no": 9,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20220042": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png",
+   "alt": "이승우",
+   "back_no": 10,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 33,
+    "w": 20,
+    "d": 7,
+    "l": 6,
+    "gf": 61,
+    "ga": 29,
+    "pts": 67,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 33,
+    "w": 15,
+    "d": 6,
+    "l": 12,
+    "gf": 52,
+    "ga": 47,
+    "pts": 51,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 33,
+    "w": 13,
+    "d": 10,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 49,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 33,
+    "w": 12,
+    "d": 12,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 48,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 33,
+    "w": 11,
+    "d": 15,
+    "l": 7,
+    "gf": 40,
+    "ga": 30,
+    "pts": 48,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 43,
+    "ga": 35,
+    "pts": 46,
+    "rank": 6,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 39,
+    "ga": 37,
+    "pts": 46,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 33,
+    "w": 10,
+    "d": 13,
+    "l": 10,
+    "gf": 40,
+    "ga": 48,
+    "pts": 43,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 33,
+    "w": 11,
+    "d": 9,
+    "l": 13,
+    "gf": 30,
+    "ga": 39,
+    "pts": 42,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 33,
+    "w": 5,
+    "d": 19,
+    "l": 9,
+    "gf": 33,
+    "ga": 41,
+    "pts": 34,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 33,
+    "w": 7,
+    "d": 11,
+    "l": 15,
+    "gf": 32,
+    "ga": 47,
+    "pts": 32,
+    "rank": 11,
+    "gd": -15
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 33,
+    "w": 3,
+    "d": 12,
+    "l": 18,
+    "gf": 30,
+    "ga": 69,
+    "pts": 21,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 4,
+   "pts": 48,
+   "w": 12,
+   "d": 12,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "인천 1-1"
+   },
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": null,
+  "last": {
+   "game_id": "194",
+   "date": "2026-10-24",
+   "round": 33,
+   "home": "안양",
+   "away": "전북",
+   "venue": "안양 종합",
+   "attendance": 9126,
+   "comp": "K리그1 33R",
+   "score": [
+    1,
+    1
+   ],
+   "date_label": "10월 24일(토)",
+   "weather": "비",
+   "referee": "고형진",
+   "managers": {
+    "home": "유병훈",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     7,
+     "AST",
+     79.2,
+     27.9
+    ],
+    [
+     "A",
+     1,
+     9,
+     "MST",
+     91.1,
+     34.0
+    ],
+    [
+     "A",
+     1,
+     13,
+     "MST",
+     77.0,
+     60.1
+    ],
+    [
+     "H",
+     1,
+     26,
+     "MST",
+     92.8,
+     48.1
+    ],
+    [
+     "A",
+     1,
+     31,
+     "MST",
+     89.5,
+     31.3
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     88.3,
+     53.8
+    ],
+    [
+     "H",
+     1,
+     39,
+     "MST",
+     86.4,
+     52.4
+    ],
+    [
+     "H",
+     1,
+     45,
+     "GL",
+     91.5,
+     61.3
+    ],
+    [
+     "H",
+     2,
+     46,
+     "AST",
+     83.8,
+     36.0
+    ],
+    [
+     "A",
+     2,
+     48,
+     "AST",
+     78.2,
+     57.7
+    ],
+    [
+     "H",
+     2,
+     63,
+     "MST",
+     90.3,
+     29.1
+    ],
+    [
+     "A",
+     2,
+     66,
+     "MST",
+     79.2,
+     78.1
+    ],
+    [
+     "A",
+     2,
+     79,
+     "AST",
+     88.2,
+     51.5
+    ],
+    [
+     "A",
+     2,
+     83,
+     "BT",
+     83.3,
+     57.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     92.0,
+     59.4
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     97.8,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     89,
+     "MST",
+     90.8,
+     45.8
+    ],
+    [
+     "A",
+     2,
+     91,
+     "GL",
+     96.3,
+     50.4
+    ],
+    [
+     "A",
+     2,
+     94,
+     "MST",
+     74.2,
+     45.6
+    ],
+    [
+     "H",
+     2,
+     98,
+     "BT",
+     77.5,
+     31.3
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "김운",
+     "label": "45+1'",
+     "minute": 45.5,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "티아고",
+     "label": "90+2'",
+     "minute": 92,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     11
+    ],
+    [
+     "유효슈팅",
+     4,
+     4
+    ],
+    [
+     "패스 성공",
+     187,
+     335
+    ],
+    [
+     "패스 성공률",
+     74.5,
+     85.7,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     7,
+     4
+    ],
+    [
+     "반칙",
+     15,
+     6
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": []
+ }
+}
