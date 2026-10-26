@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T23:21:33.107594+00:00",
+  "updated_at": "2026-10-26T04:59:52.853728+00:00",
   "year": "2026",
   "meet_seq": "1",
   "matches": [
@@ -1982,6 +1982,306 @@
       "end_yn": "Y",
       "label": "서울 VS 강원 (198, 10/24)",
       "date_md": "10/24"
+    },
+    {
+      "game_id": "199",
+      "year": "2026",
+      "round": 34,
+      "home": "전북",
+      "away": "대전",
+      "end_yn": "N",
+      "label": "전북 VS 대전 (199, 10/31)",
+      "date_md": "10/31"
+    },
+    {
+      "game_id": "200",
+      "year": "2026",
+      "round": 34,
+      "home": "광주",
+      "away": "김천",
+      "end_yn": "N",
+      "label": "광주 VS 김천 (200, 10/31)",
+      "date_md": "10/31"
+    },
+    {
+      "game_id": "201",
+      "year": "2026",
+      "round": 34,
+      "home": "포항",
+      "away": "제주",
+      "end_yn": "N",
+      "label": "포항 VS 제주 (201, 11/01)",
+      "date_md": "11/01"
+    },
+    {
+      "game_id": "202",
+      "year": "2026",
+      "round": 34,
+      "home": "울산",
+      "away": "강원",
+      "end_yn": "N",
+      "label": "울산 VS 강원 (202, 11/01)",
+      "date_md": "11/01"
+    },
+    {
+      "game_id": "203",
+      "year": "2026",
+      "round": 34,
+      "home": "서울",
+      "away": "인천",
+      "end_yn": "N",
+      "label": "서울 VS 인천 (203, 11/01)",
+      "date_md": "11/01"
+    },
+    {
+      "game_id": "204",
+      "year": "2026",
+      "round": 34,
+      "home": "안양",
+      "away": "부천",
+      "end_yn": "N",
+      "label": "안양 VS 부천 (204, 11/01)",
+      "date_md": "11/01"
+    },
+    {
+      "game_id": "205",
+      "year": "2026",
+      "round": 35,
+      "home": "제주",
+      "away": "광주",
+      "end_yn": "N",
+      "label": "제주 VS 광주 (205, 11/07)",
+      "date_md": "11/07"
+    },
+    {
+      "game_id": "206",
+      "year": "2026",
+      "round": 35,
+      "home": "김천",
+      "away": "안양",
+      "end_yn": "N",
+      "label": "김천 VS 안양 (206, 11/07)",
+      "date_md": "11/07"
+    },
+    {
+      "game_id": "207",
+      "year": "2026",
+      "round": 35,
+      "home": "서울",
+      "away": "울산",
+      "end_yn": "N",
+      "label": "서울 VS 울산 (207, 11/08)",
+      "date_md": "11/08"
+    },
+    {
+      "game_id": "208",
+      "year": "2026",
+      "round": 35,
+      "home": "대전",
+      "away": "인천",
+      "end_yn": "N",
+      "label": "대전 VS 인천 (208, 11/08)",
+      "date_md": "11/08"
+    },
+    {
+      "game_id": "209",
+      "year": "2026",
+      "round": 35,
+      "home": "강원",
+      "away": "전북",
+      "end_yn": "N",
+      "label": "강원 VS 전북 (209, 11/08)",
+      "date_md": "11/08"
+    },
+    {
+      "game_id": "210",
+      "year": "2026",
+      "round": 35,
+      "home": "부천",
+      "away": "포항",
+      "end_yn": "N",
+      "label": "부천 VS 포항 (210, 11/08)",
+      "date_md": "11/08"
+    },
+    {
+      "game_id": "211",
+      "year": "2026",
+      "round": 36,
+      "home": "전북",
+      "away": "서울",
+      "end_yn": "N",
+      "label": "전북 VS 서울 (211, 11/21)",
+      "date_md": "11/21"
+    },
+    {
+      "game_id": "212",
+      "year": "2026",
+      "round": 36,
+      "home": "포항",
+      "away": "안양",
+      "end_yn": "N",
+      "label": "포항 VS 안양 (212, 11/21)",
+      "date_md": "11/21"
+    },
+    {
+      "game_id": "213",
+      "year": "2026",
+      "round": 36,
+      "home": "강원",
+      "away": "대전",
+      "end_yn": "N",
+      "label": "강원 VS 대전 (213, 11/21)",
+      "date_md": "11/21"
+    },
+    {
+      "game_id": "214",
+      "year": "2026",
+      "round": 36,
+      "home": "인천",
+      "away": "울산",
+      "end_yn": "N",
+      "label": "인천 VS 울산 (214, 11/21)",
+      "date_md": "11/21"
+    },
+    {
+      "game_id": "215",
+      "year": "2026",
+      "round": 36,
+      "home": "김천",
+      "away": "제주",
+      "end_yn": "N",
+      "label": "김천 VS 제주 (215, 11/22)",
+      "date_md": "11/22"
+    },
+    {
+      "game_id": "216",
+      "year": "2026",
+      "round": 36,
+      "home": "광주",
+      "away": "부천",
+      "end_yn": "N",
+      "label": "광주 VS 부천 (216, 11/22)",
+      "date_md": "11/22"
+    },
+    {
+      "game_id": "217",
+      "year": "2026",
+      "round": 37,
+      "home": "서울",
+      "away": "대전",
+      "end_yn": "N",
+      "label": "서울 VS 대전 (217, 11/28)",
+      "date_md": "11/28"
+    },
+    {
+      "game_id": "218",
+      "year": "2026",
+      "round": 37,
+      "home": "안양",
+      "away": "제주",
+      "end_yn": "N",
+      "label": "안양 VS 제주 (218, 11/28)",
+      "date_md": "11/28"
+    },
+    {
+      "game_id": "219",
+      "year": "2026",
+      "round": 37,
+      "home": "포항",
+      "away": "광주",
+      "end_yn": "N",
+      "label": "포항 VS 광주 (219, 11/28)",
+      "date_md": "11/28"
+    },
+    {
+      "game_id": "220",
+      "year": "2026",
+      "round": 37,
+      "home": "부천",
+      "away": "김천",
+      "end_yn": "N",
+      "label": "부천 VS 김천 (220, 11/28)",
+      "date_md": "11/28"
+    },
+    {
+      "game_id": "221",
+      "year": "2026",
+      "round": 37,
+      "home": "울산",
+      "away": "전북",
+      "end_yn": "N",
+      "label": "울산 VS 전북 (221, 11/29)",
+      "date_md": "11/29"
+    },
+    {
+      "game_id": "222",
+      "year": "2026",
+      "round": 37,
+      "home": "인천",
+      "away": "강원",
+      "end_yn": "N",
+      "label": "인천 VS 강원 (222, 11/29)",
+      "date_md": "11/29"
+    },
+    {
+      "game_id": "223",
+      "year": "2026",
+      "round": 38,
+      "home": "제주",
+      "away": "부천",
+      "end_yn": "N",
+      "label": "제주 VS 부천 (223, 12/05)",
+      "date_md": "12/05"
+    },
+    {
+      "game_id": "224",
+      "year": "2026",
+      "round": 38,
+      "home": "안양",
+      "away": "광주",
+      "end_yn": "N",
+      "label": "안양 VS 광주 (224, 12/05)",
+      "date_md": "12/05"
+    },
+    {
+      "game_id": "225",
+      "year": "2026",
+      "round": 38,
+      "home": "김천",
+      "away": "포항",
+      "end_yn": "N",
+      "label": "김천 VS 포항 (225, 12/05)",
+      "date_md": "12/05"
+    },
+    {
+      "game_id": "226",
+      "year": "2026",
+      "round": 38,
+      "home": "대전",
+      "away": "울산",
+      "end_yn": "N",
+      "label": "대전 VS 울산 (226, 12/06)",
+      "date_md": "12/06"
+    },
+    {
+      "game_id": "227",
+      "year": "2026",
+      "round": 38,
+      "home": "강원",
+      "away": "서울",
+      "end_yn": "N",
+      "label": "강원 VS 서울 (227, 12/06)",
+      "date_md": "12/06"
+    },
+    {
+      "game_id": "228",
+      "year": "2026",
+      "round": 38,
+      "home": "전북",
+      "away": "인천",
+      "end_yn": "N",
+      "label": "전북 VS 인천 (228, 12/06)",
+      "date_md": "12/06"
     }
   ]
 }
