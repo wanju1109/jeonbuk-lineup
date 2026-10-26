@@ -87,6 +87,14 @@ def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
                     errs.append(f"{where}: source_url이 주소 형식이 아닙니다: {u}")
         if photos == 0 and pi < len(issue["pages"]):  # 마지막 루머 데스크 면은 사진 없이도 된다
             errs.append(f"{pi}면: 사진이 없습니다(면마다 1개 이상)")
+    # 경기 다음 날: 기록에서 찾은 데뷔·첫 골·복귀 선수는 반드시 기사로 다룬다(이름만 스쳐 지나가면 안 된다)
+    for n in ctx.get("notables", []):
+        mentioned = sum(1 for page in issue["pages"] for b in page.get("blocks", [])
+                        if n["name"] in json.dumps(b, ensure_ascii=False))
+        has_story = any(n["name"] in (b.get("title") or "") or (b.get("type") == "cutout" and n["player_id"] in (b.get("image") or ""))
+                        for page in issue["pages"] for b in page.get("blocks", []))
+        if not has_story:
+            errs.append(f"{n['name']}({n['kind']})를 다룬 기사가 없습니다. 제목에 이름이 들어간 기사나 사진(cutout)으로 비중 있게 써 주세요(지금 언급 {mentioned}곳)")
     first = issue["pages"][0].get("blocks", []) if issue["pages"] else []
     if not first or first[0].get("type") != "hero":
         errs.append("1면 첫 블록은 hero여야 합니다")
