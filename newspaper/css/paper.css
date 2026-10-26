@@ -194,8 +194,19 @@ svg text{font-family:var(--f-body)}
 
 /* 뷰어 전용 */
 .loading,.err{padding:40px 0;text-align:center;color:var(--muted)}
-.archive{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted);padding:14px 0 0}
-.archive a{color:var(--muted)}
+.archive{font-size:14px;color:var(--ink);padding:18px 0 0;border-top:1px solid var(--rule);margin-top:18px}
+.archive h4{margin:0 0 8px}
+.archive details{margin:0}
+.archive summary{cursor:pointer;padding:6px 0;font-weight:700;list-style-position:inside}
+.archive summary small{color:var(--muted);font-weight:400;margin-left:6px}
+.archive summary:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+.archive .arc-m{margin-left:18px}
+.archive ul{list-style:none;margin:0 0 6px 18px;padding:0;display:grid;gap:2px}
+.archive li a{display:block;padding:4px 0;color:var(--ink);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.archive li a:hover{text-decoration:underline}
+.archive li a b{color:var(--green);margin-right:4px}
+.archive li a span{font-family:var(--f-data);color:var(--muted);margin-right:6px;font-size:12.5px}
+.archive li a[aria-current="page"]{background:color-mix(in srgb,var(--lime) 30%,transparent)}
 .table2 td:first-child{color:var(--muted);white-space:nowrap;padding-right:14px}
 .quote{font-family:var(--f-quote);font-weight:800;font-size:clamp(22px,3.2vw,30px);line-height:1.4;color:var(--green);margin:0;text-wrap:balance}
 .quote + .by{margin-top:8px}

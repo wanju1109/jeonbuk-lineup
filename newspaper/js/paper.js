@@ -319,6 +319,31 @@
       .then(() => requestAnimationFrame(() => { document.documentElement.dataset.ready = "1"; }));
   }
 
+  /* 지난 호: 연도 → 월 → 호. 지금 보는 호가 있는 달만 펼친다. */
+  function renderArchive(list, current) {
+    const byYear = {};
+    list.forEach((i) => {
+      const [y, m] = i.date.split("-");
+      ((byYear[y] = byYear[y] || {})[+m] = byYear[y][+m] || []).push(i);
+    });
+    const cy = current.date.slice(0, 4), cm = +current.date.slice(5, 7);
+    const years = Object.keys(byYear).sort().reverse();
+    $("#archive").innerHTML = `<h4>지난 호</h4>` + years.map((y) => {
+      const months = Object.keys(byYear[y]).map(Number).sort((a, b) => b - a);
+      const count = months.reduce((s, m) => s + byYear[y][m].length, 0);
+      return `<details class="arc-y"${y === cy ? " open" : ""}><summary>${y}년 <small>${count}호</small></summary>` +
+        months.map((m) => {
+          const items = byYear[y][m].slice().reverse();
+          return `<details class="arc-m"${y === cy && m === cm ? " open" : ""}><summary>${m}월 <small>${items.length}호</small></summary><ul>` +
+            items.map((i) => {
+              const d = i.date.slice(5).replace("-", "/");
+              const here = String(i.no) === String(current.no) ? ' aria-current="page"' : "";
+              return `<li><a href="?no=${encodeURIComponent(i.no)}"${here}><b>제${esc(i.no)}호</b> <span>${esc(d)}</span> ${esc(i.headline || "")}</a></li>`;
+            }).join("") + `</ul></details>`;
+        }).join("") + `</details>`;
+    }).join("");
+  }
+
   /* ---------- 불러오기 ---------- */
   async function getJSON(u) { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw new Error(u + " " + r.status); return r.json(); }
   async function boot() {
@@ -332,7 +357,7 @@
       ISSUE = await getJSON(`issues/${pick.no}.json`);
       render();
       if (EMBED) markReady();
-      $("#archive").innerHTML = "지난 호: " + list.slice(-14).reverse().map((i) => `<a href="?no=${i.no}">제${i.no}호 ${esc(i.date.slice(5).replace("-", "/"))}</a>`).join("");
+      renderArchive(list, pick);
     } catch (e) {
       $("#paper").innerHTML = `<p class="err">신문을 불러오지 못했습니다. (${esc(e.message)})</p>`;
     }
