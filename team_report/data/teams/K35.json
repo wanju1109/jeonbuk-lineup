@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-26T04:32:20+09:00",
+  "generated_at": "2026-10-27T06:35:33+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -21,8 +21,8 @@
     "gd": -8,
     "points": 34,
     "ppg": 1.03,
-    "remaining": 5,
-    "scheduled": 38,
+    "remaining": 10,
+    "scheduled": 43,
     "gap_to_leader": 33,
     "gap_to_cut": 12,
     "cut_rank": 6,
@@ -404,26 +404,26 @@
     "best_rank": 7,
     "worst_rank": 11,
     "first_half": {
-      "played": 16,
+      "played": 19,
       "win": 2,
-      "draw": 9,
-      "loss": 5,
-      "gf": 16,
-      "ga": 22,
-      "gd": -6,
-      "points": 15,
-      "ppg": 0.94
+      "draw": 11,
+      "loss": 6,
+      "gf": 18,
+      "ga": 26,
+      "gd": -8,
+      "points": 17,
+      "ppg": 0.89
     },
     "second_half": {
-      "played": 17,
+      "played": 14,
       "win": 3,
-      "draw": 10,
-      "loss": 4,
-      "gf": 17,
-      "ga": 19,
-      "gd": -2,
-      "points": 19,
-      "ppg": 1.12
+      "draw": 8,
+      "loss": 3,
+      "gf": 15,
+      "ga": 15,
+      "gd": 0,
+      "points": 17,
+      "ppg": 1.21
     }
   },
   "fixtures": [

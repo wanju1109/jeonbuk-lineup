@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-10-26T04:32:19+09:00",
+  "generated_at": "2026-10-27T06:35:32+09:00",
   "table": {
     "rank": 3,
     "teams": 12,
@@ -21,8 +21,8 @@
     "gd": 12,
     "points": 49,
     "ppg": 1.48,
-    "remaining": 5,
-    "scheduled": 38,
+    "remaining": 10,
+    "scheduled": 43,
     "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
@@ -220,7 +220,7 @@
       },
       {
         "round": 8,
-        "rank": 7,
+        "rank": 8,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -404,26 +404,26 @@
     "best_rank": 3,
     "worst_rank": 11,
     "first_half": {
-      "played": 16,
+      "played": 19,
       "win": 4,
-      "draw": 5,
+      "draw": 8,
       "loss": 7,
-      "gf": 19,
-      "ga": 18,
+      "gf": 21,
+      "ga": 20,
       "gd": 1,
-      "points": 17,
-      "ppg": 1.06
+      "points": 20,
+      "ppg": 1.05
     },
     "second_half": {
-      "played": 17,
+      "played": 14,
       "win": 9,
-      "draw": 5,
+      "draw": 2,
       "loss": 3,
-      "gf": 34,
-      "ga": 23,
+      "gf": 32,
+      "ga": 21,
       "gd": 11,
-      "points": 32,
-      "ppg": 1.88
+      "points": 29,
+      "ppg": 2.07
     }
   },
   "fixtures": [

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-10-26T04:32:20+09:00",
+  "generated_at": "2026-10-27T06:35:33+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
@@ -21,8 +21,8 @@
     "gd": 10,
     "points": 48,
     "ppg": 1.45,
-    "remaining": 5,
-    "scheduled": 38,
+    "remaining": 10,
+    "scheduled": 43,
     "gap_to_leader": 19,
     "gap_to_cut": 0,
     "cut_rank": 6,
@@ -404,26 +404,26 @@
     "best_rank": 2,
     "worst_rank": 12,
     "first_half": {
-      "played": 16,
-      "win": 7,
-      "draw": 6,
+      "played": 19,
+      "win": 8,
+      "draw": 8,
       "loss": 3,
-      "gf": 21,
-      "ga": 11,
-      "gd": 10,
-      "points": 27,
-      "ppg": 1.69
+      "gf": 24,
+      "ga": 12,
+      "gd": 12,
+      "points": 32,
+      "ppg": 1.68
     },
     "second_half": {
-      "played": 17,
-      "win": 4,
-      "draw": 9,
+      "played": 14,
+      "win": 3,
+      "draw": 7,
       "loss": 4,
-      "gf": 19,
-      "ga": 19,
-      "gd": 0,
-      "points": 21,
-      "ppg": 1.24
+      "gf": 16,
+      "ga": 18,
+      "gd": -2,
+      "points": 16,
+      "ppg": 1.14
     }
   },
   "fixtures": [

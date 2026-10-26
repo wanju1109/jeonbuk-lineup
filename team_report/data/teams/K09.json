@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-10-26T04:32:19+09:00",
+  "generated_at": "2026-10-27T06:35:32+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
@@ -21,8 +21,8 @@
     "gd": 32,
     "points": 67,
     "ppg": 2.03,
-    "remaining": 5,
-    "scheduled": 38,
+    "remaining": 10,
+    "scheduled": 43,
     "gap_to_leader": 0,
     "gap_to_cut": 0,
     "cut_rank": 6,
@@ -404,26 +404,26 @@
     "best_rank": 1,
     "worst_rank": 3,
     "first_half": {
-      "played": 16,
-      "win": 11,
-      "draw": 2,
+      "played": 19,
+      "win": 13,
+      "draw": 3,
       "loss": 3,
-      "gf": 28,
-      "ga": 12,
-      "gd": 16,
-      "points": 35,
-      "ppg": 2.19
+      "gf": 34,
+      "ga": 14,
+      "gd": 20,
+      "points": 42,
+      "ppg": 2.21
     },
     "second_half": {
-      "played": 17,
-      "win": 9,
-      "draw": 5,
+      "played": 14,
+      "win": 7,
+      "draw": 4,
       "loss": 3,
-      "gf": 33,
-      "ga": 17,
-      "gd": 16,
-      "points": 32,
-      "ppg": 1.88
+      "gf": 27,
+      "ga": 15,
+      "gd": 12,
+      "points": 25,
+      "ppg": 1.79
     }
   },
   "fixtures": [
@@ -897,7 +897,7 @@
   },
   "context": {
     "band": "우승 경쟁",
-    "detail": "리그를 이끄는 자리에서 남은 5경기를 관리하면 트로피가 손에 들어옵니다.",
+    "detail": "리그를 이끄는 자리에서 남은 10경기를 관리하면 트로피가 손에 들어옵니다.",
     "tags": [
       "리그 최상급 화력",
       "리그 최고 수비",

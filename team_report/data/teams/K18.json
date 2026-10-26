@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-10-26T04:32:20+09:00",
+  "generated_at": "2026-10-27T06:35:33+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -21,8 +21,8 @@
     "gd": 8,
     "points": 46,
     "ppg": 1.39,
-    "remaining": 5,
-    "scheduled": 38,
+    "remaining": 10,
+    "scheduled": 43,
     "gap_to_leader": 21,
     "gap_to_cut": 0,
     "cut_rank": 6,
@@ -404,26 +404,26 @@
     "best_rank": 5,
     "worst_rank": 11,
     "first_half": {
-      "played": 16,
-      "win": 6,
+      "played": 19,
+      "win": 8,
       "draw": 3,
-      "loss": 7,
-      "gf": 21,
-      "ga": 18,
-      "gd": 3,
-      "points": 21,
-      "ppg": 1.31
+      "loss": 8,
+      "gf": 24,
+      "ga": 20,
+      "gd": 4,
+      "points": 27,
+      "ppg": 1.42
     },
     "second_half": {
-      "played": 17,
-      "win": 6,
+      "played": 14,
+      "win": 4,
       "draw": 7,
-      "loss": 4,
-      "gf": 22,
-      "ga": 17,
-      "gd": 5,
-      "points": 25,
-      "ppg": 1.47
+      "loss": 3,
+      "gf": 19,
+      "ga": 15,
+      "gd": 4,
+      "points": 19,
+      "ppg": 1.36
     }
   },
   "fixtures": [

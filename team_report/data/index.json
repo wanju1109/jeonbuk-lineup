@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T04:32:21+09:00",
+  "updated_at": "2026-10-27T06:35:34+09:00",
   "season": "2026",
   "as_of": "2026-10-25",
   "source": "proto/data/league.json · player_report · c_report",
@@ -8,7 +8,7 @@
       "id": "K1",
       "name": "K리그1",
       "teams": 12,
-      "total_rounds": 33,
+      "total_rounds": 38,
       "played_rounds": 33,
       "table": [
         {
@@ -294,7 +294,7 @@
             "L",
             "L"
           ],
-          "band": "중위권",
+          "band": "파이널A 추격",
           "file": "./data/teams/K26.json"
         },
         {

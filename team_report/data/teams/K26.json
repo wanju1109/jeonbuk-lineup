@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-10-26T04:32:20+09:00",
+  "generated_at": "2026-10-27T06:35:33+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
@@ -21,8 +21,8 @@
     "gd": -15,
     "points": 32,
     "ppg": 0.97,
-    "remaining": 5,
-    "scheduled": 38,
+    "remaining": 10,
+    "scheduled": 43,
     "gap_to_leader": 35,
     "gap_to_cut": 14,
     "cut_rank": 6,
@@ -404,26 +404,26 @@
     "best_rank": 2,
     "worst_rank": 11,
     "first_half": {
-      "played": 16,
+      "played": 19,
       "win": 4,
-      "draw": 6,
-      "loss": 6,
-      "gf": 13,
-      "ga": 17,
-      "gd": -4,
-      "points": 18,
-      "ppg": 1.12
+      "draw": 7,
+      "loss": 8,
+      "gf": 17,
+      "ga": 24,
+      "gd": -7,
+      "points": 19,
+      "ppg": 1.0
     },
     "second_half": {
-      "played": 17,
+      "played": 14,
       "win": 3,
-      "draw": 5,
-      "loss": 9,
-      "gf": 19,
-      "ga": 30,
-      "gd": -11,
-      "points": 14,
-      "ppg": 0.82
+      "draw": 4,
+      "loss": 7,
+      "gf": 15,
+      "ga": 23,
+      "gd": -8,
+      "points": 13,
+      "ppg": 0.93
     }
   },
   "fixtures": [
@@ -896,8 +896,8 @@
     "away_fans_avg": 575
   },
   "context": {
-    "band": "중위권",
-    "detail": "위도 아래도 멀어진 자리. 시즌의 방향을 스스로 정해야 합니다.",
+    "band": "파이널A 추격",
+    "detail": "6위와 14점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "득점 빈곤",
       "침묵하는 공격",

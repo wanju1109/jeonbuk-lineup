@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-26T04:32:20+09:00",
+  "generated_at": "2026-10-27T06:35:33+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -21,8 +21,8 @@
     "gd": 2,
     "points": 46,
     "ppg": 1.39,
-    "remaining": 5,
-    "scheduled": 38,
+    "remaining": 10,
+    "scheduled": 43,
     "gap_to_leader": 21,
     "gap_to_cut": 0,
     "cut_rank": 6,
@@ -171,7 +171,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -220,7 +220,7 @@
       },
       {
         "round": 8,
-        "rank": 8,
+        "rank": 7,
         "points": 9,
         "played": 8,
         "gd": -1
@@ -404,26 +404,26 @@
     "best_rank": 3,
     "worst_rank": 12,
     "first_half": {
-      "played": 16,
-      "win": 5,
-      "draw": 4,
+      "played": 19,
+      "win": 6,
+      "draw": 6,
       "loss": 7,
-      "gf": 14,
-      "ga": 17,
-      "gd": -3,
-      "points": 19,
-      "ppg": 1.19
+      "gf": 17,
+      "ga": 19,
+      "gd": -2,
+      "points": 24,
+      "ppg": 1.26
     },
     "second_half": {
-      "played": 17,
-      "win": 7,
-      "draw": 6,
+      "played": 14,
+      "win": 6,
+      "draw": 4,
       "loss": 4,
-      "gf": 25,
-      "ga": 20,
-      "gd": 5,
-      "points": 27,
-      "ppg": 1.59
+      "gf": 22,
+      "ga": 18,
+      "gd": 4,
+      "points": 22,
+      "ppg": 1.57
     }
   },
   "fixtures": [
