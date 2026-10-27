@@ -1,0 +1,1835 @@
+{
+ "no": 6,
+ "date": "2026-10-28",
+ "matchday_after": false,
+ "headline": "베이징 원정 2-2, 이영재 동점골로 승점 1",
+ "summary": "전북이 27일 ACLE 리그 스테이지 3차전 베이징 궈안 원정에서 모따의 2분 선제골과 이영재의 후반 동점골로 2-2로 비겼다. 1승 1무 1패, 승점 4로 동아시아 10위다.",
+ "strip": [
+  "ACLE 3차전 · 베이징 2-2 전북",
+  "ACLE 1승 1무 1패 · 승점 4 · 동아시아 10위",
+  "K리그1 4위 · 승점 48",
+  "파이널A D-3 · 31일 14:00 대전 홈"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제6호 · 2026.10.28",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:이영재:250702-1",
+     "kicker": "ACL 엘리트 리그 스테이지 3차전 · 베이징 노동자경기장",
+     "title": "베이징 원정 2-2, 이영재 동점골로 승점 1",
+     "dek": "모따가 2분 만에 머리로 앞서 갔고, 두 골을 내준 뒤 이영재가 후반 왼발로 따라붙었다.",
+     "caption": "이영재. 베이징전 후반 동점골의 주인공(자료 사진, 2025년 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북이 27일 밤 중국 베이징 노동자경기장에서 열린 2026-27 AFC 챔피언스리그 엘리트(ACLE) 리그 스테이지 3차전에서 베이징 궈안과 2-2로 비겼다. 각종 대회 20경기 무패였던 상대의 안방에서 승점 1을 가져왔다.",
+      "출발은 빨랐다. 전반 2분 최우진의 왼쪽 크로스를 모따가 머리로 받아 넣었다. 전반 34분 프리킥 상황에서 두지아크에게 동점골을 내줬고, 후반 7분 문전 혼전 끝에 왕강에게 역전골을 허용했다.",
+      "후반 19분 균형이 돌아왔다. 김진규의 코너킥이 김영빈 몸에 맞고 흐르자 이영재가 왼발 하프발리로 골문을 열었다. 전북은 이승우와 강상윤을 넣어 역전을 노렸지만 더 이상 골은 없었다.",
+      "전북은 1승 1무 1패, 승점 4로 동아시아 16팀 가운데 10위에 자리했다. 16강 직행은 8위까지다. 선수단은 곧바로 귀국해 31일 전주에서 대전과 파이널A 첫 경기를 치른다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "2-2",
+       "label": "베이징 원정 결과",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "2분",
+       "label": "모따 선제 헤더",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "승점 4",
+       "label": "ACLE 1승 1무 1패 · 10위",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-3",
+       "label": "31일 대전 홈 파이널A",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "경기 리포트",
+   "teaser": "2분 선제골, 두 번의 실점, 후반 19분 동점골까지",
+   "folio": "ACLE 리그 스테이지 3차전 · 베이징 2-2 전북",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "경기 리뷰",
+     "title": "앞서 가고, 뒤집히고, 다시 따라붙었다",
+     "paragraphs": [
+      "정정용 감독은 4-2-3-1을 꺼냈다. 최전방에 모따, 2선에 김승섭·이영재·이동준을 세웠다. 중원은 김진규와 감보아, 포백은 최우진·김영빈·박지수·황승준이었다.",
+      "선제골은 킥오프 2분 만에 나왔다. 왼쪽 측면을 파고든 최우진의 크로스가 모따의 이마에 정확히 걸렸다. 원정 팀이 노동자경기장을 조용하게 만든 순간이었다.",
+      "실점은 두 번 모두 세트피스와 혼전에서 나왔다. 전반 34분 프리킥 뒤 두지아크가 오른발로 마무리했고, 후반 7분에는 아콜로의 슈팅을 송범근이 쳐낸 공을 왕강이 먼저 차 넣었다. 스타뉴스는 두 실점을 아쉬운 장면으로 짚었다.",
+      "동점골 역시 세트피스였다. 후반 19분 김진규의 코너킥이 문전에서 굴절됐고 이영재가 떨어지는 공을 왼발로 받아쳤다. 이후 교체 카드로 공세를 높였지만 결승골은 나오지 않았다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:Bruno Mota:260411",
+     "caption": "모따. 전반 2분 헤더로 선제골을 넣었다(자료 사진, 2026년 4월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "득점 흐름",
+     "title": "골 타임라인",
+     "items": [
+      {
+       "date": "전반 2분",
+       "title": "모따 헤더 · 전북 1-0",
+       "text": "최우진 왼쪽 크로스 도움.",
+       "state": "hot",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99933",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "전반 34분",
+       "title": "두지아크 · 1-1",
+       "text": "베이징 프리킥 상황에서 오른발 슈팅.",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99933",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "후반 7분",
+       "title": "왕강 · 베이징 2-1",
+       "text": "아콜로 슈팅을 송범근이 쳐낸 뒤 문전 마무리.",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99933",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "후반 19분",
+       "title": "이영재 왼발 하프발리 · 2-2",
+       "text": "김진규 코너킥이 김영빈 맞고 흐른 공.",
+       "state": "hot",
+       "source_name": "스타뉴스",
+       "source_url": "https://www.starnewskorea.com/sports/2026/10/28/2026102723370785642",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 5,
+     "rule_top": true,
+     "title": "전북 선발 (4-2-3-1)",
+     "items": [
+      {
+       "label": "GK",
+       "value": "송범근",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "DF",
+       "value": "최우진 · 김영빈 · 박지수 · 황승준",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "MF",
+       "value": "김진규 · 감보아",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "2선",
+       "value": "김승섭 · 이영재 · 이동준",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "FW",
+       "value": "모따",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "교체 투입",
+       "value": "이승우 · 강상윤 등",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 12,
+     "rule_top": true,
+     "title": "베이징 궈안 선발 (4-1-3-2)",
+     "items": [
+      {
+       "label": "GK",
+       "value": "허우썬",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "DF",
+       "value": "바이 양 · 하무스 · 스파이치 · 왕강",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "MF",
+       "value": "코테 / 장시쩌 · 다완 · 두지아크",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "FW",
+       "value": "은콜롤로 · 아콜로",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "감독",
+       "value": "닉 몽고메리",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "평점",
+   "teaser": "조간 선정 MOM 이영재, BEST·WORST 3",
+   "folio": "베이징전 조간 평점 · 10점 만점",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20150104",
+     "big": "MOM",
+     "paragraphs": [
+      "후반 19분 왼발 동점골",
+      "2선 선발 출전",
+      "원정 승점 1의 주인공"
+     ],
+     "caption": "조간 선정 MOM 이영재. 공식 MOM은 확인하지 못했다.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "조간 선정 MOM",
+     "title": "이영재, 흐른 공 하나를 놓치지 않았다",
+     "paragraphs": [
+      "조간은 베이징전 최우수 선수로 이영재를 골랐다. 1-2로 끌려가던 후반 19분, 코너킥 뒤 문전에서 굴절된 공을 왼발 하프발리로 바로 때려 넣었다. 트래핑 없이 처리한 한 번의 슈팅이 원정 승점 1이 됐다.",
+      "사흘 전 안양전에서는 61분 만에 교체돼 나왔다. 이날은 2선 선발로 나서 득점까지 해냈다. 지난 주말 아쉬움을 경기력으로 갚았다.",
+      "ACL 경기는 K리그 부가 기록이 제공되지 않는다. 평점은 보도된 장면과 득점 관여를 바탕으로 한 조간 자체 평가다. 출전 시간이 확인되지 않은 교체 선수는 평가에서 뺐다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "잘한 선수",
+     "title": "BEST 3",
+     "items": [
+      {
+       "tag": "BEST",
+       "title": "이영재 · 평점 8.0",
+       "text": "후반 19분 왼발 하프발리 동점골.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "모따 · 평점 7.5",
+       "text": "전반 2분 헤더 선제골. 최전방에서 공중볼을 따냈다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "최우진 · 평점 7.0",
+       "text": "왼쪽을 파고들어 선제골을 도왔다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "아쉬웠던 선수",
+     "title": "WORST 3",
+     "items": [
+      {
+       "tag": "WORST",
+       "title": "송범근 · 평점 5.5",
+       "text": "아콜로 슈팅을 쳐냈지만 공이 문전에 남아 두 번째 실점으로 이어졌다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "WORST",
+       "title": "김승섭 · 평점 5.5",
+       "text": "2선 선발. 득점 장면에 관여한 기록이 보도되지 않았다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "WORST",
+       "title": "이동준 · 평점 5.5",
+       "text": "2선 선발. 공격 포인트 없이 경기를 마쳤다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 12,
+     "rule_top": true,
+     "title": "전북 선발 평점 (조간 선정)",
+     "items": [
+      {
+       "label": "이영재",
+       "value": 8.0,
+       "text": "8.0",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "모따",
+       "value": 7.5,
+       "text": "7.5",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "최우진",
+       "value": 7.0,
+       "text": "7.0",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "김진규",
+       "value": 6.5,
+       "text": "6.5",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "감보아",
+       "value": 6.0,
+       "text": "6.0",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "김영빈",
+       "value": 6.0,
+       "text": "6.0",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "박지수",
+       "value": 6.0,
+       "text": "6.0",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "황승준",
+       "value": 6.0,
+       "text": "6.0",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "송범근",
+       "value": 5.5,
+       "text": "5.5",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "김승섭",
+       "value": 5.5,
+       "text": "5.5",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "이동준",
+       "value": 5.5,
+       "text": "5.5",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "10점 만점, 0.5 단위. 교체 선수(이승우·강상윤 등)는 출전 시간이 확인되지 않아 제외했다.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "선수단",
+   "teaser": "안양전에서 넷 바꿨다 · 데뷔 사흘 만에 첫 선발 황승준",
+   "folio": "베이징전 선발 변화와 황승준",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "유스 출신 오른쪽 수비수",
+     "title": "데뷔 사흘 만에 아시아 무대 선발, 황승준",
+     "paragraphs": [
+      "24일 안양전에서 교체로 1군 데뷔전을 치른 황승준이 사흘 만에 선발 명단에 들었다. 무대는 ACLE 원정이었다. 포백의 오른쪽을 맡아 처음으로 경기 시작 휘슬을 그라운드에서 들었다.",
+      "황승준은 U-15 금산중과 U-18 영생고를 거친 전북 유스 출신이다. 2025시즌을 앞두고 우선지명으로 입단해 N팀(2군)에서 경험을 쌓았다. 김태환·김태현이 빠진 오른쪽 자리가 그에게 기회가 됐다.",
+      "쉬운 하루는 아니었다. 두 번째 실점 장면에서 문전으로 흐른 공을 걷어내려던 순간 왕강의 발이 먼저 닿았다. 그래도 낯선 원정 경기장에서 선발로 경기를 소화한 경험은 남은 시즌의 자산이다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "image": "player:20250079",
+     "big": "첫 선발",
+     "paragraphs": [
+      "2005년생 · DF 27번",
+      "금산중·영생고 출신",
+      "24일 데뷔, 27일 선발"
+     ],
+     "caption": "황승준. 선수 TMI: 2025년 신인 가운데 유일한 우선지명이었다(나무위키·구단 자료).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "안양전 → 베이징전 선발 변화",
+     "items": [
+      {
+       "label": "최전방",
+       "value": "티아고 → 모따",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "2선",
+       "value": "이탈로 → 김승섭",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "중원",
+       "value": "강상윤 → 김진규",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "오른쪽 수비",
+       "value": "이상명 → 황승준",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "유지",
+       "value": "송범근 · 최우진 · 김영빈 · 박지수 · 감보아 · 이영재 · 이동준",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "figs",
+     "span": 6,
+     "rule_top": true,
+     "title": "숫자 놀이 · 바꾼 넷이 만든 것",
+     "items": [
+      {
+       "value": "4명",
+       "label": "안양전 대비 선발 교체",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1골",
+       "label": "새로 들어온 모따의 헤더",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1개",
+       "label": "김진규 코너킥, 동점골 출발점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "3일",
+       "label": "황승준 데뷔에서 첫 선발까지",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 12,
+     "rule_top": true,
+     "image": "commons:김진규:250503",
+     "caption": "김진규. 안양전 교체 출전 뒤 베이징전 선발로 나서 동점골로 이어진 코너킥을 찼다(자료 사진, 2025년 서울전).",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "ACLE 판도",
+   "teaser": "1승 1무 1패, 10위. 16강 직행선 8위까지",
+   "folio": "ACL 엘리트 · 리그 스테이지 3차전 종료",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "리그 스테이지 중간 점검",
+     "title": "세 경기 승점 4, 직행선까지는 남은 다섯 경기",
+     "paragraphs": [
+      "전북의 ACLE 성적은 1승 1무 1패가 됐다. 9월 16일 홈에서 가시와를 2-1로 이겼고, 고베 원정에서 0-2로 졌다. 이번 베이징 원정에서 처음 비겼다.",
+      "동아시아 16팀 가운데 전북은 10위다. 리그 스테이지 8위 안에 들어야 16강에 직행한다. 베이징은 2승 1무, 승점 7로 3위를 지켰다.",
+      "같은 날 K리그의 대전도 3차전을 치렀다. 대전은 비셀 고베에 0-1로 졌다. 전북과 대전은 사흘 뒤인 31일 전주에서 파이널A 첫 경기로 다시 만난다. 두 팀 모두 주중 해외 원정의 피로를 안고 나선다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "image": "coach:c01",
+     "big": "1승1무1패",
+     "paragraphs": [
+      "ACLE 3경기 승점 4",
+      "경기 전 목표는 승점 3",
+      "원정에서 승점 1 확보"
+     ],
+     "caption": "정정용 감독. 경기 전 승점 3을 가져오겠다고 했다(네이트 스포츠).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "전북의 ACLE 2026-27",
+     "title": "리그 스테이지 3경기",
+     "items": [
+      {
+       "date": "9.16",
+       "title": "1차전 전북 2-1 가시와 · 전주",
+       "text": "홈 역전승.",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20260916500540",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10월",
+       "title": "2차전 고베 2-0 전북 · 원정",
+       "text": "골대를 두 번 맞혔다.",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "10.27",
+       "title": "3차전 베이징 2-2 전북 · 원정",
+       "text": "모따·이영재 득점.",
+       "state": "hot",
+       "source_name": "AFC축구 전적(뉴스통)",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14775623",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "rule_top": true,
+     "title": "3차전 뒤 승점",
+     "items": [
+      {
+       "label": "베이징(3위)",
+       "value": 7,
+       "text": "7",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북(10위)",
+       "value": 4,
+       "text": "4",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "동아시아 16팀 리그 스테이지. 8위까지 16강 직행.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quote",
+     "span": 12,
+     "rule_top": true,
+     "title": "한 줄 만평 · 2분 만에 앞서 가고, 64분에야 제자리로. 원정 승점 1의 가격은 그 사이 62분이었다.",
+     "byline": "전주성 조간 편집부",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표, 퀴즈, 오늘 호 출처",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "베이징 2-2 전북, ACLE 3차전 무승부",
+       "text": "모따 2분, 이영재 후반 19분 득점.",
+       "source_name": "AFC축구 전적(뉴스통)",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14775623",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "전북 동아시아 10위, 승점 4",
+       "text": "16팀 중 10위. 8위까지 16강 직행.",
+       "source_name": "스타뉴스",
+       "source_url": "https://www.starnewskorea.com/sports/2026/10/28/2026102723370785642",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "대전, 고베에 0-1 패",
+       "text": "31일 파이널A 첫 상대도 주중 ACLE 원정을 치렀다.",
+       "source_name": "SBS",
+       "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817863",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "파이널A 31일 14:00 전북-대전 · 전주",
+       "text": "연맹 26일 발표 일정.",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/26/202610261233770476O",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "남은 ACLE 다섯 경기에서 8위 안으로",
+       "text": "팬들의 희망. 다음 일정은 연맹·AFC 발표를 확인할 것.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "오늘도 국내 축구 게시판 접속이 원활하지 않아 전북 관련 새 글을 직접 확인하지 못했다.",
+       "label": "편집부 알림",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "언론은 선제골 뒤 두 실점을 아쉬움으로, 이영재의 동점골을 소득으로 짚었다.",
+       "label": "언론 분위기",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "20경기 무패 베이징의 안방에서 지지 않은 결과는 나쁘지 않다는 시선도 있다.",
+       "label": "언론 분위기",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "베이징전 선제골을 넣은 선수와 시간은",
+       "text": "모따, 전반 2분 헤더",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "이영재의 동점골은 어떤 상황에서 나왔나",
+       "text": "김진규 코너킥이 굴절된 뒤 왼발 하프발리",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "황승준의 U-18 시절 팀은",
+       "text": "영생고",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "기록",
+       "text": "K리그 순위·경기 기록: K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "경기 리뷰·라인업·득점 장면",
+       "text": "포포투 ACLE 리뷰",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99933",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "실점 장면·ACLE 순위",
+       "text": "스타뉴스",
+       "source_name": "스타뉴스",
+       "source_url": "https://www.starnewskorea.com/sports/2026/10/28/2026102723370785642",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "경기 결과",
+       "text": "AFC축구 전적",
+       "source_name": "AFC축구 전적(뉴스통)",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14775623",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "대전 0-1 고베",
+       "text": "SBS",
+       "source_name": "SBS",
+       "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008817863",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "정정용 감독 경기 전 발언",
+       "text": "네이트 스포츠",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261027n09663",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "ACLE 1차전 가시와전",
+       "text": "전북일보",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20260916500540",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "파이널A 일정",
+       "text": "머니투데이",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/26/202610261233770476O",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "황승준 학력·입단 경로",
+       "text": "나무위키",
+       "source_name": "나무위키",
+       "source_url": "https://namu.wiki/w/%ED%99%A9%EC%8A%B9%EC%A4%80",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20150104": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150104.png",
+   "alt": "이영재",
+   "back_no": 28,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20250079": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250079.png",
+   "alt": "황승준",
+   "back_no": 27,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 33,
+    "w": 20,
+    "d": 7,
+    "l": 6,
+    "gf": 61,
+    "ga": 29,
+    "pts": 67,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 33,
+    "w": 15,
+    "d": 6,
+    "l": 12,
+    "gf": 52,
+    "ga": 47,
+    "pts": 51,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 33,
+    "w": 13,
+    "d": 10,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 49,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 33,
+    "w": 12,
+    "d": 12,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 48,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 33,
+    "w": 11,
+    "d": 15,
+    "l": 7,
+    "gf": 40,
+    "ga": 30,
+    "pts": 48,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 43,
+    "ga": 35,
+    "pts": 46,
+    "rank": 6,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 39,
+    "ga": 37,
+    "pts": 46,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 33,
+    "w": 10,
+    "d": 13,
+    "l": 10,
+    "gf": 40,
+    "ga": 48,
+    "pts": 43,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 33,
+    "w": 11,
+    "d": 9,
+    "l": 13,
+    "gf": 30,
+    "ga": 39,
+    "pts": 42,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 33,
+    "w": 5,
+    "d": 19,
+    "l": 9,
+    "gf": 33,
+    "ga": 41,
+    "pts": 34,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 33,
+    "w": 7,
+    "d": 11,
+    "l": 15,
+    "gf": 32,
+    "ga": 47,
+    "pts": 32,
+    "rank": 11,
+    "gd": -15
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 33,
+    "w": 3,
+    "d": 12,
+    "l": 18,
+    "gf": 30,
+    "ga": 69,
+    "pts": 21,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 4,
+   "pts": 48,
+   "w": 12,
+   "d": 12,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "인천 1-1"
+   },
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-10-31",
+   "time": "",
+   "home": "전북",
+   "away": "대전",
+   "opp": "대전 하나",
+   "opp_short": "대전",
+   "is_home": true,
+   "round": 34,
+   "venue": "",
+   "comp": "K리그1 34R",
+   "home_note": "4위 · 승점 48",
+   "away_note": "3위 · 승점 49",
+   "when_label": "10월 31일(토)",
+   "d_minus": 3
+  },
+  "last": {
+   "game_id": "194",
+   "date": "2026-10-24",
+   "round": 33,
+   "home": "안양",
+   "away": "전북",
+   "venue": "안양 종합",
+   "attendance": 9126,
+   "comp": "K리그1 33R",
+   "score": [
+    1,
+    1
+   ],
+   "date_label": "10월 24일(토)",
+   "weather": "비",
+   "referee": "고형진",
+   "managers": {
+    "home": "유병훈",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     7,
+     "AST",
+     79.2,
+     27.9
+    ],
+    [
+     "A",
+     1,
+     9,
+     "MST",
+     91.1,
+     34.0
+    ],
+    [
+     "A",
+     1,
+     13,
+     "MST",
+     77.0,
+     60.1
+    ],
+    [
+     "H",
+     1,
+     26,
+     "MST",
+     92.8,
+     48.1
+    ],
+    [
+     "A",
+     1,
+     31,
+     "MST",
+     89.5,
+     31.3
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     88.3,
+     53.8
+    ],
+    [
+     "H",
+     1,
+     39,
+     "MST",
+     86.4,
+     52.4
+    ],
+    [
+     "H",
+     1,
+     45,
+     "GL",
+     91.5,
+     61.3
+    ],
+    [
+     "H",
+     2,
+     46,
+     "AST",
+     83.8,
+     36.0
+    ],
+    [
+     "A",
+     2,
+     48,
+     "AST",
+     78.2,
+     57.7
+    ],
+    [
+     "H",
+     2,
+     63,
+     "MST",
+     90.3,
+     29.1
+    ],
+    [
+     "A",
+     2,
+     66,
+     "MST",
+     79.2,
+     78.1
+    ],
+    [
+     "A",
+     2,
+     79,
+     "AST",
+     88.2,
+     51.5
+    ],
+    [
+     "A",
+     2,
+     83,
+     "BT",
+     83.3,
+     57.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     92.0,
+     59.4
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     97.8,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     89,
+     "MST",
+     90.8,
+     45.8
+    ],
+    [
+     "A",
+     2,
+     91,
+     "GL",
+     96.3,
+     50.4
+    ],
+    [
+     "A",
+     2,
+     94,
+     "MST",
+     74.2,
+     45.6
+    ],
+    [
+     "H",
+     2,
+     98,
+     "BT",
+     77.5,
+     31.3
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "김운",
+     "label": "45+1'",
+     "minute": 45.5,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "티아고",
+     "label": "90+2'",
+     "minute": 92,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     11
+    ],
+    [
+     "유효슈팅",
+     4,
+     4
+    ],
+    [
+     "패스 성공",
+     187,
+     335
+    ],
+    [
+     "패스 성공률",
+     74.5,
+     85.7,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     7,
+     4
+    ],
+    [
+     "반칙",
+     15,
+     6
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-10-31",
+    "home": "전북",
+    "away": "대전",
+    "round": 34
+   },
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
