@@ -1,0 +1,1624 @@
+{
+ "no": 7,
+ "date": "2026-10-29",
+ "matchday_after": false,
+ "headline": "모따·티아고, 파이널A 앞둔 전북 공격의 두 축",
+ "summary": "티아고가 최근 리그 4경기 6골, 모따가 ACLE 베이징전 2분 선제골로 공격을 이끌었다. 전북은 31일 대전과 파이널A 첫 경기를 치른다.",
+ "strip": [
+  "K리그1 4위 · 승점 48",
+  "3위 대전과 승점 1점 차",
+  "ACLE 1승 1무 1패 · 승점 4",
+  "파이널A D-2 · 31일(토) 14:00 대전 홈"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제7호 · 2026.10.29",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:Bruno Mota:260411",
+     "kicker": "파이널A 개막 D-2 · 전북 공격진 점검",
+     "title": "모따·티아고, 파이널A 앞둔 전북 공격의 두 축",
+     "dek": "티아고는 최근 리그 4경기에서 6골을 넣었고, 모따는 베이징 원정에서 2분 만에 머리로 골문을 열었다.",
+     "caption": "모따(자료 사진, 2026년 4월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북의 파이널A 첫 경기를 이틀 앞두고 두 외국인 공격수의 발끝이 뜨겁다. 티아고는 최근 리그 4경기에서 6골을 넣었다고 네이트 스포츠가 26일 보도했다. 모따는 27일 ACLE 베이징 원정에서 전반 2분 헤더 선제골을 넣었다.",
+      "티아고는 18일 제주전에서 전반 32분 헤더와 후반 15분 추가골로 3-2 승리를 이끌었고, 연맹이 뽑은 32라운드 MVP가 됐다. 24일 안양 원정에서는 0-1로 끌려가던 후반 추가시간 2분 동점골로 승점 1을 챙겼다.",
+      "두 선수는 생김새도 역할도 다르다. 193cm 모따는 공중볼과 등지는 플레이로 버티고, 티아고는 박스 안에서 마무리를 맡는다. 24일 안양전에는 티아고가, 27일 베이징전에는 모따가 선발 최전방에 섰다.",
+      "전북은 리그 33경기에서 43골을 넣었다. 실점은 33골로 서울, 강원 다음으로 적다. 남은 5경기에서 3위 대전과의 승점 1점 차를 뒤집으려면 골이 더 필요하다. 2면에서 두 공격수의 최근 기록을 정리했다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "6골",
+       "label": "티아고 최근 리그 4경기 (보도)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "2분",
+       "label": "모따 베이징전 선제 헤더",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1점",
+       "label": "3위 대전과 승점 차",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-2",
+       "label": "31일(토) 14:00 대전 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "두 공격수",
+   "teaser": "제주전 멀티골, 안양전 동점골, 베이징전 선제골. 두 공격수의 10월",
+   "folio": "전북 공격진 · 티아고와 모따",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "선수 분석",
+     "title": "티아고, 10월 리그 득점을 책임졌다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북의 10월 리그 골 장면에는 티아고가 자주 있었다. 18일 제주전 두 골로 32라운드 MVP에 올랐고, 이 경기는 라운드 베스트 매치로도 뽑혔다.",
+      "24일 안양 원정은 비가 내린 경기였다. 전북은 패스 성공 335개로 안양(187개)보다 공을 오래 가졌지만 전반 추가시간 김운에게 먼저 실점했다. 티아고는 후반 추가시간 2분 동점골을 넣었다.",
+      "그날 티아고는 슈팅 3개 중 유효슈팅 1개를 골로 바꿨다. 패스 20개 중 14개를 연결했고 수비 기여도 6회를 기록했다. 최전방 공격수가 끝까지 내려와 수비를 도운 숫자다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20220244",
+     "big": "6골",
+     "paragraphs": [
+      "최근 리그 4경기 6골",
+      "32라운드 MVP",
+      "안양전 90+2분 동점골"
+     ],
+     "caption": "티아고. 골 수는 네이트 스포츠 26일 보도 기준.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 4,
+     "rule_top": true,
+     "title": "티아고 · 33R 안양전 기록",
+     "items": [
+      {
+       "label": "출전",
+       "value": "원정 · 1-1 무",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "슈팅",
+       "value": "3 (유효 1)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "골",
+       "value": "1 · 후반 90+2'",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "패스",
+       "value": "14 / 20",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "수비 기여",
+       "value": "6",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20230224",
+     "big": "193cm",
+     "paragraphs": [
+      "안양에서 임대 영입",
+      "베이징전 2분 헤더",
+      "천안 시절 득점왕"
+     ],
+     "caption": "모따. 영입 정보는 머니투데이 1월 보도.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 4,
+     "rule_top": true,
+     "kicker": "선수 TMI",
+     "title": "모따, 친정 안양에서 건너온 장신 공격수",
+     "paragraphs": [
+      "모따는 1월 FC안양에서 임대로 왔다. 2022년 한국 무대에 온 뒤 천안시티FC에서 득점왕에 올랐고, 지난해 안양에서 K리그1 첫 시즌 14골 4도움을 기록했다.",
+      "27일 베이징전에서는 최우진의 왼쪽 크로스를 머리로 받아 2분 만에 선제골을 넣었다. 키 193cm의 높이가 그대로 드러난 장면이었다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "10월의 골",
+     "title": "두 공격수의 10월 장면",
+     "items": [
+      {
+       "date": "10.18",
+       "title": "티아고 2골 · 전북 3-2 제주",
+       "text": "전반 32분 헤더, 후반 15분 추가골. 파이널A 확정.",
+       "source_name": "더팩트",
+       "source_url": "https://news.tf.co.kr/read/ogmeta/2378345.htm",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10.20",
+       "title": "티아고 32라운드 MVP",
+       "text": "연맹 발표. 제주전은 베스트 매치.",
+       "source_name": "더팩트",
+       "source_url": "https://news.tf.co.kr/read/ogmeta/2378345.htm",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10.24",
+       "title": "티아고 90+2분 동점골 · 안양 1-1 전북",
+       "text": "비 내린 안양 원정에서 승점 1.",
+       "state": "hot",
+       "tag": null,
+       "label": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "10.27",
+       "title": "모따 2분 헤더 · 베이징 2-2 전북",
+       "text": "ACLE 리그 스테이지 3차전 선제골.",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99933",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 12,
+     "rule_top": true,
+     "image": "commons:Tiago Orobó:250702",
+     "caption": "티아고(자료 사진, 2025년 7월 서울전).",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "리그 판도",
+   "teaser": "파이널A 여섯 팀, 전북은 무승부 12번에 실점은 세 번째로 적다",
+   "folio": "K리그1 33라운드 종료 기준",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "데이터",
+     "title": "지지 않는 팀, 이기는 팀이 되려면",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북은 33경기에서 12승 12무 9패를 기록했다. 파이널A 여섯 팀 가운데 무승부가 강원(15번) 다음으로 많다. 최근 리그 8경기에서도 4번 비겼다.",
+      "실점은 33골로 서울(29골), 강원(30골) 다음으로 적다. 득점은 43골로 서울(61골), 대전(53골), 울산(52골)보다 적다. 지키는 힘은 있었고, 마무리가 숙제였다.",
+      "그래서 최근 두 공격수의 골이 반갑다. 2위 울산(51점)과 3점, 3위 대전(49점)과 1점 차이고, 5위 강원과는 승점 48점으로 같다. 남은 5경기의 순위 싸움은 빽빽하다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "title": "파이널A 여섯 팀 무승부 수",
+     "items": [
+      {
+       "label": "강원",
+       "value": 15,
+       "text": "15",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 12,
+       "text": "12",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 10,
+       "text": "10",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천",
+       "value": 10,
+       "text": "10",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "서울",
+       "value": 7,
+       "text": "7",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산",
+       "value": 6,
+       "text": "6",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "K리그 데이터포털, 33라운드 종료 기준.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 7,
+     "rule_top": true,
+     "title": "K리그1 순위 (33라운드 종료)",
+     "chart": "standings",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "rule_top": true,
+     "title": "파이널A 여섯 팀 실점",
+     "items": [
+      {
+       "label": "서울",
+       "value": 29,
+       "text": "29",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 30,
+       "text": "30",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 33,
+       "text": "33",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천",
+       "value": 35,
+       "text": "35",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 41,
+       "text": "41",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산",
+       "value": 47,
+       "text": "47",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "적을수록 좋다.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 8,
+     "rule_top": true,
+     "title": "전북 최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 4,
+     "rule_top": true,
+     "image": "commons:전주월드컵경기장:13",
+     "caption": "전주월드컵경기장. 파이널A 첫 경기가 31일 이곳에서 열린다.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "그때 그 시절",
+   "teaser": "1년 전 10월, 전북은 V10과 더블을 향해 달리고 있었다",
+   "folio": "그때 그 시절 · 기자 수첩",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 12,
+     "image": "commons:전주월드컵경기장:11",
+     "caption": "전주월드컵경기장 관중석(자료 사진).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "그때 그 시절",
+     "title": "1년 전 이맘때, 전북은 우승팀이었다",
+     "paragraphs": [
+      "지난해 10월 18일 전북은 리그 10번째 우승을 확정했다. 올해 같은 날짜에는 제주를 3-2로 꺾고 파이널A 진출을 확정했다고 네이트 스포츠가 짚었다.",
+      "지난해 파이널라운드 미디어데이에는 우승을 먼저 확정한 거스 포옛 감독이 참석했다. 전북은 그해 코리아컵까지 들어 올려 더블을 완성했다.",
+      "그 트로피 두 개는 올해 3월 전주월드컵경기장에 문을 연 클럽 뮤지엄 이벤트 홀에 전시됐다. 홈경기 날 경기장을 찾는다면 한 번 들러 볼 만하다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 5,
+     "rule_top": true,
+     "title": "2025년 가을에서 2026년 가을까지",
+     "items": [
+      {
+       "date": "2025.10.18",
+       "title": "K리그1 우승 확정 (V10)",
+       "text": "리그 10번째 별.",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261019n19852",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2025.10",
+       "title": "파이널라운드 미디어데이",
+       "text": "우승팀 감독으로 포옛 참석.",
+       "source_name": "골닷컴",
+       "source_url": "https://www.goal.com/kr/%EB%89%B4%EC%8A%A4/%E1%84%91%E1%85%A9%E1%84%8B%E1%85%A8%E1%86%BA-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%AD%E1%86%BC-%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A9%E1%86%BC-%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%E1%86%AFa-%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%80%E1%85%A1%E1%86%B7%E1%84%83%E1%85%A9%E1%86%A8%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B4-%E1%84%83%E1%85%A2%E1%84%83%E1%85%A1%E1%86%B7--k%E1%84%85%E1%85%B5%E1%84%80%E1%85%B31-%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%83%E1%85%B3-%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5-22%E1%84%8B%E1%85%B5%E1%86%AF-%E1%84%80%E1%85%A2%E1%84%8E%E1%85%AC/blt3062ba892161ef5a",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.03.28",
+       "title": "클럽 뮤지엄 개관",
+       "text": "더블 트로피 전시.",
+       "source_name": "톱스타뉴스",
+       "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16010472",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.10.18",
+       "title": "파이널A 확정",
+       "text": "제주 3-2, 티아고 2골.",
+       "state": "hot",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261019n19852",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "기자 수첩",
+     "title": "비기는 힘을 이기는 힘으로",
+     "variant": "lime",
+     "paragraphs": [
+      "올해 전북은 쉽게 지지 않았다. 33경기 9패는 파이널A에서 서울(6패), 강원(7패) 다음으로 적다. 대신 12번 비겼고, 그만큼 승점이 새어 나갔다.",
+      "10월 들어 달라진 장면이 있다. 제주전 두 골, 안양전 추가시간 동점골, 베이징전 2분 선제골. 공격수들이 경기 흐름을 바꾸는 순간이 늘었다.",
+      "파이널라운드는 5경기뿐이다. 무승부 하나가 순위 한 칸을 가를 수 있다. 지키는 힘에 두 공격수의 마무리가 더해질지가 남은 시즌의 관전 포인트다."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "coach:c01",
+     "big": "5경기",
+     "paragraphs": [
+      "파이널A 남은 경기",
+      "대전·강원·서울",
+      "울산·인천 순"
+     ],
+     "caption": "정정용 감독. 일정은 연맹 26일 발표.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "오늘의 등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크 · 출처 모음",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "공식 · 보도 · 설 · 바람",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "보도",
+       "title": "티아고, 최근 리그 4경기 6골",
+       "text": "파이널A 앞 전북 득점의 중심이라는 분석.",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261026n35051",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "황선홍 대전 감독, 고베전 뒤 결정력 아쉬움",
+       "text": "28일 보도. 슈팅 19개에도 무득점. 대전은 31일 전주 원정에 나선다.",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202610281529013/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "황선홍 감독, J리그와의 압박 강도 차이 언급",
+       "text": "28일 보도. K리그 전체의 과제라고 말했다.",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202610281603003/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "파이널A 31일(토) 14:00 전북-대전 · 전주",
+       "text": "연맹 발표 일정.",
+       "source_name": "스포츠월드",
+       "source_url": "https://www.sportsworldi.com/newsView/20261026508808",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "국내축구 루머 게시판에 모따 관련 글",
+       "text": "29일 제목만 확인. 내용은 교차 확인하지 못해 등급을 올리지 않는다.",
+       "source_name": "에펨코리아 국내축구 루머",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "두 공격수가 함께 골을 넣는 경기",
+       "text": "팬들의 희망. 파이널A에서 볼 수 있을까.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "루머 게시판은 다른 팀 감독·선수 이야기가 대부분이었고, 전북 관련 새 소식은 드물었다.",
+       "label": "국내축구 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "언론은 티아고의 최근 득점 행진을 후반기 전북 공격의 버팀목으로 짚었다.",
+       "label": "보도 흐름",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "대전도 27일 ACLE 홈경기를 치렀다. 두 팀 모두 주중 경기 나흘 뒤 전주에서 만난다.",
+       "label": "편집부 메모",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "추꾸·에버그린 등 일부 게시판은 접속이 막혀 직접 확인하지 못했다.",
+       "label": "편집부 메모",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "오늘의 질문",
+     "title": "파이널A 최전방, 누구를 먼저 세울까",
+     "paragraphs": [
+      "티아고 원톱, 모따 원톱, 아니면 둘을 함께. 여러분의 선택과 이유를 댓글로 남겨 주세요."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "티아고가 32라운드 MVP를 받은 경기의 상대는",
+       "text": "제주 (3-2 승, 2골)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "모따가 전북에 오기 전 뛴 K리그1 팀은",
+       "text": "FC안양",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "파이널A 여섯 팀 중 전북보다 무승부가 많은 팀은",
+       "text": "강원 (15번)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "기록",
+       "text": "K리그 순위·경기 기록: K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "티아고 최근 4경기 6골",
+       "text": "네이트 스포츠",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261026n35051",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "32라운드 MVP·제주전 득점 시간",
+       "text": "더팩트",
+       "source_name": "더팩트",
+       "source_url": "https://news.tf.co.kr/read/ogmeta/2378345.htm",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "모따 영입·경력",
+       "text": "머니투데이",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/01/09/2026010910115837543",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "베이징전 선제골 장면",
+       "text": "포포투",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99933",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "황선홍 감독 고베전 뒤 발언",
+       "text": "스포츠경향",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202610281529013/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "황선홍 감독 J리그 비교 발언",
+       "text": "스포츠경향",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202610281603003/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "파이널라운드 일정",
+       "text": "스포츠월드",
+       "source_name": "스포츠월드",
+       "source_url": "https://www.sportsworldi.com/newsView/20261026508808",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "1년 전 V10·올해 파이널A 확정",
+       "text": "네이트 스포츠",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261019n19852",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2025 파이널라운드 미디어데이",
+       "text": "골닷컴",
+       "source_name": "골닷컴",
+       "source_url": "https://www.goal.com/kr/%EB%89%B4%EC%8A%A4/%E1%84%91%E1%85%A9%E1%84%8B%E1%85%A8%E1%86%BA-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%AD%E1%86%BC-%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A9%E1%86%BC-%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%E1%86%AFa-%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%80%E1%85%A1%E1%86%B7%E1%84%83%E1%85%A9%E1%86%A8%E1%84%83%E1%85%B3%E1%86%AF%E1%84%8B%E1%85%B4-%E1%84%83%E1%85%A2%E1%84%83%E1%85%A1%E1%86%B7--k%E1%84%85%E1%85%B5%E1%84%80%E1%85%B31-%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB%E1%84%83%E1%85%B3-%E1%84%86%E1%85%B5%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A5%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5-22%E1%84%8B%E1%85%B5%E1%86%AF-%E1%84%80%E1%85%A2%E1%84%8E%E1%85%AC/blt3062ba892161ef5a",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "클럽 뮤지엄 개관",
+       "text": "톱스타뉴스",
+       "source_name": "톱스타뉴스",
+       "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16010472",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20220244": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png",
+   "alt": "티아고",
+   "back_no": 9,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20230224": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png",
+   "alt": "모따",
+   "back_no": 99,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 33,
+    "w": 20,
+    "d": 7,
+    "l": 6,
+    "gf": 61,
+    "ga": 29,
+    "pts": 67,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 33,
+    "w": 15,
+    "d": 6,
+    "l": 12,
+    "gf": 52,
+    "ga": 47,
+    "pts": 51,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 33,
+    "w": 13,
+    "d": 10,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 49,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 33,
+    "w": 12,
+    "d": 12,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 48,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 33,
+    "w": 11,
+    "d": 15,
+    "l": 7,
+    "gf": 40,
+    "ga": 30,
+    "pts": 48,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 43,
+    "ga": 35,
+    "pts": 46,
+    "rank": 6,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 39,
+    "ga": 37,
+    "pts": 46,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 33,
+    "w": 10,
+    "d": 13,
+    "l": 10,
+    "gf": 40,
+    "ga": 48,
+    "pts": 43,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 33,
+    "w": 11,
+    "d": 9,
+    "l": 13,
+    "gf": 30,
+    "ga": 39,
+    "pts": 42,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 33,
+    "w": 5,
+    "d": 19,
+    "l": 9,
+    "gf": 33,
+    "ga": 41,
+    "pts": 34,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 33,
+    "w": 7,
+    "d": 11,
+    "l": 15,
+    "gf": 32,
+    "ga": 47,
+    "pts": 32,
+    "rank": 11,
+    "gd": -15
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 33,
+    "w": 3,
+    "d": 12,
+    "l": 18,
+    "gf": 30,
+    "ga": 69,
+    "pts": 21,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 4,
+   "pts": 48,
+   "w": 12,
+   "d": 12,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "인천 1-1"
+   },
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-10-31",
+   "time": "",
+   "home": "전북",
+   "away": "대전",
+   "opp": "대전 하나",
+   "opp_short": "대전",
+   "is_home": true,
+   "round": 34,
+   "venue": "",
+   "comp": "K리그1 34R",
+   "home_note": "4위 · 승점 48",
+   "away_note": "3위 · 승점 49",
+   "when_label": "10월 31일(토)",
+   "d_minus": 2
+  },
+  "last": {
+   "game_id": "194",
+   "date": "2026-10-24",
+   "round": 33,
+   "home": "안양",
+   "away": "전북",
+   "venue": "안양 종합",
+   "attendance": 9126,
+   "comp": "K리그1 33R",
+   "score": [
+    1,
+    1
+   ],
+   "date_label": "10월 24일(토)",
+   "weather": "비",
+   "referee": "고형진",
+   "managers": {
+    "home": "유병훈",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     7,
+     "AST",
+     79.2,
+     27.9
+    ],
+    [
+     "A",
+     1,
+     9,
+     "MST",
+     91.1,
+     34.0
+    ],
+    [
+     "A",
+     1,
+     13,
+     "MST",
+     77.0,
+     60.1
+    ],
+    [
+     "H",
+     1,
+     26,
+     "MST",
+     92.8,
+     48.1
+    ],
+    [
+     "A",
+     1,
+     31,
+     "MST",
+     89.5,
+     31.3
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     88.3,
+     53.8
+    ],
+    [
+     "H",
+     1,
+     39,
+     "MST",
+     86.4,
+     52.4
+    ],
+    [
+     "H",
+     1,
+     45,
+     "GL",
+     91.5,
+     61.3
+    ],
+    [
+     "H",
+     2,
+     46,
+     "AST",
+     83.8,
+     36.0
+    ],
+    [
+     "A",
+     2,
+     48,
+     "AST",
+     78.2,
+     57.7
+    ],
+    [
+     "H",
+     2,
+     63,
+     "MST",
+     90.3,
+     29.1
+    ],
+    [
+     "A",
+     2,
+     66,
+     "MST",
+     79.2,
+     78.1
+    ],
+    [
+     "A",
+     2,
+     79,
+     "AST",
+     88.2,
+     51.5
+    ],
+    [
+     "A",
+     2,
+     83,
+     "BT",
+     83.3,
+     57.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     92.0,
+     59.4
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     97.8,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     89,
+     "MST",
+     90.8,
+     45.8
+    ],
+    [
+     "A",
+     2,
+     91,
+     "GL",
+     96.3,
+     50.4
+    ],
+    [
+     "A",
+     2,
+     94,
+     "MST",
+     74.2,
+     45.6
+    ],
+    [
+     "H",
+     2,
+     98,
+     "BT",
+     77.5,
+     31.3
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "김운",
+     "label": "45+1'",
+     "minute": 45.5,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "티아고",
+     "label": "90+2'",
+     "minute": 92,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     11
+    ],
+    [
+     "유효슈팅",
+     4,
+     4
+    ],
+    [
+     "패스 성공",
+     187,
+     335
+    ],
+    [
+     "패스 성공률",
+     74.5,
+     85.7,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     7,
+     4
+    ],
+    [
+     "반칙",
+     15,
+     6
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-10-31",
+    "home": "전북",
+    "away": "대전",
+    "round": 34
+   },
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
