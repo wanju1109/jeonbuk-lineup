@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-28T06:13:48+09:00",
+  "generated_at": "2026-10-29T06:37:15+09:00",
   "table": {
     "rank": 2,
     "teams": 17,
@@ -166,7 +166,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
