@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-29T06:37:15+09:00",
+  "generated_at": "2026-10-30T06:44:23+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
@@ -171,7 +171,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 6,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -401,7 +401,7 @@
         "gd": -8
       }
     ],
-    "best_rank": 7,
+    "best_rank": 6,
     "worst_rank": 11,
     "first_half": {
       "played": 19,
@@ -867,7 +867,7 @@
         "name": "정재민",
         "position": "FW",
         "back_no": 57,
-        "age": 24,
+        "age": 25,
         "apps": 19,
         "goals": 1,
         "assists": 2,

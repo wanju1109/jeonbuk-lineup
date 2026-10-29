@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-10-29T06:37:15+09:00",
+  "generated_at": "2026-10-30T06:44:23+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
@@ -695,7 +695,7 @@
   ],
   "squad": {
     "size": 32,
-    "avg_age": 24.6,
+    "avg_age": 24.7,
     "foreign": 5,
     "top_scorers": [
       {

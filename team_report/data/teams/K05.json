@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-10-29T06:37:14+09:00",
+  "generated_at": "2026-10-30T06:44:22+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -192,7 +192,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 6,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -769,7 +769,7 @@
         "name": "티아고",
         "position": "FW",
         "back_no": 9,
-        "age": 32,
+        "age": 33,
         "apps": 25,
         "goals": 11,
         "assists": 1,
