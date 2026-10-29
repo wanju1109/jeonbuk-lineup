@@ -1,0 +1,1528 @@
+{
+ "no": 8,
+ "date": "2026-10-30",
+ "matchday_after": false,
+ "headline": "송범근, 11월 대표팀 명단에 전북 선수로 유일하게 승선",
+ "summary": "모레노 감독이 29일 발표한 11월 A매치 26명 명단에 송범근이 골키퍼 3명 중 한 명으로 뽑혔다. 이승우는 이번에도 이름을 올리지 못했다. 전북은 31일 대전과 파이널A 첫 경기를 치른다.",
+ "strip": [
+  "K리그1 4위 · 승점 48",
+  "송범근 11월 대표팀 발탁",
+  "11.13 사우디 · 11.17 카타르 (도하)",
+  "파이널A D-1 · 31일(토) 14:00 대전 홈"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제8호 · 2026.10.30",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:송범근:260912",
+     "kicker": "11월 A매치 명단 발표 · 전북 1명",
+     "title": "송범근, 11월 대표팀 명단에 전북 선수로 유일하게 승선",
+     "dek": "모레노 감독의 26명 가운데 골키퍼는 김승규, 조현우, 송범근. 9월 첫 소집부터 세 번 연속 이름을 올렸다.",
+     "caption": "송범근(자료 사진, 2026년 9월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북 골키퍼 송범근이 11월 A매치 대표팀에 뽑혔다. 로베르트 모레노 감독은 29일 천안 코리아풋볼파크에서 사우디아라비아, 카타르와의 원정 2연전에 나설 26명을 발표했다. 골키퍼 자리는 김승규(FC도쿄), 조현우(울산), 송범근 세 명이다.",
+      "전북 소속은 송범근 한 명이다. 이승우는 9월 첫 명단에 이어 이번에도 이름이 없었다고 한국아이닷컴이 전했다. 대표팀은 13일 사우디아라비아, 17일 카타르와 맞붙는다. 두 경기 모두 카타르 도하에서 열린다.",
+      "송범근은 10월 2일 울산에서 열린 베네수엘라전에서 약 11개월 만에 A매치 선발로 나섰다. 0-0으로 끝난 이 경기에서 풀타임을 뛰며 선방 4개를 기록했고, 풋몹 평점 7.9로 양 팀 최고점을 받았다고 재경일보가 보도했다.",
+      "소속팀 일정은 그대로다. 전북은 31일(토) 오후 2시 전주에서 대전과 파이널A 첫 경기를 치르고, 8일 강원 원정을 마친 뒤 A매치 휴식기에 들어간다. 2면에 명단과 송범근의 대표팀 발자취를 정리했다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "26명",
+       "label": "11월 A매치 소집 인원",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1명",
+       "label": "전북 소속 발탁 (송범근)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "4개",
+       "label": "송범근 베네수엘라전 선방 (보도)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-1",
+       "label": "31일(토) 14:00 대전 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "대표팀",
+   "teaser": "골키퍼 셋 중 한 명. 송범근의 2026년 대표팀 발자취와 11월 명단",
+   "folio": "11월 A매치 · 모레노호 명단",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "선수 TMI",
+     "title": "전북에서 시작해 전북으로 돌아온 골키퍼",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "송범근은 2018년 전북에서 프로에 데뷔했고, 그해 바로 주전 골문을 맡았다. 같은 해 자카르타-팔렘방 아시안게임에서는 금메달을 땄다.",
+      "2023년 일본 J리그 쇼난 벨마레로 옮겨 두 시즌을 뛰었다. 부상과 주전 경쟁을 겪은 시간이었다. 2025시즌을 앞두고 전북으로 돌아왔다.",
+      "올해 대표팀에서는 9월 모레노 감독의 첫 명단부터 꾸준히 불렸다. 10월 베네수엘라전에서는 후반 헤더와 중거리 슈팅을 막아내며 무실점 경기를 만들었다. 이번 11월 소집은 모레노 감독의 계약 기간(11월 27일까지) 안에 치르는 마지막 2연전이다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20180025",
+     "big": "GK 31",
+     "paragraphs": [
+      "2018년 전북 데뷔",
+      "아시안게임 금메달",
+      "11월 명단 승선"
+     ],
+     "caption": "송범근. 경력은 스포츠서울 2025년 1월 보도 기준.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 5,
+     "rule_top": true,
+     "title": "11월 명단 골키퍼",
+     "items": [
+      {
+       "label": "김승규",
+       "value": "FC도쿄",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "조현우",
+       "value": "울산 HD",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "송범근",
+       "value": "전북 현대",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 7,
+     "rule_top": true,
+     "title": "11월 명단 K리그1 구단별 인원",
+     "items": [
+      {
+       "label": "울산",
+       "value": 3,
+       "text": "3 (조현우·조현택·이동경)",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "서울",
+       "value": 2,
+       "text": "2 (최준·손정범)",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 2,
+       "text": "2 (이명재·김봉수)",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 1,
+       "text": "1 (송범근)",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 1,
+       "text": "1 (신민하)",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "김천",
+       "value": 1,
+       "text": "1 (박태준)",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "대한축구협회 발표 명단(10.29) 기준. 26명 중 K리그1 소속 10명.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "timeline",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "2026 가을",
+     "title": "송범근의 대표팀 발자취",
+     "items": [
+      {
+       "date": "09.14",
+       "title": "모레노호 첫 명단 30명에 포함",
+       "text": "골키퍼 4명 중 한 명. 이승우는 제외.",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20260914n20243",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10.02",
+       "title": "베네수엘라전 선발 · 0-0",
+       "text": "약 11개월 만의 A매치 선발. 선방 4개, 풋몹 평점 7.9.",
+       "state": "hot",
+       "source_name": "재경일보",
+       "source_url": "https://news.jkn.co.kr/post/1006474",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "10.29",
+       "title": "11월 A매치 26명 명단 승선",
+       "text": "골키퍼 3명 중 한 명. 전북 소속은 송범근 한 명.",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202610290084",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "11.13",
+       "title": "사우디아라비아전 (도하)",
+       "text": "한국시간 오후 11시 30분 킥오프. 17일에는 카타르전.",
+       "source_name": "폴리뉴스",
+       "source_url": "https://www.polinews.co.kr/news/articleView.html?idxno=747201",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "명단 밖",
+     "title": "이승우, 11월 명단에도 이름 없어",
+     "paragraphs": [
+      "이승우는 9월 첫 소집에 이어 11월 명단에서도 빠졌다. 발탁 여부에 관심이 모였던 문선민도 함께 제외됐다.",
+      "소속팀에서는 교체 카드로 뛰고 있다. 24일 안양 원정에서는 후반 교체로 들어가 54분을 뛰었다. 남은 리그 다섯 경기가 다음 기회를 위한 무대다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "rule_top": true,
+     "image": "commons:이승우:260411",
+     "caption": "이승우(자료 사진, 2026년 4월 서울전).",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "숫자 놀이",
+   "teaser": "최근 리그 8경기, 전북은 12골을 넣고 11골을 내줬다",
+   "folio": "K리그1 33라운드 종료 기준",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "숫자 놀이",
+     "title": "최근 8경기, 넣은 골 12 · 내준 골 11",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북의 최근 리그 8경기는 2승 4무 2패다. 이 기간 12골을 넣고 11골을 내줬다. 경기당 득실이 거의 같다.",
+      "무실점 경기는 포항전 2-0 한 번뿐이다. 대신 무득점 경기도 없었다. 8경기 모두 골을 넣었다.",
+      "시즌 전체로 보면 33경기 33실점, 경기당 딱 1골이다. 대표팀 골키퍼를 둔 팀답게 남은 다섯 경기에서 실점을 줄이는 것이 순위 싸움의 열쇠다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "title": "최근 8경기 실점",
+     "items": [
+      {
+       "label": "안양 1-1",
+       "value": 1,
+       "text": "1",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "제주 3-2",
+       "value": 2,
+       "text": "2",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전 1-2",
+       "value": 2,
+       "text": "2",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "광주 2-2",
+       "value": 2,
+       "text": "2",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "서울 1-2",
+       "value": 2,
+       "text": "2",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원 1-1",
+       "value": 1,
+       "text": "1",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "포항 2-0",
+       "value": 0,
+       "text": "0 · 무실점",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천 1-1",
+       "value": 1,
+       "text": "1",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "K리그 데이터포털. 위가 가장 최근 경기.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 7,
+     "rule_top": true,
+     "title": "전북 최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "rule_top": true,
+     "image": "player:20180025",
+     "big": "33",
+     "paragraphs": [
+      "33경기 33실점",
+      "경기당 1실점",
+      "서울·강원 다음 적은 실점"
+     ],
+     "caption": "K리그 데이터포털, 33라운드 종료 기준.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 12,
+     "rule_top": true,
+     "title": "파이널A 남은 리그 일정",
+     "items": [
+      {
+       "label": "34R · 10.31(토)",
+       "value": "전북 - 대전 · 전주",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "35R · 11.08(일)",
+       "value": "강원 - 전북 · 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "36R · 11.21(토)",
+       "value": "전북 - 서울 · 전주",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "37R · 11.29(일)",
+       "value": "울산 - 전북 · 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "38R · 12.06(일)",
+       "value": "전북 - 인천 · 전주",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "기자 수첩",
+   "teaser": "대표팀 골키퍼를 둔 팀의 겨울 준비",
+   "folio": "기자 수첩 · 한 줄 만평",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "green",
+     "kicker": "기자 수첩",
+     "title": "대표팀 골키퍼가 있다는 것",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "골키퍼는 한 번 자리를 잡으면 오래 간다. 대표팀도 그렇다. 김승규와 조현우가 오랫동안 나눠 맡은 자리에 송범근이 세 번째 이름으로 꾸준히 불리고 있다.",
+      "베네수엘라전 선발은 대표팀 공격이 막힌 날 골문이 버텨 준 경기였다. 그날 송범근이 보여 준 반사신경은 전주에서 팬들이 익히 보던 장면이다.",
+      "11월 2연전은 리그 35라운드 강원 원정 닷새 뒤에 열린다. 대표팀에서 뛰는 시간은 선수에게 자신감이 되고, 소속팀에는 동기부여가 된다. 남은 리그 다섯 경기에서 전북의 골문이 더 단단해지기를 기대한다."
+     ],
+     "rule_top": false,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 4,
+     "image": "commons:송범근:250503",
+     "caption": "송범근(자료 사진, 2025년 5월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 12,
+     "rule_top": true,
+     "title": "한 줄 만평 · 전주의 골문 열쇠, 11월에는 도하까지 들고 간다.",
+     "byline": "전주성 조간 편집부, 10월 30일",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "포항 박태하 감독 사임 보도, 31일 경기장 행사",
+   "folio": "루머 데스크 · 커뮤니티 · 퀴즈",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "송범근 11월 A매치 명단 승선",
+       "text": "대한축구협회 29일 발표. 골키퍼 3명 중 한 명.",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202610290084",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "이승우, 11월 명단 제외",
+       "text": "9월 첫 소집에 이어 이번에도 이름이 없었다.",
+       "source_name": "한국아이닷컴",
+       "source_url": "https://www.hankooki.com/news/articleView.html?idxno=347116",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "포항 박태하 감독, 11월 1일 제주전 뒤 사임",
+       "text": "구단과 구두 합의했다는 보도. 포항은 올해 파이널B에서 시즌을 마친다.",
+       "source_name": "풋볼리스트",
+       "source_url": "https://m.sports.naver.com/kfootball/article/436/0000114527",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "31일 동측광장 eK리그 패밀리컵 선발전",
+       "text": "대전전 당일 낮 12시, 아빠와 자녀 2인 1팀. 현장 신청.",
+       "source_name": "키즈맘",
+       "source_url": "https://www.kizmom.com/news/articleView.html?idxno=113621",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "송범근, 중동 2연전 중 한 경기 선발",
+       "text": "팬들의 희망. 선발 여부는 경기 당일 확인.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "새 얼굴보다 9~10월 멤버 위주로 꾸려 조직력을 다져야 한다는 의견과, 지금 젊은 선수를 시험해야 한다는 반론이 맞섰다.",
+       "label": "국내축구 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "골키퍼 명단은 이견이 적다. 세 명 체제가 굳어졌다는 반응이 많다.",
+       "label": "국내축구 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "포항 박태하 감독 사임 보도에 3년 동행을 아쉬워하는 글이 이어졌다.",
+       "label": "국내축구 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "루머 게시판에는 최근 사흘 사이 전북 관련 새 글이 거의 없었다. 관심은 31일 대전전에 쏠려 있다.",
+       "label": "루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "11월 대표팀 명단에 오른 골키퍼 세 명은?",
+       "text": "김승규, 조현우, 송범근",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "송범근이 10월 2일 베네수엘라전에서 기록한 선방 수는?",
+       "text": "4개 (0-0 무승부)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "전북의 최근 리그 8경기 가운데 무실점 경기의 상대는?",
+       "text": "포항 (2-0 승)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "11월 A매치 명단 발표, 손정범·신민하 최초 발탁",
+       "text": "일간스포츠, 10.29",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202610290084",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "11월 명단 전체(소속 포함)",
+       "text": "네이버 스포츠 기사 전재, 10.29",
+       "source_name": "루리웹 뉴스",
+       "source_url": "https://bbs.ruliweb.com/news/board/1005/read/3822059",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "김지수 승선, 이승우 낙마",
+       "text": "한국아이닷컴, 10.29",
+       "source_name": "한국아이닷컴",
+       "source_url": "https://www.hankooki.com/news/articleView.html?idxno=347116",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "11월 원정 2연전 일정",
+       "text": "폴리뉴스, 10.29",
+       "source_name": "폴리뉴스",
+       "source_url": "https://www.polinews.co.kr/news/articleView.html?idxno=747201",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "송범근 선방 4개, 베네수엘라와 0-0",
+       "text": "재경일보, 10.2",
+       "source_name": "재경일보",
+       "source_url": "https://news.jkn.co.kr/post/1006474",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "송범근 11개월 만의 선발",
+       "text": "MHN스포츠, 10.2",
+       "source_name": "MHN스포츠",
+       "source_url": "https://mhnse.com/news/articleView.html?idxno=1570612",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "전북으로 돌아온 송범근",
+       "text": "스포츠서울, 2025.1.27",
+       "source_name": "다음 스포츠",
+       "source_url": "https://v.daum.net/v/20250127080211351",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "박태하 감독 사임 보도",
+       "text": "풋볼리스트, 10.30",
+       "source_name": "풋볼리스트",
+       "source_url": "https://m.sports.naver.com/kfootball/article/436/0000114527",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "대전전 경기장 행사",
+       "text": "키즈맘, 10.29",
+       "source_name": "키즈맘",
+       "source_url": "https://www.kizmom.com/news/articleView.html?idxno=113621",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "순위·경기 기록",
+       "text": "K리그 데이터포털",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20180025": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png",
+   "alt": "송범근",
+   "back_no": 31,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 33,
+    "w": 20,
+    "d": 7,
+    "l": 6,
+    "gf": 61,
+    "ga": 29,
+    "pts": 67,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 33,
+    "w": 15,
+    "d": 6,
+    "l": 12,
+    "gf": 52,
+    "ga": 47,
+    "pts": 51,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 33,
+    "w": 13,
+    "d": 10,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 49,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 33,
+    "w": 12,
+    "d": 12,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 48,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 33,
+    "w": 11,
+    "d": 15,
+    "l": 7,
+    "gf": 40,
+    "ga": 30,
+    "pts": 48,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 43,
+    "ga": 35,
+    "pts": 46,
+    "rank": 6,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 39,
+    "ga": 37,
+    "pts": 46,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 33,
+    "w": 10,
+    "d": 13,
+    "l": 10,
+    "gf": 40,
+    "ga": 48,
+    "pts": 43,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 33,
+    "w": 11,
+    "d": 9,
+    "l": 13,
+    "gf": 30,
+    "ga": 39,
+    "pts": 42,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 33,
+    "w": 5,
+    "d": 19,
+    "l": 9,
+    "gf": 33,
+    "ga": 41,
+    "pts": 34,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 33,
+    "w": 7,
+    "d": 11,
+    "l": 15,
+    "gf": 32,
+    "ga": 47,
+    "pts": 32,
+    "rank": 11,
+    "gd": -15
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 33,
+    "w": 3,
+    "d": 12,
+    "l": 18,
+    "gf": 30,
+    "ga": 69,
+    "pts": 21,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 4,
+   "pts": 48,
+   "w": 12,
+   "d": 12,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "인천 1-1"
+   },
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-10-31",
+   "time": "",
+   "home": "전북",
+   "away": "대전",
+   "opp": "대전 하나",
+   "opp_short": "대전",
+   "is_home": true,
+   "round": 34,
+   "venue": "",
+   "comp": "K리그1 34R",
+   "home_note": "4위 · 승점 48",
+   "away_note": "3위 · 승점 49",
+   "when_label": "10월 31일(토)",
+   "d_minus": 1
+  },
+  "last": {
+   "game_id": "194",
+   "date": "2026-10-24",
+   "round": 33,
+   "home": "안양",
+   "away": "전북",
+   "venue": "안양 종합",
+   "attendance": 9126,
+   "comp": "K리그1 33R",
+   "score": [
+    1,
+    1
+   ],
+   "date_label": "10월 24일(토)",
+   "weather": "비",
+   "referee": "고형진",
+   "managers": {
+    "home": "유병훈",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     7,
+     "AST",
+     79.2,
+     27.9
+    ],
+    [
+     "A",
+     1,
+     9,
+     "MST",
+     91.1,
+     34.0
+    ],
+    [
+     "A",
+     1,
+     13,
+     "MST",
+     77.0,
+     60.1
+    ],
+    [
+     "H",
+     1,
+     26,
+     "MST",
+     92.8,
+     48.1
+    ],
+    [
+     "A",
+     1,
+     31,
+     "MST",
+     89.5,
+     31.3
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     88.3,
+     53.8
+    ],
+    [
+     "H",
+     1,
+     39,
+     "MST",
+     86.4,
+     52.4
+    ],
+    [
+     "H",
+     1,
+     45,
+     "GL",
+     91.5,
+     61.3
+    ],
+    [
+     "H",
+     2,
+     46,
+     "AST",
+     83.8,
+     36.0
+    ],
+    [
+     "A",
+     2,
+     48,
+     "AST",
+     78.2,
+     57.7
+    ],
+    [
+     "H",
+     2,
+     63,
+     "MST",
+     90.3,
+     29.1
+    ],
+    [
+     "A",
+     2,
+     66,
+     "MST",
+     79.2,
+     78.1
+    ],
+    [
+     "A",
+     2,
+     79,
+     "AST",
+     88.2,
+     51.5
+    ],
+    [
+     "A",
+     2,
+     83,
+     "BT",
+     83.3,
+     57.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     92.0,
+     59.4
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     97.8,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     89,
+     "MST",
+     90.8,
+     45.8
+    ],
+    [
+     "A",
+     2,
+     91,
+     "GL",
+     96.3,
+     50.4
+    ],
+    [
+     "A",
+     2,
+     94,
+     "MST",
+     74.2,
+     45.6
+    ],
+    [
+     "H",
+     2,
+     98,
+     "BT",
+     77.5,
+     31.3
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "김운",
+     "label": "45+1'",
+     "minute": 45.5,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "티아고",
+     "label": "90+2'",
+     "minute": 92,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     11
+    ],
+    [
+     "유효슈팅",
+     4,
+     4
+    ],
+    [
+     "패스 성공",
+     187,
+     335
+    ],
+    [
+     "패스 성공률",
+     74.5,
+     85.7,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     7,
+     4
+    ],
+    [
+     "반칙",
+     15,
+     6
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-10-31",
+    "home": "전북",
+    "away": "대전",
+    "round": 34
+   },
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
