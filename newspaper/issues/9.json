@@ -1,0 +1,1620 @@
+{
+ "no": 9,
+ "date": "2026-10-31",
+ "matchday_after": false,
+ "headline": "파이널A 첫판 오늘 14:00 전주, 3위 대전과 승점 1점 차",
+ "summary": "31일 14:00 전주월드컵경기장 34라운드, 4위 전북(48)과 3위 대전(49) 맞대결, 올해 리그 상대 전적 1승 1무 1패, 티아고 최근 4경기 6골, 김영빈 주장 완장 배경 보도",
+ "strip": [
+  "K리그1 4위 · 승점 48",
+  "오늘 14:00 전주 · 34R 대전전",
+  "다음 리그 11월 8일 강원 원정"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제9호 · 2026.10.31",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:Tiago Orobó:250702",
+     "kicker": "K리그1 34라운드 · 파이널A 1라운드 · 오늘 14:00",
+     "title": "파이널A 첫판 오늘 14:00 전주, 3위 대전과 승점 1점 차",
+     "dek": "이기면 대전을 끌어내리고 3위로 올라선다. 시즌 마지막 다섯 경기의 첫 상대가 바로 위 팀이다.",
+     "caption": "전북 공격수 티아고",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북현대가 오늘(31일) 오후 2시 전주월드컵경기장에서 대전하나시티즌과 K리그1 34라운드를 치른다. 상위 여섯 팀이 다섯 경기씩 더 치르는 파이널A의 첫 경기다.",
+      "전북은 12승 12무 9패, 승점 48로 4위다. 대전은 13승 10무 10패, 승점 49로 3위다. 차이는 1점이라 오늘 이기면 순위가 바뀐다. 2위 울산(승점 51)과의 거리도 이 경기로 정해진다.",
+      "올해 리그 맞대결은 1승 1무 1패로 팽팽했다. 3월 대전 원정은 1-0으로 이겼고, 7월 전주에서는 0-0, 10월 9일 대전 원정은 1-2로 졌다. 개막 전 슈퍼컵에서는 전북이 2-0으로 이겼다.",
+      "전북은 최근 리그 8경기에서 2승 4무 2패로 비긴 경기가 많았다. 대전은 리그 7경기 무패로 올라왔다. 2면에 관전 포인트와 예상 선발을, 3면에 주장 완장을 둘러싼 보도를 정리했다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "1점",
+       "label": "3위 대전과의 승점 차",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1승 1무 1패",
+       "label": "올해 리그 대전전 상대 전적",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "6골",
+       "label": "티아고 최근 리그 4경기 득점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5경기",
+       "label": "파이널A에서 남은 리그 경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "오늘의 경기",
+   "teaser": "대전전 관전 포인트, 상대 전적, 예상 선발",
+   "folio": "34라운드 프리뷰 · 전북 대 대전",
+   "blocks": [
+    {
+     "type": "chart",
+     "span": 7,
+     "title": "오늘의 경기",
+     "chart": "next",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 5,
+     "kicker": "관전 포인트",
+     "title": "비기는 흐름을 끊어야 하는 전북",
+     "paragraphs": [
+      "전북은 최근 리그 8경기 가운데 4경기를 비겼다. 지지 않는 힘은 있었지만 승점 3을 쌓는 속도가 느렸다. 바로 위 대전을 상대로 이겨야 2위 경쟁에 다시 들어간다.",
+      "공격의 중심은 티아고다. 최근 리그 4경기에서 6골을 넣었고 10월 9일 대전 원정에서도 선제골을 기록했다. 대전은 주민규와 마사, 엄원상이 이끄는 공격이 날카롭다.",
+      "중계 채널은 확인 필요다. 선발 명단은 킥오프 약 1시간 전에 나온다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "coach:c05",
+     "big": "3위",
+     "paragraphs": [
+      "대전 황선홍 감독",
+      "승점 49, 리그 7경기 무패",
+      "10월 9일 전북에 2-1 승"
+     ],
+     "caption": "대전하나시티즌 황선홍 감독",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20130248",
+     "big": "10번",
+     "paragraphs": [
+      "대전 최전방 공격수",
+      "10월 9일 전북전 선발",
+      "오늘도 경계 대상"
+     ],
+     "caption": "대전 주민규",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20190209",
+     "big": "7번",
+     "paragraphs": [
+      "대전 공격형 미드필더",
+      "2선에서 공격 조율",
+      "득점 가담도 잦다"
+     ],
+     "caption": "대전 마사",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "2026 대전전 기록 (전북 득점 · 실점)",
+     "items": [
+      {
+       "label": "2월 슈퍼컵",
+       "value": 2,
+       "text": "2-0 승",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "3월 21일 · 대전",
+       "value": 1,
+       "text": "1-0 승",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "7월 21일 · 전주",
+       "value": 0,
+       "text": "0-0 무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "10월 9일 · 대전",
+       "value": 1,
+       "text": "1-2 패",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "막대는 전북 득점. 출처 구단 프리뷰",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 6,
+     "rule_top": true,
+     "title": "전북 최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 7,
+     "rule_top": true,
+     "title": "예상 선발 (33R 안양전 선발 기준)",
+     "items": [
+      {
+       "label": "GK",
+       "value": "송범근",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "DF",
+       "value": "이상명 · 박지수 · 김영빈 · 최우진",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "MF",
+       "value": "감보아 · 이영재 · 강상윤",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "FW",
+       "value": "이동준 · 티아고 · 이탈로",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "변수",
+       "value": "베이징 원정 뒤 사흘 휴식, 로테이션 폭",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "결장자",
+       "value": "구단 발표 없음 · 확인 필요",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 5,
+     "rule_top": true,
+     "title": "K리그1 순위 (33라운드 종료)",
+     "chart": "standings",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "선수단",
+   "teaser": "김영빈 주장 완장, 그 배경을 다룬 보도",
+   "folio": "선수단 · 주장 완장",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:김영빈:260411",
+     "caption": "전북 수비수 김영빈 (2026년 4월 서울 원정)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "선수단",
+     "title": "김영빈 주장 완장, 배경 다룬 보도 나와",
+     "paragraphs": [
+      "전북일보는 30일 김영빈이 주장 완장을 넘겨받은 배경을 보도했다. 이 보도에 따르면 발단은 10월 9일 대전 원정이었다. 전반전 도중 당시 주장 김태환과 송범근이 말다툼하는 장면이 포착됐다고 전했다.",
+      "김태환은 이후 ACLE 고베전, 제주전, 안양전, ACLE 베이징전까지 4경기 연속 명단에서 빠졌다. 같은 보도는 김태환의 2027시즌 재계약이 이뤄지지 않을 가능성도 거론했다. 다만 재계약 여부는 구단의 공식 확인이 없는 상태다.",
+      "김영빈은 원래 주장단(주장 김태환, 부주장 박지수·김태현·송범근)에 들지 않았다. 정정용 감독은 앞서 김영빈을 두고 \"팀의 선배이자 최고의 리더 가운데 한 명\"이라고 설명했다. 김영빈은 완장을 찬 제주전에서 헤더 결승골을 넣었다.",
+      "송범근은 \"아쉬운 부분은 전혀 없다\"며 감독의 결정을 받아들였다. 대전과의 재대결을 앞두고 선수단 분위기를 추스르는 일도 과제로 남았다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "경과",
+     "title": "주장 완장이 바뀌기까지",
+     "items": [
+      {
+       "date": "1월 19일",
+       "title": "김태환 주장, 부주장 3명 발표",
+       "text": "박지수·김태현·송범근 부주장",
+       "source_name": "다음 뉴스",
+       "source_url": "https://v.daum.net/v/20260119161840433",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10월 9일",
+       "title": "31R 대전 원정 1-2 패",
+       "text": "전반 도중 김태환·송범근 말다툼 장면 보도",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261030500011",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10월 중순",
+       "title": "김태환 4경기 연속 명단 제외",
+       "text": "고베·제주·안양·베이징전",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261030500011",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10월 18일",
+       "title": "완장 찬 김영빈, 제주전 헤더골",
+       "text": "전북 5경기 만의 승리",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261018n14550",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10월 30일",
+       "title": "배경 다룬 보도",
+       "text": "재계약 여부는 구단 확인 필요",
+       "state": "hot",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261030500011",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20140143",
+     "big": "완장",
+     "paragraphs": [
+      "등번호 2번 수비수",
+      "제주전 헤더 결승골",
+      "안양전 103분 풀타임"
+     ],
+     "caption": "김영빈(2번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "만약에",
+   "teaser": "오늘 이기면, 비기면, 지면 순위는",
+   "folio": "파이널A 판도 · 시나리오",
+   "blocks": [
+    {
+     "type": "table",
+     "span": 7,
+     "title": "만약에 · 오늘 결과에 따른 승점",
+     "items": [
+      {
+       "label": "전북 승",
+       "value": "전북 51 · 대전 49, 전북 3위로 올라서고 2위 울산(51)과 승점 같아짐",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "무승부",
+       "value": "전북 49 · 대전 50, 전북 4위 유지, 5위 강원(48)과 1점 차",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 패",
+       "value": "전북 48 · 대전 52, 대전과 4점 차, 강원 결과에 따라 5위까지",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "기준",
+       "value": "33R 종료 순위표, 다른 경기 결과는 반영 안 함",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "title": "파이널A 여섯 팀 승점",
+     "items": [
+      {
+       "label": "서울",
+       "value": 67,
+       "text": "67",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산",
+       "value": 51,
+       "text": "51",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 49,
+       "text": "49",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 48,
+       "text": "48",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 48,
+       "text": "48",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천",
+       "value": 46,
+       "text": "46",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "33라운드 종료 기준. 출처 K리그 데이터포털",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "coach:c01",
+     "big": "약속",
+     "paragraphs": [
+      "2월 개막 미디어데이",
+      "가장 잡고 싶은 팀 대전",
+      "별 하나 더 달겠다 공약"
+     ],
+     "caption": "전북 정정용 감독",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "선수 TMI",
+     "title": "2월에 서로를 지목한 두 감독",
+     "paragraphs": [
+      "2월 25일 개막 미디어데이에서 정정용 감독은 가장 잡고 싶은 팀으로 대전을 꼽았다. 황선홍 감독도 유독 약했던 전북을 잡고 싶다고 답했다.",
+      "황선홍 감독은 우승하면 머리를 녹색으로 염색하겠다는 공약도 걸었다. 우승은 서울이 먼저 확정했지만 두 감독의 맞대결은 파이널A에서 한 번 더 남았다.",
+      "가장 최근 전주에서 열린 대전전은 2025년 11월 8일이었다. 전북이 3-1로 이겼고, 23,160명이 지켜본 그날 우승 대관식이 열렸다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "오늘 대전전, 결승골의 주인공은 누구일까",
+     "paragraphs": [
+      "티아고의 5경기 연속골일까, 완장 찬 김영빈의 세트피스 한 방일까. 예상하는 선수와 스코어를 댓글로 남겨 달라."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "감독 계약설, 선수단 분위기 설, 커뮤니티 온도",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "31일 14:00 전주 전북-대전",
+       "text": "파이널A 1라운드, 승점 1점 차",
+       "source_name": "전북현대 구단",
+       "source_url": "https://hyundai-motorsfc.com/media/news/100899",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "김영빈 주장 완장 배경 보도",
+       "text": "10월 9일 대전 원정 말다툼 장면이 발단이라는 내용",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261030500011",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "김태환 2027시즌 재계약 불투명",
+       "text": "구단 공식 확인 없음",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261030500011",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "정정용 감독 시즌 뒤 결별설",
+       "text": "계약 기간을 두고 짧은 글만 올라왔다. 근거 제시 없음",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10498359234",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "선수단 내부 갈등과 징계설",
+       "text": "출처 없는 게시글, 구단 발표 없음",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10500823341",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "오늘 이기고 3위 탈환",
+       "text": "팬들의 가장 큰 바람",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "주장 교체 이유가 보도로 나오자 사실 확인을 기다리자는 목소리가 많다",
+       "label": "국내축구 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "감독 거취 글이 다시 올라왔지만 근거가 없어 반응은 차분하다",
+       "label": "루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "분위기를 바꾸는 방법은 결국 대전전 승리뿐이라는 의견",
+       "label": "팬 반응",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "티아고가 대전 상대로 한 번 더 해 주길 바라는 글이 이어진다",
+       "label": "팬 반응",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "토요일 낮 경기라 전주성 관중이 얼마나 올지 관심",
+       "label": "팬 반응",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "올해 리그 전북-대전 상대 전적은?",
+       "text": "1승 1무 1패",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "10월 9일 대전 원정에서 전북의 선제골을 넣은 선수는?",
+       "text": "티아고",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "제주전부터 주장 완장을 찬 수비수는?",
+       "text": "김영빈",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "전북현대, 파이널 라운드 첫 경기서 대전과 격돌",
+       "text": "전북현대 구단",
+       "source_name": "전북현대",
+       "source_url": "https://hyundai-motorsfc.com/media/news/100899",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "같은 기사 (현대자동차그룹 뉴스)",
+       "text": "순위, 상대 전적",
+       "source_name": "현대자동차그룹",
+       "source_url": "https://www.hyundaimotorgroup.com/ko/news/jeonbuk-hyundai-motors-daejeon-final-round-top-table-clash",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "전북현대, 내홍 속 파이널A 첫판",
+       "text": "주장 교체 배경, 재계약 가능성",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261030500011",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "K리그1 프리뷰, 승점차 단 1점 전북·대전",
+       "text": "슈퍼컵 결과, 티아고 4경기 6골",
+       "source_name": "베스트일레븐",
+       "source_url": "https://www.besteleven.com/news/articleView.html?idxno=313555",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "정정용 감독이 김영빈에게 완장 맡긴 이유",
+       "text": "감독·송범근 발언",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013806",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "새 주장 김영빈 천금 헤더골",
+       "text": "제주전",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261018n14550",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "대전, 리그 7경기 무패",
+       "text": "대전 흐름",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261030n05467",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "개막 미디어데이 두 감독 발언",
+       "text": "2월 25일",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20260225n21898",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2025년 11월 8일 전북 3-1 대전",
+       "text": "우승 대관식",
+       "source_name": "OSEN(다음)",
+       "source_url": "https://v.daum.net/v/20251108183048626",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "기록",
+       "text": "순위·승점·최근 경기",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "coach:c05": {
+   "src": "../korea_coach/img/c05.jpg",
+   "alt": "황선홍 감독",
+   "credit": "사진 Wikimedia Commons"
+  },
+  "player:20130248": {
+   "src": "https://d2tfp74nsbbrkr.cloudfront.net/v1/player/2026/K10/player_20130248.png",
+   "alt": "주민규",
+   "back_no": 10,
+   "credit": "사진 K리그 선수 프로필"
+  },
+  "player:20190209": {
+   "src": "https://d2tfp74nsbbrkr.cloudfront.net/v1/player/2026/K10/player_20190209.png",
+   "alt": "마사",
+   "back_no": 7,
+   "credit": "사진 K리그 선수 프로필"
+  },
+  "player:20140143": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png",
+   "alt": "김영빈",
+   "back_no": 2,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 33,
+    "w": 20,
+    "d": 7,
+    "l": 6,
+    "gf": 61,
+    "ga": 29,
+    "pts": 67,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 33,
+    "w": 15,
+    "d": 6,
+    "l": 12,
+    "gf": 52,
+    "ga": 47,
+    "pts": 51,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 33,
+    "w": 13,
+    "d": 10,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 49,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 33,
+    "w": 12,
+    "d": 12,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 48,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 33,
+    "w": 11,
+    "d": 15,
+    "l": 7,
+    "gf": 40,
+    "ga": 30,
+    "pts": 48,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 43,
+    "ga": 35,
+    "pts": 46,
+    "rank": 6,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 39,
+    "ga": 37,
+    "pts": 46,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 33,
+    "w": 10,
+    "d": 13,
+    "l": 10,
+    "gf": 40,
+    "ga": 48,
+    "pts": 43,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 33,
+    "w": 11,
+    "d": 9,
+    "l": 13,
+    "gf": 30,
+    "ga": 39,
+    "pts": 42,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 33,
+    "w": 5,
+    "d": 19,
+    "l": 9,
+    "gf": 33,
+    "ga": 41,
+    "pts": 34,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 33,
+    "w": 7,
+    "d": 11,
+    "l": 15,
+    "gf": 32,
+    "ga": 47,
+    "pts": 32,
+    "rank": 11,
+    "gd": -15
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 33,
+    "w": 3,
+    "d": 12,
+    "l": 18,
+    "gf": 30,
+    "ga": 69,
+    "pts": 21,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 4,
+   "pts": 48,
+   "w": 12,
+   "d": 12,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "인천 1-1"
+   },
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-10-31",
+   "time": "",
+   "home": "전북",
+   "away": "대전",
+   "opp": "대전 하나",
+   "opp_short": "대전",
+   "is_home": true,
+   "round": 34,
+   "venue": "",
+   "comp": "K리그1 34R",
+   "home_note": "4위 · 승점 48",
+   "away_note": "3위 · 승점 49",
+   "when_label": "10월 31일(토)",
+   "d_minus": 0
+  },
+  "last": {
+   "game_id": "194",
+   "date": "2026-10-24",
+   "round": 33,
+   "home": "안양",
+   "away": "전북",
+   "venue": "안양 종합",
+   "attendance": 9126,
+   "comp": "K리그1 33R",
+   "score": [
+    1,
+    1
+   ],
+   "date_label": "10월 24일(토)",
+   "weather": "비",
+   "referee": "고형진",
+   "managers": {
+    "home": "유병훈",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     7,
+     "AST",
+     79.2,
+     27.9
+    ],
+    [
+     "A",
+     1,
+     9,
+     "MST",
+     91.1,
+     34.0
+    ],
+    [
+     "A",
+     1,
+     13,
+     "MST",
+     77.0,
+     60.1
+    ],
+    [
+     "H",
+     1,
+     26,
+     "MST",
+     92.8,
+     48.1
+    ],
+    [
+     "A",
+     1,
+     31,
+     "MST",
+     89.5,
+     31.3
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     88.3,
+     53.8
+    ],
+    [
+     "H",
+     1,
+     39,
+     "MST",
+     86.4,
+     52.4
+    ],
+    [
+     "H",
+     1,
+     45,
+     "GL",
+     91.5,
+     61.3
+    ],
+    [
+     "H",
+     2,
+     46,
+     "AST",
+     83.8,
+     36.0
+    ],
+    [
+     "A",
+     2,
+     48,
+     "AST",
+     78.2,
+     57.7
+    ],
+    [
+     "H",
+     2,
+     63,
+     "MST",
+     90.3,
+     29.1
+    ],
+    [
+     "A",
+     2,
+     66,
+     "MST",
+     79.2,
+     78.1
+    ],
+    [
+     "A",
+     2,
+     79,
+     "AST",
+     88.2,
+     51.5
+    ],
+    [
+     "A",
+     2,
+     83,
+     "BT",
+     83.3,
+     57.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     92.0,
+     59.4
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     97.8,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     89,
+     "MST",
+     90.8,
+     45.8
+    ],
+    [
+     "A",
+     2,
+     91,
+     "GL",
+     96.3,
+     50.4
+    ],
+    [
+     "A",
+     2,
+     94,
+     "MST",
+     74.2,
+     45.6
+    ],
+    [
+     "H",
+     2,
+     98,
+     "BT",
+     77.5,
+     31.3
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "김운",
+     "label": "45+1'",
+     "minute": 45.5,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "티아고",
+     "label": "90+2'",
+     "minute": 92,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     11
+    ],
+    [
+     "유효슈팅",
+     4,
+     4
+    ],
+    [
+     "패스 성공",
+     187,
+     335
+    ],
+    [
+     "패스 성공률",
+     74.5,
+     85.7,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     7,
+     4
+    ],
+    [
+     "반칙",
+     15,
+     6
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-10-31",
+    "home": "전북",
+    "away": "대전",
+    "round": 34
+   },
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
