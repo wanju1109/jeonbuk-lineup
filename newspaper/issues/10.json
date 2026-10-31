@@ -1,0 +1,1867 @@
+{
+ "no": 10,
+ "date": "2026-11-01",
+ "matchday_after": false,
+ "headline": "송범근 선방, 골대 두 번… 전북 대전과 0-0",
+ "summary": "파이널A 첫판에서 3위 대전과 득점 없이 비겼다. 리그 7경기 만의 무실점, 승점 49로 4위 유지. 오늘은 10월 결산 특집도 함께 싣는다.",
+ "strip": [
+  "K리그1 4위 · 승점 49",
+  "ACLE 4차전 11월 3일(화) 조호르 · 전주",
+  "리그 35R D-7 · 11월 8일 강원 원정"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제10호 · 2026.11.01",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:송범근:250503",
+     "kicker": "K리그1 34라운드 · 파이널A 첫판",
+     "title": "송범근 선방, 골대 두 번… 전북 대전과 0-0",
+     "dek": "3위 대전과 승점 1점 차는 그대로다. 리그 7경기 만에 무실점으로 막았지만 골문은 끝내 열리지 않았다.",
+     "caption": "전북 골키퍼 송범근(자료 사진)",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북현대가 31일 전주월드컵경기장에서 열린 K리그1 34라운드 파이널A 첫 경기에서 대전하나시티즌과 0-0으로 비겼다. 전북은 승점 49로 4위, 대전은 승점 50으로 3위를 지켰다.",
+      "전반 4분 도도의 프리킥과 전반 12분 이탈로의 오른발 슈팅이 잇따라 골대를 때렸다. 후반 막판 이영재의 코너킥을 조위제가 머리로 받았지만 대전 골키퍼 이창근의 선방에 걸렸다.",
+      "전북 골문은 송범근이 지켰다. 전반 이명재의 프리킥, 후반 주앙 빅토르와 김준범의 슈팅을 연달아 막았다. 전북의 리그 무실점은 최근 8경기의 첫 경기였던 포항전 2-0 승리 이후 7경기 만이다.",
+      "정정용 감독은 경기 뒤 무실점은 긍정적이지만 결정력이 아쉬웠다고 말했다. 전북은 11월 3일 전주에서 조호르 다룰 탁짐과 ACLE 리그 스테이지 4차전을 치른다. 오늘 호는 10월 결산 특집을 함께 싣는다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "0-0",
+       "label": "34R 대전전 결과",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "2번",
+       "label": "전반에 골대 맞힌 슈팅",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "7경기",
+       "label": "만의 리그 무실점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1점",
+       "label": "3위 대전과 승점 차",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "경기 리포트",
+   "teaser": "골대 두 번, 마지막 헤더까지 막힌 90분",
+   "folio": "34라운드 리뷰 · 전북 0-0 대전",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:Italo:260912",
+     "caption": "전반 12분 오른발 슈팅으로 골대를 때린 이탈로(자료 사진)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "현장 리뷰",
+     "title": "두드린 전북, 버틴 대전",
+     "byline": "전주성 조간 경기팀",
+     "paragraphs": [
+      "전북은 경기 시작 4분 만에 기회를 잡았다. 도도의 직접 프리킥이 가까운 골대를 맞고 나왔다. 8분 뒤에는 이탈로가 왼쪽에서 안으로 접고 때린 오른발 슈팅이 다시 골대를 강타했다.",
+      "흐름은 후반 들어 대전 쪽으로 기울었다. 대전은 주앙 빅토르와 김준범의 슈팅으로 전북 골문을 노렸지만 송범근이 모두 쳐냈다.",
+      "가장 아까운 장면은 막판에 나왔다. 이영재가 올린 코너킥을 조위제가 골문 정면에서 헤더로 연결했으나 이창근이 몸을 날려 막았다. 장면 시각은 매체에 따라 후반 40분과 45분으로 엇갈린다.",
+      "정정용 감독은 티아고, 이탈로, 도도 등 외국인 공격수를 선발로 낸 이유로 개인 능력을 꼽았다. 결과는 골대 두 번과 무득점이었다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "결정적 장면",
+     "title": "대전전 주요 장면",
+     "items": [
+      {
+       "date": "전반 4'",
+       "title": "도도 프리킥, 골대",
+       "text": "직접 프리킥이 가까운 골대를 맞고 나왔다.",
+       "state": "hot",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100117",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "전반 12'",
+       "title": "이탈로 오른발, 골대",
+       "text": "왼쪽에서 접고 때린 슈팅이 골대를 강타했다.",
+       "state": "hot",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1573795",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "전반 26'",
+       "title": "송범근, 이명재 프리킥 선방",
+       "text": "대전의 첫 결정적 세트피스를 막았다.",
+       "source_name": "OSEN",
+       "source_url": "https://m.news.nate.com/view/20261031n07665",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "후반 27'",
+       "title": "송범근, 연속 선방",
+       "text": "주앙 빅토르의 오른발, 이어진 김준범의 중거리 슈팅을 쳐냈다.",
+       "source_name": "뉴스핌",
+       "source_url": "https://www.newspim.com/news/view/20261031000066",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "후반 막판",
+       "title": "조위제 헤더, 이창근 선방",
+       "text": "이영재 코너킥을 정면 헤더로 받았지만 막혔다.",
+       "state": "hot",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261031500010",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "rule_top": true,
+     "image": "player:20220174",
+     "big": "헤더",
+     "paragraphs": [
+      "조위제 막판 헤더",
+      "이창근 선방에 막혀",
+      "가장 아까운 장면"
+     ],
+     "caption": "수비수 조위제",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 7,
+     "rule_top": true,
+     "title": "골을 넣어야 이길 수 있고 팬분들에게 즐거움을 드릴 수 있다",
+     "byline": "정정용 감독, 31일 대전전 뒤 기자회견 (전북도민일보)",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 5,
+     "rule_top": true,
+     "title": "전북 최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "평점",
+   "teaser": "조간 선정 MOM은 송범근",
+   "folio": "조간 선정 평점 · 34라운드 대전전",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20180025",
+     "big": "MOM",
+     "paragraphs": [
+      "전반 이명재 FK 선방",
+      "후반 연속 두 번 선방",
+      "7경기 만의 무실점"
+     ],
+     "caption": "조간 선정 MOM 송범근",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "조간 선정 MOM",
+     "title": "송범근, 대전의 슈팅을 세 번 지웠다",
+     "byline": "전주성 조간 경기팀",
+     "paragraphs": [
+      "조간은 대전전 MOM으로 골키퍼 송범근을 뽑았다. 전반 26분 이명재의 프리킥, 후반 27분 주앙 빅토르의 오른발과 이어진 김준범의 중거리 슈팅을 모두 막았다.",
+      "전북은 포항전 이후 리그 여섯 경기에서 매번 실점했다. 송범근의 선방으로 그 흐름이 끊겼다. 여러 매체가 경기 제목에 송범근의 이름을 올렸다.",
+      "평점은 기사로 확인한 장면을 근거로 한 조간 자체 평가다. K리그 부가기록이 아직 반영되지 않아 출전 시간과 세부 기록이 확인된 선수만 매겼다. 연맹 공식 MOM은 아직 발표되지 않았다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "조간 선정",
+     "title": "BEST 3",
+     "items": [
+      {
+       "tag": "BEST",
+       "title": "송범근 · 평점 8.5",
+       "text": "결정적 슈팅 세 개를 막아 무실점을 지켰다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "조위제 · 평점 7.0",
+       "text": "무실점 수비에 힘을 보탰고 막판 가장 위협적인 헤더를 날렸다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "이탈로 · 평점 6.5",
+       "text": "전반 12분 접고 때린 슈팅이 골대를 맞혔다. 가장 날카로웠던 공격수.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "조간 선정",
+     "title": "아쉬움",
+     "items": [
+      {
+       "tag": "WORST",
+       "title": "티아고 · 평점 5.5",
+       "text": "10월 리그 4골의 득점원이 선발로 나섰지만 골 장면을 만들지 못했다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "메모",
+       "title": "결정력",
+       "text": "골대 두 번 이후 마무리가 이어지지 않았다. 감독도 결정력을 아쉬움으로 꼽았다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "메모",
+       "title": "평점 범위",
+       "text": "부가기록 공개 전이라 장면이 확인된 선수만 매겼다. 나머지 선수 평점은 싣지 않는다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "10월 결산",
+   "teaser": "리그 4경기 1승 2무 1패, 티아고 4골",
+   "folio": "월간 결산 특집 · 2026년 10월",
+   "blocks": [
+    {
+     "type": "figs",
+     "span": 12,
+     "title": "10월 리그 성적표",
+     "items": [
+      {
+       "value": "4경기",
+       "label": "1승 2무 1패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "승점 5",
+       "label": "10월에 얻은 승점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5-5",
+       "label": "득점 · 실점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "11,469명",
+       "label": "홈 평균 관중",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 7,
+     "rule_top": true,
+     "title": "10월 리그 결과",
+     "items": [
+      {
+       "label": "10.09 31R 대전 원정",
+       "value": "1-2 패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "10.18 32R 제주 홈",
+       "value": "3-2 승",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "10.24 33R 안양 원정",
+       "value": "1-1 무",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "10.31 34R 대전 홈",
+       "value": "0-0 무",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "rule_top": true,
+     "title": "10월 리그 득점자",
+     "items": [
+      {
+       "label": "티아고",
+       "value": 4,
+       "text": "4골",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "김영빈",
+       "value": 1,
+       "text": "1골",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "K리그 데이터포털 부가기록 기준. 리그 5골 중 4골이 티아고.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220244",
+     "big": "이달의 선수",
+     "paragraphs": [
+      "10월 리그 4골",
+      "32R 연맹 라운드 MVP",
+      "안양전 90+2분 동점골"
+     ],
+     "caption": "조간 선정 10월의 선수 티아고",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "조간 선정 10월의 선수",
+     "title": "10월 전북의 골은 티아고에게서 나왔다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "10월 리그 5골 가운데 4골이 티아고의 발과 머리에서 나왔다. 조간은 10월의 선수로 티아고를 뽑았다.",
+      "18일 제주전에서 헤더 선제골과 추가골로 3-2 승리를 이끌었고, 연맹 선정 32라운드 MVP에 올랐다. 24일 안양 원정에서는 추가시간 2분 동점골로 승점 1을 가져왔다.",
+      "남은 한 골은 주장 김영빈이 제주전 후반 2분에 넣었다. 득점원이 한 명에게 몰린 점은 11월의 과제다."
+     ],
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "10월의 장면",
+     "title": "10월을 만든 네 장면",
+     "items": [
+      {
+       "date": "10.18",
+       "title": "티아고 멀티골, 제주 3-2",
+       "text": "리그 4경기 무승을 끊었다. 티아고는 32라운드 MVP.",
+       "state": "hot",
+       "source_name": "MHN스포츠",
+       "source_url": "https://mhnse.com/news/articleView.html?idxno=1603921",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "10.24",
+       "title": "안양 원정 90+2분 동점골",
+       "text": "비 오는 안양에서 티아고가 마지막에 1-1을 만들었다.",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10.27",
+       "title": "ACLE 베이징 원정 2-2",
+       "text": "모따 선제골, 이영재 동점골. 리그 스테이지 1승 1무 1패.",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261027n40727",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "10.31",
+       "title": "파이널A 첫판 대전과 0-0",
+       "text": "골대 두 번, 송범근 선방. 7경기 만의 리그 무실점.",
+       "state": "hot",
+       "source_name": "뉴시스",
+       "source_url": "https://www.newsis.com/view/NISX20261031_0003849297",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "11월 달력",
+   "teaser": "ACLE 조호르전부터 리그 3경기까지",
+   "folio": "월간 결산 특집 · 11월 일정과 순위",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 7,
+     "image": "commons:전주월드컵경기장:13",
+     "caption": "11월 3일 ACLE 조호르전이 열리는 전주월드컵경기장(자료 사진)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 5,
+     "title": "전북의 11월",
+     "items": [
+      {
+       "label": "11.03(화) ACLE 4차전",
+       "value": "조호르 · 전주 (시간 확인 필요)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.08(일) 리그 35R",
+       "value": "강원 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.21(토) 리그 36R",
+       "value": "서울 · 전주",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.29(일) 리그 37R",
+       "value": "울산 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12.06(일) 리그 38R",
+       "value": "인천 · 전주",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 7,
+     "rule_top": true,
+     "title": "K리그1 순위 (전북·대전 34경기, 나머지 33경기)",
+     "chart": "standings",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 5,
+     "rule_top": true,
+     "kicker": "순위 흐름",
+     "title": "2위부터 5위까지 승점 3점 안",
+     "paragraphs": [
+      "울산 51, 대전 50, 전북 49, 강원 48. 서울을 뺀 파이널A 위쪽 네 팀이 승점 3점 안에 몰려 있다.",
+      "울산과 강원, 인천, 제주는 34라운드를 남겨 두고 있다. 전북의 다음 리그 상대는 바로 아래 5위 강원이다.",
+      "11월 중순에는 A매치 휴식기가 있다. 리그는 21일 서울과의 홈경기로 다시 이어진다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20230224",
+     "big": "ACLE",
+     "paragraphs": [
+      "베이징 원정 선제골",
+      "리그 스테이지 1승 1무 1패",
+      "3일 조호르와 홈경기"
+     ],
+     "caption": "공격수 모따",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 8,
+     "rule_top": true,
+     "title": "파이널A 상위 다섯 팀 승점",
+     "items": [
+      {
+       "label": "서울",
+       "value": 67,
+       "text": "67",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산",
+       "value": 51,
+       "text": "51",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 50,
+       "text": "50",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 49,
+       "text": "49",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 48,
+       "text": "48",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "K리그 데이터포털 기준. 서울은 우승을 조기 확정했다.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "새 설은 없었다, 언론이 본 대전전",
+   "folio": "루머 데스크 · 커뮤니티 온도",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "보도",
+       "title": "ACLE 4차전 3일 전주에서 조호르전",
+       "text": "킥오프 시각은 확인 필요.",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1573796",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "정정용 감독, ACL과 리그 모두 준비",
+       "text": "대전전 뒤 기자회견에서 밝혔다.",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1573796",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "파이널A, ACLE 출전권 경쟁이 핵심",
+       "text": "서울 우승 확정 뒤 남은 관심은 아시아 무대 티켓.",
+       "source_name": "뉴시스",
+       "source_url": "https://www.newsis.com/view/NISX20261031_0003849297",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "8일 강원 원정 승리로 3위 복귀",
+       "text": "팬들의 희망. 결과는 다른 팀 경기에도 달렸다.",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "언론이 본 대전전",
+     "items": [
+      {
+       "text": "골대 불운과 골키퍼 선방쇼가 함께 나온 경기",
+       "label": "전북일보",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "헛심 공방 끝 무승부, 파이널A 첫판서도 반등 실패",
+       "label": "스포츠경향",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "위기마다 나타난 국가대표 골키퍼",
+       "label": "OSEN",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "골대 불운에 3위 탈환 불발",
+       "label": "전북도민일보",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quote",
+     "span": 6,
+     "rule_top": true,
+     "title": "골대는 두 번 울렸고, 골망은 한 번도 흔들리지 않았다.",
+     "byline": "한 줄 만평 · 전주성 조간",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "오늘의 질문",
+     "title": "11월 첫 승, 어디서 나올까",
+     "variant": "lime",
+     "paragraphs": [
+      "3일 ACLE 조호르전, 8일 강원 원정. 전북의 11월 첫 승은 어느 경기에서 나올지, 결승골 주인공은 누구일지 댓글로 남겨 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "대전전 전반에 골대를 맞힌 전북 선수 두 명은?",
+       "text": "도도(전반 4분 프리킥), 이탈로(전반 12분)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "10월 전북의 리그 5골 중 티아고가 넣은 골은?",
+       "text": "4골",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "전북의 ACLE 리그 스테이지 4차전 상대는?",
+       "text": "말레이시아의 조호르 다룰 탁짐(11월 3일 전주)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "전북현대, 대전과 0-0 무승부…골대 불운에 3위 탈환 불발",
+       "text": "전북도민일보",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1573795",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "정정용 감독 무실점은 긍정적, 결정력은 아쉬워",
+       "text": "전북도민일보",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1573796",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "송범근 선방+골대 불운, 전북 대전과 0-0",
+       "text": "포포투",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100117",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "송범근 선방쇼 전북, 대전과 0-0",
+       "text": "뉴스핌",
+       "source_name": "뉴스핌",
+       "source_url": "https://www.newspim.com/news/view/20261031000066",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "골대 불운·골키퍼 선방쇼 전북현대, 대전과 아쉬운 무승부",
+       "text": "전북일보",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261031500010",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "위기마다 나타난 국대 GK 송범근",
+       "text": "OSEN",
+       "source_name": "OSEN",
+       "source_url": "https://m.news.nate.com/view/20261031n07665",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "골대 강타 전북, 대전과 헛심공방 끝 무승부",
+       "text": "뉴시스",
+       "source_name": "뉴시스",
+       "source_url": "https://www.newsis.com/view/NISX20261031_0003849297",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "전북, 대전과 헛심 공방 끝 0-0 무승부",
+       "text": "스포츠경향",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202610312011003/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "AFC축구 전적 베이징 2-2 전북",
+       "text": "네이트 스포츠",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261027n40727",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "티아고 제주전 멀티골로 32R MVP",
+       "text": "MHN스포츠",
+       "source_name": "MHN스포츠",
+       "source_url": "https://mhnse.com/news/articleView.html?idxno=1603921",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "기록: 순위·경기 결과·득점자·관중",
+       "text": "K리그 데이터포털",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20220174": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220174.png",
+   "alt": "조위제",
+   "back_no": 4,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20180025": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png",
+   "alt": "송범근",
+   "back_no": 31,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20220244": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png",
+   "alt": "티아고",
+   "back_no": 9,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20230224": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png",
+   "alt": "모따",
+   "back_no": 99,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 33,
+    "w": 20,
+    "d": 7,
+    "l": 6,
+    "gf": 61,
+    "ga": 29,
+    "pts": 67,
+    "rank": 1,
+    "gd": 32
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 33,
+    "w": 15,
+    "d": 6,
+    "l": 12,
+    "gf": 52,
+    "ga": 47,
+    "pts": 51,
+    "rank": 2,
+    "gd": 5
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 34,
+    "w": 13,
+    "d": 11,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 50,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 34,
+    "w": 12,
+    "d": 13,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 49,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 33,
+    "w": 11,
+    "d": 15,
+    "l": 7,
+    "gf": 40,
+    "ga": 30,
+    "pts": 48,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 43,
+    "ga": 35,
+    "pts": 46,
+    "rank": 6,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 33,
+    "w": 12,
+    "d": 10,
+    "l": 11,
+    "gf": 39,
+    "ga": 37,
+    "pts": 46,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 33,
+    "w": 10,
+    "d": 13,
+    "l": 10,
+    "gf": 40,
+    "ga": 48,
+    "pts": 43,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 33,
+    "w": 11,
+    "d": 9,
+    "l": 13,
+    "gf": 30,
+    "ga": 39,
+    "pts": 42,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 34,
+    "w": 5,
+    "d": 20,
+    "l": 9,
+    "gf": 34,
+    "ga": 42,
+    "pts": 35,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 33,
+    "w": 7,
+    "d": 11,
+    "l": 15,
+    "gf": 32,
+    "ga": 47,
+    "pts": 32,
+    "rank": 11,
+    "gd": -15
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 34,
+    "w": 3,
+    "d": 13,
+    "l": 18,
+    "gf": 31,
+    "ga": 70,
+    "pts": 22,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 4,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-08",
+   "time": "",
+   "home": "강원",
+   "away": "전북",
+   "opp": "강원 FC",
+   "opp_short": "강원",
+   "is_home": false,
+   "round": 35,
+   "venue": "",
+   "comp": "K리그1 35R",
+   "home_note": "5위 · 승점 48",
+   "away_note": "4위 · 승점 49",
+   "when_label": "11월 8일(일)",
+   "d_minus": 7
+  },
+  "last": {
+   "game_id": "194",
+   "date": "2026-10-24",
+   "round": 33,
+   "home": "안양",
+   "away": "전북",
+   "venue": "안양 종합",
+   "attendance": 9126,
+   "comp": "K리그1 33R",
+   "score": [
+    1,
+    1
+   ],
+   "date_label": "10월 24일(토)",
+   "weather": "비",
+   "referee": "고형진",
+   "managers": {
+    "home": "유병훈",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     7,
+     "AST",
+     79.2,
+     27.9
+    ],
+    [
+     "A",
+     1,
+     9,
+     "MST",
+     91.1,
+     34.0
+    ],
+    [
+     "A",
+     1,
+     13,
+     "MST",
+     77.0,
+     60.1
+    ],
+    [
+     "H",
+     1,
+     26,
+     "MST",
+     92.8,
+     48.1
+    ],
+    [
+     "A",
+     1,
+     31,
+     "MST",
+     89.5,
+     31.3
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     88.3,
+     53.8
+    ],
+    [
+     "H",
+     1,
+     39,
+     "MST",
+     86.4,
+     52.4
+    ],
+    [
+     "H",
+     1,
+     45,
+     "GL",
+     91.5,
+     61.3
+    ],
+    [
+     "H",
+     2,
+     46,
+     "AST",
+     83.8,
+     36.0
+    ],
+    [
+     "A",
+     2,
+     48,
+     "AST",
+     78.2,
+     57.7
+    ],
+    [
+     "H",
+     2,
+     63,
+     "MST",
+     90.3,
+     29.1
+    ],
+    [
+     "A",
+     2,
+     66,
+     "MST",
+     79.2,
+     78.1
+    ],
+    [
+     "A",
+     2,
+     79,
+     "AST",
+     88.2,
+     51.5
+    ],
+    [
+     "A",
+     2,
+     83,
+     "BT",
+     83.3,
+     57.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     92.0,
+     59.4
+    ],
+    [
+     "H",
+     2,
+     85,
+     "AST",
+     97.8,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     89,
+     "MST",
+     90.8,
+     45.8
+    ],
+    [
+     "A",
+     2,
+     91,
+     "GL",
+     96.3,
+     50.4
+    ],
+    [
+     "A",
+     2,
+     94,
+     "MST",
+     74.2,
+     45.6
+    ],
+    [
+     "H",
+     2,
+     98,
+     "BT",
+     77.5,
+     31.3
+    ]
+   ],
+   "goals": [
+    {
+     "side": "H",
+     "player": "김운",
+     "label": "45+1'",
+     "minute": 45.5,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "티아고",
+     "label": "90+2'",
+     "minute": 92,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     11
+    ],
+    [
+     "유효슈팅",
+     4,
+     4
+    ],
+    [
+     "패스 성공",
+     187,
+     335
+    ],
+    [
+     "패스 성공률",
+     74.5,
+     85.7,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     7,
+     4
+    ],
+    [
+     "반칙",
+     15,
+     6
+    ],
+    [
+     "경고",
+     2,
+     3
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ],
+  "month": {
+   "from": "2026-10-01",
+   "to": "2026-10-31",
+   "played": 4,
+   "w": 1,
+   "d": 2,
+   "l": 1,
+   "pts": 5,
+   "gf": 5,
+   "ga": 5,
+   "results": [
+    {
+     "date": "2026-10-09",
+     "round": 31,
+     "opp": "대전",
+     "home": false,
+     "gf": 1,
+     "ga": 2,
+     "r": "L"
+    },
+    {
+     "date": "2026-10-18",
+     "round": 32,
+     "opp": "제주",
+     "home": true,
+     "gf": 3,
+     "ga": 2,
+     "r": "W"
+    },
+    {
+     "date": "2026-10-24",
+     "round": 33,
+     "opp": "안양",
+     "home": false,
+     "gf": 1,
+     "ga": 1,
+     "r": "D"
+    },
+    {
+     "date": "2026-10-31",
+     "round": 34,
+     "opp": "대전",
+     "home": true,
+     "gf": 0,
+     "ga": 0,
+     "r": "D"
+    }
+   ],
+   "scorers": [
+    {
+     "name": "티아고",
+     "goals": 4
+    },
+    {
+     "name": "김영빈",
+     "goals": 1
+    }
+   ],
+   "home_attendance_avg": 11469,
+   "note": "K리그1 리그 경기 기준(ACL·컵 제외). 득점자는 K리그 부가기록 기준.",
+   "label": "10월"
+  }
+ }
+}
