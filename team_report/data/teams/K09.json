@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:04+09:00",
+  "generated_at": "2026-11-01T05:25:55+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
@@ -395,6 +395,13 @@
       },
       {
         "round": 33,
+        "rank": 1,
+        "points": 67,
+        "played": 33,
+        "gd": 32
+      },
+      {
+        "round": 34,
         "rank": 1,
         "points": 67,
         "played": 33,

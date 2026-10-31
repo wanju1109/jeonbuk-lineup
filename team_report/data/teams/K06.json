@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:05+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
@@ -23,10 +23,10 @@
     "ppg": 1.66,
     "remaining": 3,
     "scheduled": 32,
-    "gap_to_leader": 14,
+    "gap_to_leader": 15,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 4,
+    "gap_above": 5,
     "gap_below": 3,
     "above": "대구",
     "below": "화성"
@@ -167,7 +167,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 10,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -374,10 +374,17 @@
         "points": 48,
         "played": 29,
         "gd": 10
+      },
+      {
+        "round": 31,
+        "rank": 5,
+        "points": 48,
+        "played": 29,
+        "gd": 10
       }
     ],
     "best_rank": 1,
-    "worst_rank": 9,
+    "worst_rank": 10,
     "first_half": {
       "played": 16,
       "win": 11,

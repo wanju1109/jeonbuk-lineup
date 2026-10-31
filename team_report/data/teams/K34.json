@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:05+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
-    "played": 28,
-    "win": 10,
+    "played": 29,
+    "win": 11,
     "draw": 9,
     "loss": 9,
-    "gf": 36,
-    "ga": 32,
-    "gd": 4,
-    "points": 39,
-    "ppg": 1.39,
-    "remaining": 4,
+    "gf": 41,
+    "ga": 33,
+    "gd": 8,
+    "points": 42,
+    "ppg": 1.45,
+    "remaining": 3,
     "scheduled": 32,
-    "gap_to_leader": 23,
-    "gap_to_cut": 6,
+    "gap_to_leader": 21,
+    "gap_to_cut": 3,
     "cut_rank": 6,
-    "gap_above": 6,
-    "gap_below": 1,
+    "gap_above": 3,
+    "gap_below": 4,
     "above": "화성",
     "below": "김포"
   },
   "splits": {
     "home": {
-      "played": 14,
-      "win": 7,
+      "played": 15,
+      "win": 8,
       "draw": 4,
       "loss": 3,
-      "gf": 24,
-      "ga": 17,
-      "gd": 7,
-      "points": 25,
-      "ppg": 1.79
+      "gf": 29,
+      "ga": 18,
+      "gd": 11,
+      "points": 28,
+      "ppg": 1.87
     },
     "away": {
       "played": 14,
@@ -84,17 +84,17 @@
       "W",
       "D",
       "D",
+      "W",
       "W"
     ],
     "last5": [
-      "L",
       "W",
       "D",
       "D",
+      "W",
       "W"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "W",
@@ -103,31 +103,32 @@
       "W",
       "D",
       "D",
+      "W",
       "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
+      "win": 3,
       "draw": 2,
-      "loss": 1,
-      "gf": 5,
+      "loss": 0,
+      "gf": 10,
       "ga": 3,
-      "gd": 2,
-      "points": 8
+      "gd": 7,
+      "points": 11
     },
     "last10_record": {
       "played": 10,
       "win": 4,
       "draw": 3,
       "loss": 3,
-      "gf": 10,
-      "ga": 9,
-      "gd": 1,
+      "gf": 13,
+      "ga": 10,
+      "gd": 3,
       "points": 15
     },
     "streaks": {
       "current_type": "W",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 2,
       "longest_unbeaten": 5,
       "longest_winless": 4,
@@ -135,20 +136,20 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.29,
+    "gf_per_game": 1.41,
     "ga_per_game": 1.14,
     "clean_sheets": 8,
     "failed_to_score": 8,
-    "both_scored": 15,
+    "both_scored": 16,
     "one_goal_games": 11,
     "biggest_win": {
-      "round": 11,
-      "date": "2026-05-09",
+      "round": 31,
+      "date": "2026-10-31",
       "venue": "H",
-      "opponent_id": "K31",
-      "opponent": "서울 이랜드",
-      "gf": 3,
-      "ga": 0,
+      "opponent_id": "K36",
+      "opponent": "김포 FC",
+      "gf": 5,
+      "ga": 1,
       "result": "W"
     },
     "biggest_loss": {
@@ -373,6 +374,13 @@
         "points": 39,
         "played": 28,
         "gd": 4
+      },
+      {
+        "round": 31,
+        "rank": 7,
+        "points": 42,
+        "played": 29,
+        "gd": 8
       }
     ],
     "best_rank": 4,
@@ -389,15 +397,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 12,
-      "win": 4,
+      "played": 13,
+      "win": 5,
       "draw": 3,
       "loss": 5,
-      "gf": 12,
-      "ga": 13,
-      "gd": -1,
-      "points": 15,
-      "ppg": 1.25
+      "gf": 17,
+      "ga": 14,
+      "gd": 3,
+      "points": 18,
+      "ppg": 1.38
     }
   },
   "fixtures": [
@@ -680,6 +688,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 31,
+      "date": "2026-10-31",
+      "venue": "H",
+      "opponent_id": "K36",
+      "opponent": "김포 FC",
+      "gf": 5,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -810,14 +828,15 @@
         "points": 9
       }
     ],
-    "goal_share": 0.194
+    "goal_share": 0.171
   },
   "attendance": null,
   "context": {
     "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 6점 차. 남은 4경기면 아직 늦지 않았습니다.",
+    "detail": "플레이오프 컷인 6위와 3점 차. 남은 3경기면 아직 늦지 않았습니다.",
     "tags": [
-      "실리 축구"
+      "수비 안정",
+      "홈 강세"
     ]
   },
   "profile": {

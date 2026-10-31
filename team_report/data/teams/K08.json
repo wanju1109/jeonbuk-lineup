@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:05+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
-    "rank": 11,
+    "rank": 12,
     "teams": 17,
     "played": 28,
     "win": 7,
@@ -23,7 +23,7 @@
     "ppg": 1.11,
     "remaining": 4,
     "scheduled": 32,
-    "gap_to_leader": 31,
+    "gap_to_leader": 32,
     "gap_to_cut": 14,
     "cut_rank": 6,
     "gap_above": 1,
@@ -166,7 +166,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 10,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -250,7 +250,7 @@
       },
       {
         "round": 13,
-        "rank": 11,
+        "rank": 10,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -370,6 +370,13 @@
       {
         "round": 30,
         "rank": 11,
+        "points": 31,
+        "played": 28,
+        "gd": -7
+      },
+      {
+        "round": 31,
+        "rank": 12,
         "points": 31,
         "played": 28,
         "gd": -7

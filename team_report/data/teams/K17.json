@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:04+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
-    "played": 28,
+    "played": 29,
     "win": 15,
-    "draw": 7,
+    "draw": 8,
     "loss": 6,
-    "gf": 55,
-    "ga": 38,
+    "gf": 57,
+    "ga": 40,
     "gd": 17,
-    "points": 52,
-    "ppg": 1.86,
-    "remaining": 4,
+    "points": 53,
+    "ppg": 1.83,
+    "remaining": 3,
     "scheduled": 32,
     "gap_to_leader": 10,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 2,
-    "gap_below": 4,
-    "above": "서울E",
+    "gap_above": 1,
+    "gap_below": 5,
+    "above": "수원FC",
     "below": "부산"
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 9,
-      "draw": 2,
+      "draw": 3,
       "loss": 3,
-      "gf": 29,
-      "ga": 17,
+      "gf": 31,
+      "ga": 19,
       "gd": 12,
-      "points": 29,
-      "ppg": 2.07
+      "points": 30,
+      "ppg": 2.0
     },
     "away": {
       "played": 14,
@@ -84,17 +84,17 @@
       "W",
       "L",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
-      "D",
       "W",
       "L",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "last10": [
-      "L",
       "W",
       "W",
       "D",
@@ -103,31 +103,32 @@
       "W",
       "L",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 3,
       "draw": 1,
       "loss": 1,
-      "gf": 11,
-      "ga": 6,
+      "gf": 13,
+      "ga": 8,
       "gd": 5,
       "points": 10
     },
     "last10_record": {
       "played": 10,
       "win": 6,
-      "draw": 2,
-      "loss": 2,
-      "gf": 18,
-      "ga": 13,
-      "gd": 5,
-      "points": 20
+      "draw": 3,
+      "loss": 1,
+      "gf": 19,
+      "ga": 10,
+      "gd": 9,
+      "points": 21
     },
     "streaks": {
-      "current_type": "W",
-      "current_len": 2,
+      "current_type": "D",
+      "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 9,
       "longest_winless": 5,
@@ -135,11 +136,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.96,
-    "ga_per_game": 1.36,
+    "gf_per_game": 1.97,
+    "ga_per_game": 1.38,
     "clean_sheets": 8,
     "failed_to_score": 2,
-    "both_scored": 20,
+    "both_scored": 21,
     "one_goal_games": 9,
     "biggest_win": {
       "round": 16,
@@ -373,6 +374,13 @@
         "points": 52,
         "played": 28,
         "gd": 17
+      },
+      {
+        "round": 31,
+        "rank": 4,
+        "points": 53,
+        "played": 29,
+        "gd": 17
       }
     ],
     "best_rank": 2,
@@ -389,15 +397,15 @@
       "ppg": 1.94
     },
     "second_half": {
-      "played": 12,
+      "played": 13,
       "win": 6,
-      "draw": 3,
+      "draw": 4,
       "loss": 3,
-      "gf": 20,
-      "ga": 16,
+      "gf": 22,
+      "ga": 18,
       "gd": 4,
-      "points": 21,
-      "ppg": 1.75
+      "points": 22,
+      "ppg": 1.69
     }
   },
   "fixtures": [
@@ -680,6 +688,16 @@
       "gf": 4,
       "ga": 2,
       "result": "W"
+    },
+    {
+      "round": 31,
+      "date": "2026-10-31",
+      "venue": "H",
+      "opponent_id": "K02",
+      "opponent": "수원 삼성",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -810,12 +828,12 @@
         "points": 3
       }
     ],
-    "goal_share": 0.182
+    "goal_share": 0.175
   },
   "attendance": null,
   "context": {
     "band": "자동 승격 도전",
-    "detail": "2위와 2점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
+    "detail": "2위와 1점 차. 플레이오프를 건너뛰고 곧장 올라갈 수 있는 거리입니다.",
     "tags": [
       "리그 최상급 화력"
     ]

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:04+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -395,6 +395,13 @@
       },
       {
         "round": 33,
+        "rank": 7,
+        "points": 46,
+        "played": 33,
+        "gd": 2
+      },
+      {
+        "round": 34,
         "rank": 7,
         "points": 46,
         "played": 33,
@@ -899,7 +906,6 @@
     "band": "파이널A 추격",
     "detail": "6위와 0점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
-      "실리 축구",
       "한 골 승부사"
     ]
   },

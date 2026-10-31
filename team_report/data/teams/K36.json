@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:05+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
     "rank": 8,
     "teams": 17,
-    "played": 28,
+    "played": 29,
     "win": 9,
     "draw": 11,
-    "loss": 8,
-    "gf": 36,
-    "ga": 34,
-    "gd": 2,
+    "loss": 9,
+    "gf": 37,
+    "ga": 39,
+    "gd": -2,
     "points": 38,
-    "ppg": 1.36,
-    "remaining": 4,
+    "ppg": 1.31,
+    "remaining": 3,
     "scheduled": 32,
-    "gap_to_leader": 24,
+    "gap_to_leader": 25,
     "gap_to_cut": 7,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 3,
+    "gap_above": 4,
+    "gap_below": 0,
     "above": "충남아산",
     "below": "경남"
   },
@@ -44,15 +44,15 @@
       "ppg": 1.08
     },
     "away": {
-      "played": 15,
+      "played": 16,
       "win": 6,
       "draw": 6,
-      "loss": 3,
-      "gf": 19,
-      "ga": 16,
-      "gd": 3,
+      "loss": 4,
+      "gf": 20,
+      "ga": 21,
+      "gd": -1,
       "points": 24,
-      "ppg": 1.6
+      "ppg": 1.5
     }
   },
   "form": {
@@ -84,17 +84,17 @@
       "W",
       "L",
       "W",
+      "L",
       "L"
     ],
     "last5": [
-      "D",
       "W",
       "L",
       "W",
+      "L",
       "L"
     ],
     "last10": [
-      "D",
       "W",
       "D",
       "L",
@@ -103,31 +103,32 @@
       "W",
       "L",
       "W",
+      "L",
       "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 2,
-      "draw": 1,
-      "loss": 2,
-      "gf": 8,
-      "ga": 6,
-      "gd": 2,
-      "points": 7
+      "draw": 0,
+      "loss": 3,
+      "gf": 7,
+      "ga": 9,
+      "gd": -2,
+      "points": 6
     },
     "last10_record": {
       "played": 10,
       "win": 3,
-      "draw": 3,
-      "loss": 4,
+      "draw": 2,
+      "loss": 5,
       "gf": 15,
-      "ga": 14,
-      "gd": 1,
-      "points": 12
+      "ga": 18,
+      "gd": -3,
+      "points": 11
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 3,
       "longest_unbeaten": 5,
       "longest_winless": 6,
@@ -135,11 +136,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.29,
-    "ga_per_game": 1.21,
+    "gf_per_game": 1.28,
+    "ga_per_game": 1.34,
     "clean_sheets": 7,
     "failed_to_score": 5,
-    "both_scored": 17,
+    "both_scored": 18,
     "one_goal_games": 11,
     "biggest_win": {
       "round": 29,
@@ -152,13 +153,13 @@
       "result": "W"
     },
     "biggest_loss": {
-      "round": 24,
-      "date": "2026-08-29",
-      "venue": "H",
-      "opponent_id": "K02",
-      "opponent": "수원 삼성",
+      "round": 31,
+      "date": "2026-10-31",
+      "venue": "A",
+      "opponent_id": "K34",
+      "opponent": "충남 아산",
       "gf": 1,
-      "ga": 4,
+      "ga": 5,
       "result": "L"
     }
   },
@@ -366,6 +367,13 @@
         "points": 38,
         "played": 28,
         "gd": 2
+      },
+      {
+        "round": 31,
+        "rank": 8,
+        "points": 38,
+        "played": 29,
+        "gd": -2
       }
     ],
     "best_rank": 5,
@@ -382,15 +390,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 12,
+      "played": 13,
       "win": 3,
       "draw": 5,
-      "loss": 4,
-      "gf": 17,
-      "ga": 16,
-      "gd": 1,
+      "loss": 5,
+      "gf": 18,
+      "ga": 21,
+      "gd": -3,
       "points": 14,
-      "ppg": 1.17
+      "ppg": 1.08
     }
   },
   "fixtures": [
@@ -673,6 +681,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 31,
+      "date": "2026-10-31",
+      "venue": "A",
+      "opponent_id": "K34",
+      "opponent": "충남 아산",
+      "gf": 1,
+      "ga": 5,
+      "result": "L"
     }
   ],
   "squad": {
@@ -803,15 +821,13 @@
         "points": 2
       }
     ],
-    "goal_share": 0.139
+    "goal_share": 0.135
   },
   "attendance": null,
   "context": {
     "band": "중위권",
     "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
-      "실리 축구",
-      "원정에 강한 팀",
       "무승부 체질"
     ]
   },

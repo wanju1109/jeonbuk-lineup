@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:04+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -395,6 +395,13 @@
       },
       {
         "round": 33,
+        "rank": 6,
+        "points": 46,
+        "played": 33,
+        "gd": 8
+      },
+      {
+        "round": 34,
         "rank": 6,
         "points": 46,
         "played": 33,
@@ -899,6 +906,7 @@
     "band": "파이널A 경쟁",
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
+      "화력 우위",
       "수비 안정",
       "한 골 승부사"
     ]

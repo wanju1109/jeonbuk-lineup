@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:04+09:00",
+  "generated_at": "2026-11-01T05:25:56+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
-    "played": 33,
+    "played": 34,
     "win": 5,
-    "draw": 19,
+    "draw": 20,
     "loss": 9,
-    "gf": 33,
-    "ga": 41,
+    "gf": 34,
+    "ga": 42,
     "gd": -8,
-    "points": 34,
+    "points": 35,
     "ppg": 1.03,
-    "remaining": 10,
+    "remaining": 9,
     "scheduled": 43,
-    "gap_to_leader": 33,
-    "gap_to_cut": 12,
+    "gap_to_leader": 32,
+    "gap_to_cut": 11,
     "cut_rank": 6,
-    "gap_above": 8,
-    "gap_below": 2,
+    "gap_above": 7,
+    "gap_below": 3,
     "above": "포항",
     "below": "부천"
   },
@@ -44,15 +44,15 @@
       "ppg": 0.81
     },
     "away": {
-      "played": 17,
+      "played": 18,
       "win": 4,
-      "draw": 9,
+      "draw": 10,
       "loss": 4,
-      "gf": 18,
-      "ga": 18,
+      "gf": 19,
+      "ga": 19,
       "gd": 0,
-      "points": 21,
-      "ppg": 1.24
+      "points": 22,
+      "ppg": 1.22
     }
   },
   "form": {
@@ -89,18 +89,18 @@
       "W",
       "L",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "D",
       "W",
       "L",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
       "D",
-      "D",
       "L",
       "D",
       "D",
@@ -108,15 +108,16 @@
       "W",
       "L",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
       "draw": 2,
       "loss": 2,
-      "gf": 7,
-      "ga": 7,
+      "gf": 6,
+      "ga": 6,
       "gd": 0,
       "points": 5
     },
@@ -125,13 +126,13 @@
       "win": 1,
       "draw": 6,
       "loss": 3,
-      "gf": 10,
-      "ga": 12,
+      "gf": 11,
+      "ga": 13,
       "gd": -2,
       "points": 9
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 7,
@@ -144,7 +145,7 @@
     "ga_per_game": 1.24,
     "clean_sheets": 8,
     "failed_to_score": 10,
-    "both_scored": 20,
+    "both_scored": 21,
     "one_goal_games": 8,
     "biggest_win": {
       "round": 30,
@@ -171,21 +172,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 6,
+        "rank": 5,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 7,
+        "rank": 8,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 7,
+        "rank": 8,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -399,9 +400,16 @@
         "points": 34,
         "played": 33,
         "gd": -8
+      },
+      {
+        "round": 34,
+        "rank": 10,
+        "points": 35,
+        "played": 34,
+        "gd": -8
       }
     ],
-    "best_rank": 6,
+    "best_rank": 5,
     "worst_rank": 11,
     "first_half": {
       "played": 19,
@@ -415,15 +423,15 @@
       "ppg": 0.89
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 3,
-      "draw": 8,
+      "draw": 9,
       "loss": 3,
-      "gf": 15,
-      "ga": 15,
+      "gf": 16,
+      "ga": 16,
       "gd": 0,
-      "points": 17,
-      "ppg": 1.21
+      "points": 18,
+      "ppg": 1.2
     }
   },
   "fixtures": [
@@ -756,6 +764,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 34,
+      "date": "2026-10-31",
+      "venue": "A",
+      "opponent_id": "K22",
+      "opponent": "광주 FC",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -886,14 +904,14 @@
         "points": 2
       }
     ],
-    "goal_share": 0.091
+    "goal_share": 0.088
   },
   "attendance": {
     "avg": 2167,
     "total": 34669,
     "games": 16,
     "home_fans_avg": 1466,
-    "away_fans_avg": 212
+    "away_fans_avg": 218
   },
   "context": {
     "band": "강등 확정",

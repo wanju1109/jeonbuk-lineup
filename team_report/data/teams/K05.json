@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-10-31T06:26:04+09:00",
+  "generated_at": "2026-11-01T05:25:55+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
-    "played": 33,
+    "played": 34,
     "win": 12,
-    "draw": 12,
+    "draw": 13,
     "loss": 9,
     "gf": 43,
     "ga": 33,
     "gd": 10,
-    "points": 48,
-    "ppg": 1.45,
-    "remaining": 10,
+    "points": 49,
+    "ppg": 1.44,
+    "remaining": 9,
     "scheduled": 43,
-    "gap_to_leader": 19,
+    "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 0,
+    "gap_below": 1,
     "above": "대전",
     "below": "강원"
   },
   "splits": {
     "home": {
-      "played": 16,
+      "played": 17,
       "win": 8,
-      "draw": 3,
+      "draw": 4,
       "loss": 5,
       "gf": 26,
       "ga": 19,
       "gd": 7,
-      "points": 27,
-      "ppg": 1.69
+      "points": 28,
+      "ppg": 1.65
     },
     "away": {
       "played": 17,
@@ -89,17 +89,17 @@
       "D",
       "L",
       "W",
+      "D",
       "D"
     ],
     "last5": [
-      "L",
       "D",
       "L",
       "W",
+      "D",
       "D"
     ],
     "last10": [
-      "W",
       "D",
       "D",
       "W",
@@ -108,31 +108,32 @@
       "D",
       "L",
       "W",
+      "D",
       "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 2,
-      "loss": 2,
-      "gf": 8,
-      "ga": 9,
-      "gd": -1,
-      "points": 5
+      "draw": 3,
+      "loss": 1,
+      "gf": 7,
+      "ga": 7,
+      "gd": 0,
+      "points": 6
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
-      "draw": 5,
+      "win": 2,
+      "draw": 6,
       "loss": 2,
-      "gf": 13,
+      "gf": 12,
       "ga": 11,
-      "gd": 2,
-      "points": 14
+      "gd": 1,
+      "points": 12
     },
     "streaks": {
       "current_type": "D",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 3,
       "longest_unbeaten": 6,
       "longest_winless": 4,
@@ -140,10 +141,10 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.3,
-    "ga_per_game": 1.0,
-    "clean_sheets": 13,
-    "failed_to_score": 7,
+    "gf_per_game": 1.26,
+    "ga_per_game": 0.97,
+    "clean_sheets": 14,
+    "failed_to_score": 8,
     "both_scored": 18,
     "one_goal_games": 14,
     "biggest_win": {
@@ -399,6 +400,13 @@
         "points": 48,
         "played": 33,
         "gd": 10
+      },
+      {
+        "round": 34,
+        "rank": 4,
+        "points": 49,
+        "played": 34,
+        "gd": 10
       }
     ],
     "best_rank": 2,
@@ -415,15 +423,15 @@
       "ppg": 1.58
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 4,
-      "draw": 6,
+      "draw": 7,
       "loss": 4,
       "gf": 18,
       "ga": 17,
       "gd": 1,
-      "points": 18,
-      "ppg": 1.29
+      "points": 19,
+      "ppg": 1.27
     }
   },
   "fixtures": [
@@ -756,6 +764,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 34,
+      "date": "2026-10-31",
+      "venue": "H",
+      "opponent_id": "K10",
+      "opponent": "대전 하나",
+      "gf": 0,
+      "ga": 0,
+      "result": "D"
     }
   ],
   "squad": {
@@ -889,17 +907,16 @@
     "goal_share": 0.256
   },
   "attendance": {
-    "avg": 15842,
-    "total": 253471,
-    "games": 16,
-    "home_fans_avg": 14747,
+    "avg": 15360,
+    "total": 261125,
+    "games": 17,
+    "home_fans_avg": 14330,
     "away_fans_avg": 2059
   },
   "context": {
     "band": "파이널A 경쟁",
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
-      "화력 우위",
       "수비 안정",
       "클린시트 다수",
       "무승부 체질"
