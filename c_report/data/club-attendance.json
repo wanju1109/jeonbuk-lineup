@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-30",
+  "as_of": "2026-10-31",
   "year": "2026",
   "league": "K리그1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -19,11 +19,11 @@
     },
     {
       "name": "전북",
-      "total": 253471,
+      "total": 261125,
       "away_at_home": 17519,
-      "games": 16,
-      "avg": 15842,
-      "home_fans_avg": 14747,
+      "games": 17,
+      "avg": 15360,
+      "home_fans_avg": 14330,
       "away_fans_total": 35003,
       "away_games": 17,
       "away_fans_avg": 2059,
@@ -136,11 +136,11 @@
     },
     {
       "name": "광주",
-      "total": 57725,
-      "away_at_home": 9451,
-      "games": 17,
-      "avg": 3396,
-      "home_fans_avg": 2840,
+      "total": 59833,
+      "away_at_home": 9778,
+      "games": 18,
+      "avg": 3324,
+      "home_fans_avg": 2781,
       "away_fans_total": 4958,
       "away_games": 16,
       "away_fans_avg": 310,
@@ -154,11 +154,11 @@
       "games": 16,
       "avg": 2167,
       "home_fans_avg": 1466,
-      "away_fans_total": 3597,
-      "away_games": 17,
-      "away_fans_avg": 212,
-      "away_stadium_total": 145822,
-      "away_stadium_avg": 8578
+      "away_fans_total": 3924,
+      "away_games": 18,
+      "away_fans_avg": 218,
+      "away_stadium_total": 147930,
+      "away_stadium_avg": 8218
     }
   ]
 }
