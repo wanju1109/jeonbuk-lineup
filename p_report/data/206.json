@@ -25,23 +25,23 @@
     "kickoff_label": "2026-11-07 19:00 KST",
     "date_md": "11/07",
     "label": "김천 VS 안양 (206, 11/07)",
-    "hours_to_kickoff": 137.8,
+    "hours_to_kickoff": 131.8,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-11-02T01:10:15.279970+09:00",
+    "generated_at": "2026-11-02T07:13:38.304970+09:00",
     "preview_hours": 48.0
   },
   "headline": "35R PREVIEW · 김천 vs 안양",
   "thesis": "김천 vs 안양. 김천 최근 W L D L D, 안양 최근 W W D D W. 홈 김천이(가) 템포를 가져가며 xG 1.58 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "김천 vs 안양. 김천 최근 W L D L D (1승 2무 2패 / 최근 5경기). 안양 최근 W W D D W (3승 2무 0패 / 최근 5경기).",
-    "최근 5경기 평균 — 김천 xG 1.58·슈팅 14.0, 안양 xG 1.64·슈팅 12.8. 패스 성공률 77.0% vs 67.4%.",
+    "최근 5경기 평균 — 김천 xG 1.58·슈팅 14.0, 안양 xG 1.56·슈팅 13.4. 패스 성공률 77.0% vs 69.7%.",
     "올 시즌 맞대결 2경기 — 김천 기준 0승 2무 0패.",
     "경기장 김천 종합 · 김천 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 김천: 최근 가용 칠판 데이터 5경기 기준, 안양: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "김천은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 안양은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.58 vs 1.64, 슈팅 14.0 vs 12.8, 파이널 서드 터치 21.2% vs 24.4%입니다.",
+    "contrast": "김천은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 안양은(는) 상승세, 기회 창출↑, 슈팅 많음 그림입니다. 최근 xG 1.58 vs 1.56, 슈팅 14.0 vs 13.4, 파이널 서드 터치 21.3% vs 24.1%입니다.",
     "edge": [
       "홈 이점(김천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -62,49 +62,49 @@
       {
         "label": "경기당 xG",
         "jeonbuk": 1.58,
-        "opponent": 1.64,
-        "better": "opponent"
+        "opponent": 1.56,
+        "better": "jeonbuk"
       },
       {
         "label": "경기당 xGA(허용 xG)",
         "jeonbuk": 1.38,
-        "opponent": 1.09,
+        "opponent": 1.2,
         "better": "opponent"
       },
       {
         "label": "슈팅",
         "jeonbuk": 14.0,
-        "opponent": 12.8,
+        "opponent": 13.4,
         "better": "jeonbuk"
       },
       {
         "label": "유효슈팅",
         "jeonbuk": 6.4,
-        "opponent": 5.5,
+        "opponent": 5.4,
         "better": "jeonbuk"
       },
       {
         "label": "패스 성공률",
         "jeonbuk": 77.0,
-        "opponent": 67.4,
+        "opponent": 69.7,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 21.2,
-        "opponent": 24.4,
+        "jeonbuk": 21.3,
+        "opponent": 24.1,
         "suffix": "%",
         "better": "opponent"
       },
       {
         "label": "압박 시도(PPDA proxy)",
         "jeonbuk": 20.6,
-        "opponent": 14.5,
+        "opponent": 13.8,
         "better": "jeonbuk"
       }
     ],
-    "summary": "최근 5경기 기준 — 김천 xG 1.58 / xGA 1.38, 안양 xG 1.64 / xGA 1.09."
+    "summary": "최근 5경기 기준 — 김천 xG 1.58 / xGA 1.38, 안양 xG 1.56 / xGA 1.2."
   },
   "pulse": {
     "home": {
@@ -125,8 +125,8 @@
       "ppg": 2.2,
       "goals_pg": 1.2,
       "conceded_pg": 0.6,
-      "xg_delta": -0.56,
-      "xg_sample": 4,
+      "xg_delta": -1.79,
+      "xg_sample": 5,
       "clean_sheets": 2
     },
     "verdict": "최근 승점 흐름은 안양 쪽이 더 좋습니다. 다만 최근 5경기 표본으로 보는 프리뷰입니다.",
@@ -602,7 +602,7 @@
         "stats_limited": false,
         "score_source": "official",
         "pass_pct": 81.1,
-        "final_third_pct": 19.0,
+        "final_third_pct": 19.5,
         "presses": 19,
         "stats_source": "portal"
       }
@@ -709,15 +709,18 @@
         "result": "W",
         "opponent": "부천",
         "ha": "H",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 1.23,
+        "xga": 1.61,
+        "shots": 16,
+        "sot": 5,
         "goals_for": 2,
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 78.9,
+        "final_third_pct": 23.1,
+        "presses": 11,
+        "stats_source": "portal"
       }
     ]
   },
@@ -763,7 +766,7 @@
       "avg_shots": 14.0,
       "avg_sot": 6.4,
       "avg_pass_pct": 77.0,
-      "avg_final_third_pct": 21.2,
+      "avg_final_third_pct": 21.3,
       "avg_presses": 20.6,
       "avg_x": 50.0,
       "samples": 5
@@ -780,15 +783,15 @@
       "goals_for": 6,
       "goals_against": 3,
       "goal_diff": 3,
-      "avg_xg": 1.64,
-      "avg_xga": 1.09,
-      "avg_shots": 12.8,
-      "avg_sot": 5.5,
-      "avg_pass_pct": 67.4,
-      "avg_final_third_pct": 24.4,
-      "avg_presses": 14.5,
-      "avg_x": 49.5,
-      "samples": 4
+      "avg_xg": 1.56,
+      "avg_xga": 1.2,
+      "avg_shots": 13.4,
+      "avg_sot": 5.4,
+      "avg_pass_pct": 69.7,
+      "avg_final_third_pct": 24.1,
+      "avg_presses": 13.8,
+      "avg_x": 49.6,
+      "samples": 5
     }
   },
   "players": {
@@ -1248,11 +1251,11 @@
       "key": "prep",
       "label": "매치업 대비 포인트",
       "items": [
-        "안양 경기당 슈팅 12.8·유효슈팅 5.5. 박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요.",
-        "안양 최근 xG 1.64로 기회 질이 좋습니다. 라인 간격을 좁히고, 역습 첫 패스 각을 막는 것이 실점 방지의 핵심입니다.",
+        "안양 경기당 슈팅 13.4·유효슈팅 5.4. 박스 안 2선 슈팅 각을 먼저 막고, 세트피스 수비 위치를 고정하세요.",
+        "안양 최근 xG 1.56로 기회 질이 좋습니다. 라인 간격을 좁히고, 역습 첫 패스 각을 막는 것이 실점 방지의 핵심입니다.",
         "안양이(가) 상승세입니다. 한 골 차 리드에도 역습·세트피스 한 장면을 끝까지 경계하세요.",
         "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요.",
-        "김천 패스 성공률 77.0%가 안양(67.4%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
+        "김천 패스 성공률 77.0%가 안양(69.7%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
       ],
       "players": []
     }
