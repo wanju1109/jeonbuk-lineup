@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T19:22:59.741793+00:00",
+  "updated_at": "2026-11-01T00:13:51.192945+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -495,6 +495,19 @@
       "label": "안양 VS 전북 (194, 10/24)",
       "attendance_home": 7711,
       "attendance_away": 1415
+    },
+    {
+      "game_id": "199",
+      "year": "2026",
+      "round": 34,
+      "home": "전북",
+      "away": "대전",
+      "score": "0:0",
+      "date": "2026-10-31",
+      "venue": "전주 월드컵",
+      "attendance": 7654,
+      "file": "./data/199.json",
+      "label": "전북 VS 대전 (199, 10/31)"
     }
   ]
 }
