@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-11-01T05:25:56+09:00",
+  "generated_at": "2026-11-02T06:06:50+09:00",
   "table": {
-    "rank": 2,
+    "rank": 3,
     "teams": 17,
     "played": 29,
     "win": 16,
@@ -26,10 +26,10 @@
     "gap_to_leader": 9,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 9,
-    "gap_below": 0,
-    "above": "수원",
-    "below": "수원FC"
+    "gap_above": 3,
+    "gap_below": 1,
+    "above": "수원FC",
+    "below": "대구"
   },
   "splits": {
     "home": {
@@ -377,7 +377,7 @@
       },
       {
         "round": 31,
-        "rank": 2,
+        "rank": 3,
         "points": 54,
         "played": 29,
         "gd": 18
@@ -831,17 +831,17 @@
     "goal_share": 0.204
   },
   "attendance": {
-    "avg": 22070,
-    "total": 353116,
-    "games": 16,
-    "home_fans_avg": 20032,
+    "avg": 21480,
+    "total": 365166,
+    "games": 17,
+    "home_fans_avg": 19365,
     "away_fans_avg": 1357
   },
   "context": {
-    "band": "자동 승격권",
-    "detail": "올해는 2위까지 곧바로 올라갑니다. 플레이오프를 건너뛸 수 있는 자리에 서 있습니다.",
+    "band": "승격 플레이오프권",
+    "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
     "tags": [
-      "화력 우위"
+      "리그 최상급 화력"
     ]
   },
   "profile": {

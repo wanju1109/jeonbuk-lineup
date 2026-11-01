@@ -8,23 +8,23 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-11-01T05:25:56+09:00",
+  "generated_at": "2026-11-02T06:06:50+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
-    "played": 33,
+    "played": 34,
     "win": 7,
     "draw": 11,
-    "loss": 15,
-    "gf": 32,
-    "ga": 47,
-    "gd": -15,
+    "loss": 16,
+    "gf": 33,
+    "ga": 49,
+    "gd": -16,
     "points": 32,
-    "ppg": 0.97,
-    "remaining": 10,
+    "ppg": 0.94,
+    "remaining": 9,
     "scheduled": 43,
     "gap_to_leader": 35,
-    "gap_to_cut": 14,
+    "gap_to_cut": 16,
     "cut_rank": 6,
     "gap_above": 3,
     "gap_below": 10,
@@ -44,15 +44,15 @@
       "ppg": 0.89
     },
     "away": {
-      "played": 15,
+      "played": 16,
       "win": 4,
       "draw": 4,
-      "loss": 7,
-      "gf": 14,
-      "ga": 18,
-      "gd": -4,
+      "loss": 8,
+      "gf": 15,
+      "ga": 20,
+      "gd": -5,
       "points": 16,
-      "ppg": 1.07
+      "ppg": 1.0
     }
   },
   "form": {
@@ -89,22 +89,23 @@
       "L",
       "L",
       "L",
+      "L",
       "L"
     ],
     "last5": [
-      "D",
+      "L",
       "L",
       "L",
       "L",
       "L"
     ],
     "last10": [
-      "W",
       "L",
       "D",
       "L",
       "L",
       "D",
+      "L",
       "L",
       "L",
       "L",
@@ -113,39 +114,39 @@
     "last5_record": {
       "played": 5,
       "win": 0,
-      "draw": 1,
-      "loss": 4,
-      "gf": 3,
+      "draw": 0,
+      "loss": 5,
+      "gf": 2,
       "ga": 11,
-      "gd": -8,
-      "points": 1
+      "gd": -9,
+      "points": 0
     },
     "last10_record": {
       "played": 10,
-      "win": 1,
+      "win": 0,
       "draw": 2,
-      "loss": 7,
-      "gf": 8,
-      "ga": 20,
-      "gd": -12,
-      "points": 5
+      "loss": 8,
+      "gf": 6,
+      "ga": 22,
+      "gd": -16,
+      "points": 2
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 4,
+      "current_len": 5,
       "longest_win": 2,
       "longest_unbeaten": 5,
-      "longest_winless": 9,
-      "longest_loss": 4
+      "longest_winless": 10,
+      "longest_loss": 5
     }
   },
   "scoring": {
     "gf_per_game": 0.97,
-    "ga_per_game": 1.42,
+    "ga_per_game": 1.44,
     "clean_sheets": 9,
     "failed_to_score": 14,
-    "both_scored": 14,
-    "one_goal_games": 12,
+    "both_scored": 15,
+    "one_goal_games": 13,
     "biggest_win": {
       "round": 24,
       "date": "2026-08-22",
@@ -192,7 +193,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -220,7 +221,7 @@
       },
       {
         "round": 8,
-        "rank": 5,
+        "rank": 6,
         "points": 10,
         "played": 8,
         "gd": 0
@@ -404,8 +405,8 @@
         "round": 34,
         "rank": 11,
         "points": 32,
-        "played": 33,
-        "gd": -15
+        "played": 34,
+        "gd": -16
       }
     ],
     "best_rank": 2,
@@ -422,15 +423,15 @@
       "ppg": 1.0
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 3,
       "draw": 4,
-      "loss": 7,
-      "gf": 15,
-      "ga": 23,
-      "gd": -8,
+      "loss": 8,
+      "gf": 16,
+      "ga": 25,
+      "gd": -9,
       "points": 13,
-      "ppg": 0.93
+      "ppg": 0.87
     }
   },
   "fixtures": [
@@ -763,6 +764,16 @@
       "gf": 0,
       "ga": 3,
       "result": "L"
+    },
+    {
+      "round": 34,
+      "date": "2026-11-01",
+      "venue": "A",
+      "opponent_id": "K27",
+      "opponent": "FC 안양",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -893,7 +904,7 @@
         "points": 2
       }
     ],
-    "goal_share": 0.312
+    "goal_share": 0.303
   },
   "attendance": {
     "avg": 6563,
@@ -903,12 +914,12 @@
     "away_fans_avg": 575
   },
   "context": {
-    "band": "파이널A 추격",
-    "detail": "6위와 14점 차. 상위 스플릿이 아직 사정권입니다.",
+    "band": "중위권",
+    "detail": "위도 아래도 멀어진 자리. 시즌의 방향을 스스로 정해야 합니다.",
     "tags": [
       "득점 빈곤",
-      "침묵하는 공격",
-      "무승부 체질"
+      "수비 불안",
+      "침묵하는 공격"
     ]
   },
   "profile": {

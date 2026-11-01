@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-11-01T05:25:56+09:00",
+  "generated_at": "2026-11-02T06:06:50+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
@@ -27,9 +27,9 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": null,
-    "gap_below": 9,
+    "gap_below": 6,
     "above": "",
-    "below": "서울E"
+    "below": "수원FC"
   },
   "splits": {
     "home": {

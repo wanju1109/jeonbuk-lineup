@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k41-sm.png",
   "home_url": "https://gimhaefc2008.com",
   "season": "2026",
-  "generated_at": "2026-11-01T05:25:57+09:00",
+  "generated_at": "2026-11-02T06:06:51+09:00",
   "table": {
     "rank": 17,
     "teams": 17,
-    "played": 28,
+    "played": 29,
     "win": 3,
-    "draw": 8,
+    "draw": 9,
     "loss": 17,
-    "gf": 24,
-    "ga": 57,
+    "gf": 27,
+    "ga": 60,
     "gd": -33,
-    "points": 17,
-    "ppg": 0.61,
-    "remaining": 4,
+    "points": 18,
+    "ppg": 0.62,
+    "remaining": 3,
     "scheduled": 32,
-    "gap_to_leader": 46,
-    "gap_to_cut": 28,
+    "gap_to_leader": 45,
+    "gap_to_cut": 27,
     "cut_rank": 6,
     "gap_above": 7,
     "gap_below": null,
-    "above": "전남",
+    "above": "안산",
     "below": ""
   },
   "splits": {
     "home": {
-      "played": 13,
+      "played": 14,
       "win": 0,
-      "draw": 4,
+      "draw": 5,
       "loss": 9,
-      "gf": 10,
-      "ga": 29,
+      "gf": 13,
+      "ga": 32,
       "gd": -19,
-      "points": 4,
-      "ppg": 0.31
+      "points": 5,
+      "ppg": 0.36
     },
     "away": {
       "played": 15,
@@ -84,17 +84,17 @@
       "L",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
       "L",
-      "L",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last10": [
-      "L",
       "D",
       "L",
       "L",
@@ -103,30 +103,31 @@
       "L",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 1,
-      "loss": 3,
-      "gf": 5,
-      "ga": 12,
-      "gd": -7,
-      "points": 4
+      "draw": 2,
+      "loss": 2,
+      "gf": 8,
+      "ga": 13,
+      "gd": -5,
+      "points": 5
     },
     "last10_record": {
       "played": 10,
       "win": 1,
-      "draw": 3,
-      "loss": 6,
-      "gf": 8,
-      "ga": 21,
-      "gd": -13,
-      "points": 6
+      "draw": 4,
+      "loss": 5,
+      "gf": 11,
+      "ga": 23,
+      "gd": -12,
+      "points": 7
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 3,
@@ -135,11 +136,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.86,
-    "ga_per_game": 2.04,
+    "gf_per_game": 0.93,
+    "ga_per_game": 2.07,
     "clean_sheets": 2,
     "failed_to_score": 8,
-    "both_scored": 18,
+    "both_scored": 19,
     "one_goal_games": 8,
     "biggest_win": {
       "round": 30,
@@ -166,7 +167,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 15,
+        "rank": 14,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -377,12 +378,12 @@
       {
         "round": 31,
         "rank": 17,
-        "points": 17,
-        "played": 28,
+        "points": 18,
+        "played": 29,
         "gd": -33
       }
     ],
-    "best_rank": 15,
+    "best_rank": 14,
     "worst_rank": 17,
     "first_half": {
       "played": 16,
@@ -396,15 +397,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 12,
+      "played": 13,
       "win": 1,
-      "draw": 5,
+      "draw": 6,
       "loss": 6,
-      "gf": 11,
-      "ga": 24,
+      "gf": 14,
+      "ga": 27,
       "gd": -13,
-      "points": 8,
-      "ppg": 0.67
+      "points": 9,
+      "ppg": 0.69
     }
   },
   "fixtures": [
@@ -687,6 +688,16 @@
       "gf": 2,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 31,
+      "date": "2026-11-01",
+      "venue": "H",
+      "opponent_id": "K38",
+      "opponent": "천안 시티",
+      "gf": 3,
+      "ga": 3,
+      "result": "D"
     }
   ],
   "squad": {
@@ -817,7 +828,7 @@
         "points": 1
       }
     ],
-    "goal_share": 0.208
+    "goal_share": 0.185
   },
   "attendance": null,
   "context": {

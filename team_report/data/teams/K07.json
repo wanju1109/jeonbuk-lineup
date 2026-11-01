@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-01T05:25:57+09:00",
+  "generated_at": "2026-11-02T06:06:51+09:00",
   "table": {
-    "rank": 16,
+    "rank": 15,
     "teams": 17,
-    "played": 28,
+    "played": 29,
     "win": 5,
-    "draw": 9,
+    "draw": 10,
     "loss": 14,
-    "gf": 33,
-    "ga": 50,
+    "gf": 35,
+    "ga": 52,
     "gd": -17,
-    "points": 24,
+    "points": 25,
     "ppg": 0.86,
-    "remaining": 4,
+    "remaining": 3,
     "scheduled": 32,
-    "gap_to_leader": 39,
-    "gap_to_cut": 21,
+    "gap_to_leader": 38,
+    "gap_to_cut": 20,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 7,
-    "above": "안산",
-    "below": "김해"
+    "gap_above": 5,
+    "gap_below": 0,
+    "above": "천안",
+    "below": "안산"
   },
   "splits": {
     "home": {
-      "played": 13,
+      "played": 14,
       "win": 4,
-      "draw": 4,
+      "draw": 5,
       "loss": 5,
-      "gf": 16,
-      "ga": 20,
+      "gf": 18,
+      "ga": 22,
       "gd": -4,
-      "points": 16,
-      "ppg": 1.23
+      "points": 17,
+      "ppg": 1.21
     },
     "away": {
       "played": 15,
@@ -84,18 +84,18 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "D",
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
       "L",
-      "L",
       "W",
       "W",
       "D",
@@ -103,7 +103,8 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
@@ -118,16 +119,16 @@
     "last10_record": {
       "played": 10,
       "win": 3,
-      "draw": 2,
-      "loss": 5,
-      "gf": 13,
+      "draw": 3,
+      "loss": 4,
+      "gf": 14,
       "ga": 18,
-      "gd": -5,
-      "points": 11
+      "gd": -4,
+      "points": 12
     },
     "streaks": {
-      "current_type": "L",
-      "current_len": 2,
+      "current_type": "D",
+      "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 4,
       "longest_winless": 15,
@@ -135,11 +136,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.18,
+    "gf_per_game": 1.21,
     "ga_per_game": 1.79,
     "clean_sheets": 4,
     "failed_to_score": 9,
-    "both_scored": 16,
+    "both_scored": 17,
     "one_goal_games": 12,
     "biggest_win": {
       "round": 1,
@@ -166,7 +167,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 3,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -376,13 +377,13 @@
       },
       {
         "round": 31,
-        "rank": 16,
-        "points": 24,
-        "played": 28,
+        "rank": 15,
+        "points": 25,
+        "played": 29,
         "gd": -17
       }
     ],
-    "best_rank": 2,
+    "best_rank": 3,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -396,15 +397,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 12,
+      "played": 13,
       "win": 4,
-      "draw": 3,
+      "draw": 4,
       "loss": 5,
-      "gf": 15,
-      "ga": 19,
+      "gf": 17,
+      "ga": 21,
       "gd": -4,
-      "points": 15,
-      "ppg": 1.25
+      "points": 16,
+      "ppg": 1.23
     }
   },
   "fixtures": [
@@ -687,6 +688,16 @@
       "gf": 2,
       "ga": 4,
       "result": "L"
+    },
+    {
+      "round": 31,
+      "date": "2026-11-01",
+      "venue": "H",
+      "opponent_id": "K08",
+      "opponent": "성남 FC",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -817,14 +828,15 @@
         "points": 4
       }
     ],
-    "goal_share": 0.242
+    "goal_share": 0.229
   },
   "attendance": null,
   "context": {
     "band": "하위권",
     "detail": "순위표 바닥. 내년을 위한 재건이 먼저 보이는 자리입니다.",
     "tags": [
-      "수비 불안"
+      "수비 불안",
+      "무승부 체질"
     ]
   },
   "profile": {

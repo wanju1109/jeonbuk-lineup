@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-11-01T05:25:57+09:00",
+  "generated_at": "2026-11-02T06:06:51+09:00",
   "table": {
-    "rank": 15,
+    "rank": 16,
     "teams": 17,
-    "played": 29,
+    "played": 30,
     "win": 7,
     "draw": 4,
-    "loss": 18,
+    "loss": 19,
     "gf": 33,
-    "ga": 56,
-    "gd": -23,
+    "ga": 57,
+    "gd": -24,
     "points": 25,
-    "ppg": 0.86,
-    "remaining": 3,
+    "ppg": 0.83,
+    "remaining": 2,
     "scheduled": 32,
     "gap_to_leader": 38,
     "gap_to_cut": 20,
     "cut_rank": 6,
-    "gap_above": 4,
-    "gap_below": 1,
-    "above": "천안",
-    "below": "전남"
+    "gap_above": 0,
+    "gap_below": 7,
+    "above": "전남",
+    "below": "김해"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 0.5
     },
     "away": {
-      "played": 13,
+      "played": 14,
       "win": 5,
       "draw": 2,
-      "loss": 6,
+      "loss": 7,
       "gf": 16,
-      "ga": 23,
-      "gd": -7,
+      "ga": 24,
+      "gd": -8,
       "points": 17,
-      "ppg": 1.31
+      "ppg": 1.21
     }
   },
   "form": {
@@ -85,17 +85,17 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "last5": [
       "L",
       "L",
-      "L",
       "W",
+      "L",
       "L"
     ],
     "last10": [
-      "D",
       "L",
       "L",
       "L",
@@ -104,6 +104,7 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "last5_record": {
@@ -112,23 +113,23 @@
       "draw": 0,
       "loss": 4,
       "gf": 8,
-      "ga": 12,
-      "gd": -4,
+      "ga": 11,
+      "gd": -3,
       "points": 3
     },
     "last10_record": {
       "played": 10,
       "win": 2,
-      "draw": 1,
-      "loss": 7,
-      "gf": 13,
+      "draw": 0,
+      "loss": 8,
+      "gf": 12,
       "ga": 20,
-      "gd": -7,
-      "points": 7
+      "gd": -8,
+      "points": 6
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 1,
       "longest_unbeaten": 3,
       "longest_winless": 6,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.14,
-    "ga_per_game": 1.93,
+    "gf_per_game": 1.1,
+    "ga_per_game": 1.9,
     "clean_sheets": 4,
-    "failed_to_score": 6,
+    "failed_to_score": 7,
     "both_scored": 19,
-    "one_goal_games": 11,
+    "one_goal_games": 12,
     "biggest_win": {
       "round": 29,
       "date": "2026-10-17",
@@ -377,10 +378,10 @@
       },
       {
         "round": 31,
-        "rank": 15,
+        "rank": 16,
         "points": 25,
-        "played": 29,
-        "gd": -23
+        "played": 30,
+        "gd": -24
       }
     ],
     "best_rank": 1,
@@ -397,15 +398,15 @@
       "ppg": 0.88
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 3,
       "draw": 2,
-      "loss": 8,
+      "loss": 9,
       "gf": 16,
-      "ga": 27,
-      "gd": -11,
+      "ga": 28,
+      "gd": -12,
       "points": 11,
-      "ppg": 0.85
+      "ppg": 0.79
     }
   },
   "fixtures": [
@@ -698,6 +699,16 @@
       "gf": 1,
       "ga": 3,
       "result": "L"
+    },
+    {
+      "round": 31,
+      "date": "2026-11-01",
+      "venue": "A",
+      "opponent_id": "K29",
+      "opponent": "수원 FC",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -835,6 +846,7 @@
     "band": "하위권",
     "detail": "순위표 바닥. 내년을 위한 재건이 먼저 보이는 자리입니다.",
     "tags": [
+      "득점 빈곤",
       "수비 불안",
       "원정에 강한 팀"
     ]

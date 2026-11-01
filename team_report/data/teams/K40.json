@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-11-01T05:25:56+09:00",
+  "generated_at": "2026-11-02T06:06:51+09:00",
   "table": {
-    "rank": 13,
+    "rank": 10,
     "teams": 17,
-    "played": 28,
-    "win": 8,
+    "played": 29,
+    "win": 9,
     "draw": 7,
     "loss": 13,
-    "gf": 27,
-    "ga": 34,
-    "gd": -7,
-    "points": 31,
-    "ppg": 1.11,
-    "remaining": 4,
+    "gf": 29,
+    "ga": 35,
+    "gd": -6,
+    "points": 34,
+    "ppg": 1.17,
+    "remaining": 3,
     "scheduled": 32,
-    "gap_to_leader": 32,
-    "gap_to_cut": 14,
+    "gap_to_leader": 29,
+    "gap_to_cut": 11,
     "cut_rank": 6,
-    "gap_above": 0,
-    "gap_below": 2,
-    "above": "성남",
-    "below": "천안"
+    "gap_above": 4,
+    "gap_below": 1,
+    "above": "경남",
+    "below": "용인"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 0.93
     },
     "away": {
-      "played": 14,
-      "win": 5,
+      "played": 15,
+      "win": 6,
       "draw": 3,
       "loss": 6,
-      "gf": 15,
-      "ga": 19,
-      "gd": -4,
-      "points": 18,
-      "ppg": 1.29
+      "gf": 17,
+      "ga": 20,
+      "gd": -3,
+      "points": 21,
+      "ppg": 1.4
     }
   },
   "form": {
@@ -84,17 +84,17 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "D",
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "W",
       "L",
       "W",
       "D",
@@ -103,17 +103,18 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
-      "draw": 3,
+      "win": 2,
+      "draw": 2,
       "loss": 1,
-      "gf": 5,
-      "ga": 6,
-      "gd": -1,
-      "points": 6
+      "gf": 7,
+      "ga": 7,
+      "gd": 0,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
@@ -126,7 +127,7 @@
       "points": 13
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 3,
@@ -135,12 +136,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.96,
+    "gf_per_game": 1.0,
     "ga_per_game": 1.21,
     "clean_sheets": 7,
     "failed_to_score": 11,
-    "both_scored": 14,
-    "one_goal_games": 15,
+    "both_scored": 15,
+    "one_goal_games": 16,
     "biggest_win": {
       "round": 27,
       "date": "2026-09-20",
@@ -376,10 +377,10 @@
       },
       {
         "round": 31,
-        "rank": 13,
-        "points": 31,
-        "played": 28,
-        "gd": -7
+        "rank": 10,
+        "points": 34,
+        "played": 29,
+        "gd": -6
       }
     ],
     "best_rank": 5,
@@ -396,15 +397,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 12,
-      "win": 3,
+      "played": 13,
+      "win": 4,
       "draw": 5,
       "loss": 4,
-      "gf": 10,
-      "ga": 12,
-      "gd": -2,
-      "points": 14,
-      "ppg": 1.17
+      "gf": 12,
+      "ga": 13,
+      "gd": -1,
+      "points": 17,
+      "ppg": 1.31
     }
   },
   "fixtures": [
@@ -687,6 +688,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 31,
+      "date": "2026-11-01",
+      "venue": "A",
+      "opponent_id": "K37",
+      "opponent": "충북 청주",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -817,7 +828,7 @@
         "points": 4
       }
     ],
-    "goal_share": 0.296
+    "goal_share": 0.276
   },
   "attendance": null,
   "context": {
