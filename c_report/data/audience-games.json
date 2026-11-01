@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-31T18:54:54.799151+00:00",
+  "updated_at": "2026-11-01T19:17:09.618625+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
-  "count": 200,
+  "count": 204,
   "games": {
     "72": {
       "game_id": "72",
@@ -493,6 +493,20 @@
       "attendance_home": 10694,
       "attendance_away": 1495,
       "weekday": "-",
+      "meet_seq": 1
+    },
+    "203": {
+      "game_id": "203",
+      "year": "2026",
+      "date": "2026-11-01",
+      "home": "서울",
+      "away": "인천",
+      "score": "0:1",
+      "venue": "서울 월드컵 경기장",
+      "attendance": 12050,
+      "attendance_home": 8691,
+      "attendance_away": 3359,
+      "weekday": "주말",
       "meet_seq": 1
     },
     "160": {
@@ -1330,8 +1344,8 @@
       "score": "0:0",
       "venue": "전주 월드컵 경기장",
       "attendance": 7654,
-      "attendance_home": 7654,
-      "attendance_away": 0,
+      "attendance_home": 6511,
+      "attendance_away": 1143,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -1458,6 +1472,20 @@
       "attendance": 7066,
       "attendance_home": 5493,
       "attendance_away": 1573,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
+    "202": {
+      "game_id": "202",
+      "year": "2026",
+      "date": "2026-11-01",
+      "home": "울산",
+      "away": "강원",
+      "score": "2:1",
+      "venue": "울산 문수 축구경기장",
+      "attendance": 7038,
+      "attendance_home": 6825,
+      "attendance_away": 213,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -2091,6 +2119,20 @@
       "weekday": "-",
       "meet_seq": 1
     },
+    "204": {
+      "game_id": "204",
+      "year": "2026",
+      "date": "2026-11-01",
+      "home": "안양",
+      "away": "부천",
+      "score": "2:1",
+      "venue": "안양 종합 운동장",
+      "attendance": 4464,
+      "attendance_home": 4464,
+      "attendance_away": 0,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
     "34": {
       "game_id": "34",
       "year": "2026",
@@ -2214,6 +2256,20 @@
       "attendance": 4028,
       "attendance_home": 3658,
       "attendance_away": 370,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
+    "201": {
+      "game_id": "201",
+      "year": "2026",
+      "date": "2026-11-01",
+      "home": "포항",
+      "away": "제주",
+      "score": "1:1",
+      "venue": "포항 스틸야드",
+      "attendance": 3911,
+      "attendance_home": 3810,
+      "attendance_away": 101,
       "weekday": "주말",
       "meet_seq": 1
     },

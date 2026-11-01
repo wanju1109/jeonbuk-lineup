@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T16:08:33.270801+00:00",
+  "updated_at": "2026-11-01T19:17:10.287607+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -507,7 +507,9 @@
       "venue": "전주 월드컵",
       "attendance": 7654,
       "file": "./data/199.json",
-      "label": "전북 VS 대전 (199, 10/31)"
+      "label": "전북 VS 대전 (199, 10/31)",
+      "attendance_home": 6511,
+      "attendance_away": 1143
     }
   ]
 }
