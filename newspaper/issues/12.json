@@ -1,0 +1,1593 @@
+{
+ "no": 12,
+ "date": "2026-11-03",
+ "matchday_after": false,
+ "headline": "ACLE 4차전 오늘 19:00 전주, 무패 조호르와 첫 맞대결",
+ "summary": "ACLE 동아시아 10위 전북이 4위 조호르를 안방에서 만난다. 정정용 감독은 총력전을 예고했다.",
+ "strip": [
+  "K리그1 5위 · 승점 49",
+  "오늘 19:00 전주 · ACLE 4차전 조호르",
+  "ACLE 동아시아 10위 · 승점 4",
+  "리그 D-5 · 11월 8일 강원 원정"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제12호 · 2026.11.03(화)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:이승우:260411",
+     "kicker": "AFC 챔피언스리그 엘리트 리그 스테이지 4차전 · 오늘 19:00 전주월드컵경기장",
+     "title": "ACLE 4차전 오늘 19:00 전주, 무패 조호르와 첫 맞대결",
+     "dek": "동아시아 10위 전북이 4위 조호르를 안방에서 만난다. 이기면 승점 7로 조호르와 나란히 선다.",
+     "caption": "이승우. 조호르전 공격의 중심으로 꼽힌다(자료 사진, 2026년 4월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북이 3일 오후 7시 전주월드컵경기장에서 조호르 다룰 탁짐(말레이시아)과 2026-27 AFC 챔피언스리그 엘리트(ACLE) 동아시아 리그 스테이지 4차전을 치른다. 두 팀의 공식 맞대결은 이번이 처음이다.",
+      "순위표는 조호르가 앞선다. 전북은 3경기 1승 1무 1패, 승점 4로 16팀 가운데 10위다. 조호르는 2승 1무, 승점 7로 4위에 있고 3경기에서 6골을 넣고 1골만 내줬다. 16강 직행은 8위까지다.",
+      "정정용 감독은 2일 사전 기자회견에서 홈에서 총력전을 펼쳐 이기겠다고 했다. 상대 강점을 지우는 수비 조직력을 강조했다. 회견에 함께 나온 모따는 조호르를 강팀이라 부르며 철저한 준비를 말했다.",
+      "전북은 리그 최근 8경기에서 2승 4무 2패를 기록했고 31일 대전과 0-0으로 비겼다. 조호르전 뒤에는 8일 강원 원정으로 리그 35라운드를 치른다. 중계 편성은 아직 확인되지 않았다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "19:00",
+       "label": "킥오프 · 전주월드컵경기장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "10위",
+       "label": "전북 ACLE 순위 · 승점 4",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "114",
+       "label": "조호르 말레이시아 리그 연속 무패(보도 기준)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "8위",
+       "label": "16강 직행 마지노선",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "오늘의 경기",
+   "teaser": "경기 정보, 관전 포인트, 직전 경기 선발",
+   "folio": "오늘의 경기 · ACLE 4차전",
+   "blocks": [
+    {
+     "type": "table",
+     "span": 5,
+     "title": "경기 정보",
+     "items": [
+      {
+       "label": "대회",
+       "value": "ACLE 동아시아 리그 스테이지 4차전",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "일시",
+       "value": "11월 3일(화) 19:00(한국 시각)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "장소",
+       "value": "전주월드컵경기장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": "1승 1무 1패 · 승점 4 · 10위",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "조호르",
+       "value": "2승 1무 · 승점 7 · 4위",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "맞대결",
+       "value": "첫 공식 경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "중계",
+       "value": "편성 미확인",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "관전 포인트",
+     "title": "이승우와 아리프 아이만, 양 팀 공격의 열쇠",
+     "paragraphs": [
+      "구단은 이번 경기의 핵심 맞대결로 이승우와 조호르의 아리프 아이만을 꼽았다. 이승우는 드리블과 창의적인 공격 전개가 강점이다. 아리프 아이만은 말레이시아 국가대표로 조호르 공격을 이끈다.",
+      "정정용 감독은 중원 주도권과 수비 조직을 먼저 말했다. 상대가 잘하는 플레이를 지우고, 공격에서는 공간을 만드는 데 힘을 쏟겠다는 구상이다. 핵심 선수를 내보내겠다는 뜻도 밝혔다.",
+      "전북의 ACLE 3경기 득점은 4골이다. 가시와전 2골, 베이징전 2골이었고 고베 원정에서는 골이 없었다. 3경기 1실점인 조호르 수비를 상대로 선제골이 중요하다.",
+      "선발 명단은 킥오프 약 1시간 전에 나온다. 아래 표는 31일 대전전 선발이다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "coach:c01",
+     "big": "총력전",
+     "paragraphs": [
+      "홈에서 반드시 승점 3",
+      "수비 조직으로 상대 봉쇄",
+      "핵심 선수 투입 예고"
+     ],
+     "caption": "정정용 감독. 2일 사전 기자회견.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220042",
+     "big": "10번",
+     "paragraphs": [
+      "구단이 꼽은 키플레이어",
+      "드리블·창의적 전개",
+      "대전전 교체로 27분"
+     ],
+     "caption": "이승우(전북현대 10번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20230224",
+     "big": "99번",
+     "paragraphs": [
+      "베이징전 선제골",
+      "기자회견 동석",
+      "조호르는 강팀"
+     ],
+     "caption": "모따(전북현대 99번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 7,
+     "rule_top": true,
+     "title": "직전 경기 선발 (10월 31일 대전전)",
+     "items": [
+      {
+       "label": "GK",
+       "value": "송범근",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "DF",
+       "value": "연제운 · 조위제 · 박지수 · 최우진",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "MF",
+       "value": "감보아 · 강상윤 · 이영재",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "FW",
+       "value": "도도 · 티아고 · 이탈로",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "교체",
+       "value": "김영빈 · 맹성웅 · 이승우 · 김승섭 · 콤파뇨",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "rule_top": true,
+     "title": "ACLE 3경기 득점 · 실점",
+     "items": [
+      {
+       "label": "전북 득점",
+       "value": 4,
+       "text": "4골",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 실점",
+       "value": 5,
+       "text": "5골",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "조호르 득점",
+       "value": 6,
+       "text": "6골",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "조호르 실점",
+       "value": 1,
+       "text": "1골",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "국제뉴스·구단 자료 기준. 전북 2-1 가시와, 0-2 고베, 2-2 베이징.",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "상대 분석",
+   "teaser": "말레이시아 1강 조호르는 어떤 팀인가",
+   "folio": "상대 분석 · 조호르 다룰 탁짐",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:전주월드컵경기장:13",
+     "caption": "오늘 조호르전이 열리는 전주월드컵경기장(자료 사진).",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "상대 분석",
+     "title": "리그 114경기 무패, 말레이시아 1강 조호르",
+     "paragraphs": [
+      "조호르는 말레이시아 슈퍼리그를 12년 연속 우승한 팀이다. 국내 리그 연속 무패는 114경기까지 늘었다고 국내 매체가 전했다. 8월에는 109경기 무패로 리그 최장 무패 세계 기록을 새로 썼다는 보도가 나왔다.",
+      "ACLE에서도 지지 않았다. 10월 13일 포항 원정에서 마르쿠스 길례르미가 두 골을 넣어 2-0으로 이겼다. 그 경기 선발 11명 가운데 9명이 외국인 선수였다.",
+      "감독은 스페인 출신 시스코 무뇨스다. 해외 프리뷰는 조호르가 포항과 포트FC를 잇달아 꺾고 기세가 좋다고 썼다.",
+      "전북 공격수 모따는 FC안양 시절 동료 야고가 조호르에서 뛴다고 했다. 야고가 한국에 와서 자신의 경기를 보고 싶어 했지만 이번에는 함께 오지 못해 아쉽다고 전했다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "무패의 기록",
+     "title": "조호르 무패 행진이 쌓인 과정",
+     "items": [
+      {
+       "date": "2026.03",
+       "title": "104경기 연속 무패",
+       "text": "리그 19연승으로 12연패 조기 확정 보도",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20260319n40368",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.05",
+       "title": "108경기 무패 타이",
+       "text": "시즌 최종전 14-1 승, 통산 6번째 무패 우승",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20260512n32528",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.08",
+       "title": "109경기 무패",
+       "text": "리그 최장 무패 세계 기록 경신 보도",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20260822n06704",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.10.13",
+       "title": "ACLE 포항 원정 2-0 승",
+       "text": "길례르미 2골, 선발 9명이 외국인",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99211",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.11.03",
+       "title": "전주 원정",
+       "text": "리그 114경기 무패, ACLE 3경기 무패로 전북 상대",
+       "state": "hot",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261102n07465",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20180025",
+     "big": "1실점",
+     "paragraphs": [
+      "조호르 ACLE 3경기 실점",
+      "전북은 같은 기간 5실점",
+      "송범근의 선방이 관건"
+     ],
+     "caption": "송범근(전북현대 31번). 대전전 무실점.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "만약에",
+   "teaser": "오늘 결과에 따른 ACLE 승점, 이승우 TMI",
+   "folio": "만약에 · ACLE 16강 계산",
+   "blocks": [
+    {
+     "type": "table",
+     "span": 7,
+     "title": "만약에 · 오늘 결과에 따른 승점",
+     "items": [
+      {
+       "label": "전북 승리",
+       "value": "전북 7 · 조호르 7 (승점 동률)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "무승부",
+       "value": "전북 5 · 조호르 8",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 패배",
+       "value": "전북 4 · 조호르 10",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "남은 경기",
+       "value": "오늘 뒤 4경기(리그 스테이지 8경기)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "title": "오늘 이기면 바뀌는 승점",
+     "items": [
+      {
+       "label": "전북 지금",
+       "value": 4,
+       "text": "4",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 승리 시",
+       "value": 7,
+       "text": "7",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "조호르 지금",
+       "value": 7,
+       "text": "7",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "다른 팀 결과에 따라 순위는 달라진다.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220042",
+     "big": "TMI",
+     "paragraphs": [
+      "1998년 1월 6일생",
+      "바르셀로나 유스 출신",
+      "2024년 7월 전북 입단"
+     ],
+     "caption": "이승우(전북현대 10번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "선수 TMI",
+     "title": "바르셀로나 유스에서 전주까지, 이승우의 길",
+     "paragraphs": [
+      "이승우는 2011년 FC바르셀로나 유소년 팀에 들어갔다. 인판틸 A에서 2011-12시즌 26경기 38골로 득점왕에 올랐다.",
+      "바르셀로나 B팀을 거쳐 이탈리아 엘라스 베로나, 벨기에 신트트라위던에서 뛰었고 포르투갈 포르티모넨스에 임대됐다. 2021년 12월 수원FC와 계약하며 K리그에 왔다.",
+      "전북 유니폼은 2024년 7월에 입었다. 오늘은 말레이시아 대표 공격수 아리프 아이만과 나란히 양 팀 공격의 얼굴로 소개됐다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 12,
+     "rule_top": true,
+     "title": "114경기를 지지 않은 팀도 오늘 처음 전주성 잔디를 밟는다.",
+     "byline": "오늘의 한 줄 만평",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "3일 19:00 전주 전북-조호르",
+       "text": "ACLE 동아시아 리그 스테이지 4차전, 첫 공식 맞대결",
+       "source_name": "국제뉴스",
+       "source_url": "https://www.gukjenews.com/news/articleView.html?idxno=3739514",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "정정용 감독 \"홈에서 총력전\"",
+       "text": "2일 사전 기자회견, 핵심 선수 투입 예고",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261102n22709",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "모따, 옛 동료 야고와 재회 불발",
+       "text": "야고가 이번에는 함께 오지 못했다고 밝혀",
+       "source_name": "MHN스포츠",
+       "source_url": "https://mhnse.com/news/articleView.html?idxno=1663234",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "국내 미드필더 영입 관심설",
+       "text": "2일 루머 게시판에 인천 서재민 등이 거론됐다. 출처 없음",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10511742792",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "조호르 무패 행진, 전주에서 멈춘다",
+       "text": "팬들의 바람",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "1년 사이 토요일 홈 관중이 크게 줄었다는 글에 경기력이 먼저라는 댓글이 이어졌다.",
+       "label": "관중",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "조호르를 말레이시아 팀으로만 보면 안 된다는 경계가 많다. 포항전 0-2가 자주 언급된다.",
+       "label": "상대",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "인천 서재민 영입설에는 인천 팬들의 농담 섞인 반발이 붙었다.",
+       "label": "이적",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "리그는 3~6위가 촘촘해 주중 ACLE 로테이션을 두고 의견이 갈린다.",
+       "label": "일정",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 7,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "조호르의 말레이시아 리그 연속 무패는 몇 경기까지 늘었나?",
+       "text": "114경기(보도 기준)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "전북의 ACLE 1~3차전 성적은?",
+       "text": "1승 1무 1패, 승점 4",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "이승우가 바르셀로나 유소년 팀에 들어간 해는?",
+       "text": "2011년",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 5,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "조호르전 결승골, 누가 넣을까",
+     "paragraphs": [
+      "이승우, 티아고, 모따, 이영재. 오늘 밤 전주성에서 골망을 흔들 선수를 댓글로 남겨 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "국제뉴스",
+       "text": "전북현대, 조호르와 ACLE 첫 맞대결",
+       "source_name": "국제뉴스",
+       "source_url": "https://www.gukjenews.com/news/articleView.html?idxno=3739514",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "현대자동차그룹 뉴스",
+       "text": "이승우 vs 아리프 아이만 핵심 공격수 맞대결",
+       "source_name": "현대자동차그룹",
+       "source_url": "https://www.hyundaimotorgroup.com/ko/news/jeonbuk-hyundai-lee-seung-woo-vs-arif-aiman-key-attackers",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "네이트 스포츠",
+       "text": "정정용 감독 사전 기자회견",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261102n22709",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "네이트 스포츠",
+       "text": "114경기 무패 조호르와 정면충돌",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261102n07465",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "MHN스포츠",
+       "text": "모따 \"조호르는 강팀\"",
+       "source_name": "MHN스포츠",
+       "source_url": "https://mhnse.com/news/articleView.html?idxno=1663234",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "포포투",
+       "text": "포항, 조호르에 0-2 패",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=99211",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "네이트 스포츠",
+       "text": "포항전 선발 11명 중 9명이 외국인",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261013n37183",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "대구신문",
+       "text": "오늘의 경기(11월 3일), 19시 전주",
+       "source_name": "대구신문",
+       "source_url": "https://www.idaegu.co.kr/news/articleView.html?idxno=564207",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "Sportscafe",
+       "text": "킥오프 10:00 GMT(한국 19:00)",
+       "source_name": "Sportscafe",
+       "source_url": "https://sportscafe.in/football/live/international/afc-champions-league/jeo-vs-joh-6717612/match-details",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "Soccerway",
+       "text": "이승우 이적 기록",
+       "source_name": "Soccerway",
+       "source_url": "https://kr.soccerway.com/player/lee-seung-woo/C6Rx5iu5/transfers",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "기록",
+       "text": "K리그 순위·지난 경기 선발",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  },
+  "player:20220042": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png",
+   "alt": "이승우",
+   "back_no": 10,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20230224": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png",
+   "alt": "모따",
+   "back_no": 99,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20180025": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png",
+   "alt": "송범근",
+   "back_no": 31,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 34,
+    "w": 20,
+    "d": 7,
+    "l": 7,
+    "gf": 61,
+    "ga": 30,
+    "pts": 67,
+    "rank": 1,
+    "gd": 31
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 34,
+    "w": 16,
+    "d": 6,
+    "l": 12,
+    "gf": 54,
+    "ga": 48,
+    "pts": 54,
+    "rank": 2,
+    "gd": 6
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 34,
+    "w": 13,
+    "d": 11,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 50,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 34,
+    "w": 13,
+    "d": 10,
+    "l": 11,
+    "gf": 44,
+    "ga": 35,
+    "pts": 49,
+    "rank": 4,
+    "gd": 9
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 34,
+    "w": 12,
+    "d": 13,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 49,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 34,
+    "w": 11,
+    "d": 15,
+    "l": 8,
+    "gf": 41,
+    "ga": 32,
+    "pts": 48,
+    "rank": 6,
+    "gd": 9
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 34,
+    "w": 12,
+    "d": 11,
+    "l": 11,
+    "gf": 40,
+    "ga": 38,
+    "pts": 47,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 34,
+    "w": 11,
+    "d": 13,
+    "l": 10,
+    "gf": 42,
+    "ga": 49,
+    "pts": 46,
+    "rank": 8,
+    "gd": -7
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 34,
+    "w": 11,
+    "d": 10,
+    "l": 13,
+    "gf": 31,
+    "ga": 40,
+    "pts": 43,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 34,
+    "w": 5,
+    "d": 20,
+    "l": 9,
+    "gf": 34,
+    "ga": 42,
+    "pts": 35,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 34,
+    "w": 7,
+    "d": 11,
+    "l": 16,
+    "gf": 33,
+    "ga": 49,
+    "pts": 32,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 34,
+    "w": 3,
+    "d": 13,
+    "l": 18,
+    "gf": 31,
+    "ga": 70,
+    "pts": 22,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-08",
+   "time": "",
+   "home": "강원",
+   "away": "전북",
+   "opp": "강원 FC",
+   "opp_short": "강원",
+   "is_home": false,
+   "round": 35,
+   "venue": "",
+   "comp": "K리그1 35R",
+   "home_note": "6위 · 승점 48",
+   "away_note": "5위 · 승점 49",
+   "when_label": "11월 8일(일)",
+   "d_minus": 5
+  },
+  "last": {
+   "game_id": "199",
+   "date": "2026-10-31",
+   "round": 34,
+   "home": "전북",
+   "away": "대전",
+   "venue": "전주 월드컵",
+   "attendance": 7654,
+   "comp": "K리그1 34R",
+   "score": [
+    0,
+    0
+   ],
+   "date_label": "10월 31일(토)",
+   "weather": "맑음",
+   "referee": "신용준",
+   "managers": {
+    "home": "정정용",
+    "away": "황선홍"
+   },
+   "shots": [
+    [
+     "H",
+     1,
+     3,
+     "MST",
+     87.5,
+     82.5
+    ],
+    [
+     "H",
+     1,
+     11,
+     "MST",
+     84.7,
+     28.6
+    ],
+    [
+     "H",
+     1,
+     16,
+     "MST",
+     93.4,
+     48.2
+    ],
+    [
+     "A",
+     1,
+     21,
+     "MST",
+     91.1,
+     46.3
+    ],
+    [
+     "A",
+     1,
+     25,
+     "AST",
+     76.4,
+     45.6
+    ],
+    [
+     "A",
+     1,
+     32,
+     "BT",
+     83.7,
+     49.0
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     76.1,
+     41.5
+    ],
+    [
+     "H",
+     2,
+     45,
+     "AST",
+     80.0,
+     30.1
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     91.4,
+     41.8
+    ],
+    [
+     "A",
+     2,
+     55,
+     "MST",
+     83.8,
+     51.9
+    ],
+    [
+     "A",
+     2,
+     59,
+     "MST",
+     89.1,
+     61.0
+    ],
+    [
+     "A",
+     2,
+     62,
+     "BT",
+     93.1,
+     60.0
+    ],
+    [
+     "A",
+     2,
+     71,
+     "AST",
+     92.9,
+     66.4
+    ],
+    [
+     "A",
+     2,
+     74,
+     "AST",
+     79.3,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     77,
+     "BT",
+     85.3,
+     37.3
+    ],
+    [
+     "A",
+     2,
+     82,
+     "MST",
+     91.6,
+     64.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "MST",
+     80.7,
+     30.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "AST",
+     94.3,
+     59.0
+    ],
+    [
+     "H",
+     2,
+     94,
+     "MST",
+     83.5,
+     71.9
+    ]
+   ],
+   "goals": [],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     10
+    ],
+    [
+     "유효슈팅",
+     2,
+     3
+    ],
+    [
+     "패스 성공",
+     376,
+     250
+    ],
+    [
+     "패스 성공률",
+     87.0,
+     77.2,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     4,
+     9
+    ],
+    [
+     "반칙",
+     10,
+     17
+    ],
+    [
+     "경고",
+     1,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
