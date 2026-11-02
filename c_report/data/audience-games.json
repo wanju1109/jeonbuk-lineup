@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T19:17:09.618625+00:00",
+  "updated_at": "2026-11-02T22:56:56.060186+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -2128,8 +2128,8 @@
       "score": "2:1",
       "venue": "안양 종합 운동장",
       "attendance": 4464,
-      "attendance_home": 4464,
-      "attendance_away": 0,
+      "attendance_home": 3909,
+      "attendance_away": 555,
       "weekday": "주말",
       "meet_seq": 1
     },
