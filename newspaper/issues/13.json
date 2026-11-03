@@ -1,0 +1,1661 @@
+{
+ "no": 13,
+ "date": "2026-11-04",
+ "matchday_after": false,
+ "headline": "모따 헤더·이탈로 PK, 전북 조호르 2-0… ACLE 8위로",
+ "summary": "전북이 ACLE 4차전에서 무패 조호르를 2-0으로 꺾고 승점 7, 동아시아 8위로 올라섰다. 연제운은 부상으로 정밀검사를 받는다.",
+ "strip": [
+  "ACLE 4차전 전북 2-0 조호르",
+  "ACLE 동아시아 8위 · 승점 7",
+  "K리그1 5위 · 승점 49",
+  "리그 D-4 · 11월 8일 강원 원정"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제13호 · 2026.11.04(수)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:Bruno Mota:260411",
+     "kicker": "AFC 챔피언스리그 엘리트 동아시아 리그 스테이지 4차전 · 3일 전주월드컵경기장",
+     "title": "모따 헤더·이탈로 PK, 전북 조호르 2-0… ACLE 8위로",
+     "dek": "전반에만 두 골을 넣고 끝까지 무실점으로 버텼다. 조호르는 이번 대회 첫 패배를 안았다.",
+     "caption": "모따. 조호르전 선제 헤더로 ACLE 2경기 연속골을 기록했다(자료 사진, 2026년 4월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북이 3일 전주월드컵경기장에서 열린 2026-27 AFC 챔피언스리그 엘리트(ACLE) 동아시아 리그 스테이지 4차전에서 조호르 다룰 탁짐(말레이시아)을 2-0으로 이겼다. 전반 22분 모따의 헤더 선제골, 전반 추가시간 이탈로의 페널티킥 추가골이 나왔다.",
+      "전북은 2승 1무 1패, 승점 7이 되며 16팀 가운데 10위에서 8위로 올라섰다. 16강 직행권 끝자리다. 3경기 무패였던 조호르는 이번 대회 첫 패배를 당했고 승점 7에 머물렀다.",
+      "정정용 감독은 경기 뒤 선수들이 완벽한 경기를 했다고 평가했다. 수비진과 골키퍼 송범근의 노고를 따로 언급했고, 공격수들이 골을 더 넣지 못한 점을 아쉬움으로 꼽았다.",
+      "걱정거리도 남았다. 수비수 연제운이 전반 중반 왼쪽 종아리 통증으로 교체됐다. 정 감독은 근육 문제라며 정밀검사 결과를 지켜보겠다고 했다. 전북은 8일 강원 원정으로 리그 35라운드를 치른다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "2-0",
+       "label": "전북 승 · ACLE 4차전",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "8위",
+       "label": "ACLE 동아시아 순위(10위에서)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "7",
+       "label": "ACLE 승점 · 2승 1무 1패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "2",
+       "label": "모따 ACLE 연속 경기 골",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "경기 리포트",
+   "teaser": "전반 두 골, 후반 무실점. 조호르전 90분",
+   "folio": "경기 리포트 · ACLE 4차전 전북 2-0 조호르",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "리뷰",
+     "title": "전반에 끝낸 전북, 후반엔 문을 잠갔다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북은 4-2-3-1로 나섰다. 모따가 최전방에 서고 이승우는 벤치에서 시작했다. 송범근이 골문을 지켰고 김영빈, 연제운, 박지수, 최우진이 수비를 맡았다.",
+      "첫 위기는 전반 4분이었다. 조호르 마르쿠스 기예르미의 페널티지역 정면 슈팅을 송범근이 몸을 던져 막았다. 전반 중반 연제운이 다쳐 김태현이 들어갔다.",
+      "선제골은 압박에서 나왔다. 전반 22분 김진규가 왼쪽에서 공을 끊어 바로 올렸고, 쇄도한 모따가 머리로 방향을 바꿨다. 전반 추가시간에는 송범근의 골킥이 상대 머리에 맞고 흐른 공을 이동준이 잡아 파고들다 골키퍼에 걸려 넘어졌다. 이탈로가 페널티킥을 차 넣었다.",
+      "후반 3분 조호르의 중거리 슈팅이 골대를 때렸다. 전북은 후반 시작과 함께 이동준 대신 이승우를 넣었고, 이후 수비 간격을 좁혀 실점 없이 경기를 마쳤다."
+     ],
+     "image": "commons:Italo:260912",
+     "caption": "이탈로. 전반 추가시간 페널티킥으로 추가골을 넣었다(자료 사진, 2026년 9월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 5,
+     "kicker": "주요 장면",
+     "title": "조호르전 90분",
+     "items": [
+      {
+       "date": "4'",
+       "title": "송범근 선방",
+       "text": "기예르미의 정면 슈팅을 몸으로 막았다",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611032256003/",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "16~18'",
+       "title": "연제운 부상 교체",
+       "text": "왼쪽 종아리 통증, 김태현 투입(매체마다 시각 차이)",
+       "source_name": "STN뉴스",
+       "source_url": "https://www.stnsports.co.kr/news/articleView.html?idxno=325042",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "22'",
+       "title": "모따 헤더 선제골",
+       "text": "김진규가 끊어 올린 크로스를 머리로",
+       "state": "hot",
+       "source_name": "마이데일리",
+       "source_url": "https://www.mydaily.co.kr/page/view/2026110323294437888",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "45+'",
+       "title": "이탈로 PK골",
+       "text": "이동준이 얻어낸 페널티킥",
+       "state": "hot",
+       "source_name": "천지일보",
+       "source_url": "https://www.newscj.com/news/articleView.html?idxno=3445670",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "46'",
+       "title": "이승우 투입",
+       "text": "이동준과 교체",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1017411",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "48'",
+       "title": "조호르 골대",
+       "text": "중거리 슈팅이 골대를 맞았다",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611032256003/",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 5,
+     "rule_top": true,
+     "title": "전북 선발 (4-2-3-1)",
+     "items": [
+      {
+       "label": "GK",
+       "value": "송범근",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "DF",
+       "value": "최우진 · 박지수 · 연제운 · 김영빈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "MF",
+       "value": "맹성웅 · 강상윤",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "2선",
+       "value": "김진규 · 이탈로 · 이동준",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "FW",
+       "value": "모따",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "교체",
+       "value": "김태현(연제운) · 이승우(이동준) 등",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quote",
+     "span": 7,
+     "rule_top": true,
+     "title": "선수들 완벽한 경기 치렀다",
+     "byline": "정정용 감독, 3일 경기 뒤 기자회견",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "평점",
+   "teaser": "조간 선정 MOM과 BEST·WORST",
+   "folio": "평점 · 조간 선정",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20230224",
+     "big": "MOM",
+     "paragraphs": [
+      "22분 헤더 결승골",
+      "ACLE 2경기 연속골",
+      "최전방에서 버티기"
+     ],
+     "caption": "모따(전북현대 99번) · 조간 선정 MOM",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "조간 선정 MOM",
+     "title": "모따, 결승골로 무패 팀을 멈춰 세웠다",
+     "paragraphs": [
+      "조간은 조호르전 MOM으로 모따를 골랐다. 전반 22분 김진규의 크로스를 머리로 돌려 결승골을 넣었다. 베이징전에 이어 ACLE 2경기 연속골이다.",
+      "골만 넣은 것도 아니다. 최전방에서 등지고 공을 지켜 2선 선수들이 올라올 시간을 벌었다. 정정용 감독이 노린 뒷공간 공략의 출발점도 모따였다.",
+      "평점은 10점 만점, 출전 20분 미만 선수는 뺐다. 평점과 MOM은 경기 기사와 장면을 근거로 한 조간 자체 평가다. AFC 공식 선정 결과는 확인하지 못했다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "조간 평점",
+     "title": "BEST 3",
+     "items": [
+      {
+       "tag": "BEST",
+       "title": "모따 · 평점 8.0",
+       "text": "22분 헤더 결승골, 최전방 연계",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "송범근 · 평점 7.5",
+       "text": "4분 정면 슈팅 선방 등 무실점 지휘, 골킥이 PK의 출발점",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "박지수 · 평점 7.5",
+       "text": "연제운이 빠진 뒤 수비 중심을 잡았다. 결정적 슈팅 차단 장면",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "조간 평점",
+     "title": "아쉬움 3",
+     "items": [
+      {
+       "tag": "WORST",
+       "title": "이승우 · 평점 6.0",
+       "text": "후반 45분 뛰며 72분 측면 돌파로 기회를 만들었지만 추가골로 잇지 못했다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "WORST",
+       "title": "강상윤 · 평점 6.0",
+       "text": "실수는 없었지만 공격 장면에서 이름이 덜 보였다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "WORST",
+       "title": "최우진 · 평점 6.0",
+       "text": "무실점에 힘을 보탰지만 왼쪽 공격 가담은 적었다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20130142",
+     "big": "벽",
+     "paragraphs": [
+      "연제운 공백 메운 리더",
+      "결정적 슈팅 차단",
+      "후반에도 무실점 유지"
+     ],
+     "caption": "박지수(전북현대 5번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20150052",
+     "big": "도움",
+     "paragraphs": [
+      "왼쪽에서 공 끊고",
+      "바로 올린 크로스",
+      "선제골의 설계자"
+     ],
+     "caption": "김진규(전북현대 97번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20170121",
+     "big": "PK",
+     "paragraphs": [
+      "흐른 공 끝까지 추격",
+      "골키퍼에 걸려 PK",
+      "전반 45분 소화"
+     ],
+     "caption": "이동준(전북현대 7번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "ACLE 판도",
+   "teaser": "8위 진입, 남은 네 경기와 연제운 부상",
+   "folio": "ACLE 판도 · 4차전 이후",
+   "blocks": [
+    {
+     "type": "bars",
+     "span": 6,
+     "title": "전북 ACLE 4경기 득점 · 실점",
+     "items": [
+      {
+       "label": "가시와 (홈)",
+       "value": 2,
+       "text": "2-1 승",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "고베 (원정)",
+       "value": 0,
+       "text": "0-2 패",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "베이징",
+       "value": 2,
+       "text": "2-2 무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "조호르 (홈)",
+       "value": 2,
+       "text": "2-0 승",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "막대는 전북 득점. 4경기 6득점 5실점. 기사 보도 기준.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "figs",
+     "span": 6,
+     "title": "숫자 놀이 · 홈에서 강한 전북",
+     "items": [
+      {
+       "value": "2전 2승",
+       "label": "ACLE 전주 홈 경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "4-1",
+       "label": "홈 2경기 득실",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "0",
+       "label": "조호르전 실점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "8위",
+       "label": "16강 직행 마지노선에 진입",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "판도",
+     "title": "8위 턱걸이, 다음은 가시마 원정",
+     "paragraphs": [
+      "ACLE 동아시아 리그 스테이지는 16팀이 8경기씩 치르고 8위까지 16강에 오른다. 전북은 4경기를 마치고 승점 7로 8위에 들었다. 4차전 전에는 승점 4로 10위였다.",
+      "같은 날 K리그 팀 대전은 가시와 원정에서 0-2로 졌다. 전북이 조호르를 잡으면서 조호르와 승점 7로 나란히 섰다.",
+      "J리그 공식 일정에 따르면 전북의 5차전은 25일 오후 7시 가시마 원정이다. 리그는 8일 강원 원정부터 파이널A 남은 4경기가 이어진다. 주중과 주말을 오가는 빡빡한 11월이다."
+     ],
+     "image": "commons:전주월드컵경기장:13",
+     "caption": "전주월드컵경기장. ACLE 홈 2경기를 모두 이겼다.",
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20160157",
+     "big": "검사",
+     "paragraphs": [
+      "전반 중반 종아리 통증",
+      "근육 문제, 정밀검사",
+      "결과는 아직 미발표"
+     ],
+     "caption": "연제운(전북현대 3번). 감독은 좋지 않은 상황 같다고 했다.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 12,
+     "rule_top": true,
+     "title": "K리그1 순위 (34라운드 종료)",
+     "chart": "standings",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "기자 수첩",
+   "teaser": "리그에서 막힌 골, 아시아에서 터진 이유",
+   "folio": "기자 수첩",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "기자 수첩",
+     "title": "리그의 0, 아시아의 2",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "나흘 전 같은 경기장에서 전북은 대전과 0-0으로 비겼다. 골대를 두 번 맞히고도 골이 없었다. 조호르전에서는 전반에만 두 골이 나왔다.",
+      "차이는 첫 골이 나온 장면에 있다. 김진규가 상대 진영에서 공을 끊고 곧장 올렸다. 정정용 감독이 말한 뒷공간 공략과 빠른 전환이 그대로 맞아떨어졌다. 두 번째 골도 송범근의 골킥에서 이동준의 추격으로 이어진 짧은 흐름에서 나왔다.",
+      "모따는 경기 뒤 상대가 전북을 잘 모르는 점을 아시아 무대 골의 이유로 들었다. 리그 상대는 전북을 잘 안다. 8일 강원 원정은 그 답을 리그에서 찾는 경기다."
+     ],
+     "image": "commons:김진규:250503",
+     "caption": "김진규. 조호르전 선제골은 그의 볼 탈취에서 시작됐다(자료 사진).",
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "coach:c01",
+     "big": "뒷공간",
+     "paragraphs": [
+      "상대 강한 압박 예상",
+      "뒷공간을 노렸다",
+      "콤팩트한 수비 후 역습"
+     ],
+     "caption": "정정용 감독. 3일 경기 뒤 기자회견.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 6,
+     "rule_top": true,
+     "title": "전북 최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 6,
+     "rule_top": true,
+     "title": "다음 리그 경기",
+     "chart": "next",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "전북 2-0 조호르, ACLE 8위",
+       "text": "2승 1무 1패, 승점 7",
+       "source_name": "마이데일리",
+       "source_url": "https://www.mydaily.co.kr/page/view/2026110323294437888",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "연제운 근육 부상, 정밀검사 예정",
+       "text": "정정용 감독 경기 뒤 회견 발언",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100254",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "조호르 감독, 전북의 경기력 인정",
+       "text": "원정 패배 뒤 팀 발전을 말했다",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1017427",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "ACLE 5차전 25일 가시마 원정",
+       "text": "J리그 공식 일정 기준 19:00",
+       "source_name": "J.League",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "전북 관련 새 이적 루머 글 없음",
+       "text": "루머 게시판 최근 글에 전북 이야기는 보이지 않았다",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "홈에서 이 기세로 리그도",
+       "text": "팬들의 바람",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "송범근의 선방이 후반까지 이어졌다는 경기 장면 글이 여러 개 올라왔다.",
+       "label": "선방",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "박지수의 수비 장면에 찬사가 몰렸다.",
+       "label": "수비",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "이동준이 페널티킥을 얻어낸 장면에 환호가 컸다.",
+       "label": "PK",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "연제운 부상 소식에 리그 남은 경기 수비 걱정이 나온다.",
+       "label": "부상",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 7,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "조호르전 선제골을 도운 선수는?",
+       "text": "김진규",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "이탈로의 페널티킥은 누가 얻어냈나?",
+       "text": "이동준",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "조호르전 승리 뒤 전북의 ACLE 동아시아 순위는?",
+       "text": "8위(승점 7)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 5,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "조호르전 숨은 공신은 누구",
+     "paragraphs": [
+      "송범근, 박지수, 김진규, 이동준. 여러분이 뽑은 숨은 공신을 댓글로 남겨 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "스포츠경향",
+       "text": "전북, 조호르 꺾고 ACLE 2승째",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611032256003/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "마이데일리",
+       "text": "모따-이탈로 연속골, ACLE 8위",
+       "source_name": "마이데일리",
+       "source_url": "https://www.mydaily.co.kr/page/view/2026110323294437888",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "천지일보",
+       "text": "전북, 조호르 꺾고 ACLE 2승째",
+       "source_name": "천지일보",
+       "source_url": "https://www.newscj.com/news/articleView.html?idxno=3445670",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "STN뉴스",
+       "text": "모따가 머리로 열고, 이탈로가 발로 쐐기",
+       "source_name": "STN뉴스",
+       "source_url": "https://www.stnsports.co.kr/news/articleView.html?idxno=325042",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "스포티비뉴스",
+       "text": "현장 리뷰, 정정용 감독·조호르 감독 회견",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1017442",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "포포투",
+       "text": "정정용 감독·모따 인터뷰",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100256",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "The Star",
+       "text": "JDT's unbeaten ACL Elite run ends",
+       "source_name": "The Star",
+       "source_url": "https://www.thestar.com.my/sport/football/2026/11/03/jdt039s-unbeaten-acl-elite-run-ends-with-2-0-loss-to-jeonbuk",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "J.League",
+       "text": "ACLE 가시마-전북 일정",
+       "source_name": "J.League",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "에펨코리아",
+       "text": "국내축구 게시판 경기 반응",
+       "source_name": "에펨코리아",
+       "source_url": "https://www.fmkorea.com/football_korean",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "기록",
+       "text": "K리그 순위·리그 기록",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20230224": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png",
+   "alt": "모따",
+   "back_no": 99,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20130142": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png",
+   "alt": "박지수",
+   "back_no": 5,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20150052": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20150052.png",
+   "alt": "김진규",
+   "back_no": 97,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20170121": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png",
+   "alt": "이동준",
+   "back_no": 7,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20160157": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20160157.png",
+   "alt": "연제운",
+   "back_no": 3,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 34,
+    "w": 20,
+    "d": 7,
+    "l": 7,
+    "gf": 61,
+    "ga": 30,
+    "pts": 67,
+    "rank": 1,
+    "gd": 31
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 34,
+    "w": 16,
+    "d": 6,
+    "l": 12,
+    "gf": 54,
+    "ga": 48,
+    "pts": 54,
+    "rank": 2,
+    "gd": 6
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 34,
+    "w": 13,
+    "d": 11,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 50,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 34,
+    "w": 13,
+    "d": 10,
+    "l": 11,
+    "gf": 44,
+    "ga": 35,
+    "pts": 49,
+    "rank": 4,
+    "gd": 9
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 34,
+    "w": 12,
+    "d": 13,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 49,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 34,
+    "w": 11,
+    "d": 15,
+    "l": 8,
+    "gf": 41,
+    "ga": 32,
+    "pts": 48,
+    "rank": 6,
+    "gd": 9
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 34,
+    "w": 12,
+    "d": 11,
+    "l": 11,
+    "gf": 40,
+    "ga": 38,
+    "pts": 47,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 34,
+    "w": 11,
+    "d": 13,
+    "l": 10,
+    "gf": 42,
+    "ga": 49,
+    "pts": 46,
+    "rank": 8,
+    "gd": -7
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 34,
+    "w": 11,
+    "d": 10,
+    "l": 13,
+    "gf": 31,
+    "ga": 40,
+    "pts": 43,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 34,
+    "w": 5,
+    "d": 20,
+    "l": 9,
+    "gf": 34,
+    "ga": 42,
+    "pts": 35,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 34,
+    "w": 7,
+    "d": 11,
+    "l": 16,
+    "gf": 33,
+    "ga": 49,
+    "pts": 32,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 34,
+    "w": 3,
+    "d": 13,
+    "l": 18,
+    "gf": 31,
+    "ga": 70,
+    "pts": 22,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-08",
+   "time": "",
+   "home": "강원",
+   "away": "전북",
+   "opp": "강원 FC",
+   "opp_short": "강원",
+   "is_home": false,
+   "round": 35,
+   "venue": "",
+   "comp": "K리그1 35R",
+   "home_note": "6위 · 승점 48",
+   "away_note": "5위 · 승점 49",
+   "when_label": "11월 8일(일)",
+   "d_minus": 4
+  },
+  "last": {
+   "game_id": "199",
+   "date": "2026-10-31",
+   "round": 34,
+   "home": "전북",
+   "away": "대전",
+   "venue": "전주 월드컵",
+   "attendance": 7654,
+   "comp": "K리그1 34R",
+   "score": [
+    0,
+    0
+   ],
+   "date_label": "10월 31일(토)",
+   "weather": "맑음",
+   "referee": "신용준",
+   "managers": {
+    "home": "정정용",
+    "away": "황선홍"
+   },
+   "shots": [
+    [
+     "H",
+     1,
+     3,
+     "MST",
+     87.5,
+     82.5
+    ],
+    [
+     "H",
+     1,
+     11,
+     "MST",
+     84.7,
+     28.6
+    ],
+    [
+     "H",
+     1,
+     16,
+     "MST",
+     93.4,
+     48.2
+    ],
+    [
+     "A",
+     1,
+     21,
+     "MST",
+     91.1,
+     46.3
+    ],
+    [
+     "A",
+     1,
+     25,
+     "AST",
+     76.4,
+     45.6
+    ],
+    [
+     "A",
+     1,
+     32,
+     "BT",
+     83.7,
+     49.0
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     76.1,
+     41.5
+    ],
+    [
+     "H",
+     2,
+     45,
+     "AST",
+     80.0,
+     30.1
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     91.4,
+     41.8
+    ],
+    [
+     "A",
+     2,
+     55,
+     "MST",
+     83.8,
+     51.9
+    ],
+    [
+     "A",
+     2,
+     59,
+     "MST",
+     89.1,
+     61.0
+    ],
+    [
+     "A",
+     2,
+     62,
+     "BT",
+     93.1,
+     60.0
+    ],
+    [
+     "A",
+     2,
+     71,
+     "AST",
+     92.9,
+     66.4
+    ],
+    [
+     "A",
+     2,
+     74,
+     "AST",
+     79.3,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     77,
+     "BT",
+     85.3,
+     37.3
+    ],
+    [
+     "A",
+     2,
+     82,
+     "MST",
+     91.6,
+     64.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "MST",
+     80.7,
+     30.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "AST",
+     94.3,
+     59.0
+    ],
+    [
+     "H",
+     2,
+     94,
+     "MST",
+     83.5,
+     71.9
+    ]
+   ],
+   "goals": [],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     10
+    ],
+    [
+     "유효슈팅",
+     2,
+     3
+    ],
+    [
+     "패스 성공",
+     376,
+     250
+    ],
+    [
+     "패스 성공률",
+     87.0,
+     77.2,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     4,
+     9
+    ],
+    [
+     "반칙",
+     10,
+     17
+    ],
+    [
+     "경고",
+     1,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
