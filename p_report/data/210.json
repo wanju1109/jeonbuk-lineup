@@ -25,10 +25,10 @@
     "kickoff_label": "2026-11-08 19:00 KST",
     "date_md": "11/08",
     "label": "부천 VS 포항 (210, 11/08)",
-    "hours_to_kickoff": 110.3,
+    "hours_to_kickoff": 104.4,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-11-04T04:43:12.137695+09:00",
+    "generated_at": "2026-11-04T10:33:29.934460+09:00",
     "preview_hours": 48.0
   },
   "headline": "35R PREVIEW · 부천 vs 포항",
@@ -41,7 +41,7 @@
     "선수 포커스 — 부천: 최근 가용 칠판 데이터 5경기 기준, 포항: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "부천은 부진, 수비 기회 허용, 낮은 블록형 흐름이고, 포항은(는) 비기는 흐름, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.08 vs 1.01, 슈팅 8.4 vs 9.4, 파이널 서드 터치 19.1% vs 20.8%입니다.",
+    "contrast": "부천은 부진, 수비 기회 허용, 낮은 블록형 흐름이고, 포항은(는) 비기는 흐름, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.08 vs 1.01, 슈팅 8.4 vs 9.4, 파이널 서드 터치 19.0% vs 20.8%입니다.",
     "edge": [
       "홈 이점(부천). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
     ],
@@ -92,7 +92,7 @@
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 19.1,
+        "jeonbuk": 19.0,
         "opponent": 20.8,
         "suffix": "%",
         "better": "opponent"
@@ -602,7 +602,7 @@
         "stats_limited": false,
         "score_source": "official",
         "pass_pct": 63.2,
-        "final_third_pct": 24.6,
+        "final_third_pct": 24.4,
         "presses": 19,
         "stats_source": "portal"
       }
@@ -780,7 +780,7 @@
       "avg_shots": 8.4,
       "avg_sot": 3.4,
       "avg_pass_pct": 67.1,
-      "avg_final_third_pct": 19.1,
+      "avg_final_third_pct": 19.0,
       "avg_presses": 14.6,
       "avg_x": 50.0,
       "samples": 5
