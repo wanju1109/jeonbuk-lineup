@@ -1,0 +1,1291 @@
+{
+ "no": 16,
+ "date": "2026-11-07",
+ "matchday_after": false,
+ "headline": "ACLE 감바전 12월 2일 전주… 휴식기 뒤 16일간 5경기",
+ "summary": "전북의 ACLE 리그 페이즈 6차전 상대가 12월 2일 전주에서 만나는 감바 오사카로 확인됐다. A매치 휴식기가 끝나면 11월 21일부터 12월 6일까지 16일 동안 리그와 ACLE 5경기를 치른다.",
+ "strip": [
+  "K리그1 5위 · 승점 49",
+  "D-1 · 내일 16:30 강원 원정(강릉)",
+  "ACLE 리그 페이즈 8위",
+  "12월 2일 감바 오사카 홈"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제16호 · 2026.11.07(토)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:전주월드컵경기장:13",
+     "kicker": "일정 · 감바 오사카 공식 일정표",
+     "title": "ACLE 감바전 12월 2일 전주… 휴식기 뒤 16일간 5경기",
+     "dek": "리그 페이즈 6차전은 일본 감바 오사카와의 홈경기다. A매치 휴식기가 끝나면 서울, 가시마, 울산, 감바, 인천을 차례로 만난다.",
+     "caption": "전주월드컵경기장. 전북은 휴식기 뒤 5경기 가운데 3경기를 이곳에서 치른다.",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북의 ACLE(AFC 챔피언스리그 엘리트) 리그 페이즈 6차전 상대는 감바 오사카다. 감바 구단 공식 일정표와 J리그 경기 정보에 따르면 경기는 12월 2일(수) 오후 7시 전주월드컵경기장에서 열린다. 한국과 일본은 시차가 없어 현지 시각이 그대로 한국 시각이다.",
+      "이 경기가 더해지면서 휴식기 뒤 일정의 윤곽이 잡혔다. 전북은 내일 강원 원정을 마치면 A매치 기간 동안 쉬고, 11월 21일 서울과의 홈경기로 다시 출발한다. 이어 25일 가시마 원정, 29일 울산 원정, 12월 2일 감바 홈, 6일 인천 홈이다. 16일 동안 5경기다.",
+      "경기 간격은 사흘에서 나흘이다. 리그 최종 3경기와 ACLE 2경기가 맞물려 있고, 원정 2경기 가운데 하나는 일본 이동이 낀다. 6일 커뮤니티에도 이 일정을 정리한 글이 올라와 상대가 만만치 않다는 반응이 이어졌다.",
+      "감바는 이번 리그 페이즈 4차전에서 포항과 3-3으로 비겼다. 전북은 4경기 2승 1무 1패로 동부 지역 8위에 올라 있다. 8위 안에 들어야 16강에 오른다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "16일",
+       "label": "11월 21일 ~ 12월 6일",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5경기",
+       "label": "리그 3 · ACLE 2",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "3경기",
+       "label": "그 가운데 전주 홈경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-1",
+       "label": "8일(일) 16:30 강원 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "일정 특집",
+   "teaser": "서울·가시마·울산·감바·인천, 16일 5연전 미리 보기",
+   "folio": "일정 특집 · 휴식기 뒤 5연전",
+   "blocks": [
+    {
+     "type": "timeline",
+     "span": 7,
+     "kicker": "일정",
+     "title": "휴식기 뒤 16일, 5경기",
+     "items": [
+      {
+       "date": "11.21(토)",
+       "title": "K리그1 36R 서울 홈",
+       "text": "우승을 확정한 1위 팀과 전주에서",
+       "source_name": "쿠키뉴스",
+       "source_url": "https://www.kukinews.com/article/view/kuk202610260092",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "11.25(수) 19:00",
+       "title": "ACLE 5차전 가시마 원정",
+       "text": "일본 원정, 리그 페이즈 남은 첫 경기",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "11.29(일)",
+       "title": "K리그1 37R 울산 원정",
+       "text": "2위 울산과의 승점 싸움",
+       "source_name": "쿠키뉴스",
+       "source_url": "https://www.kukinews.com/article/view/kuk202610260092",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "12.02(수) 19:00",
+       "title": "ACLE 6차전 감바 오사카 홈",
+       "text": "감바 구단 공식 일정에 확인",
+       "state": "hot",
+       "source_name": "감바 오사카 공식 일정",
+       "source_url": "https://www.gamba-osaka.net/english/game/",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "12.06(일)",
+       "title": "K리그1 38R 인천 홈",
+       "text": "리그 최종전",
+       "source_name": "쿠키뉴스",
+       "source_url": "https://www.kukinews.com/article/view/kuk202610260092",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "title": "다음 경기까지 남은 날",
+     "items": [
+      {
+       "label": "서울 → 가시마",
+       "value": 4,
+       "text": "4일",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "가시마 → 울산",
+       "value": 4,
+       "text": "4일",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산 → 감바",
+       "value": 3,
+       "text": "3일",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "감바 → 인천",
+       "value": 4,
+       "text": "4일",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "경기일 기준 간격. 가시마 원정 뒤 나흘 만에 울산 원정, 다시 사흘 만에 감바전이다.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "ACLE",
+     "title": "감바전은 16강 문턱에서 치르는 홈경기",
+     "byline": "전주성 조간 편집부",
+     "image": "commons:정정용:260411",
+     "caption": "정정용 감독. 휴식기 뒤에는 리그와 ACLE를 함께 운영해야 한다.",
+     "paragraphs": [
+      "ACLE 리그 페이즈는 팀마다 8경기를 치른다. 전북은 4경기를 마쳤고, 휴식기 뒤 가시마 원정과 감바 홈경기로 5·6차전을 치른다. 두 상대 모두 J리그 팀이다.",
+      "감바는 4차전에서 포항과 세 번 앞서고 세 번 따라잡히는 난타전 끝에 3-3으로 비겼다. 득점력이 있는 팀이라는 뜻이다. 전북은 같은 기간 홈에서 조호르를 2-0으로 꺾고 8위로 올라섰다.",
+      "리그 쪽 사정도 가볍지 않다. 전북은 승점 49로 5위이고, 2위 울산(54)과 6위 강원(48) 사이에 있다. 다음 시즌 아시아 무대 티켓이 걸린 순위 싸움을 이어 가면서 ACLE 16강도 노려야 한다."
+     ],
+     "variant": null,
+     "dek": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 4,
+     "rule_top": true,
+     "title": "5연전 한눈에",
+     "items": [
+      {
+       "label": "대회",
+       "value": "K리그1 3경기 · ACLE 2경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "장소",
+       "value": "홈 3경기 · 원정 2경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "해외 이동",
+       "value": "가시마 원정 1회",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "가장 짧은 간격",
+       "value": "울산 → 감바 3일",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "시작 · 끝",
+       "value": "11.21 서울 · 12.06 인천",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "선수단",
+   "teaser": "커뮤니티가 반긴 이름, 35세 센터백 김영빈",
+   "folio": "선수단 · 선수 TMI",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "선수 TMI",
+     "title": "김영빈, 두 번째 시즌도 수비 뒷문을 지킨다",
+     "byline": "전주성 조간 편집부",
+     "image": "commons:김영빈:260411",
+     "caption": "김영빈(전북현대 2번).",
+     "paragraphs": [
+      "6일 밤 축구 커뮤니티 루머 게시판에 김영빈의 계약 연장 옵션이 발동된 것 같다는 글이 올라왔다. 댓글은 반기는 반응이 대부분이었다. 구단 발표나 언론 보도는 아직 없다.",
+      "김영빈은 1991년생 센터백이다. 2025년 1월 강원에서 전북으로 왔다. 영입 당시 뉴시스는 그가 K리그에서 11시즌 동안 326경기를 뛰었다고 전했다. 내일 상대 강원은 그가 2019년부터 여섯 시즌을 뛴 팀이다.",
+      "올해 7월 25일 포항 원정에서는 추가시간 헤더로 2-0 승리를 굳혔다. 골키퍼와 부딪혀 머리에 피를 흘렸고, 전북은 뇌진탕 교체 규정을 써야 했다. 주장 김태환이 빠진 경기에서는 정정용 감독이 그에게 완장을 맡기기도 했다.",
+      "지난달 31일 대전전에서는 후반 23분 연제운 대신 들어가 27분을 뛰었다. 연제운이 조호르전에서 근육을 다친 만큼 휴식기 뒤 5연전에서 그의 출전 시간은 늘어날 가능성이 있다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20140143",
+     "big": "2번",
+     "paragraphs": [
+      "1991년생 센터백",
+      "2025년 강원서 이적",
+      "K리그 326경기(입단 당시)"
+     ],
+     "caption": "김영빈(전북현대 2번)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "숫자로 보는 김영빈",
+     "items": [
+      {
+       "value": "326",
+       "label": "입단 당시 K리그 출전 경기(뉴시스)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "6시즌",
+       "label": "강원에서 뛴 기간(2019~2024)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "90+",
+       "label": "7월 포항전 쐐기 헤더골 시간대",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "27분",
+       "label": "10월 31일 대전전 출전 시간",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "기자 수첩",
+   "teaser": "5연전을 버티는 법, 그리고 오늘의 질문",
+   "folio": "기자 수첩 · 오늘의 질문",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "variant": "green",
+     "kicker": "기자 수첩",
+     "title": "16일 5경기, 베스트11 하나로는 모자란다",
+     "byline": "전주성 조간 편집부",
+     "image": "commons:강상윤:250503",
+     "caption": "강상윤. 대전전에서 97분을 모두 뛰었다.",
+     "paragraphs": [
+      "지난달 31일 대전전에서 풀타임을 뛴 전북 필드 선수는 조위제, 박지수, 최우진, 강상윤, 이탈로 다섯 명이다. 휴식기 뒤 5연전에서 이 이름들이 매번 90분을 채우기는 어렵다.",
+      "전북 공격진에는 모따, 이탈로, 티아고, 콤파뇨, 도도가 있다. 중원과 수비에도 경험 있는 선수가 고르게 있다. 남은 5경기는 누가 선발로 나서느냐만큼 누가 교체로 들어와 흐름을 바꾸느냐가 중요하다.",
+      "A매치 휴식기는 숨을 고를 시간이다. 부상자 회복과 로테이션 구상이 이때 정리돼야 한다. 내일 강릉에서 승점을 챙기고 쉬러 들어간다면 더 좋다."
+     ],
+     "rule_top": false,
+     "dek": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 5,
+     "title": "K리그1 순위 (34라운드 종료)",
+     "chart": "standings",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "5연전 가운데 가장 기다려지는 경기는",
+     "paragraphs": [
+      "서울 홈, 가시마 원정, 울산 원정, 감바 홈, 인천 홈. 독자 여러분이 꼽는 한 경기와 이유를 댓글로 남겨 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표 · 커뮤니티 온도 · 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "루머 데스크",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "ACLE 6차전 감바전 12월 2일 19:00 전주",
+       "text": "감바 오사카 구단 공식 일정표",
+       "source_name": "감바 오사카 공식 일정",
+       "source_url": "https://www.gamba-osaka.net/english/game/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "강원, 3년 연속 파이널A 뒤 첫 홈경기가 전북전",
+       "text": "강원 구단 소식을 전한 보도",
+       "source_name": "아시아뉴스통신",
+       "source_url": "https://www.anewsa.com/detail.php?number=3215026",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "김영빈 계약 연장 옵션 발동설",
+       "text": "6일 밤 커뮤니티 글, 출처 없음. 구단 발표 없다",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "김영빈, 전북에서 은퇴까지",
+       "text": "연장 소식에 팬들이 덧붙인 희망",
+       "source_name": "에펨코리아",
+       "source_url": "https://www.fmkorea.com/football_korean",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "김영빈 연장이면 대환영. 몸 사리지 않는 선수",
+       "label": "김영빈 연장설 반응",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "연장도 좋지만 대우도 올려 줬으면 한다",
+       "label": "김영빈 연장설 반응",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "서울, 가시마, 울산, 감바, 인천. 상대가 하나같이 세다",
+       "label": "휴식기 뒤 일정 글",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "로테이션 돌려도 이긴다는 농담 섞인 자신감도 나왔다",
+       "label": "휴식기 뒤 일정 글",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "ACLE 6차전 감바 오사카전은 언제, 어디서 열리나",
+       "text": "12월 2일(수) 오후 7시, 전주월드컵경기장",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "휴식기 뒤 11월 21일부터 12월 6일까지 전북이 치르는 경기 수는",
+       "text": "5경기(리그 3, ACLE 2)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "김영빈이 전북에 오기 전 여섯 시즌을 뛴 팀은",
+       "text": "강원FC",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "감바 오사카 경기 일정(ACLE MD6 전북 원정)",
+       "source_name": "감바 오사카 공식",
+       "source_url": "https://www.gamba-osaka.net/english/game/",
+       "tag": null,
+       "text": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "포항-감바 3-3 무승부",
+       "source_name": "경북일보",
+       "source_url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4089736",
+       "tag": null,
+       "text": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "K리그1 파이널라운드 일정",
+       "source_name": "쿠키뉴스",
+       "source_url": "https://www.kukinews.com/article/view/kuk202610260092",
+       "tag": null,
+       "text": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "강원, 승점 1점 차 전북과 맞대결",
+       "source_name": "아시아뉴스통신",
+       "source_url": "https://www.anewsa.com/detail.php?number=3215026",
+       "tag": null,
+       "text": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "전북, 김영빈 영입",
+       "source_name": "뉴시스",
+       "source_url": "https://www.newsis.com/view/NISX20250102_0003018110",
+       "tag": null,
+       "text": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "포항전 김영빈 헤더골",
+       "source_name": "전북일보",
+       "source_url": "https://jjan.kr/article/20260725500046",
+       "tag": null,
+       "text": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "김영빈에게 완장 맡긴 이유",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013806",
+       "tag": null,
+       "text": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "기록",
+       "text": "순위·경기 기록은 K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20140143": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png",
+   "alt": "김영빈",
+   "back_no": 2,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 34,
+    "w": 20,
+    "d": 7,
+    "l": 7,
+    "gf": 61,
+    "ga": 30,
+    "pts": 67,
+    "rank": 1,
+    "gd": 31
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 34,
+    "w": 16,
+    "d": 6,
+    "l": 12,
+    "gf": 54,
+    "ga": 48,
+    "pts": 54,
+    "rank": 2,
+    "gd": 6
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 34,
+    "w": 13,
+    "d": 11,
+    "l": 10,
+    "gf": 53,
+    "ga": 41,
+    "pts": 50,
+    "rank": 3,
+    "gd": 12
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 34,
+    "w": 13,
+    "d": 10,
+    "l": 11,
+    "gf": 44,
+    "ga": 35,
+    "pts": 49,
+    "rank": 4,
+    "gd": 9
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 34,
+    "w": 12,
+    "d": 13,
+    "l": 9,
+    "gf": 43,
+    "ga": 33,
+    "pts": 49,
+    "rank": 5,
+    "gd": 10
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 34,
+    "w": 11,
+    "d": 15,
+    "l": 8,
+    "gf": 41,
+    "ga": 32,
+    "pts": 48,
+    "rank": 6,
+    "gd": 9
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 34,
+    "w": 12,
+    "d": 11,
+    "l": 11,
+    "gf": 40,
+    "ga": 38,
+    "pts": 47,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 34,
+    "w": 11,
+    "d": 13,
+    "l": 10,
+    "gf": 42,
+    "ga": 49,
+    "pts": 46,
+    "rank": 8,
+    "gd": -7
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 34,
+    "w": 11,
+    "d": 10,
+    "l": 13,
+    "gf": 31,
+    "ga": 40,
+    "pts": 43,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 34,
+    "w": 5,
+    "d": 20,
+    "l": 9,
+    "gf": 34,
+    "ga": 42,
+    "pts": 35,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 34,
+    "w": 7,
+    "d": 11,
+    "l": 16,
+    "gf": 33,
+    "ga": 49,
+    "pts": 32,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 34,
+    "w": 3,
+    "d": 13,
+    "l": 18,
+    "gf": 31,
+    "ga": 70,
+    "pts": 22,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 9,
+   "gf": 43,
+   "ga": 33
+  },
+  "form": [
+   {
+    "r": "W",
+    "label": "포항 2-0"
+   },
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-08",
+   "time": "",
+   "home": "강원",
+   "away": "전북",
+   "opp": "강원 FC",
+   "opp_short": "강원",
+   "is_home": false,
+   "round": 35,
+   "venue": "",
+   "comp": "K리그1 35R",
+   "home_note": "6위 · 승점 48",
+   "away_note": "5위 · 승점 49",
+   "when_label": "11월 8일(일)",
+   "d_minus": 1
+  },
+  "last": {
+   "game_id": "199",
+   "date": "2026-10-31",
+   "round": 34,
+   "home": "전북",
+   "away": "대전",
+   "venue": "전주 월드컵",
+   "attendance": 7654,
+   "comp": "K리그1 34R",
+   "score": [
+    0,
+    0
+   ],
+   "date_label": "10월 31일(토)",
+   "weather": "맑음",
+   "referee": "신용준",
+   "managers": {
+    "home": "정정용",
+    "away": "황선홍"
+   },
+   "shots": [
+    [
+     "H",
+     1,
+     3,
+     "MST",
+     87.5,
+     82.5
+    ],
+    [
+     "H",
+     1,
+     11,
+     "MST",
+     84.7,
+     28.6
+    ],
+    [
+     "H",
+     1,
+     16,
+     "MST",
+     93.4,
+     48.2
+    ],
+    [
+     "A",
+     1,
+     21,
+     "MST",
+     91.1,
+     46.3
+    ],
+    [
+     "A",
+     1,
+     25,
+     "AST",
+     76.4,
+     45.6
+    ],
+    [
+     "A",
+     1,
+     32,
+     "BT",
+     83.7,
+     49.0
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     76.1,
+     41.5
+    ],
+    [
+     "H",
+     2,
+     45,
+     "AST",
+     80.0,
+     30.1
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     91.4,
+     41.8
+    ],
+    [
+     "A",
+     2,
+     55,
+     "MST",
+     83.8,
+     51.9
+    ],
+    [
+     "A",
+     2,
+     59,
+     "MST",
+     89.1,
+     61.0
+    ],
+    [
+     "A",
+     2,
+     62,
+     "BT",
+     93.1,
+     60.0
+    ],
+    [
+     "A",
+     2,
+     71,
+     "AST",
+     92.9,
+     66.4
+    ],
+    [
+     "A",
+     2,
+     74,
+     "AST",
+     79.3,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     77,
+     "BT",
+     85.3,
+     37.3
+    ],
+    [
+     "A",
+     2,
+     82,
+     "MST",
+     91.6,
+     64.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "MST",
+     80.7,
+     30.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "AST",
+     94.3,
+     59.0
+    ],
+    [
+     "H",
+     2,
+     94,
+     "MST",
+     83.5,
+     71.9
+    ]
+   ],
+   "goals": [],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     10
+    ],
+    [
+     "유효슈팅",
+     2,
+     3
+    ],
+    [
+     "패스 성공",
+     376,
+     250
+    ],
+    [
+     "패스 성공률",
+     87.0,
+     77.2,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     4,
+     9
+    ],
+    [
+     "반칙",
+     10,
+     17
+    ],
+    [
+     "경고",
+     1,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-08",
+    "home": "강원",
+    "away": "전북",
+    "round": 35
+   },
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
