@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-11-06T07:38:40+09:00",
+  "generated_at": "2026-11-07T07:01:13+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
@@ -168,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 1,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -384,7 +384,7 @@
         "gd": -24
       }
     ],
-    "best_rank": 3,
+    "best_rank": 1,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
