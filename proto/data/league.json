@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07 06:37:16",
+  "generated_at": "2026-11-08 05:19:45",
   "season": 2026,
   "current_round": {
     "K1": 35,
@@ -21,25 +21,25 @@
   "summary": {
     "K1": {
       "wdl_hit": 83,
-      "wdl_total": 204,
-      "wdl_rate": 40.69,
-      "ou_hit": 110,
-      "ou_total": 204,
-      "ou_rate": 53.92,
+      "wdl_total": 206,
+      "wdl_rate": 40.29,
+      "ou_hit": 112,
+      "ou_total": 206,
+      "ou_rate": 54.37,
       "rates": {
-        "wdl": 40.69,
-        "ou25": 53.92
+        "wdl": 40.29,
+        "ou25": 54.37
       },
       "hits": {
         "wdl": {
           "hit": 83,
-          "total": 204,
-          "rate": 40.69
+          "total": 206,
+          "rate": 40.29
         },
         "ou25": {
-          "hit": 110,
-          "total": 204,
-          "rate": 53.92
+          "hit": 112,
+          "total": 206,
+          "rate": 54.37
         }
       },
       "by_round": {
@@ -654,30 +654,48 @@
               6
             ]
           }
+        },
+        "35": {
+          "wdl_rate": 0.0,
+          "ou_rate": 100.0,
+          "rates": {
+            "wdl": 0.0,
+            "ou25": 100.0
+          },
+          "raw": {
+            "wdl": [
+              0,
+              2
+            ],
+            "ou25": [
+              2,
+              2
+            ]
+          }
         }
       }
     },
     "K2": {
-      "wdl_hit": 115,
-      "wdl_total": 248,
-      "wdl_rate": 46.37,
-      "ou_hit": 132,
-      "ou_total": 248,
-      "ou_rate": 53.23,
+      "wdl_hit": 119,
+      "wdl_total": 253,
+      "wdl_rate": 47.04,
+      "ou_hit": 135,
+      "ou_total": 253,
+      "ou_rate": 53.36,
       "rates": {
-        "wdl": 46.37,
-        "ou25": 53.23
+        "wdl": 47.04,
+        "ou25": 53.36
       },
       "hits": {
         "wdl": {
-          "hit": 115,
-          "total": 248,
-          "rate": 46.37
+          "hit": 119,
+          "total": 253,
+          "rate": 47.04
         },
         "ou25": {
-          "hit": 132,
-          "total": 248,
-          "rate": 53.23
+          "hit": 135,
+          "total": 253,
+          "rate": 53.36
         }
       },
       "by_round": {
@@ -1236,6 +1254,24 @@
             "ou25": [
               1,
               8
+            ]
+          }
+        },
+        "32": {
+          "wdl_rate": 80.0,
+          "ou_rate": 60.0,
+          "rates": {
+            "wdl": 80.0,
+            "ou25": 60.0
+          },
+          "raw": {
+            "wdl": [
+              4,
+              5
+            ],
+            "ou25": [
+              3,
+              5
             ]
           }
         }
@@ -35764,8 +35800,11 @@
       "home": "성남 FC",
       "away": "대구 FC",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        0,
+        1
+      ],
       "form": {
         "home": "WLWLW",
         "away": "LLWWD",
@@ -35799,8 +35838,14 @@
           "line": 2.5
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "패",
+        "ou25": "언더"
+      },
+      "hit": {
+        "wdl": true,
+        "ou25": true
+      },
       "reason": {
         "headline": "승무패 패 · U/O 2.5 언더 (신뢰 낮음)",
         "paragraphs": [
@@ -35834,8 +35879,11 @@
       "home": "수원 FC",
       "away": "경남 FC",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        3,
+        0
+      ],
       "form": {
         "home": "DWWDW",
         "away": "DDLDD",
@@ -35869,8 +35917,14 @@
           "line": 2.5
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "승",
+        "ou25": "오버"
+      },
+      "hit": {
+        "wdl": true,
+        "ou25": false
+      },
       "reason": {
         "headline": "승무패 승 · U/O 2.5 언더 (신뢰 높음)",
         "paragraphs": [
@@ -35903,8 +35957,11 @@
       "home": "김포 FC",
       "away": "안산 그리너스",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        2,
+        2
+      ],
       "form": {
         "home": "DDDWD",
         "away": "WDDLL",
@@ -35938,8 +35995,14 @@
           "line": 2.5
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "무",
+        "ou25": "오버"
+      },
+      "hit": {
+        "wdl": false,
+        "ou25": false
+      },
       "reason": {
         "headline": "승무패 승 · U/O 2.5 언더 (신뢰 높음)",
         "paragraphs": [
@@ -35973,8 +36036,11 @@
       "home": "김해 FC",
       "away": "화성 FC",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        0,
+        1
+      ],
       "form": {
         "home": "DDLDL",
         "away": "WWDDL",
@@ -36008,8 +36074,14 @@
           "line": 2.5
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "패",
+        "ou25": "언더"
+      },
+      "hit": {
+        "wdl": true,
+        "ou25": true
+      },
       "reason": {
         "headline": "승무패 패 · U/O 2.5 언더 (신뢰 높음)",
         "paragraphs": [
@@ -36042,8 +36114,11 @@
       "home": "서울 이랜드",
       "away": "전남 드래곤즈",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        3,
+        2
+      ],
       "form": {
         "home": "WWDWD",
         "away": "WDLLW",
@@ -36077,8 +36152,14 @@
           "line": 2.5
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "승",
+        "ou25": "오버"
+      },
+      "hit": {
+        "wdl": true,
+        "ou25": true
+      },
       "reason": {
         "headline": "승무패 승 · U/O 2.5 오버 (신뢰 높음)",
         "paragraphs": [
@@ -37871,8 +37952,11 @@
       "home": "제주 SK",
       "away": "광주 FC",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        1,
+        1
+      ],
       "form": {
         "home": "DWLLL",
         "away": "DDWLW",
@@ -37906,8 +37990,14 @@
           "line": "U/O 2.5"
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "무",
+        "ou25": "언더"
+      },
+      "hit": {
+        "wdl": false,
+        "ou25": true
+      },
       "reason": {
         "headline": "승무패 승 · U/O 2.5 언더 (신뢰 보통)",
         "paragraphs": [
@@ -37936,8 +38026,11 @@
       "home": "김천 상무",
       "away": "FC 안양",
       "venue": "",
-      "finished": false,
-      "score": null,
+      "finished": true,
+      "score": [
+        1,
+        0
+      ],
       "form": {
         "home": "DWLDL",
         "away": "DWWDD",
@@ -37971,8 +38064,14 @@
           "line": "U/O 2.5"
         }
       },
-      "actual": null,
-      "hit": null,
+      "actual": {
+        "wdl": "승",
+        "ou25": "언더"
+      },
+      "hit": {
+        "wdl": false,
+        "ou25": true
+      },
       "reason": {
         "headline": "승무패 패 · U/O 2.5 언더 (신뢰 보통)",
         "paragraphs": [
