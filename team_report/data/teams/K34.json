@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:12+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
@@ -24,10 +24,10 @@
     "remaining": 3,
     "scheduled": 32,
     "gap_to_leader": 21,
-    "gap_to_cut": 3,
+    "gap_to_cut": 6,
     "cut_rank": 6,
-    "gap_above": 3,
-    "gap_below": 4,
+    "gap_above": 6,
+    "gap_below": 3,
     "above": "화성",
     "below": "김포"
   },
@@ -195,14 +195,14 @@
       },
       {
         "round": 5,
-        "rank": 8,
+        "rank": 7,
         "points": 6,
         "played": 4,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 9,
         "played": 5,
         "gd": 2
@@ -377,6 +377,13 @@
       },
       {
         "round": 31,
+        "rank": 7,
+        "points": 42,
+        "played": 29,
+        "gd": 8
+      },
+      {
+        "round": 32,
         "rank": 7,
         "points": 42,
         "played": 29,
@@ -701,22 +708,10 @@
     }
   ],
   "squad": {
-    "size": 43,
-    "avg_age": 27.5,
+    "size": 45,
+    "avg_age": 27.7,
     "foreign": 8,
     "top_scorers": [
-      {
-        "player_id": "20160114",
-        "departed": false,
-        "name": "김종민",
-        "position": "FW",
-        "back_no": 9,
-        "age": 34,
-        "apps": 27,
-        "goals": 7,
-        "assists": 2,
-        "points": 9
-      },
       {
         "player_id": "20240299",
         "departed": false,
@@ -724,10 +719,22 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 25,
+        "apps": 26,
+        "goals": 9,
+        "assists": 3,
+        "points": 12
+      },
+      {
+        "player_id": "20160114",
+        "departed": false,
+        "name": "김종민",
+        "position": "FW",
+        "back_no": 9,
+        "age": 34,
+        "apps": 28,
         "goals": 7,
-        "assists": 2,
-        "points": 9
+        "assists": 3,
+        "points": 10
       },
       {
         "player_id": "20250356",
@@ -736,10 +743,22 @@
         "position": "FW",
         "back_no": 97,
         "age": 29,
-        "apps": 27,
+        "apps": 28,
         "goals": 5,
         "assists": 2,
         "points": 7
+      },
+      {
+        "player_id": "20140032",
+        "departed": false,
+        "name": "손준호",
+        "position": "MF",
+        "back_no": 10,
+        "age": 34,
+        "apps": 28,
+        "goals": 3,
+        "assists": 7,
+        "points": 10
       },
       {
         "player_id": "20220055",
@@ -748,22 +767,10 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 25,
+        "apps": 26,
         "goals": 2,
-        "assists": 4,
-        "points": 6
-      },
-      {
-        "player_id": "20180151",
-        "departed": false,
-        "name": "김혜성",
-        "position": "MF",
-        "back_no": 33,
-        "age": 30,
-        "apps": 27,
-        "goals": 2,
-        "assists": 1,
-        "points": 3
+        "assists": 5,
+        "points": 7
       }
     ],
     "top_assists": [
@@ -774,9 +781,21 @@
         "position": "MF",
         "back_no": 10,
         "age": 34,
-        "apps": 27,
-        "goals": 1,
-        "assists": 6,
+        "apps": 28,
+        "goals": 3,
+        "assists": 7,
+        "points": 10
+      },
+      {
+        "player_id": "20220055",
+        "departed": false,
+        "name": "김주성",
+        "position": "DF",
+        "back_no": 17,
+        "age": 24,
+        "apps": 26,
+        "goals": 2,
+        "assists": 5,
         "points": 7
       },
       {
@@ -786,34 +805,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 36,
-        "apps": 23,
+        "apps": 24,
         "goals": 1,
         "assists": 5,
         "points": 6
-      },
-      {
-        "player_id": "20220055",
-        "departed": false,
-        "name": "김주성",
-        "position": "DF",
-        "back_no": 17,
-        "age": 24,
-        "apps": 25,
-        "goals": 2,
-        "assists": 4,
-        "points": 6
-      },
-      {
-        "player_id": "20160114",
-        "departed": false,
-        "name": "김종민",
-        "position": "FW",
-        "back_no": 9,
-        "age": 34,
-        "apps": 27,
-        "goals": 7,
-        "assists": 2,
-        "points": 9
       },
       {
         "player_id": "20240299",
@@ -822,18 +817,30 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 25,
+        "apps": 26,
+        "goals": 9,
+        "assists": 3,
+        "points": 12
+      },
+      {
+        "player_id": "20160114",
+        "departed": false,
+        "name": "김종민",
+        "position": "FW",
+        "back_no": 9,
+        "age": 34,
+        "apps": 28,
         "goals": 7,
-        "assists": 2,
-        "points": 9
+        "assists": 3,
+        "points": 10
       }
     ],
-    "goal_share": 0.171
+    "goal_share": 0.22
   },
   "attendance": null,
   "context": {
-    "band": "PO 추격권",
-    "detail": "플레이오프 컷인 6위와 3점 차. 남은 3경기면 아직 늦지 않았습니다.",
+    "band": "중위권",
+    "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
       "수비 안정",
       "홈 강세"

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k01-sm.png",
   "home_url": "https://www.uhdfc.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:11+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 2,
     "teams": 12,
@@ -407,6 +407,13 @@
         "points": 54,
         "played": 34,
         "gd": 6
+      },
+      {
+        "round": 35,
+        "rank": 2,
+        "points": 54,
+        "played": 34,
+        "gd": 6
       }
     ],
     "best_rank": 1,
@@ -788,7 +795,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 27,
-        "apps": 26,
+        "apps": 27,
         "goals": 16,
         "assists": 1,
         "points": 17
@@ -800,7 +807,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 32,
+        "apps": 33,
         "goals": 12,
         "assists": 13,
         "points": 25
@@ -824,22 +831,22 @@
         "position": "DF",
         "back_no": 15,
         "age": 32,
-        "apps": 29,
+        "apps": 30,
         "goals": 4,
         "assists": 0,
         "points": 4
       },
       {
-        "player_id": "20220188",
+        "player_id": "20250292",
         "departed": false,
-        "name": "김영권",
-        "position": "DF",
-        "back_no": 19,
-        "age": 36,
-        "apps": 25,
+        "name": "에릭",
+        "position": "FW",
+        "back_no": 11,
+        "age": 29,
+        "apps": 15,
         "goals": 3,
-        "assists": 0,
-        "points": 3
+        "assists": 2,
+        "points": 5
       }
     ],
     "top_assists": [
@@ -850,7 +857,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 29,
-        "apps": 32,
+        "apps": 33,
         "goals": 12,
         "assists": 13,
         "points": 25
@@ -862,7 +869,7 @@
         "position": "MF",
         "back_no": 24,
         "age": 32,
-        "apps": 32,
+        "apps": 33,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -886,10 +893,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 14,
-        "goals": 1,
+        "apps": 15,
+        "goals": 3,
         "assists": 2,
-        "points": 3
+        "points": 5
       },
       {
         "player_id": "20230108",
@@ -898,7 +905,7 @@
         "position": "MF",
         "back_no": 6,
         "age": 31,
-        "apps": 31,
+        "apps": 32,
         "goals": 0,
         "assists": 2,
         "points": 2

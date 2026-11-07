@@ -8,25 +8,25 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:11+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
-    "played": 34,
+    "played": 35,
     "win": 3,
-    "draw": 13,
+    "draw": 14,
     "loss": 18,
-    "gf": 31,
-    "ga": 70,
+    "gf": 32,
+    "ga": 71,
     "gd": -39,
-    "points": 22,
-    "ppg": 0.65,
-    "remaining": 9,
+    "points": 23,
+    "ppg": 0.66,
+    "remaining": 8,
     "scheduled": 43,
-    "gap_to_leader": 45,
-    "gap_to_cut": 26,
+    "gap_to_leader": 44,
+    "gap_to_cut": 25,
     "cut_rank": 6,
-    "gap_above": 10,
+    "gap_above": 9,
     "gap_below": null,
     "above": "부천",
     "below": ""
@@ -44,15 +44,15 @@
       "ppg": 0.67
     },
     "away": {
-      "played": 16,
+      "played": 17,
       "win": 1,
-      "draw": 7,
+      "draw": 8,
       "loss": 8,
-      "gf": 14,
-      "ga": 35,
+      "gf": 15,
+      "ga": 36,
       "gd": -21,
-      "points": 10,
-      "ppg": 0.62
+      "points": 11,
+      "ppg": 0.65
     }
   },
   "form": {
@@ -90,17 +90,17 @@
       "W",
       "L",
       "W",
+      "D",
       "D"
     ],
     "last5": [
-      "D",
       "W",
       "L",
       "W",
+      "D",
       "D"
     ],
     "last10": [
-      "D",
       "L",
       "D",
       "L",
@@ -109,6 +109,7 @@
       "W",
       "L",
       "W",
+      "D",
       "D"
     ],
     "last5_record": {
@@ -116,8 +117,8 @@
       "win": 2,
       "draw": 2,
       "loss": 1,
-      "gf": 12,
-      "ga": 9,
+      "gf": 11,
+      "ga": 8,
       "gd": 3,
       "points": 8
     },
@@ -126,14 +127,14 @@
       "win": 2,
       "draw": 5,
       "loss": 3,
-      "gf": 19,
-      "ga": 20,
+      "gf": 18,
+      "ga": 19,
       "gd": -1,
       "points": 11
     },
     "streaks": {
       "current_type": "D",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 1,
       "longest_unbeaten": 4,
       "longest_winless": 28,
@@ -142,10 +143,10 @@
   },
   "scoring": {
     "gf_per_game": 0.91,
-    "ga_per_game": 2.06,
+    "ga_per_game": 2.03,
     "clean_sheets": 5,
     "failed_to_score": 16,
-    "both_scored": 17,
+    "both_scored": 18,
     "one_goal_games": 10,
     "biggest_win": {
       "round": 33,
@@ -179,7 +180,7 @@
       },
       {
         "round": 2,
-        "rank": 4,
+        "rank": 3,
         "points": 4,
         "played": 2,
         "gd": 1
@@ -407,9 +408,16 @@
         "points": 22,
         "played": 34,
         "gd": -39
+      },
+      {
+        "round": 35,
+        "rank": 12,
+        "points": 23,
+        "played": 35,
+        "gd": -39
       }
     ],
-    "best_rank": 4,
+    "best_rank": 3,
     "worst_rank": 12,
     "first_half": {
       "played": 19,
@@ -423,15 +431,15 @@
       "ppg": 0.53
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 2,
-      "draw": 6,
+      "draw": 7,
       "loss": 7,
-      "gf": 21,
-      "ga": 27,
+      "gf": 22,
+      "ga": 28,
       "gd": -6,
-      "points": 12,
-      "ppg": 0.8
+      "points": 13,
+      "ppg": 0.81
     }
   },
   "fixtures": [
@@ -774,11 +782,21 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 35,
+      "date": "2026-11-07",
+      "venue": "A",
+      "opponent_id": "K04",
+      "opponent": "제주 SK",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
     "size": 37,
-    "avg_age": 26.5,
+    "avg_age": 26.6,
     "foreign": 8,
     "top_scorers": [
       {
@@ -788,10 +806,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 27,
-        "apps": 21,
-        "goals": 12,
+        "apps": 23,
+        "goals": 13,
         "assists": 2,
-        "points": 14
+        "points": 15
       },
       {
         "player_id": "20240210",
@@ -800,7 +818,7 @@
         "position": "MF",
         "back_no": 88,
         "age": 22,
-        "apps": 30,
+        "apps": 32,
         "goals": 6,
         "assists": 1,
         "points": 7
@@ -812,10 +830,10 @@
         "position": "FW",
         "back_no": 40,
         "age": 34,
-        "apps": 20,
+        "apps": 22,
         "goals": 5,
-        "assists": 1,
-        "points": 6
+        "assists": 2,
+        "points": 7
       },
       {
         "player_id": "20260347",
@@ -824,10 +842,10 @@
         "position": "FW",
         "back_no": 50,
         "age": 30,
-        "apps": 17,
+        "apps": 19,
         "goals": 3,
-        "assists": 5,
-        "points": 8
+        "assists": 6,
+        "points": 9
       },
       {
         "player_id": "20250366",
@@ -850,10 +868,10 @@
         "position": "FW",
         "back_no": 50,
         "age": 30,
-        "apps": 17,
+        "apps": 19,
         "goals": 3,
-        "assists": 5,
-        "points": 8
+        "assists": 6,
+        "points": 9
       },
       {
         "player_id": "20250193",
@@ -862,10 +880,22 @@
         "position": "FW",
         "back_no": 18,
         "age": 27,
-        "apps": 21,
-        "goals": 12,
+        "apps": 23,
+        "goals": 13,
         "assists": 2,
-        "points": 14
+        "points": 15
+      },
+      {
+        "player_id": "20140134",
+        "departed": false,
+        "name": "신창무",
+        "position": "FW",
+        "back_no": 40,
+        "age": 34,
+        "apps": 22,
+        "goals": 5,
+        "assists": 2,
+        "points": 7
       },
       {
         "player_id": "20250366",
@@ -890,28 +920,16 @@
         "goals": 1,
         "assists": 2,
         "points": 3
-      },
-      {
-        "player_id": "20200029",
-        "departed": false,
-        "name": "권성윤",
-        "position": "FW",
-        "back_no": 22,
-        "age": 25,
-        "apps": 29,
-        "goals": 0,
-        "assists": 2,
-        "points": 2
       }
     ],
-    "goal_share": 0.387
+    "goal_share": 0.406
   },
   "attendance": {
     "avg": 3308,
     "total": 59538,
     "games": 18,
     "home_fans_avg": 2764,
-    "away_fans_avg": 310
+    "away_fans_avg": 300
   },
   "context": {
     "band": "승강 플레이오프권",

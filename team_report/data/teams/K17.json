@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:12+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
-    "played": 29,
-    "win": 15,
+    "played": 30,
+    "win": 16,
     "draw": 8,
     "loss": 6,
-    "gf": 57,
+    "gf": 58,
     "ga": 40,
-    "gd": 17,
-    "points": 53,
-    "ppg": 1.83,
-    "remaining": 3,
+    "gd": 18,
+    "points": 56,
+    "ppg": 1.87,
+    "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 10,
+    "gap_to_leader": 7,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 5,
+    "gap_below": 8,
     "above": "서울E",
     "below": "부산"
   },
@@ -44,15 +44,15 @@
       "ppg": 2.0
     },
     "away": {
-      "played": 14,
-      "win": 6,
+      "played": 15,
+      "win": 7,
       "draw": 5,
       "loss": 3,
-      "gf": 26,
+      "gf": 27,
       "ga": 21,
-      "gd": 5,
-      "points": 23,
-      "ppg": 1.64
+      "gd": 6,
+      "points": 26,
+      "ppg": 1.73
     }
   },
   "form": {
@@ -85,18 +85,18 @@
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "W",
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
       "W",
-      "W",
       "D",
       "W",
       "D",
@@ -104,16 +104,17 @@
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
       "win": 3,
       "draw": 1,
       "loss": 1,
-      "gf": 13,
-      "ga": 8,
-      "gd": 5,
+      "gf": 11,
+      "ga": 7,
+      "gd": 4,
       "points": 10
     },
     "last10_record": {
@@ -127,7 +128,7 @@
       "points": 21
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 9,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.97,
-    "ga_per_game": 1.38,
-    "clean_sheets": 8,
+    "gf_per_game": 1.93,
+    "ga_per_game": 1.33,
+    "clean_sheets": 9,
     "failed_to_score": 2,
     "both_scored": 21,
-    "one_goal_games": 9,
+    "one_goal_games": 10,
     "biggest_win": {
       "round": 16,
       "date": "2026-07-04",
@@ -381,6 +382,13 @@
         "points": 53,
         "played": 29,
         "gd": 17
+      },
+      {
+        "round": 32,
+        "rank": 4,
+        "points": 56,
+        "played": 30,
+        "gd": 18
       }
     ],
     "best_rank": 2,
@@ -397,15 +405,15 @@
       "ppg": 1.94
     },
     "second_half": {
-      "played": 13,
-      "win": 6,
+      "played": 14,
+      "win": 7,
       "draw": 4,
       "loss": 3,
-      "gf": 22,
+      "gf": 23,
       "ga": 18,
-      "gd": 4,
-      "points": 22,
-      "ppg": 1.69
+      "gd": 5,
+      "points": 25,
+      "ppg": 1.79
     }
   },
   "fixtures": [
@@ -698,6 +706,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-07",
+      "venue": "A",
+      "opponent_id": "K08",
+      "opponent": "성남 FC",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -712,7 +730,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
+        "apps": 30,
         "goals": 10,
         "assists": 10,
         "points": 20
@@ -724,22 +742,10 @@
         "position": "FW",
         "back_no": 17,
         "age": 27,
-        "apps": 31,
+        "apps": 32,
         "goals": 9,
         "assists": 3,
         "points": 12
-      },
-      {
-        "player_id": "20260287",
-        "departed": false,
-        "name": "데커스",
-        "position": "FW",
-        "back_no": 16,
-        "age": 23,
-        "apps": 22,
-        "goals": 8,
-        "assists": 1,
-        "points": 9
       },
       {
         "player_id": "20180294",
@@ -748,10 +754,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 39,
-        "apps": 14,
-        "goals": 8,
+        "apps": 16,
+        "goals": 9,
         "assists": 0,
-        "points": 8
+        "points": 9
       },
       {
         "player_id": "20160237",
@@ -760,10 +766,22 @@
         "position": "FW",
         "back_no": 11,
         "age": 36,
-        "apps": 17,
-        "goals": 7,
-        "assists": 8,
-        "points": 15
+        "apps": 19,
+        "goals": 8,
+        "assists": 9,
+        "points": 17
+      },
+      {
+        "player_id": "20260287",
+        "departed": false,
+        "name": "데커스",
+        "position": "FW",
+        "back_no": 16,
+        "age": 23,
+        "apps": 24,
+        "goals": 8,
+        "assists": 1,
+        "points": 9
       }
     ],
     "top_assists": [
@@ -774,7 +792,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
+        "apps": 30,
         "goals": 10,
         "assists": 10,
         "points": 20
@@ -786,10 +804,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 36,
-        "apps": 17,
-        "goals": 7,
-        "assists": 8,
-        "points": 15
+        "apps": 19,
+        "goals": 8,
+        "assists": 9,
+        "points": 17
       },
       {
         "player_id": "20190174",
@@ -810,25 +828,25 @@
         "position": "FW",
         "back_no": 17,
         "age": 27,
-        "apps": 31,
+        "apps": 32,
         "goals": 9,
         "assists": 3,
         "points": 12
       },
       {
-        "player_id": "20210115",
+        "player_id": "20150035",
         "departed": false,
-        "name": "김대우",
+        "name": "류재문",
         "position": "MF",
-        "back_no": 25,
-        "age": 25,
-        "apps": 23,
-        "goals": 0,
+        "back_no": 29,
+        "age": 32,
+        "apps": 24,
+        "goals": 1,
         "assists": 3,
-        "points": 3
+        "points": 4
       }
     ],
-    "goal_share": 0.175
+    "goal_share": 0.172
   },
   "attendance": null,
   "context": {

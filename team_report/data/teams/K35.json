@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:11+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
-    "played": 34,
-    "win": 5,
+    "played": 35,
+    "win": 6,
     "draw": 20,
     "loss": 9,
-    "gf": 34,
+    "gf": 35,
     "ga": 42,
-    "gd": -8,
-    "points": 35,
-    "ppg": 1.03,
-    "remaining": 9,
+    "gd": -7,
+    "points": 38,
+    "ppg": 1.09,
+    "remaining": 8,
     "scheduled": 43,
-    "gap_to_leader": 32,
-    "gap_to_cut": 13,
+    "gap_to_leader": 29,
+    "gap_to_cut": 10,
     "cut_rank": 6,
-    "gap_above": 8,
-    "gap_below": 3,
+    "gap_above": 5,
+    "gap_below": 6,
     "above": "포항",
     "below": "부천"
   },
   "splits": {
     "home": {
-      "played": 16,
-      "win": 1,
+      "played": 17,
+      "win": 2,
       "draw": 10,
       "loss": 5,
-      "gf": 15,
+      "gf": 16,
       "ga": 23,
-      "gd": -8,
-      "points": 13,
-      "ppg": 0.81
+      "gd": -7,
+      "points": 16,
+      "ppg": 0.94
     },
     "away": {
       "played": 18,
@@ -90,17 +90,17 @@
       "L",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "W",
       "L",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "D",
       "L",
       "D",
       "D",
@@ -109,30 +109,31 @@
       "L",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
       "draw": 2,
       "loss": 2,
-      "gf": 6,
+      "gf": 5,
       "ga": 6,
-      "gd": 0,
+      "gd": -1,
       "points": 5
     },
     "last10_record": {
       "played": 10,
-      "win": 1,
-      "draw": 6,
+      "win": 2,
+      "draw": 5,
       "loss": 3,
-      "gf": 11,
+      "gf": 12,
       "ga": 13,
-      "gd": -2,
-      "points": 9
+      "gd": -1,
+      "points": 11
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 7,
@@ -142,11 +143,11 @@
   },
   "scoring": {
     "gf_per_game": 1.0,
-    "ga_per_game": 1.24,
-    "clean_sheets": 8,
+    "ga_per_game": 1.2,
+    "clean_sheets": 9,
     "failed_to_score": 10,
     "both_scored": 21,
-    "one_goal_games": 8,
+    "one_goal_games": 9,
     "biggest_win": {
       "round": 30,
       "date": "2026-09-19",
@@ -407,6 +408,13 @@
         "points": 35,
         "played": 34,
         "gd": -8
+      },
+      {
+        "round": 35,
+        "rank": 10,
+        "points": 38,
+        "played": 35,
+        "gd": -7
       }
     ],
     "best_rank": 6,
@@ -423,15 +431,15 @@
       "ppg": 0.89
     },
     "second_half": {
-      "played": 15,
-      "win": 3,
+      "played": 16,
+      "win": 4,
       "draw": 9,
       "loss": 3,
-      "gf": 16,
+      "gf": 17,
       "ga": 16,
-      "gd": 0,
-      "points": 18,
-      "ppg": 1.2
+      "gd": 1,
+      "points": 21,
+      "ppg": 1.31
     }
   },
   "fixtures": [
@@ -774,6 +782,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 35,
+      "date": "2026-11-07",
+      "venue": "H",
+      "opponent_id": "K27",
+      "opponent": "FC 안양",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -794,6 +812,42 @@
         "points": 5
       },
       {
+        "player_id": "20200174",
+        "departed": false,
+        "name": "김인균",
+        "position": "FW",
+        "back_no": 21,
+        "age": 28,
+        "apps": 27,
+        "goals": 3,
+        "assists": 0,
+        "points": 3
+      },
+      {
+        "player_id": "20230332",
+        "departed": false,
+        "name": "홍윤상",
+        "position": "FW",
+        "back_no": 48,
+        "age": 24,
+        "apps": 26,
+        "goals": 2,
+        "assists": 2,
+        "points": 4
+      },
+      {
+        "player_id": "20230157",
+        "departed": false,
+        "name": "정재민",
+        "position": "FW",
+        "back_no": 57,
+        "age": 25,
+        "apps": 21,
+        "goals": 2,
+        "assists": 2,
+        "points": 4
+      },
+      {
         "player_id": "20210108",
         "departed": false,
         "name": "오재혁",
@@ -804,42 +858,6 @@
         "goals": 2,
         "assists": 2,
         "points": 4
-      },
-      {
-        "player_id": "20180096",
-        "departed": false,
-        "name": "박태준",
-        "position": "MF",
-        "back_no": 55,
-        "age": 27,
-        "apps": 31,
-        "goals": 2,
-        "assists": 1,
-        "points": 3
-      },
-      {
-        "player_id": "20230332",
-        "departed": false,
-        "name": "홍윤상",
-        "position": "FW",
-        "back_no": 48,
-        "age": 24,
-        "apps": 24,
-        "goals": 2,
-        "assists": 1,
-        "points": 3
-      },
-      {
-        "player_id": "20200174",
-        "departed": false,
-        "name": "김인균",
-        "position": "FW",
-        "back_no": 21,
-        "age": 28,
-        "apps": 25,
-        "goals": 2,
-        "assists": 0,
-        "points": 2
       }
     ],
     "top_assists": [
@@ -868,6 +886,30 @@
         "points": 4
       },
       {
+        "player_id": "20230157",
+        "departed": false,
+        "name": "정재민",
+        "position": "FW",
+        "back_no": 57,
+        "age": 25,
+        "apps": 21,
+        "goals": 2,
+        "assists": 2,
+        "points": 4
+      },
+      {
+        "player_id": "20230332",
+        "departed": false,
+        "name": "홍윤상",
+        "position": "FW",
+        "back_no": 48,
+        "age": 24,
+        "apps": 26,
+        "goals": 2,
+        "assists": 2,
+        "points": 4
+      },
+      {
         "player_id": "20250095",
         "departed": false,
         "name": "김준하",
@@ -878,39 +920,15 @@
         "goals": 1,
         "assists": 2,
         "points": 3
-      },
-      {
-        "player_id": "20230157",
-        "departed": false,
-        "name": "정재민",
-        "position": "FW",
-        "back_no": 57,
-        "age": 25,
-        "apps": 19,
-        "goals": 1,
-        "assists": 2,
-        "points": 3
-      },
-      {
-        "player_id": "20220138",
-        "departed": false,
-        "name": "강민규",
-        "position": "FW",
-        "back_no": 49,
-        "age": 28,
-        "apps": 10,
-        "goals": 0,
-        "assists": 2,
-        "points": 2
       }
     ],
-    "goal_share": 0.088
+    "goal_share": 0.086
   },
   "attendance": {
-    "avg": 2167,
-    "total": 34669,
-    "games": 16,
-    "home_fans_avg": 1466,
+    "avg": 2106,
+    "total": 35794,
+    "games": 17,
+    "home_fans_avg": 1446,
     "away_fans_avg": 218
   },
   "context": {

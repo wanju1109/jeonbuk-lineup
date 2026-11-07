@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:11+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -27,7 +27,7 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 1,
+    "gap_below": 0,
     "above": "전북",
     "below": "제주"
   },
@@ -407,6 +407,13 @@
         "points": 48,
         "played": 34,
         "gd": 9
+      },
+      {
+        "round": 35,
+        "rank": 6,
+        "points": 48,
+        "played": 34,
+        "gd": 9
       }
     ],
     "best_rank": 2,
@@ -778,7 +785,7 @@
   ],
   "squad": {
     "size": 55,
-    "avg_age": 23.7,
+    "avg_age": 23.8,
     "foreign": 4,
     "top_scorers": [
       {
@@ -788,7 +795,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 29,
-        "apps": 31,
+        "apps": 32,
         "goals": 10,
         "assists": 9,
         "points": 19
@@ -800,7 +807,7 @@
         "position": "FW",
         "back_no": 77,
         "age": 25,
-        "apps": 27,
+        "apps": 28,
         "goals": 8,
         "assists": 0,
         "points": 8
@@ -812,7 +819,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 27,
+        "apps": 28,
         "goals": 3,
         "assists": 5,
         "points": 8
@@ -836,7 +843,7 @@
         "position": "MF",
         "back_no": 97,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -850,7 +857,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 29,
-        "apps": 31,
+        "apps": 32,
         "goals": 10,
         "assists": 9,
         "points": 19
@@ -862,7 +869,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 27,
+        "apps": 28,
         "goals": 3,
         "assists": 5,
         "points": 8
@@ -874,7 +881,7 @@
         "position": "MF",
         "back_no": 97,
         "age": 29,
-        "apps": 30,
+        "apps": 31,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -886,7 +893,7 @@
         "position": "DF",
         "back_no": 99,
         "age": 27,
-        "apps": 29,
+        "apps": 30,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -898,7 +905,7 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 25,
+        "apps": 26,
         "goals": 1,
         "assists": 2,
         "points": 3

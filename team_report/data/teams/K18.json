@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:11+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -407,6 +407,13 @@
         "points": 49,
         "played": 34,
         "gd": 9
+      },
+      {
+        "round": 35,
+        "rank": 4,
+        "points": 49,
+        "played": 34,
+        "gd": 9
       }
     ],
     "best_rank": 4,
@@ -788,7 +795,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 30,
+        "apps": 31,
         "goals": 14,
         "assists": 2,
         "points": 16
@@ -800,22 +807,10 @@
         "position": "FW",
         "back_no": 99,
         "age": 31,
-        "apps": 29,
+        "apps": 30,
         "goals": 7,
         "assists": 2,
         "points": 9
-      },
-      {
-        "player_id": "20190131",
-        "departed": false,
-        "name": "이동률",
-        "position": "FW",
-        "back_no": 10,
-        "age": 26,
-        "apps": 29,
-        "goals": 4,
-        "assists": 2,
-        "points": 6
       },
       {
         "player_id": "20210223",
@@ -824,10 +819,22 @@
         "position": "MF",
         "back_no": 11,
         "age": 35,
-        "apps": 33,
-        "goals": 4,
+        "apps": 34,
+        "goals": 5,
         "assists": 0,
-        "points": 4
+        "points": 5
+      },
+      {
+        "player_id": "20190131",
+        "departed": false,
+        "name": "이동률",
+        "position": "FW",
+        "back_no": 10,
+        "age": 26,
+        "apps": 30,
+        "goals": 4,
+        "assists": 2,
+        "points": 6
       },
       {
         "player_id": "20040081",
@@ -836,7 +843,7 @@
         "position": "MF",
         "back_no": 72,
         "age": 38,
-        "apps": 33,
+        "apps": 34,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -850,7 +857,7 @@
         "position": "DF",
         "back_no": 32,
         "age": 34,
-        "apps": 32,
+        "apps": 33,
         "goals": 1,
         "assists": 4,
         "points": 5
@@ -862,10 +869,22 @@
         "position": "MF",
         "back_no": 5,
         "age": 36,
-        "apps": 31,
+        "apps": 32,
         "goals": 2,
         "assists": 3,
         "points": 5
+      },
+      {
+        "player_id": "20230071",
+        "departed": false,
+        "name": "이민혁",
+        "position": "MF",
+        "back_no": 26,
+        "age": 24,
+        "apps": 21,
+        "goals": 1,
+        "assists": 3,
+        "points": 4
       },
       {
         "player_id": "20180196",
@@ -874,7 +893,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 30,
+        "apps": 31,
         "goals": 14,
         "assists": 2,
         "points": 16
@@ -886,22 +905,10 @@
         "position": "FW",
         "back_no": 99,
         "age": 31,
-        "apps": 29,
+        "apps": 30,
         "goals": 7,
         "assists": 2,
         "points": 9
-      },
-      {
-        "player_id": "20190131",
-        "departed": false,
-        "name": "이동률",
-        "position": "FW",
-        "back_no": 10,
-        "age": 26,
-        "apps": 29,
-        "goals": 4,
-        "assists": 2,
-        "points": 6
       }
     ],
     "goal_share": 0.318

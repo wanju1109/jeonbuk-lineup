@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k37-sm.png",
   "home_url": "https://chfc.kr",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:12+09:00",
+  "generated_at": "2026-11-08T05:49:15+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
@@ -24,7 +24,7 @@
     "remaining": 2,
     "scheduled": 32,
     "gap_to_leader": 31,
-    "gap_to_cut": 13,
+    "gap_to_cut": 16,
     "cut_rank": 6,
     "gap_above": 1,
     "gap_below": 0,
@@ -168,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 14,
+        "rank": 15,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -378,6 +378,13 @@
       },
       {
         "round": 31,
+        "rank": 12,
+        "points": 32,
+        "played": 30,
+        "gd": -13
+      },
+      {
+        "round": 32,
         "rank": 12,
         "points": 32,
         "played": 30,
@@ -723,7 +730,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 29,
+        "apps": 30,
         "goals": 14,
         "assists": 1,
         "points": 15
@@ -735,7 +742,7 @@
         "position": "FW",
         "back_no": 13,
         "age": 25,
-        "apps": 28,
+        "apps": 29,
         "goals": 7,
         "assists": 1,
         "points": 8
@@ -747,21 +754,9 @@
         "position": "MF",
         "back_no": 42,
         "age": 22,
-        "apps": 26,
+        "apps": 27,
         "goals": 3,
         "assists": 0,
-        "points": 3
-      },
-      {
-        "player_id": "20220151",
-        "departed": false,
-        "name": "서재원",
-        "position": "FW",
-        "back_no": 14,
-        "age": 23,
-        "apps": 26,
-        "goals": 1,
-        "assists": 2,
         "points": 3
       },
       {
@@ -771,10 +766,22 @@
         "position": "MF",
         "back_no": 5,
         "age": 34,
-        "apps": 29,
-        "goals": 1,
+        "apps": 30,
+        "goals": 2,
         "assists": 1,
-        "points": 2
+        "points": 3
+      },
+      {
+        "player_id": "20220151",
+        "departed": false,
+        "name": "서재원",
+        "position": "FW",
+        "back_no": 14,
+        "age": 23,
+        "apps": 27,
+        "goals": 1,
+        "assists": 2,
+        "points": 3
       }
     ],
     "top_assists": [
@@ -785,10 +792,10 @@
         "position": "DF",
         "back_no": 25,
         "age": 25,
-        "apps": 23,
+        "apps": 24,
         "goals": 0,
-        "assists": 10,
-        "points": 10
+        "assists": 11,
+        "points": 11
       },
       {
         "player_id": "20220151",
@@ -797,7 +804,7 @@
         "position": "FW",
         "back_no": 14,
         "age": 23,
-        "apps": 26,
+        "apps": 27,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -809,7 +816,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 29,
+        "apps": 30,
         "goals": 14,
         "assists": 1,
         "points": 15
@@ -821,7 +828,7 @@
         "position": "FW",
         "back_no": 13,
         "age": 25,
-        "apps": 28,
+        "apps": 29,
         "goals": 7,
         "assists": 1,
         "points": 8
@@ -833,10 +840,10 @@
         "position": "MF",
         "back_no": 5,
         "age": 34,
-        "apps": 29,
-        "goals": 1,
+        "apps": 30,
+        "goals": 2,
         "assists": 1,
-        "points": 2
+        "points": 3
       }
     ],
     "goal_share": 0.389

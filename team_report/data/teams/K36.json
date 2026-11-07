@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:12+09:00",
+  "generated_at": "2026-11-08T05:49:15+09:00",
   "table": {
     "rank": 8,
     "teams": 17,
-    "played": 29,
+    "played": 30,
     "win": 9,
-    "draw": 11,
+    "draw": 12,
     "loss": 9,
-    "gf": 37,
-    "ga": 39,
+    "gf": 39,
+    "ga": 41,
     "gd": -2,
-    "points": 38,
-    "ppg": 1.31,
-    "remaining": 3,
+    "points": 39,
+    "ppg": 1.3,
+    "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 25,
-    "gap_to_cut": 7,
+    "gap_to_leader": 24,
+    "gap_to_cut": 9,
     "cut_rank": 6,
-    "gap_above": 4,
-    "gap_below": 0,
+    "gap_above": 3,
+    "gap_below": 1,
     "above": "충남아산",
     "below": "경남"
   },
   "splits": {
     "home": {
-      "played": 13,
+      "played": 14,
       "win": 3,
-      "draw": 5,
+      "draw": 6,
       "loss": 5,
-      "gf": 17,
-      "ga": 18,
+      "gf": 19,
+      "ga": 20,
       "gd": -1,
-      "points": 14,
-      "ppg": 1.08
+      "points": 15,
+      "ppg": 1.07
     },
     "away": {
       "played": 16,
@@ -85,17 +85,17 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "W",
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "L",
@@ -104,31 +104,32 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
-      "draw": 0,
+      "win": 1,
+      "draw": 1,
       "loss": 3,
-      "gf": 7,
-      "ga": 9,
-      "gd": -2,
-      "points": 6
+      "gf": 8,
+      "ga": 11,
+      "gd": -3,
+      "points": 4
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
-      "draw": 2,
+      "win": 2,
+      "draw": 3,
       "loss": 5,
-      "gf": 15,
-      "ga": 18,
-      "gd": -3,
-      "points": 11
+      "gf": 14,
+      "ga": 20,
+      "gd": -6,
+      "points": 9
     },
     "streaks": {
-      "current_type": "L",
-      "current_len": 2,
+      "current_type": "D",
+      "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 5,
       "longest_winless": 6,
@@ -136,11 +137,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.28,
-    "ga_per_game": 1.34,
+    "gf_per_game": 1.3,
+    "ga_per_game": 1.37,
     "clean_sheets": 7,
     "failed_to_score": 5,
-    "both_scored": 18,
+    "both_scored": 19,
     "one_goal_games": 11,
     "biggest_win": {
       "round": 29,
@@ -374,6 +375,13 @@
         "points": 38,
         "played": 29,
         "gd": -2
+      },
+      {
+        "round": 32,
+        "rank": 8,
+        "points": 39,
+        "played": 30,
+        "gd": -2
       }
     ],
     "best_rank": 5,
@@ -390,15 +398,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 3,
-      "draw": 5,
+      "draw": 6,
       "loss": 5,
-      "gf": 18,
-      "ga": 21,
+      "gf": 20,
+      "ga": 23,
       "gd": -3,
-      "points": 14,
-      "ppg": 1.08
+      "points": 15,
+      "ppg": 1.07
     }
   },
   "fixtures": [
@@ -691,11 +699,21 @@
       "gf": 1,
       "ga": 5,
       "result": "L"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-07",
+      "venue": "H",
+      "opponent_id": "K32",
+      "opponent": "안산 그리너스",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
     "size": 35,
-    "avg_age": 27.5,
+    "avg_age": 27.6,
     "foreign": 5,
     "top_scorers": [
       {
@@ -717,10 +735,10 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 16,
+        "apps": 18,
         "goals": 4,
-        "assists": 3,
-        "points": 7
+        "assists": 4,
+        "points": 8
       },
       {
         "player_id": "20160082",
@@ -741,7 +759,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 26,
-        "apps": 20,
+        "apps": 21,
         "goals": 4,
         "assists": 1,
         "points": 5
@@ -753,7 +771,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 38,
-        "apps": 24,
+        "apps": 26,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -767,10 +785,10 @@
         "position": "FW",
         "back_no": 96,
         "age": 30,
-        "apps": 16,
+        "apps": 18,
         "goals": 4,
-        "assists": 3,
-        "points": 7
+        "assists": 4,
+        "points": 8
       },
       {
         "player_id": "20250171",
@@ -809,19 +827,19 @@
         "points": 6
       },
       {
-        "player_id": "20250185",
+        "player_id": "20140095",
         "departed": false,
-        "name": "장부성",
-        "position": "DF",
-        "back_no": 32,
-        "age": 22,
-        "apps": 20,
-        "goals": 0,
+        "name": "김도혁",
+        "position": "MF",
+        "back_no": 7,
+        "age": 34,
+        "apps": 30,
+        "goals": 1,
         "assists": 2,
-        "points": 2
+        "points": 3
       }
     ],
-    "goal_share": 0.135
+    "goal_share": 0.128
   },
   "attendance": null,
   "context": {

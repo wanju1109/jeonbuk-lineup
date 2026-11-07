@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:11+09:00",
+  "generated_at": "2026-11-08T05:49:14+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -27,7 +27,7 @@
     "gap_to_cut": 5,
     "cut_rank": 6,
     "gap_above": 3,
-    "gap_below": 8,
+    "gap_below": 5,
     "above": "안양",
     "below": "김천"
   },
@@ -172,7 +172,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 4,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -403,6 +403,13 @@
       },
       {
         "round": 34,
+        "rank": 9,
+        "points": 43,
+        "played": 34,
+        "gd": -9
+      },
+      {
+        "round": 35,
         "rank": 9,
         "points": 43,
         "played": 34,
@@ -788,10 +795,10 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 27,
-        "goals": 4,
+        "apps": 28,
+        "goals": 5,
         "assists": 4,
-        "points": 8
+        "points": 9
       },
       {
         "player_id": "20180204",
@@ -812,7 +819,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 25,
+        "apps": 26,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -823,7 +830,7 @@
         "name": "니시야 켄토",
         "position": "MF",
         "back_no": 31,
-        "age": 26,
+        "age": 27,
         "apps": 28,
         "goals": 3,
         "assists": 1,
@@ -835,8 +842,8 @@
         "name": "주닝요",
         "position": "FW",
         "back_no": 11,
-        "age": 28,
-        "apps": 23,
+        "age": 29,
+        "apps": 24,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -850,10 +857,10 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 27,
-        "goals": 4,
+        "apps": 28,
+        "goals": 5,
         "assists": 4,
-        "points": 8
+        "points": 9
       },
       {
         "player_id": "20180204",
@@ -874,7 +881,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 23,
-        "apps": 32,
+        "apps": 33,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -886,7 +893,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 25,
-        "apps": 25,
+        "apps": 26,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -898,13 +905,13 @@
         "position": "FW",
         "back_no": 25,
         "age": 27,
-        "apps": 15,
+        "apps": 16,
         "goals": 1,
         "assists": 2,
         "points": 3
       }
     ],
-    "goal_share": 0.129
+    "goal_share": 0.161
   },
   "attendance": {
     "avg": 7183,

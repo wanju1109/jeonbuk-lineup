@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k41-sm.png",
   "home_url": "https://gimhaefc2008.com",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:13+09:00",
+  "generated_at": "2026-11-08T05:49:15+09:00",
   "table": {
     "rank": 17,
     "teams": 17,
-    "played": 29,
+    "played": 30,
     "win": 3,
     "draw": 9,
-    "loss": 17,
+    "loss": 18,
     "gf": 27,
-    "ga": 60,
-    "gd": -33,
+    "ga": 61,
+    "gd": -34,
     "points": 18,
-    "ppg": 0.62,
-    "remaining": 3,
+    "ppg": 0.6,
+    "remaining": 2,
     "scheduled": 32,
     "gap_to_leader": 45,
-    "gap_to_cut": 27,
+    "gap_to_cut": 30,
     "cut_rank": 6,
     "gap_above": 7,
     "gap_below": null,
-    "above": "안산",
+    "above": "전남",
     "below": ""
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 0,
       "draw": 5,
-      "loss": 9,
+      "loss": 10,
       "gf": 13,
-      "ga": 32,
-      "gd": -19,
+      "ga": 33,
+      "gd": -20,
       "points": 5,
-      "ppg": 0.36
+      "ppg": 0.33
     },
     "away": {
       "played": 15,
@@ -85,17 +85,17 @@
       "D",
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last5": [
-      "L",
       "D",
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last10": [
-      "D",
       "L",
       "L",
       "D",
@@ -104,7 +104,8 @@
       "D",
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "last5_record": {
       "played": 5,
@@ -112,22 +113,22 @@
       "draw": 2,
       "loss": 2,
       "gf": 8,
-      "ga": 13,
-      "gd": -5,
+      "ga": 12,
+      "gd": -4,
       "points": 5
     },
     "last10_record": {
       "played": 10,
       "win": 1,
-      "draw": 4,
-      "loss": 5,
-      "gf": 11,
+      "draw": 3,
+      "loss": 6,
+      "gf": 10,
       "ga": 23,
-      "gd": -12,
-      "points": 7
+      "gd": -13,
+      "points": 6
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 3,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.93,
-    "ga_per_game": 2.07,
+    "gf_per_game": 0.9,
+    "ga_per_game": 2.03,
     "clean_sheets": 2,
-    "failed_to_score": 8,
+    "failed_to_score": 9,
     "both_scored": 19,
-    "one_goal_games": 8,
+    "one_goal_games": 9,
     "biggest_win": {
       "round": 30,
       "date": "2026-10-24",
@@ -167,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 15,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3
@@ -381,9 +382,16 @@
         "points": 18,
         "played": 29,
         "gd": -33
+      },
+      {
+        "round": 32,
+        "rank": 17,
+        "points": 18,
+        "played": 30,
+        "gd": -34
       }
     ],
-    "best_rank": 15,
+    "best_rank": 13,
     "worst_rank": 17,
     "first_half": {
       "played": 16,
@@ -397,15 +405,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 1,
       "draw": 6,
-      "loss": 6,
+      "loss": 7,
       "gf": 14,
-      "ga": 27,
-      "gd": -13,
+      "ga": 28,
+      "gd": -14,
       "points": 9,
-      "ppg": 0.69
+      "ppg": 0.64
     }
   },
   "fixtures": [
@@ -698,6 +706,16 @@
       "gf": 3,
       "ga": 3,
       "result": "D"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-07",
+      "venue": "H",
+      "opponent_id": "K39",
+      "opponent": "화성 FC",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -705,6 +723,30 @@
     "avg_age": 27.0,
     "foreign": 4,
     "top_scorers": [
+      {
+        "player_id": "20230305",
+        "departed": false,
+        "name": "베카",
+        "position": "FW",
+        "back_no": 9,
+        "age": 28,
+        "apps": 27,
+        "goals": 6,
+        "assists": 0,
+        "points": 6
+      },
+      {
+        "player_id": "20250167",
+        "departed": false,
+        "name": "우제욱",
+        "position": "FW",
+        "back_no": 94,
+        "age": 32,
+        "apps": 15,
+        "goals": 6,
+        "assists": 0,
+        "points": 6
+      },
       {
         "player_id": "20190153",
         "departed": false,
@@ -716,30 +758,6 @@
         "goals": 5,
         "assists": 1,
         "points": 6
-      },
-      {
-        "player_id": "20230305",
-        "departed": false,
-        "name": "베카",
-        "position": "FW",
-        "back_no": 9,
-        "age": 28,
-        "apps": 25,
-        "goals": 5,
-        "assists": 0,
-        "points": 5
-      },
-      {
-        "player_id": "20250167",
-        "departed": false,
-        "name": "우제욱",
-        "position": "FW",
-        "back_no": 94,
-        "age": 32,
-        "apps": 13,
-        "goals": 5,
-        "assists": 0,
-        "points": 5
       },
       {
         "player_id": "20260273",
@@ -760,7 +778,7 @@
         "position": "DF",
         "back_no": 23,
         "age": 27,
-        "apps": 17,
+        "apps": 19,
         "goals": 1,
         "assists": 3,
         "points": 4
@@ -774,10 +792,22 @@
         "position": "DF",
         "back_no": 23,
         "age": 27,
-        "apps": 17,
+        "apps": 19,
         "goals": 1,
         "assists": 3,
         "points": 4
+      },
+      {
+        "player_id": "20160183",
+        "departed": false,
+        "name": "박요한",
+        "position": "MF",
+        "back_no": 41,
+        "age": 31,
+        "apps": 7,
+        "goals": 0,
+        "assists": 3,
+        "points": 3
       },
       {
         "player_id": "20260106",
@@ -786,7 +816,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 32,
-        "apps": 15,
+        "apps": 17,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -810,25 +840,13 @@
         "position": "MF",
         "back_no": 34,
         "age": 33,
-        "apps": 12,
+        "apps": 14,
         "goals": 1,
         "assists": 1,
         "points": 2
-      },
-      {
-        "player_id": "20160183",
-        "departed": false,
-        "name": "박요한",
-        "position": "MF",
-        "back_no": 41,
-        "age": 31,
-        "apps": 5,
-        "goals": 0,
-        "assists": 1,
-        "points": 1
       }
     ],
-    "goal_share": 0.185
+    "goal_share": 0.222
   },
   "attendance": null,
   "context": {

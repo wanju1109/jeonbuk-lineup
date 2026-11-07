@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-07T07:01:13+09:00",
+  "generated_at": "2026-11-08T05:49:15+09:00",
   "table": {
-    "rank": 15,
+    "rank": 16,
     "teams": 17,
-    "played": 29,
+    "played": 30,
     "win": 5,
     "draw": 10,
-    "loss": 14,
-    "gf": 35,
-    "ga": 52,
-    "gd": -17,
+    "loss": 15,
+    "gf": 37,
+    "ga": 55,
+    "gd": -18,
     "points": 25,
-    "ppg": 0.86,
-    "remaining": 3,
+    "ppg": 0.83,
+    "remaining": 2,
     "scheduled": 32,
     "gap_to_leader": 38,
-    "gap_to_cut": 20,
+    "gap_to_cut": 23,
     "cut_rank": 6,
-    "gap_above": 5,
-    "gap_below": 0,
-    "above": "천안",
-    "below": "안산"
+    "gap_above": 1,
+    "gap_below": 7,
+    "above": "안산",
+    "below": "김해"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.21
     },
     "away": {
-      "played": 15,
+      "played": 16,
       "win": 1,
       "draw": 5,
-      "loss": 9,
-      "gf": 17,
-      "ga": 30,
-      "gd": -13,
+      "loss": 10,
+      "gf": 19,
+      "ga": 33,
+      "gd": -14,
       "points": 8,
-      "ppg": 0.53
+      "ppg": 0.5
     }
   },
   "form": {
@@ -85,17 +85,17 @@
       "W",
       "L",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "last5": [
-      "L",
       "W",
       "L",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "last10": [
-      "L",
       "W",
       "W",
       "D",
@@ -104,16 +104,17 @@
       "W",
       "L",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
       "draw": 1,
       "loss": 3,
-      "gf": 7,
+      "gf": 9,
       "ga": 12,
-      "gd": -5,
+      "gd": -3,
       "points": 4
     },
     "last10_record": {
@@ -121,13 +122,13 @@
       "win": 3,
       "draw": 3,
       "loss": 4,
-      "gf": 14,
-      "ga": 18,
+      "gf": 15,
+      "ga": 19,
       "gd": -4,
       "points": 12
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 4,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.21,
-    "ga_per_game": 1.79,
+    "gf_per_game": 1.23,
+    "ga_per_game": 1.83,
     "clean_sheets": 4,
     "failed_to_score": 9,
-    "both_scored": 17,
-    "one_goal_games": 12,
+    "both_scored": 18,
+    "one_goal_games": 13,
     "biggest_win": {
       "round": 1,
       "date": "2026-03-01",
@@ -167,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 3,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -381,9 +382,16 @@
         "points": 25,
         "played": 29,
         "gd": -17
+      },
+      {
+        "round": 32,
+        "rank": 16,
+        "points": 25,
+        "played": 30,
+        "gd": -18
       }
     ],
-    "best_rank": 2,
+    "best_rank": 3,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -397,15 +405,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 4,
       "draw": 4,
-      "loss": 5,
-      "gf": 17,
-      "ga": 21,
-      "gd": -4,
+      "loss": 6,
+      "gf": 19,
+      "ga": 24,
+      "gd": -5,
       "points": 16,
-      "ppg": 1.23
+      "ppg": 1.14
     }
   },
   "fixtures": [
@@ -698,6 +706,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-07",
+      "venue": "A",
+      "opponent_id": "K31",
+      "opponent": "서울 이랜드",
+      "gf": 2,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -712,10 +730,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 28,
-        "goals": 8,
-        "assists": 6,
-        "points": 14
+        "apps": 30,
+        "goals": 10,
+        "assists": 7,
+        "points": 17
       },
       {
         "player_id": "20200134",
@@ -724,7 +742,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 21,
+        "apps": 23,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -742,25 +760,25 @@
         "points": 4
       },
       {
+        "player_id": "20190059",
+        "departed": false,
+        "name": "정지용",
+        "position": "FW",
+        "back_no": 11,
+        "age": 27,
+        "apps": 28,
+        "goals": 3,
+        "assists": 2,
+        "points": 5
+      },
+      {
         "player_id": "20220159",
         "departed": false,
         "name": "윤민호",
         "position": "MF",
         "back_no": 14,
         "age": 27,
-        "apps": 23,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
-      },
-      {
-        "player_id": "20260191",
-        "departed": false,
-        "name": "이라클리",
-        "position": "FW",
-        "back_no": 27,
-        "age": 28,
-        "apps": 14,
+        "apps": 25,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -774,10 +792,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 32,
-        "apps": 28,
-        "goals": 8,
-        "assists": 6,
-        "points": 14
+        "apps": 30,
+        "goals": 10,
+        "assists": 7,
+        "points": 17
       },
       {
         "player_id": "20220324",
@@ -786,7 +804,7 @@
         "position": "FW",
         "back_no": 17,
         "age": 26,
-        "apps": 26,
+        "apps": 27,
         "goals": 2,
         "assists": 5,
         "points": 7
@@ -798,7 +816,7 @@
         "position": "FW",
         "back_no": 79,
         "age": 26,
-        "apps": 10,
+        "apps": 12,
         "goals": 0,
         "assists": 3,
         "points": 3
@@ -810,7 +828,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 27,
-        "apps": 21,
+        "apps": 23,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -822,13 +840,13 @@
         "position": "FW",
         "back_no": 11,
         "age": 27,
-        "apps": 26,
-        "goals": 2,
+        "apps": 28,
+        "goals": 3,
         "assists": 2,
-        "points": 4
+        "points": 5
       }
     ],
-    "goal_share": 0.229
+    "goal_share": 0.27
   },
   "attendance": null,
   "context": {
