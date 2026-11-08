@@ -1,0 +1,1265 @@
+{
+  "meta": {
+    "game_id": "211",
+    "year": "2026",
+    "round": 36,
+    "competition": "하나은행 K리그1",
+    "home": {
+      "name": "전북",
+      "team_id": "K05"
+    },
+    "away": {
+      "name": "서울",
+      "team_id": "K09"
+    },
+    "opponent": "서울",
+    "ha": "H",
+    "jeonbuk_match": true,
+    "venue": "전주 월드컵",
+    "attendance_hint": {
+      "avg": 15360,
+      "games": 17,
+      "total": 261125
+    },
+    "kickoff": "2026-11-21T19:00:00+09:00",
+    "kickoff_label": "2026-11-21 19:00 KST",
+    "date_md": "11/21",
+    "label": "전북 VS 서울 (211, 11/21)",
+    "hours_to_kickoff": 308.3,
+    "within_48h": false,
+    "published": false,
+    "generated_at": "2026-11-08T22:42:45.735920+09:00",
+    "preview_hours": 48.0
+  },
+  "headline": "36R PREVIEW · 전북 vs 서울",
+  "thesis": "전북 vs 서울. 전북 최근 L W D D L, 서울 최근 W D D L L. 홈에서 실점 없이 측면 한 방을 노리는 것이 이 경기의 핵심입니다.",
+  "briefing": [
+    "전북 vs 서울. 전북 최근 L W D D L (1승 2무 2패 / 최근 5경기, 7득 8실). 서울은 W D D L L (1승 2무 2패 / 최근 5경기, 6득 7실).",
+    "최근 5경기 평균 — 전북 xG 1.13·슈팅 12.5·유효슈팅 4.2, 서울 xG 1.21·슈팅 10.5·유효슈팅 4.2. 패스 성공률 74.4% vs 68.0%.",
+    "올 시즌 맞대결 3경기 — 전북 0승 1무 2패.",
+    "경기장 전주 월드컵 · 전북 홈. 전주 홈에서 템포와 라인 높이를 올리는 쪽이 유리합니다.",
+    "선수 포커스 — 전북: 최근 가용 칠판 데이터 5경기 기준, 서울: 최근 가용 칠판 데이터 5경기 기준."
+  ],
+  "scout": {
+    "contrast": "전북은 비기는 흐름, 슈팅 많음, 수비 기회 허용 흐름이고, 서울은(는) 비기는 흐름, 수비 기회 허용, 낮은 블록형 그림입니다. 최근 xG 1.13 vs 1.21, 슈팅 12.5 vs 10.5, 유효슈팅 4.2 vs 4.2, 패스 성공률 74.4% vs 68.0%, 파이널 서드 터치 23.1% vs 21.6%, 평균 터치 높이 45.0 vs 50.0, 압박 19.8 vs 15.2입니다.",
+    "edge": [
+      "패스 성공률 74.4% vs 68.0%. 점유를 지키며 템포를 조절할 여지가 있습니다.",
+      "홈 이점. 전주에서 라인 높이를 올려도 관중·익숙한 공간이 받쳐 줍니다."
+    ],
+    "risk": [
+      "전북이 경기당 xGA 1.71를 허용 중입니다. 한 번의 정리 실패가 곧바로 실점으로 이어질 수 있습니다.",
+      "서울형 낮은 블록은 전북 템포를 죽입니다. 점유만 높고 마무리가 약하면 역습 한 방에 끌려갈 수 있습니다."
+    ],
+    "target": [
+      "박스 밖 남발보다 오버랩·하프스페이스 침투 후 컷백을 노리는 편이 맞습니다.",
+      "전북 측면 오버랩 후 컷백이 통하는지 — 중앙만 막히면 답답한 점유로 흐릅니다.",
+      "서울의 첫 압박 라인 높이 — 빌드업 실수를 줄이면 전북이 경기를 가져옵니다.",
+      "필드 틸트 지표: 파이널 서드 23.1% vs 21.6%, 터치 높이 45.0 vs 50.0.",
+      "리드 후 템포 관리 — 최근 K리그는 한 골 리드 뒤 역습 한 방이 승부를 가릅니다."
+    ],
+    "caution": [
+      "서울 세트피스와 역습 첫 패스. 짧은 순간의 마무리를 경계합니다."
+    ]
+  },
+  "matchup": {
+    "rows": [
+      {
+        "label": "경기당 xG",
+        "jeonbuk": 1.13,
+        "opponent": 1.21,
+        "better": "opponent"
+      },
+      {
+        "label": "경기당 xGA(허용 xG)",
+        "jeonbuk": 1.71,
+        "opponent": 1.48,
+        "better": "opponent"
+      },
+      {
+        "label": "슈팅",
+        "jeonbuk": 12.5,
+        "opponent": 10.5,
+        "better": "jeonbuk"
+      },
+      {
+        "label": "유효슈팅",
+        "jeonbuk": 4.2,
+        "opponent": 4.2,
+        "better": "even"
+      },
+      {
+        "label": "패스 성공률",
+        "jeonbuk": 74.4,
+        "opponent": 68.0,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "파이널 서드 터치",
+        "jeonbuk": 23.1,
+        "opponent": 21.6,
+        "suffix": "%",
+        "better": "jeonbuk"
+      },
+      {
+        "label": "압박 시도(PPDA proxy)",
+        "jeonbuk": 19.8,
+        "opponent": 15.2,
+        "better": "jeonbuk"
+      }
+    ],
+    "summary": "최근 4경기 기준 — 전북 xG 1.13 / xGA 1.71, 서울 xG 1.21 / xGA 1.48."
+  },
+  "pulse": {
+    "home": {
+      "name": "전북",
+      "sample": 5,
+      "points": 5,
+      "ppg": 1.0,
+      "goals_pg": 1.4,
+      "conceded_pg": 1.6,
+      "xg_delta": 2.49,
+      "xg_sample": 4,
+      "clean_sheets": 1
+    },
+    "away": {
+      "name": "서울",
+      "sample": 5,
+      "points": 5,
+      "ppg": 1.0,
+      "goals_pg": 1.2,
+      "conceded_pg": 1.4,
+      "xg_delta": 1.18,
+      "xg_sample": 4,
+      "clean_sheets": 0
+    },
+    "verdict": "최근 승점 흐름은 팽팽합니다. 한 번의 전환·세트피스가 결과를 바꿀 수 있는 매치업입니다.",
+    "sample_note": "최근 5경기 기준 · xG 대비 득점은 xG가 있는 경기만 반영"
+  },
+  "lineups": {
+    "home": {
+      "team": "전북",
+      "xi": [
+        {
+          "player_id": "20180025",
+          "name": "송범근",
+          "back_no": 31,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 519,
+          "score": 64.97
+        },
+        {
+          "player_id": "20220244",
+          "name": "티아고",
+          "back_no": 9,
+          "pos": "FW",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 476,
+          "score": 64.59
+        },
+        {
+          "player_id": "20150104",
+          "name": "이영재",
+          "back_no": 28,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 445,
+          "score": 64.41
+        },
+        {
+          "player_id": "20250353",
+          "name": "감보아",
+          "back_no": 16,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 398,
+          "score": 63.98
+        },
+        {
+          "player_id": "20130142",
+          "name": "박지수",
+          "back_no": 5,
+          "pos": "DF",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 397,
+          "score": 59.81
+        },
+        {
+          "player_id": "20260365",
+          "name": "이탈로",
+          "back_no": 95,
+          "pos": "FW",
+          "starts": 3,
+          "apps": 5,
+          "minutes": 363,
+          "score": 53.42
+        },
+        {
+          "player_id": "20220276",
+          "name": "강상윤",
+          "back_no": 13,
+          "pos": "MF",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 351,
+          "score": 52.55
+        },
+        {
+          "player_id": "20230029",
+          "name": "최우진",
+          "back_no": 66,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 330,
+          "score": 52.34
+        },
+        {
+          "player_id": "20170121",
+          "name": "이동준",
+          "back_no": 7,
+          "pos": "FW",
+          "starts": 4,
+          "apps": 4,
+          "minutes": 235,
+          "score": 42.35
+        },
+        {
+          "player_id": "20140143",
+          "name": "김영빈",
+          "back_no": 2,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 345,
+          "score": 38.27
+        },
+        {
+          "player_id": "20260374",
+          "name": "도도",
+          "back_no": 30,
+          "pos": "FW",
+          "starts": 1,
+          "apps": 5,
+          "minutes": 162,
+          "score": 27.62
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20180185",
+          "name": "김태현",
+          "back_no": 77,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 3,
+          "minutes": 275,
+          "score": 26.73
+        },
+        {
+          "player_id": "20220042",
+          "name": "이승우",
+          "back_no": 10,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 5,
+          "minutes": 303,
+          "score": 22.23
+        },
+        {
+          "player_id": "20160157",
+          "name": "연제운",
+          "back_no": 3,
+          "pos": "DF",
+          "starts": 1,
+          "apps": 2,
+          "minutes": 90,
+          "score": 22.1
+        },
+        {
+          "player_id": "20250159",
+          "name": "이상명",
+          "back_no": 24,
+          "pos": "DF",
+          "starts": 1,
+          "apps": 2,
+          "minutes": 92,
+          "score": 18.72
+        },
+        {
+          "player_id": "20150052",
+          "name": "김진규",
+          "back_no": 97,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 183,
+          "score": 18.03
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "excluded": [
+        {
+          "name": "조위제",
+          "reason": "경고 누적 출전정지"
+        }
+      ],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다. 제외: 조위제 · 경고 누적 출전정지."
+    },
+    "away": {
+      "team": "서울",
+      "xi": [
+        {
+          "player_id": "20200301",
+          "name": "구성윤",
+          "back_no": 25,
+          "pos": "GK",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 411,
+          "score": 63.99
+        },
+        {
+          "player_id": "20170185",
+          "name": "김진수",
+          "back_no": 22,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 411,
+          "score": 63.99
+        },
+        {
+          "player_id": "20260048",
+          "name": "로스",
+          "back_no": 37,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 411,
+          "score": 63.99
+        },
+        {
+          "player_id": "20240324",
+          "name": "야잔",
+          "back_no": 5,
+          "pos": "DF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 411,
+          "score": 63.99
+        },
+        {
+          "player_id": "20160099",
+          "name": "정승원",
+          "back_no": 7,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 411,
+          "score": 63.99
+        },
+        {
+          "player_id": "20240179",
+          "name": "안데르손",
+          "back_no": 10,
+          "pos": "FW",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 379,
+          "score": 63.78
+        },
+        {
+          "player_id": "20260045",
+          "name": "바베츠",
+          "back_no": 6,
+          "pos": "MF",
+          "starts": 5,
+          "apps": 5,
+          "minutes": 372,
+          "score": 63.66
+        },
+        {
+          "player_id": "20250331",
+          "name": "클리말라",
+          "back_no": 9,
+          "pos": "FW",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 326,
+          "score": 56.35
+        },
+        {
+          "player_id": "20260049",
+          "name": "손정범",
+          "back_no": 42,
+          "pos": "MF",
+          "starts": 4,
+          "apps": 5,
+          "minutes": 274,
+          "score": 49.09
+        },
+        {
+          "player_id": "20170229",
+          "name": "문선민",
+          "back_no": 27,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 5,
+          "minutes": 192,
+          "score": 41.52
+        },
+        {
+          "player_id": "20180233",
+          "name": "박수일",
+          "back_no": 66,
+          "pos": "DF",
+          "starts": 3,
+          "apps": 4,
+          "minutes": 260,
+          "score": 39.2
+        }
+      ],
+      "bench": [
+        {
+          "player_id": "20170052",
+          "name": "이승모",
+          "back_no": 8,
+          "pos": "MF",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 181,
+          "score": 31.61
+        },
+        {
+          "player_id": "20200041",
+          "name": "최준",
+          "back_no": 16,
+          "pos": "DF",
+          "starts": 2,
+          "apps": 4,
+          "minutes": 151,
+          "score": 29.71
+        },
+        {
+          "player_id": "20180073",
+          "name": "조영욱",
+          "back_no": 18,
+          "pos": "FW",
+          "starts": 1,
+          "apps": 2,
+          "minutes": 93,
+          "score": 9.53
+        },
+        {
+          "player_id": "20230093",
+          "name": "황도윤",
+          "back_no": 41,
+          "pos": "",
+          "starts": 0,
+          "apps": 2,
+          "minutes": 23,
+          "score": 4.43
+        },
+        {
+          "player_id": "20260349",
+          "name": "정현우",
+          "back_no": 14,
+          "pos": "",
+          "starts": 0,
+          "apps": 1,
+          "minutes": 0,
+          "score": 3.0
+        }
+      ],
+      "sample_games": 5,
+      "confidence": "높음",
+      "excluded": [],
+      "method": "최근 가용 경기의 선발 횟수·출전 시간·최신 경기 가중치로 산출(이적·경고누적 제외)",
+      "disclaimer": "예상 XI이며 부상·징계·당일 컨디션·감독 선택은 완벽히 반영되지 않을 수 있습니다. 공식 선발 명단과 다를 수 있습니다."
+    }
+  },
+  "h2h_summary": {
+    "wins": 0,
+    "draws": 1,
+    "losses": 2,
+    "games": 3
+  },
+  "form": {
+    "jeonbuk": [
+      {
+        "game_id": "181",
+        "year": "2026",
+        "round": 31,
+        "date": "2026-10-09",
+        "home": "대전",
+        "away": "전북",
+        "score": "2:1",
+        "result": "L",
+        "opponent": "대전",
+        "ha": "A",
+        "xg": 0.74,
+        "xga": 2.07,
+        "shots": 11,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 2
+      },
+      {
+        "game_id": "190",
+        "year": "2026",
+        "round": 32,
+        "date": "2026-10-18",
+        "home": "전북",
+        "away": "제주",
+        "score": "3:2",
+        "result": "W",
+        "opponent": "제주",
+        "ha": "H",
+        "xg": 1.69,
+        "xga": 2.53,
+        "shots": 15,
+        "sot": 6,
+        "goals_for": 3,
+        "goals_against": 2
+      },
+      {
+        "game_id": "194",
+        "year": "2026",
+        "round": 33,
+        "date": "2026-10-24",
+        "home": "안양",
+        "away": "전북",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "안양",
+        "ha": "A",
+        "xg": 1.54,
+        "xga": 1.19,
+        "shots": 15,
+        "sot": 5,
+        "goals_for": 1,
+        "goals_against": 1
+      },
+      {
+        "game_id": "199",
+        "year": "2026",
+        "round": 34,
+        "date": "2026-10-31",
+        "home": "전북",
+        "away": "대전",
+        "score": "0:0",
+        "result": "D",
+        "opponent": "대전",
+        "ha": "H",
+        "xg": 0.54,
+        "xga": 1.06,
+        "shots": 9,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 0
+      },
+      {
+        "game_id": "209",
+        "year": "2026",
+        "round": 35,
+        "date": "2026-11-08",
+        "home": "강원",
+        "away": "전북",
+        "score": "3:2",
+        "result": "L",
+        "opponent": "강원",
+        "ha": "A",
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": 2,
+        "goals_against": 3,
+        "stats_limited": false,
+        "score_source": "official",
+        "stats_source": "portal_score_only"
+      }
+    ],
+    "opponent": [
+      {
+        "game_id": "184",
+        "year": "2026",
+        "round": 31,
+        "date": "2026-10-10",
+        "home": "서울",
+        "away": "제주",
+        "score": "2:1",
+        "result": "W",
+        "opponent": "제주",
+        "ha": "H",
+        "xg": 0.94,
+        "xga": 1.03,
+        "shots": 11,
+        "sot": 7,
+        "goals_for": 2,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 65.2,
+        "final_third_pct": 21.8,
+        "presses": 13,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "187",
+        "year": "2026",
+        "round": 32,
+        "date": "2026-10-18",
+        "home": "서울",
+        "away": "김천",
+        "score": "2:2",
+        "result": "D",
+        "opponent": "김천",
+        "ha": "H",
+        "xg": 2.08,
+        "xga": 2.49,
+        "shots": 15,
+        "sot": 4,
+        "goals_for": 2,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 76.5,
+        "final_third_pct": 26.4,
+        "presses": 27,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "198",
+        "year": "2026",
+        "round": 33,
+        "date": "2026-10-24",
+        "home": "서울",
+        "away": "강원",
+        "score": "1:1",
+        "result": "D",
+        "opponent": "강원",
+        "ha": "H",
+        "xg": 1.31,
+        "xga": 1.87,
+        "shots": 9,
+        "sot": 4,
+        "goals_for": 1,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 62.4,
+        "final_third_pct": 20.5,
+        "presses": 8,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "203",
+        "year": "2026",
+        "round": 34,
+        "date": "2026-11-01",
+        "home": "서울",
+        "away": "인천",
+        "score": "0:1",
+        "result": "L",
+        "opponent": "인천",
+        "ha": "H",
+        "xg": 0.49,
+        "xga": 0.53,
+        "shots": 7,
+        "sot": 2,
+        "goals_for": 0,
+        "goals_against": 1,
+        "stats_limited": false,
+        "score_source": "official",
+        "pass_pct": 68.0,
+        "final_third_pct": 17.9,
+        "presses": 13,
+        "stats_source": "portal"
+      },
+      {
+        "game_id": "207",
+        "year": "2026",
+        "round": 35,
+        "date": "2026-11-08",
+        "home": "서울",
+        "away": "울산",
+        "score": "1:2",
+        "result": "L",
+        "opponent": "울산",
+        "ha": "H",
+        "xg": null,
+        "xga": null,
+        "shots": null,
+        "sot": null,
+        "goals_for": 1,
+        "goals_against": 2,
+        "stats_limited": false,
+        "score_source": "official",
+        "stats_source": "portal_score_only"
+      }
+    ]
+  },
+  "h2h": [
+    {
+      "game_id": "38",
+      "round": 7,
+      "date": "2026-04-11",
+      "home": "서울",
+      "away": "전북",
+      "score": "1:0",
+      "result": "L",
+      "venue": "서울 월드컵"
+    },
+    {
+      "game_id": "122",
+      "round": 21,
+      "date": "2026-08-01",
+      "home": "전북",
+      "away": "서울",
+      "score": "0:0",
+      "result": "D",
+      "venue": "전주 월드컵"
+    },
+    {
+      "game_id": "169",
+      "round": 29,
+      "date": "2026-09-12",
+      "home": "전북",
+      "away": "서울",
+      "score": "1:2",
+      "result": "L",
+      "venue": "전주 월드컵"
+    }
+  ],
+  "style": {
+    "jeonbuk": {
+      "name": "전북",
+      "team_id": "K05",
+      "tags": [
+        "비기는 흐름",
+        "슈팅 많음",
+        "수비 기회 허용",
+        "적극 압박",
+        "낮은 블록형"
+      ],
+      "record": "1승 2무 2패 / 최근 5경기",
+      "goals_for": 7,
+      "goals_against": 8,
+      "goal_diff": -1,
+      "avg_xg": 1.13,
+      "avg_xga": 1.71,
+      "avg_shots": 12.5,
+      "avg_sot": 4.2,
+      "avg_pass_pct": 74.4,
+      "avg_final_third_pct": 23.1,
+      "avg_presses": 19.8,
+      "avg_x": 45.0,
+      "samples": 4
+    },
+    "opponent": {
+      "name": "서울",
+      "team_id": "K09",
+      "tags": [
+        "비기는 흐름",
+        "수비 기회 허용",
+        "낮은 블록형"
+      ],
+      "record": "1승 2무 2패 / 최근 5경기",
+      "goals_for": 6,
+      "goals_against": 7,
+      "goal_diff": -1,
+      "avg_xg": 1.21,
+      "avg_xga": 1.48,
+      "avg_shots": 10.5,
+      "avg_sot": 4.2,
+      "avg_pass_pct": 68.0,
+      "avg_final_third_pct": 21.6,
+      "avg_presses": 15.2,
+      "avg_x": 50.0,
+      "samples": 4
+    }
+  },
+  "players": {
+    "jeonbuk": [
+      {
+        "player_id": "20220244",
+        "name": "티아고",
+        "back_no": 9,
+        "pos": "FW",
+        "games": 5,
+        "xg": 3.09,
+        "goals": 6,
+        "shots": 15,
+        "keypass": 8,
+        "touches": 191,
+        "press": 3,
+        "minutes": 476,
+        "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "stat_line": "최근 5경기 · xG 3.09 · 골 6 · 슈팅 15 · 키패스 8 · 터치 191"
+      },
+      {
+        "player_id": "20150104",
+        "name": "이영재",
+        "back_no": 28,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.3,
+        "goals": 0,
+        "shots": 9,
+        "keypass": 11,
+        "touches": 353,
+        "press": 35,
+        "minutes": 445,
+        "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "stat_line": "최근 5경기 · xG 0.3 · 골 0 · 슈팅 9 · 키패스 11 · 압박 35 · 터치 353"
+      },
+      {
+        "player_id": "20220042",
+        "name": "이승우",
+        "back_no": 10,
+        "pos": "대기",
+        "games": 5,
+        "xg": 0.53,
+        "goals": 0,
+        "shots": 5,
+        "keypass": 7,
+        "touches": 175,
+        "press": 6,
+        "minutes": 303,
+        "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "stat_line": "최근 5경기 · xG 0.53 · 골 0 · 슈팅 5 · 키패스 7 · 압박 6 · 터치 175"
+      },
+      {
+        "player_id": "20260365",
+        "name": "이탈로",
+        "back_no": 95,
+        "pos": "FW",
+        "games": 5,
+        "xg": 1.18,
+        "goals": 0,
+        "shots": 11,
+        "keypass": 1,
+        "touches": 155,
+        "press": 6,
+        "minutes": 363,
+        "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "stat_line": "최근 5경기 · xG 1.18 · 골 0 · 슈팅 11 · 키패스 1 · 압박 6 · 터치 155"
+      }
+    ],
+    "opponent_danger": [
+      {
+        "player_id": "20160099",
+        "name": "정승원",
+        "back_no": 7,
+        "pos": "MF",
+        "games": 5,
+        "xg": 1.56,
+        "goals": 3,
+        "shots": 13,
+        "keypass": 5,
+        "touches": 280,
+        "press": 30,
+        "minutes": 411,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 1.56 · 골 3 · 슈팅 13 · 키패스 5 · 압박 30 · 터치 280"
+      },
+      {
+        "player_id": "20250331",
+        "name": "클리말라",
+        "back_no": 9,
+        "pos": "FW",
+        "games": 5,
+        "xg": 2.77,
+        "goals": 4,
+        "shots": 13,
+        "keypass": 2,
+        "touches": 134,
+        "press": 1,
+        "minutes": 326,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 2.77 · 골 4 · 슈팅 13 · 키패스 2 · 터치 134"
+      },
+      {
+        "player_id": "20170229",
+        "name": "문선민",
+        "back_no": 27,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.3,
+        "goals": 1,
+        "shots": 3,
+        "keypass": 8,
+        "touches": 148,
+        "press": 9,
+        "minutes": 192,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 0.3 · 골 1 · 슈팅 3 · 키패스 8 · 압박 9 · 터치 148"
+      },
+      {
+        "player_id": "20240179",
+        "name": "안데르손",
+        "back_no": 10,
+        "pos": "FW",
+        "games": 5,
+        "xg": 0.73,
+        "goals": 0,
+        "shots": 4,
+        "keypass": 8,
+        "touches": 241,
+        "press": 7,
+        "minutes": 379,
+        "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "stat_line": "최근 5경기 · xG 0.73 · 골 0 · 슈팅 4 · 키패스 8 · 압박 7 · 터치 241"
+      }
+    ],
+    "opponent_hub": [
+      {
+        "player_id": "20170185",
+        "name": "김진수",
+        "back_no": 22,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.23,
+        "goals": 1,
+        "shots": 6,
+        "keypass": 6,
+        "touches": 320,
+        "press": 20,
+        "minutes": 411,
+        "note": "서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+        "stat_line": "최근 5경기 · xG 0.23 · 골 1 · 슈팅 6 · 키패스 6 · 압박 20 · 터치 320"
+      },
+      {
+        "player_id": "20260045",
+        "name": "바베츠",
+        "back_no": 6,
+        "pos": "MF",
+        "games": 5,
+        "xg": 0.57,
+        "goals": 1,
+        "shots": 6,
+        "keypass": 4,
+        "touches": 321,
+        "press": 1,
+        "minutes": 372,
+        "note": "서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+        "stat_line": "최근 5경기 · xG 0.57 · 골 1 · 슈팅 6 · 키패스 4 · 터치 321"
+      },
+      {
+        "player_id": "20260048",
+        "name": "로스",
+        "back_no": 37,
+        "pos": "DF",
+        "games": 5,
+        "xg": 0.08,
+        "goals": 0,
+        "shots": 1,
+        "keypass": 1,
+        "touches": 380,
+        "press": 0,
+        "minutes": 411,
+        "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "stat_line": "최근 5경기 · xG 0.08 · 골 0 · 슈팅 1 · 키패스 1 · 터치 380"
+      },
+      {
+        "player_id": "20170052",
+        "name": "이승모",
+        "back_no": 8,
+        "pos": "MF",
+        "games": 4,
+        "xg": 0.38,
+        "goals": 1,
+        "shots": 3,
+        "keypass": 3,
+        "touches": 85,
+        "press": 1,
+        "minutes": 181,
+        "note": "서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+        "stat_line": "최근 4경기 · xG 0.38 · 골 1 · 슈팅 3 · 키패스 3"
+      }
+    ],
+    "meta": {
+      "jeonbuk": {
+        "games": 5,
+        "sample_note": "최근 가용 칠판 데이터 5경기 기준",
+        "game_ids": [
+          "178",
+          "181",
+          "190",
+          "194",
+          "199"
+        ]
+      },
+      "opponent": {
+        "games": 5,
+        "sample_note": "최근 가용 칠판 데이터 5경기 기준",
+        "game_ids": [
+          "122",
+          "130",
+          "135",
+          "139",
+          "169"
+        ]
+      }
+    }
+  },
+  "cards": [
+    {
+      "key": "jb_key",
+      "label": "이번 경기 전북 핵심 선수",
+      "items": [
+        "#9 티아고 — 최근 5경기 · xG 3.09 · 골 6 · 슈팅 15 · 키패스 8 · 터치 191. 마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+        "#28 이영재 — 최근 5경기 · xG 0.3 · 골 0 · 슈팅 9 · 키패스 11 · 압박 35 · 터치 353. 키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "#10 이승우 — 최근 5경기 · xG 0.53 · 골 0 · 슈팅 5 · 키패스 7 · 압박 6 · 터치 175. 키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+        "#95 이탈로 — 최근 5경기 · xG 1.18 · 골 0 · 슈팅 11 · 키패스 1 · 압박 6 · 터치 155. 마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요."
+      ],
+      "players": [
+        {
+          "player_id": "20220244",
+          "name": "티아고",
+          "back_no": 9,
+          "pos": "FW",
+          "games": 5,
+          "xg": 3.09,
+          "goals": 6,
+          "shots": 15,
+          "keypass": 8,
+          "touches": 191,
+          "press": 3,
+          "minutes": 476,
+          "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+          "stat_line": "최근 5경기 · xG 3.09 · 골 6 · 슈팅 15 · 키패스 8 · 터치 191"
+        },
+        {
+          "player_id": "20150104",
+          "name": "이영재",
+          "back_no": 28,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.3,
+          "goals": 0,
+          "shots": 9,
+          "keypass": 11,
+          "touches": 353,
+          "press": 35,
+          "minutes": 445,
+          "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+          "stat_line": "최근 5경기 · xG 0.3 · 골 0 · 슈팅 9 · 키패스 11 · 압박 35 · 터치 353"
+        },
+        {
+          "player_id": "20220042",
+          "name": "이승우",
+          "back_no": 10,
+          "pos": "대기",
+          "games": 5,
+          "xg": 0.53,
+          "goals": 0,
+          "shots": 5,
+          "keypass": 7,
+          "touches": 175,
+          "press": 6,
+          "minutes": 303,
+          "note": "키패스로 공격 루트를 여는 타입. 하프스페이스·측면 전환의 종착점이 됩니다.",
+          "stat_line": "최근 5경기 · xG 0.53 · 골 0 · 슈팅 5 · 키패스 7 · 압박 6 · 터치 175"
+        },
+        {
+          "player_id": "20260365",
+          "name": "이탈로",
+          "back_no": 95,
+          "pos": "FW",
+          "games": 5,
+          "xg": 1.18,
+          "goals": 0,
+          "shots": 11,
+          "keypass": 1,
+          "touches": 155,
+          "press": 6,
+          "minutes": 363,
+          "note": "마무·기회 창출의 중심축. 박스 진입·컷백 완성도를 이 선수에게 연결하세요.",
+          "stat_line": "최근 5경기 · xG 1.18 · 골 0 · 슈팅 11 · 키패스 1 · 압박 6 · 터치 155"
+        }
+      ]
+    },
+    {
+      "key": "opp_watch",
+      "label": "조심해야 할 상대 선수",
+      "items": [
+        "#7 정승원 — 최근 5경기 · xG 1.56 · 골 3 · 슈팅 13 · 키패스 5 · 압박 30 · 터치 280. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "#9 클리말라 — 최근 5경기 · xG 2.77 · 골 4 · 슈팅 13 · 키패스 2 · 터치 134. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "#27 문선민 — 최근 5경기 · xG 0.3 · 골 1 · 슈팅 3 · 키패스 8 · 압박 9 · 터치 148. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+        "#10 안데르손 — 최근 5경기 · xG 0.73 · 골 0 · 슈팅 4 · 키패스 8 · 압박 7 · 터치 241. 박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요."
+      ],
+      "players": [
+        {
+          "player_id": "20160099",
+          "name": "정승원",
+          "back_no": 7,
+          "pos": "MF",
+          "games": 5,
+          "xg": 1.56,
+          "goals": 3,
+          "shots": 13,
+          "keypass": 5,
+          "touches": 280,
+          "press": 30,
+          "minutes": 411,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 1.56 · 골 3 · 슈팅 13 · 키패스 5 · 압박 30 · 터치 280"
+        },
+        {
+          "player_id": "20250331",
+          "name": "클리말라",
+          "back_no": 9,
+          "pos": "FW",
+          "games": 5,
+          "xg": 2.77,
+          "goals": 4,
+          "shots": 13,
+          "keypass": 2,
+          "touches": 134,
+          "press": 1,
+          "minutes": 326,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 2.77 · 골 4 · 슈팅 13 · 키패스 2 · 터치 134"
+        },
+        {
+          "player_id": "20170229",
+          "name": "문선민",
+          "back_no": 27,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.3,
+          "goals": 1,
+          "shots": 3,
+          "keypass": 8,
+          "touches": 148,
+          "press": 9,
+          "minutes": 192,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 0.3 · 골 1 · 슈팅 3 · 키패스 8 · 압박 9 · 터치 148"
+        },
+        {
+          "player_id": "20240179",
+          "name": "안데르손",
+          "back_no": 10,
+          "pos": "FW",
+          "games": 5,
+          "xg": 0.73,
+          "goals": 0,
+          "shots": 4,
+          "keypass": 8,
+          "touches": 241,
+          "press": 7,
+          "minutes": 379,
+          "note": "박스 안·주변 마무리를 최우선 마크. 세트피스·크로스가 오면 1순위로 붙으세요.",
+          "stat_line": "최근 5경기 · xG 0.73 · 골 0 · 슈팅 4 · 키패스 8 · 압박 7 · 터치 241"
+        }
+      ]
+    },
+    {
+      "key": "opp_hub",
+      "label": "최근 서울 전개·공격 중심",
+      "items": [
+        "#22 김진수 — 최근 5경기 · xG 0.23 · 골 1 · 슈팅 6 · 키패스 6 · 압박 20 · 터치 320. 서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+        "#6 바베츠 — 최근 5경기 · xG 0.57 · 골 1 · 슈팅 6 · 키패스 4 · 터치 321. 서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+        "#37 로스 — 최근 5경기 · xG 0.08 · 골 0 · 슈팅 1 · 키패스 1 · 터치 380. 볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+        "#8 이승모 — 최근 4경기 · xG 0.38 · 골 1 · 슈팅 3 · 키패스 3. 서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요."
+      ],
+      "players": [
+        {
+          "player_id": "20170185",
+          "name": "김진수",
+          "back_no": 22,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.23,
+          "goals": 1,
+          "shots": 6,
+          "keypass": 6,
+          "touches": 320,
+          "press": 20,
+          "minutes": 411,
+          "note": "서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+          "stat_line": "최근 5경기 · xG 0.23 · 골 1 · 슈팅 6 · 키패스 6 · 압박 20 · 터치 320"
+        },
+        {
+          "player_id": "20260045",
+          "name": "바베츠",
+          "back_no": 6,
+          "pos": "MF",
+          "games": 5,
+          "xg": 0.57,
+          "goals": 1,
+          "shots": 6,
+          "keypass": 4,
+          "touches": 321,
+          "press": 1,
+          "minutes": 372,
+          "note": "서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+          "stat_line": "최근 5경기 · xG 0.57 · 골 1 · 슈팅 6 · 키패스 4 · 터치 321"
+        },
+        {
+          "player_id": "20260048",
+          "name": "로스",
+          "back_no": 37,
+          "pos": "DF",
+          "games": 5,
+          "xg": 0.08,
+          "goals": 0,
+          "shots": 1,
+          "keypass": 1,
+          "touches": 380,
+          "press": 0,
+          "minutes": 411,
+          "note": "볼 순환의 허브. 압박 타이밍을 여기에 맞추면 상대 템포가 죽습니다.",
+          "stat_line": "최근 5경기 · xG 0.08 · 골 0 · 슈팅 1 · 키패스 1 · 터치 380"
+        },
+        {
+          "player_id": "20170052",
+          "name": "이승모",
+          "back_no": 8,
+          "pos": "MF",
+          "games": 4,
+          "xg": 0.38,
+          "goals": 1,
+          "shots": 3,
+          "keypass": 3,
+          "touches": 85,
+          "press": 1,
+          "minutes": 181,
+          "note": "서울 최근 공격이 이 선수의 연결을 거쳐 가는 비중이 큽니다. 압박 트리거로 잡으세요.",
+          "stat_line": "최근 4경기 · xG 0.38 · 골 1 · 슈팅 3 · 키패스 3"
+        }
+      ]
+    },
+    {
+      "key": "prep",
+      "label": "서울 스타일 대비법",
+      "items": [
+        "서울은(는) 낮은 블록·후방 점유 비중이 큽니다. 중앙 고집보다 측면 오버랩 후 컷백·하프스페이스 침투로 박스를 열어야 합니다.",
+        "서울 허용 xG 1.48로 수비 구멍이 있습니다. 초반 압박으로 실수를 유도한 뒤 빠른 전환으로 xG를 쌓는 편이 맞습니다.",
+        "서울 최근 비기는 흐름입니다. 선제골 이후 템포를 죽이지 말고 두 번째 슈팅 루트까지 밀어붙여야 승점 3이 열립니다.",
+        "홈에서는 초반부터 라인 높이를 올려 상대를 하프라인 밖으로 밀어내고, 관중 앞에서 전환 속도를 유지하세요.",
+        "전북 패스 성공률 74.4%가 서울(68.0%)보다 높습니다. 점유를 지키되 박스 밖 남발은 줄이고 컷백 완성도를 올리세요."
+      ],
+      "players": []
+    }
+  ],
+  "sources": [
+    "c_report/data/schedule.json",
+    "c_report/data/index.json",
+    "c_report chalk board match files",
+    "c_report/data/club-attendance.json"
+  ],
+  "note": "킥오프 시각이 일정에 없으면 당일 19:00 KST로 가정합니다. 포털 확정 시각과 다를 수 있습니다. 선수 포커스는 가용 칠판 경기 기준입니다."
+}

@@ -1,37 +1,22 @@
 {
-  "updated_at": "2026-11-08T15:20:33.700338+09:00",
+  "updated_at": "2026-11-08T22:42:45.737163+09:00",
   "preview_hours": 48.0,
-  "active_game_id": "209",
+  "active_game_id": "211",
   "matches": [
     {
-      "game_id": "209",
+      "game_id": "211",
       "year": "2026",
-      "round": 35,
-      "home": "강원",
-      "away": "전북",
-      "kickoff": "2026-11-08T19:00:00+09:00",
-      "kickoff_label": "2026-11-08 19:00 KST",
-      "hours_to_kickoff": 3.7,
-      "within_48h": true,
-      "published": true,
+      "round": 36,
+      "home": "전북",
+      "away": "서울",
+      "kickoff": "2026-11-21T19:00:00+09:00",
+      "kickoff_label": "2026-11-21 19:00 KST",
+      "hours_to_kickoff": 308.3,
+      "within_48h": false,
+      "published": false,
       "jeonbuk_match": true,
-      "headline": "35R PREVIEW · 강원 vs 전북",
-      "file": "./data/209.json"
-    },
-    {
-      "game_id": "210",
-      "year": "2026",
-      "round": 35,
-      "home": "부천",
-      "away": "포항",
-      "kickoff": "2026-11-08T19:00:00+09:00",
-      "kickoff_label": "2026-11-08 19:00 KST",
-      "hours_to_kickoff": 3.7,
-      "within_48h": true,
-      "published": true,
-      "jeonbuk_match": false,
-      "headline": "35R PREVIEW · 부천 vs 포항",
-      "file": "./data/210.json"
+      "headline": "36R PREVIEW · 전북 vs 서울",
+      "file": "./data/211.json"
     }
   ]
 }
