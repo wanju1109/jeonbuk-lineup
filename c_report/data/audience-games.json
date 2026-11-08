@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-11-07T19:11:21.452103+00:00",
+  "updated_at": "2026-11-08T19:14:45.336367+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
-  "count": 206,
+  "count": 210,
   "games": {
     "72": {
       "game_id": "72",
@@ -450,6 +450,20 @@
       "attendance": 13147,
       "attendance_home": 11554,
       "attendance_away": 1593,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
+    "207": {
+      "game_id": "207",
+      "year": "2026",
+      "date": "2026-11-08",
+      "home": "서울",
+      "away": "울산",
+      "score": "1:2",
+      "venue": "서울 월드컵 경기장",
+      "attendance": 13037,
+      "attendance_home": 11895,
+      "attendance_away": 1142,
       "weekday": "주말",
       "meet_seq": 1
     },
@@ -1615,6 +1629,20 @@
       "weekday": "-",
       "meet_seq": 1
     },
+    "208": {
+      "game_id": "208",
+      "year": "2026",
+      "date": "2026-11-08",
+      "home": "대전",
+      "away": "인천",
+      "score": "2:0",
+      "venue": "대전 월드컵 경기장",
+      "attendance": 6387,
+      "attendance_home": 5058,
+      "attendance_away": 1329,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
     "21": {
       "game_id": "21",
       "year": "2026",
@@ -2203,6 +2231,20 @@
       "weekday": "주말",
       "meet_seq": 1
     },
+    "209": {
+      "game_id": "209",
+      "year": "2026",
+      "date": "2026-11-08",
+      "home": "강원",
+      "away": "전북",
+      "score": "3:2",
+      "venue": "강릉하이원아레나",
+      "attendance": 4206,
+      "attendance_home": 3850,
+      "attendance_away": 356,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
     "24": {
       "game_id": "24",
       "year": "2026",
@@ -2327,6 +2369,20 @@
       "attendance_home": 2056,
       "attendance_away": 1547,
       "weekday": "-",
+      "meet_seq": 1
+    },
+    "210": {
+      "game_id": "210",
+      "year": "2026",
+      "date": "2026-11-08",
+      "home": "부천",
+      "away": "포항",
+      "score": "2:2",
+      "venue": "부천 종합 운동장",
+      "attendance": 3585,
+      "attendance_home": 3391,
+      "attendance_away": 194,
+      "weekday": "주말",
       "meet_seq": 1
     },
     "112": {
@@ -2856,8 +2912,8 @@
       "score": "1:0",
       "venue": "김천 종합 운동장",
       "attendance": 1125,
-      "attendance_home": 1125,
-      "attendance_away": 0,
+      "attendance_home": 835,
+      "attendance_away": 290,
       "weekday": "주말",
       "meet_seq": 1
     },
