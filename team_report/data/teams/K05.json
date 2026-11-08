@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
-    "played": 34,
+    "played": 35,
     "win": 12,
     "draw": 13,
-    "loss": 9,
-    "gf": 43,
-    "ga": 33,
-    "gd": 10,
+    "loss": 10,
+    "gf": 45,
+    "ga": 36,
+    "gd": 9,
     "points": 49,
-    "ppg": 1.44,
-    "remaining": 9,
+    "ppg": 1.4,
+    "remaining": 8,
     "scheduled": 43,
     "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 0,
-    "gap_below": 1,
-    "above": "인천",
-    "below": "강원"
+    "gap_above": 2,
+    "gap_below": 0,
+    "above": "강원",
+    "below": "인천"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.65
     },
     "away": {
-      "played": 17,
+      "played": 18,
       "win": 4,
       "draw": 9,
-      "loss": 4,
-      "gf": 17,
-      "ga": 14,
-      "gd": 3,
+      "loss": 5,
+      "gf": 19,
+      "ga": 17,
+      "gd": 2,
       "points": 21,
-      "ppg": 1.24
+      "ppg": 1.17
     }
   },
   "form": {
@@ -90,18 +90,18 @@
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "last5": [
-      "D",
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "last10": [
       "D",
-      "D",
       "W",
       "D",
       "L",
@@ -109,31 +109,32 @@
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 1,
-      "draw": 3,
-      "loss": 1,
+      "draw": 2,
+      "loss": 2,
       "gf": 7,
-      "ga": 7,
-      "gd": 0,
-      "points": 6
+      "ga": 8,
+      "gd": -1,
+      "points": 5
     },
     "last10_record": {
       "played": 10,
       "win": 2,
-      "draw": 6,
-      "loss": 2,
-      "gf": 12,
-      "ga": 11,
-      "gd": 1,
-      "points": 12
+      "draw": 5,
+      "loss": 3,
+      "gf": 14,
+      "ga": 14,
+      "gd": 0,
+      "points": 11
     },
     "streaks": {
-      "current_type": "D",
-      "current_len": 2,
+      "current_type": "L",
+      "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 6,
       "longest_winless": 4,
@@ -141,12 +142,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.26,
-    "ga_per_game": 0.97,
+    "gf_per_game": 1.29,
+    "ga_per_game": 1.03,
     "clean_sheets": 14,
     "failed_to_score": 8,
-    "both_scored": 18,
-    "one_goal_games": 14,
+    "both_scored": 19,
+    "one_goal_games": 15,
     "biggest_win": {
       "round": 12,
       "date": "2026-05-05",
@@ -193,7 +194,7 @@
       },
       {
         "round": 4,
-        "rank": 6,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -412,8 +413,8 @@
         "round": 35,
         "rank": 5,
         "points": 49,
-        "played": 34,
-        "gd": 10
+        "played": 35,
+        "gd": 9
       }
     ],
     "best_rank": 2,
@@ -430,15 +431,15 @@
       "ppg": 1.58
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 4,
       "draw": 7,
-      "loss": 4,
-      "gf": 18,
-      "ga": 17,
-      "gd": 1,
+      "loss": 5,
+      "gf": 20,
+      "ga": 20,
+      "gd": 0,
       "points": 19,
-      "ppg": 1.27
+      "ppg": 1.19
     }
   },
   "fixtures": [
@@ -781,6 +782,16 @@
       "gf": 0,
       "ga": 0,
       "result": "D"
+    },
+    {
+      "round": 35,
+      "date": "2026-11-08",
+      "venue": "A",
+      "opponent_id": "K21",
+      "opponent": "강원 FC",
+      "gf": 2,
+      "ga": 3,
+      "result": "L"
     }
   ],
   "squad": {
@@ -911,19 +922,20 @@
         "points": 6
       }
     ],
-    "goal_share": 0.256
+    "goal_share": 0.244
   },
   "attendance": {
     "avg": 15360,
     "total": 261125,
     "games": 17,
     "home_fans_avg": 14263,
-    "away_fans_avg": 2059
+    "away_fans_avg": 1964
   },
   "context": {
     "band": "파이널A 경쟁",
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
+      "화력 우위",
       "수비 안정",
       "클린시트 다수",
       "무승부 체질"

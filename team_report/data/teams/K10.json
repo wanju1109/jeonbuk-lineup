@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k10-sm.png",
   "home_url": "https://www.dhcfc.kr",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
     "rank": 3,
     "teams": 12,
-    "played": 34,
-    "win": 13,
+    "played": 35,
+    "win": 14,
     "draw": 11,
     "loss": 10,
-    "gf": 53,
+    "gf": 55,
     "ga": 41,
-    "gd": 12,
-    "points": 50,
-    "ppg": 1.47,
-    "remaining": 9,
+    "gd": 14,
+    "points": 53,
+    "ppg": 1.51,
+    "remaining": 8,
     "scheduled": 43,
-    "gap_to_leader": 17,
+    "gap_to_leader": 14,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 4,
-    "gap_below": 1,
+    "gap_below": 2,
     "above": "울산",
-    "below": "인천"
+    "below": "강원"
   },
   "splits": {
     "home": {
-      "played": 17,
-      "win": 6,
+      "played": 18,
+      "win": 7,
       "draw": 6,
       "loss": 5,
-      "gf": 24,
+      "gf": 26,
       "ga": 22,
-      "gd": 2,
-      "points": 24,
-      "ppg": 1.41
+      "gd": 4,
+      "points": 27,
+      "ppg": 1.5
     },
     "away": {
       "played": 17,
@@ -90,17 +90,17 @@
       "W",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
+      "W",
+      "W",
+      "W",
       "D",
-      "W",
-      "W",
-      "W",
-      "D"
+      "W"
     ],
     "last10": [
-      "W",
       "L",
       "W",
       "W",
@@ -109,17 +109,18 @@
       "W",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
-      "draw": 2,
+      "win": 4,
+      "draw": 1,
       "loss": 0,
-      "gf": 8,
-      "ga": 5,
-      "gd": 3,
-      "points": 11
+      "gf": 9,
+      "ga": 4,
+      "gd": 5,
+      "points": 13
     },
     "last10_record": {
       "played": 10,
@@ -127,23 +128,23 @@
       "draw": 3,
       "loss": 1,
       "gf": 21,
-      "ga": 13,
-      "gd": 8,
+      "ga": 12,
+      "gd": 9,
       "points": 21
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 3,
-      "longest_unbeaten": 8,
+      "longest_unbeaten": 9,
       "longest_winless": 9,
       "longest_loss": 3
     }
   },
   "scoring": {
-    "gf_per_game": 1.56,
-    "ga_per_game": 1.21,
-    "clean_sheets": 9,
+    "gf_per_game": 1.57,
+    "ga_per_game": 1.17,
+    "clean_sheets": 10,
     "failed_to_score": 10,
     "both_scored": 19,
     "one_goal_games": 12,
@@ -207,7 +208,7 @@
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -411,9 +412,9 @@
       {
         "round": 35,
         "rank": 3,
-        "points": 50,
-        "played": 34,
-        "gd": 12
+        "points": 53,
+        "played": 35,
+        "gd": 14
       }
     ],
     "best_rank": 3,
@@ -430,15 +431,15 @@
       "ppg": 1.05
     },
     "second_half": {
-      "played": 15,
-      "win": 9,
+      "played": 16,
+      "win": 10,
       "draw": 3,
       "loss": 3,
-      "gf": 32,
+      "gf": 34,
       "ga": 21,
-      "gd": 11,
-      "points": 30,
-      "ppg": 2.0
+      "gd": 13,
+      "points": 33,
+      "ppg": 2.06
     }
   },
   "fixtures": [
@@ -781,6 +782,16 @@
       "gf": 0,
       "ga": 0,
       "result": "D"
+    },
+    {
+      "round": 35,
+      "date": "2026-11-08",
+      "venue": "H",
+      "opponent_id": "K18",
+      "opponent": "인천 유나이티드",
+      "gf": 2,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -911,13 +922,13 @@
         "points": 4
       }
     ],
-    "goal_share": 0.151
+    "goal_share": 0.145
   },
   "attendance": {
-    "avg": 8001,
-    "total": 136015,
-    "games": 17,
-    "home_fans_avg": 6737,
+    "avg": 7911,
+    "total": 142402,
+    "games": 18,
+    "home_fans_avg": 6644,
     "away_fans_avg": 845
   },
   "context": {

@@ -8,22 +8,22 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:11+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
-    "played": 29,
+    "played": 30,
     "win": 14,
     "draw": 6,
-    "loss": 9,
+    "loss": 10,
     "gf": 47,
-    "ga": 37,
-    "gd": 10,
+    "ga": 38,
+    "gd": 9,
     "points": 48,
-    "ppg": 1.66,
-    "remaining": 3,
+    "ppg": 1.6,
+    "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 15,
+    "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 8,
@@ -44,15 +44,15 @@
       "ppg": 2.0
     },
     "away": {
-      "played": 14,
+      "played": 15,
       "win": 5,
       "draw": 3,
-      "loss": 6,
+      "loss": 7,
       "gf": 21,
-      "ga": 22,
-      "gd": -1,
+      "ga": 23,
+      "gd": -2,
       "points": 18,
-      "ppg": 1.29
+      "ppg": 1.2
     }
   },
   "form": {
@@ -85,17 +85,17 @@
       "L",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "W",
       "L",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "L",
       "D",
       "D",
       "L",
@@ -104,17 +104,18 @@
       "L",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
+      "win": 2,
       "draw": 1,
-      "loss": 1,
-      "gf": 8,
-      "ga": 4,
-      "gd": 4,
-      "points": 10
+      "loss": 2,
+      "gf": 6,
+      "ga": 5,
+      "gd": 1,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
@@ -122,13 +123,13 @@
       "draw": 3,
       "loss": 4,
       "gf": 10,
-      "ga": 10,
-      "gd": 0,
+      "ga": 9,
+      "gd": 1,
       "points": 12
     },
     "streaks": {
-      "current_type": "W",
-      "current_len": 2,
+      "current_type": "L",
+      "current_len": 1,
       "longest_win": 7,
       "longest_unbeaten": 8,
       "longest_winless": 8,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.62,
-    "ga_per_game": 1.28,
+    "gf_per_game": 1.57,
+    "ga_per_game": 1.27,
     "clean_sheets": 6,
-    "failed_to_score": 5,
+    "failed_to_score": 6,
     "both_scored": 19,
-    "one_goal_games": 14,
+    "one_goal_games": 15,
     "biggest_win": {
       "round": 14,
       "date": "2026-05-30",
@@ -167,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 10,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -386,12 +387,12 @@
         "round": 32,
         "rank": 5,
         "points": 48,
-        "played": 29,
-        "gd": 10
+        "played": 30,
+        "gd": 9
       }
     ],
     "best_rank": 1,
-    "worst_rank": 10,
+    "worst_rank": 9,
     "first_half": {
       "played": 16,
       "win": 11,
@@ -404,15 +405,15 @@
       "ppg": 2.25
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 3,
       "draw": 3,
-      "loss": 7,
+      "loss": 8,
       "gf": 12,
-      "ga": 17,
-      "gd": -5,
+      "ga": 18,
+      "gd": -6,
       "points": 12,
-      "ppg": 0.92
+      "ppg": 0.86
     }
   },
   "fixtures": [
@@ -705,6 +706,16 @@
       "gf": 3,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-08",
+      "venue": "A",
+      "opponent_id": "K38",
+      "opponent": "천안 시티",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -842,6 +853,7 @@
     "band": "승격 플레이오프권",
     "detail": "3위부터 6위가 겨루는 플레이오프 진입권. 순위 한 칸이 대진을 통째로 바꿉니다.",
     "tags": [
+      "홈 강세",
       "한 골 승부사"
     ]
   },

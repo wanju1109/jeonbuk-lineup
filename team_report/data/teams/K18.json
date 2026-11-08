@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
-    "rank": 4,
+    "rank": 6,
     "teams": 12,
-    "played": 34,
+    "played": 35,
     "win": 13,
     "draw": 10,
-    "loss": 11,
+    "loss": 12,
     "gf": 44,
-    "ga": 35,
-    "gd": 9,
+    "ga": 37,
+    "gd": 7,
     "points": 49,
-    "ppg": 1.44,
-    "remaining": 9,
+    "ppg": 1.4,
+    "remaining": 8,
     "scheduled": 43,
     "gap_to_leader": 18,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 0,
-    "above": "대전",
-    "below": "전북"
+    "gap_above": 0,
+    "gap_below": 1,
+    "above": "전북",
+    "below": "제주"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.47
     },
     "away": {
-      "played": 17,
+      "played": 18,
       "win": 6,
       "draw": 6,
-      "loss": 5,
+      "loss": 6,
       "gf": 21,
-      "ga": 18,
-      "gd": 3,
+      "ga": 20,
+      "gd": 1,
       "points": 24,
-      "ppg": 1.41
+      "ppg": 1.33
     }
   },
   "form": {
@@ -90,17 +90,17 @@
       "W",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "D",
       "W",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "D",
       "L",
       "W",
       "L",
@@ -109,31 +109,32 @@
       "W",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
       "win": 3,
-      "draw": 2,
-      "loss": 0,
+      "draw": 1,
+      "loss": 1,
       "gf": 8,
-      "ga": 2,
-      "gd": 6,
-      "points": 11
+      "ga": 4,
+      "gd": 4,
+      "points": 10
     },
     "last10_record": {
       "played": 10,
       "win": 4,
-      "draw": 4,
-      "loss": 2,
-      "gf": 13,
-      "ga": 8,
-      "gd": 5,
-      "points": 16
+      "draw": 3,
+      "loss": 3,
+      "gf": 12,
+      "ga": 9,
+      "gd": 3,
+      "points": 15
     },
     "streaks": {
-      "current_type": "W",
-      "current_len": 2,
+      "current_type": "L",
+      "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 6,
       "longest_winless": 4,
@@ -141,10 +142,10 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.29,
-    "ga_per_game": 1.03,
+    "gf_per_game": 1.26,
+    "ga_per_game": 1.06,
     "clean_sheets": 10,
-    "failed_to_score": 7,
+    "failed_to_score": 8,
     "both_scored": 19,
     "one_goal_games": 19,
     "biggest_win": {
@@ -410,10 +411,10 @@
       },
       {
         "round": 35,
-        "rank": 4,
+        "rank": 6,
         "points": 49,
-        "played": 34,
-        "gd": 9
+        "played": 35,
+        "gd": 7
       }
     ],
     "best_rank": 4,
@@ -430,15 +431,15 @@
       "ppg": 1.42
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 5,
       "draw": 7,
-      "loss": 3,
+      "loss": 4,
       "gf": 20,
-      "ga": 15,
-      "gd": 5,
+      "ga": 17,
+      "gd": 3,
       "points": 22,
-      "ppg": 1.47
+      "ppg": 1.38
     }
   },
   "fixtures": [
@@ -781,6 +782,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 35,
+      "date": "2026-11-08",
+      "venue": "A",
+      "opponent_id": "K10",
+      "opponent": "대전 하나",
+      "gf": 0,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -918,13 +929,12 @@
     "total": 171716,
     "games": 17,
     "home_fans_avg": 8945,
-    "away_fans_avg": 1476
+    "away_fans_avg": 1468
   },
   "context": {
     "band": "파이널A 경쟁",
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
-      "화력 우위",
       "수비 안정",
       "한 골 승부사"
     ]

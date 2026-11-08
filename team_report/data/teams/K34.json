@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:11+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
-    "played": 29,
+    "played": 30,
     "win": 11,
-    "draw": 9,
+    "draw": 10,
     "loss": 9,
-    "gf": 41,
-    "ga": 33,
+    "gf": 42,
+    "ga": 34,
     "gd": 8,
-    "points": 42,
-    "ppg": 1.45,
-    "remaining": 3,
+    "points": 43,
+    "ppg": 1.43,
+    "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 21,
-    "gap_to_cut": 6,
+    "gap_to_leader": 23,
+    "gap_to_cut": 5,
     "cut_rank": 6,
-    "gap_above": 6,
-    "gap_below": 3,
+    "gap_above": 5,
+    "gap_below": 4,
     "above": "화성",
     "below": "김포"
   },
@@ -44,14 +44,14 @@
       "ppg": 1.87
     },
     "away": {
-      "played": 14,
+      "played": 15,
       "win": 3,
-      "draw": 5,
+      "draw": 6,
       "loss": 6,
-      "gf": 12,
-      "ga": 15,
+      "gf": 13,
+      "ga": 16,
       "gd": -3,
-      "points": 14,
+      "points": 15,
       "ppg": 1.0
     }
   },
@@ -85,17 +85,17 @@
       "D",
       "D",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
-      "W",
       "D",
       "D",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "last10": [
-      "D",
       "L",
       "W",
       "L",
@@ -104,17 +104,18 @@
       "D",
       "D",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
-      "draw": 2,
+      "win": 2,
+      "draw": 3,
       "loss": 0,
-      "gf": 10,
+      "gf": 8,
       "ga": 3,
-      "gd": 7,
-      "points": 11
+      "gd": 5,
+      "points": 9
     },
     "last10_record": {
       "played": 10,
@@ -127,20 +128,20 @@
       "points": 15
     },
     "streaks": {
-      "current_type": "W",
-      "current_len": 2,
+      "current_type": "D",
+      "current_len": 1,
       "longest_win": 2,
-      "longest_unbeaten": 5,
+      "longest_unbeaten": 6,
       "longest_winless": 4,
       "longest_loss": 2
     }
   },
   "scoring": {
-    "gf_per_game": 1.41,
-    "ga_per_game": 1.14,
+    "gf_per_game": 1.4,
+    "ga_per_game": 1.13,
     "clean_sheets": 8,
     "failed_to_score": 8,
-    "both_scored": 16,
+    "both_scored": 17,
     "one_goal_games": 11,
     "biggest_win": {
       "round": 31,
@@ -195,14 +196,14 @@
       },
       {
         "round": 5,
-        "rank": 7,
+        "rank": 8,
         "points": 6,
         "played": 4,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 9,
         "played": 5,
         "gd": 2
@@ -385,8 +386,8 @@
       {
         "round": 32,
         "rank": 7,
-        "points": 42,
-        "played": 29,
+        "points": 43,
+        "played": 30,
         "gd": 8
       }
     ],
@@ -404,15 +405,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 13,
+      "played": 14,
       "win": 5,
-      "draw": 3,
+      "draw": 4,
       "loss": 5,
-      "gf": 17,
-      "ga": 14,
+      "gf": 18,
+      "ga": 15,
       "gd": 3,
-      "points": 18,
-      "ppg": 1.38
+      "points": 19,
+      "ppg": 1.36
     }
   },
   "fixtures": [
@@ -705,6 +706,16 @@
       "gf": 5,
       "ga": 1,
       "result": "W"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-08",
+      "venue": "A",
+      "opponent_id": "K40",
+      "opponent": "파주 프런티어",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -835,7 +846,7 @@
         "points": 10
       }
     ],
-    "goal_share": 0.22
+    "goal_share": 0.214
   },
   "attendance": null,
   "context": {
@@ -843,7 +854,8 @@
     "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
       "수비 안정",
-      "홈 강세"
+      "홈 강세",
+      "무승부 체질"
     ]
   },
   "profile": {

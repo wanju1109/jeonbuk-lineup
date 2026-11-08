@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -24,11 +24,11 @@
     "remaining": 8,
     "scheduled": 43,
     "gap_to_leader": 19,
-    "gap_to_cut": 0,
+    "gap_to_cut": 1,
     "cut_rank": 6,
-    "gap_above": 0,
+    "gap_above": 1,
     "gap_below": 2,
-    "above": "강원",
+    "above": "인천",
     "below": "안양"
   },
   "splits": {
@@ -173,7 +173,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -933,8 +933,9 @@
   },
   "context": {
     "band": "파이널A 추격",
-    "detail": "6위와 0점 차. 상위 스플릿이 아직 사정권입니다.",
+    "detail": "6위와 1점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
+      "실리 축구",
       "무승부 체질",
       "한 골 승부사"
     ]

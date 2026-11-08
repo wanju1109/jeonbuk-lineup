@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
     "rank": 2,
     "teams": 17,
@@ -23,10 +23,10 @@
     "ppg": 2.0,
     "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 3,
+    "gap_to_leader": 6,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 3,
+    "gap_above": 6,
     "gap_below": 3,
     "above": "수원",
     "below": "서울E"

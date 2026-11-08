@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k02-sm.png",
   "home_url": "https://www.bluewings.kr",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
     "rank": 1,
     "teams": 17,
-    "played": 29,
-    "win": 19,
+    "played": 30,
+    "win": 20,
     "draw": 6,
     "loss": 4,
-    "gf": 50,
+    "gf": 52,
     "ga": 25,
-    "gd": 25,
-    "points": 63,
-    "ppg": 2.17,
-    "remaining": 3,
+    "gd": 27,
+    "points": 66,
+    "ppg": 2.2,
+    "remaining": 2,
     "scheduled": 32,
     "gap_to_leader": 0,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": null,
-    "gap_below": 3,
+    "gap_below": 6,
     "above": "",
     "below": "수원FC"
   },
   "splits": {
     "home": {
-      "played": 14,
-      "win": 9,
+      "played": 15,
+      "win": 10,
       "draw": 4,
       "loss": 1,
-      "gf": 23,
+      "gf": 25,
       "ga": 11,
-      "gd": 12,
-      "points": 31,
-      "ppg": 2.21
+      "gd": 14,
+      "points": 34,
+      "ppg": 2.27
     },
     "away": {
       "played": 15,
@@ -85,17 +85,17 @@
       "W",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
       "W",
       "W",
       "W",
-      "W",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "W",
       "D",
       "W",
       "W",
@@ -104,16 +104,17 @@
       "W",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
       "win": 4,
       "draw": 1,
       "loss": 0,
-      "gf": 12,
+      "gf": 13,
       "ga": 5,
-      "gd": 7,
+      "gd": 8,
       "points": 13
     },
     "last10_record": {
@@ -121,24 +122,24 @@
       "win": 8,
       "draw": 2,
       "loss": 0,
-      "gf": 22,
+      "gf": 23,
       "ga": 8,
-      "gd": 14,
+      "gd": 15,
       "points": 26
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 7,
-      "longest_unbeaten": 13,
+      "longest_unbeaten": 14,
       "longest_winless": 2,
       "longest_loss": 1
     }
   },
   "scoring": {
-    "gf_per_game": 1.72,
-    "ga_per_game": 0.86,
-    "clean_sheets": 14,
+    "gf_per_game": 1.73,
+    "ga_per_game": 0.83,
+    "clean_sheets": 15,
     "failed_to_score": 4,
     "both_scored": 14,
     "one_goal_games": 15,
@@ -385,9 +386,9 @@
       {
         "round": 32,
         "rank": 1,
-        "points": 63,
-        "played": 29,
-        "gd": 25
+        "points": 66,
+        "played": 30,
+        "gd": 27
       }
     ],
     "best_rank": 1,
@@ -404,15 +405,15 @@
       "ppg": 2.0
     },
     "second_half": {
-      "played": 13,
-      "win": 9,
+      "played": 14,
+      "win": 10,
       "draw": 4,
       "loss": 0,
-      "gf": 28,
+      "gf": 30,
       "ga": 11,
-      "gd": 17,
-      "points": 31,
-      "ppg": 2.38
+      "gd": 19,
+      "points": 34,
+      "ppg": 2.43
     }
   },
   "fixtures": [
@@ -705,6 +706,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-08",
+      "venue": "H",
+      "opponent_id": "K42",
+      "opponent": "용인 FC",
+      "gf": 2,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -835,12 +846,12 @@
         "points": 4
       }
     ],
-    "goal_share": 0.3
+    "goal_share": 0.288
   },
   "attendance": null,
   "context": {
     "band": "자동 승격권",
-    "detail": "리그 선두에서 남은 3경기를 버티면 다이렉트 승격입니다.",
+    "detail": "리그 선두에서 남은 2경기를 버티면 다이렉트 승격입니다.",
     "tags": [
       "화력 우위",
       "리그 최고 수비",

@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k38-sm.png",
   "home_url": "https://cheonancityfc.kr",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:15+09:00",
+  "generated_at": "2026-11-09T06:05:11+09:00",
   "table": {
-    "rank": 14,
+    "rank": 11,
     "teams": 17,
-    "played": 29,
-    "win": 6,
+    "played": 30,
+    "win": 7,
     "draw": 12,
     "loss": 11,
-    "gf": 37,
+    "gf": 38,
     "ga": 41,
-    "gd": -4,
-    "points": 30,
-    "ppg": 1.03,
-    "remaining": 3,
+    "gd": -3,
+    "points": 33,
+    "ppg": 1.1,
+    "remaining": 2,
     "scheduled": 32,
     "gap_to_leader": 33,
-    "gap_to_cut": 18,
+    "gap_to_cut": 15,
     "cut_rank": 6,
     "gap_above": 2,
-    "gap_below": 4,
-    "above": "성남",
-    "below": "안산"
+    "gap_below": 0,
+    "above": "파주",
+    "below": "용인"
   },
   "splits": {
     "home": {
-      "played": 14,
-      "win": 4,
+      "played": 15,
+      "win": 5,
       "draw": 7,
       "loss": 3,
-      "gf": 14,
+      "gf": 15,
       "ga": 12,
-      "gd": 2,
-      "points": 19,
-      "ppg": 1.36
+      "gd": 3,
+      "points": 22,
+      "ppg": 1.47
     },
     "away": {
       "played": 15,
@@ -85,17 +85,17 @@
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "D",
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "L",
       "D",
       "L",
       "L",
@@ -104,30 +104,31 @@
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
-      "draw": 2,
+      "win": 3,
+      "draw": 1,
       "loss": 1,
       "gf": 9,
-      "ga": 8,
-      "gd": 1,
-      "points": 8
+      "ga": 7,
+      "gd": 2,
+      "points": 10
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
+      "win": 3,
       "draw": 4,
-      "loss": 4,
-      "gf": 13,
-      "ga": 15,
-      "gd": -2,
-      "points": 10
+      "loss": 3,
+      "gf": 12,
+      "ga": 12,
+      "gd": 0,
+      "points": 13
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 7,
@@ -136,12 +137,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.28,
-    "ga_per_game": 1.41,
-    "clean_sheets": 5,
+    "gf_per_game": 1.27,
+    "ga_per_game": 1.37,
+    "clean_sheets": 6,
     "failed_to_score": 8,
     "both_scored": 18,
-    "one_goal_games": 14,
+    "one_goal_games": 15,
     "biggest_win": {
       "round": 30,
       "date": "2026-10-25",
@@ -251,7 +252,7 @@
       },
       {
         "round": 13,
-        "rank": 11,
+        "rank": 10,
         "points": 15,
         "played": 12,
         "gd": 0
@@ -384,10 +385,10 @@
       },
       {
         "round": 32,
-        "rank": 14,
-        "points": 30,
-        "played": 29,
-        "gd": -4
+        "rank": 11,
+        "points": 33,
+        "played": 30,
+        "gd": -3
       }
     ],
     "best_rank": 7,
@@ -404,15 +405,15 @@
       "ppg": 1.19
     },
     "second_half": {
-      "played": 13,
-      "win": 2,
+      "played": 14,
+      "win": 3,
       "draw": 5,
       "loss": 6,
-      "gf": 18,
+      "gf": 19,
       "ga": 22,
-      "gd": -4,
-      "points": 11,
-      "ppg": 0.85
+      "gd": -3,
+      "points": 14,
+      "ppg": 1.0
     }
   },
   "fixtures": [
@@ -705,6 +706,16 @@
       "gf": 3,
       "ga": 3,
       "result": "D"
+    },
+    {
+      "round": 32,
+      "date": "2026-11-08",
+      "venue": "H",
+      "opponent_id": "K06",
+      "opponent": "부산 아이파크",
+      "gf": 1,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -835,7 +846,7 @@
         "points": 8
       }
     ],
-    "goal_share": 0.243
+    "goal_share": 0.237
   },
   "attendance": null,
   "context": {

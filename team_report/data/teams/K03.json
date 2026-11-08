@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
-    "played": 34,
+    "played": 35,
     "win": 11,
-    "draw": 10,
+    "draw": 11,
     "loss": 13,
-    "gf": 31,
-    "ga": 40,
+    "gf": 33,
+    "ga": 42,
     "gd": -9,
-    "points": 43,
+    "points": 44,
     "ppg": 1.26,
-    "remaining": 9,
+    "remaining": 8,
     "scheduled": 43,
-    "gap_to_leader": 24,
+    "gap_to_leader": 23,
     "gap_to_cut": 5,
     "cut_rank": 6,
-    "gap_above": 3,
-    "gap_below": 5,
+    "gap_above": 2,
+    "gap_below": 6,
     "above": "안양",
     "below": "김천"
   },
@@ -44,15 +44,15 @@
       "ppg": 1.13
     },
     "away": {
-      "played": 19,
+      "played": 20,
       "win": 7,
-      "draw": 5,
+      "draw": 6,
       "loss": 7,
-      "gf": 24,
-      "ga": 28,
+      "gf": 26,
+      "ga": 30,
       "gd": -4,
-      "points": 26,
-      "ppg": 1.37
+      "points": 27,
+      "ppg": 1.35
     }
   },
   "form": {
@@ -90,50 +90,51 @@
       "L",
       "D",
       "D",
+      "D",
       "D"
     ],
     "last5": [
-      "W",
       "L",
+      "D",
       "D",
       "D",
       "D"
     ],
     "last10": [
-      "W",
       "D",
       "L",
       "D",
       "D",
       "W",
       "L",
+      "D",
       "D",
       "D",
       "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
-      "draw": 3,
+      "win": 0,
+      "draw": 4,
       "loss": 1,
       "gf": 5,
-      "ga": 7,
-      "gd": -2,
-      "points": 6
+      "ga": 8,
+      "gd": -3,
+      "points": 4
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
-      "draw": 6,
+      "win": 1,
+      "draw": 7,
       "loss": 2,
       "gf": 9,
-      "ga": 12,
-      "gd": -3,
-      "points": 12
+      "ga": 13,
+      "gd": -4,
+      "points": 10
     },
     "streaks": {
       "current_type": "D",
-      "current_len": 3,
+      "current_len": 4,
       "longest_win": 2,
       "longest_unbeaten": 4,
       "longest_winless": 5,
@@ -141,11 +142,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.91,
-    "ga_per_game": 1.18,
+    "gf_per_game": 0.94,
+    "ga_per_game": 1.2,
     "clean_sheets": 11,
     "failed_to_score": 14,
-    "both_scored": 13,
+    "both_scored": 14,
     "one_goal_games": 14,
     "biggest_win": {
       "round": 17,
@@ -172,7 +173,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 4,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -411,8 +412,8 @@
       {
         "round": 35,
         "rank": 9,
-        "points": 43,
-        "played": 34,
+        "points": 44,
+        "played": 35,
         "gd": -9
       }
     ],
@@ -430,14 +431,14 @@
       "ppg": 1.47
     },
     "second_half": {
-      "played": 15,
+      "played": 16,
       "win": 3,
-      "draw": 6,
+      "draw": 7,
       "loss": 6,
-      "gf": 11,
-      "ga": 21,
+      "gf": 13,
+      "ga": 23,
       "gd": -10,
-      "points": 15,
+      "points": 16,
       "ppg": 1.0
     }
   },
@@ -781,6 +782,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 35,
+      "date": "2026-11-08",
+      "venue": "A",
+      "opponent_id": "K26",
+      "opponent": "부천 FC",
+      "gf": 2,
+      "ga": 2,
+      "result": "D"
     }
   ],
   "squad": {
@@ -911,14 +922,14 @@
         "points": 3
       }
     ],
-    "goal_share": 0.161
+    "goal_share": 0.152
   },
   "attendance": {
     "avg": 7183,
     "total": 107752,
     "games": 15,
     "home_fans_avg": 6635,
-    "away_fans_avg": 990
+    "away_fans_avg": 950
   },
   "context": {
     "band": "파이널A 추격",

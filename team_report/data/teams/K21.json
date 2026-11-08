@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:10+09:00",
   "table": {
-    "rank": 6,
+    "rank": 4,
     "teams": 12,
-    "played": 34,
-    "win": 11,
+    "played": 35,
+    "win": 12,
     "draw": 15,
     "loss": 8,
-    "gf": 41,
-    "ga": 32,
-    "gd": 9,
-    "points": 48,
-    "ppg": 1.41,
-    "remaining": 9,
+    "gf": 44,
+    "ga": 34,
+    "gd": 10,
+    "points": 51,
+    "ppg": 1.46,
+    "remaining": 8,
     "scheduled": 43,
-    "gap_to_leader": 19,
+    "gap_to_leader": 16,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 1,
-    "gap_below": 0,
-    "above": "전북",
-    "below": "제주"
+    "gap_above": 2,
+    "gap_below": 2,
+    "above": "대전",
+    "below": "전북"
   },
   "splits": {
     "home": {
-      "played": 17,
-      "win": 5,
+      "played": 18,
+      "win": 6,
       "draw": 9,
       "loss": 3,
-      "gf": 20,
-      "ga": 14,
-      "gd": 6,
-      "points": 24,
-      "ppg": 1.41
+      "gf": 23,
+      "ga": 16,
+      "gd": 7,
+      "points": 27,
+      "ppg": 1.5
     },
     "away": {
       "played": 17,
@@ -90,17 +90,17 @@
       "W",
       "D",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
-      "D",
       "W",
       "D",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
-      "D",
       "W",
       "D",
       "D",
@@ -109,30 +109,31 @@
       "W",
       "D",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
-      "draw": 3,
+      "win": 2,
+      "draw": 2,
       "loss": 1,
-      "gf": 5,
-      "ga": 4,
-      "gd": 1,
-      "points": 6
+      "gf": 8,
+      "ga": 6,
+      "gd": 2,
+      "points": 8
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
-      "draw": 6,
+      "win": 3,
+      "draw": 5,
       "loss": 2,
-      "gf": 11,
-      "ga": 8,
-      "gd": 3,
-      "points": 12
+      "gf": 14,
+      "ga": 10,
+      "gd": 4,
+      "points": 14
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 3,
       "longest_unbeaten": 9,
@@ -141,12 +142,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.21,
-    "ga_per_game": 0.94,
+    "gf_per_game": 1.26,
+    "ga_per_game": 0.97,
     "clean_sheets": 14,
     "failed_to_score": 9,
-    "both_scored": 16,
-    "one_goal_games": 8,
+    "both_scored": 17,
+    "one_goal_games": 9,
     "biggest_win": {
       "round": 27,
       "date": "2026-09-06",
@@ -207,7 +208,7 @@
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -410,10 +411,10 @@
       },
       {
         "round": 35,
-        "rank": 6,
-        "points": 48,
-        "played": 34,
-        "gd": 9
+        "rank": 4,
+        "points": 51,
+        "played": 35,
+        "gd": 10
       }
     ],
     "best_rank": 2,
@@ -430,15 +431,15 @@
       "ppg": 1.68
     },
     "second_half": {
-      "played": 15,
-      "win": 3,
+      "played": 16,
+      "win": 4,
       "draw": 7,
       "loss": 5,
-      "gf": 17,
-      "ga": 20,
-      "gd": -3,
-      "points": 16,
-      "ppg": 1.07
+      "gf": 20,
+      "ga": 22,
+      "gd": -2,
+      "points": 19,
+      "ppg": 1.19
     }
   },
   "fixtures": [
@@ -781,6 +782,16 @@
       "gf": 1,
       "ga": 2,
       "result": "L"
+    },
+    {
+      "round": 35,
+      "date": "2026-11-08",
+      "venue": "H",
+      "opponent_id": "K05",
+      "opponent": "전북 현대",
+      "gf": 3,
+      "ga": 2,
+      "result": "W"
     }
   ],
   "squad": {
@@ -911,13 +922,13 @@
         "points": 3
       }
     ],
-    "goal_share": 0.244
+    "goal_share": 0.227
   },
   "attendance": {
-    "avg": 6028,
-    "total": 102478,
-    "games": 17,
-    "home_fans_avg": 5613,
+    "avg": 5927,
+    "total": 106684,
+    "games": 18,
+    "home_fans_avg": 5515,
     "away_fans_avg": 588
   },
   "context": {
@@ -925,7 +936,6 @@
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
       "리그 최고 수비",
-      "실리 축구",
       "클린시트 다수",
       "무승부 체질"
     ]

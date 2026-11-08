@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-11-08T05:49:14+09:00",
+  "generated_at": "2026-11-09T06:05:11+09:00",
   "table": {
     "rank": 3,
     "teams": 17,
@@ -23,7 +23,7 @@
     "ppg": 1.9,
     "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 6,
+    "gap_to_leader": 9,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 3,
@@ -849,10 +849,10 @@
     "goal_share": 0.228
   },
   "attendance": {
-    "avg": 21480,
-    "total": 365166,
-    "games": 17,
-    "home_fans_avg": 19365,
+    "avg": 21011,
+    "total": 378203,
+    "games": 18,
+    "home_fans_avg": 18950,
     "away_fans_avg": 1357
   },
   "context": {
