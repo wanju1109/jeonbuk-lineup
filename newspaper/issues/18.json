@@ -1,0 +1,1618 @@
+{
+ "no": 18,
+ "date": "2026-11-09",
+ "matchday_after": false,
+ "headline": "강릉 원정 2-3 역전패, 전북은 5위로 휴식기",
+ "summary": "전북이 35라운드 강원 원정에서 후반 추가시간 결승골을 내주고 2-3으로 졌다. 콤파뇨가 1년 만에 리그 골을 넣고 이동준이 동점을 만들었지만 승점은 얻지 못했다.",
+ "strip": [
+  "35R 강원 3-2 전북 · 강릉",
+  "K리그1 5위 · 승점 49",
+  "3위 대전과 4점 · 4위 강원과 2점",
+  "다음 경기 D-12 · 11월 21일 서울 홈"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제18호 · 2026.11.09(월)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:이동준:260411",
+     "kicker": "K리그1 35라운드 · 강릉하이원아레나",
+     "title": "강릉 원정 2-3 역전패, 전북은 5위로 휴식기",
+     "dek": "콤파뇨의 페널티킥 선제골, 이동준의 후반 41분 동점골. 마지막 장면은 후반 49분 강원 박상혁의 결승골이었다.",
+     "caption": "이동준. 강원전 후반 41분 동점골로 시즌 4호 골을 기록했다(자료 사진, 2026년 4월 서울전).",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북이 8일 강릉하이원아레나에서 열린 하나은행 K리그1 2026 35라운드 원정경기에서 강원FC에 2-3으로 졌다. 2-2로 맞선 후반 49분 박상혁에게 결승골을 내줬다.",
+      "출발은 좋았다. 전반 9분 콤파뇨가 강상윤의 패스를 받다 얻어 낸 페널티킥을 직접 넣었다. 하지만 강원은 4분 뒤 신민하의 동점골, 전반 39분 모재현의 역전골로 경기를 뒤집었다.",
+      "후반 41분 이동준이 동점골을 넣어 승점 1점이 보였다. 추가시간 4분, 모재현의 낮은 크로스가 송범근의 발을 지나 흘렀고 쇄도하던 박상혁이 밀어 넣었다.",
+      "전북은 12승 13무 10패 승점 49로 5위다. 강원은 승점 51로 4위에 올랐다. 리그는 A매치 휴식기에 들어가고, 전북은 11월 21일 우승팀 서울을 전주로 불러 36라운드를 치른다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "2-3",
+       "label": "강원 원정 결과, 후반 49분 결승골 허용",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "49",
+       "label": "전북 승점 · 5위",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "4점",
+       "label": "3위 대전(53)과의 차이",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-12",
+       "label": "11월 21일 서울 홈경기까지",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "경기 리포트",
+   "teaser": "0-1, 2-1, 2-2, 그리고 추가시간 결승골까지 90분 다시 보기",
+   "folio": "경기 리포트 · K리그1 35R 강원 3-2 전북",
+   "blocks": [
+    {
+     "type": "timeline",
+     "span": 5,
+     "kicker": "득점 경과",
+     "title": "다섯 골의 순서",
+     "items": [
+      {
+       "date": "전반 9분",
+       "title": "콤파뇨 PK 골 · 전북 1-0",
+       "text": "강상윤 패스를 받다 신민하와 접촉, 직접 차 넣었다",
+       "source_name": "뉴스통 경기 전적",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14801751",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "전반 13분",
+       "title": "신민하 · 1-1",
+       "text": "선제골 4분 만에 동점",
+       "source_name": "뉴스통 경기 전적",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14801751",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "전반 39분",
+       "title": "모재현 · 1-2",
+       "text": "전방 압박 뒤 슈팅이 감보아 맞고 굴절",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1574696",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "후반 41분",
+       "title": "이동준 · 2-2",
+       "text": "이동준 시즌 4호 골",
+       "source_name": "뉴스통 경기 전적",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14801751",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "후반 49분",
+       "title": "박상혁 · 2-3",
+       "text": "모재현 크로스가 송범근 발 지나 흐른 공",
+       "state": "hot",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100485",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "기자 리뷰",
+     "title": "앞서고, 뒤집히고, 따라붙고, 마지막에 무너졌다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "정정용 감독은 대전전과 비교해 선발 6명을 바꿨다. 강원은 5일 ACL2 쿠칭 원정에서 쉬게 한 김대원, 고영준, 서민우, 이유현을 선발로 냈다. 쉬고 나온 상대 주축과 바뀐 전북 선발의 싸움이었다.",
+      "전북은 전반 9분 만에 앞섰지만 리드는 4분을 넘기지 못했다. 전반 39분 역전골은 강원의 전방 압박에서 시작됐다. 공을 빼앗긴 뒤 내준 슈팅이 감보아를 맞고 방향이 바뀌었다.",
+      "후반에는 송범근이 강원의 슈팅을 여러 차례 막아 내며 버텼다. 이동준의 동점골로 흐름을 되찾았지만 추가시간 마지막 수비 한 장면이 승점 1점을 지웠다.",
+      "강원은 이 승리로 30일 동안 이어진 리그 무승을 끊었다. 전북은 리그 최근 3경기 2무 1패로 휴식기를 맞는다."
+     ],
+     "image": "commons:강상윤:250503",
+     "caption": "강상윤. 전반 9분 페널티킥으로 이어진 침투 패스를 넣었다(자료 사진).",
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "rule_top": true,
+     "image": "commons:송범근:260912",
+     "caption": "송범근. 후반 강원의 슈팅을 여러 차례 막았지만 추가시간 크로스 처리가 결승골로 이어졌다(자료 사진, 2026년 9월).",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 7,
+     "rule_top": true,
+     "title": "경기 정보",
+     "items": [
+      {
+       "label": "대회",
+       "value": "하나은행 K리그1 2026 35라운드 (파이널A)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "일시 · 장소",
+       "value": "11월 8일(일) 16:30 · 강릉하이원아레나",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "결과",
+       "value": "강원 3-2 전북",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 득점",
+       "value": "콤파뇨(전9 PK), 이동준(후41)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원 득점",
+       "value": "신민하(전13), 모재현(전39), 박상혁(후49)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "공식 기록",
+       "value": "부가기록은 K리그 데이터포털 공개 뒤 반영",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "평점",
+   "teaser": "조간 선정 MOM은 1년 만에 골 맛을 본 콤파뇨",
+   "folio": "평점 · 조간 선정 MOM과 BEST·WORST",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 5,
+     "image": "player:20250061",
+     "big": "MOM",
+     "paragraphs": [
+      "전반 9분 PK 선제골",
+      "PK도 직접 얻어 냈다",
+      "1년 만의 리그 골"
+     ],
+     "caption": "콤파뇨(전북현대 96번) · 조간 선정 MOM",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "조간 선정 MOM",
+     "title": "콤파뇨, 10개월 부상 뒤 1년 만에 리그 골",
+     "paragraphs": [
+      "조간은 강원전 MOM으로 콤파뇨를 뽑았다. 전반 6분 무렵 강상윤의 패스를 페널티박스 안에서 받다 신민하와 부딪혀 페널티킥을 얻었고, 직접 키커로 나서 골문을 열었다.",
+      "포포투는 이 골을 1년 만의 K리그 복귀골이라고 전했다. 콤파뇨는 긴 부상을 지나 올해 계약 마지막 시즌을 보내고 있다. 남은 리그 3경기는 그에게 몸 상태를 보여 줄 시간이다.",
+      "팀이 져서 빛이 바랬지만, 휴식기 뒤 5연전을 앞둔 전북에 최전방 선택지가 하나 늘었다는 점은 분명하다. 평점과 MOM은 경기 리뷰를 근거로 한 조간 자체 평가다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "조간 평점",
+     "title": "BEST 3",
+     "items": [
+      {
+       "tag": "BEST",
+       "title": "콤파뇨 · 평점 7.0",
+       "text": "PK를 얻고 직접 성공, 1년 만의 리그 골",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "이동준 · 평점 7.0",
+       "text": "후반 41분 동점골, 시즌 4호",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "BEST",
+       "title": "강상윤 · 평점 6.5",
+       "text": "페널티킥으로 이어진 침투 패스",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "조간 평점",
+     "title": "WORST",
+     "items": [
+      {
+       "tag": "WORST",
+       "title": "송범근 · 평점 5.5",
+       "text": "후반 선방은 여러 번, 추가시간 크로스를 막지 못한 장면이 결승골로",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "WORST",
+       "title": "감보아 · 평점 5.5",
+       "text": "전반 39분 실점 때 슈팅이 몸에 맞고 굴절, 운이 따르지 않았다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "WORST",
+       "title": "세 번째 자리는 비워 둔다",
+       "text": "선수별 부가기록이 아직 공개되지 않아 장면이 확인된 2명만 적었다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "평점 기준",
+     "title": "조간 평점은 이렇게 매겼다",
+     "paragraphs": [
+      "10점 만점, 0.5점 단위. 전북 선수만 평가했다. 이번 경기는 선수별 기록이 공개되기 전이라 득점·실점 장면이 기사로 확인된 선수만 다뤘다. 공식 라운드 MVP는 연맹 발표 뒤 따로 전한다."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "순위 싸움",
+   "teaser": "3위와 4점, 4위와 2점. 남은 3경기 계산",
+   "folio": "순위 싸움 · 35라운드 종료",
+   "blocks": [
+    {
+     "type": "chart",
+     "span": 7,
+     "chart": "standings",
+     "title": "K리그1 순위 (35라운드 종료)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 5,
+     "kicker": "리그 판도",
+     "title": "35라운드 하루에 바뀐 순위표",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "같은 날 2위 울산은 우승팀 서울을 2-1로 꺾고 승점 57이 됐다. 3위 대전은 인천을 2-0으로 이기며 9경기 무패를 이었다. 강원까지 이기면서 전북만 승점을 쌓지 못했다.",
+      "전북은 3위 대전에 4점, 4위 강원에 2점 뒤진다. 6위 인천과는 승점 49로 같고, 다득점에서 1골 앞선다. 7위 제주(48)와도 1점 차다.",
+      "아래쪽도 정리됐다. 부천은 포항과 2-2로 비겨 잔류를 확정했고, 최하위 광주는 승강 플레이오프로 간다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "파이널A 2~6위 승점",
+     "items": [
+      {
+       "label": "울산",
+       "value": 57,
+       "text": "57",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 53,
+       "text": "53",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 51,
+       "text": "51",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 49,
+       "text": "49",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천",
+       "value": 49,
+       "text": "49",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "35라운드 종료 기준. 출처 K리그 데이터포털",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "남은 3경기를 모두 이기면 (최대 승점)",
+     "items": [
+      {
+       "label": "울산 (2위)",
+       "value": "66",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전 (3위)",
+       "value": "62",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원 (4위)",
+       "value": "60",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 (5위)",
+       "value": "58",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천 (6위)",
+       "value": "58",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 7,
+     "rule_top": true,
+     "chart": "form",
+     "title": "전북 최근 리그 8경기",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "rule_top": true,
+     "image": "commons:정정용:260411",
+     "caption": "정정용 감독. 남은 리그 3경기는 서울(홈), 울산(원정), 인천(홈)이다(자료 사진, 2026년 4월 서울전).",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "기자 수첩",
+   "teaser": "강원전 4경기 무승, 그리고 선수 TMI",
+   "folio": "기자 수첩 · 선수 TMI",
+   "blocks": [
+    {
+     "type": "bars",
+     "span": 5,
+     "title": "올 시즌 강원전 4경기 (전북 득점 · 실점)",
+     "items": [
+      {
+       "label": "4월 18일 강릉",
+       "value": 1,
+       "text": "1-1",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "7월 4일 전주",
+       "value": 1,
+       "text": "1-2",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "9월 9일 강릉",
+       "value": 1,
+       "text": "1-1",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11월 8일 강릉",
+       "value": 2,
+       "text": "2-3",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "막대는 전북 득점. 올 시즌 강원전 2무 2패, 5득점 7실점.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "기자 수첩",
+     "title": "강원을 넘지 못한 한 해",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "올 시즌 전북은 강원을 네 번 만나 한 번도 이기지 못했다. 강릉에서 두 번 비기고, 전주와 강릉에서 한 번씩 졌다. 네 경기에서 모두 골은 넣었지만 상대보다 많이 넣은 날이 없었다.",
+      "어제 경기는 그 한 해를 압축했다. 먼저 넣고도 리드를 지키지 못했고, 따라붙은 뒤 마지막 장면에서 무너졌다. 실점 세 개 가운데 둘은 굴절과 흘린 공에서 나왔다.",
+      "휴식기는 2주다. 그 뒤 16일 동안 리그 3경기와 ACLE 2경기가 이어진다. 콤파뇨의 골과 이동준의 동점골은 그 일정을 버틸 공격 자원이 늘었다는 신호다. 남은 숙제는 마지막 10분의 수비다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20170121",
+     "big": "4호골",
+     "paragraphs": [
+      "후반 41분 동점골",
+      "등번호 7번",
+      "시즌 리그 4번째 골"
+     ],
+     "caption": "선수 TMI · 이동준(전북현대 7번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220276",
+     "big": "키패스",
+     "paragraphs": [
+      "전반 6분 침투 패스",
+      "콤파뇨 PK의 출발점",
+      "등번호 13번"
+     ],
+     "caption": "선수 TMI · 강상윤(전북현대 13번)",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 4,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "오늘의 질문",
+     "title": "휴식기 뒤 서울전, 최전방은 누구로?",
+     "paragraphs": [
+      "강원전에서 골을 넣은 콤파뇨와 이동준, 그리고 티아고, 이탈로, 모따. 11월 21일 서울전 선발 공격진을 댓글로 골라 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 12,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "35R 강원 3-2 전북",
+       "text": "콤파뇨·이동준 득점, 박상혁 후반 49분 결승골",
+       "source_name": "뉴스통 경기 전적",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14801751",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "부천 잔류 확정, 광주 승강 PO행",
+       "text": "부천 포항과 2-2, 광주와 승점 10점 차",
+       "source_name": "오마이스타",
+       "source_url": "https://star.ohmynews.com/NWS_Web/OhmyStar/at_pg.aspx?CNTN_CD=A0003282925",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "울산, 서울 2-1 꺾고 2위 수성",
+       "text": "야고 17호 골로 득점 선두",
+       "source_name": "헤럴드경제",
+       "source_url": "https://biz.heraldcorp.com/article/10929779",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "대전, 인천 2-0 꺾고 9경기 무패",
+       "text": "디오고·이명재 연속골, 3위 유지",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261108n11314",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "정정용 감독, 강원전 선발 6명 교체",
+       "text": "대전전과 비교한 변화",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1574696",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "강원, 쿠칭 원정 로테이션 뒤 전북전 승리",
+       "text": "휴식한 주축 4명이 선발",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100498",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "강원전에서 전북의 첫 골을 넣은 선수와 방법은?",
+       "text": "콤파뇨, 전반 9분 페널티킥",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "이동준의 동점골은 시즌 몇 호 골?",
+       "text": "4호 골(후반 41분)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "올 시즌 전북의 강원전 4경기 성적은?",
+       "text": "2무 2패, 5득점 7실점",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "전북도민일보",
+       "text": "이동준 동점골도 허사…강원에 2-3 역전패",
+       "source_name": "전북도민일보",
+       "source_url": "http://www.domin.co.kr/news/articleView.html?idxno=1574696",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "전북일보",
+       "text": "전북, 3위 경쟁 빨간불…강원 원정 2-3 패배",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261108500455",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "포포투",
+       "text": "강원, 박상혁 추가시간 골로 전북 3-2 제압",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100485",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "포포투",
+       "text": "강원, 주전 아껴 전북 3-2 격파",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=100498",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "강원도민일보",
+       "text": "박상혁 추가시간 골, 강원 30일 리그 무승 끊어",
+       "source_name": "강원도민일보",
+       "source_url": "https://www.kado.net/news/articleView.html?idxno=2083479",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "강원일보",
+       "text": "강원FC, 전북전 승리로 연패 탈출",
+       "source_name": "강원일보",
+       "source_url": "https://www.kwnews.co.kr/article/20261108501566",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "뉴스통",
+       "text": "[프로축구 강릉전적] 강원 3-2 전북",
+       "source_name": "뉴스통",
+       "source_url": "https://www.newstong.co.kr/view3.aspx?seq=14801751",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "헤럴드경제",
+       "text": "울산, 서울 2-1 제압하고 2위 수성",
+       "source_name": "헤럴드경제",
+       "source_url": "https://biz.heraldcorp.com/article/10929779",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "네이트 스포츠",
+       "text": "대전, 인천 2-0 격파 9경기 무패",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261108n11314",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "오마이스타",
+       "text": "부천, 포항과 2-2 잔류 확정",
+       "source_name": "오마이스타",
+       "source_url": "https://star.ohmynews.com/NWS_Web/OhmyStar/at_pg.aspx?CNTN_CD=A0003282925",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "K리그 데이터포털",
+       "text": "순위·최근 경기 기록",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20250061": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png",
+   "alt": "콤파뇨",
+   "back_no": 96,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20170121": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png",
+   "alt": "이동준",
+   "back_no": 7,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20220276": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220276.png",
+   "alt": "강상윤",
+   "back_no": 13,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 35,
+    "w": 20,
+    "d": 7,
+    "l": 8,
+    "gf": 62,
+    "ga": 32,
+    "pts": 67,
+    "rank": 1,
+    "gd": 30
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 35,
+    "w": 17,
+    "d": 6,
+    "l": 12,
+    "gf": 56,
+    "ga": 49,
+    "pts": 57,
+    "rank": 2,
+    "gd": 7
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 35,
+    "w": 14,
+    "d": 11,
+    "l": 10,
+    "gf": 55,
+    "ga": 41,
+    "pts": 53,
+    "rank": 3,
+    "gd": 14
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 35,
+    "w": 12,
+    "d": 15,
+    "l": 8,
+    "gf": 44,
+    "ga": 34,
+    "pts": 51,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 35,
+    "w": 12,
+    "d": 13,
+    "l": 10,
+    "gf": 45,
+    "ga": 36,
+    "pts": 49,
+    "rank": 5,
+    "gd": 9
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 35,
+    "w": 13,
+    "d": 10,
+    "l": 12,
+    "gf": 44,
+    "ga": 37,
+    "pts": 49,
+    "rank": 6,
+    "gd": 7
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 35,
+    "w": 12,
+    "d": 12,
+    "l": 11,
+    "gf": 41,
+    "ga": 39,
+    "pts": 48,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 35,
+    "w": 11,
+    "d": 13,
+    "l": 11,
+    "gf": 42,
+    "ga": 50,
+    "pts": 46,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 35,
+    "w": 11,
+    "d": 11,
+    "l": 13,
+    "gf": 33,
+    "ga": 42,
+    "pts": 44,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 35,
+    "w": 6,
+    "d": 20,
+    "l": 9,
+    "gf": 35,
+    "ga": 42,
+    "pts": 38,
+    "rank": 10,
+    "gd": -7
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 35,
+    "w": 7,
+    "d": 12,
+    "l": 16,
+    "gf": 35,
+    "ga": 51,
+    "pts": 33,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 35,
+    "w": 3,
+    "d": 14,
+    "l": 18,
+    "gf": 32,
+    "ga": 71,
+    "pts": 23,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 10,
+   "gf": 45,
+   "ga": 36
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-21",
+   "time": "",
+   "home": "전북",
+   "away": "서울",
+   "opp": "FC 서울",
+   "opp_short": "서울",
+   "is_home": true,
+   "round": 36,
+   "venue": "",
+   "comp": "K리그1 36R",
+   "home_note": "5위 · 승점 49",
+   "away_note": "1위 · 승점 67",
+   "when_label": "11월 21일(토)",
+   "d_minus": 12
+  },
+  "last": {
+   "game_id": "199",
+   "date": "2026-10-31",
+   "round": 34,
+   "home": "전북",
+   "away": "대전",
+   "venue": "전주 월드컵",
+   "attendance": 7654,
+   "comp": "K리그1 34R",
+   "score": [
+    0,
+    0
+   ],
+   "date_label": "10월 31일(토)",
+   "weather": "맑음",
+   "referee": "신용준",
+   "managers": {
+    "home": "정정용",
+    "away": "황선홍"
+   },
+   "shots": [
+    [
+     "H",
+     1,
+     3,
+     "MST",
+     87.5,
+     82.5
+    ],
+    [
+     "H",
+     1,
+     11,
+     "MST",
+     84.7,
+     28.6
+    ],
+    [
+     "H",
+     1,
+     16,
+     "MST",
+     93.4,
+     48.2
+    ],
+    [
+     "A",
+     1,
+     21,
+     "MST",
+     91.1,
+     46.3
+    ],
+    [
+     "A",
+     1,
+     25,
+     "AST",
+     76.4,
+     45.6
+    ],
+    [
+     "A",
+     1,
+     32,
+     "BT",
+     83.7,
+     49.0
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     76.1,
+     41.5
+    ],
+    [
+     "H",
+     2,
+     45,
+     "AST",
+     80.0,
+     30.1
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     91.4,
+     41.8
+    ],
+    [
+     "A",
+     2,
+     55,
+     "MST",
+     83.8,
+     51.9
+    ],
+    [
+     "A",
+     2,
+     59,
+     "MST",
+     89.1,
+     61.0
+    ],
+    [
+     "A",
+     2,
+     62,
+     "BT",
+     93.1,
+     60.0
+    ],
+    [
+     "A",
+     2,
+     71,
+     "AST",
+     92.9,
+     66.4
+    ],
+    [
+     "A",
+     2,
+     74,
+     "AST",
+     79.3,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     77,
+     "BT",
+     85.3,
+     37.3
+    ],
+    [
+     "A",
+     2,
+     82,
+     "MST",
+     91.6,
+     64.5
+    ],
+    [
+     "H",
+     2,
+     85,
+     "MST",
+     80.7,
+     30.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "AST",
+     94.3,
+     59.0
+    ],
+    [
+     "H",
+     2,
+     94,
+     "MST",
+     83.5,
+     71.9
+    ]
+   ],
+   "goals": [],
+   "compare": [
+    [
+     "슈팅",
+     9,
+     10
+    ],
+    [
+     "유효슈팅",
+     2,
+     3
+    ],
+    [
+     "패스 성공",
+     376,
+     250
+    ],
+    [
+     "패스 성공률",
+     87.0,
+     77.2,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     4,
+     9
+    ],
+    [
+     "반칙",
+     10,
+     17
+    ],
+    [
+     "경고",
+     1,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
