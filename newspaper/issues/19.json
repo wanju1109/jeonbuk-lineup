@@ -1,0 +1,1577 @@
+{
+ "no": 19,
+ "date": "2026-11-10",
+ "matchday_after": false,
+ "headline": "강릉 원정 뒤 선수·팬 언쟁 보도, 물리적 충돌 없이 일단락",
+ "summary": "강원전 패배 뒤 원정석 앞에서 선수와 팬 사이에 고성이 오갔다는 보도가 9일 나왔다. 송범근은 대표팀 합류를 위해 도하로 향했고, 전북은 11일 뒤 서울과 홈경기를 치른다.",
+ "strip": [
+  "K리그1 5위 · 승점 49",
+  "3위 대전과 4점 · 4위 강원과 2점",
+  "다음 경기 D-11 · 11월 21일(토) 서울 홈",
+  "송범근, 모레노호 도하 합류"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제19호 · 2026.11.10(화)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:이승우:260411",
+     "kicker": "강릉 원정 그 뒤",
+     "title": "강릉 원정 뒤 선수·팬 언쟁 보도, 물리적 충돌 없이 일단락",
+     "dek": "8일 강원전 2-3 패배 뒤 원정석 인사 자리에서 고성이 오갔다. 구단 관계자들이 선수들을 말렸고, 구단의 별도 입장은 아직 나오지 않았다.",
+     "caption": "이승우. 2026년 4월 11일 서울 원정 경기 장면.",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "8일 강릉하이원아레나에서 강원에 2-3으로 진 뒤 원정석 앞에서 전북 선수들과 일부 팬 사이에 언쟁이 있었다는 보도가 9일 여러 매체에서 나왔다. 인사하러 간 선수들에게 일부 팬이 거친 말을 했고, 이승우와 박지수가 맞대응하면서 잠시 고성이 오갔다는 내용이다.",
+      "보도에 따르면 이승우는 팬들에게 열심히 뛰고 있으니 도와 달라고 차분하게 말했다. 박지수는 선수단 뒤에 있던 정정용 감독을 향해 한 팬이 이름을 부르며 고함을 치자 존중해 달라며 강하게 반응했다. 구단 관계자들이 선수들을 자제시키며 상황은 끝났고, 물리적 충돌은 없었다.",
+      "전북은 이 패배로 승점 49에 머물며 5위로 휴식기에 들어갔다. 최근 리그 8경기 성적은 1승 4무 3패다. 비가 내린 강릉까지 원정을 간 팬들의 실망과, 그 앞에 선 선수들의 답답함이 한자리에서 부딪혔다.",
+      "구단은 9일까지 이 일에 대한 공식 입장을 내지 않았다. 전북의 다음 경기는 11월 21일(토) 전주에서 열리는 1위 서울전이다. 남은 리그 3경기와 ACLE 2경기가 휴식기 뒤 16일 안에 몰려 있다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "D-11",
+       "label": "11월 21일(토) 서울 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5위",
+       "label": "승점 49 · 12승 13무 10패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1승",
+       "label": "최근 리그 8경기 (4무 3패)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "2경기",
+       "label": "송범근이 나설 도하 A매치",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "선수단",
+   "teaser": "원정석 앞 몇 분, 무슨 일이 있었나",
+   "folio": "선수단 · 강릉 원정 그 뒤",
+   "blocks": [
+    {
+     "type": "timeline",
+     "span": 7,
+     "kicker": "경과",
+     "title": "강원전 종료 뒤 원정석 앞",
+     "items": [
+      {
+       "date": "8일 16:30",
+       "title": "35R 강원-전북 킥오프",
+       "text": "비 오는 강릉, 관중 4,206명",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261108500455",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "경기 종료",
+       "title": "추가시간 실점, 2-3 역전패",
+       "text": "콤파뇨 선제골, 이동준 동점골 뒤 결승골 허용",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261108500455",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "경기 뒤",
+       "title": "원정석 인사 자리에서 언쟁",
+       "text": "일부 팬의 항의에 이승우·박지수가 맞대응, 고성이 오감",
+       "state": "hot",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1018901",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "경기 뒤",
+       "title": "구단 관계자 만류로 일단락",
+       "text": "물리적 충돌은 없었다고 보도",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261109n29845",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "9일",
+       "title": "여러 매체 보도, 영상 화제",
+       "text": "구단 공식 입장은 9일까지 없음",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "image": "player:20130142",
+     "big": "존중",
+     "paragraphs": [
+      "박지수, 수비수 5번",
+      "감독 향한 고함에 반응",
+      "\"존중해달라\" (스포티비뉴스)"
+     ],
+     "caption": "박지수",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "현장 보도 정리",
+     "title": "같은 장면, 다른 두 반응",
+     "paragraphs": [
+      "스포티비뉴스는 이승우와 박지수의 반응을 나눠 전했다. 이승우는 항의하는 팬들과 대화를 이어 가며 도움을 청했다. 박지수는 감독을 향한 고함을 듣고 목소리를 높였다.",
+      "다른 보도는 두 선수가 참지 못하고 맞대응했다고 썼다. 두 기사 모두 구단 관계자들이 선수들을 말리면서 상황이 끝났고, 몸싸움은 없었다는 점은 같다.",
+      "원정 팬들의 실망도, 선수들의 억울함도 모두 진심이었다. 다만 말이 엇갈린 상대가 같은 편 팬이었다는 점에서 커뮤니티 반응은 여러 갈래로 나뉘었다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220042",
+     "big": "도와주세요",
+     "paragraphs": [
+      "이승우, 공격수 10번",
+      "팬들과 대화하며 호소",
+      "언쟁은 몇 분 만에 끝"
+     ],
+     "caption": "이승우",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 12,
+     "rule_top": true,
+     "title": "같은 초록색을 입은 사람들끼리 목소리가 커진 밤. 서로 아쉬운 마음은 21일 전주에서 같은 방향으로 외치면 된다.",
+     "byline": "한 줄 만평 · 전주성 조간",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "대표팀",
+   "teaser": "송범근, 올해 마지막 A매치 위해 도하로",
+   "folio": "대표팀 · 모레노호 중동 2연전",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 4,
+     "image": "commons:송범근:260912",
+     "caption": "송범근. 2026년 9월 12일 서울과의 홈경기.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "A매치",
+     "title": "송범근, 모레노호 도하 2연전 합류",
+     "paragraphs": [
+      "전북 골키퍼 송범근이 대표팀의 카타르 도하 2연전에 합류한다. 대한축구협회는 송범근이 강원 신민하, 손정범과 함께 9일 밤 출국한다고 밝혔다. 강원전 일정 때문에 본진보다 하루 늦게 떠났다.",
+      "로베르토 모레노 임시 감독이 이끄는 대표팀은 8일 밤 인천공항에서 소집해 9일 도하에 도착했다. 10일 전원이 모여 첫 훈련을 한다.",
+      "송범근은 10월 29일 발표된 26명 명단에 김승규, 조현우와 함께 골키퍼로 이름을 올렸다. 지난 9~10월 소집 때 뽑혔던 전북의 김태현과 조위제, 미드필더 김진규는 이번 명단에서 빠졌다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "모레노호 11월 일정 (한국 시각)",
+     "items": [
+      {
+       "label": "8일 밤",
+       "value": "인천공항 소집·출국",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "9일 밤",
+       "value": "송범근·신민하·손정범 출국",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "10일",
+       "value": "도하 전원 소집, 첫 훈련",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "13일 23:30",
+       "value": "사우디아라비아전 · 자심 빈 하마드",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "17일 23:00",
+       "value": "카타르전 · 압둘라 빈 칼리파",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 6,
+     "rule_top": true,
+     "image": "player:20180025",
+     "big": "TMI",
+     "paragraphs": [
+      "등번호 31번 골키퍼",
+      "고려대 거쳐 2018년 전북 입단",
+      "올여름 북중미 월드컵 출전"
+     ],
+     "caption": "선수 TMI · 송범근",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "휴식기 체크",
+     "title": "21일 서울전까지 남은 시간",
+     "paragraphs": [
+      "카타르전이 17일 밤에 끝나면 송범근이 귀국해 서울전을 치르기까지 나흘 안팎이 남는다. 정정용 감독이 골키퍼 운용을 어떻게 할지는 휴식기 뒤 첫 경기의 볼거리다."
+     ],
+     "variant": "lime",
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "순위 싸움",
+   "teaser": "남은 3경기, 상대는 1위·2위·6위",
+   "folio": "순위 싸움 · 휴식기 순위표",
+   "blocks": [
+    {
+     "type": "chart",
+     "span": 7,
+     "title": "K리그1 순위 (35라운드 종료)",
+     "chart": "standings",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 5,
+     "title": "3~7위 승점",
+     "items": [
+      {
+       "label": "대전 (3위)",
+       "value": 53,
+       "text": "53",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원 (4위)",
+       "value": 51,
+       "text": "51",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 (5위)",
+       "value": 49,
+       "text": "49",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천 (6위)",
+       "value": 49,
+       "text": "49",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "제주 (7위)",
+       "value": 48,
+       "text": "48",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "전북 위로 4점 안에 두 팀, 아래로 1점 안에 두 팀이 있다.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "휴식기 순위표",
+     "title": "남은 상대는 1위·2위·6위",
+     "paragraphs": [
+      "전북은 승점 49로 5위다. 3위 대전과는 4점, 4위 강원과는 2점 차이고, 6위 인천과는 승점이 같다. 7위 제주도 1점 뒤에 있다.",
+      "남은 리그 3경기 상대는 1위 서울(승점 67), 2위 울산(승점 57), 6위 인천(승점 49)이다. 서울·인천과는 전주에서, 울산과는 원정에서 만난다.",
+      "세 경기를 모두 이기면 승점 58이 된다. 휴식기 2주 동안 팀 분위기를 얼마나 다잡느냐가 마지막 순위를 가른다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 4,
+     "rule_top": true,
+     "title": "휴식기 뒤 일정",
+     "items": [
+      {
+       "label": "11.21(토)",
+       "value": "K리그1 36R 서울 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.25(수)",
+       "value": "ACLE 가시마 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.29(일)",
+       "value": "K리그1 37R 울산 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12.02(수)",
+       "value": "ACLE 감바 오사카 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12.06(일)",
+       "value": "K리그1 38R 인천 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 6,
+     "rule_top": true,
+     "image": "commons:전주월드컵경기장:12",
+     "caption": "전주월드컵경기장 관중석과 그라운드. 휴식기 뒤 다섯 경기 가운데 세 경기가 이곳에서 열린다.",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "오늘의 질문",
+     "title": "휴식기 2주, 팀에 가장 필요한 것은",
+     "paragraphs": [
+      "체력 회복, 전술 정비, 선수단과 팬 사이의 대화. 서울전을 앞둔 2주 동안 가장 먼저 챙겨야 할 것은 무엇일까. 댓글로 의견을 남겨 달라."
+     ],
+     "variant": "dark",
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "송범근, 9일 밤 도하행",
+       "text": "대한축구협회 발표, 10일 대표팀 전원 소집",
+       "source_name": "마이데일리",
+       "source_url": "https://mydaily.co.kr/page/view/2026110920565599351",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "강원전 뒤 선수·팬 언쟁",
+       "text": "구단 관계자 만류로 일단락, 몸싸움 없음",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1018901",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "패배로 ACLE 진출권 경쟁 불리",
+       "text": "2위 울산과 승점 8점 차",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261109n29845",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "루머 게시판의 김진규 관련 글",
+       "text": "추꾸 루머 게시판에 제목만 두 건, 내용은 확인되지 않음",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "서울전 홈 승리로 휴식기 마무리",
+       "text": "21일 전주에서 분위기를 바꾸자는 목소리",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "원정까지 간 팬 마음도, 선수 마음도 이해는 간다는 반응",
+       "label": "중립",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "감독을 이름으로 부른 건 선을 넘었다는 의견",
+       "label": "선수 쪽",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "선수가 팬에게 언성을 높이면 안 된다는 의견",
+       "label": "팬 쪽",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "휴식기 동안 구단이 먼저 정리해야 한다는 목소리",
+       "label": "구단에",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "송범근 대표팀 경기라도 보면서 2주를 버티자는 글",
+       "label": "대표팀",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 7,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "송범근이 나설 대표팀 첫 경기 상대는?",
+       "text": "사우디아라비아 (13일 23:30)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "전북과 3위 대전의 승점 차는?",
+       "text": "4점",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "휴식기 뒤 전북의 첫 경기 상대는?",
+       "text": "1위 서울 (21일 전주)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 5,
+     "rule_top": true,
+     "kicker": "편집 노트",
+     "title": "커뮤니티 온도는 어떻게 쟀나",
+     "paragraphs": [
+      "에펨코리아·추꾸 국내축구 게시판 제목과 기사 댓글 흐름을 요약했다. 닉네임과 원문은 옮기지 않았다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "전북일보",
+       "text": "전북, 3위 경쟁 빨간불… 강원 원정 2-3 패배",
+       "source_name": "전북일보",
+       "source_url": "https://www.jjan.kr/article/20261108500455",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "스포티비뉴스",
+       "text": "강원전 뒤 이승우·박지수와 팬 언쟁",
+       "source_name": "스포티비뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1018901",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "네이트 스포츠",
+       "text": "ACLE와 멀어지는 전북, 원정 팬들과 언쟁",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261109n29845",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "마이데일리",
+       "text": "손정범 하루 늦게 합류, 송범근·신민하와 9일 밤 출국",
+       "source_name": "마이데일리",
+       "source_url": "https://mydaily.co.kr/page/view/2026110920565599351",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "파이낸셜뉴스",
+       "text": "모레노호 소집·출국",
+       "source_name": "파이낸셜뉴스",
+       "source_url": "https://www.fnnews.com/news/202611080801319713",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "미디어펜",
+       "text": "11월 A매치 명단 발표",
+       "source_name": "미디어펜",
+       "source_url": "https://www.mediapen.com/news/view/1133583",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "쿠키뉴스",
+       "text": "K리그1 파이널 라운드 일정",
+       "source_name": "쿠키뉴스",
+       "source_url": "https://www.kukinews.com/article/view/kuk202610260092",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "기록",
+       "text": "순위·경기 기록은 K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20130142": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png",
+   "alt": "박지수",
+   "back_no": 5,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20220042": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png",
+   "alt": "이승우",
+   "back_no": 10,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20180025": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png",
+   "alt": "송범근",
+   "back_no": 31,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 35,
+    "w": 20,
+    "d": 7,
+    "l": 8,
+    "gf": 62,
+    "ga": 32,
+    "pts": 67,
+    "rank": 1,
+    "gd": 30
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 35,
+    "w": 17,
+    "d": 6,
+    "l": 12,
+    "gf": 56,
+    "ga": 49,
+    "pts": 57,
+    "rank": 2,
+    "gd": 7
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 35,
+    "w": 14,
+    "d": 11,
+    "l": 10,
+    "gf": 55,
+    "ga": 41,
+    "pts": 53,
+    "rank": 3,
+    "gd": 14
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 35,
+    "w": 12,
+    "d": 15,
+    "l": 8,
+    "gf": 44,
+    "ga": 34,
+    "pts": 51,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 35,
+    "w": 12,
+    "d": 13,
+    "l": 10,
+    "gf": 45,
+    "ga": 36,
+    "pts": 49,
+    "rank": 5,
+    "gd": 9
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 35,
+    "w": 13,
+    "d": 10,
+    "l": 12,
+    "gf": 44,
+    "ga": 37,
+    "pts": 49,
+    "rank": 6,
+    "gd": 7
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 35,
+    "w": 12,
+    "d": 12,
+    "l": 11,
+    "gf": 41,
+    "ga": 39,
+    "pts": 48,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 35,
+    "w": 11,
+    "d": 13,
+    "l": 11,
+    "gf": 42,
+    "ga": 50,
+    "pts": 46,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 35,
+    "w": 11,
+    "d": 11,
+    "l": 13,
+    "gf": 33,
+    "ga": 42,
+    "pts": 44,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 35,
+    "w": 6,
+    "d": 20,
+    "l": 9,
+    "gf": 35,
+    "ga": 42,
+    "pts": 38,
+    "rank": 10,
+    "gd": -7
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 35,
+    "w": 7,
+    "d": 12,
+    "l": 16,
+    "gf": 35,
+    "ga": 51,
+    "pts": 33,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 35,
+    "w": 3,
+    "d": 14,
+    "l": 18,
+    "gf": 32,
+    "ga": 71,
+    "pts": 23,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 10,
+   "gf": 45,
+   "ga": 36
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-21",
+   "time": "",
+   "home": "전북",
+   "away": "서울",
+   "opp": "FC 서울",
+   "opp_short": "서울",
+   "is_home": true,
+   "round": 36,
+   "venue": "",
+   "comp": "K리그1 36R",
+   "home_note": "5위 · 승점 49",
+   "away_note": "1위 · 승점 67",
+   "when_label": "11월 21일(토)",
+   "d_minus": 11
+  },
+  "last": {
+   "game_id": "209",
+   "date": "2026-11-08",
+   "round": 35,
+   "home": "강원",
+   "away": "전북",
+   "venue": "강릉하이원아레나",
+   "attendance": 4206,
+   "comp": "K리그1 35R",
+   "score": [
+    3,
+    2
+   ],
+   "date_label": "11월 8일(일)",
+   "weather": "비 9℃",
+   "referee": "최현재",
+   "managers": {
+    "home": "정경호",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     3,
+     "MST",
+     89.9,
+     36.1
+    ],
+    [
+     "A",
+     1,
+     8,
+     "GL",
+     89.4,
+     49.7
+    ],
+    [
+     "H",
+     1,
+     12,
+     "BT",
+     93.2,
+     50.9
+    ],
+    [
+     "H",
+     1,
+     12,
+     "GL",
+     91.1,
+     53.9
+    ],
+    [
+     "H",
+     1,
+     16,
+     "BT",
+     70.4,
+     40.5
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     91.7,
+     51.2
+    ],
+    [
+     "H",
+     1,
+     29,
+     "BT",
+     86.6,
+     64.6
+    ],
+    [
+     "H",
+     1,
+     30,
+     "AST",
+     81.0,
+     23.9
+    ],
+    [
+     "H",
+     1,
+     38,
+     "GL",
+     83.2,
+     59.3
+    ],
+    [
+     "H",
+     1,
+     42,
+     "BT",
+     73.6,
+     49.3
+    ],
+    [
+     "A",
+     1,
+     43,
+     "BT",
+     90.3,
+     64.5
+    ],
+    [
+     "A",
+     2,
+     46,
+     "AST",
+     82.2,
+     34.9
+    ],
+    [
+     "A",
+     2,
+     61,
+     "MST",
+     92.9,
+     45.8
+    ],
+    [
+     "H",
+     2,
+     64,
+     "MST",
+     68.6,
+     46.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "MST",
+     79.5,
+     51.4
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     78.3,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     80.9,
+     58.0
+    ],
+    [
+     "H",
+     2,
+     70,
+     "AST",
+     94.8,
+     72.5
+    ],
+    [
+     "H",
+     2,
+     70,
+     "BT",
+     81.5,
+     27.5
+    ],
+    [
+     "H",
+     2,
+     76,
+     "MST",
+     96.1,
+     63.9
+    ],
+    [
+     "H",
+     2,
+     79,
+     "AST",
+     76.6,
+     55.9
+    ],
+    [
+     "A",
+     2,
+     84,
+     "AST",
+     90.4,
+     56.6
+    ],
+    [
+     "A",
+     2,
+     85,
+     "AST",
+     77.5,
+     34.3
+    ],
+    [
+     "A",
+     2,
+     85,
+     "GL",
+     94.5,
+     62.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "MST",
+     76.7,
+     53.1
+    ],
+    [
+     "A",
+     2,
+     93,
+     "MST",
+     73.8,
+     31.3
+    ],
+    [
+     "H",
+     2,
+     93,
+     "GL",
+     97.2,
+     42.6
+    ],
+    [
+     "H",
+     2,
+     96,
+     "AST",
+     84.3,
+     16.5
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "콤파뇨",
+     "label": "9'",
+     "minute": 9,
+     "pk": true,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "신민하",
+     "label": "13'",
+     "minute": 13,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "모재현",
+     "label": "39'",
+     "minute": 39,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "이동준",
+     "label": "86'",
+     "minute": 86,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "박상혁",
+     "label": "90+4'",
+     "minute": 94,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     19,
+     9
+    ],
+    [
+     "유효슈팅",
+     9,
+     5
+    ],
+    [
+     "패스 성공",
+     377,
+     366
+    ],
+    [
+     "패스 성공률",
+     80.6,
+     82.8,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     6,
+     3
+    ],
+    [
+     "반칙",
+     6,
+     8
+    ],
+    [
+     "경고",
+     1,
+     1
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
