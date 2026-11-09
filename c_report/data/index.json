@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T22:30:51.586344+00:00",
+  "updated_at": "2026-11-09T23:38:59.772548+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -522,7 +522,9 @@
       "venue": "강릉하이원아레나",
       "attendance": 4206,
       "file": "./data/209.json",
-      "label": "강원 VS 전북 (209, 11/08)"
+      "label": "강원 VS 전북 (209, 11/08)",
+      "attendance_home": 3850,
+      "attendance_away": 356
     }
   ]
 }
