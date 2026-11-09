@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T19:46:48.327052+00:00",
+  "updated_at": "2026-11-09T01:00:38.102088+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -510,6 +510,19 @@
       "label": "전북 VS 대전 (199, 10/31)",
       "attendance_home": 6511,
       "attendance_away": 1143
+    },
+    {
+      "game_id": "209",
+      "year": "2026",
+      "round": 35,
+      "home": "강원",
+      "away": "전북",
+      "score": "3:2",
+      "date": "2026-11-08",
+      "venue": "강릉하이원아레나",
+      "attendance": 4206,
+      "file": "./data/209.json",
+      "label": "강원 VS 전북 (209, 11/08)"
     }
   ]
 }
