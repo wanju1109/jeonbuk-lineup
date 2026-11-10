@@ -1,0 +1,1528 @@
+{
+ "no": 20,
+ "date": "2026-11-11",
+ "matchday_after": false,
+ "headline": "35라운드 베스트 매치에 강원-전북전, 전북 선수는 베스트11 없어",
+ "summary": "프로축구연맹이 10일 35라운드 MVP로 강원 모재현을 뽑았다. 강원-전북전은 베스트 매치로 선정됐고 베스트11에 전북 선수는 없었다. 송범근은 도하에서 대표팀 첫 완전체 훈련을 소화했다.",
+ "strip": [
+  "K리그1 5위 · 승점 49",
+  "3위 대전과 4점 · 4위 강원과 2점",
+  "다음 경기 D-10 · 11월 21일(토) 서울 홈",
+  "ACLE 5차전 11월 25일 19:00 가시마 원정"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제20호 · 2026.11.11(수)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "player:20250061",
+     "kicker": "연맹 35라운드 시상",
+     "title": "35라운드 베스트 매치에 강원-전북전, 전북 선수는 베스트11 없어",
+     "dek": "프로축구연맹이 10일 발표했다. 라운드 MVP는 1골 1도움의 강원 모재현, 베스트 팀은 강원이었다.",
+     "caption": "콤파뇨. 8일 강원전 전반 9분 페널티킥으로 선제골을 넣었다.",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "한국프로축구연맹이 10일 K리그1 35라운드 MVP로 강원 모재현을 선정했다. 모재현은 8일 강릉하이원아레나에서 열린 전북전에서 전반 39분 역전골을 넣고, 추가시간 박상혁의 결승골을 도왔다.",
+      "이 경기는 35라운드 베스트 매치로 뽑혔다. 다섯 골이 오가고 추가시간에 승부가 갈린 경기였다. 강원은 베스트 팀에 선정됐고, 이 승리로 4위(승점 51)에 올랐다.",
+      "베스트11에는 강원·울산·대전 선수가 3명씩 들어갔다. 전북 선수는 한 명도 없었다. 전북은 콤파뇨의 페널티킥 선제골과 이동준의 후반 41분 동점골로 두 번 앞서거나 따라붙었지만 마지막에 승점을 놓쳤다.",
+      "전북은 승점 49, 5위로 휴식기를 보내고 있다. 다음 경기는 11월 21일(토) 전주에서 열리는 1위 서울전이다. 골키퍼 송범근은 카타르 도하에서 대표팀 훈련을 하고 있다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "0명",
+       "label": "35R 베스트11 속 전북 선수",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5골",
+       "label": "35R 베스트 매치 강원 3-2 전북",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-10",
+       "label": "11월 21일(토) 서울 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5위",
+       "label": "승점 49 · 12승 13무 10패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "리그 소식",
+   "teaser": "35라운드 시상, 강원이 MVP·베스트 팀·베스트 매치",
+   "folio": "리그 소식 · 35라운드 연맹 시상",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "35라운드 시상",
+     "title": "강원 모재현 MVP, 강원-전북전은 베스트 매치",
+     "paragraphs": [
+      "연맹이 10일 발표한 35라운드 시상에서 강원이 MVP, 베스트 팀, 베스트 매치를 모두 가져갔다. 세 상 모두 8일 강릉에서 전북을 3-2로 이긴 경기에서 나왔다.",
+      "MVP 모재현은 전반 39분 왼발 슈팅으로 2-1 역전골을 넣었다. 2-2로 맞선 추가시간에는 오른쪽을 파고들어 크로스를 올렸고, 박상혁이 결승골로 마무리했다.",
+      "베스트11에는 강원에서 모재현, 김대원, 신민하가 이름을 올렸다. 신민하는 전반 13분 동점골을 넣은 수비수다. 전북 쪽에서는 동점골의 이동준, 선제골의 콤파뇨가 있었지만 명단에 들지 못했다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20240097",
+     "big": "BEST11",
+     "paragraphs": [
+      "강원 수비수 신민하",
+      "전북전 전반 13분 득점",
+      "송범근과 함께 도하행"
+     ],
+     "caption": "신민하(강원)",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 7,
+     "rule_top": true,
+     "title": "35라운드 베스트11, 팀별 인원",
+     "items": [
+      {
+       "label": "강원",
+       "value": 3,
+       "text": "3명",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산",
+       "value": 3,
+       "text": "3명",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전",
+       "value": 3,
+       "text": "3명",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "김천",
+       "value": 1,
+       "text": "1명",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "부천",
+       "value": 1,
+       "text": "1명",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 0,
+       "text": "0명",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "출처: 한국프로축구연맹 발표(스포츠경향·이투데이 보도)",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "rule_top": true,
+     "image": "player:20170121",
+     "big": "86'",
+     "paragraphs": [
+      "이동준, 공격수 7번",
+      "후반 41분 2-2 동점골",
+      "추가시간에 승점 놓쳐"
+     ],
+     "caption": "이동준",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 12,
+     "rule_top": true,
+     "title": "35라운드 베스트11 (연맹 발표)",
+     "items": [
+      {
+       "label": "공격수",
+       "value": "김대원(강원) · 정재민(김천) · 이동경(울산)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "미드필더",
+       "value": "김민준(부천) · 강윤성(대전) · 토마스(울산) · 모재현(강원)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "수비수",
+       "value": "정승현(울산) · 안톤(대전) · 신민하(강원)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "골키퍼",
+       "value": "이창근(대전)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "MVP · 베스트 팀",
+       "value": "모재현 · 강원",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "베스트 매치",
+       "value": "강원 3-2 전북 (8일 강릉)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "대표팀",
+   "teaser": "송범근, 도하에서 모레노호 첫 완전체 훈련",
+   "folio": "대표팀 · 모레노호 도하 2연전",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 4,
+     "image": "commons:송범근:250503",
+     "caption": "송범근. 2025년 5월 3일 서울 원정 경기 장면.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "A매치",
+     "title": "송범근, 도하에서 모레노호 첫 완전체 훈련",
+     "paragraphs": [
+      "송범근이 10일 카타르 도하의 카타르 대학교 운동장에서 대표팀 첫 완전체 훈련을 소화했다. 9일 출국한 송범근, 신민하, 손정범이 합류하면서 이번에 뽑힌 26명이 처음 한자리에 모였다.",
+      "대표팀은 13일 오후 11시 사우디아라비아, 17일 오후 11시 카타르와 차례로 맞붙는다. 두 경기 모두 도하 자심 빈 하마드 스타디움에서 열린다(한국 시각).",
+      "골문 경쟁은 조현우, 김승규, 송범근이 같은 선에서 다시 출발한다는 전망이 나온다. 송범근은 10월 베네수엘라전에 선발로 나서 무실점으로 막았다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "모레노호 11월 일정 (한국 시각)",
+     "items": [
+      {
+       "label": "10일(화)",
+       "value": "도하 첫 완전체 훈련 (26명)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "13일(금) 23:00",
+       "value": "사우디아라비아전 · 자심 빈 하마드",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "17일(화) 23:00",
+       "value": "카타르전 · 자심 빈 하마드",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "21일(토)",
+       "value": "전북 서울전 (K리그1 36R)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "선수 TMI",
+     "title": "송범근, 올해 대표팀에서 받은 숫자",
+     "items": [
+      {
+       "title": "평점 7.9",
+       "text": "10월 베네수엘라전 0-0, 4세이브로 양 팀 최고 평점(머니투데이)",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/03/2026100304362387508",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "이달의 세이브",
+       "text": "2026시즌 8월 K리그 이달의 세이브 수상",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20260916n28043",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "31번",
+       "text": "전북 등번호. 도하에는 강원 신민하와 함께 하루 늦게 합류했다",
+       "source_name": "스포츠월드",
+       "source_url": "https://www.sportsworldi.com/newsView/20261110502559",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "숫자 놀이",
+   "teaser": "울산보다 덜 졌는데 승점은 8점 적은 이유",
+   "folio": "숫자 놀이 · 35라운드 순위표 다시 읽기",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "숫자 놀이",
+     "title": "덜 지고, 득실도 높은데 승점은 8점 적다",
+     "paragraphs": [
+      "35라운드까지 전북은 10번 졌다. 2위 울산은 12번 졌다. 득실차도 전북이 +9로 울산(+7)보다 높다. 그런데 승점은 울산이 57, 전북이 49로 8점 차이다.",
+      "답은 무승부에 있다. 전북은 13번 비겼고 울산은 6번 비겼다. 울산이 전북보다 5번 더 이겼고, 그 승리마다 붙은 승점 3이 차이를 만들었다.",
+      "전북의 13무는 김천(20무), 강원(15무) 다음으로 많고 안양과 같다. 남은 리그 3경기에서 비긴 경기를 승리로 바꾸는 일이 3위 대전(승점 53)을 따라잡는 길이다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:전주월드컵경기장:14",
+     "caption": "전주월드컵경기장. 21일 서울전이 열린다.",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "K리그1 무승부 수 (35라운드까지)",
+     "items": [
+      {
+       "label": "김천",
+       "value": 20,
+       "text": "20무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 15,
+       "text": "15무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 13,
+       "text": "13무",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "안양",
+       "value": 13,
+       "text": "13무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "제주",
+       "value": 12,
+       "text": "12무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산",
+       "value": 6,
+       "text": "6무",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "기록: K리그 데이터포털",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "울산과 전북, 나란히 놓고 보면",
+     "items": [
+      {
+       "label": "승 · 무 · 패",
+       "value": "울산 17·6·12 / 전북 12·13·10",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "득점 · 실점",
+       "value": "울산 56·49 / 전북 45·36",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "득실차",
+       "value": "울산 +7 / 전북 +9",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "승점",
+       "value": "울산 57 / 전북 49",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "남은 리그 3경기, 한 경기만 이길 수 있다면 어느 경기?",
+     "paragraphs": [
+      "21일 1위 서울(홈), 29일 2위 울산(원정), 12월 6일 6위 인천(홈). 댓글로 고르고 이유를 한 줄로 남겨 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "오늘의 등급표와 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "35R MVP 모재현, 강원-전북전 베스트 매치",
+       "text": "연맹 10일 발표. 베스트11에 전북 선수 없음",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611101608003/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "송범근, 도하 첫 완전체 훈련 소화",
+       "text": "26명 전원 참가, 13일 사우디전",
+       "source_name": "뉴스핌",
+       "source_url": "https://www.newspim.com/news/view/20261110000992",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "ACLE 5차전 가시마 원정 25일 19:00",
+       "text": "가시마 사커 스타디움. 일본과 한국은 같은 시각",
+       "source_name": "J.LEAGUE",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "서울전 홈 승리로 휴식기 끝내기",
+       "text": "팬들의 바람. 21일 전주",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 5,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "35라운드 MVP는 누구일까?",
+       "text": "강원 모재현 (1골 1도움)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "35라운드 베스트11에 전북 선수는 몇 명?",
+       "text": "0명",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "대표팀 사우디아라비아전 킥오프는 언제?",
+       "text": "13일(금) 오후 11시, 한국 시각",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "35R MVP·베스트11·베스트 매치",
+       "text": "스포츠경향, 이투데이, 네이트 스포츠",
+       "source_name": "이투데이",
+       "source_url": "https://www.etoday.co.kr/news/view/2646305",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "35R 시상 (네이트 스포츠)",
+       "text": "모재현 MVP, 베스트 팀 강원",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://sports.news.nate.com/view/20261110n17986",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "모레노호 도하 첫 완전체 훈련",
+       "text": "스포츠월드, 네이트 스포츠",
+       "source_name": "네이트 스포츠",
+       "source_url": "https://m.news.nate.com/view/20261110n37103",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "대표팀 골키퍼 경쟁 전망",
+       "text": "조현우·김승규·송범근",
+       "source_name": "머니투데이",
+       "source_url": "https://www.mt.co.kr/sports/2026/10/03/2026100304362387508",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "ACLE 5차전 가시마-전북",
+       "text": "11월 25일 19:00 (일본·한국 시각)",
+       "source_name": "J.LEAGUE",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "기록",
+       "text": "순위·승점·경기 기록은 K리그 데이터포털 기준",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "알림",
+       "text": "오늘은 커뮤니티 게시판을 읽지 못해 커뮤니티 온도는 하루 쉰다.",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20250061": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20250061.png",
+   "alt": "콤파뇨",
+   "back_no": 96,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20240097": {
+   "src": "https://d2tfp74nsbbrkr.cloudfront.net/v1/player/2026/K21/player_20240097.png",
+   "alt": "신민하",
+   "back_no": 47,
+   "credit": "사진 K리그 선수 프로필"
+  },
+  "player:20170121": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png",
+   "alt": "이동준",
+   "back_no": 7,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 35,
+    "w": 20,
+    "d": 7,
+    "l": 8,
+    "gf": 62,
+    "ga": 32,
+    "pts": 67,
+    "rank": 1,
+    "gd": 30
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 35,
+    "w": 17,
+    "d": 6,
+    "l": 12,
+    "gf": 56,
+    "ga": 49,
+    "pts": 57,
+    "rank": 2,
+    "gd": 7
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 35,
+    "w": 14,
+    "d": 11,
+    "l": 10,
+    "gf": 55,
+    "ga": 41,
+    "pts": 53,
+    "rank": 3,
+    "gd": 14
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 35,
+    "w": 12,
+    "d": 15,
+    "l": 8,
+    "gf": 44,
+    "ga": 34,
+    "pts": 51,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 35,
+    "w": 12,
+    "d": 13,
+    "l": 10,
+    "gf": 45,
+    "ga": 36,
+    "pts": 49,
+    "rank": 5,
+    "gd": 9
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 35,
+    "w": 13,
+    "d": 10,
+    "l": 12,
+    "gf": 44,
+    "ga": 37,
+    "pts": 49,
+    "rank": 6,
+    "gd": 7
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 35,
+    "w": 12,
+    "d": 12,
+    "l": 11,
+    "gf": 41,
+    "ga": 39,
+    "pts": 48,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 35,
+    "w": 11,
+    "d": 13,
+    "l": 11,
+    "gf": 42,
+    "ga": 50,
+    "pts": 46,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 35,
+    "w": 11,
+    "d": 11,
+    "l": 13,
+    "gf": 33,
+    "ga": 42,
+    "pts": 44,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 35,
+    "w": 6,
+    "d": 20,
+    "l": 9,
+    "gf": 35,
+    "ga": 42,
+    "pts": 38,
+    "rank": 10,
+    "gd": -7
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 35,
+    "w": 7,
+    "d": 12,
+    "l": 16,
+    "gf": 35,
+    "ga": 51,
+    "pts": 33,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 35,
+    "w": 3,
+    "d": 14,
+    "l": 18,
+    "gf": 32,
+    "ga": 71,
+    "pts": 23,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 10,
+   "gf": 45,
+   "ga": 36
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-21",
+   "time": "",
+   "home": "전북",
+   "away": "서울",
+   "opp": "FC 서울",
+   "opp_short": "서울",
+   "is_home": true,
+   "round": 36,
+   "venue": "",
+   "comp": "K리그1 36R",
+   "home_note": "5위 · 승점 49",
+   "away_note": "1위 · 승점 67",
+   "when_label": "11월 21일(토)",
+   "d_minus": 10
+  },
+  "last": {
+   "game_id": "209",
+   "date": "2026-11-08",
+   "round": 35,
+   "home": "강원",
+   "away": "전북",
+   "venue": "강릉하이원아레나",
+   "attendance": 4206,
+   "comp": "K리그1 35R",
+   "score": [
+    3,
+    2
+   ],
+   "date_label": "11월 8일(일)",
+   "weather": "비 9℃",
+   "referee": "최현재",
+   "managers": {
+    "home": "정경호",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     3,
+     "MST",
+     89.9,
+     36.1
+    ],
+    [
+     "A",
+     1,
+     8,
+     "GL",
+     89.4,
+     49.7
+    ],
+    [
+     "H",
+     1,
+     12,
+     "BT",
+     93.2,
+     50.9
+    ],
+    [
+     "H",
+     1,
+     12,
+     "GL",
+     91.1,
+     53.9
+    ],
+    [
+     "H",
+     1,
+     16,
+     "BT",
+     70.4,
+     40.5
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     91.7,
+     51.2
+    ],
+    [
+     "H",
+     1,
+     29,
+     "BT",
+     86.6,
+     64.6
+    ],
+    [
+     "H",
+     1,
+     30,
+     "AST",
+     81.0,
+     23.9
+    ],
+    [
+     "H",
+     1,
+     38,
+     "GL",
+     83.2,
+     59.3
+    ],
+    [
+     "H",
+     1,
+     42,
+     "BT",
+     73.6,
+     49.3
+    ],
+    [
+     "A",
+     1,
+     43,
+     "BT",
+     90.3,
+     64.5
+    ],
+    [
+     "A",
+     2,
+     46,
+     "AST",
+     82.2,
+     34.9
+    ],
+    [
+     "A",
+     2,
+     61,
+     "MST",
+     92.9,
+     45.8
+    ],
+    [
+     "H",
+     2,
+     64,
+     "MST",
+     68.6,
+     46.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "MST",
+     79.5,
+     51.4
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     78.3,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     80.9,
+     58.0
+    ],
+    [
+     "H",
+     2,
+     70,
+     "AST",
+     94.8,
+     72.5
+    ],
+    [
+     "H",
+     2,
+     70,
+     "BT",
+     81.5,
+     27.5
+    ],
+    [
+     "H",
+     2,
+     76,
+     "MST",
+     96.1,
+     63.9
+    ],
+    [
+     "H",
+     2,
+     79,
+     "AST",
+     76.6,
+     55.9
+    ],
+    [
+     "A",
+     2,
+     84,
+     "AST",
+     90.4,
+     56.6
+    ],
+    [
+     "A",
+     2,
+     85,
+     "AST",
+     77.5,
+     34.3
+    ],
+    [
+     "A",
+     2,
+     85,
+     "GL",
+     94.5,
+     62.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "MST",
+     76.7,
+     53.1
+    ],
+    [
+     "A",
+     2,
+     93,
+     "MST",
+     73.8,
+     31.3
+    ],
+    [
+     "H",
+     2,
+     93,
+     "GL",
+     97.2,
+     42.6
+    ],
+    [
+     "H",
+     2,
+     96,
+     "AST",
+     84.3,
+     16.5
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "콤파뇨",
+     "label": "9'",
+     "minute": 9,
+     "pk": true,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "신민하",
+     "label": "13'",
+     "minute": 13,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "모재현",
+     "label": "39'",
+     "minute": 39,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "이동준",
+     "label": "86'",
+     "minute": 86,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "박상혁",
+     "label": "90+4'",
+     "minute": 94,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     19,
+     9
+    ],
+    [
+     "유효슈팅",
+     9,
+     5
+    ],
+    [
+     "패스 성공",
+     377,
+     366
+    ],
+    [
+     "패스 성공률",
+     80.6,
+     82.8,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     6,
+     3
+    ],
+    [
+     "반칙",
+     6,
+     8
+    ],
+    [
+     "경고",
+     1,
+     1
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
