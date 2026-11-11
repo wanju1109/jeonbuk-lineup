@@ -760,6 +760,16 @@ table.rec td:nth-child(2), table.rec th:nth-child(2) { text-align: left; }
   font-size: 13px;
   color: var(--muted);
 }
+#fmGroups summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+#fmGroups details[open] > summary {
+  margin-bottom: 8px;
+}
+#fmGroups .rate-card strong {
+  overflow-wrap: anywhere;
+}
 .rate-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));

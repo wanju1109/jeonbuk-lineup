@@ -2,16 +2,14 @@
   const DATA_VER = "28";
   const DATA_INDEX = `./data/index.json?v=${DATA_VER}`;
   const DATA_PLAYER = (id) => `./data/players/${encodeURIComponent(id)}.json?v=${DATA_VER}`;
+  const DATA_FM_ATTRIBUTES = "./data/fm_attributes.json?v=2";
   const CANONICAL = "https://wanju1109.github.io/jeonbuk-lineup/player_report/";
   const EDIT_TOKEN = "jb7k";
   const EMBED_TOKEN = "y";
-  const SELF_COLOR = "#037340";
-  const SELF_FILL = "rgba(3,115,64,0.22)";
-  const OTHER_COLOR = "#c2410c";
-  const OTHER_FILL = "rgba(194,65,12,0.20)";
 
   const state = {
     index: null,
+    fmAttributes: null,
     leagueId: "1",
     teamId: "",
     pos: "ALL",
@@ -519,137 +517,6 @@
     return head + body + `</tbody></table>`;
   }
 
-  function fmtNum(n) {
-    if (n == null || n === "") return "–";
-    return String(n);
-  }
-
-  function vClass(n) {
-    if (n >= 80) return "v-top";
-    if (n >= 65) return "v-hi";
-    if (n >= 45) return "v-ok";
-    if (n >= 25) return "v-mid";
-    return "v-low";
-  }
-
-  function score100(n) {
-    if (n == null || n === "") return "–";
-    return `${n} / 100`;
-  }
-
-  function polar(cx, cy, r, i, n) {
-    const ang = -Math.PI / 2 + (i / n) * 2 * Math.PI;
-    return [cx + r * Math.cos(ang), cy + r * Math.sin(ang)];
-  }
-
-  function radarSvg(seriesList, labels, size) {
-    const n = labels.length;
-    size = size || 440;
-    const cx = size / 2;
-    const cy = size / 2;
-    const r = size * 0.34;
-    const font = n >= 8 ? 11 : size >= 520 ? 14 : 13;
-    const labOff = n >= 8 ? Math.max(34, size * 0.08) : Math.max(30, size * 0.07);
-    const dot = n >= 8 ? 3 : 4;
-    if (!n) return "";
-    const rings = [0.25, 0.5, 0.75, 1]
-      .map((t) => {
-        const pts = Array.from({ length: n }, (_, i) => polar(cx, cy, r * t, i, n).join(",")).join(" ");
-        return `<polygon points="${pts}" fill="none" stroke="#c5d6ca" stroke-width="1" />`;
-      })
-      .join("");
-    const spokes = Array.from({ length: n }, (_, i) => {
-      const [x, y] = polar(cx, cy, r, i, n);
-      return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#c5d6ca" stroke-width="1" />`;
-    }).join("");
-    const labs = labels
-      .map((lab, i) => {
-        const [x, y] = polar(cx, cy, r + labOff, i, n);
-        return `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="middle" font-size="${font}" fill="#4a5d54">${escapeHtml(lab)}</text>`;
-      })
-      .join("");
-    const polys = seriesList
-      .map((s) => {
-        const pts = (s.values || [])
-          .map((v, i) => polar(cx, cy, r * (Math.max(0, Math.min(100, v || 0)) / 100), i, n).join(","))
-          .join(" ");
-        const width = s.width || 2.6;
-        const dash = s.dash ? ` stroke-dasharray="${escapeHtml(s.dash)}"` : "";
-        return (
-          `<polygon points="${pts}" fill="${s.fill}" stroke="${s.stroke}" stroke-width="${width}"${dash} />` +
-          (s.values || [])
-            .map((v, i) => {
-              const [x, y] = polar(cx, cy, r * (Math.max(0, Math.min(100, v || 0)) / 100), i, n);
-              return `<circle cx="${x}" cy="${y}" r="${dot}" fill="${s.stroke}" />`;
-            })
-            .join("")
-        );
-      })
-      .join("");
-    return `<svg viewBox="0 0 ${size} ${size}" role="img">${rings}${spokes}${polys}${labs}</svg>`;
-  }
-
-  function radarPanel(title, seriesList, labels, size) {
-    if (!labels || !labels.length) return "";
-    return (
-      `<div class="fm-radar">` +
-      `<p class="radar-cap">${escapeHtml(title)}</p>` +
-      radarSvg(seriesList, labels, size) +
-      `</div>`
-    );
-  }
-
-  function cmpSeries(mine, theirs) {
-    return [
-      { values: mine, fill: SELF_FILL, stroke: SELF_COLOR, width: 2.6 },
-      { values: theirs, fill: OTHER_FILL, stroke: OTHER_COLOR, width: 2.6, dash: "7 5" },
-    ];
-  }
-
-  function radarLegend(items) {
-    return (
-      `<div class="radar-legend">` +
-      (items || [])
-        .map(
-          (it) =>
-            `<span class="lg-item">` +
-            `<i style="background:${escapeHtml(it.color)}"></i>` +
-            `${escapeHtml(it.label)}</span>`
-        )
-        .join("") +
-      `</div>`
-    );
-  }
-
-  function tendHtml(score, name) {
-    const left = Math.max(4, Math.min(96, score.needle));
-    const note = score.tendNote
-      ? score.tendNote
-      : score.gk
-        ? "키퍼 수비 성향은 클린율·경기당 실점."
-        : "야수 수비 성향은 태클 표가 없어 출장 신뢰에서 공격 산출을 뺀 값.";
-    return (
-      `<div class="tend-labels">` +
-      `<span>공격</span>` +
-      `<strong>${escapeHtml(name || "")} · ${escapeHtml(score.tendLabel)}</strong>` +
-      `<span>수비</span>` +
-      `</div>` +
-      `<div class="tend-track" role="img" aria-label="${escapeHtml(score.tendLabel)}">` +
-      `<i class="tend-needle" style="left:${left}%"></i>` +
-      `</div>` +
-      `<p class="tend-note">${escapeHtml(note)} 공격 ${score.attack} · 수비 ${score.defend}</p>`
-    );
-  }
-
-  function cmpTendHtml(selfName, a, otherName, b) {
-    return (
-      `<div class="tend-dual">` +
-      tendHtml(a, selfName) +
-      tendHtml(b, otherName) +
-      `</div>`
-    );
-  }
-
   function sparkSvg(spark, gk) {
     const rows = spark || [];
     if (!rows.length) return `<p class="empty-note">시즌 흐름을 그릴 공식 행이 없습니다.</p>`;
@@ -719,98 +586,77 @@
     $("formText").innerHTML = badge + escapeHtml(analysis.form.text || "");
   }
 
-  function renderScore(p, analysis) {
-    const sc = analysis.score;
-    if (!sc) return;
-    $("scoreNote").textContent = sc.formula;
-    $("scoreHead").innerHTML =
-      `<div class="fm-cap"><span>올해 기여점</span><strong>${sc.total}</strong><em>100점 만점</em></div>` +
-      `<div class="fm-cap"><span>공격 성향</span><strong>${sc.attack}</strong><em>경기당 골+도움</em></div>` +
-      `<div class="fm-cap"><span>수비 성향</span><strong>${sc.defend}</strong><em>${escapeHtml(sc.tendLabel)}</em></div>`;
-    $("tendBox").innerHTML = tendHtml(sc, p.name);
-    const det = PlayerEngine.detailRadar(sc);
-    const pair = $("scoreRadars");
-    const overview =
-      radarPanel(
-        "요약",
-        [{ values: sc.axes.map((a) => a.value), fill: SELF_FILL, stroke: SELF_COLOR }],
-        sc.axes.map((a) => a.label),
-        420
-      );
-    const detail = det.labels.length
-      ? radarPanel(
-          "상세",
-          [{ values: det.values, fill: SELF_FILL, stroke: SELF_COLOR }],
-          det.labels,
-          420
-        )
-      : "";
-    if (pair) {
-      pair.classList.toggle("one", !detail);
-      pair.innerHTML =
-        overview +
-        detail +
-        radarLegend([{ color: SELF_COLOR, label: `${p.name || "이 선수"} · 초록 · 100점` }]);
-    }
-    $("scoreBars").innerHTML = sc.axes
-      .map((a) => {
-        const cls = vClass(a.value);
-        const shown = a.raw ? escapeHtml(a.raw) : score100(a.value);
-        return (
-          `<div class="fm-row">` +
-          `<span class="lab">${escapeHtml(a.label)}</span>` +
-          `<div class="bar"><i class="${cls}" style="width:${a.value}%"></i></div>` +
-          `<span class="num ${cls}">${shown}</span>` +
-          `</div>`
-        );
-      })
-      .join("");
-    const rates = sc.rates || [];
-    const rateGrid = $("rateGrid");
-    const rateNote = $("rateNote");
-    if (!rates.length) {
-      if (rateNote) {
-        rateNote.textContent = "칠판 3경기 미만이면 패스 성공률·슈팅 정확도를 계산하지 않습니다. K리그2는 칠판 표본이 없습니다.";
-      }
-      if (rateGrid) rateGrid.innerHTML = "";
-    } else {
-      if (rateNote) {
-        rateNote.textContent = sc.gk
-          ? "패스 성공률 = 성공/시도. 선방률 = 선방/(선방+실점). Bepro11 부가기록."
-          : "패스 성공률 = 성공/시도. 슈팅 정확도 = 유효슈팅/슈팅. Bepro11 부가기록.";
-      }
-      if (rateGrid) {
-        const shown = rates.filter((r) => r.pct != null);
-        const groups = [];
-        shown.forEach((r) => {
-          const title = r.group || "기타";
-          let g = groups.find((x) => x.title === title);
-          if (!g) {
-            g = { title, items: [] };
-            groups.push(g);
-          }
-          g.items.push(r);
-        });
-        rateGrid.innerHTML = groups
-          .map((g) => {
-            const cards = g.items
-              .map((r) => {
-                const cls = vClass(r.pct);
-                return (
-                  `<div class="rate-card">` +
-                  `<span>${escapeHtml(r.label)}</span>` +
-                  `<strong class="${cls}">${escapeHtml(r.text)}</strong>` +
-                  `<em>${escapeHtml(r.raw)}${r.hint ? ` · ${r.hint}` : ""}</em>` +
-                  `</div>`
-                );
-              })
-              .join("");
-            return `<div class="rate-group"><h5>${escapeHtml(g.title)}</h5><div class="rate-grid">${cards}</div></div>`;
-          })
-          .join("");
-      }
-    }
+  const FM_GROUPS = [
+    ["기술", {
+      corners: "코너킥", crossing: "크로스", dribbling: "드리블", finishing: "골 결정력",
+      first_touch: "퍼스트 터치", free_kick_taking: "프리킥", heading: "헤더",
+      long_shots: "중거리 슛", long_throws: "장거리 스로인", marking: "대인 마크",
+      passing: "패스", penalty_taking: "페널티킥", tackling: "태클", technique: "개인기",
+    }],
+    ["정신", {
+      aggression: "적극성", anticipation: "예측력", bravery: "용감함", composure: "침착성",
+      concentration: "집중력", decisions: "판단력", determination: "승부욕",
+      flair: "천재성", leadership: "리더십", off_the_ball: "오프 더 볼",
+      positioning: "위치 선정", teamwork: "팀워크", vision: "시야", work_rate: "활동량",
+    }],
+    ["신체", {
+      acceleration: "가속도", agility: "민첩성", balance: "균형 감각",
+      jumping_reach: "점프 거리", natural_fitness: "타고난 체력", pace: "주력",
+      stamina: "지구력", strength: "몸싸움",
+    }],
+    ["골키퍼", {
+      aerial_reach: "공중 장악력", command_of_area: "수비 범위", communication: "수비 조율",
+      eccentricity: "기행", handling: "볼 핸들링", kicking: "골킥", one_on_ones: "일대일 방어",
+      reflexes: "반사 신경", rushing_out: "돌진", punching: "펀칭", throwing: "스로잉",
+    }],
+    ["숨은 능력치", {
+      consistency: "꾸준함", dirtiness: "더티 플레이", important_matches: "중요 경기",
+      injury_proneness: "부상 빈도", versatility: "다재다능",
+    }],
+    ["포지션 · 양발", {
+      left_foot: "왼발", right_foot: "오른발", natural_positions: "주 포지션",
+      accomplished_positions: "소화 가능 포지션", positions_stc: "ST (C)",
+      positions_aml: "AM (L)", positions_amc: "AM (C)", positions_amr: "AM (R)",
+      positions_ml: "M (L)", positions_mc: "M (C)", positions_mr: "M (R)",
+      positions_wbl: "WB (L)", positions_dm: "DM", positions_wbr: "WB (R)",
+      positions_dl: "D (L)", positions_dc: "D (C)", positions_dr: "D (R)",
+      positions_sw: "SW", positions_gk: "GK",
+    }],
+    ["성격 · 선호 플레이", {
+      personality_adaptability: "적응력", personality_ambition: "야망",
+      personality_loyalty: "충성심", personality_pressure: "압박 대처",
+      personality_professionalism: "프로 의식", personality_sportsmanship: "스포츠맨십",
+      personality_temperament: "기질", personality_controversy: "논쟁성", traits: "선호 플레이",
+    }],
+    ["현재·잠재 능력 · 계약 · 평판", {
+      ability_current: "현재 능력", ability_potential: "잠재 능력", transfer_value: "이적 가치",
+      contract_wage: "주급", contract_end: "계약 만료", reputation_current: "현재 평판",
+      reputation_home: "국내 평판", reputation_world: "세계 평판",
+    }],
+  ];
+
+  function fmValue(value) {
+    return escapeHtml(typeof value === "number" ? value.toLocaleString("ko-KR") : dash(value));
   }
+
+  function renderFmAttributes(p) {
+    const fm = state.fmAttributes?.[p.id];
+    $("fmNote").textContent = fm
+      ? "출처 FM 세이브 · 세부 능력치와 포지션 숙련도는 20점 만점"
+      : state.fmAttributes
+        ? "FM 세이브에서 이 선수의 능력치를 확인하지 못했습니다."
+        : "FM 능력치 데이터를 불러오지 못했습니다.";
+    $("fmGroups").innerHTML = fm
+      ? FM_GROUPS.map(([title, fields], index) => {
+          const cards = Object.entries(fields).map(([key, label]) =>
+            `<div class="rate-card"><span>${escapeHtml(label)}</span><strong>${fmValue(fm[key])}</strong></div>`
+          ).join("");
+          return `<details class="rate-group"${index < 3 ? " open" : ""}>` +
+            `<summary>${escapeHtml(title)}</summary><div class="rate-grid">${cards}</div></details>`;
+        }).join("")
+      : "";
+  }
+
 
   function renderYears(p, analysis) {
     const gk = PlayerEngine.isGk(p);
@@ -935,88 +781,33 @@
     renderComparePicker(p);
     const other = state.comparePlayer;
     if (!other) {
-      $("cmpRadars").innerHTML = "";
-      $("cmpTend").innerHTML = "";
-      $("cmpTable").innerHTML = `<p class="empty-note">경쟁자 카드나 검색으로 비교 상대를 고르세요.</p>`;
-      $("cmpText").textContent = "";
+      $("cmpTable").innerHTML = `<p class="empty-note">비교할 선수를 고르세요.</p>`;
       return;
     }
-    const view = PlayerEngine.compareView(p, other, state.events);
-    const detA = view.detailA || { labels: [], values: [] };
-    const detB = view.detailB || { labels: [], values: [] };
-    const detLabels = detA.labels.length ? detA.labels : detB.labels;
-    const legend = radarLegend([
-      { color: SELF_COLOR, label: `${p.name} · 초록` },
-      { color: OTHER_COLOR, label: `${other.name} · 주황` },
-    ]);
-    $("cmpRadars").classList.toggle("one", !detLabels.length);
-    $("cmpRadars").innerHTML =
-      radarPanel("요약", cmpSeries(view.radarMine, view.radarTheirs), view.radarLabels, 420) +
-      (detLabels.length
-        ? radarPanel(
-            "상세",
-            cmpSeries(
-              detA.values.length ? detA.values : detLabels.map(() => 0),
-              detB.values.length ? detB.values : detLabels.map(() => 0)
-            ),
-            detLabels,
-            420
-          )
-        : "") +
-      legend;
-    $("cmpTend").innerHTML = cmpTendHtml(p.name, view.a, other.name, view.b);
-    const cmpWinner = (r) => {
-      if (r.mine == null || r.theirs == null || !Number.isFinite(Number(r.mine)) || !Number.isFinite(Number(r.theirs))) {
-        return "";
-      }
-      if (Number(r.mine) === Number(r.theirs)) return "";
-      const low = r.better === "low";
-      const mineWins = low ? Number(r.mine) < Number(r.theirs) : Number(r.mine) > Number(r.theirs);
-      return mineWins ? "mine" : "theirs";
-    };
-    const cmpCell = (r, side) => {
-      const n = side === "mine" ? r.mine : r.theirs;
-      const unit100 = r.scale === 100;
-      const unitPct = r.scale === "pct";
-      const txt = unit100 ? score100(n) : unitPct ? (n == null ? "–" : `${n}%`) : fmtNum(n);
-      const win = cmpWinner(r) === side;
-      const inner = win ? `<span class="win-mark">${txt}</span>` : txt;
-      return `<td class="${win ? "win" : ""}">${inner}</td>`;
-    };
-    const cmpRowHtml = (r) => {
-      const d = r.d;
-      const dCls = d == null ? "" : d > 0 ? "d-plus" : d < 0 ? "d-minus" : "";
-      const dTxt = d == null ? "–" : (d > 0 ? "+" : "") + d;
-      const unit100 = r.scale === 100;
-      const unitPct = r.scale === "pct";
-      const suffix = unit100 ? " (100점)" : unitPct ? " (%)" : "";
-      return (
-        `<tr><td>${escapeHtml(r.label)}${suffix}</td>` +
-        cmpCell(r, "mine") +
-        cmpCell(r, "theirs") +
-        `<td class="${dCls}">${dTxt}${unitPct && d != null ? "p" : ""}</td></tr>`
-      );
-    };
-    const body = (view.sections || [])
-      .filter((sec) => sec.rows && sec.rows.length)
-      .map((sec) => {
-        return (
-          `<tr class="cmp-sec"><th colspan="4">${escapeHtml(sec.title)}</th></tr>` +
-          sec.rows.map(cmpRowHtml).join("")
-        );
-      })
-      .join("");
+
+    const mine = state.fmAttributes?.[p.id];
+    const theirs = state.fmAttributes?.[other.id];
+    if (!mine && !theirs) {
+      $("cmpTable").innerHTML = `<p class="empty-note">두 선수의 FM 능력치를 확인하지 못했습니다.</p>`;
+      return;
+    }
+
+    const body = FM_GROUPS.map(([title, fields]) => {
+      const rows = Object.entries(fields).map(([key, label]) => {
+        const a = mine?.[key];
+        const b = theirs?.[key];
+        const difference = typeof a === "number" && typeof b === "number" ? a - b : null;
+        const shown = difference > 0 ? `+${difference}` : fmValue(difference);
+        return `<tr><td>${escapeHtml(label)}</td><td>${fmValue(a)}</td><td>${fmValue(b)}</td><td>${shown}</td></tr>`;
+      }).join("");
+      return `<tr class="cmp-sec"><th scope="rowgroup" colspan="4">${escapeHtml(title)}</th></tr>${rows}`;
+    }).map((rows) => `<tbody>${rows}</tbody>`).join("");
+
     $("cmpTable").innerHTML =
-      `<table class="cmp"><thead><tr>` +
-      `<th>항목</th>` +
-      `<th><span class="lg-dot" style="background:${SELF_COLOR}"></span>${escapeHtml(p.name)}</th>` +
-      `<th><span class="lg-dot" style="background:${OTHER_COLOR}"></span>${escapeHtml(other.name)}</th>` +
-      `<th>차이</th>` +
-      `</tr></thead><tbody>` +
-      body +
-      `</tbody></table>`;
-    $("cmpText").textContent = PlayerEngine.rivalCopy(p, other, state.events);
+      `<table class="cmp"><thead><tr><th>항목</th><th>${escapeHtml(p.name)}</th>` +
+      `<th>${escapeHtml(other.name)}</th><th>차이</th></tr></thead>${body}</table>`;
   }
+
 
   function renderAnalysis(p) {
     if (typeof PlayerEngine === "undefined") return;
@@ -1040,7 +831,6 @@
     $("scoutProfile").textContent = analysis.profile || "";
     renderRole(analysis);
     renderForm(p, analysis);
-    renderScore(p, analysis);
     renderYears(p, analysis);
     renderRivals(p);
     renderCompare(p);
@@ -1104,8 +894,8 @@
     }
     $("sourceLine").innerHTML =
       `기록 ${escapeHtml(p.source || "K리그")} · 수집 ${escapeHtml((p.fetched_at || "").slice(0, 10))} · ` +
-      `기여점은 공식 골+도움 + 칠판 부가기록 · ` +
       links.join(" · ");
+    renderFmAttributes(p);
     renderAnalysis(p);
     box.scrollIntoView({ behavior: "smooth", block: "start" });
   }
@@ -1292,6 +1082,9 @@
     applyViewMode();
     bind();
     try {
+      const fmRequest = fetch(DATA_FM_ATTRIBUTES)
+        .then((res) => res.ok ? res.json() : null)
+        .catch(() => null);
       const res = await fetch(DATA_INDEX);
       if (!res.ok) throw new Error("index " + res.status);
       state.index = await res.json();
@@ -1308,6 +1101,7 @@
           state.events = null;
         }
       }
+      state.fmAttributes = await fmRequest;
       applyHash();
     } catch (err) {
       setStatus("선수 명단을 불러오지 못했습니다. 수집 스크립트를 먼저 실행하세요.");
