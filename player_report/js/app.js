@@ -639,6 +639,47 @@
     return escapeHtml(typeof value === "number" ? value.toLocaleString("ko-KR") : dash(value));
   }
 
+  function fmScale(key) {
+    if (key === "ability_current" || key === "ability_potential") return 200;
+    if (key.startsWith("reputation_")) return 10000;
+    if (["transfer_value", "contract_wage", "contract_end", "traits",
+      "natural_positions", "accomplished_positions"].includes(key)) return null;
+    return 20;
+  }
+
+  function fmBar(value, scale, side = "mine") {
+    const width = typeof value === "number" ? Math.max(0, Math.min(100, value / scale * 100)) : 0;
+    return `<span class="fm-track" aria-hidden="true"><span class="fm-fill ${side}" style="width:${width}%"></span></span>`;
+  }
+
+  function fmFieldLabel(key, label) {
+    const lower = ["injury_proneness", "dirtiness", "personality_controversy"].includes(key);
+    return escapeHtml(label) + (lower ? ' <small>낮을수록 좋음</small>' : "");
+  }
+
+  function fmPitch(fm, name) {
+    const spots = [
+      ["stc", 50, 9], ["aml", 16, 26], ["amc", 50, 26], ["amr", 84, 26],
+      ["ml", 16, 43], ["mc", 50, 43], ["mr", 84, 43],
+      ["wbl", 16, 59], ["dm", 50, 59], ["wbr", 84, 59],
+      ["dl", 16, 74], ["dc", 50, 74], ["dr", 84, 74],
+      ["sw", 50, 85], ["gk", 50, 95],
+    ];
+    return `<div class="fm-pitch-wrap"><h4>${escapeHtml(name)} · 포지션 숙련도</h4><div class="fm-pitch">` +
+      spots.map(([pos, x, y]) => {
+        const value = fm?.["positions_" + pos];
+        const level = value >= 15 ? "natural" : value >= 10 ? "capable" : "limited";
+        return `<div class="fm-position ${level}" style="left:${x}%;top:${y}%">` +
+          `<strong>${fmValue(value)}</strong><span>${pos.toUpperCase()}</span></div>`;
+      }).join("") + '</div><p class="table-note">포지션 숙련도 · 20점 만점</p></div>';
+  }
+
+  function fmGroupOrder(p, other) {
+    const indexes = p.position === "GK" && (!other || other.position === "GK")
+      ? [3, 2, 1, 0, 5, 6, 4, 7] : [0, 1, 2, 5, 3, 6, 4, 7];
+    return indexes.map((index) => FM_GROUPS[index]);
+  }
+
   function renderFmAttributes(p) {
     const fm = state.fmAttributes?.[p.id];
     $("fmNote").textContent = fm
@@ -647,16 +688,20 @@
         ? "FM 세이브에서 이 선수의 능력치를 확인하지 못했습니다."
         : "FM 능력치 데이터를 불러오지 못했습니다.";
     $("fmGroups").innerHTML = fm
-      ? FM_GROUPS.map(([title, fields], index) => {
-          const cards = Object.entries(fields).map(([key, label]) =>
-            `<div class="rate-card"><span>${escapeHtml(label)}</span><strong>${fmValue(fm[key])}</strong></div>`
-          ).join("");
-          return `<details class="rate-group"${index < 3 ? " open" : ""}>` +
-            `<summary>${escapeHtml(title)}</summary><div class="rate-grid">${cards}</div></details>`;
+      ? fmGroupOrder(p).map(([title, fields], index) => {
+          const pitch = title === "포지션 · 양발";
+          const rows = Object.entries(fields).filter(([key]) => !pitch || !key.startsWith("positions_"))
+            .map(([key, label]) => {
+              const value = fm[key];
+              const scale = fmScale(key);
+              return `<div class="fm-attribute"><div class="fm-row-label"><span>${fmFieldLabel(key, label)}</span>` +
+                `<strong>${fmValue(value)}</strong></div>${scale ? fmBar(value, scale) : ""}</div>`;
+            }).join("");
+          return `<details class="fm-group"${index < 3 ? " open" : ""}><summary>${escapeHtml(title)}</summary>` +
+            `${pitch ? fmPitch(fm, p.name) : ""}<div class="fm-attribute-list">${rows}</div></details>`;
         }).join("")
       : "";
   }
-
 
   function renderYears(p, analysis) {
     const gk = PlayerEngine.isGk(p);
@@ -781,33 +826,41 @@
     renderComparePicker(p);
     const other = state.comparePlayer;
     if (!other) {
-      $("cmpTable").innerHTML = `<p class="empty-note">비교할 선수를 고르세요.</p>`;
+      $("cmpTable").innerHTML = '<p class="empty-note">비교할 선수를 고르세요.</p>';
       return;
     }
-
     const mine = state.fmAttributes?.[p.id];
     const theirs = state.fmAttributes?.[other.id];
     if (!mine && !theirs) {
-      $("cmpTable").innerHTML = `<p class="empty-note">두 선수의 FM 능력치를 확인하지 못했습니다.</p>`;
+      $("cmpTable").innerHTML = '<p class="empty-note">두 선수의 FM 능력치를 확인하지 못했습니다.</p>';
       return;
     }
-
-    const body = FM_GROUPS.map(([title, fields]) => {
-      const rows = Object.entries(fields).map(([key, label]) => {
-        const a = mine?.[key];
-        const b = theirs?.[key];
-        const difference = typeof a === "number" && typeof b === "number" ? a - b : null;
-        const shown = difference > 0 ? `+${difference}` : fmValue(difference);
-        return `<tr><td>${escapeHtml(label)}</td><td>${fmValue(a)}</td><td>${fmValue(b)}</td><td>${shown}</td></tr>`;
-      }).join("");
-      return `<tr class="cmp-sec"><th scope="rowgroup" colspan="4">${escapeHtml(title)}</th></tr>${rows}`;
-    }).map((rows) => `<tbody>${rows}</tbody>`).join("");
-
-    $("cmpTable").innerHTML =
-      `<table class="cmp"><thead><tr><th>항목</th><th>${escapeHtml(p.name)}</th>` +
-      `<th>${escapeHtml(other.name)}</th><th>차이</th></tr></thead>${body}</table>`;
+    const legend = `<div class="fm-legend"><span class="mine"><i></i>${escapeHtml(p.name)}</span>` +
+      `<span class="theirs"><i></i>${escapeHtml(other.name)}</span></div>`;
+    const body = fmGroupOrder(p, other).map(([title, fields], index) => {
+      const pitch = title === "포지션 · 양발";
+      const rows = Object.entries(fields).filter(([key]) => !pitch || !key.startsWith("positions_"))
+        .map(([key, label]) => {
+          const a = mine?.[key];
+          const b = theirs?.[key];
+          const scale = fmScale(key);
+          const difference = typeof a === "number" && typeof b === "number" ? a - b : null;
+          const diff = difference == null ? "" : difference === 0 ? "동일" :
+            `${escapeHtml(difference > 0 ? p.name : other.name)} +${Math.abs(difference).toLocaleString("ko-KR")}`;
+          return `<div class="fm-comparison-row"><div class="fm-row-label"><span>${fmFieldLabel(key, label)}</span>` +
+            `<small>${diff}</small></div><div class="fm-compare-values">` +
+            `<div class="mine" aria-label="${escapeHtml(p.name)}">${scale ? fmBar(a, scale) : ""}<strong>${fmValue(a)}</strong></div>` +
+            `<div class="theirs" aria-label="${escapeHtml(other.name)}">${scale ? fmBar(b, scale, "theirs") : ""}<strong>${fmValue(b)}</strong></div></div></div>`;
+        }).join("");
+      return `<details class="fm-group"${index < 3 ? " open" : ""}><summary>${escapeHtml(title)}</summary>` +
+        `${pitch ? '<div class="fm-pitch-pair">' + fmPitch(mine, p.name) + fmPitch(theirs, other.name) + '</div>' : ""}` +
+        `<div class="fm-attribute-list">${rows}</div></details>`;
+    }).join("");
+    const missing = !mine || !theirs
+      ? `<p class="table-note">${escapeHtml(!mine ? p.name : other.name)}의 FM 능력치는 확인되지 않았습니다.</p>` : "";
+    $("cmpTable").innerHTML = legend + missing + '<p class="table-note">두 막대는 같은 척도입니다. 세부 능력치 20 · 현재·잠재 능력 200 · 평판 10,000</p>' +
+      `<div class="fm-comparison-groups">${body}</div>`;
   }
-
 
   function renderAnalysis(p) {
     if (typeof PlayerEngine === "undefined") return;
