@@ -1,0 +1,1418 @@
+{
+ "no": 21,
+ "date": "2026-11-12",
+ "matchday_after": false,
+ "headline": "송범근 대표팀, 13일 밤 11시 30분 도하에서 사우디전",
+ "summary": "모레노호의 사우디아라비아 평가전이 13일 밤 11시 30분(한국 시각) 도하에서 열린다. 전북 골키퍼 송범근은 조현우, 김승규와 함께 골문 경쟁에 나선다. 전북은 휴식기 엿새째로, 21일 서울과 홈경기를 치른다.",
+ "strip": [
+  "K리그1 5위 · 승점 49",
+  "대표팀 사우디전 D-1 · 13일(금) 23:30",
+  "다음 경기 D-9 · 11월 21일(토) 서울 홈",
+  "ACLE 5차전 11월 25일 19:00 가시마 원정"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제21호 · 2026.11.12(목)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:송범근:260912",
+     "kicker": "대표팀",
+     "title": "송범근 대표팀, 13일 밤 11시 30분 도하에서 사우디전",
+     "dek": "모레노호 도하 2연전 첫 경기. 골키퍼 세 명이 같은 출발선에 섰다",
+     "caption": "송범근. 9월 12일 전주월드컵경기장 전북-서울전",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "한국 축구대표팀의 사우디아라비아 평가전이 13일 밤 11시 30분(한국 시각) 카타르 도하에서 킥오프한다. 더팩트와 아시아뉴스통신이 같은 시각을 전했다. 어제 호에 밤 11시로 적은 것을 바로잡는다.",
+      "전북 골키퍼 송범근은 조현우(울산), 김승규(FC도쿄)와 함께 이번 26명 명단에 들었다. 소속팀 강원전 일정 때문에 본진보다 하루 늦게 도하에 들어갔고, 10일부터 전원 훈련에 합류했다.",
+      "대표팀은 17일 밤 11시 카타르와 두 번째 경기를 치른다. 두 경기는 내년 1월 사우디아라비아에서 열리는 아시안컵을 대비한 실전 점검이다. 원래 사우디 원정이었지만 중동 정세를 고려해 장소만 도하로 바뀌었다.",
+      "카타르전이 끝나면 전북의 서울전까지 나흘이 남는다. 송범근이 도하에서 몇 분을 뛰느냐는 정정용 감독의 21일 골키퍼 선택과도 이어진다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 4,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "23:30",
+       "label": "13일 사우디전 킥오프 (한국 시각)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5승 9무 5패",
+       "label": "사우디와 역대 19경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-9",
+       "label": "11월 21일(토) 서울 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "5위",
+       "label": "승점 49 · 12승 13무 10패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "대표팀",
+   "teaser": "사우디와 역대 전적은 5승 9무 5패, 팽팽한 상대",
+   "folio": "대표팀 · 모레노호 도하 2연전",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20180025",
+     "big": "D-1",
+     "paragraphs": [
+      "송범근, 골키퍼 31번",
+      "조현우·김승규와 경쟁",
+      "17일 카타르전까지"
+     ],
+     "caption": "송범근",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "도하 2연전",
+     "title": "사우디와 열아홉 번 만나 다섯 번씩 이기고 졌다",
+     "paragraphs": [
+      "한국과 사우디아라비아는 지금까지 19번 맞붙어 5승 9무 5패를 기록했다. 아홉 번이 무승부였다. 가장 최근 맞대결은 2024년 아시안컵 16강으로, 1-1로 비긴 뒤 승부차기에서 한국이 이겼다.",
+      "이번 평가전은 원래 사우디 원정으로 잡혀 있었다. 대한축구협회는 10월 22일 중동 정세를 고려해 상대는 그대로 두고 장소만 카타르 도하로 옮긴다고 발표했다.",
+      "이번 명단에는 K리그 선수 가운데 강원 수비수 신민하와 서울 미드필더 손정범도 들었다. 손정범은 21일 전주에서 전북과 맞설 서울 선수다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "한국-사우디아라비아 역대 19경기",
+     "items": [
+      {
+       "label": "한국 승",
+       "value": 5,
+       "text": "5승",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "무승부",
+       "value": 9,
+       "text": "9무",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "사우디 승",
+       "value": 5,
+       "text": "5패",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "아시아뉴스통신 보도 기준",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "앞으로 3주 (한국 시각)",
+     "items": [
+      {
+       "label": "11.13(금) 23:30",
+       "value": "대표팀 사우디아라비아전 · 도하",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.17(화) 23:00",
+       "value": "대표팀 카타르전 · 도하",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.21(토)",
+       "value": "K리그1 36R 서울 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.25(수) 19:00",
+       "value": "ACLE 5차전 가시마 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11.29(일)",
+       "value": "K리그1 37R 울산 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12.6(일)",
+       "value": "K리그1 38R 인천 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "바로잡습니다",
+     "title": "사우디전 킥오프는 밤 11시 30분",
+     "paragraphs": [
+      "제20호 대표팀 면에 13일 사우디아라비아전 킥오프를 밤 11시로 적었다. 더팩트·아시아뉴스통신 보도 기준 한국 시각 밤 11시 30분이 맞다. 17일 카타르전은 밤 11시 그대로다."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "리그 소식",
+   "teaser": "서울 손정범, 10월 이달의 영플레이어상",
+   "folio": "리그 소식 · 10월 K리그 시상",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:Italo:260912",
+     "caption": "이탈로. 9월 12일 전주에서 열린 전북-서울전",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "10월 시상",
+     "title": "서울 손정범, 10월 이달의 영플레이어상",
+     "paragraphs": [
+      "한국프로축구연맹이 9일 서울 미드필더 손정범을 2026시즌 10월 이달의 영플레이어로 뽑았다. 개인 통산 첫 수상이다.",
+      "심사 기간은 K리그1 31라운드부터 34라운드까지 4경기였다. 손정범은 네 경기에 모두 나섰다. 서울은 이 기간인 10월 24일 33라운드 강원전 1-1 무승부로 남은 경기와 상관없이 우승을 확정했다.",
+      "손정범은 2007년생이다. 이번 11월 소집에서 처음 대표팀에 뽑혔다. 전북은 21일 전주에서 우승팀 서울을 맞는다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "1위 서울과 5위 전북 (35라운드까지)",
+     "items": [
+      {
+       "value": "67 · 49",
+       "label": "승점 (서울 · 전북)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "20 · 12",
+       "label": "승리",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "62 · 45",
+       "label": "득점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "32 · 36",
+       "label": "실점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "기자 수첩",
+   "teaser": "조용한 휴식기, 대표팀 한 경기가 전부인 한 주",
+   "folio": "기자 수첩",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 6,
+     "image": "commons:전주월드컵경기장:10",
+     "caption": "전주월드컵경기장. 21일 서울전이 휴식기 뒤 첫 경기다",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 6,
+     "variant": "green",
+     "kicker": "기자 수첩",
+     "title": "소식 없는 일주일도 준비의 시간",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "강릉 원정 뒤 나흘이 지났다. 구단 공식 발표도, 새 부상 소식도 없었다. 국내축구 게시판의 화제도 대표팀 중계권과 다른 구단 이야기로 옮겨 갔다.",
+      "조용한 주에 팬들이 볼 수 있는 전북 선수는 도하의 송범근 한 명이다. 그가 골문을 지키든 벤치에 앉든, 다음 주 전주로 돌아올 때의 컨디션이 서울전 준비의 일부다.",
+      "남은 리그 3경기와 ACLE 가시마 원정까지, 전북은 3주 동안 네 경기를 치른다. 소식 없는 이번 주가 그 네 경기를 위한 정비 기간이 되길 바란다."
+     ],
+     "rule_top": false,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "휴식기 경과",
+     "title": "강릉에서 전주까지",
+     "items": [
+      {
+       "date": "11.8(일)",
+       "title": "35R 강원 3-2 전북",
+       "text": "추가시간 실점, 5위로 휴식기",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "11.9(월)",
+       "title": "송범근 도하 출국",
+       "text": "신민하·손정범과 함께 본진보다 하루 늦게",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "11.13(금)",
+       "title": "대표팀 사우디전",
+       "text": "도하, 한국 시각 23:30",
+       "state": "hot",
+       "tag": null,
+       "label": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "11.17(화)",
+       "title": "대표팀 카타르전",
+       "text": "도하, 한국 시각 23:00",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "date": "11.21(토)",
+       "title": "36R 서울 홈",
+       "text": "휴식기 뒤 첫 경기",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quote",
+     "span": 4,
+     "rule_top": true,
+     "title": "전주는 쉬는데 골키퍼 장갑 한 켤레만 도하에서 일한다.",
+     "byline": "한 줄 만평",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "오늘의 등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "사우디전 13일 23:30, 카타르전 17일 23:00",
+       "text": "대한축구협회 발표, 두 경기 모두 도하",
+       "source_name": "더팩트",
+       "source_url": "https://news.tf.co.kr/read/ogmeta/2379746.htm",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "손정범, 10월 이달의 영플레이어",
+       "text": "연맹 9일 발표, 31~34R 4경기 대상",
+       "source_name": "아시아뉴스통신",
+       "source_url": "https://www.anewsa.com/detail.php?number=3216103",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "대표팀 골키퍼 조현우·김승규·송범근",
+       "text": "11월 명단 26명 중 골키퍼 3명",
+       "source_name": "FIFA",
+       "source_url": "https://www.fifa.com/ko/tournaments/mens/worldcup/2030/articles/korea-republics-november-2026-squad-announcement-ko",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "송범근 사우디전 출전",
+       "text": "출전 여부는 경기 당일 라인업 발표로 확인",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "최근 사흘 국내축구 루머 게시판에 전북 관련 새 글은 거의 없었다",
+       "label": "조용",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "대표팀 평가전 TV 중계권 이야기가 여러 게시판에 올라왔다",
+       "label": "대표팀",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "다른 구단 감독·재계약 이야기가 게시판 화제의 중심",
+       "label": "리그",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "송범근이 이번에는 뛰었으면 한다는 바람이 이어졌다",
+       "label": "바람",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "13일 사우디아라비아전 킥오프는 한국 시각 몇 시?",
+       "text": "밤 11시 30분",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "한국과 사우디의 역대 맞대결에서 가장 많은 결과는?",
+       "text": "무승부 (9번)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "10월 이달의 영플레이어상을 받은 서울 선수는?",
+       "text": "손정범",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "도하 2연전 일정·장소 변경",
+       "text": "더팩트",
+       "source_name": "더팩트",
+       "source_url": "https://news.tf.co.kr/read/ogmeta/2379746.htm",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "사우디전 킥오프·역대 전적",
+       "text": "아시아뉴스통신",
+       "source_name": "아시아뉴스통신",
+       "source_url": "https://m.anewsa.com/article_sub3.php?number=3210491",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "도하 입성·송범근 별도 출국",
+       "text": "이데일리",
+       "source_name": "이데일리",
+       "source_url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03991766645644080",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "11월 대표팀 명단",
+       "text": "FIFA",
+       "source_name": "FIFA",
+       "source_url": "https://www.fifa.com/ko/tournaments/mens/worldcup/2030/articles/korea-republics-november-2026-squad-announcement-ko",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "손정범 10월 영플레이어상",
+       "text": "아시아뉴스통신, 스포츠월드",
+       "source_name": "스포츠월드",
+       "source_url": "https://www.sportsworldi.com/newsView/20261109517758",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "서울 우승 확정",
+       "text": "경향신문",
+       "source_name": "경향신문",
+       "source_url": "https://www.khan.co.kr/article/202610241654001",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "순위·경기 기록",
+       "text": "K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20180025": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png",
+   "alt": "송범근",
+   "back_no": 31,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 35,
+    "w": 20,
+    "d": 7,
+    "l": 8,
+    "gf": 62,
+    "ga": 32,
+    "pts": 67,
+    "rank": 1,
+    "gd": 30
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 35,
+    "w": 17,
+    "d": 6,
+    "l": 12,
+    "gf": 56,
+    "ga": 49,
+    "pts": 57,
+    "rank": 2,
+    "gd": 7
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 35,
+    "w": 14,
+    "d": 11,
+    "l": 10,
+    "gf": 55,
+    "ga": 41,
+    "pts": 53,
+    "rank": 3,
+    "gd": 14
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 35,
+    "w": 12,
+    "d": 15,
+    "l": 8,
+    "gf": 44,
+    "ga": 34,
+    "pts": 51,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 35,
+    "w": 12,
+    "d": 13,
+    "l": 10,
+    "gf": 45,
+    "ga": 36,
+    "pts": 49,
+    "rank": 5,
+    "gd": 9
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 35,
+    "w": 13,
+    "d": 10,
+    "l": 12,
+    "gf": 44,
+    "ga": 37,
+    "pts": 49,
+    "rank": 6,
+    "gd": 7
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 35,
+    "w": 12,
+    "d": 12,
+    "l": 11,
+    "gf": 41,
+    "ga": 39,
+    "pts": 48,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 35,
+    "w": 11,
+    "d": 13,
+    "l": 11,
+    "gf": 42,
+    "ga": 50,
+    "pts": 46,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 35,
+    "w": 11,
+    "d": 11,
+    "l": 13,
+    "gf": 33,
+    "ga": 42,
+    "pts": 44,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 35,
+    "w": 6,
+    "d": 20,
+    "l": 9,
+    "gf": 35,
+    "ga": 42,
+    "pts": 38,
+    "rank": 10,
+    "gd": -7
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 35,
+    "w": 7,
+    "d": 12,
+    "l": 16,
+    "gf": 35,
+    "ga": 51,
+    "pts": 33,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 35,
+    "w": 3,
+    "d": 14,
+    "l": 18,
+    "gf": 32,
+    "ga": 71,
+    "pts": 23,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 10,
+   "gf": 45,
+   "ga": 36
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-21",
+   "time": "",
+   "home": "전북",
+   "away": "서울",
+   "opp": "FC 서울",
+   "opp_short": "서울",
+   "is_home": true,
+   "round": 36,
+   "venue": "",
+   "comp": "K리그1 36R",
+   "home_note": "5위 · 승점 49",
+   "away_note": "1위 · 승점 67",
+   "when_label": "11월 21일(토)",
+   "d_minus": 9
+  },
+  "last": {
+   "game_id": "209",
+   "date": "2026-11-08",
+   "round": 35,
+   "home": "강원",
+   "away": "전북",
+   "venue": "강릉하이원아레나",
+   "attendance": 4206,
+   "comp": "K리그1 35R",
+   "score": [
+    3,
+    2
+   ],
+   "date_label": "11월 8일(일)",
+   "weather": "비 9℃",
+   "referee": "최현재",
+   "managers": {
+    "home": "정경호",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     3,
+     "MST",
+     89.9,
+     36.1
+    ],
+    [
+     "A",
+     1,
+     8,
+     "GL",
+     89.4,
+     49.7
+    ],
+    [
+     "H",
+     1,
+     12,
+     "BT",
+     93.2,
+     50.9
+    ],
+    [
+     "H",
+     1,
+     12,
+     "GL",
+     91.1,
+     53.9
+    ],
+    [
+     "H",
+     1,
+     16,
+     "BT",
+     70.4,
+     40.5
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     91.7,
+     51.2
+    ],
+    [
+     "H",
+     1,
+     29,
+     "BT",
+     86.6,
+     64.6
+    ],
+    [
+     "H",
+     1,
+     30,
+     "AST",
+     81.0,
+     23.9
+    ],
+    [
+     "H",
+     1,
+     38,
+     "GL",
+     83.2,
+     59.3
+    ],
+    [
+     "H",
+     1,
+     42,
+     "BT",
+     73.6,
+     49.3
+    ],
+    [
+     "A",
+     1,
+     43,
+     "BT",
+     90.3,
+     64.5
+    ],
+    [
+     "A",
+     2,
+     46,
+     "AST",
+     82.2,
+     34.9
+    ],
+    [
+     "A",
+     2,
+     61,
+     "MST",
+     92.9,
+     45.8
+    ],
+    [
+     "H",
+     2,
+     64,
+     "MST",
+     68.6,
+     46.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "MST",
+     79.5,
+     51.4
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     78.3,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     80.9,
+     58.0
+    ],
+    [
+     "H",
+     2,
+     70,
+     "AST",
+     94.8,
+     72.5
+    ],
+    [
+     "H",
+     2,
+     70,
+     "BT",
+     81.5,
+     27.5
+    ],
+    [
+     "H",
+     2,
+     76,
+     "MST",
+     96.1,
+     63.9
+    ],
+    [
+     "H",
+     2,
+     79,
+     "AST",
+     76.6,
+     55.9
+    ],
+    [
+     "A",
+     2,
+     84,
+     "AST",
+     90.4,
+     56.6
+    ],
+    [
+     "A",
+     2,
+     85,
+     "AST",
+     77.5,
+     34.3
+    ],
+    [
+     "A",
+     2,
+     85,
+     "GL",
+     94.5,
+     62.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "MST",
+     76.7,
+     53.1
+    ],
+    [
+     "A",
+     2,
+     93,
+     "MST",
+     73.8,
+     31.3
+    ],
+    [
+     "H",
+     2,
+     93,
+     "GL",
+     97.2,
+     42.6
+    ],
+    [
+     "H",
+     2,
+     96,
+     "AST",
+     84.3,
+     16.5
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "콤파뇨",
+     "label": "9'",
+     "minute": 9,
+     "pk": true,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "신민하",
+     "label": "13'",
+     "minute": 13,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "모재현",
+     "label": "39'",
+     "minute": 39,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "이동준",
+     "label": "86'",
+     "minute": 86,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "박상혁",
+     "label": "90+4'",
+     "minute": 94,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     19,
+     9
+    ],
+    [
+     "유효슈팅",
+     9,
+     5
+    ],
+    [
+     "패스 성공",
+     377,
+     366
+    ],
+    [
+     "패스 성공률",
+     80.6,
+     82.8,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     6,
+     3
+    ],
+    [
+     "반칙",
+     6,
+     8
+    ],
+    [
+     "경고",
+     1,
+     1
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
