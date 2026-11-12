@@ -1,0 +1,1384 @@
+{
+ "no": 22,
+ "date": "2026-11-13",
+ "matchday_after": false,
+ "headline": "티아고, 10월 이달의 선수 후보로 선정, 팬 투표는 15일까지",
+ "summary": "10월 4경기 4골을 넣은 티아고가 바 루아, 아이데일, 클리말라와 함께 10월 이달의 선수 후보 4명에 들었다. 개인 통산 여섯 번째 후보 선정이다.",
+ "strip": [
+  "K리그1 5위 · 승점 49",
+  "10월 이달의 선수 팬 투표 15일 마감",
+  "대표팀 사우디전 오늘 23:30 도하",
+  "다음 경기 D-8 · 11월 21일(토) 14:00 서울 홈"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제22호 · 2026.11.13(금)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:Tiago Orobó:250702",
+     "kicker": "이달의 선수",
+     "title": "티아고, 10월 이달의 선수 후보로 선정, 팬 투표는 15일까지",
+     "dek": "10월 4경기 4골. 여섯 번째 후보 선정, 첫 수상에 도전한다",
+     "caption": "티아고. 2025년 7월 2일 서울-전북전",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북 공격수 티아고가 K리그1 10월 이달의 선수상 후보 4명에 이름을 올렸다. 한국프로축구연맹이 12일 발표했다. 함께 오른 선수는 광주의 바 루아와 아이데일, 서울의 클리말라다.",
+      "평가 대상은 31라운드부터 34라운드까지 네 경기다. 티아고는 이 기간 4골을 넣었다. 32라운드 제주전 두 골로 3-2 승리를 이끌며 라운드 MVP에 올랐고, 33라운드 안양전에서는 종료 직전 동점골로 승점 1을 지켰다.",
+      "이번이 개인 통산 여섯 번째 후보 선정이다. 앞선 다섯 번은 모두 수상으로 이어지지 않았다. 연맹 기술위원회 평가가 60%를 차지하고, 팬 투표 25%와 EA SPORTS FC 온라인 이용자 투표 15%가 더해진다.",
+      "팬 투표는 K리그 공식 앱 'Kick'에서 15일까지 진행된다. 리그가 쉬는 2주 동안 전북 팬이 할 수 있는 일이 하나 생겼다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 4,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "4골",
+       "label": "티아고, 10월(31~34R) 4경기",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "6번째",
+       "label": "티아고 이달의 선수 후보 선정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "15일",
+       "label": "Kick 앱 팬 투표 마감",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-8",
+       "label": "11월 21일(토) 14:00 서울 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "이달의 선수",
+   "teaser": "4명의 후보, 그리고 투표 방법",
+   "folio": "이달의 선수 · 10월 후보",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 5,
+     "image": "player:20220244",
+     "big": "4경기 4골",
+     "paragraphs": [
+      "10월 리그 4경기 4골",
+      "32R 제주전 멀티골",
+      "33R 안양전 극장 동점골"
+     ],
+     "caption": "전북 티아고",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "후보 4명",
+     "title": "광주 듀오, 2연속 노리는 클리말라, 첫 수상 노리는 티아고",
+     "paragraphs": [
+      "경쟁자의 숫자가 만만치 않다. 광주 아이데일은 10월 네 경기에서 매 경기 골을 넣어 6골을 기록했다. 같은 팀 바 루아는 3골 5도움으로 공격포인트 8개를 쌓았다.",
+      "서울 클리말라는 9월 수상자다. 10월에도 3골을 넣어 두 달 연속 수상에 도전한다. 서울은 21일 전주에서 전북과 만나는 상대이기도 하다.",
+      "티아고의 강점은 결정적인 순간의 골이다. 제주전 두 골은 승점 3, 안양전 종료 직전 골은 승점 1로 이어졌다. 전북이 10월에 얻은 승점 5 가운데 4점이 그가 골을 넣은 두 경기에서 나왔다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "10월(31~34R) 후보별 공격포인트",
+     "items": [
+      {
+       "label": "바 루아 (광주)",
+       "value": 8,
+       "text": "3골 5도움",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "아이데일 (광주)",
+       "value": 6,
+       "text": "6골",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "티아고 (전북)",
+       "value": 4,
+       "text": "4골",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "클리말라 (서울)",
+       "value": 3,
+       "text": "3골",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "출처 한국프로축구연맹 발표(일간스포츠, 국제뉴스 보도)",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "수상자는 이렇게 정한다",
+     "items": [
+      {
+       "label": "연맹 기술위원회(TSG) 평가",
+       "value": "60%",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "K리그 팬 투표 (Kick 앱)",
+       "value": "25%",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "EA SPORTS FC 온라인 이용자 투표",
+       "value": "15%",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "팬 투표 기간",
+       "value": "11월 12일~15일",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "티아고의 10월 4골 가운데 최고의 골은?",
+     "paragraphs": [
+      "32라운드 제주전 두 골, 33라운드 안양전 종료 직전 동점골, 31라운드 대전전 골. 여러분이 꼽는 10월의 한 골을 댓글로 남겨 주세요."
+     ],
+     "rule_top": false,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "10월의 티아고",
+   "teaser": "네 경기 다시 보기와 선수 TMI",
+   "folio": "숫자 놀이 · 10월의 티아고",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 7,
+     "image": "commons:전주월드컵경기장:13",
+     "caption": "전주월드컵경기장. 21일 서울전이 열리는 곳",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 5,
+     "title": "10월 리그 4경기 (31~34R)",
+     "items": [
+      {
+       "label": "31R 대전전 1-2 패",
+       "value": "1골",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "32R 제주전 3-2 승",
+       "value": "2골 · 라운드 MVP",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "33R 안양전 1-1 무",
+       "value": "1골 · 종료 직전 동점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "34R 대전전 0-0 무",
+       "value": "-",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "숫자 놀이",
+     "title": "전북의 10월 5골 중 4골이 티아고",
+     "paragraphs": [
+      "10월 네 경기에서 전북은 5골을 넣었다(K리그 데이터포털). 티아고가 4골이다. 1-2로 진 31라운드 대전전의 한 골, 3-2로 이긴 제주전의 두 골, 1-1로 비긴 안양전의 한 골이 그의 몫이다.",
+      "10월 전북의 나머지 한 골은 제주전에서 나왔다. 티아고가 골을 넣지 못한 34라운드 대전전은 0-0으로 끝났다.",
+      "11월 첫 경기였던 35라운드 강원 원정에서는 2골을 넣고도 2-3으로 졌다. 휴식기 뒤 남은 세 경기에서 득점원을 넓히는 일이 전북의 숙제다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "chart",
+     "span": 4,
+     "rule_top": true,
+     "title": "최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 6,
+     "rule_top": true,
+     "image": "player:20220244",
+     "big": "TMI",
+     "paragraphs": [
+      "1993년 10월 28일생",
+      "등록명은 고향 오로보에서",
+      "키 190cm 공격수"
+     ],
+     "caption": "선수 TMI · 티아고",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "list",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "선수 TMI",
+     "title": "티아고의 K리그 발자취",
+     "items": [
+      {
+       "tag": "2022",
+       "title": "경남FC에서 K리그 데뷔",
+       "text": "브라질 오로보 출신. 본명은 티아고 페레이라 다 시우바",
+       "source_name": "Wikipedia",
+       "source_url": "https://en.wikipedia.org/wiki/Tiago_Orob%C3%B3",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "2023",
+       "title": "대전하나시티즌",
+       "text": "17골로 득점 공동 1위에 올랐다",
+       "source_name": "Wikipedia",
+       "source_url": "https://en.wikipedia.org/wiki/Tiago_Orob%C3%B3",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "2024",
+       "title": "전북 현대 입단",
+       "text": "올해 8월 14일 구단이 재계약을 발표했다",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202608140029",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "10월",
+       "title": "생일에 맞춘 듯한 10월",
+       "text": "10월 28일 만 33세가 됐고, 그 달 4골로 이달의 선수 후보에 올랐다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "오늘의 등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "티아고, 10월 이달의 선수 후보",
+       "text": "연맹 12일 발표, 팬 투표 15일까지",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202611120035",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "21일 서울전 오후 2시 전주월드컵경기장",
+       "text": "연맹 파이널라운드 일정 발표",
+       "source_name": "마이데일리",
+       "source_url": "https://www.mydaily.co.kr/page/view/2026102611255671289",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "다음 시즌 감독 관련 커뮤니티 글",
+       "text": "12일 국내축구 루머 게시판에 외국인 감독과 협상이 진전됐다는 글. 출처 불명, 이를 다룬 언론 보도와 구단 입장은 없다",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10548175207",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "티아고 첫 이달의 선수 수상",
+       "text": "여섯 번째 도전, 결과는 투표 마감 뒤 연맹 발표로 확인",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "감독 관련 루머 글에 기대와 의심이 반반. 출처가 없다는 지적이 많았다",
+       "label": "감독설",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "티아고 후보 선정 소식에 팬 투표 독려 글이 이어졌다",
+       "label": "티아고",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "국내축구 게시판 화제는 다른 구단 이적설과 대표팀 평가전",
+       "label": "리그",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "오늘 밤 사우디전에서 송범근이 장갑을 낄지 기다린다는 반응",
+       "label": "대표팀",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "티아고는 10월 이달의 선수 후보에 개인 통산 몇 번째로 올랐나?",
+       "text": "여섯 번째",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "10월 네 경기에서 매 경기 골을 넣어 6골을 기록한 후보는?",
+       "text": "아이데일 (광주)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "21일 전북-서울전 킥오프 시각은?",
+       "text": "오후 2시",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "10월 이달의 선수 후보 발표",
+       "text": "일간스포츠",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202611120035",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "10월 이달의 선수상 4파전",
+       "text": "국제뉴스",
+       "source_name": "국제뉴스",
+       "source_url": "https://www.gukjenews.com/news/articleView.html?idxno=3750072",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "이달의 선수 후보 선정, 4일간 팬 투표",
+       "text": "미디어펜",
+       "source_name": "미디어펜",
+       "source_url": "https://www.mediapen.com/news/view/1136984",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "K리그1 파이널라운드 일정 발표",
+       "text": "마이데일리",
+       "source_name": "마이데일리",
+       "source_url": "https://www.mydaily.co.kr/page/view/2026102611255671289",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "올 시즌 K리그1 마지막 여정, 파이널라운드 일정",
+       "text": "스포츠월드",
+       "source_name": "스포츠월드",
+       "source_url": "https://www.sportsworldi.com/newsView/20261026508808",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "티아고 재계약",
+       "text": "일간스포츠",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202608140029",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "Tiago Orobó",
+       "text": "Wikipedia",
+       "source_name": "Wikipedia",
+       "source_url": "https://en.wikipedia.org/wiki/Tiago_Orob%C3%B3",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "순위·경기 기록",
+       "text": "K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20220244": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220244.png",
+   "alt": "티아고",
+   "back_no": 9,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 35,
+    "w": 20,
+    "d": 7,
+    "l": 8,
+    "gf": 62,
+    "ga": 32,
+    "pts": 67,
+    "rank": 1,
+    "gd": 30
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 35,
+    "w": 17,
+    "d": 6,
+    "l": 12,
+    "gf": 56,
+    "ga": 49,
+    "pts": 57,
+    "rank": 2,
+    "gd": 7
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 35,
+    "w": 14,
+    "d": 11,
+    "l": 10,
+    "gf": 55,
+    "ga": 41,
+    "pts": 53,
+    "rank": 3,
+    "gd": 14
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 35,
+    "w": 12,
+    "d": 15,
+    "l": 8,
+    "gf": 44,
+    "ga": 34,
+    "pts": 51,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 35,
+    "w": 12,
+    "d": 13,
+    "l": 10,
+    "gf": 45,
+    "ga": 36,
+    "pts": 49,
+    "rank": 5,
+    "gd": 9
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 35,
+    "w": 13,
+    "d": 10,
+    "l": 12,
+    "gf": 44,
+    "ga": 37,
+    "pts": 49,
+    "rank": 6,
+    "gd": 7
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 35,
+    "w": 12,
+    "d": 12,
+    "l": 11,
+    "gf": 41,
+    "ga": 39,
+    "pts": 48,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 35,
+    "w": 11,
+    "d": 13,
+    "l": 11,
+    "gf": 42,
+    "ga": 50,
+    "pts": 46,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 35,
+    "w": 11,
+    "d": 11,
+    "l": 13,
+    "gf": 33,
+    "ga": 42,
+    "pts": 44,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 35,
+    "w": 6,
+    "d": 20,
+    "l": 9,
+    "gf": 35,
+    "ga": 42,
+    "pts": 38,
+    "rank": 10,
+    "gd": -7
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 35,
+    "w": 7,
+    "d": 12,
+    "l": 16,
+    "gf": 35,
+    "ga": 51,
+    "pts": 33,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 35,
+    "w": 3,
+    "d": 14,
+    "l": 18,
+    "gf": 32,
+    "ga": 71,
+    "pts": 23,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 10,
+   "gf": 45,
+   "ga": 36
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-21",
+   "time": "",
+   "home": "전북",
+   "away": "서울",
+   "opp": "FC 서울",
+   "opp_short": "서울",
+   "is_home": true,
+   "round": 36,
+   "venue": "",
+   "comp": "K리그1 36R",
+   "home_note": "5위 · 승점 49",
+   "away_note": "1위 · 승점 67",
+   "when_label": "11월 21일(토)",
+   "d_minus": 8
+  },
+  "last": {
+   "game_id": "209",
+   "date": "2026-11-08",
+   "round": 35,
+   "home": "강원",
+   "away": "전북",
+   "venue": "강릉하이원아레나",
+   "attendance": 4206,
+   "comp": "K리그1 35R",
+   "score": [
+    3,
+    2
+   ],
+   "date_label": "11월 8일(일)",
+   "weather": "비 9℃",
+   "referee": "최현재",
+   "managers": {
+    "home": "정경호",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     3,
+     "MST",
+     89.9,
+     36.1
+    ],
+    [
+     "A",
+     1,
+     8,
+     "GL",
+     89.4,
+     49.7
+    ],
+    [
+     "H",
+     1,
+     12,
+     "BT",
+     93.2,
+     50.9
+    ],
+    [
+     "H",
+     1,
+     12,
+     "GL",
+     91.1,
+     53.9
+    ],
+    [
+     "H",
+     1,
+     16,
+     "BT",
+     70.4,
+     40.5
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     91.7,
+     51.2
+    ],
+    [
+     "H",
+     1,
+     29,
+     "BT",
+     86.6,
+     64.6
+    ],
+    [
+     "H",
+     1,
+     30,
+     "AST",
+     81.0,
+     23.9
+    ],
+    [
+     "H",
+     1,
+     38,
+     "GL",
+     83.2,
+     59.3
+    ],
+    [
+     "H",
+     1,
+     42,
+     "BT",
+     73.6,
+     49.3
+    ],
+    [
+     "A",
+     1,
+     43,
+     "BT",
+     90.3,
+     64.5
+    ],
+    [
+     "A",
+     2,
+     46,
+     "AST",
+     82.2,
+     34.9
+    ],
+    [
+     "A",
+     2,
+     61,
+     "MST",
+     92.9,
+     45.8
+    ],
+    [
+     "H",
+     2,
+     64,
+     "MST",
+     68.6,
+     46.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "MST",
+     79.5,
+     51.4
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     78.3,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     80.9,
+     58.0
+    ],
+    [
+     "H",
+     2,
+     70,
+     "AST",
+     94.8,
+     72.5
+    ],
+    [
+     "H",
+     2,
+     70,
+     "BT",
+     81.5,
+     27.5
+    ],
+    [
+     "H",
+     2,
+     76,
+     "MST",
+     96.1,
+     63.9
+    ],
+    [
+     "H",
+     2,
+     79,
+     "AST",
+     76.6,
+     55.9
+    ],
+    [
+     "A",
+     2,
+     84,
+     "AST",
+     90.4,
+     56.6
+    ],
+    [
+     "A",
+     2,
+     85,
+     "AST",
+     77.5,
+     34.3
+    ],
+    [
+     "A",
+     2,
+     85,
+     "GL",
+     94.5,
+     62.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "MST",
+     76.7,
+     53.1
+    ],
+    [
+     "A",
+     2,
+     93,
+     "MST",
+     73.8,
+     31.3
+    ],
+    [
+     "H",
+     2,
+     93,
+     "GL",
+     97.2,
+     42.6
+    ],
+    [
+     "H",
+     2,
+     96,
+     "AST",
+     84.3,
+     16.5
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "콤파뇨",
+     "label": "9'",
+     "minute": 9,
+     "pk": true,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "신민하",
+     "label": "13'",
+     "minute": 13,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "모재현",
+     "label": "39'",
+     "minute": 39,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "이동준",
+     "label": "86'",
+     "minute": 86,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "박상혁",
+     "label": "90+4'",
+     "minute": 94,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     19,
+     9
+    ],
+    [
+     "유효슈팅",
+     9,
+     5
+    ],
+    [
+     "패스 성공",
+     377,
+     366
+    ],
+    [
+     "패스 성공률",
+     80.6,
+     82.8,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     6,
+     3
+    ],
+    [
+     "반칙",
+     6,
+     8
+    ],
+    [
+     "경고",
+     1,
+     1
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
