@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T02:17:06.259051+09:00",
+  "updated_at": "2026-11-12T09:51:26.680835+09:00",
   "preview_hours": 48.0,
   "active_game_id": "211",
   "matches": [
@@ -11,7 +11,7 @@
       "away": "서울",
       "kickoff": "2026-11-21T19:00:00+09:00",
       "kickoff_label": "2026-11-21 19:00 KST",
-      "hours_to_kickoff": 232.7,
+      "hours_to_kickoff": 225.1,
       "within_48h": false,
       "published": false,
       "jeonbuk_match": true,
