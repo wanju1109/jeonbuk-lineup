@@ -1,7 +1,7 @@
 {
   "version": "league-performance-v1",
   "as_of": "2026-11-08",
-  "source_sha256": "d430944b94af741bd90bb148283e96177da06e9178acdebb80e8ea2db8d3dae6",
+  "source_sha256": "1d24d4042dae9959eccbcd7dad6744c35466c88f1f7ba90587aa21b36cd96208",
   "weights": {
     "results": 0.5,
     "change": 0.3,
