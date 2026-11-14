@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k42-sm.png",
   "home_url": "https://www.yonginfc.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-14T07:31:01+09:00",
+  "generated_at": "2026-11-15T06:22:36+09:00",
   "table": {
     "rank": 12,
     "teams": 17,
@@ -730,7 +730,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 25,
-        "apps": 24,
+        "apps": 25,
         "goals": 10,
         "assists": 1,
         "points": 11
@@ -754,7 +754,7 @@
         "position": "FW",
         "back_no": 20,
         "age": 25,
-        "apps": 19,
+        "apps": 20,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -766,7 +766,7 @@
         "position": "FW",
         "back_no": 19,
         "age": 31,
-        "apps": 17,
+        "apps": 18,
         "goals": 4,
         "assists": 0,
         "points": 4
@@ -778,7 +778,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 28,
-        "apps": 10,
+        "apps": 11,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -792,7 +792,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 28,
-        "apps": 29,
+        "apps": 30,
         "goals": 1,
         "assists": 6,
         "points": 7
@@ -804,7 +804,7 @@
         "position": "MF",
         "back_no": 66,
         "age": 23,
-        "apps": 27,
+        "apps": 28,
         "goals": 1,
         "assists": 3,
         "points": 4
@@ -816,7 +816,7 @@
         "position": "MF",
         "back_no": 8,
         "age": 34,
-        "apps": 27,
+        "apps": 28,
         "goals": 1,
         "assists": 2,
         "points": 3
@@ -840,7 +840,7 @@
         "position": "DF",
         "back_no": 15,
         "age": 24,
-        "apps": 29,
+        "apps": 30,
         "goals": 0,
         "assists": 2,
         "points": 2

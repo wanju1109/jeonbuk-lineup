@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-11-14T07:31:01+09:00",
+  "generated_at": "2026-11-15T06:22:36+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
@@ -169,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 3,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -392,7 +392,7 @@
         "gd": -24
       }
     ],
-    "best_rank": 2,
+    "best_rank": 3,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -731,7 +731,7 @@
   ],
   "squad": {
     "size": 38,
-    "avg_age": 24.7,
+    "avg_age": 24.8,
     "foreign": 5,
     "top_scorers": [
       {
@@ -752,7 +752,7 @@
         "name": "마촙",
         "position": "FW",
         "back_no": 9,
-        "age": 27,
+        "age": 28,
         "apps": 26,
         "goals": 5,
         "assists": 4,
@@ -814,7 +814,7 @@
         "name": "마촙",
         "position": "FW",
         "back_no": 9,
-        "age": 27,
+        "age": 28,
         "apps": 26,
         "goals": 5,
         "assists": 4,

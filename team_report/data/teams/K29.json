@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k29-sm.png",
   "home_url": "https://www.suwonfc.com",
   "season": "2026",
-  "generated_at": "2026-11-14T07:31:00+09:00",
+  "generated_at": "2026-11-15T06:22:35+09:00",
   "table": {
     "rank": 2,
     "teams": 17,
@@ -168,7 +168,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 2,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -741,7 +741,7 @@
         "name": "하정우",
         "position": "FW",
         "back_no": 99,
-        "age": 20,
+        "age": 21,
         "apps": 29,
         "goals": 10,
         "assists": 1,
@@ -753,7 +753,7 @@
         "name": "정승배",
         "position": "FW",
         "back_no": 70,
-        "age": 22,
+        "age": 23,
         "apps": 23,
         "goals": 5,
         "assists": 3,
@@ -827,7 +827,7 @@
         "name": "정승배",
         "position": "FW",
         "back_no": 70,
-        "age": 22,
+        "age": 23,
         "apps": 23,
         "goals": 5,
         "assists": 3,

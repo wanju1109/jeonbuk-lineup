@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-11-14T07:31:00+09:00",
+  "generated_at": "2026-11-15T06:22:36+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
@@ -730,10 +730,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 26,
+        "apps": 27,
         "goals": 9,
-        "assists": 3,
-        "points": 12
+        "assists": 4,
+        "points": 13
       },
       {
         "player_id": "20160114",
@@ -742,10 +742,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 28,
-        "goals": 7,
+        "apps": 29,
+        "goals": 8,
         "assists": 3,
-        "points": 10
+        "points": 11
       },
       {
         "player_id": "20250356",
@@ -754,7 +754,7 @@
         "position": "FW",
         "back_no": 97,
         "age": 29,
-        "apps": 28,
+        "apps": 29,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -766,7 +766,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 34,
-        "apps": 28,
+        "apps": 29,
         "goals": 3,
         "assists": 7,
         "points": 10
@@ -778,7 +778,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 26,
+        "apps": 27,
         "goals": 2,
         "assists": 5,
         "points": 7
@@ -792,7 +792,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 34,
-        "apps": 28,
+        "apps": 29,
         "goals": 3,
         "assists": 7,
         "points": 10
@@ -804,7 +804,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 26,
+        "apps": 27,
         "goals": 2,
         "assists": 5,
         "points": 7
@@ -828,10 +828,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 26,
+        "apps": 27,
         "goals": 9,
-        "assists": 3,
-        "points": 12
+        "assists": 4,
+        "points": 13
       },
       {
         "player_id": "20160114",
@@ -840,10 +840,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 28,
-        "goals": 7,
+        "apps": 29,
+        "goals": 8,
         "assists": 3,
-        "points": 10
+        "points": 11
       }
     ],
     "goal_share": 0.214

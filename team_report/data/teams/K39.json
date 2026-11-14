@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k39-sm.png",
   "home_url": "https://www.hwaseongfc.com",
   "season": "2026",
-  "generated_at": "2026-11-14T07:31:00+09:00",
+  "generated_at": "2026-11-15T06:22:36+09:00",
   "table": {
     "rank": 6,
     "teams": 17,
@@ -731,7 +731,7 @@
   ],
   "squad": {
     "size": 40,
-    "avg_age": 24.8,
+    "avg_age": 24.9,
     "foreign": 5,
     "top_scorers": [
       {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-11-14T07:30:58+09:00",
+  "generated_at": "2026-11-15T06:22:35+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
@@ -818,7 +818,7 @@
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 34,
+        "apps": 35,
         "goals": 8,
         "assists": 7,
         "points": 15
@@ -842,7 +842,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 34,
-        "apps": 32,
+        "apps": 33,
         "goals": 5,
         "assists": 8,
         "points": 13
@@ -868,7 +868,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 34,
-        "apps": 32,
+        "apps": 33,
         "goals": 5,
         "assists": 8,
         "points": 13
@@ -880,7 +880,7 @@
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 34,
+        "apps": 35,
         "goals": 8,
         "assists": 7,
         "points": 15
@@ -892,7 +892,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
+        "apps": 29,
         "goals": 3,
         "assists": 6,
         "points": 9
@@ -916,7 +916,7 @@
         "position": "MF",
         "back_no": 6,
         "age": 27,
-        "apps": 33,
+        "apps": 34,
         "goals": 3,
         "assists": 3,
         "points": 6
