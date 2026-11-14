@@ -1,0 +1,1503 @@
+{
+ "no": 24,
+ "date": "2026-11-15",
+ "matchday_after": false,
+ "headline": "전북 U15 금산중, 오늘 왕중왕전 결승서 첫 우승 도전",
+ "summary": "전북현대 U15 동대부속금산중이 15일 오후 2시 영덕에서 인천 U15 광성중과 중등 축구리그 왕중왕전 결승을 치른다.",
+ "strip": [
+  "K리그1 5위 · 승점 49",
+  "U15 금산중 왕중왕전 결승 오늘 14:00 영덕",
+  "대표팀 카타르전 17일 23:00 도하",
+  "다음 경기 D-6 · 11월 21일(토) 14:00 서울 홈"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제24호 · 2026.11.15(일)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:전주월드컵경기장:1",
+     "kicker": "유스 · 중등 왕중왕전",
+     "title": "전북 U15 금산중, 오늘 왕중왕전 결승서 첫 우승 도전",
+     "dek": "준결승에서 디펜딩 챔피언 천안을 2-1로 뒤집었다. 결승 상대는 11년 만의 정상을 노리는 인천 U15 광성중",
+     "caption": "자료 사진 · 전주월드컵경기장 보조경기장. 결승은 경북 영덕에서 열린다",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북현대 U15 동대부속금산중이 15일 오후 2시 경북 영덕군 영해생활체육공원 A구장에서 인천유나이티드 U15 광성중과 중등 축구리그 왕중왕전 결승을 치른다. 금산중이 이 대회 정상에 오르면 첫 우승이다.",
+      "금산중은 13일 같은 구장에서 열린 준결승에서 지난 대회 우승팀 충남천안축구센터 U15를 2-1로 꺾었다. 전반 추가시간 선제골을 내줬지만 후반에 부준영과 이건호가 연달아 골을 넣었다. 이건호의 결승골은 경기 종료 직전에 나왔다.",
+      "광성중도 울산HD U15 현대중에 끌려가다 후반 막판 두 골로 3-2 역전승을 거뒀다. 광성중은 2015년 이후 11년 만의 우승을 노린다. 올 시즌 맞대결 전적은 광성중이 앞선다고 인천일보가 전했다.",
+      "결승은 맥스포츠가 오후 1시 50분부터 생중계한다. 1군은 A매치 휴식기를 보내고 있고, 다음 리그 경기는 21일 오후 2시 전주에서 열리는 서울전이다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 4,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "14:00",
+       "label": "왕중왕전 결승 킥오프 · 영덕",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "2-1",
+       "label": "금산중, 준결승 천안 상대 역전승",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "첫 우승",
+       "label": "금산중의 왕중왕전 도전",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-6",
+       "label": "11월 21일(토) 14:00 서울 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "유스",
+   "teaser": "금산중 결승까지의 길과 전북 유스 사다리",
+   "folio": "유스 · 중등 왕중왕전",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "준결승 다시 보기",
+     "title": "먼저 맞고, 후반에 두 번 때렸다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "금산중의 준결승 상대는 지난 대회 우승팀 충남천안축구센터 U15였다. 전반 추가시간 천안 송민준에게 선제골을 내주며 0-1로 전반을 마쳤다.",
+      "후반에 흐름이 바뀌었다. 부준영이 동점골을 넣었고, 경기 종료 직전 이건호가 결승골을 터뜨렸다. 4강 대진이 확정됐을 때 우승 후보로 꼽히던 천안이 그렇게 탈락했다.",
+      "결승 상대 광성중은 다른 준결승에서 울산HD U15 현대중을 상대로 후반 31분과 35분에 연속 골을 넣어 3-2로 뒤집었다. 두 팀 모두 역전승으로 결승에 올랐다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 5,
+     "title": "결승 한눈에",
+     "items": [
+      {
+       "label": "대회",
+       "value": "중등 축구리그 왕중왕전 결승",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "일시",
+       "value": "11월 15일(일) 오후 2시",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "장소",
+       "value": "경북 영덕 영해생활체육공원 A구장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대진",
+       "value": "전북 U15 금산중 vs 인천 U15 광성중",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "중계",
+       "value": "맥스포츠 (13:50부터)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "우승 경험",
+       "value": "금산중 없음 · 광성중 2015년",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "4강 두 경기 스코어",
+     "items": [
+      {
+       "label": "금산중",
+       "value": 2,
+       "text": "2골",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "천안축구센터",
+       "value": 1,
+       "text": "1골",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "광성중",
+       "value": 3,
+       "text": "3골",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "울산 현대중",
+       "value": 2,
+       "text": "2골",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "11월 13일 영해생활체육공원 A구장. 두 경기 모두 역전승",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 6,
+     "rule_top": true,
+     "image": "commons:전북 응원:1",
+     "caption": "자료 사진 · N팀(K4리그) 경기에서 응원하는 전북 팬들. 금산중과 영생고를 거친 유스는 N팀을 지나 1군으로 올라간다",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 12,
+     "rule_top": true,
+     "kicker": "그때 그 시절",
+     "title": "올해 전북 유스의 장면들",
+     "items": [
+      {
+       "date": "2026.07.13",
+       "title": "김예건, 고교 재학 중 프로 계약",
+       "text": "현대가 더비 데뷔전에서 골을 넣은 2008년생 미드필더. 구단은 전북 최초의 고교 재학 중 프로 전환이라고 밝혔다. 금산중과 영생고를 거쳤다",
+       "source_name": "다음 스포츠",
+       "source_url": "https://v.daum.net/v/7r23GbztS1",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.11.13",
+       "title": "금산중, 왕중왕전 4강 천안에 2-1 역전승",
+       "text": "부준영 동점골, 이건호 결승골",
+       "source_name": "미디어펜",
+       "source_url": "https://www.mediapen.com/news/view/1137424",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.11.15",
+       "title": "금산중, 첫 왕중왕전 우승 도전",
+       "text": "오후 2시 영덕, 상대 인천 U15 광성중",
+       "state": "hot",
+       "source_name": "인천일보",
+       "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1336799",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "오늘의 질문",
+     "title": "금산중의 결승, 몇 대 몇을 예상하나요?",
+     "paragraphs": [
+      "준결승은 0-1에서 2-1로 뒤집었다. 오늘 결승 스코어와 첫 골의 주인공을 댓글로 남겨 주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "숫자 놀이",
+   "teaser": "휴식기에 다시 본 전북의 시즌 숫자와 기자 수첩",
+   "folio": "숫자 놀이 · 휴식기",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "commons:김영빈:260411",
+     "caption": "4월 11일 서울 원정 경기의 김영빈. 21일에는 서울을 전주로 부른다",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 7,
+     "title": "실점이 적은 팀 (35라운드까지)",
+     "items": [
+      {
+       "label": "서울",
+       "value": 32,
+       "text": "32실점",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 34,
+       "text": "34실점",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 36,
+       "text": "36실점",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "인천",
+       "value": 37,
+       "text": "37실점",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "제주",
+       "value": 39,
+       "text": "39실점",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "전북은 리그에서 세 번째로 적게 실점했다. 기록 K리그 데이터포털",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "무승부가 많은 팀",
+     "items": [
+      {
+       "label": "김천",
+       "value": 20,
+       "text": "20무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "강원",
+       "value": 15,
+       "text": "15무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북",
+       "value": 13,
+       "text": "13무",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "안양",
+       "value": 13,
+       "text": "13무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "제주",
+       "value": 12,
+       "text": "12무",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "전북 35경기 12승 13무 10패. 비긴 경기가 이긴 경기보다 한 경기 많다",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "남은 리그 3경기",
+     "items": [
+      {
+       "label": "11월 21일(토) 36R",
+       "value": "서울 · 전주 홈 · 오후 2시",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "11월 29일(일) 37R",
+       "value": "울산 · 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 6일(일) 38R",
+       "value": "인천 · 전주 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 12,
+     "rule_top": true,
+     "variant": "green",
+     "kicker": "기자 수첩",
+     "title": "휴식기의 주말, 영덕에서 열리는 결승",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "1군은 8일 강릉 원정 이후 2주 가까이 리그 경기가 없다. 그 사이 전북이라는 이름을 단 팀이 가장 큰 무대에 서는 곳은 경북 영덕이다.",
+      "U15 선수들의 결승이 1군 순위표를 바꾸지는 않는다. 그래도 올여름 고교생 신분으로 프로 계약을 맺은 김예건도 금산중과 영생고를 거쳤다. 오늘 결승골을 넣는 선수가 몇 년 뒤 전주성 잔디를 밟을 수도 있다.",
+      "전북은 35경기에서 45골을 넣고 36골을 내줬다. 실점은 리그에서 세 번째로 적었지만 13번 비겼다. 남은 세 경기에서 무승부를 승리로 바꾸는 일은 1군의 몫이다."
+     ],
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "오늘의 등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "21일 서울전 오후 2시 전주월드컵경기장",
+       "text": "연맹 파이널라운드 일정",
+       "source_name": "마이데일리",
+       "source_url": "https://www.mydaily.co.kr/page/view/2026102611255671289",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "10월 이달의 선수 팬 투표 오늘 마감",
+       "text": "티아고 포함 후보 4명. 기술위원회 60%, 팬 25%, FC 온라인 15% 합산",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202611120035",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "감독 거취 소문을 다룬 기사",
+       "text": "스포츠경향이 13일 정정용 감독이 떠날 것이라는 소문이 돈다고 썼다. 구단 공식 발표나 입장은 없다",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611130800006",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "'전북 연어'라는 짧은 글",
+       "text": "14일 루머 게시판. 이름도 출처도 없이 옛 전북 사람의 복귀를 암시했다. 확인된 사실 없음",
+       "source_name": "에펨코리아 루머",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10554486408",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "강상윤에 국내 구단 문의가 많다는 글",
+       "text": "14일 게시글. 구단 이름, 출처 표기 없음",
+       "source_name": "에펨코리아 루머",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10553238364",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "이상명 동해안 구단 이적설",
+       "text": "14일 게시글. 근거 제시 없음",
+       "source_name": "에펨코리아 루머",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10553197493",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "금산중 왕중왕전 첫 우승",
+       "text": "오늘 오후 2시 영덕 결승",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "'전북 연어' 글에는 옛 선수와 옛 감독 이름을 줄줄이 대는 추측 댓글이 90개 가까이 달렸다",
+       "label": "루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "강상윤 글에는 주전이 국내 다른 팀으로 갈 이유가 없다는 반응이 많았다",
+       "label": "루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "송범근을 칭찬하는 글에는 출처가 지인이라 걸러 들어야 한다는 댓글이 가장 많은 추천을 받았다",
+       "label": "루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "외국인 감독 이름이 오가는 글이 밤사이 여러 팀 이야기로 이어졌다",
+       "label": "루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "금산중의 왕중왕전 준결승 결승골을 넣은 선수는?",
+       "text": "이건호. 경기 종료 직전에 넣었다",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "오늘 왕중왕전 결승이 열리는 지역은?",
+       "text": "경북 영덕 (영해생활체육공원 A구장)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "전북의 35라운드까지 실점은 리그 몇 번째로 적을까?",
+       "text": "세 번째. 36실점 (서울 32, 강원 34)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "왕중왕전 결승 일정·상대 전적",
+       "text": "인천일보",
+       "source_name": "인천일보",
+       "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1336799",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "준결승 결과·득점자",
+       "text": "미디어펜",
+       "source_name": "미디어펜",
+       "source_url": "https://www.mediapen.com/news/view/1137424",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "4강 대진",
+       "text": "미디어펜",
+       "source_name": "미디어펜",
+       "source_url": "https://www.mediapen.com/news/view/1136807",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "결승 생중계",
+       "text": "맥스포츠뉴스",
+       "source_name": "맥스포츠뉴스",
+       "source_url": "https://www.maxportsnews.com/news/articleView.html?idxno=9598",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "김예건 프로 계약",
+       "text": "다음 스포츠",
+       "source_name": "다음 스포츠",
+       "source_url": "https://v.daum.net/v/7r23GbztS1",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "대표팀 카타르전 일정",
+       "text": "YTN",
+       "source_name": "YTN",
+       "source_url": "https://www.ytn.co.kr/_ln/0107_202611111625073471",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "순위·경기 기록",
+       "text": "K리그 데이터포털",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {},
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 35,
+    "w": 20,
+    "d": 7,
+    "l": 8,
+    "gf": 62,
+    "ga": 32,
+    "pts": 67,
+    "rank": 1,
+    "gd": 30
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 35,
+    "w": 17,
+    "d": 6,
+    "l": 12,
+    "gf": 56,
+    "ga": 49,
+    "pts": 57,
+    "rank": 2,
+    "gd": 7
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 35,
+    "w": 14,
+    "d": 11,
+    "l": 10,
+    "gf": 55,
+    "ga": 41,
+    "pts": 53,
+    "rank": 3,
+    "gd": 14
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 35,
+    "w": 12,
+    "d": 15,
+    "l": 8,
+    "gf": 44,
+    "ga": 34,
+    "pts": 51,
+    "rank": 4,
+    "gd": 10
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 35,
+    "w": 12,
+    "d": 13,
+    "l": 10,
+    "gf": 45,
+    "ga": 36,
+    "pts": 49,
+    "rank": 5,
+    "gd": 9
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 35,
+    "w": 13,
+    "d": 10,
+    "l": 12,
+    "gf": 44,
+    "ga": 37,
+    "pts": 49,
+    "rank": 6,
+    "gd": 7
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 35,
+    "w": 12,
+    "d": 12,
+    "l": 11,
+    "gf": 41,
+    "ga": 39,
+    "pts": 48,
+    "rank": 7,
+    "gd": 2
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 35,
+    "w": 11,
+    "d": 13,
+    "l": 11,
+    "gf": 42,
+    "ga": 50,
+    "pts": 46,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 35,
+    "w": 11,
+    "d": 11,
+    "l": 13,
+    "gf": 33,
+    "ga": 42,
+    "pts": 44,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 35,
+    "w": 6,
+    "d": 20,
+    "l": 9,
+    "gf": 35,
+    "ga": 42,
+    "pts": 38,
+    "rank": 10,
+    "gd": -7
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 35,
+    "w": 7,
+    "d": 12,
+    "l": 16,
+    "gf": 35,
+    "ga": 51,
+    "pts": 33,
+    "rank": 11,
+    "gd": -16
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 35,
+    "w": 3,
+    "d": 14,
+    "l": 18,
+    "gf": 32,
+    "ga": 71,
+    "pts": 23,
+    "rank": 12,
+    "gd": -39
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 5,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 10,
+   "gf": 45,
+   "ga": 36
+  },
+  "form": [
+   {
+    "r": "D",
+    "label": "강원 1-1"
+   },
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-21",
+   "time": "",
+   "home": "전북",
+   "away": "서울",
+   "opp": "FC 서울",
+   "opp_short": "서울",
+   "is_home": true,
+   "round": 36,
+   "venue": "",
+   "comp": "K리그1 36R",
+   "home_note": "5위 · 승점 49",
+   "away_note": "1위 · 승점 67",
+   "when_label": "11월 21일(토)",
+   "d_minus": 6
+  },
+  "last": {
+   "game_id": "209",
+   "date": "2026-11-08",
+   "round": 35,
+   "home": "강원",
+   "away": "전북",
+   "venue": "강릉하이원아레나",
+   "attendance": 4206,
+   "comp": "K리그1 35R",
+   "score": [
+    3,
+    2
+   ],
+   "date_label": "11월 8일(일)",
+   "weather": "비 9℃",
+   "referee": "최현재",
+   "managers": {
+    "home": "정경호",
+    "away": "정정용"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     3,
+     "MST",
+     89.9,
+     36.1
+    ],
+    [
+     "A",
+     1,
+     8,
+     "GL",
+     89.4,
+     49.7
+    ],
+    [
+     "H",
+     1,
+     12,
+     "BT",
+     93.2,
+     50.9
+    ],
+    [
+     "H",
+     1,
+     12,
+     "GL",
+     91.1,
+     53.9
+    ],
+    [
+     "H",
+     1,
+     16,
+     "BT",
+     70.4,
+     40.5
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     91.7,
+     51.2
+    ],
+    [
+     "H",
+     1,
+     29,
+     "BT",
+     86.6,
+     64.6
+    ],
+    [
+     "H",
+     1,
+     30,
+     "AST",
+     81.0,
+     23.9
+    ],
+    [
+     "H",
+     1,
+     38,
+     "GL",
+     83.2,
+     59.3
+    ],
+    [
+     "H",
+     1,
+     42,
+     "BT",
+     73.6,
+     49.3
+    ],
+    [
+     "A",
+     1,
+     43,
+     "BT",
+     90.3,
+     64.5
+    ],
+    [
+     "A",
+     2,
+     46,
+     "AST",
+     82.2,
+     34.9
+    ],
+    [
+     "A",
+     2,
+     61,
+     "MST",
+     92.9,
+     45.8
+    ],
+    [
+     "H",
+     2,
+     64,
+     "MST",
+     68.6,
+     46.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "MST",
+     79.5,
+     51.4
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     78.3,
+     63.6
+    ],
+    [
+     "H",
+     2,
+     69,
+     "AST",
+     80.9,
+     58.0
+    ],
+    [
+     "H",
+     2,
+     70,
+     "AST",
+     94.8,
+     72.5
+    ],
+    [
+     "H",
+     2,
+     70,
+     "BT",
+     81.5,
+     27.5
+    ],
+    [
+     "H",
+     2,
+     76,
+     "MST",
+     96.1,
+     63.9
+    ],
+    [
+     "H",
+     2,
+     79,
+     "AST",
+     76.6,
+     55.9
+    ],
+    [
+     "A",
+     2,
+     84,
+     "AST",
+     90.4,
+     56.6
+    ],
+    [
+     "A",
+     2,
+     85,
+     "AST",
+     77.5,
+     34.3
+    ],
+    [
+     "A",
+     2,
+     85,
+     "GL",
+     94.5,
+     62.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "MST",
+     76.7,
+     53.1
+    ],
+    [
+     "A",
+     2,
+     93,
+     "MST",
+     73.8,
+     31.3
+    ],
+    [
+     "H",
+     2,
+     93,
+     "GL",
+     97.2,
+     42.6
+    ],
+    [
+     "H",
+     2,
+     96,
+     "AST",
+     84.3,
+     16.5
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "콤파뇨",
+     "label": "9'",
+     "minute": 9,
+     "pk": true,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "신민하",
+     "label": "13'",
+     "minute": 13,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "모재현",
+     "label": "39'",
+     "minute": 39,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "A",
+     "player": "이동준",
+     "label": "86'",
+     "minute": 86,
+     "pk": false,
+     "og": false
+    },
+    {
+     "side": "H",
+     "player": "박상혁",
+     "label": "90+4'",
+     "minute": 94,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     19,
+     9
+    ],
+    [
+     "유효슈팅",
+     9,
+     5
+    ],
+    [
+     "패스 성공",
+     377,
+     366
+    ],
+    [
+     "패스 성공률",
+     80.6,
+     82.8,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     6,
+     3
+    ],
+    [
+     "반칙",
+     6,
+     8
+    ],
+    [
+     "경고",
+     1,
+     1
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-21",
+    "home": "전북",
+    "away": "서울",
+    "round": 36
+   },
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
