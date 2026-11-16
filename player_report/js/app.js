@@ -106,9 +106,18 @@
     }
   }
 
+  function isFramed() {
+    try {
+      return window.self !== window.top;
+    } catch (err) {
+      return true;
+    }
+  }
+
   function applyViewMode() {
     document.body.classList.toggle("edit-mode", isEditQuery());
     document.body.classList.toggle("embed-mode", isEmbedQuery());
+    document.body.classList.toggle("in-frame", isFramed());
   }
 
   function pageBaseNoQuery() {
@@ -228,6 +237,9 @@
     return [
       '<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
       `<iframe src="${escapeHtml(src)}" title="K리그 선수 프로필" width="100%" height="920" style="width:100%;max-width:1100px;height:920px;border:0;border-radius:12px;overflow:hidden;background:#f3f7f2;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>`,
+      '<p style="margin:10px 0 0;text-align:right;">',
+      `<a href="${escapeHtml(publicHomeUrl())}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:9px 14px;border-radius:8px;background-color:#0f2a1c;color:#f5fff8;font-size:13px;font-weight:700;text-decoration:none;">선수 프로필 새 창에서 크게 보기 →</a>`,
+      "</p>",
       "</div>",
     ].join("");
   }
@@ -259,7 +271,14 @@
     if (!ok) throw new Error("copy failed");
   }
 
+  // 게시물 안(iframe)에서 뜨는 "새 창에서 크게 보기" 링크를 지금 화면(선수·비교)으로 맞춘다.
+  function syncPopOut() {
+    const link = $("popOut");
+    if (link) link.href = previewShareUrl();
+  }
+
   function setupCommunityEmbed() {
+    syncPopOut();
     if (isEmbedQuery()) return;
     if (!isEditQuery()) return;
     const reportUrl = publicHomeUrl();
@@ -635,7 +654,62 @@
     }],
   ];
 
-  function fmValue(value) {
+  const FM_LOWER_BETTER = ["injury_proneness", "dirtiness", "personality_controversy"];
+  const FM_SET_PIECES = ["corners", "free_kick_taking", "long_throws", "penalty_taking"];
+  // 골키퍼의 강점·약점을 고를 때는 의미가 적은 항목을 뺀다.
+  const FM_GK_SKIP = ["eccentricity", "off_the_ball", "flair", "vision", "aggression", "work_rate"];
+  const FM_TRAITS = {
+    runs_with_ball_often: "공을 자주 몰고 전진",
+    shoots_from_distance: "중거리 슛 시도",
+    tries_long_range_passes: "롱패스 시도",
+    dictates_tempo: "템포 조율",
+    knocks_ball_past_opponent: "공을 치고 달리기",
+    gets_forward_whenever_possible: "기회마다 전진",
+    tries_killer_balls_often: "킬패스 자주 시도",
+    moves_into_channels: "채널로 침투",
+    comes_deep_to_get_ball: "내려와서 공 받기",
+    avoids_using_weaker_foot: "약한 발 사용 회피",
+    runs_with_ball_through_centre: "중앙으로 드리블",
+    runs_with_ball_down_left: "왼쪽으로 드리블",
+    runs_with_ball_down_right: "오른쪽으로 드리블",
+    likes_to_try_to_beat_offside_trap: "오프사이드 라인 침투",
+    dives_into_tackles: "태클을 깊게 시도",
+    crosses_early: "얼리 크로스",
+  };
+
+  // 세부 능력치를 8개 영역 평균으로 묶은 요약(팔각형)에 쓰는 축.
+  const FM_OCTAGON = [
+    ["수비", ["marking", "tackling", "positioning"]],
+    ["피지컬", ["agility", "balance", "stamina", "strength"]],
+    ["스피드", ["acceleration", "pace"]],
+    ["시야", ["passing", "flair", "vision"]],
+    ["공격", ["finishing", "composure", "off_the_ball"]],
+    ["기술", ["dribbling", "first_touch", "technique"]],
+    ["공중볼", ["heading", "jumping_reach"]],
+    ["정신력", ["anticipation", "bravery", "concentration", "decisions", "determination", "teamwork"]],
+  ];
+  const FM_OCTAGON_GK = [
+    ["선방", ["reflexes", "one_on_ones"]],
+    ["핸들링", ["handling"]],
+    ["공중볼", ["aerial_reach", "command_of_area"]],
+    ["수비 조율", ["communication"]],
+    ["배급", ["kicking", "throwing"]],
+    ["스피드", ["acceleration", "pace", "rushing_out"]],
+    ["피지컬", ["agility", "balance", "strength", "jumping_reach"]],
+    ["정신력", ["anticipation", "composure", "concentration", "decisions", "positioning"]],
+  ];
+
+  function fmValue(value, key) {
+    if (key === "traits") {
+      const list = String(value || "").split(";").map((t) => t.trim())
+        .filter((t) => t && t !== "unknown")
+        .map((t) => FM_TRAITS[t] || t.replace(/_/g, " "));
+      return escapeHtml(list.length ? list.join(" · ") : "–");
+    }
+    if (key === "natural_positions" || key === "accomplished_positions") {
+      const list = String(value || "").split(";").map((t) => t.trim()).filter(Boolean);
+      return escapeHtml(list.length ? list.join(" · ") : "–");
+    }
     return escapeHtml(typeof value === "number" ? value.toLocaleString("ko-KR") : dash(value));
   }
 
@@ -647,14 +721,21 @@
     return 20;
   }
 
-  function fmBar(value, scale, side = "mine") {
-    const width = typeof value === "number" ? Math.max(0, Math.min(100, value / scale * 100)) : 0;
-    return `<span class="fm-track" aria-hidden="true"><span class="fm-fill ${side}" style="width:${width}%"></span></span>`;
+  function fmPercent(value, scale) {
+    return typeof value === "number" && scale ? Math.max(0, Math.min(100, value / scale * 100)) : 0;
+  }
+
+  // 1(약함)~4(뛰어남). 낮을수록 좋은 항목은 뒤집어서 매긴다.
+  function fmTier(key, value) {
+    const scale = fmScale(key);
+    if (!scale || typeof value !== "number") return 0;
+    let v = value / scale * 20;
+    if (FM_LOWER_BETTER.includes(key)) v = 21 - v;
+    return v >= 16 ? 4 : v >= 11 ? 3 : v >= 6 ? 2 : 1;
   }
 
   function fmFieldLabel(key, label) {
-    const lower = ["injury_proneness", "dirtiness", "personality_controversy"].includes(key);
-    return escapeHtml(label) + (lower ? ' <small>낮을수록 좋음</small>' : "");
+    return escapeHtml(label) + (FM_LOWER_BETTER.includes(key) ? " <small>낮을수록 좋음</small>" : "");
   }
 
   function fmPitch(fm, name) {
@@ -674,11 +755,129 @@
       }).join("") + '</div><p class="table-note">포지션 숙련도 · 20점 만점</p></div>';
   }
 
-  function fmGroupOrder(p, other) {
-    const indexes = p.position === "GK" && (!other || other.position === "GK")
-      ? [3, 2, 1, 0, 5, 6, 4, 7] : [0, 1, 2, 5, 3, 6, 4, 7];
-    return indexes.map((index) => FM_GROUPS[index]);
+  function fmIsGkView(p, other) {
+    return p.position === "GK" && (!other || other.position === "GK");
   }
+
+  // main: 항상 펼쳐 두는 세 묶음, more: 접어 두는 나머지.
+  function fmGroupSplit(p, other) {
+    const pick = (indexes) => indexes.map((index) => FM_GROUPS[index]);
+    return fmIsGkView(p, other)
+      ? { main: pick([3, 1, 2]), more: pick([0, 5, 6, 4, 7]) }
+      : { main: pick([0, 1, 2]), more: pick([5, 3, 6, 4, 7]) };
+  }
+
+  function fmAxisScore(fm, keys) {
+    const vals = keys.map((key) => fm?.[key]).filter((v) => typeof v === "number");
+    return vals.length ? vals.reduce((sum, v) => sum + v, 0) / vals.length : null;
+  }
+
+  function fmRadar(axes, sets) {
+    const cx = 180;
+    const cy = 142;
+    const R = 96;
+    const n = axes.length;
+    const point = (i, r) => {
+      const ang = -Math.PI / 2 + (i * 2 * Math.PI) / n;
+      return [cx + Math.cos(ang) * r, cy + Math.sin(ang) * r];
+    };
+    const ring = (r) => axes.map((_, i) => point(i, r).map((v) => v.toFixed(1)).join(",")).join(" ");
+    const grid = [5, 10, 15, 20]
+      .map((v) => `<polygon class="rg${v === 20 ? " outer" : ""}" points="${ring(R * v / 20)}" />`).join("");
+    const spokes = axes.map((_, i) => {
+      const [x, y] = point(i, R);
+      return `<line class="rg" x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" />`;
+    }).join("");
+    const shapes = sets.map(({ fm, cls }) => {
+      if (!fm) return "";
+      const pts = axes
+        .map(([, keys], i) => point(i, R * (fmAxisScore(fm, keys) || 0) / 20).map((v) => v.toFixed(1)).join(","))
+        .join(" ");
+      return `<polygon class="rp ${cls}" points="${pts}" />`;
+    }).join("");
+    const labels = axes.map(([name, keys], i) => {
+      const ang = -Math.PI / 2 + (i * 2 * Math.PI) / n;
+      const [x, y] = point(i, R + 13);
+      const anchor = Math.abs(x - cx) < 6 ? "middle" : x > cx ? "start" : "end";
+      const top = y - 2 + Math.sin(ang) * 8;
+      const scores = sets.map(({ fm, cls }) => {
+        const score = fmAxisScore(fm, keys);
+        return `<tspan class="rv ${cls}">${score == null ? "–" : score.toFixed(1)}</tspan>`;
+      }).join('<tspan class="rv sep"> · </tspan>');
+      return `<text x="${x.toFixed(1)}" y="${top.toFixed(1)}" text-anchor="${anchor}">${escapeHtml(name)}` +
+        `<tspan x="${x.toFixed(1)}" dy="13">${scores}</tspan></text>`;
+    }).join("");
+    const alt = axes.map(([name, keys]) =>
+      name + " " + sets.map(({ fm }) => {
+        const score = fmAxisScore(fm, keys);
+        return score == null ? "–" : score.toFixed(1);
+      }).join(" 대 ")).join(", ");
+    return `<svg class="fm-radar-svg" viewBox="0 0 360 290" role="img" aria-label="${escapeHtml(alt)}">` +
+      `${grid}${spokes}${shapes}${labels}</svg>`;
+  }
+
+  // 강점·약점을 고를 때 쓰는 후보: 필드는 기술·정신·신체, 골키퍼는 골키퍼·정신·신체.
+  function fmRanked(fm, gk) {
+    const out = [];
+    (gk ? [3, 1, 2] : [0, 1, 2]).forEach((index) => {
+      Object.entries(FM_GROUPS[index][1]).forEach(([key, label]) => {
+        if ((gk && FM_GK_SKIP.includes(key)) || typeof fm[key] !== "number") return;
+        out.push({ key, label, value: fm[key] });
+      });
+    });
+    return out;
+  }
+
+  function fmChips(items) {
+    return items.map((x) =>
+      `<span class="fm-chip t${fmTier(x.key, x.value)}">${escapeHtml(x.label)} <b>${fmValue(x.value)}</b></span>`
+    ).join("");
+  }
+
+  function fmSummary(p, fm) {
+    const gk = fmIsGkView(p);
+    const ranked = fmRanked(fm, gk);
+    const best = ranked.slice().sort((a, b) => b.value - a.value).slice(0, 5);
+    const worst = ranked.filter((x) => !FM_SET_PIECES.includes(x.key))
+      .sort((a, b) => a.value - b.value).slice(0, 3);
+    const fact = (label, html) => `<div class="fm-fact"><span>${label}</span><strong>${html}</strong></div>`;
+    return `<div class="fm-summary">` +
+      `<div class="fm-radar-box">${fmRadar(gk ? FM_OCTAGON_GK : FM_OCTAGON, [{ fm, cls: "mine" }])}` +
+      `<p class="table-note">세부 능력치를 8개 영역 평균으로 묶은 요약 · 20점 만점</p></div>` +
+      `<div class="fm-sum-side">` +
+      `<div class="fm-ability"><div class="fm-abil-nums">` +
+      `<div><span>현재 능력</span><strong>${fmValue(fm.ability_current)}</strong></div>` +
+      `<div><span>잠재 능력</span><strong>${fmValue(fm.ability_potential)}</strong></div></div>` +
+      `<div class="fm-ability-bar" aria-hidden="true"><i class="pa" style="width:${fmPercent(fm.ability_potential, 200)}%"></i>` +
+      `<i class="ca" style="width:${fmPercent(fm.ability_current, 200)}%"></i></div>` +
+      `<p class="table-note">진한 막대 현재 · 연한 막대 잠재 · 200점 만점</p></div>` +
+      `<div class="fm-facts">` +
+      fact("주 포지션", fmValue(fm.natural_positions, "natural_positions")) +
+      fact("소화 가능", fmValue(fm.accomplished_positions, "accomplished_positions")) +
+      fact("왼발 / 오른발", `${fmValue(fm.left_foot)} / ${fmValue(fm.right_foot)}`) +
+      `</div>` +
+      `<div class="fm-edge"><h4>강점</h4><div class="fm-chips">${fmChips(best)}</div></div>` +
+      `<div class="fm-edge"><h4>약점 <small>세트피스 제외</small></h4><div class="fm-chips">${fmChips(worst)}</div></div>` +
+      `<button type="button" class="fm-jump" id="fmJump">다른 선수와 비교하기 ↓</button>` +
+      `</div></div>`;
+  }
+
+  function fmAttrRow(fm, key, label) {
+    const value = fm[key];
+    const scale = fmScale(key);
+    if (!scale) {
+      return `<div class="fa-row is-text"><span class="fa-label">${fmFieldLabel(key, label)}</span>` +
+        `<span class="fa-text">${fmValue(value, key)}</span></div>`;
+    }
+    return `<div class="fa-row t${fmTier(key, value)}${scale > 20 ? " big" : ""}">` +
+      `<span class="fa-label">${fmFieldLabel(key, label)}</span>` +
+      `<span class="fa-bar" aria-hidden="true"><i style="width:${fmPercent(value, scale)}%"></i></span>` +
+      `<strong class="fa-num">${fmValue(value)}</strong></div>`;
+  }
+
+  const FM_TIER_LEGEND =
+    '<div class="fm-tier-legend"><span><i class="t4"></i>16 이상 뛰어남</span><span><i class="t3"></i>11–15 좋음</span>' +
+    '<span><i class="t2"></i>6–10 보통</span><span><i class="t1"></i>5 이하 약함</span></div>';
 
   function renderFmAttributes(p) {
     const fm = state.fmAttributes?.[p.id];
@@ -687,20 +886,27 @@
       : state.fmAttributes
         ? "FM 세이브에서 이 선수의 능력치를 확인하지 못했습니다."
         : "FM 능력치 데이터를 불러오지 못했습니다.";
-    $("fmGroups").innerHTML = fm
-      ? fmGroupOrder(p).map(([title, fields], index) => {
-          const pitch = title === "포지션 · 양발";
-          const rows = Object.entries(fields).filter(([key]) => !pitch || !key.startsWith("positions_"))
-            .map(([key, label]) => {
-              const value = fm[key];
-              const scale = fmScale(key);
-              return `<div class="fm-attribute"><div class="fm-row-label"><span>${fmFieldLabel(key, label)}</span>` +
-                `<strong>${fmValue(value)}</strong></div>${scale ? fmBar(value, scale) : ""}</div>`;
-            }).join("");
-          return `<details class="fm-group"${index < 3 ? " open" : ""}><summary>${escapeHtml(title)}</summary>` +
-            `${pitch ? fmPitch(fm, p.name) : ""}<div class="fm-attribute-list">${rows}</div></details>`;
-        }).join("")
-      : "";
+    if (!fm) {
+      $("fmGroups").innerHTML = "";
+      return;
+    }
+    const { main, more } = fmGroupSplit(p);
+    const rows = (fields, skipPositions) => Object.entries(fields)
+      .filter(([key]) => !skipPositions || !key.startsWith("positions_"))
+      .map(([key, label]) => fmAttrRow(fm, key, label)).join("");
+    const mainHtml = main.map(([title, fields]) =>
+      `<section class="fm-card"><h4>${escapeHtml(title)}</h4><div class="fa-list">${rows(fields)}</div></section>`
+    ).join("");
+    const moreHtml = more.map(([title, fields]) => {
+      const pitch = title === "포지션 · 양발";
+      return `<details class="fm-group"><summary>${escapeHtml(title)}</summary>` +
+        `${pitch ? fmPitch(fm, p.name) : ""}<div class="fa-list">${rows(fields, pitch)}</div></details>`;
+    }).join("");
+    $("fmGroups").innerHTML = fmSummary(p, fm) + FM_TIER_LEGEND +
+      `<div class="fm-main">${mainHtml}</div><div class="fm-more">${moreHtml}</div>`;
+    $("fmJump")?.addEventListener("click", () => {
+      $("compareBlock")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   }
 
   function renderYears(p, analysis) {
@@ -735,7 +941,7 @@
     const mates = teammatesSamePos(p);
     const team = currentTeam();
     $("rivalNote").textContent = team
-      ? `${team.full || team.name} ${p.position || ""} 경쟁자. 카드를 누르면 아래에서 공식 기록을 비교합니다.`
+      ? `${team.full || team.name} ${p.position || ""} 경쟁자. 카드를 누르면 아래에서 FM 능력치를 비교합니다.`
       : "";
     if (!mates.length) {
       $("rivalGrid").innerHTML = `<p class="empty-note">같은 포지션 팀 동료가 명단에 없습니다.</p>`;
@@ -782,14 +988,16 @@
     }
   }
 
+  function chooseCompare(id) {
+    if (!id) return;
+    state.compareId = id;
+    writeHash();
+    loadCompare(id);
+  }
+
   function renderComparePicker(p) {
     const mates = teammatesSamePos(p);
-    const flat = allPlayersFlat();
-    const options = flat
-      .filter((x) => String(x.id) !== String(p.id))
-      .slice(0, 1200)
-      .map((x) => `<option value="${escapeHtml(x.name)} (${escapeHtml(x.teamName)} ${escapeHtml(x.position || "")})" data-id="${escapeHtml(x.id)}"></option>`)
-      .join("");
+    const flat = allPlayersFlat().filter((x) => String(x.id) !== String(p.id));
     const mateOpts = mates
       .map((m) => {
         const sel = String(m.id) === String(state.compareId) ? " selected" : "";
@@ -797,28 +1005,126 @@
       })
       .join("");
     $("cmpPicker").innerHTML =
-      `<label for="cmpMate">같은 포지션</label>` +
+      `<label for="cmpMate">같은 포지션 동료</label>` +
       `<select id="cmpMate"><option value="">선택</option>${mateOpts}</select>` +
-      `<label for="cmpSearch">다른 선수</label>` +
-      `<input id="cmpSearch" list="cmpAll" placeholder="이름 검색 후 엔터" />` +
-      `<datalist id="cmpAll">${options}</datalist>`;
-    $("cmpMate").addEventListener("change", (e) => {
-      const id = e.target.value;
-      if (!id) return;
-      state.compareId = id;
-      writeHash();
-      loadCompare(id);
+      `<label for="cmpSearch">다른 선수 찾기</label>` +
+      `<div class="cmp-search"><input id="cmpSearch" type="search" placeholder="이름을 입력하세요" autocomplete="off" />` +
+      `<div class="cmp-results" id="cmpResults" hidden></div></div>`;
+    $("cmpMate").addEventListener("change", (e) => chooseCompare(e.target.value));
+
+    const input = $("cmpSearch");
+    const results = $("cmpResults");
+    const search = () => {
+      const q = String(input.value || "").trim();
+      if (!q) {
+        results.hidden = true;
+        results.innerHTML = "";
+        return [];
+      }
+      const hits = flat.filter((x) => String(x.name || "").includes(q)).slice(0, 12);
+      results.innerHTML = hits.length
+        ? hits.map((x) =>
+            `<button type="button" data-id="${escapeHtml(x.id)}"><strong>${escapeHtml(x.name)}</strong>` +
+            `<span>${escapeHtml(x.teamName)} · ${escapeHtml(x.position || "")}` +
+            `${x.back_no != null ? " · No." + escapeHtml(x.back_no) : ""}</span></button>`
+          ).join("")
+        : "<p>일치하는 선수가 없습니다.</p>";
+      results.hidden = false;
+      return hits;
+    };
+    input.addEventListener("input", search);
+    input.addEventListener("focus", search);
+    input.addEventListener("keydown", (e) => {
+      if (e.isComposing || e.keyCode === 229) return;
+      if (e.key === "Escape") {
+        results.hidden = true;
+        return;
+      }
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      const hits = search();
+      if (hits[0]) chooseCompare(hits[0].id);
     });
-    $("cmpSearch").addEventListener("change", (e) => {
-      const q = String(e.target.value || "").trim();
-      if (!q) return;
-      const hit =
-        flat.find((x) => `${x.name} (${x.teamName} ${x.position || ""})` === q) ||
-        flat.find((x) => x.name === q && String(x.id) !== String(p.id));
-      if (!hit) return;
-      state.compareId = hit.id;
-      writeHash();
-      loadCompare(hit.id);
+    input.addEventListener("blur", () => {
+      setTimeout(() => { results.hidden = true; }, 150);
+    });
+    // 목록을 누르는 동안 입력창이 포커스를 잃어 목록이 먼저 닫히지 않게 한다.
+    results.addEventListener("mousedown", (e) => e.preventDefault());
+    results.addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-id]");
+      if (btn) chooseCompare(btn.getAttribute("data-id"));
+    });
+  }
+
+  let cmpMinDiff = 0;
+
+  function cmpWinner(key, a, b) {
+    if (typeof a !== "number" || typeof b !== "number" || a === b) return "";
+    return (FM_LOWER_BETTER.includes(key) ? a < b : a > b) ? "a" : "b";
+  }
+
+  // 좌우 대칭 한 줄: [내 값][내 막대] 항목 [상대 막대][상대 값]
+  function cmpRow(key, label, mine, theirs) {
+    const a = mine?.[key];
+    const b = theirs?.[key];
+    const scale = fmScale(key);
+    if (!scale) {
+      return `<div class="cmp-row is-text"><span class="cv a">${fmValue(a, key)}</span>` +
+        `<span class="cl">${fmFieldLabel(key, label)}</span><span class="cv b">${fmValue(b, key)}</span></div>`;
+    }
+    const both = typeof a === "number" && typeof b === "number";
+    const win = cmpWinner(key, a, b);
+    const diff = both ? Math.abs(a - b) : 0;
+    const mark = win && scale <= 200 ? `<em class="cd ${win}">+${diff}</em>` : "";
+    const state20 = both ? ` data-diff="${Math.round(diff / scale * 20)}"` : "";
+    return `<div class="cmp-row${win ? " win-" + win : ""}${scale > 20 ? " big" : ""}"${state20}>` +
+      `<strong class="cv a">${fmValue(a)}</strong>` +
+      `<span class="cb a" aria-hidden="true"><i style="width:${fmPercent(a, scale)}%"></i></span>` +
+      `<span class="cl">${fmFieldLabel(key, label)}${mark}</span>` +
+      `<span class="cb b" aria-hidden="true"><i style="width:${fmPercent(b, scale)}%"></i></span>` +
+      `<strong class="cv b">${fmValue(b)}</strong></div>`;
+  }
+
+  function cmpTally(fields, mine, theirs) {
+    const tally = { a: 0, b: 0, tie: 0 };
+    Object.keys(fields).forEach((key) => {
+      const a = mine?.[key];
+      const b = theirs?.[key];
+      if (!fmScale(key) || typeof a !== "number" || typeof b !== "number") return;
+      tally[cmpWinner(key, a, b) || "tie"] += 1;
+    });
+    return tally;
+  }
+
+  function cmpTallyHtml(tally) {
+    return `<span class="cmp-tally"><b class="a">${tally.a}</b><i>:</i><b class="b">${tally.b}</b></span>`;
+  }
+
+  function cmpScoreRow(title, tally, cls) {
+    const seg = (name, n) => (n ? `<i class="${name}" style="flex:${n}"></i>` : "");
+    return `<div class="cmp-score-row${cls ? " " + cls : ""}"><span>${escapeHtml(title)}</span>` +
+      `<b class="a">${tally.a}</b><span class="cmp-split" aria-hidden="true">` +
+      `${seg("a", tally.a)}${seg("t", tally.tie)}${seg("b", tally.b)}</span><b class="b">${tally.b}</b></div>`;
+  }
+
+  function cmpSide(pl, side) {
+    const meta = [pl.team_name || pl.team_full, pl.position, pl.back_no != null ? "No." + pl.back_no : ""]
+      .filter(Boolean).join(" · ");
+    return `<div class="cmp-side ${side}"><div class="cmp-face">${imgHtml(photoUrls(pl), pl.name, "face")}</div>` +
+      `<div class="cmp-who"><strong>${escapeHtml(pl.name)}</strong><span>${escapeHtml(meta)}</span></div></div>`;
+  }
+
+  function applyCmpFilter() {
+    const box = $("cmpTable");
+    box.querySelectorAll(".cmp-filter .chip").forEach((btn) => {
+      btn.classList.toggle("active", Number(btn.getAttribute("data-min")) === cmpMinDiff);
+    });
+    box.querySelectorAll(".cmp-row[data-diff]").forEach((row) => {
+      row.hidden = Number(row.getAttribute("data-diff")) < cmpMinDiff;
+    });
+    box.querySelectorAll(".cmp-card").forEach((card) => {
+      const none = card.querySelector(".cmp-none");
+      if (none) none.hidden = cmpMinDiff === 0 || !!card.querySelector(".cmp-row[data-diff]:not([hidden])");
     });
   }
 
@@ -835,31 +1141,74 @@
       $("cmpTable").innerHTML = '<p class="empty-note">두 선수의 FM 능력치를 확인하지 못했습니다.</p>';
       return;
     }
-    const legend = `<div class="fm-legend"><span class="mine"><i></i>${escapeHtml(p.name)}</span>` +
-      `<span class="theirs"><i></i>${escapeHtml(other.name)}</span></div>`;
-    const body = fmGroupOrder(p, other).map(([title, fields], index) => {
-      const pitch = title === "포지션 · 양발";
-      const rows = Object.entries(fields).filter(([key]) => !pitch || !key.startsWith("positions_"))
-        .map(([key, label]) => {
-          const a = mine?.[key];
-          const b = theirs?.[key];
-          const scale = fmScale(key);
-          const difference = typeof a === "number" && typeof b === "number" ? a - b : null;
-          const diff = difference == null ? "" : difference === 0 ? "동일" :
-            `${escapeHtml(difference > 0 ? p.name : other.name)} +${Math.abs(difference).toLocaleString("ko-KR")}`;
-          return `<div class="fm-comparison-row"><div class="fm-row-label"><span>${fmFieldLabel(key, label)}</span>` +
-            `<small>${diff}</small></div><div class="fm-compare-values">` +
-            `<div class="mine" aria-label="${escapeHtml(p.name)}">${scale ? fmBar(a, scale) : ""}<strong>${fmValue(a)}</strong></div>` +
-            `<div class="theirs" aria-label="${escapeHtml(other.name)}">${scale ? fmBar(b, scale, "theirs") : ""}<strong>${fmValue(b)}</strong></div></div></div>`;
-        }).join("");
-      return `<details class="fm-group"${index < 3 ? " open" : ""}><summary>${escapeHtml(title)}</summary>` +
-        `${pitch ? '<div class="fm-pitch-pair">' + fmPitch(mine, p.name) + fmPitch(theirs, other.name) + '</div>' : ""}` +
-        `<div class="fm-attribute-list">${rows}</div></details>`;
+    const { main, more } = fmGroupSplit(p, other);
+    const names = `<div class="cmp-cols"><span class="a">${escapeHtml(p.name)}</span>` +
+      `<span class="b">${escapeHtml(other.name)}</span></div>`;
+    const rows = (fields, skipPositions) => Object.entries(fields)
+      .filter(([key]) => !skipPositions || !key.startsWith("positions_"))
+      .map(([key, label]) => cmpRow(key, label, mine, theirs)).join("");
+
+    const total = { a: 0, b: 0, tie: 0 };
+    const diffs = [];
+    const scoreRows = main.map(([title, fields]) => {
+      const tally = cmpTally(fields, mine, theirs);
+      total.a += tally.a;
+      total.b += tally.b;
+      total.tie += tally.tie;
+      Object.entries(fields).forEach(([key, label]) => {
+        const win = cmpWinner(key, mine?.[key], theirs?.[key]);
+        if (win) diffs.push({ label, win, diff: Math.abs(mine[key] - theirs[key]) });
+      });
+      return cmpScoreRow(title, tally);
     }).join("");
+    const edge = (win, name) => {
+      const list = diffs.filter((d) => d.win === win).sort((x, y) => y.diff - x.diff).slice(0, 4);
+      return `<div class="cmp-edge ${win}"><h4>${escapeHtml(name)} 우세 <small>차이 큰 순</small></h4><div class="fm-chips">` +
+        (list.length
+          ? list.map((d) => `<span class="fm-chip">${escapeHtml(d.label)} <b>+${d.diff}</b></span>`).join("")
+          : '<span class="fm-chip none">없음</span>') +
+        `</div></div>`;
+    };
+
+    const head = `<div class="cmp-head">${cmpSide(p, "mine")}<span class="cmp-vs">VS</span>${cmpSide(other, "theirs")}</div>`;
     const missing = !mine || !theirs
       ? `<p class="table-note">${escapeHtml(!mine ? p.name : other.name)}의 FM 능력치는 확인되지 않았습니다.</p>` : "";
-    $("cmpTable").innerHTML = legend + missing + '<p class="table-note">두 막대는 같은 척도입니다. 세부 능력치 20 · 현재·잠재 능력 200 · 평판 10,000</p>' +
-      `<div class="fm-comparison-groups">${body}</div>`;
+    const summary = `<div class="cmp-summary">` +
+      `<div class="fm-radar-box">${fmRadar(fmIsGkView(p, other) ? FM_OCTAGON_GK : FM_OCTAGON,
+        [{ fm: mine, cls: "mine" }, { fm: theirs, cls: "theirs" }])}` +
+      `<p class="table-note">8개 영역 평균 · 20점 만점</p></div>` +
+      `<div class="cmp-sum-side">` +
+      `<div class="cmp-abil">${names}${cmpRow("ability_current", "현재 능력", mine, theirs)}` +
+      `${cmpRow("ability_potential", "잠재 능력", mine, theirs)}</div>` +
+      (mine && theirs
+        ? `<div class="cmp-score"><h4>누가 더 높은 항목이 많은가 <small>회색은 동일</small></h4>` +
+          `${scoreRows}${cmpScoreRow("합계", total, "total")}</div>` +
+          `<div class="cmp-edges">${edge("a", p.name)}${edge("b", other.name)}</div>`
+        : "") +
+      `</div></div>`;
+    const filter = `<div class="cmp-filter" role="group" aria-label="표시할 항목"><span>표시</span>` +
+      [[0, "전체"], [2, "차이 2 이상"], [4, "차이 4 이상"]].map(([min, text]) =>
+        `<button type="button" class="chip" data-min="${min}">${text}</button>`).join("") +
+      `</div>`;
+    const mainHtml = main.map(([title, fields]) =>
+      `<section class="fm-card cmp-card"><h4>${escapeHtml(title)}${cmpTallyHtml(cmpTally(fields, mine, theirs))}</h4>` +
+      `<div class="fa-list">${names}${rows(fields)}<p class="cmp-none" hidden>이만큼 차이 나는 항목이 없습니다.</p></div></section>`
+    ).join("");
+    const moreHtml = more.map(([title, fields]) => {
+      const pitch = title === "포지션 · 양발";
+      return `<details class="fm-group"><summary>${escapeHtml(title)}</summary>` +
+        `${pitch ? '<div class="fm-pitch-pair">' + fmPitch(mine, p.name) + fmPitch(theirs, other.name) + "</div>" : ""}` +
+        `<div class="fa-list">${names}${rows(fields, pitch)}</div></details>`;
+    }).join("");
+    $("cmpTable").innerHTML = head + missing + summary + filter +
+      `<div class="cmp-main">${mainHtml}</div><div class="cmp-more">${moreHtml}</div>`;
+    $("cmpTable").querySelectorAll(".cmp-filter .chip").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        cmpMinDiff = Number(btn.getAttribute("data-min")) || 0;
+        applyCmpFilter();
+      });
+    });
+    applyCmpFilter();
   }
 
   function renderAnalysis(p) {
@@ -1067,6 +1416,7 @@
         setStatus("복사에 실패했습니다.");
       }
     });
+    $("popOut")?.addEventListener("click", syncPopOut);
     $("evergreenJump")?.addEventListener("click", (e) => {
       e.preventDefault();
       $("community")?.scrollIntoView({ behavior: "smooth", block: "start" });

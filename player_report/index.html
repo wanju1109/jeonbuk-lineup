@@ -9,7 +9,7 @@
   <meta property="og:description" content="구단을 고르고 선수를 조회하면 공식 출장 기록과 시즌·팀 표를 한 화면에." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
-  <link rel="stylesheet" href="./css/player.css?v=30" />
+  <link rel="stylesheet" href="./css/player.css?v=31" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -89,7 +89,7 @@
         <section class="block" id="fmBlock">
           <h3>FM 세부 능력치</h3>
           <p class="table-note" id="fmNote"></p>
-          <div class="fm-profile-groups" id="fmGroups"></div>
+          <div class="fm-profile" id="fmGroups"></div>
         </section>
         <section class="block" id="yearBlock">
           <h3>연도별 기록</h3>
@@ -144,6 +144,8 @@
         <p class="help">
           운영진이 외부 멀티미디어 허용에
           <code>wanju1109.github.io/</code> 를 추가해야 게시글 안에 화면이 보입니다.
+          복사되는 코드에는 iframe 아래에 <strong>새 창에서 크게 보기</strong> 링크가 함께 들어가고,
+          게시글 안 화면 오른쪽 아래에도 같은 버튼이 떠 있습니다.
         </p>
         <pre id="embedCode" class="embed-code"></pre>
         <div class="btn-row">
@@ -164,7 +166,8 @@
       </div>
     </section>
   </div>
+  <a class="pop-out" id="popOut" href="./" target="_blank" rel="noopener">새 창에서 크게 보기 ↗</a>
   <script src="./js/engine.js?v=27"></script>
-  <script src="./js/app.js?v=30"></script>
+  <script src="./js/app.js?v=31"></script>
 </body>
 </html>
