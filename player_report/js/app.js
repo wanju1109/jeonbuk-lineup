@@ -233,6 +233,15 @@
     ].join("");
   }
 
+  // 게시글에 화면 없이 "새 창에서 보기" 버튼 하나만 넣는 코드.
+  function buildOpenHtml(url) {
+    return [
+      '<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;text-align:center;">',
+      `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:12px 20px;border-radius:8px;background-color:#0f2a1c;color:#f5fff8;font-size:15px;font-weight:700;text-decoration:none;">K리그 선수 프로필 새 창에서 보기 →</a>`,
+      "</div>",
+    ].join("");
+  }
+
   function buildEmbedHtml(src) {
     return [
       '<div style="width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
@@ -1425,6 +1434,14 @@
         setStatus("메인 화면 URL을 복사했습니다.");
       } catch (err) {
         setStatus("URL 복사에 실패했습니다.");
+      }
+    });
+    $("shareHomeOpen")?.addEventListener("click", async () => {
+      try {
+        await copyText(buildOpenHtml(publicHomeUrl()));
+        setStatus("새 창에서 보기 버튼만 복사했습니다. HTML 모드에 붙여넣으세요.");
+      } catch (err) {
+        setStatus("복사에 실패했습니다.");
       }
     });
     $("shareHomeEmbed")?.addEventListener("click", async () => {

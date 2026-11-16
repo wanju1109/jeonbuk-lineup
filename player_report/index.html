@@ -9,7 +9,7 @@
   <meta property="og:description" content="구단을 고르고 선수를 조회하면 공식 출장 기록과 시즌·팀 표를 한 화면에." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wanju1109.github.io/jeonbuk-lineup/player_report/" />
-  <link rel="stylesheet" href="./css/player.css?v=32" />
+  <link rel="stylesheet" href="./css/player.css?v=33" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -22,13 +22,15 @@
         FM 세이브의 세부 능력치와 선수별 비교를 한 화면에서 확인할 수 있습니다.
         사진은 구단 프로필을 우선하고, 없으면 연맹 공식 컷으로 대체합니다.
       </p>
-      <div class="hero-nav">
+      <p class="hero-admin editor-only">작성자 화면 · 아래 메뉴와 복사 버튼은 방문자에게 보이지 않습니다.</p>
+      <div class="hero-nav editor-only">
         <a class="btn btn-ghost" href="../c_report/">경기 리포트</a>
         <a class="btn btn-ghost" href="../p_report/">프리뷰</a>
         <a class="btn btn-ghost" href="../fun_records/">재미있는 기록</a>
         <button type="button" class="btn btn-primary" id="shareHomeCard">에버그린에 공유</button>
         <button type="button" class="btn btn-ghost" id="shareHomeUrl">URL 복사</button>
         <button type="button" class="btn btn-ghost" id="shareHomeEmbed">iframe 복사</button>
+        <button type="button" class="btn btn-ghost" id="shareHomeOpen">새 창 버튼 복사</button>
         <a class="btn btn-ghost editor-only" href="#community" id="evergreenJump">작성자 링크 도구</a>
       </div>
       <p class="hero-credit">
@@ -168,6 +170,6 @@
   </div>
   <a class="pop-out" id="popOut" href="./" target="_blank" rel="noopener">새 창에서 크게 보기 ↗</a>
   <script src="./js/engine.js?v=27"></script>
-  <script src="./js/app.js?v=32"></script>
+  <script src="./js/app.js?v=33"></script>
 </body>
 </html>

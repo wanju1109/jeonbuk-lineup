@@ -124,6 +124,7 @@ body::before {
 }
 
 .hero-nav { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+.hero-admin { margin: 16px 0 -6px; font-size: 12px; font-weight: 700; color: var(--lime); }
 
 .hero-credit {
   display: flex;
