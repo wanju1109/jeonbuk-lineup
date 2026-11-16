@@ -1082,11 +1082,17 @@ table.cmp .win-mark {
 .fm-tier-legend .t2 { background: #e6ece7; }
 .fm-tier-legend .t1 { background: #fff; border: 1px dashed #c4d0c8; }
 
-.fm-main, .cmp-main, .fm-more, .cmp-more {
+.fm-tier {
+  display: flex; align-items: center; gap: 12px; margin: 8px 0 -2px;
+  font-size: 13px; font-weight: 800; color: #164b37;
+}
+.fm-tier::after { content: ""; flex: 1; height: 1px; background: #d7e4da; }
+.cmp-cards { display: grid; gap: 14px; }
+.fm-cols {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start;
 }
-.cmp-more { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px; }
-.fm-card, .fm-group {
+.fm-col { display: grid; gap: 12px; min-width: 0; align-items: start; }
+.fm-card {
   min-width: 0; border: 1px solid #d7e4da; border-radius: 16px; background: #fbfdfb; overflow: hidden;
 }
 .fm-card > h4 {
@@ -1094,10 +1100,6 @@ table.cmp .win-mark {
   margin: 0; padding: 10px 14px; font-size: 14px; font-weight: 800; color: #164b37;
   background: #edf5ef; border-bottom: 1px solid #d7e4da;
 }
-.fm-group > summary {
-  padding: 11px 14px; font-size: 14px; font-weight: 800; cursor: pointer; color: #164b37; background: #edf5ef;
-}
-.fm-group[open] > summary { border-bottom: 1px solid #d7e4da; }
 .fa-list { padding: 6px 14px 10px; }
 
 /* 한 선수: 항목 · 막대 · 숫자 한 줄 */
@@ -1109,7 +1111,7 @@ table.cmp .win-mark {
 .fa-row.big { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) 52px; }
 .fa-row.is-text { grid-template-columns: auto minmax(0, 1fr); padding: 5px 0; }
 .fa-label { min-width: 0; color: #2b4237; }
-.fa-label small, .cl small { color: #7b8c83; font-size: 10.5px; }
+.fa-label small, .cl small { display: block; color: #7b8c83; font-size: 10.5px; line-height: 1.2; }
 .fa-text { text-align: right; font-weight: 700; overflow-wrap: anywhere; }
 .fa-bar { display: block; height: 7px; border-radius: 7px; background: #e6ece7; overflow: hidden; }
 .fa-bar i { display: block; height: 100%; border-radius: inherit; background: #a9c7b6; }
@@ -1179,6 +1181,10 @@ table.cmp .win-mark {
 .cmp-row + .cmp-row { border-top: 1px solid #edf2ee; }
 .cmp-row.big { grid-template-columns: 48px minmax(0, 1fr) 116px minmax(0, 1fr) 48px; }
 .cmp-row.is-text { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; padding: 6px 0; }
+.cmp-row.no-bar { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+.cmp-row.no-bar .cv { justify-self: start; padding: 0 8px; }
+.cmp-row.no-bar .cv.b { justify-self: end; }
+.cmp-row.no-bar .cl { padding: 0 8px; }
 .cv {
   text-align: center; font-size: 13.5px; line-height: 1.5; border-radius: 7px;
   font-weight: 600; font-variant-numeric: tabular-nums; color: #66776e;
@@ -1198,7 +1204,6 @@ table.cmp .win-mark {
   position: relative; min-width: 0; padding: 0 18px; text-align: center; line-height: 1.25;
   font-size: 12.5px; white-space: nowrap; color: #2b4237;
 }
-.cl small { display: block; }
 .cmp-row.is-text .cl { padding: 0 8px; font-size: 12px; white-space: normal; color: var(--muted); }
 .cd {
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -1234,8 +1239,8 @@ table.cmp .win-mark {
 .cmp-none { margin: 6px 0 4px; font-size: 12px; color: var(--muted); text-align: center; }
 
 /* 포지션 숙련도 경기장 */
-.fm-pitch-wrap { padding: 12px 14px 0; min-width: 0; }
-.fm-pitch-wrap h4 { margin: 0 0 12px; font-size: 13px; }
+.fm-pitch-wrap { padding: 8px 0 4px; min-width: 0; }
+.fm-pitch-wrap .table-note { margin: 6px 0 4px; text-align: center; }
 .fm-pitch {
   position: relative; height: 440px; max-width: 360px; margin: auto;
   border: 2px solid #b8cdbb; border-radius: 8px;
@@ -1252,24 +1257,27 @@ table.cmp .win-mark {
   position: absolute; z-index: 1; transform: translate(-50%, -50%);
   display: flex; align-items: center; gap: 4px; flex-direction: column;
 }
+.fm-position .pv { display: flex; gap: 2px; }
 .fm-position strong {
   display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
-  background: #fff; border: 1px solid #c4d2c5; color: #617569; font-size: 14px;
+  background: #fff; border: 1px solid #c4d2c5; color: #9aa8a0; font-size: 14px;
+  font-variant-numeric: tabular-nums;
 }
-.fm-position.natural strong { background: #087b51; border-color: #087b51; color: #fff; }
-.fm-position.capable strong { background: #b8ddc7; color: #174d35; }
+.fm-pitch.dual .fm-position strong { width: 26px; height: 26px; font-size: 12px; }
+.fm-position strong.natural { background: #087b51; border-color: #087b51; color: #fff; }
+.fm-position strong.capable { background: #b8ddc7; border-color: #9fcdb3; color: #174d35; }
+.fm-position strong.theirs.natural { background: #c36524; border-color: #c36524; color: #fff; }
+.fm-position strong.theirs.capable { background: #efc7a6; border-color: #e2b08a; color: #703e19; }
 .fm-position span { font-size: 9px; font-weight: 700; line-height: 1; color: #395e43; }
-.fm-pitch-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.fm-pitch-pair .fm-pitch-wrap { padding: 12px 7px 0; }
-.fm-pitch-pair .fm-pitch-wrap:nth-child(2) .natural strong { background: #c36524; border-color: #c36524; }
-.fm-pitch-pair .fm-pitch-wrap:nth-child(2) .capable strong { background: #efc7a6; color: #703e19; }
 
 @media (max-width: 900px) {
   .fm-summary, .cmp-summary { grid-template-columns: minmax(0, 1fr); }
-  .fm-main, .cmp-main, .fm-more { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* 두 칸: 셋째 칸은 아래 줄로 내려 그 안의 묶음을 옆으로 나란히 둔다. */
+  .fm-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fm-col:nth-child(3) { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
-  .fm-main, .cmp-main, .fm-more, .cmp-more { grid-template-columns: minmax(0, 1fr); }
+  .fm-cols, .fm-col:nth-child(3) { grid-template-columns: minmax(0, 1fr); }
   .fm-summary, .cmp-summary { padding: 12px; }
   .fm-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cmp-edges { grid-template-columns: minmax(0, 1fr); }

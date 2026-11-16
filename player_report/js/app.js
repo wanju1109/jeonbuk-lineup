@@ -738,7 +738,8 @@
     return escapeHtml(label) + (FM_LOWER_BETTER.includes(key) ? " <small>낮을수록 좋음</small>" : "");
   }
 
-  function fmPitch(fm, name) {
+  // sets: [{ fm, cls }] — 한 명이면 숫자 하나, 두 명이면 자리마다 두 선수 숫자를 나란히 보여 준다.
+  function fmPitch(sets) {
     const spots = [
       ["stc", 50, 9], ["aml", 16, 26], ["amc", 50, 26], ["amr", 84, 26],
       ["ml", 16, 43], ["mc", 50, 43], ["mr", 84, 43],
@@ -746,25 +747,46 @@
       ["dl", 16, 74], ["dc", 50, 74], ["dr", 84, 74],
       ["sw", 50, 85], ["gk", 50, 95],
     ];
-    return `<div class="fm-pitch-wrap"><h4>${escapeHtml(name)} · 포지션 숙련도</h4><div class="fm-pitch">` +
+    return `<div class="fm-pitch-wrap"><div class="fm-pitch${sets.length > 1 ? " dual" : ""}">` +
       spots.map(([pos, x, y]) => {
-        const value = fm?.["positions_" + pos];
-        const level = value >= 15 ? "natural" : value >= 10 ? "capable" : "limited";
-        return `<div class="fm-position ${level}" style="left:${x}%;top:${y}%">` +
-          `<strong>${fmValue(value)}</strong><span>${pos.toUpperCase()}</span></div>`;
-      }).join("") + '</div><p class="table-note">포지션 숙련도 · 20점 만점</p></div>';
+        const badges = sets.map(({ fm, cls }) => {
+          const value = fm?.["positions_" + pos];
+          const level = value >= 15 ? "natural" : value >= 10 ? "capable" : "limited";
+          return `<strong class="${cls} ${level}">${fmValue(value)}</strong>`;
+        }).join("");
+        return `<div class="fm-position" style="left:${x}%;top:${y}%">` +
+          `<div class="pv">${badges}</div><span>${pos.toUpperCase()}</span></div>`;
+      }).join("") +
+      '</div><p class="table-note">포지션 숙련도 · 20점 만점 · 진한 색 15 이상, 연한 색 10 이상</p></div>';
   }
 
   function fmIsGkView(p, other) {
     return p.position === "GK" && (!other || other.position === "GK");
   }
 
-  // main: 항상 펼쳐 두는 세 묶음, more: 접어 두는 나머지.
-  function fmGroupSplit(p, other) {
-    const pick = (indexes) => indexes.map((index) => FM_GROUPS[index]);
-    return fmIsGkView(p, other)
-      ? { main: pick([3, 1, 2]), more: pick([0, 5, 6, 4, 7]) }
-      : { main: pick([0, 1, 2]), more: pick([5, 3, 6, 4, 7]) };
+  // 화면 배치. core(핵심 능력치)와 extra(포지션·성격·그 밖의 정보)는 각각 세 칸이고,
+  // 칸마다 묶음을 위에서 아래로 쌓는다. 접는 묶음 없이 전부 펼쳐 보여 준다.
+  function fmSections(p, other) {
+    const gk = fmIsGkView(p, other);
+    const sec = (index) => {
+      const [title, fields] = FM_GROUPS[index];
+      const keep = (test) => Object.fromEntries(Object.entries(fields).filter(([key]) => test(key)));
+      if (index === 5) return { title, pitch: true, fields: keep((key) => !key.startsWith("positions_")) };
+      // 현재·잠재 능력은 맨 위 요약에 있으므로 여기서는 계약·평판만 둔다.
+      if (index === 7) return { title: "계약 · 평판", fields: keep((key) => !key.startsWith("ability_")) };
+      return { title, fields };
+    };
+    return {
+      core: [[sec(gk ? 3 : 0)], [sec(1)], [sec(2), sec(4)]],
+      extra: [[sec(5)], [sec(6), sec(7)], [sec(gk ? 0 : 3)]],
+    };
+  }
+
+  function fmTiers(sections, card) {
+    const cols = (columns) => columns
+      .map((column) => `<div class="fm-col">${column.map(card).join("")}</div>`).join("");
+    return `<h4 class="fm-tier">핵심 능력치</h4><div class="fm-cols">${cols(sections.core)}</div>` +
+      `<h4 class="fm-tier">포지션 · 성격 · 그 밖의 정보</h4><div class="fm-cols">${cols(sections.extra)}</div>`;
   }
 
   function fmAxisScore(fm, keys) {
@@ -890,20 +912,12 @@
       $("fmGroups").innerHTML = "";
       return;
     }
-    const { main, more } = fmGroupSplit(p);
-    const rows = (fields, skipPositions) => Object.entries(fields)
-      .filter(([key]) => !skipPositions || !key.startsWith("positions_"))
-      .map(([key, label]) => fmAttrRow(fm, key, label)).join("");
-    const mainHtml = main.map(([title, fields]) =>
-      `<section class="fm-card"><h4>${escapeHtml(title)}</h4><div class="fa-list">${rows(fields)}</div></section>`
-    ).join("");
-    const moreHtml = more.map(([title, fields]) => {
-      const pitch = title === "포지션 · 양발";
-      return `<details class="fm-group"><summary>${escapeHtml(title)}</summary>` +
-        `${pitch ? fmPitch(fm, p.name) : ""}<div class="fa-list">${rows(fields, pitch)}</div></details>`;
-    }).join("");
-    $("fmGroups").innerHTML = fmSummary(p, fm) + FM_TIER_LEGEND +
-      `<div class="fm-main">${mainHtml}</div><div class="fm-more">${moreHtml}</div>`;
+    const card = (section) =>
+      `<section class="fm-card"><h4>${escapeHtml(section.title)}</h4><div class="fa-list">` +
+      (section.pitch ? fmPitch([{ fm, cls: "mine" }]) : "") +
+      Object.entries(section.fields).map(([key, label]) => fmAttrRow(fm, key, label)).join("") +
+      `</div></section>`;
+    $("fmGroups").innerHTML = fmSummary(p, fm) + FM_TIER_LEGEND + fmTiers(fmSections(p), card);
     $("fmJump")?.addEventListener("click", () => {
       $("compareBlock")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
@@ -1077,6 +1091,12 @@
     const diff = both ? Math.abs(a - b) : 0;
     const mark = win && scale <= 200 ? `<em class="cd ${win}">+${diff}</em>` : "";
     const state20 = both ? ` data-diff="${Math.round(diff / scale * 20)}"` : "";
+    // 평판(10,000점 척도)은 좁은 칸에서 막대가 너무 짧아지므로 숫자만 나란히 둔다.
+    if (scale > 200) {
+      return `<div class="cmp-row no-bar${win ? " win-" + win : ""}"${state20}>` +
+        `<strong class="cv a">${fmValue(a)}</strong><span class="cl">${fmFieldLabel(key, label)}</span>` +
+        `<strong class="cv b">${fmValue(b)}</strong></div>`;
+    }
     return `<div class="cmp-row${win ? " win-" + win : ""}${scale > 20 ? " big" : ""}"${state20}>` +
       `<strong class="cv a">${fmValue(a)}</strong>` +
       `<span class="cb a" aria-hidden="true"><i style="width:${fmPercent(a, scale)}%"></i></span>` +
@@ -1119,12 +1139,14 @@
     box.querySelectorAll(".cmp-filter .chip").forEach((btn) => {
       btn.classList.toggle("active", Number(btn.getAttribute("data-min")) === cmpMinDiff);
     });
-    box.querySelectorAll(".cmp-row[data-diff]").forEach((row) => {
-      row.hidden = Number(row.getAttribute("data-diff")) < cmpMinDiff;
+    // 걸러 볼 때는 숫자 차이가 기준에 못 미치는 줄과 글자뿐인 줄(계약 만료 등)을 숨긴다.
+    box.querySelectorAll(".cmp-cards .cmp-row").forEach((row) => {
+      const diff = row.getAttribute("data-diff");
+      row.hidden = cmpMinDiff > 0 && (diff == null || Number(diff) < cmpMinDiff);
     });
     box.querySelectorAll(".cmp-card").forEach((card) => {
       const none = card.querySelector(".cmp-none");
-      if (none) none.hidden = cmpMinDiff === 0 || !!card.querySelector(".cmp-row[data-diff]:not([hidden])");
+      if (none) none.hidden = cmpMinDiff === 0 || !!card.querySelector(".cmp-row:not([hidden])");
     });
   }
 
@@ -1141,16 +1163,14 @@
       $("cmpTable").innerHTML = '<p class="empty-note">두 선수의 FM 능력치를 확인하지 못했습니다.</p>';
       return;
     }
-    const { main, more } = fmGroupSplit(p, other);
+    const sections = fmSections(p, other);
     const names = `<div class="cmp-cols"><span class="a">${escapeHtml(p.name)}</span>` +
       `<span class="b">${escapeHtml(other.name)}</span></div>`;
-    const rows = (fields, skipPositions) => Object.entries(fields)
-      .filter(([key]) => !skipPositions || !key.startsWith("positions_"))
-      .map(([key, label]) => cmpRow(key, label, mine, theirs)).join("");
 
+    // 요약 집계는 핵심 세 묶음(각 칸의 첫 묶음)만 센다.
     const total = { a: 0, b: 0, tie: 0 };
     const diffs = [];
-    const scoreRows = main.map(([title, fields]) => {
+    const scoreRows = sections.core.map((column) => column[0]).map(({ title, fields }) => {
       const tally = cmpTally(fields, mine, theirs);
       total.a += tally.a;
       total.b += tally.b;
@@ -1190,18 +1210,17 @@
       [[0, "전체"], [2, "차이 2 이상"], [4, "차이 4 이상"]].map(([min, text]) =>
         `<button type="button" class="chip" data-min="${min}">${text}</button>`).join("") +
       `</div>`;
-    const mainHtml = main.map(([title, fields]) =>
-      `<section class="fm-card cmp-card"><h4>${escapeHtml(title)}${cmpTallyHtml(cmpTally(fields, mine, theirs))}</h4>` +
-      `<div class="fa-list">${names}${rows(fields)}<p class="cmp-none" hidden>이만큼 차이 나는 항목이 없습니다.</p></div></section>`
-    ).join("");
-    const moreHtml = more.map(([title, fields]) => {
-      const pitch = title === "포지션 · 양발";
-      return `<details class="fm-group"><summary>${escapeHtml(title)}</summary>` +
-        `${pitch ? '<div class="fm-pitch-pair">' + fmPitch(mine, p.name) + fmPitch(theirs, other.name) + "</div>" : ""}` +
-        `<div class="fa-list">${names}${rows(fields, pitch)}</div></details>`;
-    }).join("");
+    const card = (section) => {
+      const tally = cmpTally(section.fields, mine, theirs);
+      return `<section class="fm-card cmp-card"><h4>${escapeHtml(section.title)}` +
+        `${tally.a + tally.b + tally.tie ? cmpTallyHtml(tally) : ""}</h4><div class="fa-list">${names}` +
+        (section.pitch ? fmPitch([{ fm: mine, cls: "mine" }, { fm: theirs, cls: "theirs" }]) : "") +
+        Object.entries(section.fields).map(([key, label]) => cmpRow(key, label, mine, theirs)).join("") +
+        (section.pitch ? "" : '<p class="cmp-none" hidden>이만큼 차이 나는 항목이 없습니다.</p>') +
+        `</div></section>`;
+    };
     $("cmpTable").innerHTML = head + missing + summary + filter +
-      `<div class="cmp-main">${mainHtml}</div><div class="cmp-more">${moreHtml}</div>`;
+      `<div class="cmp-cards">${fmTiers(sections, card)}</div>`;
     $("cmpTable").querySelectorAll(".cmp-filter .chip").forEach((btn) => {
       btn.addEventListener("click", () => {
         cmpMinDiff = Number(btn.getAttribute("data-min")) || 0;
