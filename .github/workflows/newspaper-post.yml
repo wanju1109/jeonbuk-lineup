@@ -58,10 +58,12 @@ jobs:
         run: |
           NO=${{ steps.w.outputs.no }}
           cp newspaper/issues/$NO.json newspaper/issues/index.json "$RUNNER_TEMP/"
+          if [ -f "newspaper/issues/checks/$NO.json" ]; then cp "newspaper/issues/checks/$NO.json" "$RUNNER_TEMP/checks-$NO.json"; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout main && git pull --rebase
           cp "$RUNNER_TEMP/$NO.json" newspaper/issues/
+          if [ -f "$RUNNER_TEMP/checks-$NO.json" ]; then mkdir -p newspaper/issues/checks; cp "$RUNNER_TEMP/checks-$NO.json" "newspaper/issues/checks/$NO.json"; fi
           python - "$RUNNER_TEMP/index.json" <<'PY'
           import json, sys
           new = json.load(open(sys.argv[1], encoding="utf-8"))["issues"]

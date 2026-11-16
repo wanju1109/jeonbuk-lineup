@@ -10,7 +10,7 @@
 
 | 시각(KST) | 누가 | 하는 일 |
 |---|---|---|
-| 06:05 | Claude 루틴 (claude.ai/code/routines, 구독 사용) | `EDITOR.md` 지침대로 기록 계산(`build_context.py`) → 뉴스·루머 취재 → 초고 → `finalize_issue.py` 검사 → `issues/{no}.json` push |
+| 06:05 | Claude 루틴 (claude.ai/code/routines, 구독 사용) | `EDITOR.md` 지침대로 기록 계산(`build_context.py`) → 뉴스·루머 취재 → 초고 → 검수(`review.py` 검수표를 출처 원문과 대조, 사실표 `facts.json`) → `finalize_issue.py` 검사 → `issues/{no}.json`, `issues/checks/{no}.json` push |
 | push 직후 | GitHub Actions `newspaper-post.yml` | 루틴이 다른 브랜치에 올렸으면 main으로 반영. 에버그린이 Actions 서버를 막아(403) 게시는 `POST_FROM_ACTIONS=true`일 때만 |
 | 07:00 | 집 PC 작업 스케줄러 `JeonjuMorningPost` | `scripts/post_local.py` → `post_evergreen.py`. 에버그린 칼럼/분석에 iframe 글 게시. PC가 꺼져 있었으면 켜진 뒤 바로 실행 |
 | 07:00·12:00·18:00 | 집 PC 작업 스케줄러 (같은 작업의 두 번째 동작) | `scripts/post_reports.py` — 경기 다음 날 매치 리포트(c_report), 경기 전날 프리뷰(p_report)를 칼럼/분석에 게시. 데이터가 덜 모였으면 다음 시각에 다시 확인, 이미 올린 글은 건너뜀 |

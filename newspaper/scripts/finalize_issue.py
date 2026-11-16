@@ -1,10 +1,13 @@
 """편집장(Claude 루틴)이 쓴 초고 JSON을 검사하고 발행 파일로 만든다.
 
 - 블록 형식, span, 사진 키를 검사한다. 빠진 필드는 null로 채운다.
+- 사실표(facts.json)에 어긋나는 표현, 출처와 맞지 않는 등급(공식/보도), 주제에 안 맞는 자료 사진을 막는다.
+- 검수표(review.py가 만든 review.json)가 다 채워졌는지 본다. 검수가 안 끝난 초고는 발행하지 않는다.
 - build_context.py가 계산한 기록(data)과 사용한 사진 정보(assets)를 붙여
-  newspaper/issues/{no}.json 을 쓰고 issues/index.json 을 갱신한다.
+  newspaper/issues/{no}.json 을 쓰고 issues/index.json 을 갱신한다. 검수 기록은 issues/checks/{no}.json 에 남긴다.
 
-usage: python newspaper/scripts/finalize_issue.py --context ctx.json --draft draft.json [--check]
+usage: python newspaper/scripts/finalize_issue.py --context ctx.json --draft draft.json --review review.json
+       python newspaper/scripts/finalize_issue.py --context ctx.json --draft draft.json --check   (형식만 검사)
 종료 코드 1 = 고쳐야 할 문제가 있음 (메시지를 보고 초고를 고친 뒤 다시 실행)
 """
 
@@ -16,6 +19,9 @@ import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+import review  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 NP = ROOT / "newspaper"
@@ -38,6 +44,32 @@ def recent_heroes(no: int, n: int = 3) -> set[str]:
             if blocks and blocks[0].get("image"):
                 out.add(blocks[0]["image"])
     return out
+
+
+def fact_errors(issue: dict, ctx: dict, lib: dict, facts: dict) -> list[str]:
+    """사실표에 어긋나는 표현, 등급과 안 맞는 출처, 주제에 안 맞는 자료 사진."""
+    errs: list[str] = []
+    for pi, page in enumerate(issue["pages"], 1):
+        page_text = " ".join(str(page.get(k) or "") for k in ("tab", "teaser", "folio"))
+        for bi, b in enumerate(page.get("blocks", []), 1):
+            where = f"{pi}면 {bi}번째 블록({b.get('type')})"
+            if not review.is_correction(b):  # 바로잡습니다는 틀렸던 표현을 인용할 수 있다
+                text = json.dumps(b, ensure_ascii=False)
+                for w in facts.get("wrong", []):
+                    if (not w.get("until") or ctx["date"] <= w["until"]) and re.search(w["pattern"], text):
+                        errs.append(f"{where}: 사실표와 다른 표현이 있습니다. {w['why']}")
+            ban = (lib.get(b.get("image") or "") or {}).get("not_for") or []
+            around = page_text + " " + " ".join(str(b.get(k) or "") for k in ("kicker", "title", "dek"))
+            hit = [k for k in ban if k in around]
+            if hit:
+                errs.append(f"{where}: 사진 {b['image']!r}는 {'·'.join(hit)} 기사에 쓸 수 없습니다. {lib[b['image']].get('note', '')}")
+            for it in b.get("items") or []:
+                u, tag = it.get("source_url") or "", it.get("tag") or ""
+                if tag == "공식" and not review.host_in(u, facts["official_hosts"]):
+                    errs.append(f"{where}: '{(it.get('title') or '')[:20]}'의 tag '공식'은 구단·연맹·협회 페이지를 직접 출처로 달았을 때만 씁니다. 언론 기사면 '보도'로 바꾸세요")
+                if tag in ("공식", "보도") and review.host_in(u, facts["community_hosts"]):
+                    errs.append(f"{where}: '{(it.get('title') or '')[:20]}'의 출처가 커뮤니티·위키입니다. tag를 '설'로 바꾸거나 기사 출처를 다세요")
+    return errs
 
 
 def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
@@ -103,7 +135,7 @@ def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
         if first[0].get("image") in recent:
             errs.append(f"1면 사진 {first[0].get('image')!r}는 최근 3호에서 이미 썼습니다. 오늘 주제에 맞는 다른 사진을 고르세요"
                         f"(선수 이야기면 library.json people의 경기 사진이나 player: 사진)")
-    return errs
+    return errs + fact_errors(issue, ctx, lib, review.load_facts())
 
 
 def normalize(issue: dict) -> None:
@@ -118,7 +150,10 @@ def normalize(issue: dict) -> None:
                     it.setdefault(f, None)
 
 
-def finalize(ctx: dict, issue: dict, lib: dict) -> Path:
+def finalize(ctx: dict, issue: dict, lib: dict, rows: list[dict]) -> Path:
+    checks = NP / "issues" / "checks"
+    checks.mkdir(exist_ok=True)
+    (checks / f"{ctx['no']}.json").write_text(json.dumps({"no": ctx["no"], "date": ctx["date"], "rows": rows}, ensure_ascii=False, indent=1), encoding="utf-8")
     used = {}
     for page in issue["pages"]:
         for b in page["blocks"]:
@@ -146,6 +181,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--context", required=True)
     ap.add_argument("--draft", required=True)
+    ap.add_argument("--review", help="review.py로 만들고 검수자가 채운 검수표. 발행하려면 필수")
     ap.add_argument("--check", action="store_true", help="검사만 하고 저장하지 않는다")
     args = ap.parse_args()
     ctx = json.loads(Path(args.context).read_text(encoding="utf-8"))
@@ -155,14 +191,26 @@ def main() -> None:
         sys.exit(f"초고 JSON 문법 오류: {e}")
     lib = json.loads((NP / "img" / "library.json").read_text(encoding="utf-8"))["images"]
     errs = check(issue, ctx, lib)
+    need, rows = [], []
+    if not errs and (args.review or not args.check):
+        if not args.review or not Path(args.review).exists():
+            errs.append("검수표가 없습니다. python newspaper/scripts/review.py --context … --draft … --out /tmp/review.json 으로 만들고, "
+                        "EDITOR.md '검수'대로 채운 뒤 --review 로 넘기세요")
+        else:
+            need = review.units(issue, lib, ctx.get("assets", {}))
+            rows = json.loads(Path(args.review).read_text(encoding="utf-8")).get("rows", [])
+            errs += review.check_rows(need, rows, review.load_facts())
     if errs:
         print("고칠 것:\n- " + "\n- ".join(errs))
         sys.exit(1)
+    if need:
+        print(review.summary(need, rows))
     normalize(issue)
     if args.check:
-        print("검사 통과")
+        print("검사 통과" + ("" if args.review else " (형식만 봤습니다. 발행하려면 검수표가 필요합니다)"))
         return
-    path = finalize(ctx, issue, lib)
+    keep = {n["id"] for n in need}
+    path = finalize(ctx, issue, lib, [r for r in rows if r.get("id") in keep])
     print(f"완성: {path.relative_to(ROOT)} · 제{ctx['no']}호 · {issue['headline']} · {len(issue['pages'])}면")
 
 

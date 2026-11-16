@@ -1,5 +1,5 @@
 {
- "note": "신문에 쓸 수 있는 사진. 저작권이 확인된 것만 넣는다. key를 issue JSON의 image 값으로 쓴다. people은 선수 이름별 경기 사진 key 목록. 새 사진은 scripts/collect_commons.py로 모은다.",
+ "note": "신문에 쓸 수 있는 사진. 저작권이 확인된 것만 넣는다. key를 issue JSON의 image 값으로 쓴다. people은 선수 이름별 경기 사진 key 목록. 새 사진은 scripts/collect_commons.py로 모은다. desc에는 사진에 찍힌 것(무엇·언제·어디)을 적는다. note가 있으면 반드시 따르고, not_for에 적힌 주제의 면에는 그 사진을 쓸 수 없다(검사에서 걸린다).",
  "images": {
   "fans": {
    "src": "img/fans.webp",
@@ -224,11 +224,20 @@
   "commons:전주월드컵경기장:1": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Aux._field_of_Jeonju_World_Cup_Stadium.jpg/1280px-Aux._field_of_Jeonju_World_Cup_Stadium.jpg",
    "alt": "Aux. field of Jeonju World Cup Stadium",
-   "desc": "전주월드컵경기장: Aux. field of Jeonju World Cup Stadium",
+   "desc": "전주월드컵경기장 보조경기장 전경(2008년 5월 촬영, 경기 장면 아님)",
    "credit": "사진 User:주전자 / Wikimedia Commons (CC BY-SA 3.0)",
    "source": "https://commons.wikimedia.org/wiki/File:Aux._field_of_Jeonju_World_Cup_Stadium.jpg",
    "shape": "가로",
-   "note": "1군 경기장의 보조경기장. 유스(금산중·영생고)는 여기서 뛰지 않는다. 유스 기사 사진 설명에 '유스가 뛰는 곳'이라고 쓰지 말 것"
+   "note": "유스(U15·U18) 경기장이 아니다. K리그 주니어 2023~2026년 기록에 이곳에서 열린 전북 유스 경기는 없다. 유스 기사에는 쓰지 않는다",
+   "not_for": [
+    "유스",
+    "U15",
+    "U-15",
+    "U18",
+    "U-18",
+    "금산중",
+    "영생고"
+   ]
   },
   "commons:전주월드컵경기장:5": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Jeonju_World_Cup_Stadium_at_the_2002_FIFA_World_Cup.jpg/1280px-Jeonju_World_Cup_Stadium_at_the_2002_FIFA_World_Cup.jpg",
@@ -305,11 +314,11 @@
   "commons:전북 응원:1": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Jeonbuk_fans_at_K4_match.jpg/1280px-Jeonbuk_fans_at_K4_match.jpg",
    "alt": "Jeonbuk fans at K4 match",
-   "desc": "전북 응원: Jeonbuk fans at K4 match",
+   "desc": "2024년 8월 18일 완주공설운동장, K4리그 경기에서 전북 B팀(지금의 N팀)을 응원하는 팬들",
    "credit": "사진 Haena96 / Wikimedia Commons (CC0)",
    "source": "https://commons.wikimedia.org/wiki/File:Jeonbuk_fans_at_K4_match.jpg",
    "shape": "가로",
-   "note": "K4리그 시절(2024년 이전) N팀 경기 사진. N팀은 2025년부터 K3리그"
+   "note": "2024년 K4리그 시절 사진이다. N팀은 2026시즌 K3리그 소속(facts.json nteam-league). 사진 설명에 지금도 K4리그인 것처럼 쓰지 않는다"
   },
   "commons:전북현대:1": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/2010_AFC_Champions_League_Adelaide_United_vs_Jeonbuk_Hyundai_Motors.jpg/1280px-2010_AFC_Champions_League_Adelaide_United_vs_Jeonbuk_Hyundai_Motors.jpg",

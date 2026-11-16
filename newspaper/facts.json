@@ -1,0 +1,119 @@
+{
+ "note": "공식 자료로 직접 확인한 기본 사실표. 신문에 구단 구조(유스·N팀·경기장) 이야기를 쓸 때는 여기 적힌 내용만 쓴다. 각 사실에는 확인한 공식 출처와 확인한 날짜가 있다. recheck 날짜가 지났으면 그 출처를 다시 열어 확인한 뒤에 쓴다. 여기 없는 사실은 공식 출처에서 새로 확인해야 쓸 수 있다. 독자 제보·커뮤니티 글·나무위키만 보고 이 파일을 고치지 않는다.",
+ "official_hosts": [
+  "kfa.or.kr",
+  "joinkfa.com",
+  "kleague.com",
+  "hyundai-motorsfc.com",
+  "the-afc.com",
+  "fifa.com",
+  "eaff.com"
+ ],
+ "community_hosts": [
+  "fmkorea.com",
+  "chuggu.net",
+  "ruliweb.com",
+  "evergreenjb.me",
+  "namu.wiki",
+  "dcinside.com",
+  "theqoo.net",
+  "mlbpark.donga.com",
+  "pgr21.com",
+  "inven.co.kr",
+  "wikipedia.org",
+  "wikitree.co.kr"
+ ],
+ "facts": [
+  {
+   "id": "u15-team",
+   "topic": ["유스", "U15", "U-15", "금산중"],
+   "fact": "전북현대 U15의 공식 팀 이름은 '전북현대U15동대부속금산중'이다.",
+   "source_name": "대한축구협회 2026 중등 왕중왕전 결승 기사",
+   "source_url": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28439&div_code=news",
+   "verified": "2026-11-16",
+   "recheck": "2027-03-01"
+  },
+  {
+   "id": "u15-home",
+   "topic": ["유스", "U15", "U-15", "금산중"],
+   "fact": "전북 U15의 리그 홈경기는 주로 금산중학교에서 열린다. K리그 주니어 2023~2026년 홈 45경기 가운데 금산중 43경기, 완산체육공원C구장 1경기(2025), 전북현대클럽하우스 1경기(2026)다. 전주월드컵경기장 보조경기장에서 열린 경기는 없다.",
+   "source_name": "K리그 홈페이지 K리그 주니어 일정(전국 중등 축구리그)",
+   "source_url": "https://www.kleague.com/youth/junior.do",
+   "verified": "2026-11-16",
+   "recheck": "2027-03-01"
+  },
+  {
+   "id": "u18-team",
+   "topic": ["유스", "U18", "U-18", "영생고"],
+   "fact": "전북현대 U18의 K리그 등록 팀 이름은 '전북현대U18전주영생고'다.",
+   "source_name": "K리그 홈페이지 K리그 주니어 팀 목록",
+   "source_url": "https://www.kleague.com/youth/junior.do",
+   "verified": "2026-11-16",
+   "recheck": "2027-03-01"
+  },
+  {
+   "id": "u18-home",
+   "topic": ["유스", "U18", "U-18", "영생고", "클럽하우스"],
+   "fact": "전북 U18의 리그 홈경기는 주로 전북현대 클럽하우스(인조구장)에서 열린다. K리그 주니어 2023~2026년 홈 42경기(저학년 리그 제외) 가운데 전북현대클럽하우스 39경기, 봉동생강골축구장 2경기(2025), 금산중 1경기(2025)다. 전주월드컵경기장 보조경기장에서 열린 경기는 없다.",
+   "source_name": "K리그 홈페이지 K리그 주니어 일정(전국 고등 축구리그)",
+   "source_url": "https://www.kleague.com/youth/junior.do",
+   "verified": "2026-11-16",
+   "recheck": "2027-03-01"
+  },
+  {
+   "id": "aux-field",
+   "topic": ["보조경기장"],
+   "fact": "전주월드컵경기장 보조경기장은 유스(U15·U18) 리그 경기장이 아니다. 유스와 엮어 쓰지 않는다.",
+   "source_name": "K리그 홈페이지 K리그 주니어 일정 2023~2026",
+   "source_url": "https://www.kleague.com/youth/junior.do",
+   "verified": "2026-11-16",
+   "recheck": "2027-03-01"
+  },
+  {
+   "id": "nteam-league",
+   "topic": ["N팀", "B팀", "K3", "K4"],
+   "fact": "전북현대 N팀은 2026시즌 K3리그 소속이다(구단 홈페이지 메뉴 이름이 'N팀(K3) 일정/결과'). 대한축구협회 K3리그 2026 순위표에는 '전북현대모터스'로 나오며 26경기 1승 8무 17패 승점 11로 14개 팀 중 14위다(2026-11-16 확인). 2027시즌 소속 리그는 시즌 전에 다시 확인한다.",
+   "source_name": "전북현대 홈페이지 N팀(K3) 일정/결과, 대한축구협회 K3리그 2026",
+   "source_url": "https://hyundai-motorsfc.com/match/nteam/result",
+   "source_url2": "https://kfa.or.kr/competition/k3_2026.php",
+   "verified": "2026-11-16",
+   "recheck": "2027-01-15"
+  },
+  {
+   "id": "nteam-home",
+   "topic": ["N팀", "완주공설운동장"],
+   "fact": "N팀의 2026시즌 홈경기장은 완주공설운동장이다. 홈 13경기 가운데 12경기가 완주공설운동장, 1경기(6월 6일 경주한수원전)가 전주월드컵경기장에서 열렸다.",
+   "source_name": "전북현대 홈페이지 N팀(K3) 일정/결과",
+   "source_url": "https://hyundai-motorsfc.com/match/nteam/result",
+   "verified": "2026-11-16",
+   "recheck": "2027-03-01"
+  },
+  {
+   "id": "u15-wangjungwang",
+   "topic": ["왕중왕전", "금산중"],
+   "fact": "전북 U15는 전국 중등 축구리그 왕중왕전 우승 기록이 없다. 2026년 대회는 결승에서 인천유나이티드U15광성중에 0-1로 져 준우승했다.",
+   "source_name": "대한축구협회 2026 중등 왕중왕전 준결승·결승 기사",
+   "source_url": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28439&div_code=news",
+   "source_url2": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28431&div_code=news",
+   "verified": "2026-11-16",
+   "recheck": "2027-11-01"
+  }
+ ],
+ "wrong": [
+  {
+   "pattern": "N팀\\s*\\(\\s*K4|N팀[은는이가도]?\\s*K4리그(?:에서| 소속|에 |를 )|K4리그\\s*N팀",
+   "why": "N팀은 2026시즌 K3리그 소속이다(facts: nteam-league). 2024년 이전 일을 말할 때는 'K4리그 시절'처럼 시점을 밝힌다.",
+   "until": "2027-01-15"
+  },
+  {
+   "pattern": "보조경기장[^.]{0,40}(?:유스|U-?15|U-?18|금산중|영생고)[^.]{0,30}(?:서는|뛰는|쓰는|홈|치르)",
+   "why": "전주월드컵경기장 보조경기장은 유스 경기장이 아니다(facts: aux-field). 유스 홈은 금산중학교(U15), 전북현대 클럽하우스(U18).",
+   "until": "2027-03-01"
+  },
+  {
+   "pattern": "(?:유스|U-?15|U-?18|금산중|영생고)[^.]{0,40}보조경기장에서\\s*(?:뛴|뛰|홈|경기를)",
+   "why": "전주월드컵경기장 보조경기장은 유스 경기장이 아니다(facts: aux-field).",
+   "until": "2027-03-01"
+  }
+ ]
+}
