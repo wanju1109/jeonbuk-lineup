@@ -227,7 +227,8 @@
    "desc": "전주월드컵경기장: Aux. field of Jeonju World Cup Stadium",
    "credit": "사진 User:주전자 / Wikimedia Commons (CC BY-SA 3.0)",
    "source": "https://commons.wikimedia.org/wiki/File:Aux._field_of_Jeonju_World_Cup_Stadium.jpg",
-   "shape": "가로"
+   "shape": "가로",
+   "note": "1군 경기장의 보조경기장. 유스(금산중·영생고)는 여기서 뛰지 않는다. 유스 기사 사진 설명에 '유스가 뛰는 곳'이라고 쓰지 말 것"
   },
   "commons:전주월드컵경기장:5": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Jeonju_World_Cup_Stadium_at_the_2002_FIFA_World_Cup.jpg/1280px-Jeonju_World_Cup_Stadium_at_the_2002_FIFA_World_Cup.jpg",
@@ -307,7 +308,8 @@
    "desc": "전북 응원: Jeonbuk fans at K4 match",
    "credit": "사진 Haena96 / Wikimedia Commons (CC0)",
    "source": "https://commons.wikimedia.org/wiki/File:Jeonbuk_fans_at_K4_match.jpg",
-   "shape": "가로"
+   "shape": "가로",
+   "note": "K4리그 시절(2024년 이전) N팀 경기 사진. N팀은 2025년부터 K3리그"
   },
   "commons:전북현대:1": {
    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/2010_AFC_Champions_League_Adelaide_United_vs_Jeonbuk_Hyundai_Motors.jpg/1280px-2010_AFC_Champions_League_Adelaide_United_vs_Jeonbuk_Hyundai_Motors.jpg",
