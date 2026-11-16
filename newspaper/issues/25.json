@@ -3,7 +3,7 @@
  "date": "2026-11-16",
  "matchday_after": false,
  "headline": "전북 U15 금산중, 왕중왕전 결승 0-1 석패로 준우승",
- "summary": "금산중이 영덕 결승에서 인천 U15 광성중에 0-1로 져 첫 우승을 다음으로 미뤘다. 이건호는 베스트영플레이어상을 받았다.",
+ "summary": "금산중이 영덕 결승에서 인천 U15 광성중에 0-1로 져 첫 우승을 다음으로 미뤘다. 박지설은 우수선수상, 이건호는 베스트영플레이어상을 받았다.",
  "strip": [
   "K리그1 5위 · 승점 49",
   "다음 경기 D-5 · 21일(토) 14:00 서울 홈",
@@ -39,7 +39,7 @@
      "paragraphs": [
       "전북현대 U15 동대부속금산중이 15일 경북 영덕 영해생활체육공원 A구장에서 열린 2026 전국 중등 축구리그 왕중왕전 결승에서 인천유나이티드 U15 광성중에 0-1로 졌다. 대회 첫 우승을 노렸던 금산중은 준우승으로 대회를 마쳤다.",
       "승부는 전반 추가시간에 갈렸다. 광성중이 얻은 코너킥에서 유찬영이 머리로 골망을 흔들었다. 금산중은 후반 내내 동점골을 노렸지만 수비벽을 두껍게 쌓은 광성중을 끝내 뚫지 못했다.",
-      "준결승에서 결승골을 넣은 이건호는 베스트영플레이어상을 받았다. 광성중은 2015년 이후 11년 만에 정상에 올랐고, 인천 구단은 고등부 대건고와 함께 중등·고등 왕중왕전 동반 우승을 달성했다.",
+      "박지설은 우수선수상을, 준결승에서 결승골을 넣은 이건호는 베스트영플레이어상을 받았다. 신용주 감독과 임승범 코치는 우수지도자상을 받았다. 광성중은 2015년 이후 11년 만에 정상에 올랐고, 인천 구단은 고등부 대건고와 함께 중등·고등 왕중왕전 동반 우승을 달성했다.",
       "1군은 A매치 휴식기를 마치고 21일 오후 2시 전주월드컵경기장에서 선두 서울과 36라운드를 치른다. 4위 강원과의 승점 차는 2다."
      ],
      "rule_top": false,
@@ -160,7 +160,7 @@
      "type": "photo",
      "span": 5,
      "image": "commons:전주월드컵경기장:1",
-     "caption": "자료 사진 · 전주월드컵경기장 보조경기장. 유스 경기는 이곳이 아니라 U-15 금산중, U-18 클럽하우스 보조구장에서 주로 열린다",
+     "caption": "자료 사진 · 전주월드컵경기장 보조경기장. 유스 경기장은 아니다. 전북 U15는 주로 금산중학교, U18은 전북현대 클럽하우스에서 홈경기를 치른다(K리그 주니어 기록)",
      "rule_top": false,
      "variant": null,
      "kicker": null,
@@ -253,19 +253,41 @@
      "items": [
       {
        "tag": "전북",
+       "title": "박지설 · 우수선수상",
+       "text": "결승 전반 7분과 9분 역습에 앞장섰다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "대한축구협회",
+       "source_url": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28439&div_code=news",
+       "value": null
+      },
+      {
+       "tag": "전북",
        "title": "이건호 · 베스트영플레이어상",
        "text": "준결승 천안전 경기 종료 직전 결승골의 주인공",
-       "source_name": "인천일보",
-       "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1336871",
+       "source_name": "대한축구협회",
+       "source_url": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28439&div_code=news",
        "label": null,
        "date": null,
        "state": null,
        "value": null
       },
       {
+       "tag": "전북",
+       "title": "신용주 감독·임승범 코치 · 우수지도자상",
+       "text": "준결승에서 지난 대회 우승팀 천안을 꺾고 결승에 올랐다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "대한축구협회",
+       "source_url": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28439&div_code=news",
+       "value": null
+      },
+      {
        "tag": "인천",
        "title": "황보태양 · 득점상(7골)",
-       "text": "광성중 공격수",
+       "text": "준결승에서 후반 35분 재역전골을 넣었다",
        "source_name": "인천일보",
        "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1336871",
        "label": null,
@@ -276,7 +298,7 @@
       {
        "tag": "인천",
        "title": "유찬영 · 수비상",
-       "text": "결승 유일한 골을 넣은 수비수",
+       "text": "결승의 유일한 골을 넣었다",
        "source_name": "인천일보",
        "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1336871",
        "label": null,
@@ -365,6 +387,48 @@
      "image": null,
      "big": null,
      "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": null,
+     "kicker": "바로잡습니다",
+     "title": "15·16일 자 유스 면 세 곳을 고쳤습니다",
+     "dek": null,
+     "byline": null,
+     "paragraphs": [
+      "16일 자 2면 사진 설명에서 전주월드컵경기장 보조경기장을 전북 유스 선수들이 자주 서는 곳이라고 썼으나 사실이 아닙니다. K리그 주니어 2023~2026년 기록을 보면 전북 U15의 홈경기는 주로 금산중학교, U18의 홈경기는 주로 전북현대 클럽하우스에서 열렸고, 보조경기장에서 열린 경기는 한 번도 없었습니다.",
+      "15일 자 2면 사진 설명의 'N팀(K4리그)'은 'K3리그'가 맞습니다. 사진은 2024년 K4리그 시절 경기 장면입니다. 같은 면에서 김예건이 현대가 더비 데뷔전에서 골을 넣었다고 쓴 부분도 바로잡습니다. 데뷔전은 7월 4일 강원전이고, 11일 현대가 더비 골은 데뷔골입니다. 알려 주신 독자께 감사드립니다."
+     ],
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": [
+      {
+       "tag": null,
+       "title": "유스 홈경기 장소",
+       "text": "K리그 주니어 일정",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "K리그",
+       "source_url": "https://www.kleague.com/youth/junior.do",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "N팀 소속 리그",
+       "text": "구단 홈페이지 N팀(K3) 일정/결과",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "전북현대",
+       "source_url": "https://hyundai-motorsfc.com/match/nteam/result",
+       "value": null
+      }
+     ]
     }
    ]
   },
@@ -611,10 +675,10 @@
      "items": [
       {
        "tag": "공식",
-       "title": "금산중 왕중왕전 준우승, 이건호 베스트영플레이어",
+       "title": "금산중 왕중왕전 준우승, 박지설 우수선수·이건호 베스트영플레이어",
        "text": "15일 결승 광성중에 0-1",
-       "source_name": "인천일보",
-       "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1336871",
+       "source_name": "대한축구협회",
+       "source_url": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28439&div_code=news",
        "label": null,
        "date": null,
        "state": null,
@@ -795,6 +859,28 @@
      "title": "오늘 호 출처 모음",
      "items": [
       {
+       "tag": null,
+       "title": "왕중왕전 결승 결과·시상 내역(공식)",
+       "text": "대한축구협회",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "대한축구협회",
+       "source_url": "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&idx=28439&div_code=news",
+       "value": null
+      },
+      {
+       "tag": null,
+       "title": "유스 홈경기 장소",
+       "text": "K리그 주니어 일정",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": "K리그",
+       "source_url": "https://www.kleague.com/youth/junior.do",
+       "value": null
+      },
+      {
        "title": "왕중왕전 결승 결과·개인상",
        "text": "인천일보",
        "source_name": "인천일보",
@@ -817,7 +903,7 @@
        "value": null
       },
       {
-       "title": "왕중왕전 결승",
+       "title": "2015년 왕중왕전 결승(광성중의 직전 우승)",
        "text": "스포츠서울",
        "source_name": "스포츠서울",
        "source_url": "https://www.sportsseoul.com/news/read/319827",
