@@ -2,12 +2,12 @@
  "no": 26,
  "date": "2026-11-17",
  "matchday_after": false,
- "headline": "벤투 전북 부임설 한 달, 확인된 것과 확인되지 않은 것",
- "summary": "10월 접촉설에서 16일 밤 '디렉터 리스본행' 글까지. 구단 발표는 없고, 기사로 확인되는 것은 10월 18일의 부인 두 건이다",
+ "headline": "최근 리그 8경기 1승 4무 3패, 남은 세 경기는 서울·울산·인천",
+ "summary": "휴식기 마지막 주, 전북은 5위·승점 49로 21일 홈 서울전부터 리그 마지막 세 경기에 들어간다",
  "strip": [
   "K리그1 5위 · 승점 49",
   "다음 경기 D-4 · 21일(토) 서울 홈",
-  "특집 · 벤투 부임설 한 달"
+  "남은 리그 3경기 · 서울 · 울산 · 인천"
  ],
  "pages": [
   {
@@ -18,11 +18,11 @@
     {
      "type": "hero",
      "span": 12,
-     "image": "bento",
-     "kicker": "특집 · 벤투 부임설",
-     "title": "벤투 전북 부임설 한 달, 확인된 것과 확인되지 않은 것",
-     "dek": "전북 구단은 감독 교체도 벤투 접촉도 발표하지 않았다. 기사와 커뮤니티 글을 날짜순으로 갈랐다",
-     "caption": "자료 사진 · 2019년 아시안컵에서 한국 대표팀을 지휘하는 파울루 벤투 감독",
+     "image": "commons:정정용:260411",
+     "kicker": "리그 · 휴식기 마지막 주",
+     "title": "최근 리그 8경기 1승 4무 3패, 남은 세 경기는 서울·울산·인천",
+     "dek": "8경기에서 승점 7. 5위 전북은 4위 강원에 2점 뒤지고, 6위 인천과는 승점이 같다",
+     "caption": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 정정용 감독",
      "rule_top": false,
      "variant": null,
      "byline": null,
@@ -37,12 +37,10 @@
      "variant": "lead",
      "byline": "전주성 조간 편집부",
      "paragraphs": [
-      "파울루 벤투 전 한국 대표팀 감독이 전북현대로 온다는 이야기가 한 달째 이어지고 있다. 16일 밤에는 구단 디렉터가 리스본에 갔다는 글이 커뮤니티에 올라왔다. 본문에는 누구를 만났는지 없고, 댓글에 벤투의 이름이 올랐다.",
-      "전북 구단은 감독 교체나 벤투 접촉에 관해 발표한 것이 없다. 17일 새벽 구단 홈페이지 구단뉴스의 최신 글은 8일 강원전 결과다.",
-      "기사로 확인되는 장면은 10월 18일 전주에서 나왔다. 제주 SK의 세르지우 코스타 감독은 전북전을 앞두고 취재진에게 \"그것은 루머라고 알고 있다\"고 말했다. 코스타 감독은 대표팀에서 벤투 감독을 보좌했다. 같은 날 OSEN은 마이클 김 디렉터에게 확인한 결과 최근 포르투갈에 나간 사실이 없는 것으로 알려졌다고 전했다.",
-      "그 뒤에 나온 것은 커뮤니티 글이다. 13일 루리웹에는 전북이 연봉 20억 원 이상을 제시했다는 글이, 16일 에펨코리아에는 디렉터의 리스본행 글이 올라왔다. 두 글 모두 축구 방송에서 들은 내용이라고 적었다. 조간은 이를 뒷받침하는 기사를 찾지 못했다.",
-      "정정용 감독의 거취를 다룬 기사는 있다. 스포츠경향은 13일 \"아직 공식 발표는 없으나 올해 부임한 정정용 감독이 떠날 것이라는 소문이 팽배하다\"고 썼다. 이 기사에 벤투 감독의 이름은 없다.",
-      "전북은 21일 홈에서 서울을 만난다. 리그는 세 경기가 남았다. 조간은 구단 발표나 새 보도가 나오면 다시 전한다."
+      "전북현대가 K리그1 최근 8경기에서 1승 4무 3패를 기록했다. 이 기간 얻은 승점은 7점이다. 11골을 넣고 13골을 내줬다.",
+      "35경기를 치른 전북은 12승 13무 10패, 승점 49로 5위다. 4위 강원(51)과는 2점 차다. 6위 인천과는 승점이 같고 골득실에서 2골 앞선다.",
+      "전북의 다음 리그 경기는 21일이다. 8일 강원 원정 이후 13일 만이다. 전북은 21일 홈에서 선두 서울을 만나고, 29일 울산 원정을 거쳐 12월 6일 홈에서 인천과 시즌을 마친다.",
+      "무승부 13번은 김천(20번), 강원(15번) 다음으로 많다. 안양도 13번 비겼다. 최근 8경기의 무승부 4번 가운데 2번만 이겼어도 승점은 53이 된다. 지금 3위 대전의 승점이다."
      ],
      "rule_top": false,
      "kicker": null,
@@ -77,8 +75,8 @@
      "title": "오늘의 숫자",
      "items": [
       {
-       "value": "2건",
-       "label": "10월 18일 기사에 나온 부인 (코스타 감독, 디렉터)",
+       "value": "1승",
+       "label": "최근 리그 8경기 승리",
        "tag": null,
        "title": null,
        "text": null,
@@ -88,8 +86,8 @@
        "source_url": null
       },
       {
-       "value": "2건",
-       "label": "11월 커뮤니티 글 (연봉 제시설, 리스본행)",
+       "value": "7",
+       "label": "최근 8경기 승점 (24점 가운데)",
        "tag": null,
        "title": null,
        "text": null,
@@ -99,8 +97,8 @@
        "source_url": null
       },
       {
-       "value": "57경기",
-       "label": "벤투의 한국 대표팀 전적 35승 13무 9패",
+       "value": "13",
+       "label": "시즌 무승부 (김천·강원 다음)",
        "tag": null,
        "title": null,
        "text": null,
@@ -134,310 +132,16 @@
    ]
   },
   {
-   "tab": "벤투 특집",
-   "teaser": "부임설 경과, 확인 여부 판정, 벤투는 누구인가",
-   "folio": "특집 · 벤투 부임설",
-   "blocks": [
-    {
-     "type": "timeline",
-     "span": 7,
-     "kicker": "경과",
-     "title": "기사로 확인되는 일들",
-     "items": [
-      {
-       "date": "2024년 8월 8일",
-       "title": "전북, 마이클 김 테크니컬 디렉터 선임",
-       "text": "2018년 벤투 감독의 대표팀에 코치로 합류해 2022 카타르 월드컵을 치른 인물이다",
-       "source_name": "이투데이",
-       "source_url": "https://www.etoday.co.kr/news/view/2388945",
-       "tag": null,
-       "label": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "date": "2025년 3월 26일",
-       "title": "UAE, 벤투 감독 경질 발표",
-       "text": "2023년 7월 UAE와 3년 계약을 맺었던 벤투 감독이 월드컵 3차 예선 북한전 2-1 승리 직후 물러났다",
-       "source_name": "데일리안",
-       "source_url": "https://www.dailian.co.kr/news/view/1477497/",
-       "tag": null,
-       "label": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "date": "2025년 12월 24일",
-       "title": "전북, 정정용 감독 선임 발표",
-       "text": "제10대 사령탑이다. 취임 기자회견은 2026년 1월 6일 전주월드컵경기장에서 했다",
-       "source_name": "스타뉴스",
-       "source_url": "https://www.starnewskorea.com/sports/2026/01/06/2026010615473324814",
-       "tag": null,
-       "label": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "date": "10월 18일",
-       "title": "코스타 감독 \"루머라고 알고 있다\"",
-       "text": "전주월드컵경기장 전북전을 앞두고 취재진에게 한 말. \"벤투 감독은 미국에서 가족들과 좋은 시간을 보내고 있다는 얘기를 들었다\"고 했다",
-       "state": "hot",
-       "source_name": "스포티비뉴스",
-       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
-       "tag": null,
-       "label": null,
-       "value": null
-      },
-      {
-       "date": "10월 18일",
-       "title": "디렉터 포르투갈행 소문에 \"출국 사실 없다\"",
-       "text": "마이클 김 디렉터가 포르투갈에서 벤투를 만났다는 소문에 대해, 본인에게 확인한 결과 최근 출국 사실이 없는 것으로 알려졌다고 보도했다",
-       "state": "hot",
-       "source_name": "OSEN",
-       "source_url": "https://www.osen.co.kr/article/G1112894488",
-       "tag": null,
-       "label": null,
-       "value": null
-      },
-      {
-       "date": "11월 13일",
-       "title": "\"정정용 감독 떠난다는 소문 팽배\"",
-       "text": "공식 발표는 없다고 함께 적었다. 벤투 감독의 이름은 기사에 없다",
-       "source_name": "스포츠경향",
-       "source_url": "https://sports.khan.co.kr/article/202611130800006",
-       "tag": null,
-       "label": null,
-       "state": null,
-       "value": null
-      }
-     ],
-     "rule_top": false,
-     "variant": null,
-     "dek": null,
-     "byline": null,
-     "paragraphs": null,
-     "image": null,
-     "caption": null,
-     "big": null,
-     "chart": null
-    },
-    {
-     "type": "list",
-     "span": 5,
-     "kicker": "커뮤니티",
-     "title": "기사 없이 도는 이야기",
-     "items": [
-      {
-       "tag": "설",
-       "title": "연봉 20억 원 이상 제시",
-       "text": "13일 글. 방송에서 들은 내용이라며, 협상이 성사됐는지 결렬됐는지는 알 수 없다고 적었다",
-       "source_name": "루리웹",
-       "source_url": "https://bbs.ruliweb.com/userboard/board/700155/read/55268",
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "tag": "설",
-       "title": "디렉터 리스본행·감독 미팅",
-       "text": "16일 저녁 글. 방송 내용을 옮겼다고 했다. 누구를 만났는지는 본문에 없다",
-       "source_name": "에펨코리아",
-       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10563082070",
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "tag": "설",
-       "title": "감독 협상이 이어지고 있다",
-       "text": "출처 없이 '아는 바로는'이라고 적은 글이다",
-       "source_name": "에펨코리아",
-       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10563579707",
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      }
-     ],
-     "rule_top": false,
-     "variant": null,
-     "dek": null,
-     "byline": null,
-     "paragraphs": null,
-     "image": null,
-     "caption": null,
-     "big": null,
-     "chart": null
-    },
-    {
-     "type": "signal",
-     "span": 12,
-     "rule_top": true,
-     "title": "지금 어디까지 확인됐나",
-     "big": "판정 · 확인된 접촉은 없고, 감독 거취는 발표 전",
-     "items": [
-      {
-       "state": "no",
-       "title": "구단 발표",
-       "text": "감독 교체, 벤투 접촉 모두 발표가 없다",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "source_name": null,
-       "source_url": null,
-       "value": null
-      },
-      {
-       "state": "no",
-       "title": "디렉터의 포르투갈행",
-       "text": "10월 18일 보도는 '출국 사실 없음'. 11월 리스본행 글은 기사가 없다",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "source_name": null,
-       "source_url": null,
-       "value": null
-      },
-      {
-       "state": "maybe",
-       "title": "정정용 감독 거취",
-       "text": "떠난다는 소문이 팽배하다는 13일 보도가 있다. 발표는 없다",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "source_name": null,
-       "source_url": null,
-       "value": null
-      },
-      {
-       "state": "maybe",
-       "title": "벤투 감독의 상황",
-       "text": "10월 18일 보도 기준 소속팀이 없다. 미국에서 가족과 지낸다는 코스타 감독의 전언이 있다",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "source_name": null,
-       "source_url": null,
-       "value": null
-      }
-     ],
-     "variant": null,
-     "kicker": null,
-     "dek": null,
-     "byline": null,
-     "paragraphs": null,
-     "image": null,
-     "caption": null,
-     "chart": null
-    },
-    {
-     "type": "article",
-     "span": 7,
-     "rule_top": true,
-     "kicker": "인물",
-     "title": "벤투 감독, 대표팀에서 4년 4개월",
-     "paragraphs": [
-      "벤투 감독은 2018년부터 2022년 카타르 월드컵까지 약 4년 4개월 동안 한국 대표팀을 맡았다. 전적은 35승 13무 9패, 승률 61.4%다.",
-      "2023년 7월에는 UAE 대표팀과 3년 계약을 맺었고, 2025년 3월 26일 UAE 축구협회가 경질을 발표했다. 10월 18일 OSEN 보도 기준으로 소속팀이 없다.",
-      "전북과 이어지는 고리는 사람이다. 전북의 테크니컬 디렉터 마이클 김은 벤투 감독의 대표팀에서 코치로 일했다. 제주 SK의 코스타 감독도 대표팀에서 벤투 감독을 보좌했다.",
-      "전북은 단장, 테크니컬 디렉터, 감독이 일을 나누는 구조다. 스포츠경향은 13일 이 분업 체계를 다시 따져 볼 때라고 짚었다."
-     ],
-     "variant": null,
-     "dek": null,
-     "byline": null,
-     "image": null,
-     "caption": null,
-     "big": null,
-     "chart": null,
-     "items": null
-    },
-    {
-     "type": "photo",
-     "span": 5,
-     "rule_top": true,
-     "image": "commons:정정용:260411",
-     "caption": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 정정용 감독",
-     "variant": null,
-     "kicker": null,
-     "title": null,
-     "dek": null,
-     "byline": null,
-     "paragraphs": null,
-     "big": null,
-     "chart": null,
-     "items": null
-    },
-    {
-     "type": "quote",
-     "span": 12,
-     "rule_top": true,
-     "title": "벤투 감독은 어디에 가도 차이를 만들 수 있는 인물이다",
-     "byline": "세르지우 코스타 제주 SK 감독, 10월 18일 전주월드컵경기장 (스포티비뉴스)",
-     "variant": null,
-     "kicker": null,
-     "dek": null,
-     "paragraphs": null,
-     "image": null,
-     "caption": null,
-     "big": null,
-     "chart": null,
-     "items": null
-    },
-    {
-     "type": "box",
-     "span": 12,
-     "rule_top": true,
-     "variant": "lime",
-     "kicker": "읽는 법",
-     "title": "조간은 이렇게 갈랐습니다",
-     "paragraphs": [
-      "기사 원문을 열어 확인한 내용만 '경과'에 넣었습니다. 커뮤니티 글과 방송 전언은 '설'로 따로 묶었습니다.",
-      "커뮤니티 글이 출처로 든 방송은 조간이 직접 확인하지 못했습니다. 그래서 방송 이름과 출연자 이름은 싣지 않았습니다."
-     ],
-     "dek": null,
-     "byline": null,
-     "image": null,
-     "caption": null,
-     "big": null,
-     "chart": null,
-     "items": null
-    }
-   ]
-  },
-  {
    "tab": "기록실",
    "teaser": "8경기 11득점 13실점, 숫자로 본 가을의 전북",
    "folio": "기록실 · 최근 8경기",
    "blocks": [
     {
-     "type": "article",
-     "span": 12,
-     "kicker": "리그",
-     "title": "최근 리그 8경기 1승 4무 3패",
-     "byline": "전주성 조간 편집부",
-     "paragraphs": [
-      "전북현대가 K리그1 최근 8경기에서 1승 4무 3패를 기록했다. 이 기간 얻은 승점은 7점이다. 11골을 넣고 13골을 내줬다.",
-      "35경기를 치른 전북은 12승 13무 10패, 승점 49로 5위다. 4위 강원(51)과는 2점 차다. 6위 인천과는 승점이 같고 골득실에서 2골 앞선다.",
-      "전북의 다음 리그 경기는 21일이다. 8일 강원 원정 이후 13일 만이다. 전북은 21일 홈에서 선두 서울을 만나고, 29일 울산 원정을 거쳐 12월 6일 홈에서 인천과 시즌을 마친다.",
-      "무승부 13번은 김천(20번), 강원(15번) 다음으로 많다. 안양도 13번 비겼다. 최근 8경기의 무승부 4번 가운데 2번만 이겼어도 승점은 53이 된다. 지금 3위 대전의 승점이다."
-     ],
-     "rule_top": false,
-     "variant": null,
-     "dek": null,
-     "image": null,
-     "caption": null,
-     "big": null,
-     "chart": null,
-     "items": null
-    },
-    {
      "type": "chart",
      "span": 7,
      "title": "최근 리그 8경기",
      "chart": "form",
-     "rule_top": true,
+     "rule_top": false,
      "variant": null,
      "kicker": null,
      "dek": null,
@@ -851,13 +555,24 @@
      "items": [
       {
        "tag": "설",
-       "title": "벤투 부임설",
-       "text": "2면 특집에 경과와 판정을 따로 정리했다",
+       "title": "디렉터 리스본행·감독 미팅설 글",
+       "text": "16일 저녁 커뮤니티에 구단 디렉터가 리스본에 갔다는 방송 내용을 옮긴 글이 올라왔다. 이를 뒷받침하는 기사는 찾지 못했다",
+       "source_name": "에펨코리아",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10563082070",
        "label": null,
        "date": null,
        "state": null,
-       "source_name": null,
-       "source_url": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "감독 협상이 이어지고 있다는 글",
+       "text": "출처 없이 '아는 바로는'이라고 적은 글이다",
+       "source_name": "에펨코리아",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10563579707",
+       "label": null,
+       "date": null,
+       "state": null,
        "value": null
       },
       {
@@ -899,7 +614,7 @@
      "title": "커뮤니티 온도",
      "items": [
       {
-       "text": "벤투 감독 이야기를 다룬 글이 16일 밤에도 여러 개 올라왔다",
+       "text": "다음 시즌 감독 이야기를 다룬 글이 16일 밤에도 여러 개 올라왔다",
        "label": "감독",
        "tag": null,
        "title": null,
@@ -1024,106 +739,7 @@
        "value": null
       },
       {
-       "title": "구단 발표 여부",
-       "text": "전북현대 홈페이지 구단뉴스·공지사항 (17일 새벽 확인)",
-       "source_name": "전북현대 홈페이지 구단뉴스",
-       "source_url": "https://hyundai-motorsfc.com/media/news",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "코스타 감독 발언",
-       "text": "스포티비뉴스 10월 18일",
-       "source_name": "스포티비뉴스",
-       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "디렉터 출국 확인, 벤투 대표팀 전적",
-       "text": "OSEN 10월 18일",
-       "source_name": "OSEN",
-       "source_url": "https://www.osen.co.kr/article/G1112894488",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "정정용 감독 거취 소문",
-       "text": "스포츠경향 11월 13일",
-       "source_name": "스포츠경향",
-       "source_url": "https://sports.khan.co.kr/article/202611130800006",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "전북 분업 체계",
-       "text": "스포츠경향 11월 13일",
-       "source_name": "스포츠경향",
-       "source_url": "https://sports.khan.co.kr/article/202611130700006",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "마이클 김 디렉터 선임과 경력",
-       "text": "이투데이 2024년 8월 8일",
-       "source_name": "이투데이",
-       "source_url": "https://www.etoday.co.kr/news/view/2388945",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "벤투 UAE 경질",
-       "text": "데일리안 2025년 3월",
-       "source_name": "데일리안",
-       "source_url": "https://www.dailian.co.kr/news/view/1477497/",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "정정용 감독 선임",
-       "text": "스타뉴스 2026년 1월 6일",
-       "source_name": "스타뉴스",
-       "source_url": "https://www.starnewskorea.com/sports/2026/01/06/2026010615473324814",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "연봉 제시설 글",
-       "text": "루리웹 K리그 게시판",
-       "source_name": "루리웹",
-       "source_url": "https://bbs.ruliweb.com/userboard/board/700155/read/55268",
-       "tag": null,
-       "label": null,
-       "date": null,
-       "state": null,
-       "value": null
-      },
-      {
-       "title": "리스본행 글",
+       "title": "감독 미팅설 글",
        "text": "에펨코리아 국내축구 루머",
        "source_name": "에펨코리아",
        "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10563082070",
@@ -1134,7 +750,7 @@
        "value": null
       },
       {
-       "title": "협상설 글",
+       "title": "감독 협상설 글",
        "text": "에펨코리아 국내축구 루머",
        "source_name": "에펨코리아",
        "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10563579707",

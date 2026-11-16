@@ -3,28 +3,28 @@
  "date": "2026-11-17",
  "rows": [
   {
-   "id": "88efbf0db7",
+   "id": "a562b8a1f2",
    "where": "1면 제목(headline)",
    "kind": "제목",
    "risk": [],
-   "text": "벤투 전북 부임설 한 달, 확인된 것과 확인되지 않은 것",
-   "grade": "보도",
-   "source_name": "스포티비뉴스 2026-10-18",
-   "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
+   "text": "최근 리그 8경기 1승 4무 3패, 남은 세 경기는 서울·울산·인천",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
    "verdict": "일치",
-   "memo": "10월 18일 기사에 '최근 전북과 접촉설이 불거졌다'. 오늘까지 약 한 달"
+   "memo": "data.form 8경기 D,L,D,L,W,D,D,L=1승4무3패, data.upcoming_league 36R 서울·37R 울산·38R 인천"
   },
   {
-   "id": "f46178b720",
+   "id": "d7656e1f3d",
    "where": "요약(summary)",
    "kind": "제목",
    "risk": [],
-   "text": "10월 접촉설에서 16일 밤 '디렉터 리스본행' 글까지. 구단 발표는 없고, 기사로 확인되는 것은 10월 18일의 부인 두 건이다",
-   "grade": "공식",
-   "source_name": "전북현대 홈페이지 구단뉴스",
-   "source_url": "https://hyundai-motorsfc.com/media/news",
+   "text": "휴식기 마지막 주, 전북은 5위·승점 49로 21일 홈 서울전부터 리그 마지막 세 경기에 들어간다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
    "verdict": "일치",
-   "memo": "구단뉴스 최신 글 11월 8일 강원전, 공지사항 최신 10월 30일. 감독 발표 없음. 부인 두 건은 스포티비뉴스(코스타), OSEN(디렉터 출국 없음) 원문 확인. 리스본행 글은 에펨코리아 11월 16일 20:28"
+   "memo": "data.jeonbuk rank5 pts49, data.next 2026-11-21 홈 서울, upcoming_league 3경기; 8일 이후 21일까지 리그 경기 없음(data.last/next)"
   },
   {
    "id": "6f69fcc855",
@@ -51,44 +51,44 @@
    "memo": "data.next date 2026-11-21(토) is_home true opp 서울 d_minus 4"
   },
   {
-   "id": "9afa9b6b4c",
+   "id": "b146acc858",
    "where": "띠(strip)",
    "kind": "제목",
    "risk": [],
-   "text": "특집 · 벤투 부임설 한 달",
-   "grade": "보도",
-   "source_name": "스포티비뉴스 2026-10-18",
-   "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
+   "text": "남은 리그 3경기 · 서울 · 울산 · 인천",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
    "verdict": "일치",
-   "memo": "접촉설 시점 10월 중순"
+   "memo": "data.upcoming_league: 11-21 전북-서울, 11-29 울산-전북, 12-06 전북-인천"
   },
   {
-   "id": "905e66a2a5",
-   "where": "1면 hero '벤투 전북 부임설 한 달,' 사진 설명",
+   "id": "136b7a468f",
+   "where": "1면 hero '최근 리그 8경기 1승 4' 사진 설명",
    "kind": "사진설명",
    "risk": [],
-   "text": "자료 사진 · 2019년 아시안컵에서 한국 대표팀을 지휘하는 파울루 벤투 감독",
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 정정용 감독",
    "ref": {
-    "image": "bento",
-    "desc": "파울루 벤투 감독 상반신. 세로에 가까움"
+    "image": "commons:정정용:260411",
+    "desc": "정정용 경기 사진. 2026.04.11 FC 서울 vs 전북"
    },
    "grade": "사진정보",
-   "source_name": "Wikimedia Commons",
-   "source_url": "https://commons.wikimedia.org/wiki/File:Paulo_Bento_managing_South_Korea_at_2019_AFC_Asian_Cup.jpg",
+   "source_name": "newspaper/img/library.json",
+   "source_url": "",
    "verdict": "일치",
-   "memo": "파일 제목과 설명 일치"
+   "memo": "commons:정정용:260411 desc '정정용 경기 사진. 2026.04.11 FC 서울 vs 전북'"
   },
   {
-   "id": "948d2eba0e",
-   "where": "1면 hero '벤투 전북 부임설 한 달,'",
+   "id": "4942ee5b6a",
+   "where": "1면 hero '최근 리그 8경기 1승 4'",
    "kind": "제목",
    "risk": [],
-   "text": "벤투 전북 부임설 한 달, 확인된 것과 확인되지 않은 것 / 전북 구단은 감독 교체도 벤투 접촉도 발표하지 않았다. 기사와 커뮤니티 글을 날짜순으로 갈랐다",
-   "grade": "공식",
-   "source_name": "전북현대 홈페이지 구단뉴스",
-   "source_url": "https://hyundai-motorsfc.com/media/news",
+   "text": "최근 리그 8경기 1승 4무 3패, 남은 세 경기는 서울·울산·인천 / 8경기에서 승점 7. 5위 전북은 4위 강원에 2점 뒤지고, 6위 인천과는 승점이 같다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
    "verdict": "일치",
-   "memo": "구단뉴스·공지사항에 감독 교체나 접촉 발표 없음(17일 새벽 열람)"
+   "memo": "form 승점 3+4=7; standings 강원 51(4위), 전북 49(5위), 인천 49(6위)"
   },
   {
    "id": "65523ded97",
@@ -105,138 +105,8 @@
    "memo": "data.next 2026-11-21 홈 서울 d_minus 4"
   },
   {
-   "id": "6f9be2a298",
-   "where": "2면 timeline '기사로 확인되는 일들'",
-   "kind": "경과",
-   "risk": [],
-   "text": "2024년 8월 8일 전북, 마이클 김 테크니컬 디렉터 선임 · 2018년 벤투 감독의 대표팀에 코치로 합류해 2022 카타르 월드컵을 치른 인물이다",
-   "ref": {
-    "source_name": "이투데이",
-    "source_url": "https://www.etoday.co.kr/news/view/2388945"
-   },
-   "grade": "보도",
-   "source_name": "이투데이 2024-08-08",
-   "source_url": "https://www.etoday.co.kr/news/view/2388945",
-   "verdict": "일치",
-   "memo": "'2018년 파울루 벤투 전 감독이 이끌던 축구 국가대표팀에 코치로 합류해 2022 카타르 월드컵'"
-  },
-  {
-   "id": "701157a360",
-   "where": "2면 timeline '기사로 확인되는 일들'",
-   "kind": "경과",
-   "risk": [
-    "소속·경력"
-   ],
-   "text": "2025년 3월 26일 UAE, 벤투 감독 경질 발표 · 2023년 7월 UAE와 3년 계약을 맺었던 벤투 감독이 월드컵 3차 예선 북한전 2-1 승리 직후 물러났다",
-   "ref": {
-    "source_name": "데일리안",
-    "source_url": "https://www.dailian.co.kr/news/view/1477497/"
-   },
-   "grade": "보도",
-   "source_name": "데일리안",
-   "source_url": "https://www.dailian.co.kr/news/view/1477497/",
-   "verdict": "일치",
-   "memo": "'2023년 7월 UAE와 3년 계약', 26일 경질 발표, 전날 북한전 2-1 승"
-  },
-  {
-   "id": "37ac2de732",
-   "where": "2면 timeline '기사로 확인되는 일들'",
-   "kind": "경과",
-   "risk": [
-    "일정·장소"
-   ],
-   "text": "2025년 12월 24일 전북, 정정용 감독 선임 발표 · 제10대 사령탑이다. 취임 기자회견은 2026년 1월 6일 전주월드컵경기장에서 했다",
-   "ref": {
-    "source_name": "스타뉴스",
-    "source_url": "https://www.starnewskorea.com/sports/2026/01/06/2026010615473324814"
-   },
-   "grade": "보도",
-   "source_name": "스타뉴스 2026-01-06",
-   "source_url": "https://www.starnewskorea.com/sports/2026/01/06/2026010615473324814",
-   "verdict": "일치",
-   "memo": "'지난달 24일 제10대 사령탑으로', '6일 전주월드컵경기장에서 열린 취임 기자회견'"
-  },
-  {
-   "id": "35f3d073b3",
-   "where": "2면 timeline '기사로 확인되는 일들'",
-   "kind": "경과",
-   "risk": [],
-   "text": "10월 18일 코스타 감독 \"루머라고 알고 있다\" · 전주월드컵경기장 전북전을 앞두고 취재진에게 한 말. \"벤투 감독은 미국에서 가족들과 좋은 시간을 보내고 있다는 얘기를 들었다\"고 했다",
-   "ref": {
-    "source_name": "스포티비뉴스",
-    "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805"
-   },
-   "grade": "보도",
-   "source_name": "스포티비뉴스 2026-10-18",
-   "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
-   "verdict": "일치",
-   "memo": "발언 원문 두 문장 일치. 32라운드 전북전 경기 전 인터뷰"
-  },
-  {
-   "id": "d3a797b702",
-   "where": "2면 timeline '기사로 확인되는 일들'",
-   "kind": "경과",
-   "risk": [],
-   "text": "10월 18일 디렉터 포르투갈행 소문에 \"출국 사실 없다\" · 마이클 김 디렉터가 포르투갈에서 벤투를 만났다는 소문에 대해, 본인에게 확인한 결과 최근 출국 사실이 없는 것으로 알려졌다고 보도했다",
-   "ref": {
-    "source_name": "OSEN",
-    "source_url": "https://www.osen.co.kr/article/G1112894488"
-   },
-   "grade": "보도",
-   "source_name": "OSEN 2026-10-18",
-   "source_url": "https://www.osen.co.kr/article/G1112894488",
-   "verdict": "일치",
-   "memo": "'마이클 김 디렉터에게 확인한 결과 최근 포르투갈 출국 사실은 없는 것으로 알려졌다'"
-  },
-  {
-   "id": "b695c206a0",
-   "where": "2면 timeline '기사로 확인되는 일들'",
-   "kind": "경과",
-   "risk": [],
-   "text": "11월 13일 \"정정용 감독 떠난다는 소문 팽배\" · 공식 발표는 없다고 함께 적었다. 벤투 감독의 이름은 기사에 없다",
-   "ref": {
-    "source_name": "스포츠경향",
-    "source_url": "https://sports.khan.co.kr/article/202611130800006"
-   },
-   "grade": "보도",
-   "source_name": "스포츠경향 2026-11-13",
-   "source_url": "https://sports.khan.co.kr/article/202611130800006",
-   "verdict": "일치",
-   "memo": "'아직 공식 발표는 없으나 ... 떠날 것이라는 소문이 팽배하다'. 벤투 언급 없음 확인"
-  },
-  {
-   "id": "c10ce3154a",
-   "where": "2면 article '벤투 감독, 대표팀에서 4'",
-   "kind": "본문",
-   "risk": [
-    "소속·경력"
-   ],
-   "text": "2023년 7월에는 UAE 대표팀과 3년 계약을 맺었고, 2025년 3월 26일 UAE 축구협회가 경질을 발표했다.",
-   "grade": "보도",
-   "source_name": "데일리안",
-   "source_url": "https://www.dailian.co.kr/news/view/1477497/",
-   "verdict": "일치",
-   "memo": "2023년 7월 3년 계약, 2025년 3월 26일 UAE 축구협회 발표"
-  },
-  {
-   "id": "136b7a468f",
-   "where": "2면 photo 사진 설명",
-   "kind": "사진설명",
-   "risk": [],
-   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 정정용 감독",
-   "ref": {
-    "image": "commons:정정용:260411",
-    "desc": "정정용 경기 사진. 2026.04.11 FC 서울 vs 전북"
-   },
-   "grade": "사진정보",
-   "source_name": "newspaper/img/library.json",
-   "source_url": "",
-   "verdict": "일치",
-   "memo": "commons:정정용:260411 desc '정정용 경기 사진. 2026.04.11 FC 서울 vs 전북'"
-  },
-  {
    "id": "9acbb0b59c",
-   "where": "3면 cutout 사진 설명",
+   "where": "2면 cutout 사진 설명",
    "kind": "사진설명",
    "risk": [],
    "text": "콤파뇨 · 8일 강원전 득점",
@@ -252,7 +122,7 @@
   },
   {
    "id": "3954b4af45",
-   "where": "3면 photo 사진 설명",
+   "where": "2면 photo 사진 설명",
    "kind": "사진설명",
    "risk": [],
    "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 이동준. 이동준은 8일 강원전 후반 41분 골을 넣었다",
@@ -268,7 +138,7 @@
   },
   {
    "id": "0dac7ab40f",
-   "where": "3면 article '8경기 중 7경기에서 실점'",
+   "where": "2면 article '8경기 중 7경기에서 실점'",
    "kind": "본문",
    "risk": [
     "기록·처음"
@@ -282,7 +152,7 @@
   },
   {
    "id": "1ed1fc7b7e",
-   "where": "4면 photo 사진 설명",
+   "where": "3면 photo 사진 설명",
    "kind": "사진설명",
    "risk": [],
    "text": "자료 사진 · 2026년 9월 12일 전북-FC 서울 경기의 송범근",
@@ -298,7 +168,7 @@
   },
   {
    "id": "43121feecd",
-   "where": "4면 article '13일의 쉼표, 그다음 세'",
+   "where": "3면 article '13일의 쉼표, 그다음 세'",
    "kind": "본문",
    "risk": [
     "일정·장소"
@@ -312,7 +182,7 @@
   },
   {
    "id": "eafcae75d9",
-   "where": "4면 article '13일의 쉼표, 그다음 세'",
+   "where": "3면 article '13일의 쉼표, 그다음 세'",
    "kind": "본문",
    "risk": [
     "기록·처음"
