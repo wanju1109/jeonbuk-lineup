@@ -1,0 +1,140 @@
+{
+ "no": 27,
+ "date": "2026-11-18",
+ "rows": [
+  {
+   "id": "97d121df9c",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "남은 리그 3경기 최대 승점 58, 산술상 2위까지 열려 있다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털(ctx data)",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "standings 전북 p35 pts49 → 최대 58. 울산 57·대전 53·강원 51은 58 이하로 끝날 수 있어 2위 가능, 서울 67은 불가. 계산 확인"
+  },
+  {
+   "id": "9c92c281f4",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [],
+   "text": "5위 전북(승점 49)이 21일 서울전부터 세 경기를 모두 이기면 58점, 지금 2위 울산(57)보다 1점 많다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털(ctx data)",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "standings 전북 5위 49, 울산 2위 57, next 2026-11-21 서울 홈"
+  },
+  {
+   "id": "6f69fcc855",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "K리그1 5위 · 승점 49",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털(ctx data)",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "data.jeonbuk rank 5 pts 49"
+  },
+  {
+   "id": "2347a0acd5",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "다음 경기 D-3 · 21일(토) 서울 홈",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털(ctx data)",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "data.next date 2026-11-21(토) d_minus 3, home 전북 away 서울, is_home true"
+  },
+  {
+   "id": "b9c5a9629f",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "남은 3경기 · 최대 승점 58",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털(ctx data)",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "49 + 3경기×3 = 58, upcoming_league 3경기"
+  },
+  {
+   "id": "5b89532e2c",
+   "where": "1면 hero '남은 리그 3경기 최대 승' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 전주월드컵경기장 내부 전경",
+   "ref": {
+    "image": "commons:전주월드컵경기장:13",
+    "desc": "전주월드컵경기장: 전주월드컵경기장 내부 전경"
+   },
+   "grade": "사진정보",
+   "source_name": "newspaper/img/library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "library.json commons:전주월드컵경기장:13 desc '전주월드컵경기장 내부 전경'"
+  },
+  {
+   "id": "40748e0589",
+   "where": "1면 hero '남은 리그 3경기 최대 승'",
+   "kind": "제목",
+   "risk": [],
+   "text": "남은 리그 3경기 최대 승점 58, 산술상 2위까지 열려 있다 / 세 경기를 모두 이기면 지금 2위 울산의 승점 57보다 1점 많다. 1위 서울 67점에는 닿지 않는다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털(ctx data)",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "standings 서울 67·울산 57, 전북 최대 58"
+  },
+  {
+   "id": "0ffba249e0",
+   "where": "1면 figs '오늘의 숫자'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "21일(토) 서울과 홈경기 · D-3",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털(ctx data)",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "data.next 2026-11-21 토, 전북 홈, 서울 원정, d_minus 3"
+  },
+  {
+   "id": "b6b0b2157e",
+   "where": "2면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 이승우",
+   "ref": {
+    "image": "commons:이승우:260411",
+    "desc": "이승우 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "newspaper/img/library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "library.json commons:이승우:260411 desc '이승우 경기 사진. 2026.04.11 FC 서울 vs 전북'"
+  },
+  {
+   "id": "28c74d2e3a",
+   "where": "3면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 9월 12일 전북-FC 서울 경기의 이탈로",
+   "ref": {
+    "image": "commons:Italo:260912",
+    "desc": "Italo 경기 사진. 2026.09.12 전북 vs FC 서울"
+   },
+   "grade": "사진정보",
+   "source_name": "newspaper/img/library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "library.json commons:Italo:260912 desc 'Italo 경기 사진. 2026.09.12 전북 vs FC 서울', people 이탈로"
+  }
+ ]
+}
