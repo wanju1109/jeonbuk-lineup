@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-11-17T09:44:47+09:00",
+  "generated_at": "2026-11-18T08:48:49+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
@@ -173,7 +173,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 9,
+        "rank": 8,
         "points": 1,
         "played": 1,
         "gd": 0
