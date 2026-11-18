@@ -1,0 +1,140 @@
+{
+ "no": 28,
+ "date": "2026-11-19",
+ "rows": [
+  {
+   "id": "66ba947e45",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "35경기 13무, 전북은 파이널A에서 두 번째로 많이 비겼다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "data.standings (35라운드까지): 파이널A 무승부 강원15>전북13>대전11>인천10>서울7>울산6, 패 서울·강원8<전북·대전10, 승 전북·강원12 최소, 전북 12-13-10 승점49"
+  },
+  {
+   "id": "a7ef3f3e86",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북은 12승 13무 10패로 승점 49, 무승부는 파이널A 여섯 팀 가운데 강원(15) 다음으로 많다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "data.standings (35라운드까지): 파이널A 무승부 강원15>전북13>대전11>인천10>서울7>울산6, 패 서울·강원8<전북·대전10, 승 전북·강원12 최소, 전북 12-13-10 승점49"
+  },
+  {
+   "id": "6f69fcc855",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "K리그1 5위 · 승점 49",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.jeonbuk rank 5, pts 49"
+  },
+  {
+   "id": "0a599a1257",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "12승 13무 10패",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.jeonbuk w12 d13 l10"
+  },
+  {
+   "id": "95646401b8",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "다음 경기 D-2 · 21일(토) 서울 홈",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.next: 2026-11-21(토) 전북 홈 vs 서울, d_minus 2"
+  },
+  {
+   "id": "3d0cf11d31",
+   "where": "1면 hero '35경기 13무, 전북은 ' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 김영빈",
+   "ref": {
+    "image": "commons:김영빈:260411",
+    "desc": "김영빈 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "library.json desc: 김영빈 경기 사진. 2026.04.11 FC 서울 vs 전북 와 날짜·경기·선수 대조"
+  },
+  {
+   "id": "7ea552a6e7",
+   "where": "1면 hero '35경기 13무, 전북은 '",
+   "kind": "제목",
+   "risk": [],
+   "text": "35경기 13무, 전북은 파이널A에서 두 번째로 많이 비겼다 / 12승 13무 10패. 패배 10번은 파이널A에서 대전과 함께 세 번째로 적고, 승리 12번은 강원과 함께 가장 적다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "data.standings (35라운드까지): 파이널A 무승부 강원15>전북13>대전11>인천10>서울7>울산6, 패 서울·강원8<전북·대전10, 승 전북·강원12 최소, 전북 12-13-10 승점49"
+  },
+  {
+   "id": "e118a7c64c",
+   "where": "1면 figs '오늘의 숫자'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "21일(토) 서울과 홈경기 · D-2",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.next: 2026-11-21(토) 전북 홈 vs 서울, d_minus 2"
+  },
+  {
+   "id": "0885fdecef",
+   "where": "2면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 조위제",
+   "ref": {
+    "image": "commons:조위제:260411",
+    "desc": "조위제 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "library.json desc: 조위제 경기 사진. 2026.04.11 FC 서울 vs 전북 와 날짜·경기·선수 대조"
+  },
+  {
+   "id": "02653750f9",
+   "where": "3면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 최우진",
+   "ref": {
+    "image": "commons:최우진:260411-1",
+    "desc": "최우진 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "library.json desc: 최우진 경기 사진. 2026.04.11 FC 서울 vs 전북 와 날짜·경기·선수 대조"
+  }
+ ]
+}
