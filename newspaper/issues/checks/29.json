@@ -1,0 +1,124 @@
+{
+ "no": 29,
+ "date": "2026-11-20",
+ "rows": [
+  {
+   "id": "38d31b734f",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "실점 36, 전북은 K리그1에서 세 번째로 적게 내줬다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.standings ga: 서울32·강원34·전북36, 12팀 중 세 번째로 적음"
+  },
+  {
+   "id": "aac601f12c",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [],
+   "text": "35경기 36실점으로 서울(32)·강원(34) 다음, 득점 45는 리그 4위다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.standings ga 서울32 강원34 전북36, gf 전북45는 서울62·울산56·대전55 다음 4위"
+  },
+  {
+   "id": "6f69fcc855",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "K리그1 5위 · 승점 49",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.jeonbuk rank 5, pts 49"
+  },
+  {
+   "id": "3a52642039",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "35경기 45득점 36실점",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.jeonbuk gf 45, ga 36, p 35"
+  },
+  {
+   "id": "624e3c5dbc",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "다음 경기 D-1 · 21일(토) 서울 홈",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.next date 2026-11-21, when_label 11월 21일(토), is_home true, opp 서울, d_minus 1"
+  },
+  {
+   "id": "1ed1fc7b7e",
+   "where": "1면 hero '실점 36, 전북은 K리그' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 9월 12일 전북-FC 서울 경기의 송범근",
+   "ref": {
+    "image": "commons:송범근:260912",
+    "desc": "송범근 경기 사진. 2026.09.12 전북 vs FC 서울"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json desc",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "desc: 송범근 경기 사진. 2026.09.12 전북 vs FC 서울"
+  },
+  {
+   "id": "094527edc7",
+   "where": "1면 hero '실점 36, 전북은 K리그'",
+   "kind": "제목",
+   "risk": [],
+   "text": "실점 36, 전북은 K리그1에서 세 번째로 적게 내줬다 / 35경기 36실점, 경기당 1.03골. 서울(32)과 강원(34)만 전북보다 적게 내줬다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.standings 전북 ga36/p35=1.03, 서울32·강원34만 더 적음"
+  },
+  {
+   "id": "42b263d149",
+   "where": "1면 figs '오늘의 숫자'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "21일(토) 서울과 홈경기 · D-1",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx data.next 2026-11-21(토) 전북 홈, 상대 FC 서울, d_minus 1"
+  },
+  {
+   "id": "4e6d6040d3",
+   "where": "2면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2025년 7월 2일 FC 서울-전북 경기의 연제운",
+   "ref": {
+    "image": "commons:연제운:250702",
+    "desc": "연제운 경기 사진. 2025.07.02 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json desc",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "desc: 연제운 경기 사진. 2025.07.02 FC 서울 vs 전북"
+  }
+ ]
+}
