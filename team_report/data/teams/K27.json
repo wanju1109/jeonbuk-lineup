@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k27-sm.png",
   "home_url": "https://www.fc-anyang.com",
   "season": "2026",
-  "generated_at": "2026-11-19T08:20:46+09:00",
+  "generated_at": "2026-11-20T08:29:57+09:00",
   "table": {
     "rank": 8,
     "teams": 12,
@@ -173,7 +173,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 4,
+        "rank": 5,
         "points": 1,
         "played": 1,
         "gd": 0
