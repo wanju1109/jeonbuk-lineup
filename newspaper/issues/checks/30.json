@@ -1,0 +1,230 @@
+{
+ "no": 30,
+ "date": "2026-11-21",
+ "rows": [
+  {
+   "id": "03f2d67207",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "13일 만의 리그 경기, 전북은 오늘 홈에서 1위 서울을 만난다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx last.date 2026-11-08 → next.date 2026-11-21 = 13일, next.is_home true, 서울 rank 1"
+  },
+  {
+   "id": "dfb2786138",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [],
+   "text": "승점 49로 5위인 전북이 우승을 확정한 서울(67점)과 36라운드를 치른다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx 전북 rank5 pts49, 서울 pts67; 울산 57+9=66<67이라 1위 확정(남은 3경기, upcoming_league)"
+  },
+  {
+   "id": "6f69fcc855",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "K리그1 5위 · 승점 49",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx jeonbuk rank 5 pts 49"
+  },
+  {
+   "id": "973b1f7e46",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "오늘 36라운드 · 서울과 홈경기",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx next round 36, date 2026-11-21, home 전북 away 서울"
+  },
+  {
+   "id": "a21ba87773",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "다음 리그 경기 29일 울산 원정",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx upcoming_league 2026-11-29 home 울산 away 전북"
+  },
+  {
+   "id": "afd1bf7c69",
+   "where": "1면 hero '13일 만의 리그 경기, ' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 이동준",
+   "ref": {
+    "image": "commons:이동준:260411",
+    "desc": "이동준 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json desc",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "desc: 이동준 경기 사진. 2026.04.11 FC 서울 vs 전북"
+  },
+  {
+   "id": "85a20cfced",
+   "where": "1면 hero '13일 만의 리그 경기, '",
+   "kind": "제목",
+   "risk": [],
+   "text": "13일 만의 리그 경기, 전북은 오늘 홈에서 1위 서울을 만난다 / 5위 전북(승점 49)과 1위 서울(승점 67). 승점 차는 18점이다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx 전북 5위 49, 서울 1위 67, 차 18; 13일=11/8→11/21"
+  },
+  {
+   "id": "e3faa7b4d0",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "전북 정정용 감독",
+   "ref": {
+    "image": "coach:c01",
+    "desc": "정정용 감독"
+   },
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx photo_catalog coach:c01 정정용 전북 현대 감독"
+  },
+  {
+   "id": "53e95bdf10",
+   "where": "2면 cutout",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "오늘 1위 서울과 홈경기",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx next: 서울 1위, 전북 홈, 오늘 2026-11-21"
+  },
+  {
+   "id": "0dc7a44a09",
+   "where": "2면 article '리그 최다 득점·최소 실점'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "리그 최다 득점·최소 실점 팀을 상대한다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx standings 서울 gf62 최다(울산56), ga32 최소(강원34)"
+  },
+  {
+   "id": "4a7dd0f408",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "FC 서울 김기동 감독",
+   "ref": {
+    "image": "coach:c02",
+    "desc": "김기동 감독"
+   },
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx photo_catalog coach:c02 김기동 FC 서울 감독"
+  },
+  {
+   "id": "f7d5819cfd",
+   "where": "3면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2025년 5월 3일 FC 서울-전북 경기의 김진규",
+   "ref": {
+    "image": "commons:김진규:250503",
+    "desc": "김진규 경기 사진. 2025.05.03 FC 서을 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json desc",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "desc: 김진규 경기 사진. 2025.05.03 FC 서을(서울) vs 전북"
+  },
+  {
+   "id": "cbf6972918",
+   "where": "3면 article '이기면 승점 52, 지금 '",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "오늘 경기 뒤에는 29일 울산 원정, 12월 6일 인천과 홈경기가 남는다.",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx upcoming_league 11-29 울산(홈)-전북, 12-06 전북(홈)-인천"
+  },
+  {
+   "id": "935a7290de",
+   "where": "4면 figs '숫자 놀이 · 1위 서울의'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "득점 (리그 최다) · 62",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx standings 서울 gf 62, 12팀 중 최다"
+  },
+  {
+   "id": "8d97894a8c",
+   "where": "4면 figs '숫자 놀이 · 1위 서울의'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "실점 (리그 최소) · 32",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx standings 서울 ga 32, 12팀 중 최소"
+  },
+  {
+   "id": "02653750f9",
+   "where": "4면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 최우진",
+   "ref": {
+    "image": "commons:최우진:260411-1",
+    "desc": "최우진 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json desc",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "desc: 최우진 경기 사진. 2026.04.11 FC 서울 vs 전북"
+  }
+ ]
+}
