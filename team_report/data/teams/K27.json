@@ -8,25 +8,25 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k27-sm.png",
   "home_url": "https://www.fc-anyang.com",
   "season": "2026",
-  "generated_at": "2026-11-21T08:02:12+09:00",
+  "generated_at": "2026-11-22T07:08:48+09:00",
   "table": {
     "rank": 8,
     "teams": 12,
-    "played": 35,
+    "played": 36,
     "win": 11,
-    "draw": 13,
+    "draw": 14,
     "loss": 11,
-    "gf": 42,
-    "ga": 50,
+    "gf": 43,
+    "ga": 51,
     "gd": -8,
-    "points": 46,
+    "points": 47,
     "ppg": 1.31,
-    "remaining": 8,
+    "remaining": 7,
     "scheduled": 43,
-    "gap_to_leader": 21,
-    "gap_to_cut": 3,
+    "gap_to_leader": 23,
+    "gap_to_cut": 2,
     "cut_rank": 6,
-    "gap_above": 2,
+    "gap_above": 1,
     "gap_below": 2,
     "above": "제주",
     "below": "포항"
@@ -44,15 +44,15 @@
       "ppg": 1.24
     },
     "away": {
-      "played": 18,
+      "played": 19,
       "win": 6,
-      "draw": 7,
+      "draw": 8,
       "loss": 5,
-      "gf": 22,
-      "ga": 21,
+      "gf": 23,
+      "ga": 22,
       "gd": 1,
-      "points": 25,
-      "ppg": 1.39
+      "points": 26,
+      "ppg": 1.37
     }
   },
   "form": {
@@ -91,17 +91,17 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5": [
-      "W",
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last10": [
-      "D",
       "L",
       "L",
       "D",
@@ -110,17 +110,18 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 2,
-      "draw": 2,
+      "win": 1,
+      "draw": 3,
       "loss": 1,
       "gf": 4,
-      "ga": 3,
-      "gd": 1,
-      "points": 8
+      "ga": 4,
+      "gd": 0,
+      "points": 6
     },
     "last10_record": {
       "played": 10,
@@ -133,7 +134,7 @@
       "points": 13
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 6,
@@ -142,11 +143,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.2,
-    "ga_per_game": 1.43,
+    "gf_per_game": 1.19,
+    "ga_per_game": 1.42,
     "clean_sheets": 5,
     "failed_to_score": 8,
-    "both_scored": 24,
+    "both_scored": 25,
     "one_goal_games": 17,
     "biggest_win": {
       "round": 10,
@@ -194,7 +195,7 @@
       },
       {
         "round": 4,
-        "rank": 7,
+        "rank": 6,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -222,7 +223,7 @@
       },
       {
         "round": 8,
-        "rank": 6,
+        "rank": 5,
         "points": 10,
         "played": 8,
         "gd": 0
@@ -415,6 +416,13 @@
         "points": 46,
         "played": 35,
         "gd": -8
+      },
+      {
+        "round": 36,
+        "rank": 8,
+        "points": 47,
+        "played": 36,
+        "gd": -8
       }
     ],
     "best_rank": 3,
@@ -431,15 +439,15 @@
       "ppg": 1.42
     },
     "second_half": {
-      "played": 16,
+      "played": 17,
       "win": 5,
-      "draw": 4,
+      "draw": 5,
       "loss": 7,
-      "gf": 16,
-      "ga": 28,
+      "gf": 17,
+      "ga": 29,
       "gd": -12,
-      "points": 19,
-      "ppg": 1.19
+      "points": 20,
+      "ppg": 1.18
     }
   },
   "fixtures": [
@@ -792,6 +800,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 36,
+      "date": "2026-11-21",
+      "venue": "A",
+      "opponent_id": "K03",
+      "opponent": "포항 스틸러스",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -922,20 +940,19 @@
         "points": 2
       }
     ],
-    "goal_share": 0.286
+    "goal_share": 0.279
   },
   "attendance": {
     "avg": 7320,
     "total": 124439,
     "games": 17,
     "home_fans_avg": 6407,
-    "away_fans_avg": 926
+    "away_fans_avg": 894
   },
   "context": {
     "band": "파이널A 추격",
-    "detail": "6위와 3점 차. 상위 스플릿이 아직 사정권입니다.",
+    "detail": "6위와 2점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
-      "수비 불안",
       "무승부 체질",
       "한 골 승부사"
     ]

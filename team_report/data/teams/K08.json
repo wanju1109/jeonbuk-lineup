@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k08-sm.png",
   "home_url": "https://seongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-11-21T08:02:14+09:00",
+  "generated_at": "2026-11-22T07:08:48+09:00",
   "table": {
-    "rank": 14,
+    "rank": 10,
     "teams": 17,
-    "played": 30,
-    "win": 7,
+    "played": 31,
+    "win": 8,
     "draw": 11,
     "loss": 12,
-    "gf": 32,
+    "gf": 37,
     "ga": 40,
-    "gd": -8,
-    "points": 32,
-    "ppg": 1.07,
-    "remaining": 2,
+    "gd": -3,
+    "points": 35,
+    "ppg": 1.13,
+    "remaining": 1,
     "scheduled": 32,
     "gap_to_leader": 34,
-    "gap_to_cut": 16,
+    "gap_to_cut": 13,
     "cut_rank": 6,
-    "gap_above": 0,
-    "gap_below": 6,
-    "above": "충북청주",
-    "below": "안산"
+    "gap_above": 3,
+    "gap_below": 0,
+    "above": "경남",
+    "below": "파주"
   },
   "splits": {
     "home": {
-      "played": 15,
-      "win": 3,
+      "played": 16,
+      "win": 4,
       "draw": 7,
       "loss": 5,
-      "gf": 14,
+      "gf": 19,
       "ga": 17,
-      "gd": -3,
-      "points": 16,
-      "ppg": 1.07
+      "gd": 2,
+      "points": 19,
+      "ppg": 1.19
     },
     "away": {
       "played": 15,
@@ -86,17 +86,17 @@
       "L",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5": [
       "L",
       "L",
-      "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last10": [
-      "W",
       "D",
       "W",
       "L",
@@ -105,30 +105,31 @@
       "L",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 0,
+      "win": 1,
       "draw": 1,
-      "loss": 4,
-      "gf": 4,
-      "ga": 10,
-      "gd": -6,
-      "points": 1
+      "loss": 3,
+      "gf": 8,
+      "ga": 7,
+      "gd": 1,
+      "points": 4
     },
     "last10_record": {
       "played": 10,
       "win": 2,
       "draw": 3,
       "loss": 5,
-      "gf": 11,
-      "ga": 16,
-      "gd": -5,
+      "gf": 14,
+      "ga": 15,
+      "gd": -1,
       "points": 9
     },
     "streaks": {
-      "current_type": "L",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 5,
@@ -137,20 +138,20 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.07,
-    "ga_per_game": 1.33,
-    "clean_sheets": 4,
+    "gf_per_game": 1.19,
+    "ga_per_game": 1.29,
+    "clean_sheets": 5,
     "failed_to_score": 10,
     "both_scored": 19,
     "one_goal_games": 14,
     "biggest_win": {
-      "round": 6,
-      "date": "2026-04-04",
-      "venue": "A",
-      "opponent_id": "K39",
-      "opponent": "화성 FC",
-      "gf": 3,
-      "ga": 1,
+      "round": 33,
+      "date": "2026-11-21",
+      "venue": "H",
+      "opponent_id": "K42",
+      "opponent": "용인 FC",
+      "gf": 5,
+      "ga": 0,
       "result": "W"
     },
     "biggest_loss": {
@@ -168,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 10,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -389,6 +390,13 @@
         "points": 32,
         "played": 30,
         "gd": -8
+      },
+      {
+        "round": 33,
+        "rank": 10,
+        "points": 35,
+        "played": 31,
+        "gd": -3
       }
     ],
     "best_rank": 7,
@@ -405,15 +413,15 @@
       "ppg": 1.06
     },
     "second_half": {
-      "played": 14,
-      "win": 4,
+      "played": 15,
+      "win": 5,
       "draw": 3,
       "loss": 7,
-      "gf": 16,
+      "gf": 21,
       "ga": 22,
-      "gd": -6,
-      "points": 15,
-      "ppg": 1.07
+      "gd": -1,
+      "points": 18,
+      "ppg": 1.2
     }
   },
   "fixtures": [
@@ -716,6 +724,16 @@
       "gf": 0,
       "ga": 1,
       "result": "L"
+    },
+    {
+      "round": 33,
+      "date": "2026-11-21",
+      "venue": "H",
+      "opponent_id": "K42",
+      "opponent": "용인 FC",
+      "gf": 5,
+      "ga": 0,
+      "result": "W"
     }
   ],
   "squad": {
@@ -846,14 +864,13 @@
         "points": 2
       }
     ],
-    "goal_share": 0.125
+    "goal_share": 0.108
   },
   "attendance": null,
   "context": {
     "band": "중위권",
     "detail": "승격권과는 멀어졌고 강등 걱정도 없는, 시즌의 색이 옅어진 구간입니다.",
     "tags": [
-      "득점 빈곤",
       "무승부 체질",
       "한 골 승부사"
     ]

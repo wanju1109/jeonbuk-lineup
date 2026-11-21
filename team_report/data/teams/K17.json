@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k17-sm.png",
   "home_url": "https://daegufc.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-21T08:02:13+09:00",
+  "generated_at": "2026-11-22T07:08:48+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
@@ -23,11 +23,11 @@
     "ppg": 1.87,
     "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 10,
+    "gap_to_leader": 13,
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 8,
+    "gap_below": 7,
     "above": "서울E",
     "below": "부산"
   },
@@ -385,6 +385,13 @@
       },
       {
         "round": 32,
+        "rank": 4,
+        "points": 56,
+        "played": 30,
+        "gd": 18
+      },
+      {
+        "round": 33,
         "rank": 4,
         "points": 56,
         "played": 30,

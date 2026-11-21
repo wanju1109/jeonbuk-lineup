@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k40-sm.png",
   "home_url": "https://www.pajufrontier.com",
   "season": "2026",
-  "generated_at": "2026-11-21T08:02:14+09:00",
+  "generated_at": "2026-11-22T07:08:48+09:00",
   "table": {
-    "rank": 10,
+    "rank": 11,
     "teams": 17,
     "played": 30,
     "win": 9,
@@ -23,12 +23,12 @@
     "ppg": 1.17,
     "remaining": 2,
     "scheduled": 32,
-    "gap_to_leader": 31,
+    "gap_to_leader": 34,
     "gap_to_cut": 13,
     "cut_rank": 6,
-    "gap_above": 3,
+    "gap_above": 0,
     "gap_below": 2,
-    "above": "경남",
+    "above": "성남",
     "below": "천안"
   },
   "splits": {
@@ -182,7 +182,7 @@
       },
       {
         "round": 3,
-        "rank": 10,
+        "rank": 11,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -386,6 +386,13 @@
       {
         "round": 32,
         "rank": 10,
+        "points": 35,
+        "played": 30,
+        "gd": -6
+      },
+      {
+        "round": 33,
+        "rank": 11,
         "points": 35,
         "played": 30,
         "gd": -6

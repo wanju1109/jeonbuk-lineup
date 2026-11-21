@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-11-21T08:02:13+09:00",
+  "generated_at": "2026-11-22T07:08:48+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
@@ -23,7 +23,7 @@
     "ppg": 0.94,
     "remaining": 8,
     "scheduled": 43,
-    "gap_to_leader": 34,
+    "gap_to_leader": 37,
     "gap_to_cut": 16,
     "cut_rank": 6,
     "gap_above": 5,
@@ -194,7 +194,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -222,7 +222,7 @@
       },
       {
         "round": 8,
-        "rank": 5,
+        "rank": 6,
         "points": 10,
         "played": 8,
         "gd": 0
@@ -411,6 +411,13 @@
       },
       {
         "round": 35,
+        "rank": 11,
+        "points": 33,
+        "played": 35,
+        "gd": -16
+      },
+      {
+        "round": 36,
         "rank": 11,
         "points": 33,
         "played": 35,
