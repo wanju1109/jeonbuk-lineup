@@ -25,23 +25,23 @@
     "kickoff_label": "2026-11-28 19:00 KST",
     "date_md": "11/28",
     "label": "안양 VS 제주 (218, 11/28)",
-    "hours_to_kickoff": 158.5,
+    "hours_to_kickoff": 152.5,
     "within_48h": false,
     "published": false,
-    "generated_at": "2026-11-22T04:32:45.368186+09:00",
+    "generated_at": "2026-11-22T10:29:33.546961+09:00",
     "preview_hours": 48.0
   },
   "headline": "37R PREVIEW · 안양 vs 제주",
-  "thesis": "안양 vs 제주. 안양 최근 D D W L D, 제주 최근 L L L D D. 홈 안양이(가) 템포를 가져가며 xG 1.49 수준의 기회를 유지할 수 있는지가 관건입니다.",
+  "thesis": "안양 vs 제주. 안양 최근 D D W L D, 제주 최근 L L L D D. 홈 안양이(가) 템포를 가져가며 xG 1.46 수준의 기회를 유지할 수 있는지가 관건입니다.",
   "briefing": [
     "안양 vs 제주. 안양 최근 D D W L D (1승 3무 1패 / 최근 5경기). 제주 최근 L L L D D (0승 2무 3패 / 최근 5경기).",
-    "최근 5경기 평균 — 안양 xG 1.49·슈팅 14.0, 제주 xG 1.52·슈팅 11.8. 패스 성공률 71.6% vs 72.8%.",
+    "최근 5경기 평균 — 안양 xG 1.46·슈팅 13.6, 제주 xG 1.52·슈팅 11.8. 패스 성공률 73.5% vs 72.8%.",
     "올 시즌 맞대결 3경기 — 안양 기준 2승 0무 1패.",
     "경기장 안양 종합 · 안양 홈. 홈팀이 템포와 공간을 가져가는지 먼저 보면 됩니다.",
     "선수 포커스 — 안양: 최근 가용 칠판 데이터 5경기 기준, 제주: 최근 가용 칠판 데이터 5경기 기준."
   ],
   "scout": {
-    "contrast": "안양은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 제주은(는) 부진, 비기는 흐름, 기회 창출↑ 그림입니다. 최근 xG 1.49 vs 1.52, 슈팅 14.0 vs 11.8, 파이널 서드 터치 25.1% vs 22.6%입니다.",
+    "contrast": "안양은 비기는 흐름, 기회 창출↑, 슈팅 많음 흐름이고, 제주은(는) 부진, 비기는 흐름, 기회 창출↑ 그림입니다. 최근 xG 1.46 vs 1.52, 슈팅 13.6 vs 11.8, 파이널 서드 터치 24.7% vs 22.6%입니다.",
     "edge": [
       "제주 최근 흐름이 좋지 않습니다. 안양이 실수를 유도할 여지가 있습니다.",
       "홈 이점(안양). 익숙한 경기장에서 라인 높이·템포 조절이 유리합니다."
@@ -62,19 +62,19 @@
     "rows": [
       {
         "label": "경기당 xG",
-        "jeonbuk": 1.49,
+        "jeonbuk": 1.46,
         "opponent": 1.52,
         "better": "opponent"
       },
       {
         "label": "경기당 xGA(허용 xG)",
-        "jeonbuk": 1.03,
+        "jeonbuk": 1.31,
         "opponent": 1.44,
         "better": "jeonbuk"
       },
       {
         "label": "슈팅",
-        "jeonbuk": 14.0,
+        "jeonbuk": 13.6,
         "opponent": 11.8,
         "better": "jeonbuk"
       },
@@ -86,26 +86,26 @@
       },
       {
         "label": "패스 성공률",
-        "jeonbuk": 71.6,
+        "jeonbuk": 73.5,
         "opponent": 72.8,
         "suffix": "%",
-        "better": "opponent"
+        "better": "jeonbuk"
       },
       {
         "label": "파이널 서드 터치",
-        "jeonbuk": 25.1,
+        "jeonbuk": 24.7,
         "opponent": 22.6,
         "suffix": "%",
         "better": "jeonbuk"
       },
       {
         "label": "압박 시도(PPDA proxy)",
-        "jeonbuk": 16.8,
+        "jeonbuk": 17.2,
         "opponent": 17.6,
         "better": "opponent"
       }
     ],
-    "summary": "최근 4경기 기준 — 안양 xG 1.49 / xGA 1.03, 제주 xG 1.52 / xGA 1.44."
+    "summary": "최근 5경기 기준 — 안양 xG 1.46 / xGA 1.31, 제주 xG 1.52 / xGA 1.44."
   },
   "pulse": {
     "home": {
@@ -115,8 +115,8 @@
       "ppg": 1.2,
       "goals_pg": 0.8,
       "conceded_pg": 0.8,
-      "xg_delta": -1.95,
-      "xg_sample": 4,
+      "xg_delta": -3.32,
+      "xg_sample": 5,
       "clean_sheets": 1
     },
     "away": {
@@ -588,15 +588,18 @@
         "result": "D",
         "opponent": "포항",
         "ha": "A",
-        "xg": null,
-        "xga": null,
-        "shots": null,
-        "sot": null,
+        "xg": 1.37,
+        "xga": 2.41,
+        "shots": 12,
+        "sot": 5,
         "goals_for": 1,
         "goals_against": 1,
         "stats_limited": false,
         "score_source": "official",
-        "stats_source": "portal_score_only"
+        "pass_pct": 81.2,
+        "final_third_pct": 22.8,
+        "presses": 19,
+        "stats_source": "portal"
       }
     ],
     "opponent": [
@@ -755,21 +758,22 @@
       "tags": [
         "비기는 흐름",
         "기회 창출↑",
-        "슈팅 많음"
+        "슈팅 많음",
+        "수비 기회 허용"
       ],
       "record": "1승 3무 1패 / 최근 5경기",
       "goals_for": 4,
       "goals_against": 4,
       "goal_diff": 0,
-      "avg_xg": 1.49,
-      "avg_xga": 1.03,
-      "avg_shots": 14.0,
+      "avg_xg": 1.46,
+      "avg_xga": 1.31,
+      "avg_shots": 13.6,
       "avg_sot": 5.0,
-      "avg_pass_pct": 71.6,
-      "avg_final_third_pct": 25.1,
-      "avg_presses": 16.8,
-      "avg_x": 49.5,
-      "samples": 4
+      "avg_pass_pct": 73.5,
+      "avg_final_third_pct": 24.7,
+      "avg_presses": 17.2,
+      "avg_x": 49.6,
+      "samples": 5
     },
     "opponent": {
       "name": "제주",
