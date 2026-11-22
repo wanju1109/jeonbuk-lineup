@@ -34,16 +34,19 @@ def blocked_hosts() -> list[str]:
     import urllib.error
     import urllib.request
 
-    bad = []
-    for h in NET_HOSTS:
-        try:
-            req = urllib.request.Request(f"https://{h}/", headers={"User-Agent": "Mozilla/5.0"})
-            urllib.request.urlopen(req, timeout=10).close()
-        except urllib.error.HTTPError:
-            pass
-        except Exception:
-            bad.append(h)
-    return bad
+    def opens(h: str) -> bool:
+        for _ in range(2):  # 잠깐 끊긴 것일 수 있어 한 번 더 해 본다
+            try:
+                req = urllib.request.Request(f"https://{h}/", headers={"User-Agent": "Mozilla/5.0"})
+                urllib.request.urlopen(req, timeout=10).close()
+                return True
+            except urllib.error.HTTPError:
+                return True
+            except Exception:
+                continue
+        return False
+
+    return [h for h in NET_HOSTS if not opens(h)]
 
 
 def main() -> None:
@@ -75,12 +78,14 @@ def main() -> None:
         if p and p.get("published") and f"preview:{p['game_id']}" not in reports:
             problems.append(f"내일({t}) {p['home']} vs {p['away']} 프리뷰가 에버그린에 올라가지 않았습니다.")
 
-    # 한두 곳이 잠깐 안 열리는 것은 넘기고, 절반 이상 막혀 있을 때만 알린다
+    # 공식 기록 세 곳(K리그, K리그 데이터포털, 구단) 중 하나라도 안 열리거나, 전체의 절반 이상이 안 열리면 알린다.
+    # 언론사 한두 곳이 잠깐 안 열리는 것은 넘긴다. '이상 없음'이면 공식 기록 세 곳은 모두 열린 것이다.
     bad = [] if args.no_net else blocked_hosts()
-    if len(bad) * 2 >= len(NET_HOSTS):
-        problems.append(f"클라우드 실행 환경에서 기사·공식 사이트에 접속할 수 없습니다(막힌 곳: {', '.join(bad)}). "
+    if any(h in NET_HOSTS[:3] for h in bad) or len(bad) * 2 >= len(NET_HOSTS):
+        problems.append(f"클라우드 실행 환경에서 접속되지 않는 곳이 있습니다({', '.join(bad)}). "
                         "이대로면 신문에 뉴스가 빠지고, 경기 다음 날에는 발행이 안 될 수 있습니다. "
-                        "PC에서 claude.ai/code 새 세션 화면 → 입력창 아래 환경 선택 → Default의 설정(톱니) → Network access를 Full로 바꿔 주세요.")
+                        "PC에서 claude.ai/code 새 세션 화면 → 입력창 아래 환경 선택 → Default의 설정(톱니) → Network access가 Full인지 확인해 주세요. "
+                        "이미 Full이면 그 사이트가 잠깐 멈춘 것일 수 있으니 다음 점검까지 기다려 보세요.")
 
     if problems:
         print("\n".join(problems))
