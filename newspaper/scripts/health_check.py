@@ -25,10 +25,32 @@ def load(rel: str, default=None):
     return json.loads(p.read_text(encoding="utf-8")) if p.exists() else default
 
 
+# 신문을 만드는 클라우드 루틴이 기사·공식 기록을 확인하려면 열려야 하는 곳들
+NET_HOSTS = ["www.kleague.com", "data.kleague.com", "hyundai-motorsfc.com", "www.kfa.or.kr", "www.jjan.kr", "sports.khan.co.kr"]
+
+
+def blocked_hosts() -> list[str]:
+    """이 실행 환경에서 접속이 막힌 곳. 사이트가 오류 페이지라도 응답을 주면 접속은 되는 것으로 본다."""
+    import urllib.error
+    import urllib.request
+
+    bad = []
+    for h in NET_HOSTS:
+        try:
+            req = urllib.request.Request(f"https://{h}/", headers={"User-Agent": "Mozilla/5.0"})
+            urllib.request.urlopen(req, timeout=10).close()
+        except urllib.error.HTTPError:
+            pass
+        except Exception:
+            bad.append(h)
+    return bad
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--evening", action="store_true")
     ap.add_argument("--date")
+    ap.add_argument("--no-net", action="store_true", help="사이트 접속 확인을 건너뛴다")
     args = ap.parse_args()
     today = dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(KST).date()
     no = (today - FIRST).days + 1
@@ -52,6 +74,13 @@ def main() -> None:
                   if p.get("jeonbuk_match") and str(p.get("kickoff", "")).startswith(t)), None)
         if p and p.get("published") and f"preview:{p['game_id']}" not in reports:
             problems.append(f"내일({t}) {p['home']} vs {p['away']} 프리뷰가 에버그린에 올라가지 않았습니다.")
+
+    # 한두 곳이 잠깐 안 열리는 것은 넘기고, 절반 이상 막혀 있을 때만 알린다
+    bad = [] if args.no_net else blocked_hosts()
+    if len(bad) * 2 >= len(NET_HOSTS):
+        problems.append(f"클라우드 실행 환경에서 기사·공식 사이트에 접속할 수 없습니다(막힌 곳: {', '.join(bad)}). "
+                        "이대로면 신문에 뉴스가 빠지고, 경기 다음 날에는 발행이 안 될 수 있습니다. "
+                        "PC에서 claude.ai/code 새 세션 화면 → 입력창 아래 환경 선택 → Default의 설정(톱니) → Network access를 Full로 바꿔 주세요.")
 
     if problems:
         print("\n".join(problems))

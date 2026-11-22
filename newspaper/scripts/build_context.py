@@ -92,6 +92,7 @@ def last_match(today: dt.date) -> dict | None:
     d = dt.date.fromisoformat(meta_i["date"])
     out["date_label"] = f"{d.month}월 {d.day}일({WD[d.weekday()]})"
     if not path.exists():
+        out["partial"] = True  # 점수만 있고 슈팅·출전 기록은 아직 없다
         return out
     g = load(f"c_report/data/{meta_i['game_id']}.json")
     meta = g["meta"]
@@ -380,6 +381,16 @@ def main() -> None:
     rnd = max((m["round"] for m in played), default=0)
     split_round = 33
     yesterday = (today - dt.timedelta(days=1)).isoformat()
+    # 부가기록(c_report)은 경기 다음 날 오전 9~10시에야 들어온다. 그 전이라도 리그 일정·결과에 어제 경기 점수가 있으면
+    # 경기 다음 날로 본다. 이때 last에는 점수만 있고(partial) 슈팅·출전·득점자 기록은 없다.
+    if played and played[-1]["date"] == yesterday and not (lm and lm["date"] == yesterday):
+        y = played[-1]
+        yd = dt.date.fromisoformat(y["date"])
+        lm = {
+            "game_id": None, "date": y["date"], "round": y["round"], "home": short(y["home"]), "away": short(y["away"]),
+            "venue": y.get("venue") or None, "attendance": None, "comp": f"K리그1 {y['round']}R", "score": list(y["score"]),
+            "date_label": f"{yd.month}월 {yd.day}일({WD[yd.weekday()]})", "partial": True,
+        }
     teams = {"전북"} | ({nxt["opp_short"]} if nxt else set()) | ({lm["home"], lm["away"]} if lm else set())
     a, catalog = assets(teams, today.year)
 

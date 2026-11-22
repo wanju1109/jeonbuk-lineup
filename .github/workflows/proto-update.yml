@@ -4,6 +4,9 @@ on:
   schedule:
     # Every day 01:20 KST — pick up results and newly published finals/PO.
     - cron: "20 16 * * *"
+    # 22:50 KST as well. GitHub starts scheduled runs hours late here (the 01:20 run has been landing
+    # at 06:45–08:35 KST), and the morning newspaper (06:05 KST) needs yesterday's scores.
+    - cron: "50 13 * * *"
   workflow_dispatch:
     inputs:
       year:

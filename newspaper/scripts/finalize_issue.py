@@ -113,6 +113,9 @@ def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
                     errs.append(f"{where}: chart는 {sorted(CHARTS)} 중 하나")
                 elif b["chart"] in MATCH_CHARTS and not has_last:
                     errs.append(f"{where}: 지난 경기 기록이 없어 {b['chart']}를 쓸 수 없습니다")
+                elif b["chart"] in MATCH_CHARTS - {"scoreboard"} and (ctx["data"].get("last") or {}).get("partial"):
+                    errs.append(f"{where}: 어제 경기의 부가기록이 아직 없어 {b['chart']}를 쓸 수 없습니다(scoreboard만 가능). "
+                                "득점자와 장면은 공식 기록과 기사로 확인해 글로 씁니다")
             for it in b.get("items") or []:
                 u = it.get("source_url")
                 if u and not re.match(r"^https?://", u):
