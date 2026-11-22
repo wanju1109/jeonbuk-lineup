@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:52+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
-    "played": 31,
-    "win": 7,
+    "played": 32,
+    "win": 8,
     "draw": 5,
     "loss": 19,
-    "gf": 35,
-    "ga": 59,
-    "gd": -24,
-    "points": 26,
-    "ppg": 0.84,
-    "remaining": 1,
+    "gf": 37,
+    "ga": 60,
+    "gd": -23,
+    "points": 29,
+    "ppg": 0.91,
+    "remaining": 0,
     "scheduled": 32,
-    "gap_to_leader": 43,
-    "gap_to_cut": 22,
+    "gap_to_leader": 40,
+    "gap_to_cut": 19,
     "cut_rank": 6,
-    "gap_above": 7,
-    "gap_below": 1,
+    "gap_above": 4,
+    "gap_below": 4,
     "above": "충북청주",
     "below": "전남"
   },
@@ -44,15 +44,15 @@
       "ppg": 0.5
     },
     "away": {
-      "played": 15,
-      "win": 5,
+      "played": 16,
+      "win": 6,
       "draw": 3,
       "loss": 7,
-      "gf": 18,
-      "ga": 26,
-      "gd": -8,
-      "points": 18,
-      "ppg": 1.2
+      "gf": 20,
+      "ga": 27,
+      "gd": -7,
+      "points": 21,
+      "ppg": 1.31
     }
   },
   "form": {
@@ -87,18 +87,18 @@
       "W",
       "L",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "L",
       "W",
       "L",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
       "L",
-      "L",
       "W",
       "L",
       "L",
@@ -106,30 +106,31 @@
       "W",
       "L",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
+      "win": 2,
       "draw": 1,
-      "loss": 3,
-      "gf": 8,
-      "ga": 10,
-      "gd": -2,
-      "points": 4
+      "loss": 2,
+      "gf": 9,
+      "ga": 7,
+      "gd": 2,
+      "points": 7
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
+      "win": 3,
       "draw": 1,
-      "loss": 7,
-      "gf": 13,
-      "ga": 19,
-      "gd": -6,
-      "points": 7
+      "loss": 6,
+      "gf": 14,
+      "ga": 18,
+      "gd": -4,
+      "points": 10
     },
     "streaks": {
-      "current_type": "D",
+      "current_type": "W",
       "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 3,
@@ -138,12 +139,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.13,
-    "ga_per_game": 1.9,
+    "gf_per_game": 1.16,
+    "ga_per_game": 1.88,
     "clean_sheets": 4,
     "failed_to_score": 7,
-    "both_scored": 20,
-    "one_goal_games": 12,
+    "both_scored": 21,
+    "one_goal_games": 13,
     "biggest_win": {
       "round": 29,
       "date": "2026-10-17",
@@ -169,7 +170,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 2,
+        "rank": 3,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -394,12 +395,12 @@
       {
         "round": 33,
         "rank": 15,
-        "points": 26,
-        "played": 31,
-        "gd": -24
+        "points": 29,
+        "played": 32,
+        "gd": -23
       }
     ],
-    "best_rank": 2,
+    "best_rank": 3,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -413,15 +414,15 @@
       "ppg": 0.88
     },
     "second_half": {
-      "played": 15,
-      "win": 3,
+      "played": 16,
+      "win": 4,
       "draw": 3,
       "loss": 9,
-      "gf": 18,
-      "ga": 30,
-      "gd": -12,
-      "points": 12,
-      "ppg": 0.8
+      "gf": 20,
+      "ga": 31,
+      "gd": -11,
+      "points": 15,
+      "ppg": 0.94
     }
   },
   "fixtures": [
@@ -734,6 +735,16 @@
       "gf": 2,
       "ga": 2,
       "result": "D"
+    },
+    {
+      "round": 33,
+      "date": "2026-11-22",
+      "venue": "A",
+      "opponent_id": "K07",
+      "opponent": "전남 드래곤즈",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -864,7 +875,7 @@
         "points": 4
       }
     ],
-    "goal_share": 0.257
+    "goal_share": 0.243
   },
   "attendance": null,
   "context": {

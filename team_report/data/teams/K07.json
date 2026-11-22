@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k07-sm.png",
   "home_url": "https://www.dragons.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:52+09:00",
   "table": {
     "rank": 16,
     "teams": 17,
-    "played": 30,
+    "played": 31,
     "win": 5,
     "draw": 10,
-    "loss": 15,
-    "gf": 37,
-    "ga": 55,
-    "gd": -18,
+    "loss": 16,
+    "gf": 38,
+    "ga": 57,
+    "gd": -19,
     "points": 25,
-    "ppg": 0.83,
-    "remaining": 2,
+    "ppg": 0.81,
+    "remaining": 1,
     "scheduled": 32,
     "gap_to_leader": 44,
     "gap_to_cut": 23,
     "cut_rank": 6,
-    "gap_above": 1,
+    "gap_above": 4,
     "gap_below": 7,
     "above": "안산",
     "below": "김해"
   },
   "splits": {
     "home": {
-      "played": 14,
+      "played": 15,
       "win": 4,
       "draw": 5,
-      "loss": 5,
-      "gf": 18,
-      "ga": 22,
-      "gd": -4,
+      "loss": 6,
+      "gf": 19,
+      "ga": 24,
+      "gd": -5,
       "points": 17,
-      "ppg": 1.21
+      "ppg": 1.13
     },
     "away": {
       "played": 16,
@@ -86,18 +86,18 @@
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "last5": [
-      "W",
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "last10": [
       "W",
-      "W",
       "D",
       "D",
       "L",
@@ -105,31 +105,32 @@
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "last5_record": {
       "played": 5,
-      "win": 1,
+      "win": 0,
       "draw": 1,
-      "loss": 3,
-      "gf": 9,
-      "ga": 12,
-      "gd": -3,
-      "points": 4
+      "loss": 4,
+      "gf": 8,
+      "ga": 13,
+      "gd": -5,
+      "points": 1
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
+      "win": 2,
       "draw": 3,
-      "loss": 4,
+      "loss": 5,
       "gf": 15,
-      "ga": 19,
-      "gd": -4,
-      "points": 12
+      "ga": 21,
+      "gd": -6,
+      "points": 9
     },
     "streaks": {
       "current_type": "L",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 2,
       "longest_unbeaten": 4,
       "longest_winless": 15,
@@ -138,11 +139,11 @@
   },
   "scoring": {
     "gf_per_game": 1.23,
-    "ga_per_game": 1.83,
+    "ga_per_game": 1.84,
     "clean_sheets": 4,
     "failed_to_score": 9,
-    "both_scored": 18,
-    "one_goal_games": 13,
+    "both_scored": 19,
+    "one_goal_games": 14,
     "biggest_win": {
       "round": 1,
       "date": "2026-03-01",
@@ -168,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 3,
+        "rank": 1,
         "points": 3,
         "played": 1,
         "gd": 3
@@ -394,11 +395,11 @@
         "round": 33,
         "rank": 16,
         "points": 25,
-        "played": 30,
-        "gd": -18
+        "played": 31,
+        "gd": -19
       }
     ],
-    "best_rank": 3,
+    "best_rank": 1,
     "worst_rank": 16,
     "first_half": {
       "played": 16,
@@ -412,15 +413,15 @@
       "ppg": 0.56
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 4,
       "draw": 4,
-      "loss": 6,
-      "gf": 19,
-      "ga": 24,
-      "gd": -5,
+      "loss": 7,
+      "gf": 20,
+      "ga": 26,
+      "gd": -6,
       "points": 16,
-      "ppg": 1.14
+      "ppg": 1.07
     }
   },
   "fixtures": [
@@ -723,6 +724,16 @@
       "gf": 2,
       "ga": 3,
       "result": "L"
+    },
+    {
+      "round": 33,
+      "date": "2026-11-22",
+      "venue": "H",
+      "opponent_id": "K32",
+      "opponent": "안산 그리너스",
+      "gf": 1,
+      "ga": 2,
+      "result": "L"
     }
   ],
   "squad": {
@@ -853,7 +864,7 @@
         "points": 5
       }
     ],
-    "goal_share": 0.27
+    "goal_share": 0.263
   },
   "attendance": null,
   "context": {
@@ -861,7 +872,7 @@
     "detail": "순위표 바닥. 내년을 위한 재건이 먼저 보이는 자리입니다.",
     "tags": [
       "수비 불안",
-      "무승부 체질"
+      "한 골 승부사"
     ]
   },
   "profile": {

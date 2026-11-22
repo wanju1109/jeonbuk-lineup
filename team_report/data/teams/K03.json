@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:51+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -24,7 +24,7 @@
     "remaining": 7,
     "scheduled": 43,
     "gap_to_leader": 25,
-    "gap_to_cut": 4,
+    "gap_to_cut": 6,
     "cut_rank": 6,
     "gap_above": 2,
     "gap_below": 7,
@@ -174,7 +174,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 7,
+        "rank": 4,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -951,7 +951,7 @@
   },
   "context": {
     "band": "파이널A 추격",
-    "detail": "6위와 4점 차. 상위 스플릿이 아직 사정권입니다.",
+    "detail": "6위와 6점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "득점 빈곤",
       "침묵하는 공격",

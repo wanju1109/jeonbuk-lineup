@@ -8,9 +8,9 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:47+09:00",
+  "generated_at": "2026-11-23T07:24:51+09:00",
   "table": {
-    "rank": 6,
+    "rank": 7,
     "teams": 12,
     "played": 36,
     "win": 12,
@@ -24,12 +24,12 @@
     "remaining": 7,
     "scheduled": 43,
     "gap_to_leader": 21,
-    "gap_to_cut": 0,
+    "gap_to_cut": 2,
     "cut_rank": 6,
     "gap_above": 2,
-    "gap_below": 1,
-    "above": "강원",
-    "below": "제주"
+    "gap_below": 2,
+    "above": "제주",
+    "below": "안양"
   },
   "splits": {
     "home": {
@@ -419,7 +419,7 @@
       },
       {
         "round": 36,
-        "rank": 6,
+        "rank": 7,
         "points": 49,
         "played": 36,
         "gd": 8
@@ -950,10 +950,11 @@
     "away_fans_avg": 1964
   },
   "context": {
-    "band": "파이널A 경쟁",
-    "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
+    "band": "파이널A 추격",
+    "detail": "6위와 2점 차. 상위 스플릿이 아직 사정권입니다.",
     "tags": [
       "리그 최고 수비",
+      "실리 축구",
       "클린시트 다수",
       "무승부 체질"
     ]

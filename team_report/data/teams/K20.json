@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k20-sm.png",
   "home_url": "http://www.gyeongnamfc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:52+09:00",
   "table": {
     "rank": 9,
     "teams": 17,
@@ -27,9 +27,9 @@
     "gap_to_cut": 10,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 3,
+    "gap_below": 2,
     "above": "김포",
-    "below": "성남"
+    "below": "천안"
   },
   "splits": {
     "home": {
@@ -169,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 14,
+        "rank": 15,
         "points": 0,
         "played": 1,
         "gd": -3

@@ -8,26 +8,26 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:52+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
-    "played": 30,
+    "played": 31,
     "win": 11,
-    "draw": 10,
+    "draw": 11,
     "loss": 9,
-    "gf": 42,
-    "ga": 34,
+    "gf": 43,
+    "ga": 35,
     "gd": 8,
-    "points": 43,
-    "ppg": 1.43,
-    "remaining": 2,
+    "points": 44,
+    "ppg": 1.42,
+    "remaining": 1,
     "scheduled": 32,
-    "gap_to_leader": 26,
-    "gap_to_cut": 5,
+    "gap_to_leader": 25,
+    "gap_to_cut": 4,
     "cut_rank": 6,
-    "gap_above": 5,
-    "gap_below": 4,
+    "gap_above": 4,
+    "gap_below": 5,
     "above": "화성",
     "below": "김포"
   },
@@ -44,14 +44,14 @@
       "ppg": 1.87
     },
     "away": {
-      "played": 15,
+      "played": 16,
       "win": 3,
-      "draw": 6,
+      "draw": 7,
       "loss": 6,
-      "gf": 13,
-      "ga": 16,
+      "gf": 14,
+      "ga": 17,
       "gd": -3,
-      "points": 15,
+      "points": 16,
       "ppg": 1.0
     }
   },
@@ -86,17 +86,17 @@
       "D",
       "W",
       "W",
+      "D",
       "D"
     ],
     "last5": [
       "D",
+      "W",
+      "W",
       "D",
-      "W",
-      "W",
       "D"
     ],
     "last10": [
-      "L",
       "W",
       "L",
       "L",
@@ -105,6 +105,7 @@
       "D",
       "W",
       "W",
+      "D",
       "D"
     ],
     "last5_record": {
@@ -120,28 +121,28 @@
     "last10_record": {
       "played": 10,
       "win": 4,
-      "draw": 3,
-      "loss": 3,
-      "gf": 13,
-      "ga": 10,
-      "gd": 3,
-      "points": 15
+      "draw": 4,
+      "loss": 2,
+      "gf": 14,
+      "ga": 9,
+      "gd": 5,
+      "points": 16
     },
     "streaks": {
       "current_type": "D",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 2,
-      "longest_unbeaten": 6,
+      "longest_unbeaten": 7,
       "longest_winless": 4,
       "longest_loss": 2
     }
   },
   "scoring": {
-    "gf_per_game": 1.4,
+    "gf_per_game": 1.39,
     "ga_per_game": 1.13,
     "clean_sheets": 8,
     "failed_to_score": 8,
-    "both_scored": 17,
+    "both_scored": 18,
     "one_goal_games": 11,
     "biggest_win": {
       "round": 31,
@@ -393,8 +394,8 @@
       {
         "round": 33,
         "rank": 7,
-        "points": 43,
-        "played": 30,
+        "points": 44,
+        "played": 31,
         "gd": 8
       }
     ],
@@ -412,15 +413,15 @@
       "ppg": 1.5
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 5,
-      "draw": 4,
+      "draw": 5,
       "loss": 5,
-      "gf": 18,
-      "ga": 15,
+      "gf": 19,
+      "ga": 16,
       "gd": 3,
-      "points": 19,
-      "ppg": 1.36
+      "points": 20,
+      "ppg": 1.33
     }
   },
   "fixtures": [
@@ -723,6 +724,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 33,
+      "date": "2026-11-22",
+      "venue": "A",
+      "opponent_id": "K31",
+      "opponent": "서울 이랜드",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -853,7 +864,7 @@
         "points": 11
       }
     ],
-    "goal_share": 0.214
+    "goal_share": 0.209
   },
   "attendance": null,
   "context": {

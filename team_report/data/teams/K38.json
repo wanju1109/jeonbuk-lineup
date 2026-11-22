@@ -8,28 +8,28 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k38-sm.png",
   "home_url": "https://cheonancityfc.kr",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:52+09:00",
   "table": {
-    "rank": 12,
+    "rank": 10,
     "teams": 17,
-    "played": 30,
-    "win": 7,
+    "played": 31,
+    "win": 8,
     "draw": 12,
     "loss": 11,
-    "gf": 38,
-    "ga": 41,
-    "gd": -3,
-    "points": 33,
-    "ppg": 1.1,
-    "remaining": 2,
+    "gf": 40,
+    "ga": 42,
+    "gd": -2,
+    "points": 36,
+    "ppg": 1.16,
+    "remaining": 1,
     "scheduled": 32,
-    "gap_to_leader": 36,
-    "gap_to_cut": 15,
+    "gap_to_leader": 33,
+    "gap_to_cut": 12,
     "cut_rank": 6,
     "gap_above": 2,
-    "gap_below": 0,
-    "above": "파주",
-    "below": "용인"
+    "gap_below": 1,
+    "above": "경남",
+    "below": "성남"
   },
   "splits": {
     "home": {
@@ -44,15 +44,15 @@
       "ppg": 1.47
     },
     "away": {
-      "played": 15,
-      "win": 2,
+      "played": 16,
+      "win": 3,
       "draw": 5,
       "loss": 8,
-      "gf": 23,
-      "ga": 29,
-      "gd": -6,
-      "points": 11,
-      "ppg": 0.73
+      "gf": 25,
+      "ga": 30,
+      "gd": -5,
+      "points": 14,
+      "ppg": 0.88
     }
   },
   "form": {
@@ -86,17 +86,17 @@
       "W",
       "W",
       "D",
+      "W",
       "W"
     ],
     "last5": [
-      "L",
       "W",
       "W",
       "D",
+      "W",
       "W"
     ],
     "last10": [
-      "D",
       "L",
       "L",
       "D",
@@ -105,31 +105,32 @@
       "W",
       "W",
       "D",
+      "W",
       "W"
     ],
     "last5_record": {
       "played": 5,
-      "win": 3,
+      "win": 4,
       "draw": 1,
-      "loss": 1,
-      "gf": 9,
-      "ga": 7,
-      "gd": 2,
-      "points": 10
+      "loss": 0,
+      "gf": 10,
+      "ga": 5,
+      "gd": 5,
+      "points": 13
     },
     "last10_record": {
       "played": 10,
-      "win": 3,
-      "draw": 4,
+      "win": 4,
+      "draw": 3,
       "loss": 3,
-      "gf": 12,
+      "gf": 13,
       "ga": 12,
-      "gd": 0,
-      "points": 13
+      "gd": 1,
+      "points": 15
     },
     "streaks": {
       "current_type": "W",
-      "current_len": 1,
+      "current_len": 2,
       "longest_win": 2,
       "longest_unbeaten": 7,
       "longest_winless": 13,
@@ -137,12 +138,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.27,
-    "ga_per_game": 1.37,
+    "gf_per_game": 1.29,
+    "ga_per_game": 1.35,
     "clean_sheets": 6,
     "failed_to_score": 8,
-    "both_scored": 18,
-    "one_goal_games": 15,
+    "both_scored": 19,
+    "one_goal_games": 16,
     "biggest_win": {
       "round": 30,
       "date": "2026-10-25",
@@ -168,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 8,
+        "rank": 7,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -392,10 +393,10 @@
       },
       {
         "round": 33,
-        "rank": 12,
-        "points": 33,
-        "played": 30,
-        "gd": -3
+        "rank": 10,
+        "points": 36,
+        "played": 31,
+        "gd": -2
       }
     ],
     "best_rank": 7,
@@ -412,15 +413,15 @@
       "ppg": 1.19
     },
     "second_half": {
-      "played": 14,
-      "win": 3,
+      "played": 15,
+      "win": 4,
       "draw": 5,
       "loss": 6,
-      "gf": 19,
-      "ga": 22,
-      "gd": -3,
-      "points": 14,
-      "ppg": 1.0
+      "gf": 21,
+      "ga": 23,
+      "gd": -2,
+      "points": 17,
+      "ppg": 1.13
     }
   },
   "fixtures": [
@@ -723,6 +724,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 33,
+      "date": "2026-11-22",
+      "venue": "A",
+      "opponent_id": "K40",
+      "opponent": "파주 프런티어",
+      "gf": 2,
+      "ga": 1,
+      "result": "W"
     }
   ],
   "squad": {
@@ -853,7 +864,7 @@
         "points": 8
       }
     ],
-    "goal_share": 0.237
+    "goal_share": 0.225
   },
   "attendance": null,
   "context": {

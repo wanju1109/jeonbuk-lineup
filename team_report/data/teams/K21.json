@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k21-sm.png",
   "home_url": "https://www.gangwon-fc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:47+09:00",
+  "generated_at": "2026-11-23T07:24:51+09:00",
   "table": {
     "rank": 5,
     "teams": 12,
@@ -27,9 +27,9 @@
     "gap_to_cut": 0,
     "cut_rank": 6,
     "gap_above": 1,
-    "gap_below": 2,
+    "gap_below": 0,
     "above": "인천",
-    "below": "전북"
+    "below": "제주"
   },
   "splits": {
     "home": {
@@ -209,7 +209,7 @@
       },
       {
         "round": 6,
-        "rank": 6,
+        "rank": 7,
         "points": 6,
         "played": 6,
         "gd": 0
@@ -946,7 +946,7 @@
     "avg": 5856,
     "total": 111262,
     "games": 19,
-    "home_fans_avg": 5466,
+    "home_fans_avg": 5439,
     "away_fans_avg": 588
   },
   "context": {
@@ -954,6 +954,7 @@
     "detail": "상위 스플릿 진입권. 여기서 밀리면 시즌의 성격이 통째로 바뀝니다.",
     "tags": [
       "수비 안정",
+      "실리 축구",
       "클린시트 다수",
       "무승부 체질"
     ]

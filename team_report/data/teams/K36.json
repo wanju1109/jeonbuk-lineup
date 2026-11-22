@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k36-sm.png",
   "home_url": "https://www.gimpofc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:52+09:00",
   "table": {
     "rank": 8,
     "teams": 17,
@@ -26,7 +26,7 @@
     "gap_to_leader": 30,
     "gap_to_cut": 9,
     "cut_rank": 6,
-    "gap_above": 4,
+    "gap_above": 5,
     "gap_below": 1,
     "above": "충남아산",
     "below": "경남"

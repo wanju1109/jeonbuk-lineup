@@ -8,23 +8,23 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k35-sm.png",
   "home_url": "https://gimcheonfc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:51+09:00",
   "table": {
     "rank": 10,
     "teams": 12,
-    "played": 35,
+    "played": 36,
     "win": 6,
     "draw": 20,
-    "loss": 9,
+    "loss": 10,
     "gf": 35,
-    "ga": 42,
-    "gd": -7,
+    "ga": 43,
+    "gd": -8,
     "points": 38,
-    "ppg": 1.09,
-    "remaining": 8,
+    "ppg": 1.06,
+    "remaining": 7,
     "scheduled": 43,
     "gap_to_leader": 32,
-    "gap_to_cut": 11,
+    "gap_to_cut": 13,
     "cut_rank": 6,
     "gap_above": 7,
     "gap_below": 5,
@@ -33,15 +33,15 @@
   },
   "splits": {
     "home": {
-      "played": 17,
+      "played": 18,
       "win": 2,
       "draw": 10,
-      "loss": 5,
+      "loss": 6,
       "gf": 16,
-      "ga": 23,
-      "gd": -7,
+      "ga": 24,
+      "gd": -8,
       "points": 16,
-      "ppg": 0.94
+      "ppg": 0.89
     },
     "away": {
       "played": 18,
@@ -91,17 +91,17 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5": [
-      "L",
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last10": [
-      "L",
       "D",
       "D",
       "D",
@@ -110,7 +110,8 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "last5_record": {
       "played": 5,
@@ -127,13 +128,13 @@
       "win": 2,
       "draw": 5,
       "loss": 3,
-      "gf": 12,
-      "ga": 13,
-      "gd": -1,
+      "gf": 11,
+      "ga": 11,
+      "gd": 0,
       "points": 11
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "L",
       "current_len": 1,
       "longest_win": 2,
       "longest_unbeaten": 7,
@@ -142,12 +143,12 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.0,
-    "ga_per_game": 1.2,
+    "gf_per_game": 0.97,
+    "ga_per_game": 1.19,
     "clean_sheets": 9,
-    "failed_to_score": 10,
+    "failed_to_score": 11,
     "both_scored": 21,
-    "one_goal_games": 9,
+    "one_goal_games": 10,
     "biggest_win": {
       "round": 30,
       "date": "2026-09-19",
@@ -173,21 +174,21 @@
     "history": [
       {
         "round": 1,
-        "rank": 4,
+        "rank": 6,
         "points": 1,
         "played": 1,
         "gd": 0
       },
       {
         "round": 2,
-        "rank": 7,
+        "rank": 8,
         "points": 2,
         "played": 2,
         "gd": 0
       },
       {
         "round": 3,
-        "rank": 7,
+        "rank": 8,
         "points": 3,
         "played": 3,
         "gd": 0
@@ -420,11 +421,11 @@
         "round": 36,
         "rank": 10,
         "points": 38,
-        "played": 35,
-        "gd": -7
+        "played": 36,
+        "gd": -8
       }
     ],
-    "best_rank": 4,
+    "best_rank": 6,
     "worst_rank": 11,
     "first_half": {
       "played": 19,
@@ -438,15 +439,15 @@
       "ppg": 0.89
     },
     "second_half": {
-      "played": 16,
+      "played": 17,
       "win": 4,
       "draw": 9,
-      "loss": 3,
+      "loss": 4,
       "gf": 17,
-      "ga": 16,
-      "gd": 1,
+      "ga": 17,
+      "gd": 0,
       "points": 21,
-      "ppg": 1.31
+      "ppg": 1.24
     }
   },
   "fixtures": [
@@ -799,6 +800,16 @@
       "gf": 1,
       "ga": 0,
       "result": "W"
+    },
+    {
+      "round": 36,
+      "date": "2026-11-22",
+      "venue": "H",
+      "opponent_id": "K04",
+      "opponent": "제주 SK",
+      "gf": 0,
+      "ga": 1,
+      "result": "L"
     }
   ],
   "squad": {
@@ -932,16 +943,17 @@
     "goal_share": 0.086
   },
   "attendance": {
-    "avg": 2106,
-    "total": 35794,
-    "games": 17,
-    "home_fans_avg": 1429,
+    "avg": 2041,
+    "total": 36734,
+    "games": 18,
+    "home_fans_avg": 1399,
     "away_fans_avg": 218
   },
   "context": {
     "band": "강등 확정",
     "detail": "순위와 무관하게 2027시즌을 K리그2에서 시작합니다. 남은 경기는 승점이 아니라 선수 개개인의 가치를 증명하는 무대입니다. 다만 김천이 11위 안에 들면 12위 팀이 승강 플레이오프를 치르고, 김천이 12위로 마치면 그마저 열리지 않습니다. 순위표 맨 아래 두 자리의 의미가 김천의 최종 순위에 걸려 있습니다.",
     "tags": [
+      "득점 빈곤",
       "무승부 체질"
     ]
   },

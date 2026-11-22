@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:51+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
-    "played": 35,
-    "win": 3,
+    "played": 36,
+    "win": 4,
     "draw": 14,
     "loss": 18,
-    "gf": 32,
-    "ga": 71,
-    "gd": -39,
-    "points": 23,
-    "ppg": 0.66,
-    "remaining": 8,
+    "gf": 36,
+    "ga": 73,
+    "gd": -37,
+    "points": 26,
+    "ppg": 0.72,
+    "remaining": 7,
     "scheduled": 43,
-    "gap_to_leader": 47,
-    "gap_to_cut": 26,
+    "gap_to_leader": 44,
+    "gap_to_cut": 25,
     "cut_rank": 6,
-    "gap_above": 10,
+    "gap_above": 7,
     "gap_below": null,
     "above": "부천",
     "below": ""
   },
   "splits": {
     "home": {
-      "played": 18,
-      "win": 2,
+      "played": 19,
+      "win": 3,
       "draw": 6,
       "loss": 10,
-      "gf": 17,
-      "ga": 35,
-      "gd": -18,
-      "points": 12,
-      "ppg": 0.67
+      "gf": 21,
+      "ga": 37,
+      "gd": -16,
+      "points": 15,
+      "ppg": 0.79
     },
     "away": {
       "played": 17,
@@ -91,17 +91,17 @@
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5": [
-      "W",
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last10": [
-      "L",
       "D",
       "L",
       "D",
@@ -110,7 +110,8 @@
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "last5_record": {
       "played": 5,
@@ -118,23 +119,23 @@
       "draw": 2,
       "loss": 1,
       "gf": 11,
-      "ga": 8,
-      "gd": 3,
+      "ga": 7,
+      "gd": 4,
       "points": 8
     },
     "last10_record": {
       "played": 10,
-      "win": 2,
+      "win": 3,
       "draw": 5,
-      "loss": 3,
-      "gf": 18,
-      "ga": 19,
-      "gd": -1,
-      "points": 11
+      "loss": 2,
+      "gf": 20,
+      "ga": 16,
+      "gd": 4,
+      "points": 14
     },
     "streaks": {
-      "current_type": "D",
-      "current_len": 2,
+      "current_type": "W",
+      "current_len": 1,
       "longest_win": 1,
       "longest_unbeaten": 4,
       "longest_winless": 28,
@@ -142,11 +143,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 0.91,
+    "gf_per_game": 1.0,
     "ga_per_game": 2.03,
     "clean_sheets": 5,
     "failed_to_score": 16,
-    "both_scored": 18,
+    "both_scored": 19,
     "one_goal_games": 10,
     "biggest_win": {
       "round": 33,
@@ -419,9 +420,9 @@
       {
         "round": 36,
         "rank": 12,
-        "points": 23,
-        "played": 35,
-        "gd": -39
+        "points": 26,
+        "played": 36,
+        "gd": -37
       }
     ],
     "best_rank": 3,
@@ -438,15 +439,15 @@
       "ppg": 0.53
     },
     "second_half": {
-      "played": 16,
-      "win": 2,
+      "played": 17,
+      "win": 3,
       "draw": 7,
       "loss": 7,
-      "gf": 22,
-      "ga": 28,
-      "gd": -6,
-      "points": 13,
-      "ppg": 0.81
+      "gf": 26,
+      "ga": 30,
+      "gd": -4,
+      "points": 16,
+      "ppg": 0.94
     }
   },
   "fixtures": [
@@ -799,6 +800,16 @@
       "gf": 1,
       "ga": 1,
       "result": "D"
+    },
+    {
+      "round": 36,
+      "date": "2026-11-22",
+      "venue": "H",
+      "opponent_id": "K26",
+      "opponent": "부천 FC",
+      "gf": 4,
+      "ga": 2,
+      "result": "W"
     }
   ],
   "squad": {
@@ -929,13 +940,13 @@
         "points": 3
       }
     ],
-    "goal_share": 0.406
+    "goal_share": 0.361
   },
   "attendance": {
-    "avg": 3308,
-    "total": 59538,
-    "games": 18,
-    "home_fans_avg": 2764,
+    "avg": 3191,
+    "total": 60629,
+    "games": 19,
+    "home_fans_avg": 2671,
     "away_fans_avg": 300
   },
   "context": {

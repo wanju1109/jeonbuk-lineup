@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k37-sm.png",
   "home_url": "https://chfc.kr",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:52+09:00",
   "table": {
     "rank": 14,
     "teams": 17,
@@ -27,7 +27,7 @@
     "gap_to_cut": 15,
     "cut_rank": 6,
     "gap_above": 0,
-    "gap_below": 7,
+    "gap_below": 4,
     "above": "용인",
     "below": "안산"
   },
@@ -169,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 15,
+        "rank": 13,
         "points": 0,
         "played": 1,
         "gd": -3

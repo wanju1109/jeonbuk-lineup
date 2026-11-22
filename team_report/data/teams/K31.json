@@ -8,40 +8,40 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-11-22T07:08:48+09:00",
+  "generated_at": "2026-11-23T07:24:51+09:00",
   "table": {
-    "rank": 3,
+    "rank": 4,
     "teams": 17,
-    "played": 30,
+    "played": 31,
     "win": 17,
-    "draw": 6,
+    "draw": 7,
     "loss": 7,
-    "gf": 57,
-    "ga": 38,
+    "gf": 58,
+    "ga": 39,
     "gd": 19,
-    "points": 57,
-    "ppg": 1.9,
-    "remaining": 2,
+    "points": 58,
+    "ppg": 1.87,
+    "remaining": 1,
     "scheduled": 32,
-    "gap_to_leader": 12,
+    "gap_to_leader": 11,
     "gap_to_cut": 0,
     "cut_rank": 6,
-    "gap_above": 6,
-    "gap_below": 1,
-    "above": "수원FC",
-    "below": "대구"
+    "gap_above": 1,
+    "gap_below": 9,
+    "above": "대구",
+    "below": "부산"
   },
   "splits": {
     "home": {
-      "played": 15,
+      "played": 16,
       "win": 9,
-      "draw": 2,
+      "draw": 3,
       "loss": 4,
-      "gf": 34,
-      "ga": 22,
+      "gf": 35,
+      "ga": 23,
       "gd": 12,
-      "points": 29,
-      "ppg": 1.93
+      "points": 30,
+      "ppg": 1.88
     },
     "away": {
       "played": 15,
@@ -86,17 +86,17 @@
       "W",
       "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5": [
       "W",
       "W",
-      "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last10": [
-      "W",
       "D",
       "D",
       "W",
@@ -105,30 +105,31 @@
       "W",
       "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "last5_record": {
       "played": 5,
-      "win": 4,
-      "draw": 0,
+      "win": 3,
+      "draw": 1,
       "loss": 1,
-      "gf": 14,
+      "gf": 13,
       "ga": 9,
-      "gd": 5,
-      "points": 12
+      "gd": 4,
+      "points": 10
     },
     "last10_record": {
       "played": 10,
-      "win": 6,
-      "draw": 2,
+      "win": 5,
+      "draw": 3,
       "loss": 2,
-      "gf": 21,
+      "gf": 19,
       "ga": 13,
-      "gd": 8,
-      "points": 20
+      "gd": 6,
+      "points": 18
     },
     "streaks": {
-      "current_type": "W",
+      "current_type": "D",
       "current_len": 1,
       "longest_win": 4,
       "longest_unbeaten": 9,
@@ -137,11 +138,11 @@
     }
   },
   "scoring": {
-    "gf_per_game": 1.9,
-    "ga_per_game": 1.27,
+    "gf_per_game": 1.87,
+    "ga_per_game": 1.26,
     "clean_sheets": 8,
     "failed_to_score": 4,
-    "both_scored": 20,
+    "both_scored": 21,
     "one_goal_games": 13,
     "biggest_win": {
       "round": 29,
@@ -392,9 +393,9 @@
       },
       {
         "round": 33,
-        "rank": 3,
-        "points": 57,
-        "played": 30,
+        "rank": 4,
+        "points": 58,
+        "played": 31,
         "gd": 19
       }
     ],
@@ -412,15 +413,15 @@
       "ppg": 1.81
     },
     "second_half": {
-      "played": 14,
+      "played": 15,
       "win": 8,
-      "draw": 4,
+      "draw": 5,
       "loss": 2,
-      "gf": 29,
-      "ga": 19,
+      "gf": 30,
+      "ga": 20,
       "gd": 10,
-      "points": 28,
-      "ppg": 2.0
+      "points": 29,
+      "ppg": 1.93
     }
   },
   "fixtures": [
@@ -723,6 +724,16 @@
       "gf": 3,
       "ga": 2,
       "result": "W"
+    },
+    {
+      "round": 33,
+      "date": "2026-11-22",
+      "venue": "H",
+      "opponent_id": "K34",
+      "opponent": "충남 아산",
+      "gf": 1,
+      "ga": 1,
+      "result": "D"
     }
   ],
   "squad": {
@@ -853,7 +864,7 @@
         "points": 6
       }
     ],
-    "goal_share": 0.228
+    "goal_share": 0.224
   },
   "attendance": {
     "avg": 21011,
