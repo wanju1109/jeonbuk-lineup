@@ -1,0 +1,1381 @@
+{
+ "no": 32,
+ "date": "2026-11-23",
+ "matchday_after": false,
+ "headline": "전북 차기 감독 후보 검토 보도, 구단 공식 입장은 없어",
+ "summary": "스포츠경향이 22일 전북이 9월부터 차기 사령탑 후보군을 추려 왔다고 보도했다. 선수단은 25일 가시마 원정을 앞두고 있다",
+ "strip": [
+  "D-2 · 25일(수) 19:00 가시마 원정 (ACLE)",
+  "ACLE 동아시아 8위 · 2승 1무 1패",
+  "리그 승점 49 · 2경기 남음"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제32호 · 2026.11.23 (월)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:정정용:260411",
+     "kicker": "감독 거취 보도",
+     "title": "전북 차기 감독 후보 검토 보도, 구단 공식 입장은 없어",
+     "dek": "스포츠경향, 9월부터 후보군을 추려 왔다고 보도. 근거는 익명 관계자였고 거론된 이름은 벤투·토렌트",
+     "caption": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 정정용 감독",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "스포츠경향은 22일 전북현대가 지난 9월부터 차기 사령탑 후보군을 추려 왔다고 보도했다. 근거는 K리그에 정통한 관계자의 말이다. 기사는 전북이 검토하는 후보 다수가 외국인 지도자라고 전했다.",
+      "기사에 거론된 이름은 파울루 벤투 전 한국 대표팀 감독과 스페인 출신 도메네크 토렌트 감독이다. 스포츠경향은 23일 새벽 벤투를 다룬 기사를 한 건 더 냈다. 두 기사 모두 익명 소식통을 근거로 했고, 구단의 공식 입장은 실리지 않았다.",
+      "벤투 감독설은 지난달에도 나왔다. 10월 18일 전주에서 전북과 맞붙기 전 기자회견에서 세르지우 코스타 제주 감독은 이 이야기를 루머로 알고 있다고 했다.",
+      "선수단은 25일 오후 7시 일본 가시마 사커 스타디움에서 가시마 앤틀러스와 ACLE 리그 스테이지 5차전을 치른다. 전북은 4경기 2승 1무 1패로 동아시아 8위, 가시마는 3승 1무로 2위다. 리그는 29일 울산 원정과 12월 6일 인천 홈경기가 남았다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "D-2",
+       "label": "25일(수) 19:00 가시마 원정 · ACLE 5차전",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "8위",
+       "label": "ACLE 동아시아 · 2승 1무 1패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "49",
+       "label": "리그 승점 · 2경기 남음",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-6",
+       "label": "29일(일) 울산 원정 · K리그1 37R",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "특집",
+   "teaser": "감독 후보 보도, 무엇이 나왔고 무엇이 확인됐나",
+   "folio": "특집 · 감독 거취 보도",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "특집",
+     "title": "보도에 나온 것과 확인된 것",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "22일 스포츠경향 기사의 뼈대는 세 가지다. 전북이 9월부터 차기 사령탑 후보군을 물밑에서 추려 왔고, 후보 다수가 외국인이며, 정정용 감독의 성적과 팀 운영이 기대에 못 미친다는 평가가 배경이라는 내용이다.",
+      "근거는 모두 익명이다. 기사는 'K리그에 정통한 관계자'와 '축구계 소식통'을 인용했다. 벤투와 토렌트는 리그 안팎에서 거론되는 이름으로 소개됐다. 전북과 접촉했다는 내용은 없다.",
+      "토렌트 감독은 바르셀로나·바이에른 뮌헨·맨체스터 시티에서 펩 과르디올라 감독을 보좌한 수석코치 출신이다. 뉴욕 시티, 플라멩구, 갈라타사라이를 지휘했다고 기사는 전했다.",
+      "구단은 이 보도에 대해 공식 입장을 내지 않았다. 조간은 공식 발표가 나오기 전까지 이 이야기를 보도 등급으로만 다룬다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "signal",
+     "span": 4,
+     "title": "보도 신호등",
+     "items": [
+      {
+       "state": "yes",
+       "title": "후보군 검토 보도",
+       "text": "스포츠경향 22일·23일 기사 두 건",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "state": "maybe",
+       "title": "벤투·토렌트",
+       "text": "거론되는 이름으로만 소개됐다",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "state": "no",
+       "title": "구단 공식 입장",
+       "text": "23일 아침까지 나오지 않았다",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "big": "보도 단계 · 구단 확인 없음",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "rule_top": true,
+     "image": "bento",
+     "caption": "자료 사진 · 파울루 벤투 감독",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 7,
+     "rule_top": true,
+     "kicker": "경과",
+     "title": "감독 거취 이야기의 흐름",
+     "items": [
+      {
+       "date": "10월 18일",
+       "title": "코스타 제주 감독 \"루머로 안다\"",
+       "text": "전주 원정 경기 전 기자회견에서 벤투 감독설을 두고 한 말",
+       "source_name": "SPOTV뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "11월 22일",
+       "title": "전북, 9월부터 후보군 정리 보도",
+       "text": "익명 관계자 근거, 벤투·토렌트 거론",
+       "state": "hot",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+       "tag": null,
+       "label": null,
+       "value": null
+      },
+      {
+       "date": "11월 23일",
+       "title": "벤투 후속 기사",
+       "text": "같은 매체가 벤투를 다룬 기사를 한 건 더 냈다",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611230100006/",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "11월 25일",
+       "title": "가시마 원정",
+       "text": "ACLE 리그 스테이지 5차전, 오후 7시",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "coach:c01",
+     "big": "정정용",
+     "paragraphs": [
+      "올 시즌 전북 감독",
+      "리그 12승 13무 11패",
+      "ACLE 2승 1무 1패"
+     ],
+     "caption": "정정용 · 전북현대 감독",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "기자 수첩",
+     "title": "판단은 발표를 보고 해도 늦지 않다",
+     "paragraphs": [
+      "감독 거취는 구단이 말할 일이다. 지금 손에 쥔 것은 익명 소식통을 근거로 한 기사 두 건뿐이다.",
+      "선수단은 수요일 가시마에서 ACLE 16강 길을 다툰다. 이번 주에 쌓을 승점은 누가 다음 시즌을 맡든 남는다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "선수단",
+   "teaser": "이탈로가 스스로 매긴 서울전 점수",
+   "folio": "선수단 · 인터뷰",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20260365",
+     "big": "7.5~8",
+     "paragraphs": [
+      "스스로 매긴 서울전 점수",
+      "슈팅 4개 · 골대 2번",
+      "패스 22개 중 20개 성공"
+     ],
+     "caption": "이탈로 · FW · 95번",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "선수 TMI",
+     "title": "이탈로, 서울전 자기 점수는 10점 만점에 7.5~8점",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "이탈로가 21일 서울전 뒤 골닷컴 인터뷰에서 자기 경기력에 10점 만점에 7.5~8점을 줬다. 그는 \"냉정하게 10점 중 7.5~8점이다\"라고 했다.",
+      "이탈로는 전반에 두 차례 골대를 맞힌 장면을 두고 팀에 도움이 되지 못해 아쉽다고 했다. 전반 경기력과 기회는 서울보다 나았고, 모자랐던 것은 마무리였다고 돌아봤다.",
+      "10점에 가까워지려면 무엇이 필요하냐는 물음에는 골이나 도움으로 승리를 만드는 것이라고 답했다. 조간이 22일 자 평점에서 매긴 점수는 7.5였다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "서울전 이탈로 점수 (10점 만점)",
+     "items": [
+      {
+       "label": "조간 평점 (22일 자)",
+       "value": 7.5,
+       "text": "7.5",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "본인 평가 (낮게)",
+       "value": 7.5,
+       "text": "7.5",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "본인 평가 (높게)",
+       "value": 8,
+       "text": "8.0",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "본인 평가는 골닷컴 인터뷰, 조간 평점은 제31호",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 6,
+     "rule_top": true,
+     "image": "commons:Italo:260912",
+     "caption": "자료 사진 · 2026년 9월 12일 전북-FC 서울 경기의 이탈로",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 12,
+     "rule_top": true,
+     "title": "골대는 두 번 울렸다. 이번 주에는 그물이 울릴 차례다",
+     "byline": "전주성 조간 한 줄 만평",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "전주성 사람들",
+   "teaser": "이민자 가족과 함께 본 홈경기",
+   "folio": "전주성 사람들",
+   "blocks": [
+    {
+     "type": "photo",
+     "span": 12,
+     "image": "commons:전주월드컵경기장:11",
+     "caption": "자료 사진 · 전주월드컵경기장 관중석",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "지역",
+     "title": "전주출입국사무소, 이민자들과 전북 홈경기 함께 관람",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전주출입국·외국인사무소가 전북현대와 협력해 관내 이민자들과 함께 전북 홈경기를 관람했다고 전라일보가 22일 보도했다. 지역사회 소통과 화합을 위한 행사다.",
+      "관람에는 전북글로벌유소년축구단 어린이들과 다문화 가정, 관내 체류 외국인들이 함께했다. 스포츠라는 공통 관심사로 외국인 주민의 소속감을 높이려는 취지라고 사무소는 설명했다.",
+      "김태완 소장은 축구가 언어와 문화의 차이를 넘어 함께 즐길 수 있는 스포츠라며, 지역사회와 함께 사회통합 프로그램을 이어 가겠다고 했다."
+     ],
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 4,
+     "rule_top": true,
+     "title": "행사 한눈에",
+     "items": [
+      {
+       "label": "주최",
+       "value": "전주출입국·외국인사무소",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "협력",
+       "value": "전북현대",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "함께한 사람들",
+       "value": "유소년축구단 어린이, 다문화 가정, 체류 외국인",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "취지",
+       "value": "지역사회 소통·화합",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표·커뮤니티 온도·퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "보도",
+       "title": "전북, 9월부터 차기 감독 후보군 검토",
+       "text": "익명 관계자 근거. 후보 다수는 외국인 지도자",
+       "source_name": "스포츠경향 11월 22일",
+       "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "벤투·토렌트 거론",
+       "text": "리그 안팎에서 거론되는 이름으로 소개. 접촉 여부는 기사에 없다",
+       "source_name": "스포츠경향 11월 23일",
+       "source_url": "https://sports.khan.co.kr/article/202611230100006/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "ACLE 5차전 25일 19시 가시마 원정",
+       "text": "가시마 사커 스타디움. 가시마 2위, 전북 8위",
+       "source_name": "J리그 경기 정보",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "바람",
+       "title": "가시마에서 이탈로의 골",
+       "text": "서울전 골대 두 번의 아쉬움을 풀어 주길 바라는 팬이 많다",
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "label": "감독설",
+       "text": "23일 새벽 벤투 기사가 뜨자 기사를 옮기고 반응을 나누는 글이 잇따랐다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "이적시장",
+       "text": "전북 관련 겨울 이적 루머를 기다린다는 글이 여럿 보였다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "추측",
+       "text": "다른 구단의 '연어' 영입 루머에 전북 선수 이름을 넣어 보는 추측 글도 있었다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "최종전",
+       "text": "12월 6일 홈 최종전 관중 수를 점쳐 보는 글이 올라왔다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "울산 원정",
+       "text": "29일 울산 원정을 걱정하는 글도 있었다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "스포츠경향 보도에서 벤투와 함께 거론된 스페인 출신 감독은?",
+       "text": "도메네크 토렌트",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "이탈로가 스스로 매긴 서울전 점수는?",
+       "text": "10점 만점에 7.5~8점",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "전북의 ACLE 5차전 상대와 날짜는?",
+       "text": "가시마 앤틀러스, 25일(수) 오후 7시",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "전북 차기 감독 후보군 검토 보도",
+       "text": "스포츠경향 11월 22일",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "벤투 관련 후속 기사",
+       "text": "스포츠경향 11월 23일",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611230100006/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "코스타 제주 감독 기자회견 (10월 18일)",
+       "text": "SPOTV뉴스",
+       "source_name": "SPOTV뉴스",
+       "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "가시마전 일정·ACLE 순위",
+       "text": "J리그 경기 정보",
+       "source_name": "J리그",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "이탈로 인터뷰",
+       "text": "골닷컴",
+       "source_name": "골닷컴",
+       "source_url": "https://goal.com/kr/%EB%89%B4%EC%8A%A4/goal-%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%84%87%E1%85%B2--%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%87%E1%85%AE%E1%86%A8-%E1%84%90%E1%85%A9%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B4-%E1%84%80%E1%85%A9%E1%86%AF%E1%84%83%E1%85%A2-2%E1%84%92%E1%85%AC-%E1%84%80%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A1-%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A1%E1%86%AF%E1%84%85%E1%85%A9--%E1%84%83%E1%85%A9%E1%84%8B%E1%85%AE%E1%86%B7%E1%84%83%E1%85%AC%E1%84%80%E1%85%A9-%E1%84%89%E1%85%B5%E1%87%81%E1%84%8B%E1%85%A5%E1%86%BB%E1%84%82%E1%85%B3%E1%86%AB%E1%84%83%E1%85%A6--%E1%84%82%E1%85%A2-%E1%84%8C%E1%85%A5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%82%E1%85%B3%E1%86%AB-7-5~8%E1%84%8C%E1%85%A5%E1%86%B7/blta47792b8e4056405",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "이민자 홈경기 관람 행사",
+       "text": "전라일보 11월 22일",
+       "source_name": "전라일보",
+       "source_url": "https://www.jeollailbo.com/news/articleView.html?idxno=817486",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "리그 순위·승점·지난 경기 기록",
+       "text": "K리그 데이터포털",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  },
+  "player:20260365": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260365.png",
+   "alt": "이탈로",
+   "back_no": 95,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 36,
+    "w": 21,
+    "d": 7,
+    "l": 8,
+    "gf": 63,
+    "ga": 32,
+    "pts": 70,
+    "rank": 1,
+    "gd": 31
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 36,
+    "w": 17,
+    "d": 6,
+    "l": 13,
+    "gf": 57,
+    "ga": 51,
+    "pts": 57,
+    "rank": 2,
+    "gd": 6
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 36,
+    "w": 15,
+    "d": 11,
+    "l": 10,
+    "gf": 58,
+    "ga": 42,
+    "pts": 56,
+    "rank": 3,
+    "gd": 16
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 36,
+    "w": 14,
+    "d": 10,
+    "l": 12,
+    "gf": 46,
+    "ga": 38,
+    "pts": 52,
+    "rank": 4,
+    "gd": 8
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 36,
+    "w": 12,
+    "d": 15,
+    "l": 9,
+    "gf": 45,
+    "ga": 37,
+    "pts": 51,
+    "rank": 5,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 36,
+    "w": 13,
+    "d": 12,
+    "l": 11,
+    "gf": 42,
+    "ga": 39,
+    "pts": 51,
+    "rank": 6,
+    "gd": 3
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 36,
+    "w": 12,
+    "d": 13,
+    "l": 11,
+    "gf": 45,
+    "ga": 37,
+    "pts": 49,
+    "rank": 7,
+    "gd": 8
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 36,
+    "w": 11,
+    "d": 14,
+    "l": 11,
+    "gf": 43,
+    "ga": 51,
+    "pts": 47,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 36,
+    "w": 11,
+    "d": 12,
+    "l": 13,
+    "gf": 34,
+    "ga": 43,
+    "pts": 45,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 36,
+    "w": 6,
+    "d": 20,
+    "l": 10,
+    "gf": 35,
+    "ga": 43,
+    "pts": 38,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 36,
+    "w": 7,
+    "d": 12,
+    "l": 17,
+    "gf": 37,
+    "ga": 55,
+    "pts": 33,
+    "rank": 11,
+    "gd": -18
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 36,
+    "w": 4,
+    "d": 14,
+    "l": 18,
+    "gf": 36,
+    "ga": 73,
+    "pts": 26,
+    "rank": 12,
+    "gd": -37
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 7,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 11,
+   "gf": 45,
+   "ga": 37
+  },
+  "form": [
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   },
+   {
+    "r": "L",
+    "label": "서울 0-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-29",
+   "time": "",
+   "home": "울산",
+   "away": "전북",
+   "opp": "울산 HD",
+   "opp_short": "울산",
+   "is_home": false,
+   "round": 37,
+   "venue": "",
+   "comp": "K리그1 37R",
+   "home_note": "2위 · 승점 57",
+   "away_note": "7위 · 승점 49",
+   "when_label": "11월 29일(일)",
+   "d_minus": 6
+  },
+  "last": {
+   "game_id": "211",
+   "date": "2026-11-21",
+   "round": 36,
+   "home": "전북",
+   "away": "서울",
+   "venue": "전주 월드컵",
+   "attendance": 8411,
+   "comp": "K리그1 36R",
+   "score": [
+    0,
+    1
+   ],
+   "date_label": "11월 21일(토)",
+   "weather": "맑음 4℃",
+   "referee": "김대용",
+   "managers": {
+    "home": "정정용",
+    "away": "김기동"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     2,
+     "MST",
+     91.6,
+     69.8
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     95.9,
+     51.5
+    ],
+    [
+     "H",
+     1,
+     18,
+     "BT",
+     79.5,
+     46.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     82.2,
+     29.8
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     81.4,
+     33.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     83.1,
+     52.1
+    ],
+    [
+     "H",
+     1,
+     30,
+     "BT",
+     81.0,
+     50.1
+    ],
+    [
+     "H",
+     1,
+     35,
+     "AST",
+     80.3,
+     29.2
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     91.9,
+     36.6
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     84.0,
+     56.3
+    ],
+    [
+     "H",
+     1,
+     43,
+     "AST",
+     95.2,
+     44.5
+    ],
+    [
+     "A",
+     1,
+     44,
+     "AST",
+     74.1,
+     39.4
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     95.1,
+     62.7
+    ],
+    [
+     "H",
+     2,
+     49,
+     "MST",
+     95.3,
+     32.9
+    ],
+    [
+     "A",
+     2,
+     50,
+     "MST",
+     76.4,
+     46.9
+    ],
+    [
+     "H",
+     2,
+     51,
+     "BT",
+     91.6,
+     65.2
+    ],
+    [
+     "A",
+     2,
+     52,
+     "AST",
+     92.2,
+     49.4
+    ],
+    [
+     "A",
+     2,
+     53,
+     "GL",
+     77.6,
+     39.7
+    ],
+    [
+     "H",
+     2,
+     56,
+     "AST",
+     77.7,
+     55.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "AST",
+     86.1,
+     58.0
+    ],
+    [
+     "A",
+     2,
+     76,
+     "AST",
+     84.7,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     79,
+     "MST",
+     84.6,
+     57.1
+    ],
+    [
+     "A",
+     2,
+     83,
+     "AST",
+     85.3,
+     41.4
+    ],
+    [
+     "H",
+     2,
+     86,
+     "MST",
+     86.2,
+     48.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "BT",
+     90.2,
+     55.0
+    ],
+    [
+     "A",
+     2,
+     90,
+     "MST",
+     96.5,
+     63.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "AST",
+     96.1,
+     57.4
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "안데르손",
+     "label": "54'",
+     "minute": 54,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     17,
+     10
+    ],
+    [
+     "유효슈팅",
+     5,
+     5
+    ],
+    [
+     "패스 성공",
+     380,
+     298
+    ],
+    [
+     "패스 성공률",
+     86.4,
+     82.3,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     2,
+     4
+    ],
+    [
+     "반칙",
+     7,
+     7
+    ],
+    [
+     "경고",
+     0,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}

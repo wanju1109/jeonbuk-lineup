@@ -1,0 +1,412 @@
+{
+ "no": 32,
+ "date": "2026-11-23",
+ "rows": [
+  {
+   "id": "5855d4fb14",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북 차기 감독 후보 검토 보도, 구단 공식 입장은 없어",
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "22일 입력 기사: 9월부터 물밑 후보군 추림, K리그 관계자 근거. 전북 구단 공식 입장·코멘트 없음 재확인"
+  },
+  {
+   "id": "0ef97b693d",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [],
+   "text": "스포츠경향이 22일 전북이 9월부터 차기 사령탑 후보군을 추려 왔다고 보도했다. 선수단은 25일 가시마 원정을 앞두고 있다",
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "스포츠경향 22일 보도 내용(9월부터 후보군) 재확인, 가시마전 25일은 J리그 경기 페이지"
+  },
+  {
+   "id": "090c016d33",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "D-2 · 25일(수) 19:00 가시마 원정 (ACLE)",
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25일(수) 19:00 JST(=KST), Kashima Soccer Stadium, ACLE 리그 스테이지 MD5"
+  },
+  {
+   "id": "853f5457a1",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "ACLE 동아시아 8위 · 2승 1무 1패",
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "전북 East 8위, 2승 1무 1패"
+  },
+  {
+   "id": "dbd88557bc",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "리그 승점 49 · 2경기 남음",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx data.jeonbuk pts 49, upcoming_league 2경기(37R 울산, 38R 인천)"
+  },
+  {
+   "id": "136b7a468f",
+   "where": "1면 hero '전북 차기 감독 후보 검토' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 정정용 감독",
+   "ref": {
+    "image": "commons:정정용:260411",
+    "desc": "정정용 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "commons:정정용:260411 desc '정정용 경기 사진. 2026.04.11 FC 서울 vs 전북'"
+  },
+  {
+   "id": "d524c4a204",
+   "where": "1면 hero '전북 차기 감독 후보 검토'",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북 차기 감독 후보 검토 보도, 구단 공식 입장은 없어 / 스포츠경향, 9월부터 후보군을 추려 왔다고 보도. 근거는 익명 관계자였고 거론된 이름은 벤투·토렌트",
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "9월부터 물밑 후보군 추림, K리그 정통 관계자 근거, 벤투·토렌트 거론, 공식 입장 없음"
+  },
+  {
+   "id": "87afff9d4b",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "기사에 거론된 이름은 파울루 벤투 전 한국 대표팀 감독과 스페인 출신 도메네크 토렌트 감독이다.",
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "'파울루 벤투 전 한국 축구대표팀 감독', 토렌트 스페인 출신"
+  },
+  {
+   "id": "cbdf332c74",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "선수단은 25일 오후 7시 일본 가시마 사커 스타디움에서 가시마 앤틀러스와 ACLE 리그 스테이지 5차전을 치른다.",
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25일 19:00 JST, Kashima Soccer Stadium, League Stage MD5 (East)"
+  },
+  {
+   "id": "4feb5ef4b3",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "리그는 29일 울산 원정과 12월 6일 인천 홈경기가 남았다.",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx upcoming_league: 11-29 울산(홈)-전북, 12-06 전북(홈)-인천"
+  },
+  {
+   "id": "8344937e13",
+   "where": "1면 figs '오늘의 숫자'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "25일(수) 19:00 가시마 원정 · ACLE 5차전 · D-2",
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25일(수) 19:00, MD5. D-2는 오늘 11-23 기준 계산"
+  },
+  {
+   "id": "f52ca53f1f",
+   "where": "2면 article '보도에 나온 것과 확인된 '",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "토렌트 감독은 바르셀로나·바이에른 뮌헨·맨체스터 시티에서 펩 과르디올라 감독을 보좌한 수석코치 출신이다.",
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "토렌트: 바르셀로나·바이에른 뮌헨·맨시티에서 과르디올라 보좌 수석코치, 뉴욕 시티·플라멩구·갈라타사라이 지휘"
+  },
+  {
+   "id": "8fa0b6dddc",
+   "where": "2면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 파울루 벤투 감독",
+   "ref": {
+    "image": "bento",
+    "desc": "파울루 벤투 감독 상반신. 세로에 가까움"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "bento desc '파울루 벤투 감독 상반신'"
+  },
+  {
+   "id": "70f3f47588",
+   "where": "2면 timeline '감독 거취 이야기의 흐름'",
+   "kind": "경과",
+   "risk": [],
+   "text": "10월 18일 코스타 제주 감독 \"루머로 안다\" · 전주 원정 경기 전 기자회견에서 벤투 감독설을 두고 한 말",
+   "ref": {
+    "source_name": "SPOTV뉴스",
+    "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805"
+   },
+   "grade": "보도",
+   "source_name": "SPOTV뉴스 10월 18일",
+   "source_url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1013805",
+   "verdict": "일치",
+   "memo": "10월 18일 32R 제주-전북(전주) 경기 전 기자회견, 코스타 '그것은 루머라고 알고 있다'"
+  },
+  {
+   "id": "de7182bdb3",
+   "where": "2면 timeline '감독 거취 이야기의 흐름'",
+   "kind": "경과",
+   "risk": [],
+   "text": "11월 22일 전북, 9월부터 후보군 정리 보도 · 익명 관계자 근거, 벤투·토렌트 거론",
+   "ref": {
+    "source_name": "스포츠경향",
+    "source_url": "https://sports.khan.co.kr/article/202611221609003/"
+   },
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "22일 16:09 입력, 익명 관계자 근거, 벤투·토렌트 거론"
+  },
+  {
+   "id": "7b333d052d",
+   "where": "2면 timeline '감독 거취 이야기의 흐름'",
+   "kind": "경과",
+   "risk": [],
+   "text": "11월 23일 벤투 후속 기사 · 같은 매체가 벤투를 다룬 기사를 한 건 더 냈다",
+   "ref": {
+    "source_name": "스포츠경향",
+    "source_url": "https://sports.khan.co.kr/article/202611230100006/"
+   },
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 23일",
+   "source_url": "https://sports.khan.co.kr/article/202611230100006/",
+   "verdict": "일치",
+   "memo": "23일 01:00 입력, 벤투를 다룬 기사, 전북 후보 검토 내용 포함"
+  },
+  {
+   "id": "f0ed3f8eba",
+   "where": "2면 timeline '감독 거취 이야기의 흐름'",
+   "kind": "경과",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "11월 25일 가시마 원정 · ACLE 리그 스테이지 5차전, 오후 7시",
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25일 19:00 JST, League Stage MD5"
+  },
+  {
+   "id": "c9a7665a7e",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "정정용 · 전북현대 감독",
+   "ref": {
+    "image": "coach:c01",
+    "desc": "정정용 감독"
+   },
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "'올 시즌 지휘봉을 잡은 정정용 감독' 전북 감독. 사진은 coach:c01 정정용 전북 현대 감독"
+  },
+  {
+   "id": "c44d106cf9",
+   "where": "3면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "이탈로 · FW · 95번",
+   "ref": {
+    "image": "player:20260365",
+    "desc": "이탈로"
+   },
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx photo_catalog player:20260365 이탈로 전북 FW 95번"
+  },
+  {
+   "id": "28c74d2e3a",
+   "where": "3면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 9월 12일 전북-FC 서울 경기의 이탈로",
+   "ref": {
+    "image": "commons:Italo:260912",
+    "desc": "Italo 경기 사진. 2026.09.12 전북 vs FC 서울"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "commons:Italo:260912 desc 'Italo 경기 사진. 2026.09.12 전북 vs FC 서울'"
+  },
+  {
+   "id": "a5d59475fb",
+   "where": "4면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 전주월드컵경기장 관중석",
+   "ref": {
+    "image": "commons:전주월드컵경기장:11",
+    "desc": "전주월드컵경기장: 전주월드컵경기장 관중석"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "commons:전주월드컵경기장:11 desc '전주월드컵경기장 관중석'"
+  },
+  {
+   "id": "79213157c6",
+   "where": "4면 article '전주출입국사무소, 이민자들'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "전주출입국사무소, 이민자들과 전북 홈경기 함께 관람",
+   "grade": "보도",
+   "source_name": "전라일보 11월 22일",
+   "source_url": "https://www.jeollailbo.com/news/articleView.html?idxno=817486",
+   "verdict": "일치",
+   "memo": "전주출입국·외국인사무소가 전북현대와 협력해 체류 외국인 등과 홈경기 관람"
+  },
+  {
+   "id": "5b3f2b3c91",
+   "where": "4면 article '전주출입국사무소, 이민자들'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "전주출입국·외국인사무소가 전북현대와 협력해 관내 이민자들과 함께 전북 홈경기를 관람했다고 전라일보가 22일 보도했다.",
+   "grade": "보도",
+   "source_name": "전라일보 11월 22일",
+   "source_url": "https://www.jeollailbo.com/news/articleView.html?idxno=817486",
+   "verdict": "일치",
+   "memo": "11-22 입력, 전북현대모터스FC와 협력, 체류 외국인 등과 홈경기 관람"
+  },
+  {
+   "id": "baa9917b98",
+   "where": "5면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 전북, 9월부터 차기 감독 후보군 검토 · 익명 관계자 근거. 후보 다수는 외국인 지도자",
+   "ref": {
+    "source_name": "스포츠경향 11월 22일",
+    "source_url": "https://sports.khan.co.kr/article/202611221609003/"
+   },
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "9월부터 후보군, 후보 다수 외국인 지도자, 익명 관계자"
+  },
+  {
+   "id": "45e48c62f1",
+   "where": "5면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 벤투·토렌트 거론 · 리그 안팎에서 거론되는 이름으로 소개. 접촉 여부는 기사에 없다",
+   "ref": {
+    "source_name": "스포츠경향 11월 23일",
+    "source_url": "https://sports.khan.co.kr/article/202611230100006/"
+   },
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "벤투·토렌트 '거론되는 대표적 이름'. 전북이 두 감독과 접촉했다는 문장 없음 확인"
+  },
+  {
+   "id": "1cdbf7c9b5",
+   "where": "5면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] ACLE 5차전 25일 19시 가시마 원정 · 가시마 사커 스타디움. 가시마 2위, 전북 8위",
+   "ref": {
+    "source_name": "J리그 경기 정보",
+    "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/"
+   },
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25일 19:00 JST, Kashima Soccer Stadium, 가시마 2위(3-1-0), 전북 8위(2-1-1)"
+  },
+  {
+   "id": "430cdc1ac8",
+   "where": "5면 quiz '오늘의 퀴즈'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "Q. 스포츠경향 보도에서 벤투와 함께 거론된 스페인 출신 감독은? / A. 도메네크 토렌트",
+   "grade": "보도",
+   "source_name": "스포츠경향 11월 22일",
+   "source_url": "https://sports.khan.co.kr/article/202611221609003/",
+   "verdict": "일치",
+   "memo": "스페인 출신 도메네크 토렌트"
+  },
+  {
+   "id": "a1f9bf931d",
+   "where": "5면 quiz '오늘의 퀴즈'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "Q. 전북의 ACLE 5차전 상대와 날짜는? / A. 가시마 앤틀러스, 25일(수) 오후 7시",
+   "grade": "보도",
+   "source_name": "J리그 경기 정보 (가시마-전북 ACLE)",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "가시마 앤틀러스, 25일(수) 19:00"
+  }
+ ]
+}
