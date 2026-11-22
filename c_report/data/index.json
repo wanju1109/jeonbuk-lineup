@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T19:51:02.603008+00:00",
+  "updated_at": "2026-11-22T20:53:10.517404+00:00",
   "matches": [
     {
       "game_id": "4",
@@ -537,7 +537,9 @@
       "venue": "전주 월드컵",
       "attendance": 8411,
       "file": "./data/211.json",
-      "label": "전북 VS 서울 (211, 11/21)"
+      "label": "전북 VS 서울 (211, 11/21)",
+      "attendance_home": 7315,
+      "attendance_away": 1096
     }
   ]
 }
