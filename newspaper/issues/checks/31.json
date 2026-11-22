@@ -1,0 +1,397 @@
+{
+ "no": 31,
+ "date": "2026-11-22",
+ "rows": [
+  {
+   "id": "84b1c90e33",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북, 홈에서 서울에 0-1… 이탈로 슈팅 두 번 골대 맞았다",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 구단뉴스(11월 21일 경기 결과)",
+   "source_url": "https://hyundai-motorsfc.com/media/news/100917",
+   "verdict": "일치",
+   "memo": "구단 글: 0-1 패, 전반 38분 이탈로 슈팅 골대, 전반 44분 오버헤드킥 크로스바"
+  },
+  {
+   "id": "039f58f089",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [],
+   "text": "후반 9분 안데르손에게 결승골을 내줬다. 전북은 승점 49, 파이널A 6위로 리그 두 경기를 남겼다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx last.goals 안데르손 54'(후반 9분), jeonbuk rank 6 pts 49, upcoming_league 2경기. 파이널A는 구단 글 '파이널A 36라운드'와 league.json 36~38R 대진으로 확인"
+  },
+  {
+   "id": "3e6db89af8",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "36R 전북 0-1 서울",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx last round 36, score [0,1]"
+  },
+  {
+   "id": "dce05e1eab",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "6위 · 승점 49 · 리그 2경기 남음",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx jeonbuk rank 6 pts 49, upcoming_league 2경기"
+  },
+  {
+   "id": "4f474056f4",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "D-3 · 25일(수) 19:00 가시마 원정(ACLE)",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "28c74d2e3a",
+   "where": "1면 hero '전북, 홈에서 서울에 0-' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 9월 12일 전북-FC 서울 경기의 이탈로",
+   "ref": {
+    "image": "commons:Italo:260912",
+    "desc": "Italo 경기 사진. 2026.09.12 전북 vs FC 서울"
+   },
+   "grade": "사진정보",
+   "source_name": "Wikimedia Commons",
+   "source_url": "https://commons.wikimedia.org/wiki/File:260912_%EC%A0%84%EB%B6%81_vs_FC_%EC%84%9C%EC%9A%B8_(Italo).jpg",
+   "verdict": "일치",
+   "memo": "파일 이름 '260912 전북 vs FC 서울 (Italo)'와 일치"
+  },
+  {
+   "id": "103c5d87a0",
+   "where": "1면 hero '전북, 홈에서 서울에 0-'",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북, 홈에서 서울에 0-1… 이탈로 슈팅 두 번 골대 맞았다 / 슈팅 17개 대 10개로 앞서고도 무득점. 올 시즌 서울전은 1무 3패로 끝났다",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 구단뉴스(11월 21일 경기 결과)",
+   "source_url": "https://hyundai-motorsfc.com/media/news/100917",
+   "verdict": "일치",
+   "memo": "골대 두 번은 구단 글. 슈팅 17-10은 ctx last.compare, 서울전 1무 3패는 league.json 7·21·29·36R"
+  },
+  {
+   "id": "804a08f247",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "소속·경력",
+    "일정·장소"
+   ],
+   "text": "전북현대가 21일 전주월드컵경기장에서 열린 K리그1 36라운드 홈경기에서 FC 서울에 0-1로 졌다.",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 구단뉴스(11월 21일 경기 결과)",
+   "source_url": "https://hyundai-motorsfc.com/media/news/100917",
+   "verdict": "일치",
+   "memo": "구단 글: 21일 오후 2시 전주월드컵경기장, 파이널A 36라운드 홈 경기 0-1 패"
+  },
+  {
+   "id": "8bee005d58",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "리그는 29일 울산 원정, 12월 6일 인천과의 홈경기가 남았다.",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "c35592d696",
+   "where": "1면 figs '오늘의 숫자'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "25일(수) 19:00 가시마 원정 · D-3",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "3ba08424a9",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "안데르손 · FC 서울",
+   "ref": {
+    "image": "player:20240179",
+    "desc": "안데르손"
+   },
+   "grade": "사진정보",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "K리그 선수 프로필 사진, ctx photo_catalog 안데르손/서울"
+  },
+  {
+   "id": "136b7a468f",
+   "where": "2면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울-전북 경기의 정정용 감독",
+   "ref": {
+    "image": "commons:정정용:260411",
+    "desc": "정정용 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "Wikimedia Commons",
+   "source_url": "https://commons.wikimedia.org/wiki/File:260411_FC_%EC%84%9C%EC%9A%B8_vs_%EC%A0%84%EB%B6%81_(%EC%A0%95%EC%A0%95%EC%9A%A9).jpg",
+   "verdict": "일치",
+   "memo": "파일 이름 '260411 FC 서울 vs 전북 (정정용)'와 일치"
+  },
+  {
+   "id": "3b0a8c7cba",
+   "where": "3면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "김태현 · 조간 선정 숨은 MVP",
+   "ref": {
+    "image": "player:20180185",
+    "desc": "김태현"
+   },
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx last.players 김태현 def_actions 17(두 팀 최다). 숨은 MVP는 조간 자체 선정"
+  },
+  {
+   "id": "c5d28c5773",
+   "where": "3면 cutout",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "숨은 MVP",
+   "grade": "의견",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "조간 자체 선정"
+  },
+  {
+   "id": "6be1dee713",
+   "where": "3면 cutout",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "수비 기여 17회, 두 팀 최다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx last.players def_actions: 김태현 17, 이상민 14, 로스 14"
+  },
+  {
+   "id": "43cc3b701f",
+   "where": "4면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "이탈로 · 평점 7.5(조간 선정)",
+   "ref": {
+    "image": "player:20260365",
+    "desc": "이탈로"
+   },
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "조간 자체 평점. ctx last.players 이탈로 shots 4, pass 20/22, minutes 75"
+  },
+  {
+   "id": "4516b6cebc",
+   "where": "5면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "전병관 · 올 시즌 전북 첫 리그 출전",
+   "ref": {
+    "image": "player:20210124",
+    "desc": "전병관"
+   },
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx notables 전병관 '시즌 첫 출전'(올 시즌 전북 리그 경기 기록 기준), 선발 61분"
+  },
+  {
+   "id": "f694ad4cd2",
+   "where": "5면 article '전병관, 올 시즌 전북에서'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "전병관, 올 시즌 전북에서 처음 리그 경기에 나섰다",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx notables 전병관 '시즌 첫 출전'. 리그 경기 기록만 본 것이라 '리그'로 한정"
+  },
+  {
+   "id": "b39accab89",
+   "where": "5면 article '전병관, 올 시즌 전북에서'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "전병관이 올 시즌 전북 유니폼을 입고 처음 리그 경기에 나섰다.",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "https://data.kleague.com",
+   "verdict": "일치",
+   "memo": "ctx notables 전병관 '시즌 첫 출전'. 리그 경기 기록만 본 것이라 '리그'로 한정"
+  },
+  {
+   "id": "4586f2160e",
+   "where": "5면 article '전병관, 올 시즌 전북에서'",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "전병관은 경기 뒤 상무 시절부터 몸이 좋지 않아 복귀한 뒤에도 치료와 재활을 함께 했다고 말했다.",
+   "grade": "보도",
+   "source_name": "OSEN 2026-11-22(네이트 스포츠 게재)",
+   "source_url": "https://m.news.nate.com/view/20261122n01632",
+   "verdict": "일치",
+   "memo": "'상무에 있을 때부터 몸이 계속 좋지 않았다. 복귀한 뒤에도 운동을 쉬지 않으면서 치료와 재활을 병행했다'"
+  },
+  {
+   "id": "b209b8637f",
+   "where": "5면 table '전북의 남은 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "11월 25일(수) 19:00 · 가시마 앤틀러스 원정 · ACLE · 메루카리 스타디움",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "59bf6c1c53",
+   "where": "5면 table '전북의 남은 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "11월 29일(일) 14:00 · 울산 원정 · K리그1 37R · 울산문수축구경기장",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "5ef817bf34",
+   "where": "5면 table '전북의 남은 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "12월 2일(수) 19:00 · 감바 오사카 홈 · ACLE · 전주월드컵경기장",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "b65c94dd78",
+   "where": "5면 table '전북의 남은 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "12월 6일(일) 14:00 · 인천 홈 · K리그1 38R · 전주월드컵경기장",
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "f23cb8f92c",
+   "where": "6면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[공식] 서울전 0-1 패, 구단 경기 결과 발표 · 구단 홈페이지가 21일 경기 결과와 정정용 감독의 기자회견 내용을 올렸다",
+   "ref": {
+    "source_name": "전북현대 홈페이지 구단뉴스",
+    "source_url": "https://hyundai-motorsfc.com/media/news/100917"
+   },
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 구단뉴스(11월 21일 경기 결과)",
+   "source_url": "https://hyundai-motorsfc.com/media/news/100917",
+   "verdict": "일치",
+   "memo": "구단뉴스 100917(경기 결과), 100918(감독 기자회견) 모두 11월 21일 게시"
+  },
+  {
+   "id": "28e0e63873",
+   "where": "6면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[공식] 남은 일정 네 경기 · 25일 가시마 원정, 29일 울산 원정, 12월 2일 감바 오사카 홈, 6일 인천 홈",
+   "ref": {
+    "source_name": "전북현대 홈페이지 경기일정",
+    "source_url": "https://hyundai-motorsfc.com/match/schedule/list"
+   },
+   "grade": "공식",
+   "source_name": "전북현대 홈페이지 A팀 경기일정",
+   "source_url": "https://hyundai-motorsfc.com/match/schedule/list",
+   "verdict": "일치",
+   "memo": "구단 일정표 원문: 11.25(수) 19:00 메루카리스타디움 가시마(AWAY), 11.29(일) 14:00 울산문수 37R(AWAY), 12.02(수) 19:00 전주 감바 오사카(HOME), 12.06(일) 14:00 전주 38R 인천(HOME)"
+  },
+  {
+   "id": "0a7a7bca29",
+   "where": "6면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "[보도] 이동준, 독감으로 서울전 결장 · 전북일보는 정정용 감독이 독감으로 빠진 이동준 대신 전병관을 선발로 냈다고 전했다",
+   "ref": {
+    "source_name": "전북일보",
+    "source_url": "https://www.jjan.kr/article/20261121500026"
+   },
+   "grade": "보도",
+   "source_name": "전북일보 2026-11-21",
+   "source_url": "https://www.jjan.kr/article/20261121500026",
+   "verdict": "일치",
+   "memo": "'정정용 감독은 독감으로 빠진 이동준 대신 전역 후 합류한 전병관을 선발로 내세웠다'. ctx 출전 명단에 이동준 없음"
+  }
+ ]
+}
