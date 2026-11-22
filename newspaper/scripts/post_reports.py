@@ -17,6 +17,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 if sys.stdout is None:  # 작업 스케줄러(pythonw)에는 콘솔이 없다
@@ -101,17 +102,35 @@ def preview_job(today: dt.date) -> dict | None:
     return {"key": f"preview:{m['game_id']}", "title": title, "html": body("전북 매치 프리뷰", url, 920, lines)}
 
 
-def record_in_repo(key: str, url: str) -> None:
-    """클라우드 점검 루틴이 볼 수 있게 저장소에도 게시 기록을 남긴다(newspaper/issues/reports_posted.json)."""
+def record_in_repo(state: dict) -> None:
+    """클라우드 점검 루틴이 볼 수 있게 저장소에도 게시 기록을 남긴다(newspaper/issues/reports_posted.json).
+
+    이 PC의 기록(state)에 있는데 저장소 파일에 없는 것을 모두 옮긴다. 커밋이 한 번 실패해도
+    (2026-11-22에 add까지만 되고 커밋이 안 된 적이 있다) 다음 실행 때 다시 시도해서 채운다.
+    """
     path = ROOT / "newspaper" / "issues" / "reports_posted.json"
     data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    data[key] = url
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    missing = {k: v for k, v in state.items() if str(v).startswith("http") and data.get(k) != v}
     git = ["git", "-C", str(ROOT)]
-    subprocess.run(git + ["add", str(path)], check=False)
-    if subprocess.run(git + ["commit", "-q", "-m", f"chore(newspaper): {key} 에버그린 게시 기록"], check=False).returncode == 0:
-        subprocess.run(git + ["pull", "-q", "--rebase"], check=False)
-        subprocess.run(git + ["push", "-q"], check=False)
+    run = lambda *a: subprocess.run(git + list(a), capture_output=True, text=True, encoding="utf-8", errors="replace", check=False)  # noqa: E731
+    pending = run("status", "--porcelain", "--", str(path)).stdout.strip() != ""  # 지난번에 커밋하지 못한 변경
+    if not missing and not pending:
+        return
+    if missing:
+        data.update(missing)
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    run("add", str(path))
+    label = ", ".join(missing) or "리포트"
+    for attempt in (1, 2, 3):
+        r = run("commit", "-q", "-m", f"chore(newspaper): {label} 에버그린 게시 기록")
+        if r.returncode == 0:
+            run("pull", "-q", "--rebase")
+            p = run("push", "-q")
+            if p.returncode != 0:
+                log(f"게시 기록 push 실패: {(p.stdout + p.stderr).strip()[:200]}")
+            return
+        log(f"게시 기록 커밋 실패({attempt}/3): {(r.stdout + r.stderr).strip()[:200]}")
+        time.sleep(5)
 
 
 def main() -> None:
@@ -123,6 +142,8 @@ def main() -> None:
 
     subprocess.run(["git", "-C", str(ROOT), "pull", "-q", "--ff-only"], check=False)
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
+    if not args.dry_run:
+        record_in_repo(state)  # 지난 실행에서 저장소에 남기지 못한 기록이 있으면 채운다
     jobs = [j for j in (match_report_job(today), preview_job(today)) if j and (j["key"] not in state or args.dry_run)]
     if not jobs:
         return
@@ -143,7 +164,7 @@ def main() -> None:
             if not args.dry_run:
                 state[j["key"]] = result
                 STATE.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
-                record_in_repo(j["key"], result)
+                record_in_repo(state)
     except EvergreenError as e:
         log(f"리포트·프리뷰 게시 실패: {e}")
         sys.exit(1)
