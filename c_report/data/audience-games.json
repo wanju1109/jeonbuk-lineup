@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T20:53:09.428986+00:00",
+  "updated_at": "2026-11-24T01:57:23.828273+00:00",
   "year": "2026",
   "league_id": "1",
   "source": "kleague.com/record/audienceDetailList.do",
@@ -2679,6 +2679,20 @@
       "weekday": "주말",
       "meet_seq": 1
     },
+    "216": {
+      "game_id": "216",
+      "year": "2026",
+      "date": "2026-11-22",
+      "home": "광주",
+      "away": "부천",
+      "score": "4:2",
+      "venue": "광주 월드컵 경기장",
+      "attendance": 2545,
+      "attendance_home": 2435,
+      "attendance_away": 110,
+      "weekday": "주말",
+      "meet_seq": 1
+    },
     "147": {
       "game_id": "147",
       "year": "2026",
@@ -2970,20 +2984,6 @@
       "attendance": 1125,
       "attendance_home": 835,
       "attendance_away": 290,
-      "weekday": "주말",
-      "meet_seq": 1
-    },
-    "216": {
-      "game_id": "216",
-      "year": "2026",
-      "date": "2026-11-22",
-      "home": "광주",
-      "away": "부천",
-      "score": "4:2",
-      "venue": "광주 월드컵 경기장",
-      "attendance": 1091,
-      "attendance_home": 981,
-      "attendance_away": 110,
       "weekday": "주말",
       "meet_seq": 1
     },
