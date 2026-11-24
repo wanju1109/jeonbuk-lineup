@@ -1,0 +1,332 @@
+{
+ "no": 34,
+ "date": "2026-11-25",
+ "rows": [
+  {
+   "id": "6d6e87a845",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북, 오늘 19시 가시마 원정 ACLE 5차전… 동아시아 8위에서 출발",
+   "grade": "보도",
+   "source_name": "J리그 경기 페이지",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25일 19:00 가시마 대 전북 ACLE MD5, 전북 8위 2승1무1패"
+  },
+  {
+   "id": "a55894ccdf",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "전북이 25일 오후 7시 가시마 사커 스타디움에서 ACLE 리그 스테이지 5차전을 치른다. 2승 1무 1패 승점 7로 8위, 상대 가시마는 4경기 1실점으로 2위다. 정정용 감독은 포항의 0-3 패배를 반면교사로 삼겠다고 했다",
+   "grade": "보도",
+   "source_name": "이투데이",
+   "source_url": "https://www.etoday.co.kr/news/view/2652450",
+   "verdict": "일치",
+   "memo": "25일 오후 7시 가시마 사커 스타디움, 전북 2승1무1패 승점7 8위, 가시마 4경기 1실점 2위, 포항 0-3 경기 분석(포포투 101239 '반면교사')"
+  },
+  {
+   "id": "a2a73b4463",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "오늘 19:00 · 가시마 원정 (ACLE 5차전)",
+   "grade": "보도",
+   "source_name": "J리그 경기 페이지",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25일 19:00, ACLE MD5, 가시마 홈"
+  },
+  {
+   "id": "25ec253e15",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "ACLE 동아시아 8위 · 승점 7",
+   "grade": "보도",
+   "source_name": "J리그 순위표",
+   "source_url": "https://www.jleague.jp/en/acle/standings/2026/",
+   "verdict": "일치",
+   "memo": "전북 8위 승점 7"
+  },
+  {
+   "id": "817abc901c",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "D-4 · 29일(일) 울산 원정 (K리그1 37R)",
+   "grade": "기록",
+   "source_name": "K리그 데이터포털",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx data.next: 2026-11-29 울산 홈, 전북 원정, 37R, d_minus 4"
+  },
+  {
+   "id": "3a5b8005a0",
+   "where": "1면 hero '전북, 오늘 19시 가시마' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 모따, 2026년 4월 11일 FC 서울 대 전북 경기",
+   "ref": {
+    "image": "commons:Bruno Mota:260411",
+    "desc": "Bruno Mota 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "commons:Bruno Mota:260411 desc 'Bruno Mota 경기 사진. 2026.04.11 FC 서울 vs 전북'"
+  },
+  {
+   "id": "e80acbe69e",
+   "where": "1면 hero '전북, 오늘 19시 가시마'",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북, 오늘 19시 가시마 원정 ACLE 5차전… 동아시아 8위에서 출발 / 가시마는 4경기에서 11골을 넣고 1골만 내줬다. 전북은 지난 경기 조호르전에서 모따와 이탈로가 골을 넣었다",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239",
+   "verdict": "일치",
+   "memo": "가시마 4경기 11골 1실점, 조호르전 모따·이탈로 연속골 2-0"
+  },
+  {
+   "id": "7bd633d9dc",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "전북이 25일 오후 7시 일본 이바라키현 가시마 사커 스타디움에서 가시마 앤틀러스와 2026-27 AFC 챔피언스리그 엘리트(ACLE) 동아시아 리그 스테이지 5차전을 치른다.",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239",
+   "verdict": "일치",
+   "memo": "25일 오후 7시 가시마 사커 스타디움(포포투 101249 이바라키현), 2026-27 ACLE 동아시아 리그 스테이지 5차전, 전북 2승1무1패 승점7 8위"
+  },
+  {
+   "id": "b14011257f",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "정정용 감독은 24일 경기장에서 열린 사전 기자회견에서 포항이 가시마에 0-3으로 진 경기를 분석했다고 밝혔다.",
+   "grade": "보도",
+   "source_name": "이투데이",
+   "source_url": "https://www.etoday.co.kr/news/view/2652450",
+   "verdict": "일치",
+   "memo": "24일 경기장 사전 기자회견, 포항 0-3 경기 분석. 마무리 고민은 포포투 101239 원문"
+  },
+  {
+   "id": "f6622d62bc",
+   "where": "1면 figs '오늘의 숫자'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "킥오프 · 가시마 사커 스타디움 · 19:00",
+   "grade": "보도",
+   "source_name": "J리그 경기 페이지",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "Kickoff 19:00, Kashima Soccer Stadium"
+  },
+  {
+   "id": "a67018a0ed",
+   "where": "2면 article '정정용 감독, 가시마 경기'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "정정용 감독은 24일 가시마 사커 스타디움에서 열린 사전 기자회견에서 가시마를 J리그의 오랜 명문으로 평가했다.",
+   "grade": "보도",
+   "source_name": "이투데이",
+   "source_url": "https://www.etoday.co.kr/news/view/2652450",
+   "verdict": "일치",
+   "memo": "24일 경기장 사전 기자회견, '일본을 대표하는 구단이며 J리그에서 유구한 역사', 승점 3점 최선"
+  },
+  {
+   "id": "fe98f3968f",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "정정용 감독",
+   "ref": {
+    "image": "coach:c01",
+    "desc": "정정용 감독"
+   },
+   "grade": "사진정보",
+   "source_name": "photo_catalog",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "coach:c01 정정용 감독 프로필"
+  },
+  {
+   "id": "38df38f9f9",
+   "where": "2면 table '경기 정보'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "일시 · 11월 25일(수) 오후 7시 (한국·일본 같은 시각)",
+   "grade": "보도",
+   "source_name": "J리그 경기 페이지",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "25 Nov 2026 19:00 JST, 포포투는 오후 7시(한국시간)"
+  },
+  {
+   "id": "eba177e161",
+   "where": "2면 table '경기 정보'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "중계 · 쿠팡플레이 (2026-27 ACLE 중계사)",
+   "grade": "보도",
+   "source_name": "인사이트",
+   "source_url": "https://www.insight.co.kr/news/573620",
+   "verdict": "일치",
+   "memo": "2026-09-15 기사: 쿠팡플레이 2026-27 AFC 챔피언스리그 생중계, 전북 등 K리그 5개 구단 아시아 경기 중계"
+  },
+  {
+   "id": "67b8855bca",
+   "where": "3면 cutout",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "이탈로와 연속골",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239",
+   "verdict": "일치",
+   "memo": "3일 조호르전 모따와 이탈로의 연속골 2-0"
+  },
+  {
+   "id": "bfda1620e9",
+   "where": "3면 article 'J리그 프리뷰가 지목한 전'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "모따와 이탈로가 연속골을 넣었다.",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239",
+   "verdict": "일치",
+   "memo": "3일 조호르전 모따와 이탈로의 연속골 2-0"
+  },
+  {
+   "id": "2814e647c0",
+   "where": "4면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2010 AFC 챔피언스리그 애들레이드 유나이티드 대 전북 경기",
+   "ref": {
+    "image": "commons:전북현대:1",
+    "desc": "전북현대: 2010 AFC Champions League Adelaide United vs Jeonbuk Hyundai Motors"
+   },
+   "grade": "사진정보",
+   "source_name": "library.json",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "commons:전북현대:1 desc '2010 AFC Champions League Adelaide United vs Jeonbuk Hyundai Motors'"
+  },
+  {
+   "id": "e45fac1f10",
+   "where": "4면 table '전북의 다음 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "12월 2일(수) 19:00 · 감바 오사카 홈 · ACLE 6차전",
+   "grade": "보도",
+   "source_name": "J리그 ACLE 페이지",
+   "source_url": "https://www.jleague.jp/en/acle/",
+   "verdict": "일치",
+   "memo": "Wed 2 Dec 19:00 JBM vs GAM (전북 먼저 표기, 홈)"
+  },
+  {
+   "id": "0642beb98b",
+   "where": "4면 box '전북현대·현대위아, 도내 '",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "전달식은 21일 서울과의 홈경기에 앞서 열렸다.",
+   "grade": "보도",
+   "source_name": "투데이안",
+   "source_url": "https://www.todayan.com/news/articleView.html?idxno=638544",
+   "verdict": "일치",
+   "memo": "'지난 21일 FC서울과의 홈경기에 앞서 차량 전달식'"
+  },
+  {
+   "id": "eaf134a7a6",
+   "where": "4면 box '전북현대·현대위아, 도내 '",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "현대위아가 2013년부터 임직원 급여 1%를 모아 해 온 '드림카' 사업에 전북현대가 함께하면서 전북 지역에서는 처음으로 차량 지원이 이뤄졌다.",
+   "grade": "보도",
+   "source_name": "투데이안",
+   "source_url": "https://www.todayan.com/news/articleView.html?idxno=638544",
+   "verdict": "일치",
+   "memo": "현대위아 2013년부터 임직원 급여의 1% 드림카, '전북 지역에서는 처음으로 차량 지원'"
+  },
+  {
+   "id": "ed6167559e",
+   "where": "5면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 정정용 감독 \"승점 3점 가져가도록 최선\" · 24일 가시마 사전 기자회견",
+   "ref": {
+    "source_name": "이투데이",
+    "source_url": "https://www.etoday.co.kr/news/view/2652450"
+   },
+   "grade": "보도",
+   "source_name": "이투데이",
+   "source_url": "https://www.etoday.co.kr/news/view/2652450",
+   "verdict": "일치",
+   "memo": "24일 사전 기자회견 '승점 3점을 가져갈 수 있도록 최선을 다하겠다'"
+  },
+  {
+   "id": "318ecce846",
+   "where": "5면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 가시마, ACLE 4경기 11득점 1실점 · 동아시아 2위, 승점 10",
+   "ref": {
+    "source_name": "포포투",
+    "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239"
+   },
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239",
+   "verdict": "일치",
+   "memo": "가시마 3승1무 승점10 2위, 4경기 11골 1실점"
+  },
+  {
+   "id": "a21b7458bc",
+   "where": "5면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 전북현대·현대위아 차량 2대 기부 · 21일 서울전 앞두고 전달식",
+   "ref": {
+    "source_name": "투데이안",
+    "source_url": "https://www.todayan.com/news/articleView.html?idxno=638544"
+   },
+   "grade": "보도",
+   "source_name": "투데이안",
+   "source_url": "https://www.todayan.com/news/articleView.html?idxno=638544",
+   "verdict": "일치",
+   "memo": "차량 2대(기관 2곳 1대씩), 21일 서울 홈경기 앞 전달식"
+  }
+ ]
+}

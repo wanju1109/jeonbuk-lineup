@@ -1,0 +1,1620 @@
+{
+ "no": 34,
+ "date": "2026-11-25",
+ "matchday_after": false,
+ "headline": "전북, 오늘 19시 가시마 원정 ACLE 5차전… 동아시아 8위에서 출발",
+ "summary": "전북이 25일 오후 7시 가시마 사커 스타디움에서 ACLE 리그 스테이지 5차전을 치른다. 2승 1무 1패 승점 7로 8위, 상대 가시마는 4경기 1실점으로 2위다. 정정용 감독은 포항의 0-3 패배를 반면교사로 삼겠다고 했다",
+ "strip": [
+  "오늘 19:00 · 가시마 원정 (ACLE 5차전)",
+  "ACLE 동아시아 8위 · 승점 7",
+  "D-4 · 29일(일) 울산 원정 (K리그1 37R)"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제34호 · 2026.11.25 (수)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:Bruno Mota:260411",
+     "kicker": "ACLE 5차전 · 오늘 19시",
+     "title": "전북, 오늘 19시 가시마 원정 ACLE 5차전… 동아시아 8위에서 출발",
+     "dek": "가시마는 4경기에서 11골을 넣고 1골만 내줬다. 전북은 지난 경기 조호르전에서 모따와 이탈로가 골을 넣었다",
+     "caption": "자료 사진 · 모따, 2026년 4월 11일 FC 서울 대 전북 경기",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북이 25일 오후 7시 일본 이바라키현 가시마 사커 스타디움에서 가시마 앤틀러스와 2026-27 AFC 챔피언스리그 엘리트(ACLE) 동아시아 리그 스테이지 5차전을 치른다. 전북은 2승 1무 1패, 승점 7로 동아시아 8위다.",
+      "가시마는 3승 1무, 승점 10으로 2위다. 4경기에서 11골을 넣고 1골만 내줬다. 다만 직전 4차전에서는 부리람 유나이티드와 0-0으로 비기며 3연승이 멈췄다.",
+      "정정용 감독은 24일 경기장에서 열린 사전 기자회견에서 포항이 가시마에 0-3으로 진 경기를 분석했다고 밝혔다. 공격에서 어떻게 마무리까지 갈지 고민하고 있다고 했다.",
+      "전북은 이달 3일 4차전에서 조호르 다룰 탁짐을 2-0으로 꺾었다. 모따와 이탈로가 골을 넣었다. 전북은 29일 울산 원정으로 리그 37라운드를 치르고, 12월 2일 감바 오사카를 홈으로 불러 ACLE 6차전을 치른다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "19:00",
+       "label": "킥오프 · 가시마 사커 스타디움",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "8위",
+       "label": "전북 ACLE 동아시아 순위 · 승점 7",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "1실점",
+       "label": "가시마의 ACLE 4경기 실점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "11골",
+       "label": "가시마의 ACLE 4경기 득점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "오늘의 경기",
+   "teaser": "정정용 감독 \"포항전 반면교사\", 박지수 \"분수령\"",
+   "folio": "오늘의 경기 · ACLE 5차전 가시마 원정",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "사전 기자회견",
+     "title": "정정용 감독, 가시마 경기 모두 분석했다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "정정용 감독은 24일 가시마 사커 스타디움에서 열린 사전 기자회견에서 가시마를 J리그의 오랜 명문으로 평가했다. 그러면서 승점 3점을 가져가도록 최선을 다하겠다고 말했다.",
+      "정 감독은 가시마의 경기를 모두 분석했다고 했다. 특히 포항이 가시마에 0-3으로 진 경기를 두고 \"반면교사 삼아서 잘 준비해야 한다\"고 말했다.",
+      "가시마가 실점이 적은 이유로는 공수 조직력과 균형을 꼽았다. 리그와 ACLE를 3~4일 간격으로 치르는 만큼 선수 컨디션을 나눠 관리하고 있다고도 밝혔다. ACLE에서 진 경기는 비셀 고베전 하나뿐이라는 점도 짚었다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 5,
+     "image": "coach:c01",
+     "big": "승점 3",
+     "paragraphs": [
+      "가시마 경기 모두 분석",
+      "포항 0-3 패배 참고",
+      "공격 마무리가 과제"
+     ],
+     "caption": "정정용 감독",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20130142",
+     "big": "분수령",
+     "paragraphs": [
+      "기자회견 동석",
+      "2019년 이곳에서 8강",
+      "가시마 수비 조직 경계"
+     ],
+     "caption": "박지수",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "선수 TMI",
+     "title": "박지수, 7년 전 이곳에서 8강을 치렀다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "사전 기자회견에는 수비수 박지수가 함께 나왔다. 박지수는 광저우 헝다에서 뛰던 2019년 이곳에서 8강전을 치른 적이 있다며 그때의 좋은 기억을 되살리겠다고 했다.",
+      "박지수는 가시마가 4경기에서 1골만 내준 것은 수비 조직력이 좋다는 뜻이라고 평가했다. 리그와 ACLE는 다른 무대이고, 이번 경기가 더 높이 올라갈 수 있는 분수령이라고 말했다.",
+      "가시마의 오니키 토루 감독도 사전 기자회견에서 이번 시즌 ACLE 우승을 큰 목표로 내걸었다고 밝혔다."
+     ],
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "두 팀의 ACLE 4경기",
+     "items": [
+      {
+       "label": "전북",
+       "value": "2승 1무 1패 · 6득점 5실점 · 승점 7 (8위)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "가시마",
+       "value": "3승 1무 · 11득점 1실점 · 승점 10 (2위)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 직전 경기",
+       "value": "4차전 조호르 다룰 탁짐 2-0 승",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "가시마 직전 경기",
+       "value": "4차전 부리람 유나이티드 0-0 무",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "경기 정보",
+     "items": [
+      {
+       "label": "대회",
+       "value": "ACLE 동아시아 리그 스테이지 5차전",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "일시",
+       "value": "11월 25일(수) 오후 7시 (한국·일본 같은 시각)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "장소",
+       "value": "일본 이바라키현 가시마 사커 스타디움",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "중계",
+       "value": "쿠팡플레이 (2026-27 ACLE 중계사)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "현지 날씨",
+       "value": "24일 훈련 때 바람 강하고 비 예보",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "키플레이어",
+   "teaser": "J리그도 지목한 이탈로, 직전 경기 득점한 모따",
+   "folio": "오늘의 경기 · 키플레이어",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 6,
+     "image": "player:20260365",
+     "big": "주목",
+     "paragraphs": [
+      "가시와전 결승골",
+      "조호르전 득점",
+      "J리그 프리뷰 주목 선수"
+     ],
+     "caption": "이탈로",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 6,
+     "image": "player:20230224",
+     "big": "골",
+     "paragraphs": [
+      "조호르전 득점",
+      "4차전 2-0 승리",
+      "이탈로와 연속골"
+     ],
+     "caption": "모따",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "키플레이어",
+     "title": "J리그 프리뷰가 지목한 전북 선수는 이탈로",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "J리그 공식 홈페이지는 5차전 프리뷰에서 전북의 주목할 선수로 이탈로를 꼽았다. 이탈로는 1차전 가시와 레이솔전에서 2-1 승리를 결정한 골을 넣었다.",
+      "전북은 이달 3일 4차전에서 조호르 다룰 탁짐을 2-0으로 이겼다. 모따와 이탈로가 연속골을 넣었다. 두 선수가 오늘 4경기 1실점의 가시마 수비를 상대한다.",
+      "J리그 프리뷰는 가시마가 부리람전에서 슈팅을 훨씬 많이 하고도 골을 넣지 못했다며 마무리가 과제라고 짚었다. 두 팀 모두 결정력이 승부를 가를 경기다."
+     ],
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 4,
+     "rule_top": true,
+     "title": "11골 넣고 1골 내준 상대에게, 전북은 몇 골이 필요할까",
+     "byline": "한 줄 만평 · 전주성 조간",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "ACLE 판도",
+   "teaser": "8위까지 16강, 4위부터 승점 10에 몰렸다",
+   "folio": "ACLE 판도 · 24일 경기까지",
+   "blocks": [
+    {
+     "type": "bars",
+     "span": 7,
+     "title": "ACLE 동아시아 승점 (24일 경기까지)",
+     "items": [
+      {
+       "label": "고베 (5경기)",
+       "value": 12,
+       "text": "12",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "가시마 (4경기)",
+       "value": 10,
+       "text": "10",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "가시와 (5경기)",
+       "value": 10,
+       "text": "10",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "상하이 하이강 (5경기)",
+       "value": 10,
+       "text": "10",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "교토 (5경기)",
+       "value": 10,
+       "text": "10",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "감바 오사카 (4경기)",
+       "value": 8,
+       "text": "8",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "조호르 (5경기)",
+       "value": 8,
+       "text": "8",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "전북 (4경기)",
+       "value": 7,
+       "text": "7",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "베이징 (5경기)",
+       "value": 7,
+       "text": "7",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "꽁안 하노이 (5경기)",
+       "value": 7,
+       "text": "7",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "대전 (5경기)",
+       "value": 7,
+       "text": "7",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "J리그 공식 홈페이지 ACLE 순위표. 16개 팀 가운데 상위 11팀",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "article",
+     "span": 5,
+     "kicker": "판도",
+     "title": "전북은 아직 한 경기 덜 치렀다",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "동아시아 리그 스테이지에는 16개 팀이 나선다. 24일 경기까지 전북은 승점 7로 8위다. 베이징, 꽁안 하노이, 대전도 승점 7이지만 이들은 5경기를 치렀다.",
+      "24일에는 K리그의 대전이 베이징을 3-2로 이겼다.",
+      "전북이 오늘 이기면 승점 10이 된다. 다음 상대 감바 오사카는 4경기 무패로 승점 8이다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 6,
+     "rule_top": true,
+     "image": "commons:전북현대:1",
+     "caption": "자료 사진 · 2010 AFC 챔피언스리그 애들레이드 유나이티드 대 전북 경기",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "만약에",
+     "title": "오늘 결과에 따른 전북 승점",
+     "items": [
+      {
+       "label": "이기면",
+       "value": "승점 10 · 3승 1무 1패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "비기면",
+       "value": "승점 8 · 2승 2무 1패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "지면",
+       "value": "승점 7 · 2승 1무 2패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "table",
+     "span": 12,
+     "rule_top": true,
+     "title": "전북의 다음 일정",
+     "items": [
+      {
+       "label": "11월 29일(일)",
+       "value": "울산 원정 · K리그1 37R",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 2일(수) 19:00",
+       "value": "감바 오사카 홈 · ACLE 6차전",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 6일(일)",
+       "value": "인천 홈 · K리그1 38R",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "구단 소식",
+     "title": "전북현대·현대위아, 도내 복지기관에 차량 2대",
+     "paragraphs": [
+      "전북현대가 현대위아와 함께 도내 사회복지기관 두 곳에 차량을 한 대씩 기부했다고 투데이안이 24일 보도했다. 전달식은 21일 서울과의 홈경기에 앞서 열렸다.",
+      "전북현대 지원 차량은 전주 큰나루종합사회복지관에, 현대위아 지원 차량은 익산시북부노인종합복지관에 갔다. 현대위아가 2013년부터 임직원 급여 1%를 모아 해 온 '드림카' 사업에 전북현대가 함께하면서 전북 지역에서는 처음으로 차량 지원이 이뤄졌다."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "오늘의 등급표와 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "보도",
+       "title": "정정용 감독 \"승점 3점 가져가도록 최선\"",
+       "text": "24일 가시마 사전 기자회견",
+       "source_name": "이투데이",
+       "source_url": "https://www.etoday.co.kr/news/view/2652450",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "가시마, ACLE 4경기 11득점 1실점",
+       "text": "동아시아 2위, 승점 10",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "전북현대·현대위아 차량 2대 기부",
+       "text": "21일 서울전 앞두고 전달식",
+       "source_name": "투데이안",
+       "source_url": "https://www.todayan.com/news/articleView.html?idxno=638544",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "다른 기업 구단도 벤투 감독 검토했다가 접었다는 글",
+       "text": "출처 없는 커뮤니티 글. 구단 입장 없음",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10592733245",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "text": "선수 여럿보다 좋은 감독 한 명에 쓰는 돈이 낫다는 의견이 많았다",
+       "label": "에펨코리아 루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "감독 연봉 액수는 근거가 없다며 믿기 어렵다는 반응도 이어졌다",
+       "label": "에펨코리아 루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "큰돈을 쓰면 리그 우승과 ACL 성적으로 답해야 한다는 목소리가 있었다",
+       "label": "에펨코리아 루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "text": "출처 없는 지출 루머 글에는 비추천이 크게 몰렸다",
+       "label": "에펨코리아 루머 게시판",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 6,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "가시마가 ACLE 4경기에서 내준 골은 몇 골일까?",
+       "text": "1골",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "정정용 감독과 함께 사전 기자회견에 나온 선수는?",
+       "text": "박지수",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "12월 2일 전주에서 만나는 ACLE 6차전 상대는?",
+       "text": "감바 오사카",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "kicker": "오늘의 질문",
+     "title": "가시마 원정, 승점 몇 점이면 만족하시나요?",
+     "paragraphs": [
+      "이기면 승점 10, 비기면 8이 됩니다. 원정에서 무승부도 괜찮은지, 승리만 보고 가야 하는지 댓글로 남겨 주세요."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "가시마 대 전북 경기 정보",
+       "text": "날짜·시각·장소, ACLE 순위",
+       "source_name": "J리그",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "ACLE 동아시아 순위표",
+       "text": "24일 경기까지",
+       "source_name": "J리그",
+       "source_url": "https://www.jleague.jp/en/acle/standings/2026/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "MD5 프리뷰",
+       "text": "가시마 3연승 멈춤, 주목 선수 이탈로",
+       "source_name": "J리그",
+       "source_url": "https://www.jleague.jp/en/news/article/35425/?navicode=acle",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "정정용 감독 사전 기자회견",
+       "text": "포항전 반면교사",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101239",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "박지수 사전 기자회견",
+       "text": "2019년 8강 기억",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101240",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "전북 최종 훈련",
+       "text": "가시마 현지 날씨",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101249",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "가시마 오니키 감독 기자회견",
+       "text": "ACLE 우승 목표",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101263",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "정정용 \"승점 3점 가져오겠다\"",
+       "text": "사전 기자회견",
+       "source_name": "이투데이",
+       "source_url": "https://www.etoday.co.kr/news/view/2652450",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "쿠팡플레이 2026-27 ACLE 생중계",
+       "text": "중계사",
+       "source_name": "인사이트",
+       "source_url": "https://www.insight.co.kr/news/573620",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "차량 2대 기부",
+       "text": "드림카 사업",
+       "source_name": "투데이안",
+       "source_url": "https://www.todayan.com/news/articleView.html?idxno=638544",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "리그 순위·일정",
+       "text": "기록",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "coach:c01": {
+   "src": "../korea_coach/img/c01.jpg",
+   "alt": "정정용 감독",
+   "credit": "사진 Wikimedia Commons"
+  },
+  "player:20130142": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20130142.png",
+   "alt": "박지수",
+   "back_no": 5,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20260365": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20260365.png",
+   "alt": "이탈로",
+   "back_no": 95,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20230224": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20230224.png",
+   "alt": "모따",
+   "back_no": 99,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 36,
+    "w": 21,
+    "d": 7,
+    "l": 8,
+    "gf": 63,
+    "ga": 32,
+    "pts": 70,
+    "rank": 1,
+    "gd": 31
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 36,
+    "w": 17,
+    "d": 6,
+    "l": 13,
+    "gf": 57,
+    "ga": 51,
+    "pts": 57,
+    "rank": 2,
+    "gd": 6
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 36,
+    "w": 15,
+    "d": 11,
+    "l": 10,
+    "gf": 58,
+    "ga": 42,
+    "pts": 56,
+    "rank": 3,
+    "gd": 16
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 36,
+    "w": 14,
+    "d": 10,
+    "l": 12,
+    "gf": 46,
+    "ga": 38,
+    "pts": 52,
+    "rank": 4,
+    "gd": 8
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 36,
+    "w": 12,
+    "d": 15,
+    "l": 9,
+    "gf": 45,
+    "ga": 37,
+    "pts": 51,
+    "rank": 5,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 36,
+    "w": 13,
+    "d": 12,
+    "l": 11,
+    "gf": 42,
+    "ga": 39,
+    "pts": 51,
+    "rank": 6,
+    "gd": 3
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 36,
+    "w": 12,
+    "d": 13,
+    "l": 11,
+    "gf": 45,
+    "ga": 37,
+    "pts": 49,
+    "rank": 7,
+    "gd": 8
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 36,
+    "w": 11,
+    "d": 14,
+    "l": 11,
+    "gf": 43,
+    "ga": 51,
+    "pts": 47,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 36,
+    "w": 11,
+    "d": 12,
+    "l": 13,
+    "gf": 34,
+    "ga": 43,
+    "pts": 45,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 36,
+    "w": 6,
+    "d": 20,
+    "l": 10,
+    "gf": 35,
+    "ga": 43,
+    "pts": 38,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 36,
+    "w": 7,
+    "d": 12,
+    "l": 17,
+    "gf": 37,
+    "ga": 55,
+    "pts": 33,
+    "rank": 11,
+    "gd": -18
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 36,
+    "w": 4,
+    "d": 14,
+    "l": 18,
+    "gf": 36,
+    "ga": 73,
+    "pts": 26,
+    "rank": 12,
+    "gd": -37
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 7,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 11,
+   "gf": 45,
+   "ga": 37
+  },
+  "form": [
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   },
+   {
+    "r": "L",
+    "label": "서울 0-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-29",
+   "time": "",
+   "home": "울산",
+   "away": "전북",
+   "opp": "울산 HD",
+   "opp_short": "울산",
+   "is_home": false,
+   "round": 37,
+   "venue": "",
+   "comp": "K리그1 37R",
+   "home_note": "2위 · 승점 57",
+   "away_note": "7위 · 승점 49",
+   "when_label": "11월 29일(일)",
+   "d_minus": 4
+  },
+  "last": {
+   "game_id": "211",
+   "date": "2026-11-21",
+   "round": 36,
+   "home": "전북",
+   "away": "서울",
+   "venue": "전주 월드컵",
+   "attendance": 8411,
+   "comp": "K리그1 36R",
+   "score": [
+    0,
+    1
+   ],
+   "date_label": "11월 21일(토)",
+   "weather": "맑음 4℃",
+   "referee": "김대용",
+   "managers": {
+    "home": "정정용",
+    "away": "김기동"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     2,
+     "MST",
+     91.6,
+     69.8
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     95.9,
+     51.5
+    ],
+    [
+     "H",
+     1,
+     18,
+     "BT",
+     79.5,
+     46.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     82.2,
+     29.8
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     81.4,
+     33.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     83.1,
+     52.1
+    ],
+    [
+     "H",
+     1,
+     30,
+     "BT",
+     81.0,
+     50.1
+    ],
+    [
+     "H",
+     1,
+     35,
+     "AST",
+     80.3,
+     29.2
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     91.9,
+     36.6
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     84.0,
+     56.3
+    ],
+    [
+     "H",
+     1,
+     43,
+     "AST",
+     95.2,
+     44.5
+    ],
+    [
+     "A",
+     1,
+     44,
+     "AST",
+     74.1,
+     39.4
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     95.1,
+     62.7
+    ],
+    [
+     "H",
+     2,
+     49,
+     "MST",
+     95.3,
+     32.9
+    ],
+    [
+     "A",
+     2,
+     50,
+     "MST",
+     76.4,
+     46.9
+    ],
+    [
+     "H",
+     2,
+     51,
+     "BT",
+     91.6,
+     65.2
+    ],
+    [
+     "A",
+     2,
+     52,
+     "AST",
+     92.2,
+     49.4
+    ],
+    [
+     "A",
+     2,
+     53,
+     "GL",
+     77.6,
+     39.7
+    ],
+    [
+     "H",
+     2,
+     56,
+     "AST",
+     77.7,
+     55.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "AST",
+     86.1,
+     58.0
+    ],
+    [
+     "A",
+     2,
+     76,
+     "AST",
+     84.7,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     79,
+     "MST",
+     84.6,
+     57.1
+    ],
+    [
+     "A",
+     2,
+     83,
+     "AST",
+     85.3,
+     41.4
+    ],
+    [
+     "H",
+     2,
+     86,
+     "MST",
+     86.2,
+     48.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "BT",
+     90.2,
+     55.0
+    ],
+    [
+     "A",
+     2,
+     90,
+     "MST",
+     96.5,
+     63.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "AST",
+     96.1,
+     57.4
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "안데르손",
+     "label": "54'",
+     "minute": 54,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     17,
+     10
+    ],
+    [
+     "유효슈팅",
+     5,
+     5
+    ],
+    [
+     "패스 성공",
+     380,
+     298
+    ],
+    [
+     "패스 성공률",
+     86.4,
+     82.3,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     2,
+     4
+    ],
+    [
+     "반칙",
+     7,
+     7
+    ],
+    [
+     "경고",
+     0,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
