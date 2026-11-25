@@ -1,0 +1,374 @@
+{
+ "no": 35,
+ "date": "2026-11-26",
+ "rows": [
+  {
+   "id": "4561b77602",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북, 가시마 원정 0-3 패배… ACLE 동아시아 11위로 내려앉아",
+   "grade": "보도",
+   "source_name": "J리그 ACLE 순위표",
+   "source_url": "https://www.jleague.jp/en/acle/standings/",
+   "verdict": "일치",
+   "memo": "0-3 패(AFC), 11위·승점 7(J리그 순위표·데일리25) 대조"
+  },
+  {
+   "id": "e4f5761ac0",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "전북이 25일 가시마 사커 스타디움에서 열린 ACLE 리그 스테이지 5차전에서 가시마 앤틀러스에 0-3으로 졌다. 세 골 가운데 두 골이 프리킥과 코너킥에서 나왔다. 승점 7에 머문 전북은 8위 베이징과 승점이 같지만 득실차에서 밀려 11위가 됐다",
+   "grade": "보도",
+   "source_name": "J리그 ACLE 순위표",
+   "source_url": "https://www.jleague.jp/en/acle/standings/",
+   "verdict": "일치",
+   "memo": "25일 가시마 사커 스타디움 0-3(AFC·J리그 기록), 프리킥·코너킥 2골(AFC), 8위 베이징 득실 -1, 전북 -2 11위(순위표)"
+  },
+  {
+   "id": "8f299bdbc5",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "ACLE 동아시아 11위 · 승점 7",
+   "grade": "보도",
+   "source_name": "J리그 ACLE 순위표",
+   "source_url": "https://www.jleague.jp/en/acle/standings/",
+   "verdict": "일치",
+   "memo": "동아시아 11위, 승점 7 순위표 대조"
+  },
+  {
+   "id": "0f07a88c72",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "D-3 · 29일(일) 울산 원정 (K리그1 37R)",
+   "grade": "기록",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx data.next 2026-11-29 울산 원정 37R d_minus 3"
+  },
+  {
+   "id": "f2df915d20",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "K리그1 7위 · 승점 49",
+   "grade": "기록",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx data.jeonbuk rank 7, pts 49"
+  },
+  {
+   "id": "f4413a006c",
+   "where": "1면 hero '전북, 가시마 원정 0-3' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울 대 전북 경기의 이승우",
+   "ref": {
+    "image": "commons:이승우:260411",
+    "desc": "이승우 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "library desc: 이승우 경기 사진 2026.04.11 FC 서울 vs 전북"
+  },
+  {
+   "id": "1b99995c1a",
+   "where": "1면 hero '전북, 가시마 원정 0-3'",
+   "kind": "제목",
+   "risk": [],
+   "text": "전북, 가시마 원정 0-3 패배… ACLE 동아시아 11위로 내려앉아 / 프리킥과 코너킥에서 두 골을 내줬다. 정정용 감독은 \"감독이 문제인 거 같다\"며 책임을 말했다",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101310",
+   "verdict": "일치",
+   "memo": "세트피스 2실점(AFC: 프리킥·코너킥), \"감독이 문제인 거 같다\" 포포투 원문 대조"
+  },
+  {
+   "id": "f3e0b9648c",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "전북이 25일 일본 이바라키현 가시마 사커 스타디움에서 열린 2026-27 AFC 챔피언스리그 엘리트(ACLE) 동아시아 리그 스테이지 5차전에서 가시마 앤틀러스에 0-3으로 졌다.",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101310",
+   "verdict": "일치",
+   "memo": "이바라키현 가시마 사커 스타디움(포포투), 25일 ACLE 동아시아 리그 스테이지 5차전 0-3(AFC)"
+  },
+  {
+   "id": "fa94d97883",
+   "where": "2면 table '가시마 3-0 전북 (11'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "가시마 3-0 전북 (11월 25일 19:00)",
+   "grade": "보도",
+   "source_name": "J리그 경기 기록",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "Wed 25 Nov 2026 19:00 JST, 3-0, 관중 4,691, 득점 17·60·73분(AFC 동일)"
+  },
+  {
+   "id": "ef16d5db8b",
+   "where": "2면 timeline '전북의 교체 카드'",
+   "kind": "경과",
+   "risk": [],
+   "text": "후반 시작 이탈로 투입 · 오랜만에 선발로 나선 김승섭과 교체",
+   "grade": "보도",
+   "source_name": "J리그 경기 기록",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "후반 0분 ITALO VARGAS in / KIM Seung Sub out, 김승섭 오랜만의 선발은 포포투 101310"
+  },
+  {
+   "id": "d6ff031885",
+   "where": "2면 timeline '전북의 교체 카드'",
+   "kind": "경과",
+   "risk": [],
+   "text": "후반 13분 이승우·이영재 투입 · 이동준, 맹성웅과 교체",
+   "grade": "보도",
+   "source_name": "톱스타뉴스",
+   "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16286248",
+   "verdict": "일치",
+   "memo": "후반 13분 이동준·맹성웅 out 이승우·이영재 in (톱스타뉴스, J리그 기록 2nd half 13')"
+  },
+  {
+   "id": "cb7a519e34",
+   "where": "2면 timeline '전북의 교체 카드'",
+   "kind": "경과",
+   "risk": [],
+   "text": "후반 29분 김하준 투입 · 김영빈과 교체",
+   "grade": "보도",
+   "source_name": "J리그 경기 기록",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "Second Half 29' KIM Ha Jun in / KIM Yeongbin out"
+  },
+  {
+   "id": "67cf58c2f6",
+   "where": "2면 timeline '전북의 교체 카드'",
+   "kind": "경과",
+   "risk": [],
+   "text": "후반 41분 도도 투입 · 강상윤과 교체",
+   "grade": "보도",
+   "source_name": "J리그 경기 기록",
+   "source_url": "https://www.jleague.jp/en/match/acle/2026/112528/",
+   "verdict": "일치",
+   "memo": "Second Half 41' DODO in / KANG Sang Yun out"
+  },
+  {
+   "id": "fe98f3968f",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "정정용 감독",
+   "ref": {
+    "image": "coach:c01",
+    "desc": "정정용 감독"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "coach:c01 정정용 감독 프로필"
+  },
+  {
+   "id": "7837eca2d2",
+   "where": "2면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울 대 전북 경기의 정정용 감독",
+   "ref": {
+    "image": "commons:정정용:260411",
+    "desc": "정정용 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "library desc: 정정용 경기 사진 2026.04.11 FC 서울 vs 전북"
+  },
+  {
+   "id": "76a9a905e4",
+   "where": "3면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "송범근 · 조간 선정 MOM",
+   "ref": {
+    "image": "player:20180025",
+    "desc": "송범근"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "player:20180025 송범근 공식 선수 프로필 사진. MOM은 본문에 조간 선정으로 밝힘"
+  },
+  {
+   "id": "efea9b2dd7",
+   "where": "4면 article '후반 추가시간 신경전, 옛'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "두 선수는 2019년 벨기에 신트트라위던에 함께 입단해 2020-21시즌까지 같이 뛰었다.",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101326",
+   "verdict": "일치",
+   "memo": "\"2019년 나란히 신트트라위던에 합류한 이승우와 스즈키는 2020-21시즌에도 함께 뛰었다\""
+  },
+  {
+   "id": "9b4d4efb9c",
+   "where": "4면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2025년 7월 2일 FC 서울 대 전북 경기의 이승우",
+   "ref": {
+    "image": "commons:이승우:250702-1",
+    "desc": "이승우 경기 사진. 2025.07.02 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "library desc: 이승우 경기 사진 2025.07.02 FC 서울 vs 전북"
+  },
+  {
+   "id": "a984ef039e",
+   "where": "4면 box '남은 세 경기에서 보여 줄'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "이번 패배로 전북은 공식전 3연패다.",
+   "grade": "보도",
+   "source_name": "데일리25",
+   "source_url": "https://www.daily25news.com/news/articleView.html?idxno=9433",
+   "verdict": "일치",
+   "memo": "\"공식전 3경기 연속 패배다\" 강원 2-3, 서울 0-1, 가시마 0-3"
+  },
+  {
+   "id": "d4a8de7754",
+   "where": "4면 box '남은 세 경기에서 보여 줄'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "남은 일정은 울산 원정, 감바 오사카 홈경기, 인천과의 리그 최종전이다.",
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101327",
+   "verdict": "일치",
+   "memo": "남은 공식전 3경기: 울산 원정, 감바 오사카전, 인천 리그 최종전"
+  },
+  {
+   "id": "b831f9ee31",
+   "where": "5면 article '8위와 승점은 같고 득실차'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "12월 2일 감바전은 홈에서 치른다.",
+   "grade": "보도",
+   "source_name": "데일리25",
+   "source_url": "https://www.daily25news.com/news/articleView.html?idxno=9433",
+   "verdict": "일치",
+   "memo": "\"오는 12월 2일 홈에서 맞붙는다\" 감바 오사카"
+  },
+  {
+   "id": "472d921d2c",
+   "where": "5면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 9월 12일 전북 대 FC 서울 경기의 송범근",
+   "ref": {
+    "image": "commons:송범근:260912",
+    "desc": "송범근 경기 사진. 2026.09.12 전북 vs FC 서울"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "library desc: 송범근 경기 사진 2026.09.12 전북 vs FC 서울"
+  },
+  {
+   "id": "ef594ede42",
+   "where": "6면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[공식] 가시마 3-0 전북, AFC 경기 리포트 · AFC가 득점자와 시각(17·60·73분), 가시마의 동아시아 1위 등극을 발표했다",
+   "ref": {
+    "source_name": "AFC 공식 홈페이지",
+    "source_url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/md5-kashima-antlers-jpn-3-0-jeonbuk-hyundai-motors-fc-kor"
+   },
+   "grade": "공식",
+   "source_name": "AFC 공식 경기 리포트",
+   "source_url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/md5-kashima-antlers-jpn-3-0-jeonbuk-hyundai-motors-fc-kor",
+   "verdict": "일치",
+   "memo": "AFC 리포트: 17·60·73분 득점, 가시마 동아시아 1위(13점)"
+  },
+  {
+   "id": "638075d5f4",
+   "where": "6면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 정정용 감독 \"감독이 문제인 거 같다\" · 경기 뒤 기자회견에서 사과와 책임을 말했다",
+   "ref": {
+    "source_name": "포포투",
+    "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101310"
+   },
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101310",
+   "verdict": "일치",
+   "memo": "\"감독이 문제인 거 같다\", 책임 통감·사과"
+  },
+  {
+   "id": "2303d60aab",
+   "where": "6면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 이승우 \"정말 너무 부끄럽다\" · 경기 뒤 원정 팬들에게 사과했다",
+   "ref": {
+    "source_name": "포포투",
+    "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101327"
+   },
+   "grade": "보도",
+   "source_name": "포포투",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=101327",
+   "verdict": "일치",
+   "memo": "\"정말 너무 부끄럽다\", 원정 팬들에게 미안"
+  },
+  {
+   "id": "8cb2d98dd1",
+   "where": "6면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "[보도] 전북, 공식전 3연패 · 강원전 2-3, 서울전 0-1에 이어 가시마전 0-3",
+   "ref": {
+    "source_name": "데일리25",
+    "source_url": "https://www.daily25news.com/news/articleView.html?idxno=9433"
+   },
+   "grade": "보도",
+   "source_name": "데일리25",
+   "source_url": "https://www.daily25news.com/news/articleView.html?idxno=9433",
+   "verdict": "일치",
+   "memo": "강원 2-3, 서울 0-1, 가시마 0-3 공식전 3연패"
+  }
+ ]
+}
