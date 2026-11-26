@@ -259,6 +259,19 @@
     const NOLABEL = ISSUE.live ? (/-half$/.test(ISSUE.live) ? "전반 총정리" : "후반 총정리") : `제${ISSUE.no}호`;
     document.title = `전주성 조간 ${NOLABEL}`;
     $("#dl-no").textContent = NOLABEL;
+    if (ISSUE.live) {
+      // 경기 중 정리 글은 조간 제호 대신 JEONBUK MATCH HALF TIME / FULL TIME
+      const m = (ISSUE.data && ISSUE.data.last) || {};
+      const brand = /-half$/.test(ISSUE.live) ? "JEONBUK MATCH HALF TIME" : "JEONBUK MATCH FULL TIME";
+      const vs = m.home ? `${m.home} vs ${m.away}` : "";
+      document.title = `${brand}${vs ? " · " + vs : ""}`;
+      const h1 = $(".mast h1");
+      h1.textContent = brand;
+      h1.classList.add("live");
+      $(".ear.l").innerHTML = `${esc(m.comp ? m.comp.replace("K리그1", "하나은행 K리그1") : "")}<br>${esc(vs)}`;
+      $("#ear-r").textContent = NOLABEL;
+      $(".dateline span:last-child").textContent = m.comp ? m.comp.replace(/(\d+)R$/, "$1라운드") : "";
+    }
     $("#dl-date").textContent = dateLabel;
     if (ISSUE.edition_note) $("#ear-r").innerHTML = `<span class="proto">${esc(ISSUE.edition_note)}</span><br>매일 07:00 발행`;
     $("#strip").innerHTML = (ISSUE.strip || []).map((s) => `<span>${esc(s)}</span>`).join("");
@@ -271,7 +284,7 @@
       tabs.appendChild(t);
       const sec = document.createElement("section");
       sec.className = "sheet"; sec.id = "p" + (i + 1); sec.setAttribute("role", "tabpanel"); sec.setAttribute("aria-labelledby", t.id);
-      sec.innerHTML = `<div class="folio"><span><b>${i + 1}면</b> ${esc(p.tab)}</span><span>${esc(p.folio || `전주성 조간 ${NOLABEL} · ${ISSUE.date.replace(/-/g, ".")}`)}</span></div>`;
+      sec.innerHTML = `<div class="folio"><span><b>${i + 1}면</b> ${esc(p.tab)}</span><span>${esc(p.folio || `${ISSUE.live ? "" : "전주성 조간 "}${NOLABEL} · ${ISSUE.date.replace(/-/g, ".")}`)}</span></div>`;
       const grid = document.createElement("div");
       grid.className = "grid";
       (p.blocks || []).forEach((b) => { try { grid.appendChild(renderBlock(b)); } catch (e) { console.error(e, b); } });

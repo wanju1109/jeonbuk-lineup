@@ -27,6 +27,7 @@ body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-siz
 .mast .title{display:flex;align-items:center;gap:14px}
 .mast img{width:60px;height:auto;display:block}
 .mast h1{font-family:var(--f-quote);font-weight:800;font-size:clamp(40px,7.4vw,78px);line-height:1;margin:0;color:var(--ink);letter-spacing:-.03em}
+.mast h1.live{font-family:var(--f-display);font-size:clamp(26px,4.6vw,50px);letter-spacing:-.01em}
 .ear{font-size:12.5px;line-height:1.5;color:var(--muted);border:1px solid var(--rule);padding:6px 10px;max-width:190px}
 .ear.r{justify-self:end;text-align:right}
 .proto{display:inline-block;background:var(--lime);color:var(--lime-ink);font-weight:700;font-size:12px;padding:1px 8px;border-radius:2px}
