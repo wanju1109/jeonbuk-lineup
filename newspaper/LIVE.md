@@ -8,7 +8,7 @@ ACL·컵 경기는 K리그 매치센터 기록이 없어 다루지 않는다.
 
 1. 할 일을 정한다. `phase`가 null이면 아무것도 하지 말고 끝낸다.
    ```bash
-   pip install -q requests
+   python -m pip install -q requests
    python newspaper/scripts/live_match.py plan
    ```
 2. 기다린다. 전반은 전반 종료, 후반은 경기 종료까지. 한 번에 최대 9분 기다리고 아직이면 종료 코드 3으로 끝나니 **다시 실행한다.**
