@@ -406,10 +406,10 @@
     if ($("brandTitle")) {
       if (useOtherBrand) {
         const round = meta.round != null ? `${meta.round}R` : "";
-        $("brandTitle").innerHTML = `K리그1 ${escapeHtml(round)} MATCH AI&nbsp;REPORT`;
+        $("brandTitle").innerHTML = `K리그1 ${escapeHtml(round)} MATCH&nbsp;REPORT`;
         $("brandTitle").classList.add("brand-other");
       } else {
-        $("brandTitle").innerHTML = "JEONBUK MATCH AI&nbsp;REPORT";
+        $("brandTitle").innerHTML = "JEONBUK MATCH&nbsp;REPORT";
         $("brandTitle").classList.remove("brand-other");
       }
     }
@@ -616,8 +616,8 @@
       label: `${meta?.home?.name || ""} ${meta?.away?.name || ""}`,
     });
     const brandLabel = other
-      ? `K리그1 ${meta?.round != null ? meta.round + "R" : ""} MATCH AI REPORT`
-      : "JEONBUK MATCH AI REPORT";
+      ? `K리그1 ${meta?.round != null ? meta.round + "R" : ""} MATCH REPORT`
+      : "JEONBUK MATCH REPORT";
     const title = meta
       ? `${meta.round}R ${meta.home?.name || ""} ${meta.score?.home ?? ""}:${meta.score?.away ?? ""} ${meta.away?.name || ""}`.trim()
       : other

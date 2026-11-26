@@ -1558,7 +1558,7 @@ const Analyze = (() => {
     const url = pageUrl || "https://wanju1109.github.io/jeonbuk-lineup/c_report/";
     const briefing = buildTacticalBriefing(meta, events, players, lineup);
 
-    lines.push("JEONBUK MATCH AI REPORT");
+    lines.push("JEONBUK MATCH REPORT");
     lines.push(`${meta.competition} ${meta.round}라운드 · ${meta.home.name} vs ${meta.away.name}`);
     lines.push("스코어만 보면 아쉽고, 숫자만 보면 어렵습니다. 골이 어떻게 나왔는지, 누가 어디서 뛰었는지를 이야기로 풀어 드립니다.");
     lines.push("");

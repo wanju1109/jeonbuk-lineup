@@ -75,7 +75,7 @@ def match_report_job(today: dt.date) -> dict | None:
         return None
     h, a = m["score"].split(":")
     comp = g.get("meta", {}).get("competition") or "하나은행 K리그1"
-    title = f"[JEONBUK MATCH AI REPORT] {comp} {m['round']}라운드 · {m['home']} vs {m['away']}"
+    title = f"[JEONBUK MATCH REPORT] {comp} {m['round']}라운드 · {m['home']} vs {m['away']}"
     url = f"{SITE}c_report/?q={match_ref(m['game_id'])}"
     lines = [f"{comp} {m['round']}라운드 {m['home']} {h}-{a} {m['away']} · {m.get('venue', '')}",
              "골 장면, 슈팅 지도, 패스 연결, 선수별 기록을 한 화면에서 볼 수 있습니다."]
@@ -95,7 +95,7 @@ def preview_job(today: dt.date) -> dict | None:
     k = dt.datetime.fromisoformat(m["kickoff"])
     pm = load(f"p_report/data/{m['game_id']}.json").get("meta", {})
     comp = pm.get("competition") or "하나은행 K리그1"
-    title = f"[JEONBUK MATCH AI PREVIEW] {comp} {m['round']}라운드 · {m['home']} vs {m['away']}"
+    title = f"[JEONBUK MATCH PREVIEW] {comp} {m['round']}라운드 · {m['home']} vs {m['away']}"
     url = f"{SITE}p_report/?q={match_ref(m['game_id'])}"
     lines = [f"내일 {k.month}월 {k.day}일 {comp} {m['round']}라운드 {m['home']} vs {m['away']}",
              "예상 라인업, 최근 흐름, 상대 전적, 관전 포인트를 정리했습니다."]
