@@ -71,6 +71,13 @@ def main() -> None:
     if m and f"report:{m['game_id']}" not in reports:
         problems.append(f"어제({y}) {m['home']} vs {m['away']} 매치 리포트가 에버그린에 올라가지 않았습니다.")
 
+    # 경기 중 정리 글(전반·후반 총정리): 만든 지 30분이 지났는데 에버그린에 안 올라간 것
+    now = dt.datetime.now(KST)
+    for p in load("newspaper/live/index.json", {"posts": []}).get("posts", []):
+        made = dt.datetime.fromisoformat(p["made_at"]) if p.get("made_at") else None
+        if p.get("date") == today.isoformat() and made and now - made > dt.timedelta(minutes=30) and f"live:{p['key']}" not in reports:
+            problems.append(f"'{p['title']}' 글이 만들어졌지만 에버그린에 올라가지 않았습니다(집 PC 꺼짐·게시 오류).")
+
     if args.evening:
         t = (today + dt.timedelta(days=1)).isoformat()
         p = next((p for p in load("p_report/data/index.json", {}).get("matches", [])

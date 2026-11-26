@@ -128,7 +128,7 @@
         const t = a + b || 1, f = (v) => (fmt === "%" ? v.toFixed(1) + "%" : v);
         h += `<div class="lab">${esc(l)}</div><div class="row"><span class="v">${f(a)}</span><div class="bar"><i class="h" style="width:${(a / t) * 100}%"></i><i class="a" style="width:${(b / t) * 100}%"></i></div><span class="v r">${f(b)}</span></div>`;
       });
-      host.insertAdjacentHTML("beforeend", h + `</div><p class="cap">K리그 데이터포털 부가기록.</p>`);
+      host.insertAdjacentHTML("beforeend", h + `</div><p class="cap">${m.live ? "K리그 매치센터 기록." : "K리그 데이터포털 부가기록."}</p>`);
       return true;
     },
     form(host) {
@@ -256,8 +256,9 @@
   function render() {
     const d = new Date(ISSUE.date + "T00:00:00+09:00");
     const dateLabel = `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일 ${WD[d.getDay()]}요일`;
-    document.title = `전주성 조간 제${ISSUE.no}호`;
-    $("#dl-no").textContent = `제${ISSUE.no}호`;
+    const NOLABEL = ISSUE.live ? (/-half$/.test(ISSUE.live) ? "전반 총정리" : "후반 총정리") : `제${ISSUE.no}호`;
+    document.title = `전주성 조간 ${NOLABEL}`;
+    $("#dl-no").textContent = NOLABEL;
     $("#dl-date").textContent = dateLabel;
     if (ISSUE.edition_note) $("#ear-r").innerHTML = `<span class="proto">${esc(ISSUE.edition_note)}</span><br>매일 07:00 발행`;
     $("#strip").innerHTML = (ISSUE.strip || []).map((s) => `<span>${esc(s)}</span>`).join("");
@@ -270,7 +271,7 @@
       tabs.appendChild(t);
       const sec = document.createElement("section");
       sec.className = "sheet"; sec.id = "p" + (i + 1); sec.setAttribute("role", "tabpanel"); sec.setAttribute("aria-labelledby", t.id);
-      sec.innerHTML = `<div class="folio"><span><b>${i + 1}면</b> ${esc(p.tab)}</span><span>${esc(p.folio || `전주성 조간 제${ISSUE.no}호 · ${ISSUE.date.replace(/-/g, ".")}`)}</span></div>`;
+      sec.innerHTML = `<div class="folio"><span><b>${i + 1}면</b> ${esc(p.tab)}</span><span>${esc(p.folio || `전주성 조간 ${NOLABEL} · ${ISSUE.date.replace(/-/g, ".")}`)}</span></div>`;
       const grid = document.createElement("div");
       grid.className = "grid";
       (p.blocks || []).forEach((b) => { try { grid.appendChild(renderBlock(b)); } catch (e) { console.error(e, b); } });
@@ -350,6 +351,14 @@
     try {
       const [idx, lib] = await Promise.all([getJSON("issues/index.json"), getJSON("img/library.json").catch(() => ({ images: {} }))]);
       LIB = lib.images || {};
+      // 경기 중 정리 글(전반·후반 총정리): ?live=221-half
+      const live = new URLSearchParams(location.search).get("live");
+      if (live && /^[\w-]+$/.test(live)) {
+        ISSUE = await getJSON(`live/${live}.json`);
+        render();
+        if (EMBED) markReady();
+        return;
+      }
       const want = new URLSearchParams(location.search).get("no");
       const list = idx.issues || [];
       const pick = want != null ? list.find((i) => String(i.no) === want) : list.filter((i) => i.no > 0).slice(-1)[0] || list.slice(-1)[0];

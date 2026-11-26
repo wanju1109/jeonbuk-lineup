@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import datetime as dt
 import json
 import re
 import sys
@@ -81,8 +82,10 @@ def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
         return errs
     if len(issue["headline"]) > 40:
         errs.append(f"headline이 너무 깁니다({len(issue['headline'])}자, 40자 이내)")
-    if not 4 <= len(issue["pages"]) <= 8:
-        errs.append(f"면 수 {len(issue['pages'])} (4~8면)")
+    live = bool(ctx.get("live"))  # 경기 중 정리 글(전반·후반 총정리). newspaper/LIVE.md
+    lo, hi = (2, 4) if live else (4, 8)
+    if not lo <= len(issue["pages"]) <= hi:
+        errs.append(f"면 수 {len(issue['pages'])} ({lo}~{hi}면)")
     text = json.dumps(issue, ensure_ascii=False)
     for w in BANNED:
         if w in text:
@@ -113,7 +116,8 @@ def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
                     errs.append(f"{where}: chart는 {sorted(CHARTS)} 중 하나")
                 elif b["chart"] in MATCH_CHARTS and not has_last:
                     errs.append(f"{where}: 지난 경기 기록이 없어 {b['chart']}를 쓸 수 없습니다")
-                elif b["chart"] in MATCH_CHARTS - {"scoreboard"} and (ctx["data"].get("last") or {}).get("partial"):
+                elif (b["chart"] in MATCH_CHARTS - {"scoreboard"} and (ctx["data"].get("last") or {}).get("partial")
+                      and not (b["chart"] == "compare" and (ctx["data"].get("last") or {}).get("compare"))):
                     errs.append(f"{where}: 어제 경기의 부가기록이 아직 없어 {b['chart']}를 쓸 수 없습니다(scoreboard만 가능). "
                                 "득점자와 장면은 공식 기록과 기사로 확인해 글로 씁니다")
             for it in b.get("items") or []:
@@ -134,7 +138,7 @@ def check(issue: dict, ctx: dict, lib: dict) -> list[str]:
     if not first or first[0].get("type") != "hero":
         errs.append("1면 첫 블록은 hero여야 합니다")
     else:
-        recent = recent_heroes(ctx["no"])
+        recent = set() if live else recent_heroes(ctx["no"])
         if first[0].get("image") in recent:
             errs.append(f"1면 사진 {first[0].get('image')!r}는 최근 3호에서 이미 썼습니다. 오늘 주제에 맞는 다른 사진을 고르세요"
                         f"(선수 이야기면 library.json people의 경기 사진이나 player: 사진)")
@@ -154,6 +158,8 @@ def normalize(issue: dict) -> None:
 
 
 def finalize(ctx: dict, issue: dict, lib: dict, rows: list[dict]) -> Path:
+    if ctx.get("live"):
+        return finalize_live(ctx, issue, lib, rows)
     checks = NP / "issues" / "checks"
     checks.mkdir(exist_ok=True)
     (checks / f"{ctx['no']}.json").write_text(json.dumps({"no": ctx["no"], "date": ctx["date"], "rows": rows}, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -177,6 +183,29 @@ def finalize(ctx: dict, issue: dict, lib: dict, rows: list[dict]) -> Path:
     # 특별호("4-1")가 섞여 있어도 4 → 4-1 → 5 순서가 되게
     idx["issues"].sort(key=lambda i: tuple(int(x) for x in str(i["no"]).split("-")))
     idx_path.write_text(json.dumps(idx, ensure_ascii=False, indent=1), encoding="utf-8")
+    return path
+
+
+def finalize_live(ctx: dict, issue: dict, lib: dict, rows: list[dict]) -> Path:
+    """경기 중 정리 글: newspaper/live/{경기}-{half|full}.json 과 live/index.json. 집 PC가 index를 보고 에버그린에 올린다."""
+    lv, d = ctx["live"], NP / "live"
+    (d / "checks").mkdir(parents=True, exist_ok=True)
+    key = lv["key"]
+    (d / "checks" / f"{key}.json").write_text(json.dumps({"key": key, "date": ctx["date"], "rows": rows}, ensure_ascii=False, indent=1), encoding="utf-8")
+    used = {b["image"]: ctx["assets"][b["image"]] for page in issue["pages"] for b in page["blocks"] if b.get("image") and b["image"] not in lib}
+    data = copy.deepcopy(ctx["data"])
+    out = {"no": key, "live": key, "date": ctx["date"], "matchday_after": False, **issue, "assets": used, "data": data}
+    path = d / f"{key}.json"
+    path.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    last = data["last"]
+    word = "전반 총정리" if lv["phase"] == "half" else "후반 총정리"
+    title = f"[JEONBUK MATCH {'HALF TIME' if lv['phase'] == 'half' else 'FULL TIME'}] 하나은행 K리그1 {last['round']}라운드 · {last['home']} vs {last['away']} {word}"
+    ip = d / "index.json"
+    idx = json.loads(ip.read_text(encoding="utf-8")) if ip.exists() else {"posts": []}
+    idx["posts"] = [p for p in idx["posts"] if p["key"] != key] + [{
+        "key": key, "game_id": last["game_id"], "phase": lv["phase"], "date": ctx["date"], "title": title,
+        "headline": issue["headline"], "summary": issue.get("summary", ""), "made_at": dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).isoformat(timespec="minutes")}]
+    ip.write_text(json.dumps(idx, ensure_ascii=False, indent=1), encoding="utf-8")
     return path
 
 
@@ -214,7 +243,7 @@ def main() -> None:
         return
     keep = {n["id"] for n in need}
     path = finalize(ctx, issue, lib, [r for r in rows if r.get("id") in keep])
-    print(f"완성: {path.relative_to(ROOT)} · 제{ctx['no']}호 · {issue['headline']} · {len(issue['pages'])}면")
+    print(f"완성: {path.relative_to(ROOT)} · {ctx['no']} · {issue['headline']} · {len(issue['pages'])}면")
 
 
 if __name__ == "__main__":
