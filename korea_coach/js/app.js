@@ -458,7 +458,6 @@
       '<div style="display:block;width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box;">',
       '<table cellpadding="0" cellspacing="0" border="0" bgcolor="#1b2430" width="1100" style="width:100% !important;max-width:1100px;border-collapse:collapse;background-color:#1b2430;color:#f7f1e4;font-family:Arial,Helvetica,sans-serif;">',
       '<tr><td bgcolor="#1b2430" style="padding:16px 18px;background-color:#1b2430;color:#f7f1e4;">',
-      '<p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:#ddd4c4;">AI를 활용해 정리한 한국 감독 페이지입니다. 공개 기록·보도를 바탕으로 했으며 해석은 참고용입니다.</p>',
       '<p style="margin:0 0 6px;font-size:12px;letter-spacing:.08em;color:#d4a017;">KOREAN MANAGERS</p>',
       '<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#f7f1e4;">한국 감독</p>',
       '<p style="margin:0 0 14px;font-size:14px;line-height:1.5;color:#ddd4c4;">K리그1 · K리그2 · 기타에서 감독을 고르면 연대기, 성과 근거, 두 사람 비교를 볼 수 있습니다.</p>',

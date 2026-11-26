@@ -633,7 +633,6 @@
       '<tr><td bgcolor="#0f2a1c" style="padding:16px 18px;background-color:#0f2a1c;color:#f5fff8;">',
       '<p style="margin:0 0 14px;font-size:13px;line-height:1.7;color:#e8f6ee;background-color:#0f2a1c;">',
       "칼럼/분석 탭을 누르면 미래의 분석관을 꿈꾸는 분들께서 작성한, 재미있고 상세한 분석 글들이 많이 있습니다.<br>",
-      "AI는 잘못된 정보를 전달할 수 있습니다. 무조건 적인 신뢰 보다는 적당한 선에서 비판적인 시선으로 봐주세요.",
       "</p>",
       `<p style="margin:0 0 6px;font-size:12px;letter-spacing:.06em;color:#cfe8d8;background-color:#0f2a1c;">${safeBrand}</p>`,
       `<p style="margin:0 0 10px;font-size:18px;font-weight:700;line-height:1.35;color:#f5fff8;background-color:#0f2a1c;">${safeTitle}</p>`,
