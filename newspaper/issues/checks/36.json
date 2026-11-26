@@ -1,0 +1,428 @@
+{
+ "no": 36,
+ "date": "2026-11-27",
+ "rows": [
+  {
+   "id": "7853182d3b",
+   "where": "1면 제목(headline)",
+   "kind": "제목",
+   "risk": [],
+   "text": "송범근·김영빈, K리그1 베스트11 후보에 올라… 시상식은 12월 7일",
+   "grade": "보도",
+   "source_name": "한국아이닷컴(스포츠한국)",
+   "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+   "verdict": "일치",
+   "memo": "GK 송범근·중앙DF 김영빈 후보, 12월7일 시상식 원문 대조"
+  },
+  {
+   "id": "85eb0a7936",
+   "where": "요약(summary)",
+   "kind": "제목",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "한국프로축구연맹이 26일 발표한 '하나은행 K리그 2026 대상 시상식' 부문별 후보에 전북 송범근(골키퍼)과 김영빈(중앙 수비수)이 이름을 올렸다. 투표는 27일 시작되고 수상자는 12월 7일 시상식에서 발표된다",
+   "grade": "보도",
+   "source_name": "한국아이닷컴(스포츠한국)",
+   "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+   "verdict": "일치",
+   "memo": "'확정했다고 26일 밝혔다', 27일 투표 시작, 12월7일 시상식 원문 대조"
+  },
+  {
+   "id": "f2df915d20",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [],
+   "text": "K리그1 7위 · 승점 49",
+   "grade": "기록",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx data.jeonbuk rank 7, pts 49"
+  },
+  {
+   "id": "748c4e6f42",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "D-2 · 29일(일) 오후 2시 울산 원정 (K리그1 37R)",
+   "grade": "보도",
+   "source_name": "울산종합일보",
+   "source_url": "https://ujnews.co.kr/news/newsview.php?ncode=1065592476377411",
+   "verdict": "일치",
+   "memo": "원문 '29일 오후 2시 문수축구경기장 37라운드'; 29일 일요일 달력 확인; ctx next 2026-11-29 울산 홈"
+  },
+  {
+   "id": "7078a59f05",
+   "where": "띠(strip)",
+   "kind": "제목",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "12월 2일(수) 19:00 감바 오사카 홈 (ACLE 6차전)",
+   "grade": "공식",
+   "source_name": "전북현대 티켓 페이지",
+   "source_url": "https://hyundai-motorsfc.com/ticket",
+   "verdict": "일치",
+   "memo": "구단 티켓 페이지 렌더링: AFC 전북 VS 감바 오사카 19:00 2026.12.02(수) 전주월드컵경기장"
+  },
+  {
+   "id": "1b0f2adcc9",
+   "where": "1면 hero '송범근·김영빈, K리그1 ' 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 4월 11일 FC 서울 대 전북 경기의 김영빈",
+   "ref": {
+    "image": "commons:김영빈:260411",
+    "desc": "김영빈 경기 사진. 2026.04.11 FC 서울 vs 전북"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "desc: 김영빈 경기 사진 2026.04.11 FC 서울 vs 전북"
+  },
+  {
+   "id": "5e5c5310aa",
+   "where": "1면 hero '송범근·김영빈, K리그1 '",
+   "kind": "제목",
+   "risk": [],
+   "text": "송범근·김영빈, K리그1 베스트11 후보에 올라… 시상식은 12월 7일 / 골키퍼 송범근은 후보 3명, 중앙 수비수 김영빈은 후보 6명 가운데 한 명이다",
+   "grade": "보도",
+   "source_name": "한국아이닷컴(스포츠한국)",
+   "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+   "verdict": "일치",
+   "memo": "GK 3명, 중앙DF 6명 명단 원문 대조"
+  },
+  {
+   "id": "1c2ec26fdf",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "MVP, 최우수감독상, 영플레이어상 후보에는 전북 이름이 없다.",
+   "grade": "보도",
+   "source_name": "아시아뉴스통신",
+   "source_url": "https://www.anewsa.com/detail.php?number=3222083",
+   "verdict": "일치",
+   "memo": "MVP·감독상·영플레이어 후보 소속 강원·서울·울산·광주·인천, 전북 없음"
+  },
+  {
+   "id": "b1a1c514fd",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "1년 전 2025 시상식 후보에는 거스 포옛 감독(최우수감독상), 박진섭(MVP)과 베스트11 후보 9명이 올랐다.",
+   "grade": "공식",
+   "source_name": "K리그 공식 홈페이지 2025 후보 발표",
+   "source_url": "https://www.kleague.com/news_view.do?seq=93730&category=notice&orderBy=seq&viewOption=list&page=1",
+   "verdict": "일치",
+   "memo": "2025 전북 후보: 감독상 포옛, MVP 박진섭, 베스트11 9명(중복 제외)"
+  },
+  {
+   "id": "b15152d87a",
+   "where": "1면 article",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상",
+    "일정·장소"
+   ],
+   "text": "수상자는 12월 7일 오후 3시 그랜드 워커힐 서울에서 열리는 시상식에서 발표된다.",
+   "grade": "보도",
+   "source_name": "한국아이닷컴(스포츠한국)",
+   "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+   "verdict": "일치",
+   "memo": "원문 '12월7일 오후 3시 서울 광진구 그랜드 워커힐 서울'"
+  },
+  {
+   "id": "e464670ded",
+   "where": "1면 figs '오늘의 숫자'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "K리그 대상 시상식 (오후 3시) · 12월 7일",
+   "grade": "보도",
+   "source_name": "한국아이닷컴(스포츠한국)",
+   "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+   "verdict": "일치",
+   "memo": "12월7일 오후 3시 원문 대조"
+  },
+  {
+   "id": "1f1f2ab35e",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "송범근 · 전북 31번",
+   "ref": {
+    "image": "player:20180025",
+    "desc": "송범근"
+   },
+   "grade": "기록",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "photo_catalog player:20180025 송범근 no 31"
+  },
+  {
+   "id": "fc5a1fee01",
+   "where": "2면 article '송범근, 지난해 받은 골키'",
+   "kind": "본문",
+   "risk": [
+    "기록·처음"
+   ],
+   "text": "송범근은 지난해 2025 시상식에서 개인 통산 처음으로 베스트11 골키퍼에 뽑혔다.",
+   "grade": "보도",
+   "source_name": "포포투 2025년 12월 1일",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=83613",
+   "verdict": "일치",
+   "memo": "원문 '전북 수문장 송범근이 개인 통산 처음으로 베스트11에 선정됐다'"
+  },
+  {
+   "id": "e30fd6eff1",
+   "where": "2면 cutout 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "김영빈 · 전북 2번",
+   "ref": {
+    "image": "player:20140143",
+    "desc": "김영빈"
+   },
+   "grade": "기록",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "photo_catalog player:20140143 김영빈 no 2"
+  },
+  {
+   "id": "af42a461ce",
+   "where": "2면 article '김영빈, 지난해 없던 이름'",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "김영빈은 21일 서울과의 K리그1 36라운드 홈경기에서 주장 완장을 차고 끝까지 뛰었다.",
+   "grade": "기록",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "ctx data.last 2026-11-21 36R 전북-서울, 김영빈 starter·captain true, out_label 없음"
+  },
+  {
+   "id": "adf1cd929d",
+   "where": "2면 table 'K리그1 주요 부문 후보'",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "MVP · 김대원(강원) · 김진수(서울) · 이동경(울산)",
+   "grade": "보도",
+   "source_name": "아시아뉴스통신",
+   "source_url": "https://www.anewsa.com/detail.php?number=3222083",
+   "verdict": "일치",
+   "memo": "MVP 후보 김대원(강원) 김진수(서울) 이동경(울산)"
+  },
+  {
+   "id": "3cbee4cc30",
+   "where": "2면 table 'K리그1 주요 부문 후보'",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "영플레이어상 · 문민서(광주) · 서재민(인천) · 손정범(서울)",
+   "grade": "보도",
+   "source_name": "아시아뉴스통신",
+   "source_url": "https://www.anewsa.com/detail.php?number=3222083",
+   "verdict": "일치",
+   "memo": "영플레이어 후보 문민서(광주) 서재민(인천) 손정범(서울)"
+  },
+  {
+   "id": "ac1ece0b20",
+   "where": "2면 bars '그때 그 시절: 1년 전 '",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "2025 베스트11 수상 · 6 · 6명",
+   "grade": "보도",
+   "source_name": "포포투 2025년 12월 1일",
+   "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=83613",
+   "verdict": "일치",
+   "memo": "2025 베스트11 전북 6명(송범근 홍정호 송민규 박진섭 김진규 강상윤)"
+  },
+  {
+   "id": "472d921d2c",
+   "where": "2면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [],
+   "text": "자료 사진 · 2026년 9월 12일 전북 대 FC 서울 경기의 송범근",
+   "ref": {
+    "image": "commons:송범근:260912",
+    "desc": "송범근 경기 사진. 2026.09.12 전북 vs FC 서울"
+   },
+   "grade": "사진정보",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "desc: 송범근 경기 사진 2026.09.12 전북 vs FC 서울"
+  },
+  {
+   "id": "8b1617e6a0",
+   "where": "3면 article '더블 우승 골망으로 만든 '",
+   "kind": "본문",
+   "risk": [
+    "소속·경력"
+   ],
+   "text": "전북이 21일 서울전 홈경기에서 운영한 업사이클링 팝업스토어 '그린 사이클 2기'를 마쳤다고 25일 밝혔다.",
+   "grade": "공식",
+   "source_name": "전북현대 구단뉴스",
+   "source_url": "https://hyundai-motorsfc.com/media/news/100921",
+   "verdict": "일치",
+   "memo": "구단뉴스 2026.11.25, '지난 11월 21일 FC서울과의 홈경기에서 운영'"
+  },
+  {
+   "id": "b6048854ff",
+   "where": "3면 photo 사진 설명",
+   "kind": "사진설명",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "자료 사진 · 전주월드컵경기장 외관. 그린 사이클은 이 경기장에서 나온 폐자원을 새 물건으로 만든다",
+   "ref": {
+    "image": "exterior",
+    "desc": "경기장 외관 파노라마. 경기장 시설·행정 기사용. 가로 2.6:1"
+   },
+   "grade": "공식",
+   "source_name": "전북현대 구단뉴스",
+   "source_url": "https://hyundai-motorsfc.com/media/news/100921",
+   "verdict": "일치",
+   "memo": "사진 alt '전주월드컵경기장 외관'·desc 경기장 외관; 덧붙인 문장은 구단뉴스 '전주월드컵경기장에서 발생하는 폐자원을 새로운 가치로' 대조"
+  },
+  {
+   "id": "e52bd8bbbe",
+   "where": "3면 table '전북의 다음 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "11월 29일(일) 오후 2시 · 울산 원정 · K리그1 37R",
+   "grade": "보도",
+   "source_name": "울산종합일보",
+   "source_url": "https://ujnews.co.kr/news/newsview.php?ncode=1065592476377411",
+   "verdict": "일치",
+   "memo": "원문 '29일 오후 2시 문수축구경기장 37라운드'; 29일 일요일 달력 확인; ctx next 2026-11-29 울산 홈"
+  },
+  {
+   "id": "00543bd01d",
+   "where": "3면 table '전북의 다음 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "12월 2일(수) 19:00 · 감바 오사카 · ACLE 6차전 · 전주월드컵경기장",
+   "grade": "공식",
+   "source_name": "전북현대 티켓 페이지",
+   "source_url": "https://hyundai-motorsfc.com/ticket",
+   "verdict": "일치",
+   "memo": "티켓 페이지 19:00 2026.12.02(수) 전주월드컵경기장"
+  },
+  {
+   "id": "3b324923bb",
+   "where": "3면 table '전북의 다음 일정'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "12월 7일(월) 오후 3시 · K리그 대상 시상식 · 그랜드 워커힐 서울",
+   "grade": "보도",
+   "source_name": "한국아이닷컴(스포츠한국)",
+   "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+   "verdict": "일치",
+   "memo": "12월7일 오후 3시 그랜드 워커힐 서울; 12월7일 월요일 달력 확인"
+  },
+  {
+   "id": "88f185162d",
+   "where": "3면 box '2명이라는 숫자'",
+   "kind": "본문",
+   "risk": [
+    "수상·징계·부상"
+   ],
+   "text": "오늘의 질문: 송범근과 김영빈, 둘 다 상을 받을 수 있을까요?",
+   "grade": "의견",
+   "source_name": "",
+   "source_url": "",
+   "verdict": "일치",
+   "memo": "독자 질문"
+  },
+  {
+   "id": "7b91a84d01",
+   "where": "4면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [
+    "소속·경력",
+    "일정·장소"
+   ],
+   "text": "[공식] 12월 2일 19:00 감바 오사카전 · 구단 티켓 페이지가 다음 홈경기로 ACLE 감바 오사카전(전주월드컵경기장)을 안내했다",
+   "ref": {
+    "source_name": "전북현대 티켓 페이지",
+    "source_url": "https://hyundai-motorsfc.com/ticket"
+   },
+   "grade": "공식",
+   "source_name": "전북현대 티켓 페이지",
+   "source_url": "https://hyundai-motorsfc.com/ticket",
+   "verdict": "일치",
+   "memo": "티켓 페이지 '다음 홈경기 2026.12.02(수) 전주월드컵경기장 전북 vs 감바 오사카'"
+  },
+  {
+   "id": "1b4ccfe46f",
+   "where": "4면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[공식] '위닝캐쳐' 200개 완판 · 더블 우승 골망 업사이클링 굿즈, 수익금은 지역사회 기부",
+   "ref": {
+    "source_name": "전북현대 구단뉴스",
+    "source_url": "https://hyundai-motorsfc.com/media/news/100921"
+   },
+   "grade": "공식",
+   "source_name": "전북현대 구단뉴스",
+   "source_url": "https://hyundai-motorsfc.com/media/news/100921",
+   "verdict": "일치",
+   "memo": "골망 업사이클링, 200개 완판, 수익금 전액 지역사회 기부 예정"
+  },
+  {
+   "id": "c66bc46302",
+   "where": "4면 list '오늘의 루머 등급표'",
+   "kind": "등급표",
+   "risk": [],
+   "text": "[보도] 송범근·김영빈 베스트11 후보 · 연맹 발표 후보 명단을 여러 매체가 전했다",
+   "ref": {
+    "source_name": "아시아뉴스통신",
+    "source_url": "https://www.anewsa.com/detail.php?number=3222083"
+   },
+   "grade": "보도",
+   "source_name": "아시아뉴스통신",
+   "source_url": "https://www.anewsa.com/detail.php?number=3222083",
+   "verdict": "일치",
+   "memo": "연맹 3배수 후보 명단에 GK 송범근·중앙DF 김영빈"
+  },
+  {
+   "id": "f2a7c024f2",
+   "where": "4면 quiz '오늘의 퀴즈'",
+   "kind": "본문",
+   "risk": [
+    "일정·장소"
+   ],
+   "text": "Q. 올해 K리그 대상 시상식 날짜와 장소는? / A. 12월 7일 오후 3시, 그랜드 워커힐 서울",
+   "grade": "보도",
+   "source_name": "한국아이닷컴(스포츠한국)",
+   "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+   "verdict": "일치",
+   "memo": "12월7일 오후 3시 그랜드 워커힐 서울"
+  }
+ ]
+}

@@ -1,0 +1,1292 @@
+{
+ "no": 36,
+ "date": "2026-11-27",
+ "matchday_after": false,
+ "headline": "송범근·김영빈, K리그1 베스트11 후보에 올라… 시상식은 12월 7일",
+ "summary": "한국프로축구연맹이 26일 발표한 '하나은행 K리그 2026 대상 시상식' 부문별 후보에 전북 송범근(골키퍼)과 김영빈(중앙 수비수)이 이름을 올렸다. 투표는 27일 시작되고 수상자는 12월 7일 시상식에서 발표된다",
+ "strip": [
+  "K리그1 7위 · 승점 49",
+  "D-2 · 29일(일) 오후 2시 울산 원정 (K리그1 37R)",
+  "12월 2일(수) 19:00 감바 오사카 홈 (ACLE 6차전)"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제36호 · 2026.11.27 (금)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:김영빈:260411",
+     "kicker": "K리그 대상 시상식 후보 발표",
+     "title": "송범근·김영빈, K리그1 베스트11 후보에 올라… 시상식은 12월 7일",
+     "dek": "골키퍼 송범근은 후보 3명, 중앙 수비수 김영빈은 후보 6명 가운데 한 명이다",
+     "caption": "자료 사진 · 2026년 4월 11일 FC 서울 대 전북 경기의 김영빈",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "전북 송범근과 김영빈이 '하나은행 K리그 2026 대상 시상식' K리그1 베스트11 후보에 올랐다. 한국프로축구연맹은 26일 부문별 3배수 최종 후보를 발표했다.",
+      "송범근은 구성윤(서울), 박청효(강원)와 골키퍼 부문을 다툰다. 김영빈은 중앙 수비 부문에서 로스·야잔(서울), 세레스틴(제주), 이기혁(강원), 후안 이비자(인천)와 경쟁한다.",
+      "MVP, 최우수감독상, 영플레이어상 후보에는 전북 이름이 없다. 1년 전 2025 시상식 후보에는 거스 포옛 감독(최우수감독상), 박진섭(MVP)과 베스트11 후보 9명이 올랐다.",
+      "투표는 27일 시작된다. 각 구단 감독 30%, 주장 30%, 미디어 40%를 합산한다. 수상자는 12월 7일 오후 3시 그랜드 워커힐 서울에서 열리는 시상식에서 발표된다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "2명",
+       "label": "전북의 K리그1 베스트11 후보",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "12월 7일",
+       "label": "K리그 대상 시상식 (오후 3시)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "37실점",
+       "label": "전북의 K리그1 36경기 실점 · 강원과 함께 서울 다음으로 적다",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-2",
+       "label": "29일(일) 울산 원정 · K리그1 37R",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "시상식 후보",
+   "teaser": "송범근은 지난해 첫 베스트11, 김영빈은 첫 후보",
+   "folio": "K리그 대상 시상식",
+   "blocks": [
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20180025",
+     "big": "GK 후보",
+     "paragraphs": [
+      "2025 베스트11 골키퍼",
+      "올해 다시 후보"
+     ],
+     "caption": "송범근 · 전북 31번",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "골키퍼",
+     "title": "송범근, 지난해 받은 골키퍼 자리를 다시 다툰다",
+     "paragraphs": [
+      "송범근은 지난해 2025 시상식에서 개인 통산 처음으로 베스트11 골키퍼에 뽑혔다. 그해 전북은 베스트11 여섯 자리를 차지했다.",
+      "올해 경쟁자는 구성윤(서울)과 박청효(강원)다. 서울은 승점 70으로 K리그1 1위, 강원은 승점 51로 5위다.",
+      "전북은 K리그1 36경기에서 37골을 내줬다. 서울(32실점) 다음으로 적고, 강원과 같다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20140143",
+     "big": "CB 후보",
+     "paragraphs": [
+      "중앙 수비 후보 6명",
+      "서울 선수 2명과 경쟁"
+     ],
+     "caption": "김영빈 · 전북 2번",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "중앙 수비수",
+     "title": "김영빈, 지난해 없던 이름이 올해 명단에",
+     "paragraphs": [
+      "김영빈은 중앙 수비 부문 후보 6명 가운데 한 명이다. 서울에서는 로스와 야잔 두 명이 이 부문 후보에 올랐다.",
+      "2025 시상식 중앙 수비 부문의 전북 후보는 홍정호였다. 김영빈은 그때 후보 명단에 없었다.",
+      "김영빈은 21일 서울과의 K리그1 36라운드 홈경기에서 주장 완장을 차고 끝까지 뛰었다."
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "K리그1 주요 부문 후보",
+     "items": [
+      {
+       "label": "MVP",
+       "value": "김대원(강원) · 김진수(서울) · 이동경(울산)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "최우수감독상",
+       "value": "김기동(서울) · 윤정환(인천) · 정경호(강원)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "영플레이어상",
+       "value": "문민서(광주) · 서재민(인천) · 손정범(서울)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "베스트11 GK",
+       "value": "구성윤(서울) · 박청효(강원) · 송범근(전북)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "그때 그 시절: 1년 전 전북과 올해 전북",
+     "items": [
+      {
+       "label": "2025 베스트11 후보",
+       "value": 9,
+       "text": "9명",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "2025 베스트11 수상",
+       "value": 6,
+       "text": "6명",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "2026 베스트11 후보",
+       "value": 2,
+       "text": "2명",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "2025년 후보는 송범근·김태현·홍정호·김태환·송민규·박진섭·김진규·강상윤·전진우. 출처 K리그 공식 홈페이지, 포포투",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 12,
+     "rule_top": true,
+     "image": "commons:송범근:260912",
+     "caption": "자료 사진 · 2026년 9월 12일 전북 대 FC 서울 경기의 송범근",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "구단·일정",
+   "teaser": "골망 굿즈 200개 완판, 12월 일정",
+   "folio": "구단 소식",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 7,
+     "kicker": "구단 소식",
+     "title": "더블 우승 골망으로 만든 '위닝캐쳐' 200개 완판",
+     "paragraphs": [
+      "전북이 21일 서울전 홈경기에서 운영한 업사이클링 팝업스토어 '그린 사이클 2기'를 마쳤다고 25일 밝혔다. 지역 대학생, ㈜위사이클과 함께한 사회공헌 프로젝트다.",
+      "대표 상품은 지난해 K리그1·코리아컵 더블 우승 때 실제로 쓴 골망으로 만든 드림캐쳐 모양 굿즈 '위닝캐쳐'다. 준비한 200개가 모두 팔렸다.",
+      "위닝캐쳐는 업사이클링 아이디어 공모전에서 나온 전주대학교 G.K팀의 아이디어다. 이 팀 학생은 현장 판매에도 참여했다.",
+      "구단은 판매 수익금 전액을 지역사회에 기부할 예정이라고 밝혔다. 지난 4월 '그린 사이클 1기'에서는 키캡 키링과 팔찌가 완판됐다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 5,
+     "image": "exterior",
+     "caption": "자료 사진 · 전주월드컵경기장 외관. 그린 사이클은 이 경기장에서 나온 폐자원을 새 물건으로 만든다",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "table",
+     "span": 6,
+     "rule_top": true,
+     "title": "전북의 다음 일정",
+     "items": [
+      {
+       "label": "11월 29일(일) 오후 2시",
+       "value": "울산 원정 · K리그1 37R",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 2일(수) 19:00",
+       "value": "감바 오사카 · ACLE 6차전 · 전주월드컵경기장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 6일(일)",
+       "value": "인천 · K리그1 38R · 전주월드컵경기장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 7일(월) 오후 3시",
+       "value": "K리그 대상 시상식 · 그랜드 워커힐 서울",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 6,
+     "rule_top": true,
+     "variant": "lime",
+     "kicker": "기자 수첩",
+     "title": "2명이라는 숫자",
+     "paragraphs": [
+      "1년 전 시상식장에서 전북은 베스트11 여섯 자리를 가져갔다. 올해 후보 명단에서 찾을 수 있는 전북 이름은 둘이다.",
+      "그래도 두 사람은 7위 팀에서 나온 후보다. 강원과 함께 리그에서 두 번째로 적게 실점한 수비가 순위표보다 낫다는 평가로 읽고 싶다.",
+      "오늘의 질문: 송범근과 김영빈, 둘 다 상을 받을 수 있을까요? 댓글로 생각을 들려주세요."
+     ],
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "공식",
+       "title": "12월 2일 19:00 감바 오사카전",
+       "text": "구단 티켓 페이지가 다음 홈경기로 ACLE 감바 오사카전(전주월드컵경기장)을 안내했다",
+       "source_name": "전북현대 티켓 페이지",
+       "source_url": "https://hyundai-motorsfc.com/ticket",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "공식",
+       "title": "'위닝캐쳐' 200개 완판",
+       "text": "더블 우승 골망 업사이클링 굿즈, 수익금은 지역사회 기부",
+       "source_name": "전북현대 구단뉴스",
+       "source_url": "https://hyundai-motorsfc.com/media/news/100921",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "송범근·김영빈 베스트11 후보",
+       "text": "연맹 발표 후보 명단을 여러 매체가 전했다",
+       "source_name": "아시아뉴스통신",
+       "source_url": "https://www.anewsa.com/detail.php?number=3222083",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "벤투 감독 선임이 거의 확정이라는 글",
+       "text": "26일 축구 커뮤니티 루머 게시판에 올라왔다. 출처는 밝히지 않았고 구단 발표나 기사는 없다",
+       "source_name": "",
+       "source_url": "",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "label": "ACLE 16강",
+       "text": "전북이나 대전이 16강에 가 달라는 글에 남은 일정이 험하다며 기대를 낮추는 댓글이 많았다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "내년",
+       "text": "벤투 감독설 글에 내년 시즌 영입 후보를 점치는 댓글이 이어졌다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "출처",
+       "text": "같은 글에 정보의 출처를 묻고 신뢰도를 의심하는 댓글도 있었다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "복귀설",
+       "text": "같은 글은 국내 선수 한 명이 전북으로 돌아온다는 이야기도 적었다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "송범근과 골키퍼 부문을 다투는 두 선수는?",
+       "text": "구성윤(서울), 박청효(강원)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "'위닝캐쳐'는 무엇으로 만들었나?",
+       "text": "지난해 더블 우승 때 실제로 쓴 골망",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "올해 K리그 대상 시상식 날짜와 장소는?",
+       "text": "12월 7일 오후 3시, 그랜드 워커힐 서울",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "2026 대상 시상식 후보 명단·투표 비율·시상식 일시",
+       "text": "아시아뉴스통신",
+       "source_name": "아시아뉴스통신",
+       "source_url": "https://www.anewsa.com/detail.php?number=3222083",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "후보 명단·투표 시작일·팬 초청",
+       "text": "한국아이닷컴(스포츠한국)",
+       "source_name": "한국아이닷컴",
+       "source_url": "https://www.hankooki.com/news/articleView.html?idxno=349465",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2025 대상 시상식 후보 명단",
+       "text": "K리그 공식 홈페이지 (2025년 11월 20일)",
+       "source_name": "K리그",
+       "source_url": "https://www.kleague.com/news_view.do?seq=93730&category=notice&orderBy=seq&viewOption=list&page=1",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2025 베스트11 수상자·송범근 첫 수상",
+       "text": "포포투 (2025년 12월 1일)",
+       "source_name": "포포투",
+       "source_url": "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=83613",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "그린 사이클 2기·위닝캐쳐",
+       "text": "전북현대 구단뉴스 (11월 25일)",
+       "source_name": "전북현대",
+       "source_url": "https://hyundai-motorsfc.com/media/news/100921",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "울산전 일시·장소·김현석 감독 홈 고별전",
+       "text": "울산종합일보 (11월 26일)",
+       "source_name": "울산종합일보",
+       "source_url": "https://ujnews.co.kr/news/newsview.php?ncode=1065592476377411",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "감바 오사카전·인천전 일정",
+       "text": "전북현대 티켓 페이지",
+       "source_name": "전북현대",
+       "source_url": "https://hyundai-motorsfc.com/ticket",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "순위·실점·경기 기록",
+       "text": "K리그 데이터포털",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20180025": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20180025.png",
+   "alt": "송범근",
+   "back_no": 31,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20140143": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20140143.png",
+   "alt": "김영빈",
+   "back_no": 2,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 36,
+    "w": 21,
+    "d": 7,
+    "l": 8,
+    "gf": 63,
+    "ga": 32,
+    "pts": 70,
+    "rank": 1,
+    "gd": 31
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 36,
+    "w": 17,
+    "d": 6,
+    "l": 13,
+    "gf": 57,
+    "ga": 51,
+    "pts": 57,
+    "rank": 2,
+    "gd": 6
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 36,
+    "w": 15,
+    "d": 11,
+    "l": 10,
+    "gf": 58,
+    "ga": 42,
+    "pts": 56,
+    "rank": 3,
+    "gd": 16
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 36,
+    "w": 14,
+    "d": 10,
+    "l": 12,
+    "gf": 46,
+    "ga": 38,
+    "pts": 52,
+    "rank": 4,
+    "gd": 8
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 36,
+    "w": 12,
+    "d": 15,
+    "l": 9,
+    "gf": 45,
+    "ga": 37,
+    "pts": 51,
+    "rank": 5,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 36,
+    "w": 13,
+    "d": 12,
+    "l": 11,
+    "gf": 42,
+    "ga": 39,
+    "pts": 51,
+    "rank": 6,
+    "gd": 3
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 36,
+    "w": 12,
+    "d": 13,
+    "l": 11,
+    "gf": 45,
+    "ga": 37,
+    "pts": 49,
+    "rank": 7,
+    "gd": 8
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 36,
+    "w": 11,
+    "d": 14,
+    "l": 11,
+    "gf": 43,
+    "ga": 51,
+    "pts": 47,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 36,
+    "w": 11,
+    "d": 12,
+    "l": 13,
+    "gf": 34,
+    "ga": 43,
+    "pts": 45,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 36,
+    "w": 6,
+    "d": 20,
+    "l": 10,
+    "gf": 35,
+    "ga": 43,
+    "pts": 38,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 36,
+    "w": 7,
+    "d": 12,
+    "l": 17,
+    "gf": 37,
+    "ga": 55,
+    "pts": 33,
+    "rank": 11,
+    "gd": -18
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 36,
+    "w": 4,
+    "d": 14,
+    "l": 18,
+    "gf": 36,
+    "ga": 73,
+    "pts": 26,
+    "rank": 12,
+    "gd": -37
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 7,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 11,
+   "gf": 45,
+   "ga": 37
+  },
+  "form": [
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   },
+   {
+    "r": "L",
+    "label": "서울 0-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-29",
+   "time": "",
+   "home": "울산",
+   "away": "전북",
+   "opp": "울산 HD",
+   "opp_short": "울산",
+   "is_home": false,
+   "round": 37,
+   "venue": "",
+   "comp": "K리그1 37R",
+   "home_note": "2위 · 승점 57",
+   "away_note": "7위 · 승점 49",
+   "when_label": "11월 29일(일)",
+   "d_minus": 2
+  },
+  "last": {
+   "game_id": "211",
+   "date": "2026-11-21",
+   "round": 36,
+   "home": "전북",
+   "away": "서울",
+   "venue": "전주 월드컵",
+   "attendance": 8411,
+   "comp": "K리그1 36R",
+   "score": [
+    0,
+    1
+   ],
+   "date_label": "11월 21일(토)",
+   "weather": "맑음 4℃",
+   "referee": "김대용",
+   "managers": {
+    "home": "정정용",
+    "away": "김기동"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     2,
+     "MST",
+     91.6,
+     69.8
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     95.9,
+     51.5
+    ],
+    [
+     "H",
+     1,
+     18,
+     "BT",
+     79.5,
+     46.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     82.2,
+     29.8
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     81.4,
+     33.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     83.1,
+     52.1
+    ],
+    [
+     "H",
+     1,
+     30,
+     "BT",
+     81.0,
+     50.1
+    ],
+    [
+     "H",
+     1,
+     35,
+     "AST",
+     80.3,
+     29.2
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     91.9,
+     36.6
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     84.0,
+     56.3
+    ],
+    [
+     "H",
+     1,
+     43,
+     "AST",
+     95.2,
+     44.5
+    ],
+    [
+     "A",
+     1,
+     44,
+     "AST",
+     74.1,
+     39.4
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     95.1,
+     62.7
+    ],
+    [
+     "H",
+     2,
+     49,
+     "MST",
+     95.3,
+     32.9
+    ],
+    [
+     "A",
+     2,
+     50,
+     "MST",
+     76.4,
+     46.9
+    ],
+    [
+     "H",
+     2,
+     51,
+     "BT",
+     91.6,
+     65.2
+    ],
+    [
+     "A",
+     2,
+     52,
+     "AST",
+     92.2,
+     49.4
+    ],
+    [
+     "A",
+     2,
+     53,
+     "GL",
+     77.6,
+     39.7
+    ],
+    [
+     "H",
+     2,
+     56,
+     "AST",
+     77.7,
+     55.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "AST",
+     86.1,
+     58.0
+    ],
+    [
+     "A",
+     2,
+     76,
+     "AST",
+     84.7,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     79,
+     "MST",
+     84.6,
+     57.1
+    ],
+    [
+     "A",
+     2,
+     83,
+     "AST",
+     85.3,
+     41.4
+    ],
+    [
+     "H",
+     2,
+     86,
+     "MST",
+     86.2,
+     48.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "BT",
+     90.2,
+     55.0
+    ],
+    [
+     "A",
+     2,
+     90,
+     "MST",
+     96.5,
+     63.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "AST",
+     96.1,
+     57.4
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "안데르손",
+     "label": "54'",
+     "minute": 54,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     17,
+     10
+    ],
+    [
+     "유효슈팅",
+     5,
+     5
+    ],
+    [
+     "패스 성공",
+     380,
+     298
+    ],
+    [
+     "패스 성공률",
+     86.4,
+     82.3,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     2,
+     4
+    ],
+    [
+     "반칙",
+     7,
+     7
+    ],
+    [
+     "경고",
+     0,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
