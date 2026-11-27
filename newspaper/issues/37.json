@@ -1,0 +1,1281 @@
+{
+ "no": 37,
+ "date": "2026-11-28",
+ "matchday_after": false,
+ "headline": "서울, 오늘 홈 최종전 뒤 우승 대관식… 1년 전 주인공은 전북",
+ "summary": "FC 서울이 28일 대전과의 K리그1 37라운드 홈경기를 마친 뒤 우승 대관식을 연다. 1년 전 대관식의 주인공은 대전을 3-1로 꺾고 10번째 우승을 기념한 전북이었다. 전북은 29일 울산 원정을 치른다",
+ "strip": [
+  "K리그1 승점 49 · 12승 13무 11패",
+  "D-1 · 29일(일) 오후 2시 울산 원정 (K리그1 37R)",
+  "12월 2일(수) 19:00 감바 오사카 홈 (ACLE 6차전)"
+ ],
+ "pages": [
+  {
+   "tab": "종합",
+   "teaser": "",
+   "folio": "전주성 조간 제37호 · 2026.11.28 (토)",
+   "blocks": [
+    {
+     "type": "hero",
+     "span": 12,
+     "image": "commons:이승우:250702-1",
+     "kicker": "K리그1 우승 대관식",
+     "title": "서울, 오늘 홈 최종전 뒤 우승 대관식… 1년 전 주인공은 전북",
+     "dek": "서울은 10년 만에 통산 7번째 우승, 전북은 지난해 대전을 3-1로 꺾고 10번째 우승을 기념했다",
+     "caption": "자료 사진 · 2025년 7월 2일 FC 서울 대 전북 경기의 이승우",
+     "rule_top": false,
+     "variant": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "article",
+     "span": 8,
+     "variant": "lead",
+     "byline": "전주성 조간 편집부",
+     "paragraphs": [
+      "FC 서울이 28일 오후 2시 서울월드컵경기장에서 대전과 K리그1 37라운드를 치른 뒤 우승 대관식을 연다. 서울의 이번 시즌 마지막 홈경기다.",
+      "서울은 10월 24일 강원과 1-1로 비겨 남은 5경기와 관계없이 우승을 확정했다. 10년 만의 리그 우승이고, 안양 LG 시절을 포함하면 통산 7번째다.",
+      "1년 전 이 트로피를 든 팀은 전북이었다. 전북은 2025년 11월 8일 전주월드컵경기장에서 대전을 3-1로 꺾은 뒤 K리그1 10번째 우승 대관식을 열었다. 관중 23,160명이 함께했다.",
+      "올해 전북은 36경기에서 12승 13무 11패, 승점 49를 기록했다. 남은 리그 경기는 29일 울산 원정과 12월 6일 인천과의 홈경기다."
+     ],
+     "rule_top": false,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "index",
+     "span": 4,
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "figs",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 숫자",
+     "items": [
+      {
+       "value": "7번째",
+       "label": "서울의 리그 우승 (안양 LG 시절 포함)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "10번째",
+       "label": "1년 전 전북이 기념한 K리그1 우승",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "23,160명",
+       "label": "2025년 11월 8일 전북 대관식 날 관중",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "D-1",
+       "label": "29일(일) 오후 2시 울산 원정",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  },
+  {
+   "tab": "1년 전 대관식",
+   "teaser": "지난해 대관식 날 골을 넣은 이동준·이승우는 올해도 전북에 있다",
+   "folio": "트로피의 1년",
+   "blocks": [
+    {
+     "type": "article",
+     "span": 8,
+     "kicker": "2025년 11월 8일",
+     "title": "1년 전 대관식 날, 상대도 대전이었다",
+     "paragraphs": [
+      "전북의 2025년 대관식 경기 상대는 대전이었다. 올해 서울의 대관식 경기 상대도 대전이다.",
+      "그날 선제골은 후반 11분 송민규가 넣었다. 박진섭의 크로스를 머리로 마무리했다. 대전은 후반 26분 에르난데스의 페널티킥으로 따라붙었다.",
+      "결승골은 후반 45분에 나왔다. 이동준이 최우진의 크로스를 헤더로 넣었다. 이승우는 후반 추가시간 페널티킥으로 쐐기를 박고 상의를 벗어 던졌다.",
+      "이동준, 최우진, 이승우는 올해도 전북 선수 명단에 있다. 송민규는 서울을 거쳐 포르투갈 나시오날로 옮겼다."
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "image": "player:20170121",
+     "big": "극장골",
+     "paragraphs": [
+      "2025.11.8 대전전",
+      "후반 45분 헤더 결승골"
+     ],
+     "caption": "이동준 · 전북 7번",
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "cutout",
+     "span": 4,
+     "rule_top": true,
+     "image": "player:20220042",
+     "big": "쐐기골",
+     "paragraphs": [
+      "후반 추가시간 PK",
+      "상의 벗은 세리머니"
+     ],
+     "caption": "이승우 · 전북 10번",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "timeline",
+     "span": 8,
+     "rule_top": true,
+     "kicker": "경과",
+     "title": "트로피가 옮겨 간 1년",
+     "items": [
+      {
+       "date": "2025.11.8",
+       "title": "전북, 10번째 우승 대관식",
+       "text": "전주월드컵경기장에서 대전을 3-1로 꺾은 뒤 대관식을 열었다",
+       "source_name": "OSEN (다음 스포츠)",
+       "source_url": "https://v.daum.net/v/20251108183048626",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.10.24",
+       "title": "서울, 우승 확정",
+       "text": "강원과 1-1로 비겨 남은 5경기와 관계없이 우승을 확정했다",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202610240077",
+       "tag": null,
+       "label": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "date": "2026.11.28",
+       "title": "서울, 대전전 뒤 대관식",
+       "text": "서울월드컵경기장에서 열리는 시즌 마지막 홈경기를 마치고 트로피를 든다",
+       "state": "hot",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611272009013",
+       "tag": null,
+       "label": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "bars",
+     "span": 6,
+     "rule_top": true,
+     "title": "두 팀의 리그 우승 횟수",
+     "items": [
+      {
+       "label": "전북 (2025년까지)",
+       "value": 10,
+       "text": "10회",
+       "state": "green",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "서울 (2026년 포함)",
+       "value": 7,
+       "text": "7회",
+       "state": "hot",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "caption": "서울은 안양 LG 시절을 포함한 횟수. 출처 OSEN, 일간스포츠",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "photo",
+     "span": 6,
+     "rule_top": true,
+     "image": "commons:이동준:260411",
+     "caption": "자료 사진 · 2026년 4월 11일 FC 서울 대 전북 경기의 이동준",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "남은 일정",
+   "teaser": "리그 두 경기와 ACLE 한 경기, 숫자로 본 전북",
+   "folio": "남은 일정·숫자 놀이",
+   "blocks": [
+    {
+     "type": "table",
+     "span": 6,
+     "title": "전북의 남은 일정",
+     "items": [
+      {
+       "label": "11월 29일(일) 오후 2시",
+       "value": "울산 원정 · K리그1 37R · 울산문수축구경기장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 2일(수) 19:00",
+       "value": "감바 오사카 · ACLE 6차전 · 전주월드컵경기장",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "label": "12월 6일(일)",
+       "value": "인천 · K리그1 38R · 전북 홈",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "figs",
+     "span": 6,
+     "title": "숫자 놀이",
+     "items": [
+      {
+       "value": "1승",
+       "label": "최근 리그 8경기 성적 1승 3무 4패",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "13무",
+       "label": "36경기 가운데 무승부",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "55",
+       "label": "남은 두 경기를 다 이기면 닿는 승점",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      },
+      {
+       "value": "+8",
+       "label": "36경기 득실차 (45득점 37실점)",
+       "tag": null,
+       "title": null,
+       "text": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "chart",
+     "span": 8,
+     "rule_top": true,
+     "title": "최근 리그 8경기",
+     "chart": "form",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "items": null
+    },
+    {
+     "type": "quote",
+     "span": 4,
+     "rule_top": true,
+     "title": "트로피는 해마다 이사를 간다. 다시 전주로 부르는 일은 내년 몫이다.",
+     "byline": "한 줄 만평 · 전주성 조간",
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    },
+    {
+     "type": "photo",
+     "span": 12,
+     "rule_top": true,
+     "image": "commons:정정용:260411",
+     "caption": "자료 사진 · 2026년 4월 11일 FC 서울 대 전북 경기의 정정용 감독",
+     "variant": null,
+     "kicker": null,
+     "title": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "big": null,
+     "chart": null,
+     "items": null
+    }
+   ]
+  },
+  {
+   "tab": "루머 데스크",
+   "teaser": "등급표, 커뮤니티 온도, 퀴즈",
+   "folio": "루머 데스크",
+   "blocks": [
+    {
+     "type": "list",
+     "span": 7,
+     "kicker": "등급표",
+     "title": "오늘의 루머 등급표",
+     "items": [
+      {
+       "tag": "보도",
+       "title": "서울, 28일 대전전 뒤 우승 대관식",
+       "text": "서울월드컵경기장 오후 2시 경기를 마치고 트로피 세리머니",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611272009013",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "보도",
+       "title": "29일 오후 2시 울산 원정",
+       "text": "울산문수축구경기장, 올 시즌 마지막 현대가 더비",
+       "source_name": "이투데이",
+       "source_url": "https://www.etoday.co.kr/news/view/2653415",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "tag": "설",
+       "title": "벤투 감독 연봉 협상이 막바지라는 글",
+       "text": "건너 들었다는 커뮤니티 글. 금액과 발표 시점 모두 출처가 없다",
+       "source_name": "에펨코리아 루머 게시판",
+       "source_url": "https://www.fmkorea.com/index.php?mid=football_korean&category=108791244&document_srl=10601514475",
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "talk",
+     "span": 5,
+     "title": "커뮤니티 온도",
+     "items": [
+      {
+       "label": "벤투",
+       "text": "연봉 협상이 거의 끝났다는 '건너 들은' 글에 출처를 믿기 어렵다는 댓글이 많았다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "금액",
+       "text": "글에 나온 금액이 감독 혼자 몫인지 코치진까지 포함인지를 두고 말이 엇갈렸다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "발표",
+       "text": "인천전 전에 발표될 수도 있다는 글에는 '진짜냐'는 반응이 줄을 이었다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "label": "옛 동료",
+       "text": "1년 전 대관식 날 선제골을 넣은 송민규의 포르투갈 리그 득점 영상에 축하 댓글이 붙었다",
+       "tag": null,
+       "title": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "rule_top": false,
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "quiz",
+     "span": 12,
+     "rule_top": true,
+     "title": "오늘의 퀴즈",
+     "items": [
+      {
+       "title": "1년 전 전북 대관식 경기의 상대와 점수는?",
+       "text": "대전, 3-1 승리",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "그날 후반 45분 결승골을 넣은 선수는?",
+       "text": "이동준(최우진 크로스, 헤더)",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      },
+      {
+       "title": "서울의 이번 우승은 안양 LG 시절을 포함해 통산 몇 번째인가?",
+       "text": "7번째",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "source_name": null,
+       "source_url": null,
+       "value": null
+      }
+     ],
+     "variant": null,
+     "kicker": null,
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    },
+    {
+     "type": "box",
+     "span": 12,
+     "rule_top": true,
+     "variant": "dark",
+     "kicker": "출처",
+     "title": "오늘 호 출처 모음",
+     "items": [
+      {
+       "title": "서울-대전 37라운드 일정과 우승 세리머니",
+       "text": "스포츠경향",
+       "source_name": "스포츠경향",
+       "source_url": "https://sports.khan.co.kr/article/202611272009013",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "37라운드 일정, 서울 시즌 마지막 홈경기",
+       "text": "데일리25",
+       "source_name": "데일리25",
+       "source_url": "https://www.daily25news.com/news/articleView.html?idxno=9484",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2026년 10월 24일 서울 우승 확정, 통산 7번째",
+       "text": "일간스포츠",
+       "source_name": "일간스포츠",
+       "source_url": "https://isplus.com/article/view/isp202610240077",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "2025년 11월 8일 전북 3-1 대전, 10번째 우승 대관식",
+       "text": "OSEN (다음 스포츠)",
+       "source_name": "OSEN",
+       "source_url": "https://v.daum.net/v/20251108183048626",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "울산-전북 37라운드 일시·장소",
+       "text": "이투데이",
+       "source_name": "이투데이",
+       "source_url": "https://www.etoday.co.kr/news/view/2653415",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "전북-감바 오사카 ACLE 경기 정보",
+       "text": "J리그 공식 경기 페이지",
+       "source_name": "J.LEAGUE",
+       "source_url": "https://www.jleague.jp/en/match/acle/2026/120201/",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "송민규, FC서울 떠나 포르투갈 나시오날 합류",
+       "text": "OSEN (다음 스포츠)",
+       "source_name": "다음 스포츠",
+       "source_url": "https://v.daum.net/v/20260913100148827",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      },
+      {
+       "title": "순위·승점·최근 경기 기록",
+       "text": "K리그 데이터포털",
+       "source_name": "K리그 데이터포털",
+       "source_url": "https://data.kleague.com",
+       "tag": null,
+       "label": null,
+       "date": null,
+       "state": null,
+       "value": null
+      }
+     ],
+     "dek": null,
+     "byline": null,
+     "paragraphs": null,
+     "image": null,
+     "caption": null,
+     "big": null,
+     "chart": null
+    }
+   ]
+  }
+ ],
+ "assets": {
+  "player:20170121": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20170121.png",
+   "alt": "이동준",
+   "back_no": 7,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  },
+  "player:20220042": {
+   "src": "https://jbhd-upload-file.s3.ap-northeast-2.amazonaws.com/images/player/2026/20220042.png",
+   "alt": "이승우",
+   "back_no": 10,
+   "credit": "사진 전북현대 공식 선수 프로필"
+  }
+ },
+ "data": {
+  "standings": [
+   {
+    "team": "FC 서울",
+    "short": "서울",
+    "p": 36,
+    "w": 21,
+    "d": 7,
+    "l": 8,
+    "gf": 63,
+    "ga": 32,
+    "pts": 70,
+    "rank": 1,
+    "gd": 31
+   },
+   {
+    "team": "울산 HD",
+    "short": "울산",
+    "p": 36,
+    "w": 17,
+    "d": 6,
+    "l": 13,
+    "gf": 57,
+    "ga": 51,
+    "pts": 57,
+    "rank": 2,
+    "gd": 6
+   },
+   {
+    "team": "대전 하나",
+    "short": "대전",
+    "p": 36,
+    "w": 15,
+    "d": 11,
+    "l": 10,
+    "gf": 58,
+    "ga": 42,
+    "pts": 56,
+    "rank": 3,
+    "gd": 16
+   },
+   {
+    "team": "인천 유나이티드",
+    "short": "인천",
+    "p": 36,
+    "w": 14,
+    "d": 10,
+    "l": 12,
+    "gf": 46,
+    "ga": 38,
+    "pts": 52,
+    "rank": 4,
+    "gd": 8
+   },
+   {
+    "team": "강원 FC",
+    "short": "강원",
+    "p": 36,
+    "w": 12,
+    "d": 15,
+    "l": 9,
+    "gf": 45,
+    "ga": 37,
+    "pts": 51,
+    "rank": 5,
+    "gd": 8
+   },
+   {
+    "team": "제주 SK",
+    "short": "제주",
+    "p": 36,
+    "w": 13,
+    "d": 12,
+    "l": 11,
+    "gf": 42,
+    "ga": 39,
+    "pts": 51,
+    "rank": 6,
+    "gd": 3
+   },
+   {
+    "team": "전북 현대",
+    "short": "전북",
+    "p": 36,
+    "w": 12,
+    "d": 13,
+    "l": 11,
+    "gf": 45,
+    "ga": 37,
+    "pts": 49,
+    "rank": 7,
+    "gd": 8
+   },
+   {
+    "team": "FC 안양",
+    "short": "안양",
+    "p": 36,
+    "w": 11,
+    "d": 14,
+    "l": 11,
+    "gf": 43,
+    "ga": 51,
+    "pts": 47,
+    "rank": 8,
+    "gd": -8
+   },
+   {
+    "team": "포항 스틸러스",
+    "short": "포항",
+    "p": 36,
+    "w": 11,
+    "d": 12,
+    "l": 13,
+    "gf": 34,
+    "ga": 43,
+    "pts": 45,
+    "rank": 9,
+    "gd": -9
+   },
+   {
+    "team": "김천 상무",
+    "short": "김천",
+    "p": 36,
+    "w": 6,
+    "d": 20,
+    "l": 10,
+    "gf": 35,
+    "ga": 43,
+    "pts": 38,
+    "rank": 10,
+    "gd": -8
+   },
+   {
+    "team": "부천 FC",
+    "short": "부천",
+    "p": 36,
+    "w": 7,
+    "d": 12,
+    "l": 17,
+    "gf": 37,
+    "ga": 55,
+    "pts": 33,
+    "rank": 11,
+    "gd": -18
+   },
+   {
+    "team": "광주 FC",
+    "short": "광주",
+    "p": 36,
+    "w": 4,
+    "d": 14,
+    "l": 18,
+    "gf": 36,
+    "ga": 73,
+    "pts": 26,
+    "rank": 12,
+    "gd": -37
+   }
+  ],
+  "games_left_to_split": 0,
+  "jeonbuk": {
+   "rank": 7,
+   "pts": 49,
+   "w": 12,
+   "d": 13,
+   "l": 11,
+   "gf": 45,
+   "ga": 37
+  },
+  "form": [
+   {
+    "r": "L",
+    "label": "서울 1-2"
+   },
+   {
+    "r": "D",
+    "label": "광주 2-2"
+   },
+   {
+    "r": "L",
+    "label": "대전 1-2"
+   },
+   {
+    "r": "W",
+    "label": "제주 3-2"
+   },
+   {
+    "r": "D",
+    "label": "안양 1-1"
+   },
+   {
+    "r": "D",
+    "label": "대전 0-0"
+   },
+   {
+    "r": "L",
+    "label": "강원 2-3"
+   },
+   {
+    "r": "L",
+    "label": "서울 0-1"
+   }
+  ],
+  "form_note": "K리그1 기준.",
+  "next": {
+   "date": "2026-11-29",
+   "time": "",
+   "home": "울산",
+   "away": "전북",
+   "opp": "울산 HD",
+   "opp_short": "울산",
+   "is_home": false,
+   "round": 37,
+   "venue": "",
+   "comp": "K리그1 37R",
+   "home_note": "2위 · 승점 57",
+   "away_note": "7위 · 승점 49",
+   "when_label": "11월 29일(일)",
+   "d_minus": 1
+  },
+  "last": {
+   "game_id": "211",
+   "date": "2026-11-21",
+   "round": 36,
+   "home": "전북",
+   "away": "서울",
+   "venue": "전주 월드컵",
+   "attendance": 8411,
+   "comp": "K리그1 36R",
+   "score": [
+    0,
+    1
+   ],
+   "date_label": "11월 21일(토)",
+   "weather": "맑음 4℃",
+   "referee": "김대용",
+   "managers": {
+    "home": "정정용",
+    "away": "김기동"
+   },
+   "shots": [
+    [
+     "A",
+     1,
+     2,
+     "MST",
+     91.6,
+     69.8
+    ],
+    [
+     "H",
+     1,
+     17,
+     "MST",
+     95.9,
+     51.5
+    ],
+    [
+     "H",
+     1,
+     18,
+     "BT",
+     79.5,
+     46.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     82.2,
+     29.8
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     81.4,
+     33.5
+    ],
+    [
+     "H",
+     1,
+     20,
+     "BT",
+     83.1,
+     52.1
+    ],
+    [
+     "H",
+     1,
+     30,
+     "BT",
+     81.0,
+     50.1
+    ],
+    [
+     "H",
+     1,
+     35,
+     "AST",
+     80.3,
+     29.2
+    ],
+    [
+     "H",
+     1,
+     37,
+     "MST",
+     91.9,
+     36.6
+    ],
+    [
+     "A",
+     1,
+     38,
+     "MST",
+     84.0,
+     56.3
+    ],
+    [
+     "H",
+     1,
+     43,
+     "AST",
+     95.2,
+     44.5
+    ],
+    [
+     "A",
+     1,
+     44,
+     "AST",
+     74.1,
+     39.4
+    ],
+    [
+     "A",
+     2,
+     45,
+     "MST",
+     95.1,
+     62.7
+    ],
+    [
+     "H",
+     2,
+     49,
+     "MST",
+     95.3,
+     32.9
+    ],
+    [
+     "A",
+     2,
+     50,
+     "MST",
+     76.4,
+     46.9
+    ],
+    [
+     "H",
+     2,
+     51,
+     "BT",
+     91.6,
+     65.2
+    ],
+    [
+     "A",
+     2,
+     52,
+     "AST",
+     92.2,
+     49.4
+    ],
+    [
+     "A",
+     2,
+     53,
+     "GL",
+     77.6,
+     39.7
+    ],
+    [
+     "H",
+     2,
+     56,
+     "AST",
+     77.7,
+     55.4
+    ],
+    [
+     "H",
+     2,
+     68,
+     "AST",
+     86.1,
+     58.0
+    ],
+    [
+     "A",
+     2,
+     76,
+     "AST",
+     84.7,
+     58.5
+    ],
+    [
+     "H",
+     2,
+     79,
+     "MST",
+     84.6,
+     57.1
+    ],
+    [
+     "A",
+     2,
+     83,
+     "AST",
+     85.3,
+     41.4
+    ],
+    [
+     "H",
+     2,
+     86,
+     "MST",
+     86.2,
+     48.7
+    ],
+    [
+     "H",
+     2,
+     89,
+     "BT",
+     90.2,
+     55.0
+    ],
+    [
+     "A",
+     2,
+     90,
+     "MST",
+     96.5,
+     63.2
+    ],
+    [
+     "H",
+     2,
+     91,
+     "AST",
+     96.1,
+     57.4
+    ]
+   ],
+   "goals": [
+    {
+     "side": "A",
+     "player": "안데르손",
+     "label": "54'",
+     "minute": 54,
+     "pk": false,
+     "og": false
+    }
+   ],
+   "compare": [
+    [
+     "슈팅",
+     17,
+     10
+    ],
+    [
+     "유효슈팅",
+     5,
+     5
+    ],
+    [
+     "패스 성공",
+     380,
+     298
+    ],
+    [
+     "패스 성공률",
+     86.4,
+     82.3,
+     "%"
+    ],
+    [
+     "크로스 성공",
+     2,
+     4
+    ],
+    [
+     "반칙",
+     7,
+     7
+    ],
+    [
+     "경고",
+     0,
+     2
+    ]
+   ]
+  },
+  "upcoming_league": [
+   {
+    "date": "2026-11-29",
+    "home": "울산",
+    "away": "전북",
+    "round": 37
+   },
+   {
+    "date": "2026-12-06",
+    "home": "전북",
+    "away": "인천",
+    "round": 38
+   }
+  ]
+ }
+}
