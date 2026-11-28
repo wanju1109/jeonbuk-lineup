@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k34-sm.png",
   "home_url": "https://www.asanfc.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:08+09:00",
+  "generated_at": "2026-11-28T09:28:54+09:00",
   "table": {
     "rank": 7,
     "teams": 17,
@@ -197,14 +197,14 @@
       },
       {
         "round": 5,
-        "rank": 8,
+        "rank": 7,
         "points": 6,
         "played": 4,
         "gd": 0
       },
       {
         "round": 6,
-        "rank": 7,
+        "rank": 6,
         "points": 9,
         "played": 5,
         "gd": 2
@@ -748,7 +748,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 27,
+        "apps": 28,
         "goals": 9,
         "assists": 4,
         "points": 13
@@ -760,7 +760,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 29,
+        "apps": 30,
         "goals": 8,
         "assists": 3,
         "points": 11
@@ -772,7 +772,7 @@
         "position": "FW",
         "back_no": 97,
         "age": 29,
-        "apps": 29,
+        "apps": 30,
         "goals": 5,
         "assists": 2,
         "points": 7
@@ -784,7 +784,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 34,
-        "apps": 29,
+        "apps": 30,
         "goals": 3,
         "assists": 7,
         "points": 10
@@ -796,7 +796,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 27,
+        "apps": 28,
         "goals": 2,
         "assists": 5,
         "points": 7
@@ -810,7 +810,7 @@
         "position": "MF",
         "back_no": 10,
         "age": 34,
-        "apps": 29,
+        "apps": 30,
         "goals": 3,
         "assists": 7,
         "points": 10
@@ -822,7 +822,7 @@
         "position": "DF",
         "back_no": 17,
         "age": 24,
-        "apps": 27,
+        "apps": 28,
         "goals": 2,
         "assists": 5,
         "points": 7
@@ -834,7 +834,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 36,
-        "apps": 24,
+        "apps": 25,
         "goals": 1,
         "assists": 5,
         "points": 6
@@ -846,7 +846,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 28,
-        "apps": 27,
+        "apps": 28,
         "goals": 9,
         "assists": 4,
         "points": 13
@@ -858,7 +858,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 29,
+        "apps": 30,
         "goals": 8,
         "assists": 3,
         "points": 11

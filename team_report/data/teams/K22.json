@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k22-sm.png",
   "home_url": "https://www.gwangjufc.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:08+09:00",
+  "generated_at": "2026-11-28T09:28:53+09:00",
   "table": {
     "rank": 12,
     "teams": 12,
@@ -813,8 +813,8 @@
     }
   ],
   "squad": {
-    "size": 37,
-    "avg_age": 26.6,
+    "size": 38,
+    "avg_age": 26.7,
     "foreign": 8,
     "top_scorers": [
       {
@@ -824,10 +824,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 27,
-        "apps": 23,
-        "goals": 13,
+        "apps": 24,
+        "goals": 14,
         "assists": 2,
-        "points": 15
+        "points": 16
       },
       {
         "player_id": "20240210",
@@ -860,10 +860,10 @@
         "position": "FW",
         "back_no": 50,
         "age": 30,
-        "apps": 19,
-        "goals": 3,
+        "apps": 20,
+        "goals": 4,
         "assists": 6,
-        "points": 9
+        "points": 10
       },
       {
         "player_id": "20250366",
@@ -872,10 +872,10 @@
         "position": "FW",
         "back_no": 11,
         "age": 33,
-        "apps": 24,
-        "goals": 2,
+        "apps": 25,
+        "goals": 3,
         "assists": 2,
-        "points": 4
+        "points": 5
       }
     ],
     "top_assists": [
@@ -886,10 +886,22 @@
         "position": "FW",
         "back_no": 50,
         "age": 30,
-        "apps": 19,
-        "goals": 3,
+        "apps": 20,
+        "goals": 4,
         "assists": 6,
-        "points": 9
+        "points": 10
+      },
+      {
+        "player_id": "20190114",
+        "departed": false,
+        "name": "하승운",
+        "position": "FW",
+        "back_no": 9,
+        "age": 28,
+        "apps": 32,
+        "goals": 1,
+        "assists": 3,
+        "points": 4
       },
       {
         "player_id": "20250193",
@@ -898,10 +910,10 @@
         "position": "FW",
         "back_no": 18,
         "age": 27,
-        "apps": 23,
-        "goals": 13,
+        "apps": 24,
+        "goals": 14,
         "assists": 2,
-        "points": 15
+        "points": 16
       },
       {
         "player_id": "20140134",
@@ -922,25 +934,13 @@
         "position": "FW",
         "back_no": 11,
         "age": 33,
-        "apps": 24,
-        "goals": 2,
+        "apps": 25,
+        "goals": 3,
         "assists": 2,
-        "points": 4
-      },
-      {
-        "player_id": "20230080",
-        "departed": false,
-        "name": "정지훈",
-        "position": "FW",
-        "back_no": 16,
-        "age": 22,
-        "apps": 24,
-        "goals": 1,
-        "assists": 2,
-        "points": 3
+        "points": 5
       }
     ],
-    "goal_share": 0.361
+    "goal_share": 0.389
   },
   "attendance": {
     "avg": 3268,

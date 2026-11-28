@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k18-sm.png",
   "home_url": "https://www.incheonutd.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:07+09:00",
+  "generated_at": "2026-11-28T09:28:53+09:00",
   "table": {
     "rank": 4,
     "teams": 12,
@@ -824,10 +824,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 32,
-        "goals": 14,
+        "apps": 33,
+        "goals": 15,
         "assists": 2,
-        "points": 16
+        "points": 17
       },
       {
         "player_id": "20260168",
@@ -835,8 +835,8 @@
         "name": "페리어",
         "position": "FW",
         "back_no": 99,
-        "age": 31,
-        "apps": 31,
+        "age": 32,
+        "apps": 32,
         "goals": 7,
         "assists": 2,
         "points": 9
@@ -848,10 +848,10 @@
         "position": "MF",
         "back_no": 11,
         "age": 35,
-        "apps": 35,
-        "goals": 5,
+        "apps": 36,
+        "goals": 6,
         "assists": 0,
-        "points": 5
+        "points": 6
       },
       {
         "player_id": "20190131",
@@ -860,7 +860,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 26,
-        "apps": 31,
+        "apps": 32,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -872,7 +872,7 @@
         "position": "MF",
         "back_no": 72,
         "age": 38,
-        "apps": 35,
+        "apps": 36,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -886,10 +886,10 @@
         "position": "DF",
         "back_no": 32,
         "age": 34,
-        "apps": 34,
+        "apps": 35,
         "goals": 1,
-        "assists": 4,
-        "points": 5
+        "assists": 5,
+        "points": 6
       },
       {
         "player_id": "20120127",
@@ -898,7 +898,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 36,
-        "apps": 33,
+        "apps": 34,
         "goals": 2,
         "assists": 3,
         "points": 5
@@ -922,10 +922,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 34,
-        "apps": 32,
-        "goals": 14,
+        "apps": 33,
+        "goals": 15,
         "assists": 2,
-        "points": 16
+        "points": 17
       },
       {
         "player_id": "20260168",
@@ -933,14 +933,14 @@
         "name": "페리어",
         "position": "FW",
         "back_no": 99,
-        "age": 31,
-        "apps": 31,
+        "age": 32,
+        "apps": 32,
         "goals": 7,
         "assists": 2,
         "points": 9
       }
     ],
-    "goal_share": 0.304
+    "goal_share": 0.326
   },
   "attendance": {
     "avg": 10038,

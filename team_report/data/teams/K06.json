@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k06-sm.png",
   "home_url": "https://www.busanipark.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:08+09:00",
+  "generated_at": "2026-11-28T09:28:54+09:00",
   "table": {
     "rank": 5,
     "teams": 17,
@@ -169,7 +169,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 10,
+        "rank": 9,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -400,7 +400,7 @@
       }
     ],
     "best_rank": 1,
-    "worst_rank": 10,
+    "worst_rank": 9,
     "first_half": {
       "played": 16,
       "win": 11,
@@ -738,7 +738,7 @@
   ],
   "squad": {
     "size": 32,
-    "avg_age": 24.7,
+    "avg_age": 24.8,
     "foreign": 5,
     "top_scorers": [
       {
@@ -748,7 +748,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 28,
+        "apps": 29,
         "goals": 9,
         "assists": 5,
         "points": 14
@@ -772,7 +772,7 @@
         "position": "FW",
         "back_no": 18,
         "age": 20,
-        "apps": 26,
+        "apps": 27,
         "goals": 5,
         "assists": 3,
         "points": 8
@@ -810,7 +810,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 30,
-        "apps": 28,
+        "apps": 29,
         "goals": 9,
         "assists": 5,
         "points": 14
@@ -834,7 +834,7 @@
         "position": "FW",
         "back_no": 18,
         "age": 20,
-        "apps": 26,
+        "apps": 27,
         "goals": 5,
         "assists": 3,
         "points": 8

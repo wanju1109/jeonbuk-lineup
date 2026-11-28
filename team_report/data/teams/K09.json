@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k09-sm.png",
   "home_url": "https://www.fcseoul.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:07+09:00",
+  "generated_at": "2026-11-28T09:28:53+09:00",
   "table": {
     "rank": 1,
     "teams": 12,
@@ -813,7 +813,7 @@
     }
   ],
   "squad": {
-    "size": 37,
+    "size": 38,
     "avg_age": 25.1,
     "foreign": 7,
     "top_scorers": [
@@ -824,7 +824,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 31,
+        "apps": 32,
         "goals": 16,
         "assists": 1,
         "points": 17
@@ -836,10 +836,10 @@
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 35,
+        "apps": 36,
         "goals": 8,
-        "assists": 7,
-        "points": 15
+        "assists": 8,
+        "points": 16
       },
       {
         "player_id": "20170052",
@@ -860,7 +860,7 @@
         "position": "FW",
         "back_no": 27,
         "age": 34,
-        "apps": 33,
+        "apps": 34,
         "goals": 5,
         "assists": 8,
         "points": 13
@@ -880,28 +880,28 @@
     ],
     "top_assists": [
       {
-        "player_id": "20170229",
-        "departed": false,
-        "name": "문선민",
-        "position": "FW",
-        "back_no": 27,
-        "age": 34,
-        "apps": 33,
-        "goals": 5,
-        "assists": 8,
-        "points": 13
-      },
-      {
         "player_id": "20160099",
         "departed": false,
         "name": "정승원",
         "position": "MF",
         "back_no": 7,
         "age": 29,
-        "apps": 35,
+        "apps": 36,
         "goals": 8,
-        "assists": 7,
-        "points": 15
+        "assists": 8,
+        "points": 16
+      },
+      {
+        "player_id": "20170229",
+        "departed": false,
+        "name": "문선민",
+        "position": "FW",
+        "back_no": 27,
+        "age": 34,
+        "apps": 34,
+        "goals": 5,
+        "assists": 8,
+        "points": 13
       },
       {
         "player_id": "20240179",
@@ -910,10 +910,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 29,
-        "goals": 3,
+        "apps": 30,
+        "goals": 4,
         "assists": 6,
-        "points": 9
+        "points": 10
       },
       {
         "player_id": "20180034",
@@ -934,7 +934,7 @@
         "position": "MF",
         "back_no": 6,
         "age": 27,
-        "apps": 34,
+        "apps": 35,
         "goals": 3,
         "assists": 3,
         "points": 6

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k32-sm.png",
   "home_url": "https://www.greenersfc.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:08+09:00",
+  "generated_at": "2026-11-28T09:28:55+09:00",
   "table": {
     "rank": 15,
     "teams": 17,
@@ -759,10 +759,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 28,
-        "goals": 9,
+        "apps": 29,
+        "goals": 10,
         "assists": 3,
-        "points": 12
+        "points": 13
       },
       {
         "player_id": "20260170",
@@ -771,10 +771,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 26,
-        "goals": 5,
+        "apps": 27,
+        "goals": 6,
         "assists": 4,
-        "points": 9
+        "points": 10
       },
       {
         "player_id": "20130410",
@@ -783,10 +783,10 @@
         "position": "FW",
         "back_no": 92,
         "age": 37,
-        "apps": 17,
+        "apps": 18,
         "goals": 4,
-        "assists": 3,
-        "points": 7
+        "assists": 4,
+        "points": 8
       },
       {
         "player_id": "20260187",
@@ -795,7 +795,7 @@
         "position": "FW",
         "back_no": 77,
         "age": 24,
-        "apps": 20,
+        "apps": 21,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -807,7 +807,7 @@
         "position": "FW",
         "back_no": 17,
         "age": 23,
-        "apps": 8,
+        "apps": 9,
         "goals": 3,
         "assists": 0,
         "points": 3
@@ -821,7 +821,7 @@
         "position": "DF",
         "back_no": 3,
         "age": 22,
-        "apps": 30,
+        "apps": 31,
         "goals": 1,
         "assists": 5,
         "points": 6
@@ -833,22 +833,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 28,
-        "apps": 26,
-        "goals": 5,
+        "apps": 27,
+        "goals": 6,
         "assists": 4,
-        "points": 9
-      },
-      {
-        "player_id": "20260171",
-        "departed": false,
-        "name": "리마",
-        "position": "FW",
-        "back_no": 10,
-        "age": 28,
-        "apps": 28,
-        "goals": 9,
-        "assists": 3,
-        "points": 12
+        "points": 10
       },
       {
         "player_id": "20130410",
@@ -857,10 +845,22 @@
         "position": "FW",
         "back_no": 92,
         "age": 37,
-        "apps": 17,
+        "apps": 18,
         "goals": 4,
+        "assists": 4,
+        "points": 8
+      },
+      {
+        "player_id": "20260171",
+        "departed": false,
+        "name": "리마",
+        "position": "FW",
+        "back_no": 10,
+        "age": 28,
+        "apps": 29,
+        "goals": 10,
         "assists": 3,
-        "points": 7
+        "points": 13
       },
       {
         "player_id": "20230040",
@@ -875,7 +875,7 @@
         "points": 4
       }
     ],
-    "goal_share": 0.243
+    "goal_share": 0.27
   },
   "attendance": null,
   "context": {

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k31-sm.png",
   "home_url": "https://www.seoulelandfc.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:08+09:00",
+  "generated_at": "2026-11-28T09:28:54+09:00",
   "table": {
     "rank": 4,
     "teams": 17,
@@ -183,7 +183,7 @@
       },
       {
         "round": 3,
-        "rank": 11,
+        "rank": 10,
         "points": 3,
         "played": 3,
         "gd": -1
@@ -748,10 +748,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 31,
-        "apps": 29,
-        "goals": 13,
+        "apps": 30,
+        "goals": 14,
         "assists": 6,
-        "points": 19
+        "points": 20
       },
       {
         "player_id": "20220035",
@@ -760,7 +760,7 @@
         "position": "FW",
         "back_no": 16,
         "age": 26,
-        "apps": 29,
+        "apps": 30,
         "goals": 12,
         "assists": 6,
         "points": 18
@@ -772,7 +772,7 @@
         "position": "MF",
         "back_no": 6,
         "age": 22,
-        "apps": 29,
+        "apps": 30,
         "goals": 4,
         "assists": 2,
         "points": 6
@@ -784,10 +784,10 @@
         "position": "FW",
         "back_no": 10,
         "age": 29,
-        "apps": 18,
+        "apps": 19,
         "goals": 3,
-        "assists": 3,
-        "points": 6
+        "assists": 4,
+        "points": 7
       },
       {
         "player_id": "20140067",
@@ -810,10 +810,10 @@
         "position": "FW",
         "back_no": 7,
         "age": 31,
-        "apps": 29,
-        "goals": 13,
+        "apps": 30,
+        "goals": 14,
         "assists": 6,
-        "points": 19
+        "points": 20
       },
       {
         "player_id": "20220035",
@@ -822,7 +822,7 @@
         "position": "FW",
         "back_no": 16,
         "age": 26,
-        "apps": 29,
+        "apps": 30,
         "goals": 12,
         "assists": 6,
         "points": 18
@@ -834,22 +834,10 @@
         "position": "DF",
         "back_no": 13,
         "age": 29,
-        "apps": 27,
+        "apps": 28,
         "goals": 2,
         "assists": 5,
         "points": 7
-      },
-      {
-        "player_id": "20210138",
-        "departed": false,
-        "name": "박창환",
-        "position": "MF",
-        "back_no": 30,
-        "age": 24,
-        "apps": 27,
-        "goals": 2,
-        "assists": 4,
-        "points": 6
       },
       {
         "player_id": "20250344",
@@ -858,13 +846,25 @@
         "position": "FW",
         "back_no": 10,
         "age": 29,
-        "apps": 18,
+        "apps": 19,
         "goals": 3,
-        "assists": 3,
+        "assists": 4,
+        "points": 7
+      },
+      {
+        "player_id": "20210138",
+        "departed": false,
+        "name": "박창환",
+        "position": "MF",
+        "back_no": 30,
+        "age": 25,
+        "apps": 28,
+        "goals": 2,
+        "assists": 4,
         "points": 6
       }
     ],
-    "goal_share": 0.224
+    "goal_share": 0.241
   },
   "attendance": {
     "avg": 21011,

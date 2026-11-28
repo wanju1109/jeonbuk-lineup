@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k03-sm.png",
   "home_url": "https://www.steelers.co.kr",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:07+09:00",
+  "generated_at": "2026-11-28T09:28:53+09:00",
   "table": {
     "rank": 9,
     "teams": 12,
@@ -174,7 +174,7 @@
     "history": [
       {
         "round": 1,
-        "rank": 6,
+        "rank": 5,
         "points": 1,
         "played": 1,
         "gd": 0
@@ -824,10 +824,10 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 29,
-        "goals": 5,
+        "apps": 30,
+        "goals": 6,
         "assists": 4,
-        "points": 9
+        "points": 10
       },
       {
         "player_id": "20180204",
@@ -836,7 +836,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 30,
-        "apps": 22,
+        "apps": 23,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -860,7 +860,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 25,
+        "apps": 26,
         "goals": 4,
         "assists": 1,
         "points": 5
@@ -872,7 +872,7 @@
         "position": "MF",
         "back_no": 31,
         "age": 27,
-        "apps": 29,
+        "apps": 30,
         "goals": 3,
         "assists": 1,
         "points": 4
@@ -886,10 +886,10 @@
         "position": "DF",
         "back_no": 77,
         "age": 37,
-        "apps": 29,
-        "goals": 5,
+        "apps": 30,
+        "goals": 6,
         "assists": 4,
-        "points": 9
+        "points": 10
       },
       {
         "player_id": "20180204",
@@ -898,7 +898,7 @@
         "position": "FW",
         "back_no": 7,
         "age": 30,
-        "apps": 22,
+        "apps": 23,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -910,7 +910,7 @@
         "position": "MF",
         "back_no": 16,
         "age": 23,
-        "apps": 34,
+        "apps": 35,
         "goals": 0,
         "assists": 4,
         "points": 4
@@ -934,13 +934,13 @@
         "position": "FW",
         "back_no": 25,
         "age": 27,
-        "apps": 17,
+        "apps": 18,
         "goals": 1,
         "assists": 2,
         "points": 3
       }
     ],
-    "goal_share": 0.147
+    "goal_share": 0.176
   },
   "attendance": {
     "avg": 7027,

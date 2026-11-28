@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k26-sm.png",
   "home_url": "https://www.bfc1995.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:08+09:00",
+  "generated_at": "2026-11-28T09:28:53+09:00",
   "table": {
     "rank": 11,
     "teams": 12,
@@ -195,7 +195,7 @@
       },
       {
         "round": 4,
-        "rank": 6,
+        "rank": 5,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -824,7 +824,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 34,
+        "apps": 35,
         "goals": 11,
         "assists": 4,
         "points": 15
@@ -848,22 +848,10 @@
         "position": "FW",
         "back_no": 9,
         "age": 26,
-        "apps": 21,
+        "apps": 22,
         "goals": 3,
-        "assists": 0,
-        "points": 3
-      },
-      {
-        "player_id": "20190194",
-        "departed": false,
-        "name": "김상준",
-        "position": "MF",
-        "back_no": 16,
-        "age": 25,
-        "apps": 32,
-        "goals": 2,
-        "assists": 0,
-        "points": 2
+        "assists": 1,
+        "points": 4
       },
       {
         "player_id": "20150097",
@@ -872,10 +860,22 @@
         "position": "MF",
         "back_no": 14,
         "age": 33,
-        "apps": 24,
-        "goals": 2,
+        "apps": 25,
+        "goals": 3,
         "assists": 0,
-        "points": 2
+        "points": 3
+      },
+      {
+        "player_id": "20200048",
+        "departed": false,
+        "name": "김민준",
+        "position": "FW",
+        "back_no": 13,
+        "age": 26,
+        "apps": 28,
+        "goals": 2,
+        "assists": 2,
+        "points": 4
       }
     ],
     "top_assists": [
@@ -886,7 +886,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 29,
-        "apps": 25,
+        "apps": 26,
         "goals": 0,
         "assists": 5,
         "points": 5
@@ -898,7 +898,7 @@
         "position": "FW",
         "back_no": 11,
         "age": 29,
-        "apps": 34,
+        "apps": 35,
         "goals": 11,
         "assists": 4,
         "points": 15
@@ -910,7 +910,7 @@
         "position": "DF",
         "back_no": 7,
         "age": 26,
-        "apps": 28,
+        "apps": 29,
         "goals": 1,
         "assists": 4,
         "points": 5
@@ -922,10 +922,10 @@
         "position": "FW",
         "back_no": 13,
         "age": 26,
-        "apps": 27,
-        "goals": 1,
+        "apps": 28,
+        "goals": 2,
         "assists": 2,
-        "points": 3
+        "points": 4
       },
       {
         "player_id": "20230333",

@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k38-sm.png",
   "home_url": "https://cheonancityfc.kr",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:08+09:00",
+  "generated_at": "2026-11-28T09:28:54+09:00",
   "table": {
     "rank": 10,
     "teams": 17,
@@ -748,7 +748,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 32,
-        "apps": 29,
+        "apps": 30,
         "goals": 9,
         "assists": 1,
         "points": 10
@@ -760,10 +760,10 @@
         "position": "FW",
         "back_no": 94,
         "age": 32,
-        "apps": 18,
-        "goals": 7,
+        "apps": 19,
+        "goals": 8,
         "assists": 1,
-        "points": 8
+        "points": 9
       },
       {
         "player_id": "20240245",
@@ -771,11 +771,11 @@
         "name": "툰가라",
         "position": "MF",
         "back_no": 10,
-        "age": 31,
-        "apps": 25,
+        "age": 32,
+        "apps": 26,
         "goals": 7,
-        "assists": 0,
-        "points": 7
+        "assists": 1,
+        "points": 8
       },
       {
         "player_id": "20220246",
@@ -784,7 +784,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 24,
-        "apps": 27,
+        "apps": 28,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -810,7 +810,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 24,
-        "apps": 27,
+        "apps": 28,
         "goals": 4,
         "assists": 4,
         "points": 8
@@ -822,7 +822,7 @@
         "position": "DF",
         "back_no": 27,
         "age": 23,
-        "apps": 29,
+        "apps": 30,
         "goals": 1,
         "assists": 4,
         "points": 5
@@ -834,7 +834,7 @@
         "position": "MF",
         "back_no": 17,
         "age": 27,
-        "apps": 17,
+        "apps": 18,
         "goals": 0,
         "assists": 2,
         "points": 2
@@ -846,7 +846,7 @@
         "position": "FW",
         "back_no": 99,
         "age": 32,
-        "apps": 29,
+        "apps": 30,
         "goals": 9,
         "assists": 1,
         "points": 10
@@ -858,10 +858,10 @@
         "position": "FW",
         "back_no": 94,
         "age": 32,
-        "apps": 18,
-        "goals": 7,
+        "apps": 19,
+        "goals": 8,
         "assists": 1,
-        "points": 8
+        "points": 9
       }
     ],
     "goal_share": 0.225

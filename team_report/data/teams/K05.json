@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k05-sm.png",
   "home_url": "https://www.hyundai-motorsfc.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:07+09:00",
+  "generated_at": "2026-11-28T09:28:53+09:00",
   "table": {
     "rank": 7,
     "teams": 12,
@@ -195,7 +195,7 @@
       },
       {
         "round": 4,
-        "rank": 5,
+        "rank": 7,
         "points": 5,
         "played": 4,
         "gd": 0
@@ -824,7 +824,7 @@
         "position": "FW",
         "back_no": 9,
         "age": 33,
-        "apps": 27,
+        "apps": 28,
         "goals": 11,
         "assists": 1,
         "points": 12
@@ -836,7 +836,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 34,
+        "apps": 35,
         "goals": 8,
         "assists": 4,
         "points": 12
@@ -872,7 +872,7 @@
         "position": "DF",
         "back_no": 2,
         "age": 35,
-        "apps": 31,
+        "apps": 32,
         "goals": 3,
         "assists": 2,
         "points": 5
@@ -886,7 +886,7 @@
         "position": "MF",
         "back_no": 28,
         "age": 32,
-        "apps": 27,
+        "apps": 28,
         "goals": 0,
         "assists": 7,
         "points": 7
@@ -910,7 +910,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 34,
+        "apps": 35,
         "goals": 8,
         "assists": 4,
         "points": 12
@@ -922,7 +922,7 @@
         "position": "MF",
         "back_no": 97,
         "age": 29,
-        "apps": 31,
+        "apps": 32,
         "goals": 2,
         "assists": 3,
         "points": 5

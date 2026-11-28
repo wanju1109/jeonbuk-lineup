@@ -8,7 +8,7 @@
   "emblem": "https://portal.kleague.com/images/portal/img-emble-k04-sm.png",
   "home_url": "https://www.jejuskfc.com",
   "season": "2026",
-  "generated_at": "2026-11-27T09:59:07+09:00",
+  "generated_at": "2026-11-28T09:28:53+09:00",
   "table": {
     "rank": 6,
     "teams": 12,
@@ -823,8 +823,8 @@
         "name": "네게바",
         "position": "FW",
         "back_no": 94,
-        "age": 25,
-        "apps": 32,
+        "age": 26,
+        "apps": 33,
         "goals": 10,
         "assists": 3,
         "points": 13
@@ -836,7 +836,7 @@
         "position": "FW",
         "back_no": 10,
         "age": 28,
-        "apps": 32,
+        "apps": 33,
         "goals": 6,
         "assists": 2,
         "points": 8
@@ -854,28 +854,28 @@
         "points": 8
       },
       {
+        "player_id": "20220166",
+        "departed": false,
+        "name": "김신진",
+        "position": "FW",
+        "back_no": 18,
+        "age": 25,
+        "apps": 27,
+        "goals": 4,
+        "assists": 0,
+        "points": 4
+      },
+      {
         "player_id": "20240126",
         "departed": false,
         "name": "이탈로",
         "position": "MF",
         "back_no": 5,
         "age": 29,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
         "assists": 3,
         "points": 6
-      },
-      {
-        "player_id": "20180104",
-        "departed": false,
-        "name": "박창준",
-        "position": "FW",
-        "back_no": 7,
-        "age": 29,
-        "apps": 28,
-        "goals": 3,
-        "assists": 1,
-        "points": 4
       }
     ],
     "top_assists": [
@@ -897,8 +897,8 @@
         "name": "네게바",
         "position": "FW",
         "back_no": 94,
-        "age": 25,
-        "apps": 32,
+        "age": 26,
+        "apps": 33,
         "goals": 10,
         "assists": 3,
         "points": 13
@@ -910,7 +910,7 @@
         "position": "MF",
         "back_no": 5,
         "age": 29,
-        "apps": 23,
+        "apps": 24,
         "goals": 3,
         "assists": 3,
         "points": 6
@@ -922,7 +922,7 @@
         "position": "DF",
         "back_no": 40,
         "age": 24,
-        "apps": 26,
+        "apps": 27,
         "goals": 1,
         "assists": 3,
         "points": 4
@@ -934,7 +934,7 @@
         "position": "FW",
         "back_no": 24,
         "age": 21,
-        "apps": 28,
+        "apps": 29,
         "goals": 1,
         "assists": 3,
         "points": 4
